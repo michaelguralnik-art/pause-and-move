@@ -93,6 +93,14 @@ function renderLanguage(lang) {
   if (!siteData || !siteData[lang]) return;
   
   const langData = siteData[lang];
+  
+  // Update document metadata dynamically
+  if (langData.metadata) {
+    document.title = langData.metadata.title;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', langData.metadata.description);
+  }
+  
   bindStaticContent(langData);
   renderHomeModalities(langData);
   renderAboutContent(langData);

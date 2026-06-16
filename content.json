@@ -1,5 +1,9 @@
 {
   "en": {
+    "metadata": {
+      "title": "Pause & Move — Professional Massage & Bodywork in Basel",
+      "description": "Premium massage therapy and manual bodywork in the heart of Basel (Shiatsu, Tuina, Classic Massage, Connected Movement). Recognized by Swiss supplementary insurances (ASCA/EGK)."
+    },
     "nav": {
       "logo": "Pause <span>&</span> Move",
       "links": {
@@ -335,6 +339,10 @@
     }
   },
   "de": {
+    "metadata": {
+      "title": "Pause & Move — Professionelle Massage & Körpertherapie in Basel",
+      "description": "Erstklassige Massagetherapie und Körperarbeit im Herzen von Basel (Shiatsu, Tuina, Klassische Massage, Connected Movement). Anerkannt von Schweizer Krankenkassen (ASCA/EGK)."
+    },
     "nav": {
       "logo": "Pause <span>&</span> Move",
       "links": {
