@@ -13,3 +13,6 @@ Desktop.ini
 
 # Temp/Log files
 *.log
+
+# Build outputs
+dist/
