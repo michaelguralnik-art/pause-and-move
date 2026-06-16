@@ -25,7 +25,10 @@
       <li><a href="#" onclick="showSection('blog');return false;" data-copy="nav.links.blog">Journal</a></li>
       <li><a href="#" onclick="showSection('contact');return false;" data-copy="nav.links.contact">Contact</a></li>
     </ul>
-    <button class="nav-cta" onclick="openModal()" data-copy="nav.cta">Book Now</button>
+    <div style="display:flex; align-items:center; gap:20px;">
+      <button class="nav-lang-toggle" onclick="toggleLanguage()">DE</button>
+      <button class="nav-cta" onclick="openModal()" data-copy="nav.cta">Book Now</button>
+    </div>
     <button class="nav-hamburger" onclick="toggleDrawer()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -40,6 +43,7 @@
   <a href="#" onclick="showSection('modalities');closeDrawer();return false;" data-copy="nav.links.modalities">Modalities</a>
   <a href="#" onclick="showSection('blog');closeDrawer();return false;" data-copy="nav.links.blog">Journal</a>
   <a href="#" onclick="showSection('contact');closeDrawer();return false;" data-copy="nav.links.contact">Contact</a>
+  <a href="#" onclick="closeDrawer();toggleLanguage();return false;" class="nav-lang-toggle" style="border-bottom:1px solid var(--border); padding:12px 0;">DE</a>
   <a href="#" class="drawer-cta" onclick="closeDrawer();openModal();return false;" data-copy="nav.links.contact_cta">Book a Session</a>
 </div>
 

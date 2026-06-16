@@ -76,20 +76,54 @@ if (scroll) {
 // ── Init active nav link ──
 document.querySelectorAll('.nav-links a')[0].classList.add('active');
 
-// ── Load content.json and dynamically bind/render content ──
+// ── Multilingual State & Fetching ──
+let siteData = null;
+let currentLang = localStorage.getItem('lang') || 'en';
+
 fetch('content.json')
   .then(response => response.json())
   .then(data => {
-    bindStaticContent(data);
-    renderHomeModalities(data);
-    renderAboutContent(data);
-    renderServicesContent(data);
-    renderModalitiesContent(data);
-    
-    // Once everything is rendered, observe scroll reveals
-    observeReveals();
+    siteData = data;
+    updateLanguageUI();
+    renderLanguage(currentLang);
   })
   .catch(err => console.error("Error loading content.json:", err));
+
+function renderLanguage(lang) {
+  if (!siteData || !siteData[lang]) return;
+  
+  const langData = siteData[lang];
+  bindStaticContent(langData);
+  renderHomeModalities(langData);
+  renderAboutContent(langData);
+  renderServicesContent(langData);
+  renderModalitiesContent(langData);
+  
+  // Re-run scroll animations on the newly loaded elements
+  observeReveals();
+}
+
+function toggleLanguage() {
+  currentLang = currentLang === 'en' ? 'de' : 'en';
+  localStorage.setItem('lang', currentLang);
+  
+  // Opacity fade transition
+  document.body.style.opacity = 0;
+  setTimeout(() => {
+    updateLanguageUI();
+    renderLanguage(currentLang);
+    document.body.style.opacity = 1;
+  }, 250);
+}
+
+function updateLanguageUI() {
+  const btns = document.querySelectorAll('.nav-lang-toggle');
+  btns.forEach(btn => {
+    // Show the target language option (e.g. if current is EN, show "DE", if DE, show "EN")
+    btn.textContent = currentLang === 'en' ? 'DE' : 'EN';
+  });
+  document.documentElement.lang = currentLang;
+}
 
 function getNestedValue(obj, path) {
   return path.split('.').reduce((acc, part) => acc && acc[part], obj);
@@ -135,6 +169,13 @@ function renderAboutContent(data) {
   if (tagsContainer && data.about.bio.tags) {
     tagsContainer.innerHTML = data.about.bio.tags.map(tag => `
       <span class="bio-tag">${tag}</span>
+    `).join('');
+  }
+
+  const paragraphsContainer = document.getElementById('about-bio-paragraphs');
+  if (paragraphsContainer && data.about.bio.paragraphs) {
+    paragraphsContainer.innerHTML = data.about.bio.paragraphs.map(p => `
+      <p class="body-md" style="margin-bottom:16px">${p}</p>
     `).join('');
   }
 

@@ -33,9 +33,10 @@ try {
             # Determine MIME type
             $ext = [System.IO.Path]::GetExtension($localPath).ToLower()
             $mime = "application/octet-stream"
-            if ($ext -eq ".html") { $mime = "text/html" }
-            elseif ($ext -eq ".css") { $mime = "text/css" }
-            elseif ($ext -eq ".js") { $mime = "application/javascript" }
+            if ($ext -eq ".html") { $mime = "text/html; charset=utf-8" }
+            elseif ($ext -eq ".css") { $mime = "text/css; charset=utf-8" }
+            elseif ($ext -eq ".js") { $mime = "application/javascript; charset=utf-8" }
+            elseif ($ext -eq ".json") { $mime = "application/json; charset=utf-8" }
             elseif ($ext -eq ".jpg" -or $ext -eq ".jpeg") { $mime = "image/jpeg" }
             elseif ($ext -eq ".png") { $mime = "image/png" }
             elseif ($ext -eq ".svg") { $mime = "image/svg+xml" }
