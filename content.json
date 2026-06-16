@@ -17,7 +17,7 @@
       "hero": {
         "eyebrow": "Massage & Bodywork · Basel",
         "title": "A place to<br><em>pause,</em> and<br>truly <span class=\"outline\">move.</span>",
-        "sub": "Professional massage and bodywork for body, mind and spirit — in the heart of Basel, for the international community that calls it home.",
+        "sub": "Professional massage and bodywork for body, mind, and spirit — in the heart of Basel, for the international community that calls it home.",
         "explore_cta": "Explore therapies"
       },
       "modalities_strip": {
@@ -26,25 +26,25 @@
         "cta": "View all therapies"
       },
       "philosophy": {
-        "quote": "A good treatment is one that makes the client stronger — and strength is achieved through experience and awareness.",
+        "quote": "A good treatment leaves you stronger than you arrived — and strength grows through experience and awareness.",
         "cite": "— The Pause & Move approach",
-        "body1": "Besides relieving you of what brought you here, the goal is to give you something that will make you <strong>need these sessions less in the future</strong> — not more. That means giving you experience, not just a service.",
-        "body2": "There are many ways to get healthier, stronger and happier — from the food we eat to our daily habits to how we treat others. <strong>What happens in the session ripples outward.</strong> When the experience is positive, those changes tend to cascade into the rest of life.",
+        "body1": "Beyond easing what brought you here, the real aim is to give you something that makes you <strong>need these sessions less over time — not more</strong>. That means handing you genuine experience, not simply a service.",
+        "body2": "There are countless ways to grow healthier, stronger, and happier — from the food we eat to our daily habits to how we treat the people around us. <strong>What happens in a session ripples outward.</strong> When the experience is a good one, those small changes tend to cascade into the rest of your life.",
         "pillars": [
           {
             "num": "I",
             "title": "Experience over service",
-            "desc": "The aim is to pass on knowledge, build awareness, and leave you with something tangible beyond the hour."
+            "desc": "The aim is to pass on knowledge, build awareness, and leave you with something tangible that lasts well beyond the hour."
           },
           {
             "num": "II",
             "title": "Honesty about limits",
-            "desc": "Where this practice isn't the right fit, you'll be referred to someone whose system is better equipped for the job."
+            "desc": "When this practice isn't the right fit, you'll be referred — openly and without ego — to someone better equipped to help."
           },
           {
             "num": "III",
             "title": "The whole person",
-            "desc": "Body, mind, spirit. Not as a slogan — as a genuine framework for how every session is approached."
+            "desc": "Body, mind, and spirit. Not as a slogan, but as a genuine framework for how every session is approached."
           }
         ]
       },
@@ -53,7 +53,7 @@
         "sub": "A practice that knows what it's like to be new somewhere — and wants to help you feel at home in your body first."
       },
       "testimonial": {
-        "quote": "I came in with persistent shoulder pain that two physical therapists couldn't resolve. After a couple of combined Shiatsu/Tuina sessions, the pain was gone. But more importantly, I finally understood how my posture at my desk was causing the issue in the first place.",
+        "quote": "I came in with persistent shoulder pain that two physiotherapists couldn't resolve. After a couple of combined Shiatsu and Tuina sessions, it was gone — but more importantly, I finally understood how my desk posture had been causing it all along.",
         "cite": "Thomas, Expat in Basel"
       }
     },
@@ -69,9 +69,9 @@
         "eyebrow": "Gregory",
         "title": "Gregory — Massage therapist & bodyworker",
         "paragraphs": [
-          "I started my bodywork journey with a simple observation: we are living in a world that asks us to run, push, and perform, but rarely gives us the space to stop and feel.",
-          "My approach is rooted in eastern manual therapies—primarily Shiatsu and Tuina—combined with modern body alignment and movement education. I look at the body as an integrated system where physical posture, energy pathways, and mental tension are intimately connected.",
-          "Having lived as an expat myself, I understand the unique challenges of settling into a new city. Pause & Move was founded to be a welcoming space for Basel's diverse international community to find balance and feel at home in their bodies."
+          "My path into bodywork began with a simple observation: we live in a world that asks us to run, push, and perform — but rarely gives us the space to stop and truly feel.",
+          "My approach is rooted in Eastern manual therapies — primarily Shiatsu and Tuina — combined with modern body alignment and movement education. I see the body as one integrated system, where physical posture, energy pathways, and mental tension are intimately connected.",
+          "Having lived as an expat myself, I understand the particular challenges of settling into a new city. Pause & Move was created as a welcoming space for Basel's diverse international community — a place to find balance and feel at home in your own body."
         ],
         "tags": ["Shiatsu", "Tuina", "Movement Education", "Expat Wellness"]
       },
@@ -81,22 +81,22 @@
           {
             "roman": "I",
             "title": "Awareness",
-            "desc": "Healing starts when we pay attention. Every session begins with listening to what your body is trying to communicate."
+            "desc": "Healing begins the moment we start to pay attention. Every session opens by listening to what your body is trying to say."
           },
           {
             "roman": "II",
             "title": "Integration",
-            "desc": "A massage shouldn't be a temporary escape. We work to weave the physical changes into your daily posture and movement."
+            "desc": "A massage shouldn't be a temporary escape. We work to weave each physical change into your everyday posture and movement."
           },
           {
             "roman": "III",
             "title": "Independence",
-            "desc": "My ultimate goal is to empower you with the tools, stretches, and awareness to maintain your own physical well-being."
+            "desc": "My ultimate goal is to equip you with the tools, stretches, and awareness to sustain your own well-being — on your own."
           }
         ]
       },
       "quote_section": {
-        "quote": "Manual therapy isn't about 'fixing' a passive body; it's about initiating a conversation that helps the body remember its own capacity for ease.",
+        "quote": "Manual therapy isn't about 'fixing' a passive body. It's about beginning a conversation that helps the body remember its own capacity for ease.",
         "cite": "Gregory, Founder of Pause & Move"
       }
     },
@@ -105,29 +105,29 @@
       "intro": {
         "eyebrow": "Pricing",
         "title": "Clear, simple rates for your well-being",
-        "description": "Every session is tailored to you. Choose your therapy, your duration, and let the rest unfold."
+        "description": "Every session is tailored to you. Choose your therapy and your duration, and let the rest unfold."
       },
       "single": {
         "title": "Single Sessions",
-        "desc": "Perfect for targeted relief, relaxation, or maintenance treatments. Every session is custom-tailored using Shiatsu, Tuina, or movement work depending on your needs.",
+        "desc": "Perfect for targeted relief, deep relaxation, or regular maintenance. Each session is custom-built around you, drawing on Shiatsu, Tuina, or movement work as your body needs.",
         "prices": [
           { "duration": "60 minutes", "price": "CHF 120" },
           { "duration": "90 minutes", "price": "CHF 160" }
         ],
-        "note": "<strong>Insurance coverage:</strong> My treatments are recognized by most Swiss complementary medicine supplementary insurances (ASCA/EGK). Please verify with your provider using my registration details before booking."
+        "note": "<strong>Insurance coverage:</strong> My treatments are recognised by most Swiss complementary-medicine supplementary insurances (ASCA/EGK). Please verify your eligibility with your provider using my registration details before booking."
       },
       "packages_intro": {
         "eyebrow": "Packages",
         "title": "Commitment to change",
-        "description": "True changes in posture, alignment, and chronic tension take time. These packages are designed for those committed to deeper, long-term bodywork."
+        "description": "Real change in posture, alignment, and long-held tension takes time. These packages are made for those ready to commit to deeper, lasting bodywork."
       },
       "packages": [
         {
           "name": "The Pause Track",
           "subtitle": "EASE & RESTORE",
-          "description": "Ideal for stress management, nervous system regulation, and regular maintenance.",
+          "description": "Ideal for stress management, nervous-system regulation, and steady, ongoing maintenance.",
           "perks": [
-            "Choose between 60 or 90 minute custom sessions",
+            "Choose 60- or 90-minute custom sessions",
             "Priority booking access",
             "Tailored home stretches & routines"
           ],
@@ -153,11 +153,11 @@
         {
           "name": "The Move Track",
           "subtitle": "REALIGN & REBUILD",
-          "description": "Designed for postural correction, chronic pain release, and functional movement training.",
+          "description": "Designed for postural correction, chronic-pain release, and functional movement training.",
           "perks": [
-            "Intensive postural assessment",
+            "In-depth postural assessment",
             "Video movement check-ins between sessions",
-            "Personalized movement homework & videos"
+            "Personalised movement homework & videos"
           ],
           "cards": [
             {
@@ -178,10 +178,10 @@
       "long_game": {
         "name": "Move — The Long Game",
         "subtitle": "ONGOING CARE",
-        "description": "For clients who have completed an initial cycle and want to maintain their posture and movement health on a regular bi-weekly or monthly schedule.",
+        "description": "For clients who've completed an initial cycle and want to maintain their posture and movement health on a steady bi-weekly or monthly rhythm.",
         "perks": [
-          "Consistent time slots reserved for you",
-          "Flexible reschedule policy",
+          "Consistent time slots held just for you",
+          "Flexible rescheduling",
           "Direct email check-ins for support"
         ],
         "rate_label": "EXCLUSIVE MEMBER RATE",
@@ -194,7 +194,7 @@
       "intro": {
         "eyebrow": "How we work",
         "title": "A holistic toolset for physical alignment",
-        "description": "We don't believe in one-size-fits-all. Every session integrates different manual therapy methods to address your unique posture, tension patterns, and energy flow."
+        "description": "We don't believe in one-size-fits-all. Every session blends different manual-therapy methods to meet your unique posture, tension patterns, and energy flow."
       },
       "list": [
         {
@@ -209,8 +209,8 @@
             { "title": "Joint mobility", "desc": "Eases stiffness and improves flexibility." }
           ],
           "checks_title": "Best for:",
-          "checks": ["Post-workout recovery", "General stress relief", "Chronic muscle stiffness", "Relaxing after a long travel"],
-          "details": "Classic massage is the foundation of structural bodywork. By using customized pressure, kneading, and long strokes, we release built-up physical tension in the back, neck, and shoulders. This treatment helps return tense muscles to their natural, relaxed state while improving local circulation and systemic lymph flow. Excellent as a stand-alone recovery session or combined with structural Tuina manipulation."
+          "checks": ["Post-workout recovery", "General stress relief", "Chronic muscle stiffness", "Unwinding after long travel"],
+          "details": "Classic massage is the foundation of structural bodywork. Using tailored pressure, kneading, and long strokes, we release built-up tension in the back, neck, and shoulders. The treatment helps tense muscles return to their natural, relaxed state while improving local circulation and lymphatic flow. It works beautifully as a stand-alone recovery session, or combined with structural Tuina work."
         },
         {
           "id": "shiatsu",
@@ -218,14 +218,14 @@
           "desc": "Japanese pressure-point therapy done fully clothed — no oils, no undressing. Pure balance.",
           "image": "https://images.pexels.com/photos/5794027/pexels-photo-5794027.jpeg?auto=compress&cs=tinysrgb&w=700&h=900&fit=crop",
           "benefits": [
-            { "title": "Nervous regulation", "desc": "Restores balance to your sympathetic system." },
-            { "title": "No oils / fully clothed", "desc": "Done on a table or futon while dressed." },
-            { "title": "Pressure points", "desc": "Uses fingers, palms, and elbows along channels." },
-            { "title": "Emotional grounding", "desc": "Provides deep mental stillness and focus." }
+            { "title": "Nervous regulation", "desc": "Restores balance to the autonomic nervous system." },
+            { "title": "No oils / fully clothed", "desc": "Received on a table or futon while dressed." },
+            { "title": "Pressure points", "desc": "Uses fingers, palms, and elbows along the channels." },
+            { "title": "Emotional grounding", "desc": "Brings deep mental stillness and focus." }
           ],
           "checks_title": "Best for:",
           "checks": ["Burnout & fatigue", "Headaches & migraines", "Digestive issues", "Sleep disturbances"],
-          "details": "Shiatsu (literally meaning 'finger pressure') is a traditional Japanese bodywork method. By applying steady, comfortable pressure along the body's energy channels (meridians), it helps release blockages and stimulates the body's self-healing mechanisms. The client remains fully clothed (please wear comfortable, loose clothing) during the session, making it a very clean, structured, and non-intrusive way to receive deep bodywork."
+          "details": "Shiatsu — literally 'finger pressure' — is a traditional Japanese bodywork method. By applying steady, comfortable pressure along the body's energy channels (meridians), it helps release blockages and awaken the body's own healing response. You stay fully clothed throughout (simply bring loose, comfortable clothing), making it a remarkably clean, structured, and unintrusive way to receive deep bodywork."
         },
         {
           "id": "tuina",
@@ -235,16 +235,16 @@
           "benefits": [
             { "title": "Dynamic movement", "desc": "Uses rocking, rolling, and active stretching." },
             { "title": "Chronic pain relief", "desc": "Targets stiff joints and old injuries directly." },
-            { "title": "Acupressure", "desc": "Utilizes specific TCM points for systemic effect." },
-            { "title": "Structural alignment", "desc": "Helps re-establish proper range of motion." }
+            { "title": "Acupressure", "desc": "Works specific TCM points for whole-body effect." },
+            { "title": "Structural alignment", "desc": "Helps re-establish a full range of motion." }
           ],
           "checks_title": "Best for:",
           "checks": ["Lower back pain", "Frozen shoulder", "Sciatica & hip tension", "Repetitive strain injuries"],
-          "details": "Tuina is a highly active, therapeutic branch of Traditional Chinese Medicine (TCM). Using a variety of hand techniques (like rolling, pushing, and grasping) alongside active joint mobilization, it directly addresses chronic pain and structural imbalances. In this practice, Tuina is always woven dynamically into your session to release deep joint stiffness and align your body's structure.",
+          "details": "Tuina is a highly active, therapeutic branch of Traditional Chinese Medicine (TCM). Through a range of hand techniques — rolling, pushing, grasping — alongside active joint mobilisation, it addresses chronic pain and structural imbalance directly. Here, Tuina is always woven dynamically into your session to release deep joint stiffness and bring your body's structure back into alignment.",
           "callout": {
             "icon": "⊕",
             "title": "Woven into your session",
-            "description": "Tuina isn't a separate booking — it's brought into your session wherever it's the right tool for the job. When your body calls for more vigorous, targeted work, that's what you'll get, combined with whatever else serves you best that day."
+            "description": "Tuina isn't a separate booking — it's brought into your session exactly where it's the right tool for the job. When your body calls for more vigorous, targeted work, that's what you'll receive, blended seamlessly with whatever else serves you best that day."
           }
         },
         {
@@ -254,13 +254,13 @@
           "image": "assets/connected.jpg",
           "benefits": [
             { "title": "Postural rebuild", "desc": "Learn to stand and walk with minimal effort." },
-            { "title": "Neuromuscular re-education", "desc": "Breaks old, painful patterns." },
-            { "title": "Joint decompressive", "desc": "Eases load on hips, knees, and spine." },
-            { "title": "Body awareness", "desc": "Increases clarity and grace of movement." }
+            { "title": "Neuromuscular re-education", "desc": "Breaks old, painful habits of movement." },
+            { "title": "Joint decompression", "desc": "Eases the load on hips, knees, and spine." },
+            { "title": "Body awareness", "desc": "Brings clarity and grace to how you move." }
           ],
           "checks_title": "Best for:",
-          "checks": ["Desk workers' posture", "Poor body coordination", "Post-rehab integration", "Mind-body dissociation"],
-          "details": "Connected Movement is a form of movement education designed to bridge the gap between receiving a massage and moving in daily life. Through slow, gentle, guided movements, we explore where your body is holding unnecessary effort. By training your brain to register new, decompressed pathways of movement, you learn how to stand, sit, and walk without fighting gravity."
+          "checks": ["Desk workers' posture", "Poor body coordination", "Post-rehab integration", "Mind–body disconnection"],
+          "details": "Connected Movement is a form of movement education that bridges the gap between receiving a massage and moving through daily life. Through slow, gentle, guided movements, we explore where your body is holding unnecessary effort. By training your brain to register new, lighter pathways of movement, you learn to stand, sit, and walk without fighting gravity."
         },
         {
           "id": "qigong",
@@ -274,13 +274,13 @@
             { "title": "Energy cultivation", "desc": "Builds stamina and internal vitality." }
           ],
           "checks_title": "Best for:",
-          "checks": ["Daily stress reduction", "Asthma & breathing depth", "Lower body strength", "Cultivating inner peace"],
-          "details": "Qigong is a centuries-old Chinese system of coordinated body posture, movement, breathing, and meditation. Rather than teaching large group choreographies, I prescribe specific, simple Qigong exercises tailored to your current physical condition. This provides you with an active, self-led practice to build strength, calm your mind, and support your recovery outside the therapy room."
+          "checks": ["Daily stress reduction", "Breathing depth & capacity", "Lower-body strength", "Cultivating inner calm"],
+          "details": "Qigong is a centuries-old Chinese system of coordinated posture, movement, breathing, and meditation. Rather than teaching large group choreographies, I prescribe simple, precise exercises tailored to your current condition. The result is an active, self-led practice you can carry home — to build strength, settle the mind, and support your recovery well beyond the therapy room."
         }
       ],
       "cta_bar": {
         "title": "Not sure which therapy is right for you?",
-        "description": "Every first session starts with a detailed consultation where we discuss your goals and build a treatment custom-made for your body.",
+        "description": "Every first session begins with an unhurried consultation, where we talk through your goals and build a treatment made entirely for your body.",
         "cta": "Book a session"
       }
     },
@@ -315,8 +315,8 @@
         "hours_title": "Opening hours",
         "hours": [
           { "day": "Mon – Fri", "hrs": "Evenings" },
-          { "day": "Saturday", "hrs": "Available" },
-          { "day": "Sunday", "hrs": "Available" }
+          { "day": "Saturday", "hrs": "By appointment" },
+          { "day": "Sunday", "hrs": "By appointment" }
         ]
       }
     },
@@ -361,34 +361,34 @@
         "cta": "Alle Therapien ansehen"
       },
       "philosophy": {
-        "quote": "Eine gute Behandlung stärkt den Klienten — und Stärke wird durch Erfahrung und Bewusstsein erlangt.",
+        "quote": "Eine gute Behandlung lässt Sie gestärkt zurück — und Stärke wächst durch Erfahrung und Bewusstsein.",
         "cite": "— Der Pause & Move Ansatz",
-        "body1": "Neben der Linderung der Beschwerden, die Sie zu mir geführt haben, ist es das Ziel, Ihnen etwas mitzugeben, das diese Sitzungen in Zukunft überflüssig macht. Das bedeutet: Erfahrung vermitteln, nicht nur eine Dienstleistung erbringen.",
-        "body2": "Es gibt viele Wege zu Gesundheit und Wohlbefinden — von der Ernährung über tägliche Gewohnheiten bis hin zu unserem Umgang mit anderen. Was in der Praxis geschieht, strahlt nach aussen aus.",
+        "body1": "Über die Linderung dessen hinaus, was Sie hierher geführt hat, ist es das eigentliche Ziel, Ihnen etwas mitzugeben, das Sie diese Sitzungen mit der Zeit <strong>seltener brauchen lässt — nicht öfter</strong>. Das bedeutet: echte Erfahrung vermitteln, nicht nur eine Dienstleistung erbringen.",
+        "body2": "Es gibt unzählige Wege, gesünder, kräftiger und zufriedener zu werden — von dem, was wir essen, über unsere täglichen Gewohnheiten bis hin zu unserem Umgang mit den Menschen um uns. <strong>Was in einer Sitzung geschieht, strahlt nach aussen aus.</strong> Ist die Erfahrung eine gute, setzen sich diese kleinen Veränderungen oft im ganzen Leben fort.",
         "pillars": [
           {
             "num": "I",
             "title": "Erfahrung vor Dienstleistung",
-            "desc": "Ziel ist es, Wissen weiterzugeben, Achtsamkeit aufzubauen und Ihnen über die Behandlungsstunde hinaus etwas Konkretes mitzugeben."
+            "desc": "Das Ziel ist, Wissen weiterzugeben, Achtsamkeit aufzubauen und Ihnen etwas Greifbares mitzugeben, das weit über die Behandlungsstunde hinaus bleibt."
           },
           {
             "num": "II",
             "title": "Ehrlichkeit über Grenzen",
-            "desc": "Sollte diese Methode für Ihre Bedürfnisse nicht geeignet sein, empfehle ich Sie ohne Zögern an passende Fachpersonen weiter."
+            "desc": "Sollte diese Praxis nicht die richtige für Sie sein, empfehle ich Sie offen und ohne Eitelkeit an jemanden weiter, der besser helfen kann."
           },
           {
             "num": "III",
             "title": "Der ganze Mensch",
-            "desc": "Körper, Geist und Seele sind kein Slogan, sondern das reale Fundament für den Ansatz jeder einzelnen Behandlung."
+            "desc": "Körper, Geist und Seele — kein Slogan, sondern ein echtes Fundament dafür, wie jede einzelne Behandlung gestaltet wird."
           }
         ]
       },
       "band": {
         "title": "Willkommen in Basels<br><em>internationaler Community</em>",
-        "sub": "Eine Praxis, die weiss, wie es ist, neu an einem Ort zu sein — und Ihnen hilft, sich zuerst im eigenen Körper zu Hause zu fühlen."
+        "sub": "Eine Praxis, die weiss, wie es ist, neu an einem Ort zu sein — und Ihnen helfen möchte, sich zuerst im eigenen Körper zu Hause zu fühlen."
       },
       "testimonial": {
-        "quote": "Ich kam mit hartnäckigen Schulterschmerzen, die zwei Physiotherapeuten nicht lösen konnten. Nach wenigen kombinierten Shiatsu/Tuina-Sitzungen waren die Schmerzen weg. Aber noch wichtiger: Ich verstand endlich, wie meine Haltung am Schreibtisch die Ursache war.",
+        "quote": "Ich kam mit hartnäckigen Schulterschmerzen, die zwei Physiotherapeuten nicht lösen konnten. Nach wenigen kombinierten Shiatsu- und Tuina-Sitzungen waren sie verschwunden — doch noch wichtiger: Ich verstand endlich, wie meine Haltung am Schreibtisch von Anfang an die Ursache gewesen war.",
         "cite": "Thomas, Expat in Basel"
       }
     },
@@ -402,11 +402,11 @@
       },
       "bio": {
         "eyebrow": "Gregory",
-        "title": "Gregory — Masseurs & Körpertherapeut",
+        "title": "Gregory — Masseur & Körpertherapeut",
         "paragraphs": [
-          "Ich begann meine Reise in der Körpertherapie mit einer einfachen Beobachtung: Wir leben in einer Welt, die uns abverlangt zu rennen und zu leisten, uns aber selten den Raum gibt, innezuhalten und zu spüren.",
-          "Mein Ansatz basiert auf östlichen manuellen Therapien — vor allem Shiatsu und Tuina — kombiniert mit moderner Haltungsschulung und Bewegungserziehung. Ich betrachte den Körper als integriertes System.",
-          "Da ich selbst als Expat gelebt habe, kenne ich die Herausforderungen des Einlebens in einer neuen Stadt. Pause & Move wurde gegründet, um ein einladender Ort für die internationale Community in Basel zu sein."
+          "Mein Weg in die Körpertherapie begann mit einer einfachen Beobachtung: Wir leben in einer Welt, die uns abverlangt zu rennen, zu drängen und zu leisten — uns aber selten den Raum gibt, innezuhalten und wirklich zu spüren.",
+          "Mein Ansatz wurzelt in östlichen manuellen Therapien — vor allem Shiatsu und Tuina — verbunden mit moderner Haltungs- und Bewegungsschulung. Ich betrachte den Körper als ein integriertes System, in dem körperliche Haltung, Energiebahnen und mentale Anspannung untrennbar miteinander verbunden sind.",
+          "Da ich selbst als Expat gelebt habe, kenne ich die besonderen Herausforderungen, sich in einer neuen Stadt einzuleben. Pause & Move entstand als einladender Ort für Basels vielfältige internationale Community — ein Raum, um Balance zu finden und sich im eigenen Körper zu Hause zu fühlen."
         ],
         "tags": ["Shiatsu", "Tuina", "Bewegungsschulung", "Expat Wellness"]
       },
@@ -416,22 +416,22 @@
           {
             "roman": "I",
             "title": "Achtsamkeit",
-            "desc": "Heilung beginnt mit Aufmerksamkeit. Jede Sitzung startet mit dem Hinhören, was Ihr Körper Ihnen mitteilen möchte."
+            "desc": "Heilung beginnt in dem Moment, in dem wir aufmerksam werden. Jede Sitzung startet mit dem Hinhören, was Ihr Körper Ihnen mitteilen möchte."
           },
           {
             "roman": "II",
             "title": "Integration",
-            "desc": "Eine Massage sollte kein temporärer Ausweg sein. Wir arbeiten daran, die physischen Veränderungen in Ihre tägliche Haltung zu integrieren."
+            "desc": "Eine Massage sollte kein kurzer Ausweg sein. Wir arbeiten daran, jede körperliche Veränderung in Ihre tägliche Haltung und Bewegung einzuweben."
           },
           {
             "roman": "III",
             "title": "Selbstständigkeit",
-            "desc": "Mein oberstes Ziel ist es, Sie mit den Übungen und dem Bewusstsein auszustatten, um Ihr Wohlbefinden selbst zu erhalten."
+            "desc": "Mein oberstes Ziel ist es, Sie mit den Werkzeugen, Übungen und dem Bewusstsein auszustatten, um Ihr Wohlbefinden eigenständig zu erhalten."
           }
         ]
       },
       "quote_section": {
-        "quote": "Körpertherapie repariert keinen passiven Körper; sie stösst einen Dialog an, der dem Körper hilft, sich an seine eigene Leichtigkeit zu erinnern.",
+        "quote": "Körpertherapie repariert keinen passiven Körper. Sie stösst einen Dialog an, der dem Körper hilft, sich an seine eigene Leichtigkeit zu erinnern.",
         "cite": "Gregory, Gründer von Pause & Move"
       }
     },
@@ -439,28 +439,28 @@
       "hero_title": "Tarife & Behandlungen",
       "intro": {
         "eyebrow": "Preise",
-        "title": "Klare, einfache Tarife für Ihre Gesundheit",
-        "description": "Jede Behandlung wird individuell auf Sie abgestimmt. Wählen Sie Ihre Therapie, Ihre Dauer und lassen Sie den Rest geschehen."
+        "title": "Klare, einfache Tarife für Ihr Wohlbefinden",
+        "description": "Jede Behandlung wird individuell auf Sie abgestimmt. Wählen Sie Ihre Therapie und Ihre Dauer — und lassen Sie den Rest geschehen."
       },
       "single": {
         "title": "Einzelsitzungen",
-        "desc": "Ideal für gezielte Linderung, Entspannung oder Erhaltungstherapien. Jede Sitzung wird mit Shiatsu, Tuina oder Bewegungsarbeit genau auf Sie abgestimmt.",
+        "desc": "Ideal für gezielte Linderung, tiefe Entspannung oder regelmässige Gesunderhaltung. Jede Sitzung wird mit Shiatsu, Tuina oder Bewegungsarbeit genau um Sie herum aufgebaut — ganz nach dem, was Ihr Körper braucht.",
         "prices": [
           { "duration": "60 Minuten", "price": "CHF 120" },
           { "duration": "90 Minuten", "price": "CHF 160" }
         ],
-        "note": "<strong>Krankenkassen-Anerkennung:</strong> Meine Behandlungen sind von den meisten Schweizer Zusatzversicherungen für Komplementärmedizin anerkannt (ASCA/EGK). Bitte klären Sie dies vorab mit Ihrer Kasse ab."
+        "note": "<strong>Krankenkassen-Anerkennung:</strong> Meine Behandlungen sind bei den meisten Schweizer Zusatzversicherungen für Komplementärmedizin anerkannt (ASCA/EGK). Bitte klären Sie Ihre Kostenübernahme vorgängig anhand meiner Registrierungsnummer mit Ihrer Krankenkasse ab."
       },
       "packages_intro": {
         "eyebrow": "Abonnements",
         "title": "Bereitschaft zur Veränderung",
-        "description": "Nachhaltige Haltungsverbesserungen und die Linderung chronischer Verspannungen brauchen Zeit. Diese Abos sind für ein tieferes, längerfristiges Arbeiten gedacht."
+        "description": "Echte Veränderungen in Haltung, Ausrichtung und lang gehaltener Verspannung brauchen Zeit. Diese Abos sind für alle gedacht, die sich auf ein tieferes, nachhaltiges Arbeiten einlassen möchten."
       },
       "packages": [
         {
           "name": "Der Pause Track",
           "subtitle": "ENTSPANNUNG & REGENERATION",
-          "description": "Ideal für Stressbewältigung, Regulierung des Nervensystems und regelmässige Gesunderhaltung.",
+          "description": "Ideal für Stressbewältigung, die Regulierung des Nervensystems und eine ruhige, regelmässige Gesunderhaltung.",
           "perks": [
             "Wählen Sie flexibel zwischen 60 oder 90 Minuten",
             "Priorität bei der Terminvereinbarung",
@@ -480,7 +480,7 @@
               "frequency": "GÜLTIG FÜR 8 MONATE",
               "price": "CHF 840",
               "save": "Sie sparen CHF 120",
-              "price_alt": "CHF 1120",
+              "price_alt": "CHF 1'120",
               "save_alt": "Sie sparen CHF 160"
             }
           ]
@@ -488,7 +488,7 @@
         {
           "name": "Der Move Track",
           "subtitle": "HALTUNG & BEWEGUNG",
-          "description": "Entwickelt für Haltungskorrektur, Linderung chronischer Schmerzen und funktionelles Bewegungstraining.",
+          "description": "Entwickelt für Haltungskorrektur, die Linderung chronischer Schmerzen und funktionelles Bewegungstraining.",
           "perks": [
             "Umfassende Haltungsanalyse",
             "Video-Check-ins zwischen den Sitzungen",
@@ -512,12 +512,12 @@
       ],
       "long_game": {
         "name": "Move — The Long Game",
-        "subtitle": "KONTINUIERLICHE BELEITUNG",
-        "description": "Für Klienten nach dem ersten Zyklus, die ihre Haltungs- und Bewegungsgesundheit auf einer regelmässigen zweiwöchentlichen oder monatlichen Basis erhalten möchten.",
+        "subtitle": "KONTINUIERLICHE BEGLEITUNG",
+        "description": "Für alle, die einen ersten Zyklus abgeschlossen haben und ihre Haltungs- und Bewegungsgesundheit in einem ruhigen zweiwöchentlichen oder monatlichen Rhythmus erhalten möchten.",
         "perks": [
-          "Feste, für Sie reservierte Terminfenster",
+          "Feste, exklusiv für Sie reservierte Terminfenster",
           "Flexible Verschiebungsregelungen",
-          "Direkter Email-Support bei Fragen"
+          "Direkter E-Mail-Support bei allfälligen Fragen"
         ],
         "rate_label": "EXKLUSIVER MITGLIEDERTARIF",
         "rate_price": "CHF 100",
@@ -529,7 +529,7 @@
       "intro": {
         "eyebrow": "Unsere Arbeitsweise",
         "title": "Ein ganzheitliches System für körperliche Balance",
-        "description": "Wir glauben nicht an Standardlösungen. Jede Sitzung integriert verschiedene manuelle Methoden, um Ihre Haltung, Verspannungen und Ihren Energiefluss zu verbessern."
+        "description": "Wir glauben nicht an Standardlösungen. Jede Sitzung verbindet verschiedene manuelle Methoden, um Ihre individuelle Haltung, Ihre Verspannungsmuster und Ihren Energiefluss zu berücksichtigen."
       },
       "list": [
         {
@@ -539,13 +539,13 @@
           "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=700&q=80&auto=format&fit=crop",
           "benefits": [
             { "title": "Muskelentspannung", "desc": "Löst tiefe Verspannungen, Verhärtungen und Muskelkater." },
-            { "title": "Durchblutung", "desc": "Fördert den Blutfluss und versorgt Muskeln mit Sauerstoff." },
+            { "title": "Durchblutung", "desc": "Fördert den Blutfluss und versorgt die Muskeln mit Sauerstoff." },
             { "title": "Entspannung", "desc": "Beruhigt das Nervensystem und senkt den Puls." },
-            { "title": "Gelenkmobilität", "desc": "Löst Steifheit und verbessert die Flexibilität." }
+            { "title": "Gelenkmobilität", "desc": "Löst Steifheit und verbessert die Beweglichkeit." }
           ],
           "checks_title": "Ideal bei:",
-          "checks": ["Regeneration nach dem Sport", "Alltagsstress", "Chronischen Verspannungen", "Erholung nach langen Reisen"],
-          "details": "Die klassische Massage ist das Fundament der Haltungsarbeit. Durch gezielten Druck, Kneten und lange Griffe lösen wir physische Verspannungen im Rücken, Nacken und in den Schultern. Diese Behandlung hilft, verspannte Muskeln in ihren entspannten Zustand zurückzuführen, während sie die lokale Durchblutung und den Lymphfluss anregt. Hervorragend als Erholungssitzung oder in Kombination mit Tuina."
+          "checks": ["Regeneration nach dem Sport", "Allgemeinem Alltagsstress", "Chronischen Verspannungen", "Erholung nach langen Reisen"],
+          "details": "Die klassische Massage ist das Fundament der strukturellen Körperarbeit. Mit gezieltem Druck, Kneten und langen Griffen lösen wir aufgestaute Verspannungen in Rücken, Nacken und Schultern. Die Behandlung führt verspannte Muskeln in ihren natürlichen, entspannten Zustand zurück und regt zugleich die lokale Durchblutung und den Lymphfluss an. Hervorragend als eigenständige Erholungssitzung oder kombiniert mit struktureller Tuina-Arbeit."
         },
         {
           "id": "shiatsu",
@@ -560,26 +560,26 @@
           ],
           "checks_title": "Ideal bei:",
           "checks": ["Burnout & Erschöpfung", "Kopfschmerzen & Migräne", "Verdauungsbeschwerden", "Schlafstörungen"],
-          "details": "Shiatsu (wörtlich: 'Fingerdruck') ist eine traditionelle japanische Körpertherapie. Durch gleichmässigen, tiefen Druck entlang der Meridiane (Energiebahnen) werden Blockaden gelöst und die Selbstheilungskräfte aktiviert. Der Klient bleibt während der Behandlung bequem bekleidet (bitte bringen Sie lockere Kleidung mit). Dies macht Shiatsu zu einer sehr geschätzten, klaren Methode."
+          "details": "Shiatsu — wörtlich 'Fingerdruck' — ist eine traditionelle japanische Körpertherapie. Durch gleichmässigen, angenehmen Druck entlang der Meridiane (Energiebahnen) werden Blockaden gelöst und die Selbstheilungskräfte des Körpers geweckt. Sie bleiben während der gesamten Behandlung bequem bekleidet (bringen Sie einfach lockere Kleidung mit) — das macht Shiatsu zu einer besonders klaren, strukturierten und unaufdringlichen Form tiefer Körperarbeit."
         },
         {
           "id": "tuina",
           "title": "Tuina",
-          "desc": "Dynamische TCM-Therapie für tieferes Arbeiten — immer kombiniert mit anderen Methoden.",
+          "desc": "Dynamische TCM-Therapie für tieferes Arbeiten — immer kombiniert mit einer anderen Methode.",
           "image": "https://images.pexels.com/photos/5794024/pexels-photo-5794024.jpeg?auto=compress&cs=tinysrgb&w=700&h=900&fit=crop",
           "benefits": [
-            { "title": "Dynamische Griffe", "desc": "Arbeitet mit rollenden und mobilisierenden Techniken." },
+            { "title": "Dynamische Griffe", "desc": "Arbeitet mit wiegenden, rollenden und mobilisierenden Techniken." },
             { "title": "Schmerzlinderung", "desc": "Gezielt bei hartnäckigen Gelenk- und Muskelproblemen." },
             { "title": "Akupressur", "desc": "Nutzt TCM-Punkte für eine ganzheitliche Wirkung." },
             { "title": "Strukturelle Ausrichtung", "desc": "Hilft, die natürliche Beweglichkeit wiederherzustellen." }
           ],
           "checks_title": "Ideal bei:",
           "checks": ["Rückenschmerzen", "Schultereinschränkungen (Frozen Shoulder)", "Ischias- & Hüftbeschwerden", "Überlastungssyndromen (Mausarm)"],
-          "details": "Tuina ist eine sehr aktive, manuelle Therapieform der Traditionellen Chinesischen Medizin (TCM). Durch rollende, schiebende und mobilisierende Techniken werden chronische Schmerzen und strukturelle Blockaden direkt adressiert. In meiner Praxis wird Tuina immer fliessend in die Behandlung integriert, um Gelenke zu befreien.",
+          "details": "Tuina ist eine sehr aktive, therapeutische Form der Traditionellen Chinesischen Medizin (TCM). Mit rollenden, schiebenden und greifenden Techniken sowie aktiver Gelenkmobilisation werden chronische Schmerzen und strukturelle Ungleichgewichte direkt angegangen. In meiner Praxis wird Tuina stets fliessend in die Behandlung integriert, um tiefe Gelenksteifheit zu lösen und die Struktur Ihres Körpers neu auszurichten.",
           "callout": {
             "icon": "⊕",
             "title": "Integrierte Methode",
-            "description": "Tuina ist keine separate Buchung — es wird genau dort in Ihre Behandlung integriert, wo es nötig ist. Wenn Ihr Körper nach dynamischer, zielgerichteter Arbeit verlangt, kommt Tuina zum Einsatz, harmonisch verbunden mit den entspannenden Elementen der klassischen Massage oder des Shiatsu."
+            "description": "Tuina ist keine separate Buchung — es wird genau dort in Ihre Behandlung integriert, wo es das richtige Werkzeug ist. Wenn Ihr Körper nach kräftigerer, gezielter Arbeit verlangt, kommt Tuina zum Einsatz — nahtlos verbunden mit dem, was Ihnen an diesem Tag sonst noch guttut."
           }
         },
         {
@@ -591,31 +591,31 @@
             { "title": "Haltungsschulung", "desc": "Lernen Sie, mit minimaler Anstrengung zu stehen und zu gehen." },
             { "title": "Neues Bewegungsmuster", "desc": "Durchbricht alte, schmerzhafte Gewohnheiten." },
             { "title": "Gelenkentlastung", "desc": "Entlastet Hüften, Knie und die Wirbelsäule." },
-            { "title": "Körperbewusstsein", "desc": "Fördert die Klarheit und Leichtigkeit im Alltag." }
+            { "title": "Körperbewusstsein", "desc": "Bringt Klarheit und Leichtigkeit in Ihre Bewegung." }
           ],
           "checks_title": "Ideal bei:",
-          "checks": ["Haltungsproblemen im Büro", "Eingeschränkter Haltungskoordination", "Integration nach der Reha", "Fehlendem Körpergefühl"],
-          "details": "Connected Movement verbindet die Wirkung einer Massage mit der Bewegung im Alltag. Durch sanfte, angeleitete Bewegungen spüren wir auf, wo Ihr Körper unnötige Kraft aufwendet. Indem wir dem Gehirn neue, leichtere Haltungswege aufzeigen, lernen Sie, sich im Alltag mühelos und aufrecht zu bewegen."
+          "checks": ["Haltungsproblemen im Büro", "Eingeschränkter Bewegungskoordination", "Integration nach der Reha", "Fehlendem Körpergefühl"],
+          "details": "Connected Movement verbindet die Wirkung einer Massage mit der Bewegung im Alltag. Durch langsame, sanft angeleitete Bewegungen spüren wir auf, wo Ihr Körper unnötige Kraft aufwendet. Indem wir dem Gehirn neue, leichtere Bewegungswege aufzeigen, lernen Sie, mühelos zu stehen, zu sitzen und zu gehen — ohne gegen die Schwerkraft anzukämpfen."
         },
         {
           "id": "qigong",
           "title": "Qigong",
-          "desc": "Eine individuell auf Sie abgestimmte Bewegungspraxis — Übungssequenzen für Ihre Gesundheit und Haltung.",
+          "desc": "Eine individuell auf Sie abgestimmte Bewegungspraxis — Übungssequenzen für Ihren Körper, Ihre Gesundheit, Ihre Ziele.",
           "image": "assets/qigong.jpg",
           "benefits": [
             { "title": "Einfache Alltagsübung", "desc": "Nehmen Sie eine auf Sie abgestimmte 10-Minuten-Routine mit." },
             { "title": "Atem & Bewegung", "desc": "Beruhigt den Geist durch die Synchronisation von Atem und Fluss." },
-            { "title": "Gelenkpflege", "desc": "Erhält die Gelenkflüssigkeit ohne Überlastung." },
+            { "title": "Gelenkpflege", "desc": "Erhält die Beweglichkeit ohne Überlastung." },
             { "title": "Vitalität", "desc": "Baut Energie auf und stärkt die Konstitution." }
           ],
           "checks_title": "Ideal bei:",
-          "checks": ["Täglichem Stressabbau", "Atemfülle & Lungenstärkung", "Kraftaufbau in Beinen & Rumpf", "Förderung der inneren Ruhe"],
-          "details": "Qigong ist ein jahrtausendealtes chinesisches System aus Haltungs-, Atmungs- und Meditationsübungen. Statt grosser Gruppenchoreografien vermittle ich Ihnen einfache, präzise Übungen, die auf Ihr aktuelles Befinden und Ihre TCM-Syndrome abgestimmt sind. So erhalten Sie ein kraftvolles Werkzeug für Ihre eigene Gesundheit zu Hause."
+          "checks": ["Täglichem Stressabbau", "Atemtiefe & Lungenstärkung", "Kraftaufbau in Beinen & Rumpf", "Förderung der inneren Ruhe"],
+          "details": "Qigong ist ein jahrhundertealtes chinesisches System aus aufeinander abgestimmten Haltungs-, Bewegungs-, Atem- und Meditationsübungen. Statt grosser Gruppenchoreografien vermittle ich Ihnen einfache, präzise Übungen, die auf Ihr aktuelles Befinden abgestimmt sind. So erhalten Sie eine aktive, selbstgeführte Praxis für zu Hause — um Kraft aufzubauen, den Geist zu beruhigen und Ihre Erholung weit über den Behandlungsraum hinaus zu unterstützen."
         }
       ],
       "cta_bar": {
         "title": "Unsicher, welche Methode für Sie passt?",
-        "description": "Jede Erstbehandlung beginnt mit einem ausführlichen Gespräch, um Ihre Ziele zu besprechen und eine massgeschneiderte Behandlung zusammenzustellen.",
+        "description": "Jede Erstbehandlung beginnt mit einem ausführlichen, in Ruhe geführten Gespräch, in dem wir Ihre Ziele besprechen und eine ganz auf Sie zugeschnittene Behandlung zusammenstellen.",
         "cta": "Termin vereinbaren"
       }
     },
@@ -623,11 +623,11 @@
       "form": {
         "eyebrow": "Kontakt",
         "title": "Nachricht senden",
-        "description": "Wir antworten innerhalb eines Werktages.",
+        "description": "Wir antworten innert eines Werktages.",
         "fields": {
           "first_name": "Vorname",
           "last_name": "Nachname",
-          "email": "Email",
+          "email": "E-Mail",
           "interest": "Ich interessiere mich für",
           "message": "Nachricht"
         },
@@ -649,14 +649,14 @@
         "phone": "+41 61 234 56 78",
         "hours_title": "Öffnungszeiten",
         "hours": [
-          { "day": "Mon – Fr", "hrs": "Abends" },
+          { "day": "Mo – Fr", "hrs": "Abends" },
           { "day": "Samstag", "hrs": "Termine nach Vereinbarung" },
           { "day": "Sonntag", "hrs": "Termine nach Vereinbarung" }
         ]
       }
     },
     "footer": {
-      "brand_desc": "Massage und Körperarbeit in Basel für Menschen, die sich in ihrem Körper, Geist und ihrer Seele rundum wohlfühlen möchten.",
+      "brand_desc": "Massage und Körperarbeit in Basel für Menschen, die sich in Körper, Geist und Seele rundum wohlfühlen möchten.",
       "cols": {
         "navigate": "Navigation",
         "therapies": "Therapien",
