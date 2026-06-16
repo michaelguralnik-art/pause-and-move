@@ -16,3 +16,6 @@ Desktop.ini
 
 # Build outputs
 dist/
+
+# Local helpers
+Push_To_GitHub.bat
