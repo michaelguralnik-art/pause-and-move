@@ -98,28 +98,30 @@
     <p class="modal-eyebrow">Reserve Your Session</p>
     <h2>Book Now</h2>
     <p class="modal-sub">We'll confirm your appointment within 24 hours.</p>
-    <div class="modal-row">
-      <div class="modal-field"><label>First name</label><input type="text" placeholder="Anna"/></div>
-      <div class="modal-field"><label>Last name</label><input type="text" placeholder="Müller"/></div>
-    </div>
-    <div class="modal-field"><label>Email</label><input type="email" placeholder="anna@example.com"/></div>
-    <div class="modal-field">
-      <label>Therapy</label>
-      <select>
-        <option value="">— Please choose —</option>
-        <option>Single session — 60 min (CHF 120)</option>
-        <option>Single session — 90 min (CHF 160)</option>
-        <option>Pause package — 4 sessions</option>
-        <option>Pause package — 8 sessions</option>
-        <option>Move package — 4 sessions</option>
-        <option>Move package — 8 sessions</option>
-        <option>Move — The Long Game (first session)</option>
-        <option>Qigong session</option>
-        <option>Not sure — help me choose</option>
-      </select>
-    </div>
-    <div class="modal-field"><label>Notes</label><textarea placeholder="Injuries, preferences, questions…"></textarea></div>
-    <button class="modal-submit" onclick="closeModal()">Send Request</button>
+    <form id="booking-form" onsubmit="submitBookingForm(event); return false;">
+      <div class="modal-row">
+        <div class="modal-field"><label>First name</label><input type="text" id="bm-first-name" placeholder="Anna" required/></div>
+        <div class="modal-field"><label>Last name</label><input type="text" id="bm-last-name" placeholder="Müller" required/></div>
+      </div>
+      <div class="modal-field"><label>Email</label><input type="email" id="bm-email" placeholder="anna@example.com" required/></div>
+      <div class="modal-field">
+        <label>Therapy</label>
+        <select id="bm-therapy" required>
+          <option value="">— Please choose —</option>
+          <option>Single session — 60 min (CHF 120)</option>
+          <option>Single session — 90 min (CHF 160)</option>
+          <option>Pause package — 4 sessions</option>
+          <option>Pause package — 8 sessions</option>
+          <option>Move package — 4 sessions</option>
+          <option>Move package — 8 sessions</option>
+          <option>Move — The Long Game (first session)</option>
+          <option>Qigong session</option>
+          <option>Not sure — help me choose</option>
+        </select>
+      </div>
+      <div class="modal-field"><label>Notes</label><textarea id="bm-notes" placeholder="Injuries, preferences, questions…"></textarea></div>
+      <button type="submit" class="modal-submit" id="bm-submit">Send Request</button>
+    </form>
   </div>
 </div>
 
@@ -444,18 +446,18 @@
   </div>
 
   <div class="contact-layout">
-    <div class="contact-form reveal-left">
+    <form class="contact-form reveal-left" id="contact-form" onsubmit="submitContactForm(event); return false;">
       <p class="eyebrow" style="margin-bottom:14px" data-copy="contact.form.eyebrow">Send a message</p>
       <h2>Get in touch</h2>
       <p>We reply within one working day.</p>
       <div class="cf-row">
-        <div class="cf-field"><label data-copy="contact.form.fields.first_name">First name</label><input type="text" placeholder="Anna"/></div>
-        <div class="cf-field"><label data-copy="contact.form.fields.last_name">Last name</label><input type="text" placeholder="Müller"/></div>
+        <div class="cf-field"><label data-copy="contact.form.fields.first_name">First name</label><input type="text" id="cf-first-name" placeholder="Anna" required/></div>
+        <div class="cf-field"><label data-copy="contact.form.fields.last_name">Last name</label><input type="text" id="cf-last-name" placeholder="Müller" required/></div>
       </div>
-      <div class="cf-field"><label data-copy="contact.form.fields.email">Email</label><input type="email" placeholder="anna@example.com"/></div>
+      <div class="cf-field"><label data-copy="contact.form.fields.email">Email</label><input type="email" id="cf-email" placeholder="anna@example.com" required/></div>
       <div class="cf-field">
         <label data-copy="contact.form.fields.interest">I'm interested in</label>
-        <select>
+        <select id="cf-interest" required>
           <option value="">— Choose a therapy —</option>
           <option>Classic Massage</option>
           <option>Shiatsu</option>
@@ -465,9 +467,9 @@
           <option>Not sure yet</option>
         </select>
       </div>
-      <div class="cf-field"><label data-copy="contact.form.fields.message">Message</label><textarea placeholder="Tell us a little about what you're looking for…"></textarea></div>
-      <button class="cf-submit" data-copy="contact.form.submit">Send message</button>
-    </div>
+      <div class="cf-field"><label data-copy="contact.form.fields.message">Message</label><textarea id="cf-message" placeholder="Tell us a little about what you're looking for…" required></textarea></div>
+      <button type="submit" class="cf-submit" id="cf-submit" data-copy="contact.form.submit">Send message</button>
+    </form>
     <div class="contact-info reveal-right">
       <div class="contact-map" style="padding:0;overflow:hidden;">
         <iframe

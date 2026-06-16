@@ -344,3 +344,109 @@ function renderModalitiesContent(data) {
     </div>
   `).join('');
 }
+
+// ── Form submission handling (FormSubmit.co via AJAX) ──
+function submitBookingForm(event) {
+  event.preventDefault();
+  const submitBtn = document.getElementById('bm-submit');
+  const originalText = submitBtn.textContent;
+  
+  const firstName = document.getElementById('bm-first-name').value.trim();
+  const lastName = document.getElementById('bm-last-name').value.trim();
+  const email = document.getElementById('bm-email').value.trim();
+  const therapy = document.getElementById('bm-therapy').value;
+  const notes = document.getElementById('bm-notes').value.trim();
+  
+  const clientName = firstName + " " + lastName;
+  submitBtn.disabled = true;
+  submitBtn.textContent = currentLang === 'en' ? 'Sending...' : 'Senden...';
+
+  fetch("https://formsubmit.co/ajax/hello@pauseandmove.ch", {
+    method: "POST",
+    headers: { 
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      _subject: "Booking Request " + clientName,
+      "Name": clientName,
+      "Email": email,
+      "Therapy": therapy,
+      "Notes": notes,
+      _captcha: "false"
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      submitBtn.textContent = currentLang === 'en' ? 'Sent successfully!' : 'Erfolgreich gesendet!';
+      document.getElementById('booking-form').reset();
+      setTimeout(() => {
+        closeModal();
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }, 1500);
+    } else {
+      throw new Error("Form submission failed");
+    }
+  })
+  .catch(err => {
+    console.error(err);
+    submitBtn.textContent = currentLang === 'en' ? 'Error. Try again.' : 'Fehler. Erneut versuchen.';
+    submitBtn.disabled = false;
+    setTimeout(() => {
+      submitBtn.textContent = originalText;
+    }, 3000);
+  });
+}
+
+function submitContactForm(event) {
+  event.preventDefault();
+  const submitBtn = document.getElementById('cf-submit');
+  const originalText = submitBtn.textContent;
+  
+  const firstName = document.getElementById('cf-first-name').value.trim();
+  const lastName = document.getElementById('cf-last-name').value.trim();
+  const email = document.getElementById('cf-email').value.trim();
+  const interest = document.getElementById('cf-interest').value;
+  const message = document.getElementById('cf-message').value.trim();
+  
+  const clientName = firstName + " " + lastName;
+  submitBtn.disabled = true;
+  submitBtn.textContent = currentLang === 'en' ? 'Sending...' : 'Senden...';
+
+  fetch("https://formsubmit.co/ajax/hello@pauseandmove.ch", {
+    method: "POST",
+    headers: { 
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      _subject: "Booking Request " + clientName,
+      "Name": clientName,
+      "Email": email,
+      "Interested In": interest,
+      "Message": message,
+      _captcha: "false"
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      submitBtn.textContent = currentLang === 'en' ? 'Sent successfully!' : 'Erfolgreich gesendet!';
+      document.getElementById('contact-form').reset();
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }, 3000);
+    } else {
+      throw new Error("Form submission failed");
+    }
+  })
+  .catch(err => {
+    console.error(err);
+    submitBtn.textContent = currentLang === 'en' ? 'Error. Try again.' : 'Fehler. Erneut versuchen.';
+    submitBtn.disabled = false;
+    setTimeout(() => {
+      submitBtn.textContent = originalText;
+    }, 3000);
+  });
+}
