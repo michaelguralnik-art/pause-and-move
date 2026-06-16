@@ -1,0 +1,335 @@
+{
+  "nav": {
+    "logo": "Pause <span>&</span> Move",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "modalities": "Modalities",
+      "blog": "Journal",
+      "contact": "Contact"
+    },
+    "cta": "Book Now"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Massage & Bodywork · Basel",
+      "title": "A place to<br><em>pause,</em> and<br>truly <span class=\"outline\">move.</span>",
+      "sub": "Professional massage and bodywork for body, mind and spirit — in the heart of Basel, for the international community that calls it home."
+    },
+    "modalities_strip": {
+      "eyebrow": "Our modalities",
+      "title": "Five paths to <em>feeling well</em>",
+      "cta": "View all therapies"
+    },
+    "philosophy": {
+      "quote": "A good treatment is one that makes the client stronger — and strength is achieved through experience and awareness.",
+      "cite": "— The Pause & Move approach",
+      "body1": "Besides relieving you of what brought you here, the goal is to give you something that will make you <strong>need these sessions less in the future</strong> — not more. That means giving you experience, not just a service.",
+      "body2": "There are many ways to get healthier, stronger and happier — from the food we eat to our daily habits to how we treat others. <strong>What happens in the session ripples outward.</strong> When the experience is positive, those changes tend to cascade into the rest of life.",
+      "pillars": [
+        {
+          "num": "I",
+          "title": "Experience over service",
+          "desc": "The aim is to pass on knowledge, build awareness, and leave you with something tangible beyond the hour."
+        },
+        {
+          "num": "II",
+          "title": "Honesty about limits",
+          "desc": "Where this practice isn't the right fit, you'll be referred to someone whose system is better equipped for the job."
+        },
+        {
+          "num": "III",
+          "title": "The whole person",
+          "desc": "Body, mind, spirit. Not as a slogan — as a genuine framework for how every session is approached."
+        }
+      ]
+    },
+    "band": {
+      "title": "Welcoming Basel's<br><em>international community</em>",
+      "sub": "A practice that knows what it's like to be new somewhere — and wants to help you feel at home in your body first."
+    },
+    "testimonial": {
+      "quote": "I came in with persistent shoulder pain that two physical therapists couldn't resolve. After a couple of combined Shiatsu/Tuina sessions, the pain was gone. But more importantly, I finally understood how my posture at my desk was causing the issue in the first place.",
+      "cite": "Thomas, Expat in Basel"
+    }
+  },
+  "about": {
+    "hero_title": "About the practice",
+    "sub_nav": {
+      "bio": "Bio & Approach",
+      "pillars": "Core Pillars",
+      "quote": "Quote"
+    },
+    "bio": {
+      "eyebrow": "Who we are",
+      "title": "Gregory — Massage therapist & bodyworker",
+      "paragraphs": [
+        "I started my bodywork journey with a simple observation: we are living in a world that asks us to run, push, and perform, but rarely gives us the space to stop and feel.",
+        "My approach is rooted in eastern manual therapies—primarily Shiatsu and Tuina—combined with modern body alignment and movement education. I look at the body as an integrated system where physical posture, energy pathways, and mental tension are intimately connected.",
+        "Having lived as an expat myself, I understand the unique challenges of settling into a new city. Pause & Move was founded to be a welcoming space for Basel's diverse international community to find balance and feel at home in their bodies."
+      ],
+      "tags": ["Shiatsu", "Tuina", "Movement Education", "Expat Wellness"]
+    },
+    "pillars": {
+      "title": "Core Pillars",
+      "items": [
+        {
+          "roman": "I",
+          "title": "Awareness",
+          "desc": "Healing starts when we pay attention. Every session begins with listening to what your body is trying to communicate."
+        },
+        {
+          "roman": "II",
+          "title": "Integration",
+          "desc": "A massage shouldn't be a temporary escape. We work to weave the physical changes into your daily posture and movement."
+        },
+        {
+          "roman": "III",
+          "title": "Independence",
+          "desc": "My ultimate goal is to empower you with the tools, stretches, and awareness to maintain your own physical well-being."
+        }
+      ]
+    },
+    "quote_section": {
+      "quote": "Manual therapy isn't about 'fixing' a passive body; it's about initiating a conversation that helps the body remember its own capacity for ease.",
+      "cite": "Gregory, Founder of Pause & Move"
+    }
+  },
+  "services": {
+    "hero_title": "Services & Rates",
+    "intro": {
+      "eyebrow": "Pricing",
+      "title": "Clear, simple rates for your well-being"
+    },
+    "single": {
+      "title": "Single Sessions",
+      "desc": "Perfect for targeted relief, relaxation, or maintenance treatments. Every session is custom-tailored using Shiatsu, Tuina, or movement work depending on your needs.",
+      "prices": [
+        { "duration": "60 minutes", "price": "CHF 120" },
+        { "duration": "90 minutes", "price": "CHF 160" }
+      ],
+      "note": "<strong>Insurance coverage:</strong> My treatments are recognized by most Swiss complementary medicine supplementary insurances (ASCA/EGK). Please verify with your provider using my registration details before booking."
+    },
+    "packages_intro": {
+      "eyebrow": "Packages",
+      "title": "Commitment to change",
+      "description": "True changes in posture, alignment, and chronic tension take time. These packages are designed for those committed to deeper, long-term bodywork."
+    },
+    "packages": [
+      {
+        "name": "The Pause Track",
+        "subtitle": "EASE & RESTORE",
+        "description": "Ideal for stress management, nervous system regulation, and regular maintenance.",
+        "perks": [
+          "Choose between 60 or 90 minute custom sessions",
+          "Priority booking access",
+          "Tailored home stretches & routines"
+        ],
+        "cards": [
+          {
+            "title": "4 Sessions",
+            "frequency": "VALID FOR 4 MONTHS",
+            "price": "CHF 440",
+            "save": "SAVE CHF 40",
+            "price_alt": "CHF 580",
+            "save_alt": "SAVE CHF 60"
+          },
+          {
+            "title": "8 Sessions",
+            "frequency": "VALID FOR 8 MONTHS",
+            "price": "CHF 840",
+            "save": "SAVE CHF 120",
+            "price_alt": "CHF 1120",
+            "save_alt": "SAVE CHF 160"
+          }
+        ]
+      },
+      {
+        "name": "The Move Track",
+        "subtitle": "REALIGN & REBUILD",
+        "description": "Designed for postural correction, chronic pain release, and functional movement training.",
+        "perks": [
+          "Intensive postural assessment",
+          "Video movement check-ins between sessions",
+          "Personalized movement homework & videos"
+        ],
+        "cards": [
+          {
+            "title": "4 Sessions",
+            "frequency": "VALID FOR 3 MONTHS",
+            "price": "CHF 460",
+            "save": "SAVE CHF 20",
+            "price_alt": "CHF 600",
+            "save_alt": "SAVE CHF 40"
+          },
+          {
+            "title": "8 Sessions",
+            "frequency": "VALID FOR 6 MONTHS",
+            "price": "CHF 880",
+            "save": "SAVE CHF 80",
+            "price_alt": "CHF 1160",
+            "save_alt": "SAVE CHF 120"
+          }
+        ]
+      }
+    ],
+    "long_game": {
+      "name": "The Long Game",
+      "subtitle": "ONGOING CARE",
+      "description": "For clients who have completed an initial cycle and want to maintain their posture and movement health on a regular bi-weekly or monthly schedule.",
+      "perks": [
+        "Consistent time slots reserved for you",
+        "Flexible reschedule policy",
+        "Direct email check-ins for support"
+      ],
+      "rate_label": "EXCLUSIVE MEMBER RATE",
+      "rate_price": "CHF 100",
+      "rate_sub": "/ session (60m)"
+    }
+  },
+  "modalities": {
+    "hero_title": "Therapies & Modalities",
+    "intro": {
+      "eyebrow": "How we work",
+      "title": "A holistic toolset for physical alignment",
+      "description": "We don't believe in one-size-fits-all. Every session integrates different manual therapy methods to address your unique posture, tension patterns, and energy flow."
+    },
+    "list": [
+      {
+        "id": "classic",
+        "title": "Classic Massage",
+        "desc": "Long, flowing strokes that ease tension and restore your whole body — the perfect reset.",
+        "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=700&q=80&auto=format&fit=crop",
+        "benefits": [
+          { "title": "Muscle relief", "desc": "Releases deep tension, tightness, and soreness." },
+          { "title": "Improved circulation", "desc": "Increases blood flow to oxygenate muscles." },
+          { "title": "Relaxation", "desc": "Calms the nervous system and lowers heart rate." },
+          { "title": "Joint mobility", "desc": "Eases stiffness and improves flexibility." }
+        ],
+        "checks_title": "Best for:",
+        "checks": ["Post-workout recovery", "General stress relief", "Chronic muscle stiffness", "Relaxing after a long travel"],
+        "details": "Classic massage is the foundation of structural bodywork. By using customized pressure, kneading, and long strokes, we release built-up physical tension in the back, neck, and shoulders. This treatment helps return tense muscles to their natural, relaxed state while improving local circulation and systemic lymph flow. Excellent as a stand-alone recovery session or combined with structural Tuina manipulation."
+      },
+      {
+        "id": "shiatsu",
+        "title": "Shiatsu",
+        "desc": "Japanese pressure-point therapy done fully clothed — no oils, no undressing. Pure balance.",
+        "image": "https://images.pexels.com/photos/5794027/pexels-photo-5794027.jpeg?auto=compress&cs=tinysrgb&w=700&h=900&fit=crop",
+        "benefits": [
+          { "title": "Nervous regulation", "desc": "Restores balance to your sympathetic system." },
+          { "title": "No oils / fully clothed", "desc": "Done on a table or futon while dressed." },
+          { "title": "Pressure points", "desc": "Uses fingers, palms, and elbows along channels." },
+          { "title": "Emotional grounding", "desc": "Provides deep mental stillness and focus." }
+        ],
+        "checks_title": "Best for:",
+        "checks": ["Burnout & fatigue", "Headaches & migraines", "Digestive issues", "Sleep disturbances"],
+        "details": "Shiatsu (literally meaning 'finger pressure') is a traditional Japanese bodywork method. By applying steady, comfortable pressure along the body's energy channels (meridians), it helps release blockages and stimulates the body's self-healing mechanisms. The client remains fully clothed (please wear comfortable, loose clothing) during the session, making it a very clean, structured, and non-intrusive way to receive deep bodywork."
+      },
+      {
+        "id": "tuina",
+        "title": "Tuina",
+        "desc": "Dynamic Chinese medicine for deeper therapeutic work — always paired with another modality.",
+        "image": "https://images.pexels.com/photos/5794024/pexels-photo-5794024.jpeg?auto=compress&cs=tinysrgb&w=700&h=900&fit=crop",
+        "benefits": [
+          { "title": "Dynamic movement", "desc": "Uses rocking, rolling, and active stretching." },
+          { "title": "Chronic pain relief", "desc": "Targets stiff joints and old injuries directly." },
+          { "title": "Acupressure", "desc": "Utilizes specific TCM points for systemic effect." },
+          { "title": "Structural alignment", "desc": "Helps re-establish proper range of motion." }
+        ],
+        "checks_title": "Best for:",
+        "checks": ["Lower back pain", "Frozen shoulder", "Sciatica & hip tension", "Repetitive strain injuries"],
+        "details": "Tuina is a highly active, therapeutic branch of Traditional Chinese Medicine (TCM). Using a variety of hand techniques (like rolling, pushing, and grasping) alongside active joint mobilization, it directly addresses chronic pain and structural imbalances. In this practice, Tuina is always woven dynamically into your session to release deep joint stiffness and align your body's structure.",
+        "callout": {
+          "icon": "☯",
+          "title": "Note on Tuina combination",
+          "description": "Tuina is highly dynamic and can sometimes feel intense. It is rarely done on its own in my practice. Instead, I combine it with the flowing strokes of Classic Massage or the soothing pressure of Shiatsu to ensure you leave feeling relaxed and open, rather than sore."
+        }
+      },
+      {
+        "id": "connected",
+        "title": "Connected Movement",
+        "desc": "Subtle, effortless motion — guided and self-led — to rediscover how your body wants to move.",
+        "image": "assets/connected.jpg",
+        "benefits": [
+          { "title": "Postural rebuild", "desc": "Learn to stand and walk with minimal effort." },
+          { "title": "Neuromuscular re-education", "desc": "Breaks old, painful patterns." },
+          { "title": "Joint decompressive", "desc": "Eases load on hips, knees, and spine." },
+          { "title": "Body awareness", "desc": "Increases clarity and grace of movement." }
+        ],
+        "checks_title": "Best for:",
+        "checks": ["Desk workers' posture", "Poor body coordination", "Post-rehab integration", "Mind-body dissociation"],
+        "details": "Connected Movement is a form of movement education designed to bridge the gap between receiving a massage and moving in daily life. Through slow, gentle, guided movements, we explore where your body is holding unnecessary effort. By training your brain to register new, decompressed pathways of movement, you learn how to stand, sit, and walk without fighting gravity."
+      },
+      {
+        "id": "qigong",
+        "title": "Qigong",
+        "desc": "An individually prescribed moving practice — sequences chosen for your body, your health, your goals.",
+        "image": "assets/qigong.jpg",
+        "benefits": [
+          { "title": "Daily practice", "desc": "Take home a 10-minute routine built for you." },
+          { "title": "Breath integration", "desc": "Calms the mind by syncing breath with motion." },
+          { "title": "Joint health", "desc": "Maintains fluid mobility without strain." },
+          { "title": "Energy cultivation", "desc": "Builds stamina and internal vitality." }
+        ],
+        "checks_title": "Best for:",
+        "checks": ["Daily stress reduction", "Asthma & breathing depth", "Lower body strength", "Cultivating inner peace"],
+        "details": "Qigong is a centuries-old Chinese system of coordinated body posture, movement, breathing, and meditation. Rather than teaching large group choreographies, I prescribe specific, simple Qigong exercises tailored to your current physical condition. This provides you with an active, self-led practice to build strength, calm your mind, and support your recovery outside the therapy room."
+      }
+    ],
+    "cta_bar": {
+      "title": "Not sure which therapy is right for you?",
+      "description": "Every first session starts with a detailed consultation where we discuss your goals and build a treatment custom-made for your body.",
+      "cta": "Book a session"
+    }
+  },
+  "contact": {
+    "form": {
+      "eyebrow": "Get in touch",
+      "title": "Send a message",
+      "description": "We reply within one working day.",
+      "fields": {
+        "first_name": "First name",
+        "last_name": "Last name",
+        "email": "Email",
+        "interest": "I'm interested in",
+        "message": "Message"
+      },
+      "interest_options": [
+        "Classic Massage",
+        "Shiatsu",
+        "Connected Movement",
+        "Tuina combination",
+        "Qigong",
+        "Not sure yet"
+      ],
+      "submit": "Send message"
+    },
+    "info": {
+      "title": "Find us",
+      "pin": "Inside Physiopunkt Basel",
+      "address": "<strong>Pause & Move</strong><br>Inside Physiopunkt Basel<br>Meret Oppenheim-Strasse 6<br>4053 Basel, Switzerland",
+      "email": "hello@pauseandmove.ch",
+      "phone": "+41 61 234 56 78",
+      "hours_title": "Opening hours",
+      "hours": [
+        { "day": "Mon – Fri", "hrs": "Evenings" },
+        { "day": "Saturday", "hrs": "Available" },
+        { "day": "Sunday", "hrs": "Available" }
+      ]
+    }
+  },
+  "footer": {
+    "brand_desc": "Massage and bodywork in Basel for people who want to feel genuinely well — in body, mind, and spirit.",
+    "cols": {
+      "navigate": "Navigate",
+      "therapies": "Therapies",
+      "contact": "Contact"
+    },
+    "bottom": "© 2025 Pause & Move, Basel. All rights reserved.",
+    "legal": {
+      "privacy": "Privacy",
+      "terms": "Terms"
+    }
+  }
+}

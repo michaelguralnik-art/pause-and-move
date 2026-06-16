@@ -14,18 +14,18 @@
 <!-- NAV -->
 <nav class="nav" id="main-nav">
   <div class="nav-inner">
-    <div class="nav-logo" onclick="showSection('home')" role="link" tabindex="0">
+    <div class="nav-logo" onclick="showSection('home')" role="link" tabindex="0" data-copy="nav.logo">
       Pause <span>&</span> Move
     </div>
     <ul class="nav-links">
-      <li><a href="#" onclick="showSection('home');return false;">Home</a></li>
-      <li><a href="#" onclick="showSection('about');return false;">About</a></li>
-      <li><a href="#" onclick="showSection('services');return false;">Services</a></li>
-      <li><a href="#" onclick="showSection('modalities');return false;">Modalities</a></li>
-      <li><a href="#" onclick="showSection('blog');return false;">Journal</a></li>
-      <li><a href="#" onclick="showSection('contact');return false;">Contact</a></li>
+      <li><a href="#" onclick="showSection('home');return false;" data-copy="nav.links.home">Home</a></li>
+      <li><a href="#" onclick="showSection('about');return false;" data-copy="nav.links.about">About</a></li>
+      <li><a href="#" onclick="showSection('services');return false;" data-copy="nav.links.services">Services</a></li>
+      <li><a href="#" onclick="showSection('modalities');return false;" data-copy="nav.links.modalities">Modalities</a></li>
+      <li><a href="#" onclick="showSection('blog');return false;" data-copy="nav.links.blog">Journal</a></li>
+      <li><a href="#" onclick="showSection('contact');return false;" data-copy="nav.links.contact">Contact</a></li>
     </ul>
-    <button class="nav-cta" onclick="openModal()">Book Now</button>
+    <button class="nav-cta" onclick="openModal()" data-copy="nav.cta">Book Now</button>
     <button class="nav-hamburger" onclick="toggleDrawer()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -34,17 +34,17 @@
 
 <!-- MOBILE DRAWER -->
 <div class="nav-drawer" id="nav-drawer">
-  <a href="#" onclick="showSection('home');closeDrawer();return false;">Home</a>
-  <a href="#" onclick="showSection('about');closeDrawer();return false;">About</a>
-  <a href="#" onclick="showSection('services');closeDrawer();return false;">Services</a>
-  <a href="#" onclick="showSection('modalities');closeDrawer();return false;">Modalities</a>
-  <a href="#" onclick="showSection('blog');closeDrawer();return false;">Journal</a>
-  <a href="#" onclick="showSection('contact');closeDrawer();return false;">Contact</a>
-  <a href="#" class="drawer-cta" onclick="closeDrawer();openModal();return false;">Book a Session</a>
+  <a href="#" onclick="showSection('home');closeDrawer();return false;" data-copy="nav.links.home">Home</a>
+  <a href="#" onclick="showSection('about');closeDrawer();return false;" data-copy="nav.links.about">About</a>
+  <a href="#" onclick="showSection('services');closeDrawer();return false;" data-copy="nav.links.services">Services</a>
+  <a href="#" onclick="showSection('modalities');closeDrawer();return false;" data-copy="nav.links.modalities">Modalities</a>
+  <a href="#" onclick="showSection('blog');closeDrawer();return false;" data-copy="nav.links.blog">Journal</a>
+  <a href="#" onclick="showSection('contact');closeDrawer();return false;" data-copy="nav.links.contact">Contact</a>
+  <a href="#" class="drawer-cta" onclick="closeDrawer();openModal();return false;" data-copy="nav.links.contact_cta">Book a Session</a>
 </div>
 
 <!-- FLOAT BOOK -->
-<button class="float-book" onclick="openModal()">Book a Session</button>
+<button class="float-book" onclick="openModal()" data-copy="nav.links.contact_cta">Book a Session</button>
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
@@ -93,16 +93,16 @@
       />
     </div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Massage & Bodywork · Basel</p>
-      <h1 class="hero-headline">
+      <p class="hero-eyebrow" data-copy="home.hero.eyebrow">Massage & Bodywork · Basel</p>
+      <h1 class="hero-headline" data-copy="home.hero.headline">
         A place to<br>
         <em>pause,</em> and<br>
         truly <span class="outline">move.</span>
       </h1>
-      <p class="hero-sub">Professional massage and bodywork for body, mind and spirit — in the heart of Basel, for the international community that calls it home.</p>
+      <p class="hero-sub" data-copy="home.hero.sub">Professional massage and bodywork for body, mind and spirit — in the heart of Basel, for the international community that calls it home.</p>
       <div class="hero-actions">
-        <button class="btn-gold" onclick="openModal()">Book a session</button>
-        <button class="btn-outline" onclick="showSection('modalities')">Explore therapies</button>
+        <button class="btn-gold" onclick="openModal()" data-copy="nav.links.contact_cta">Book a session</button>
+        <button class="btn-outline" onclick="showSection('modalities')" data-copy="home.hero.explore_cta">Explore therapies</button>
       </div>
     </div>
     <div class="hero-scroll">
@@ -115,67 +115,13 @@
   <div class="modalities-strip-section">
     <div class="strip-header reveal">
       <div>
-        <p class="eyebrow" style="margin-bottom:12px">Our modalities</p>
-        <h2 class="display-lg" style="color:var(--white)">Five paths to <em>feeling well</em></h2>
+        <p class="eyebrow" style="margin-bottom:12px" data-copy="home.modalities_strip.eyebrow">Our modalities</p>
+        <h2 class="display-lg" style="color:var(--white)" data-copy="home.modalities_strip.title">Five paths to <em>feeling well</em></h2>
       </div>
-      <button class="btn-text" onclick="showSection('modalities')">View all therapies</button>
+      <button class="btn-text" onclick="showSection('modalities')" data-copy="home.modalities_strip.cta">View all therapies</button>
     </div>
     <div class="modalities-scroll" id="mod-scroll">
-      <div class="modality-card reveal delay-1" onclick="showSection('modalities');showMod('classic')">
-        <div class="modality-card-img">
-          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=700&q=80&auto=format&fit=crop" alt="Classic Massage"/>
-        </div>
-        <div class="modality-card-content">
-          <p class="modality-card-num">01</p>
-          <h3>Classic Massage</h3>
-          <p>Long, flowing strokes that ease tension and restore your whole body — the perfect reset.</p>
-          <span class="modality-card-arrow">Learn more →</span>
-        </div>
-      </div>
-      <div class="modality-card reveal delay-2" onclick="showSection('modalities');showMod('shiatsu')">
-        <div class="modality-card-img">
-          <img src="https://images.pexels.com/photos/5794027/pexels-photo-5794027.jpeg?auto=compress&cs=tinysrgb&w=700&h=900&fit=crop" alt="Shiatsu therapy"/>
-        </div>
-        <div class="modality-card-content">
-          <p class="modality-card-num">02</p>
-          <h3>Shiatsu</h3>
-          <p>Japanese pressure-point therapy done fully clothed — no oils, no undressing. Pure balance.</p>
-          <span class="modality-card-arrow">Learn more →</span>
-        </div>
-      </div>
-      <div class="modality-card reveal delay-3" onclick="showSection('modalities');showMod('tuina')">
-        <div class="modality-card-img">
-          <img src="https://images.pexels.com/photos/5794024/pexels-photo-5794024.jpeg?auto=compress&cs=tinysrgb&w=700&h=900&fit=crop" alt="Tuina therapy"/>
-        </div>
-        <div class="modality-card-content">
-          <p class="modality-card-num">03</p>
-          <h3>Tuina</h3>
-          <p>Dynamic Chinese medicine for deeper therapeutic work — woven into your session where needed.</p>
-          <span class="modality-card-arrow">Learn more →</span>
-        </div>
-      </div>
-      <div class="modality-card reveal delay-4" onclick="showSection('modalities');showMod('connected')">
-        <div class="modality-card-img">
-          <img src="assets/connected.jpg" alt="Connected Movement"/>
-        </div>
-        <div class="modality-card-content">
-          <p class="modality-card-num">04</p>
-          <h3>Connected Movement</h3>
-          <p>Subtle, effortless motion — guided and self-led — to rediscover how your body wants to move.</p>
-          <span class="modality-card-arrow">Learn more →</span>
-        </div>
-      </div>
-      <div class="modality-card reveal delay-4" onclick="showSection('modalities');showMod('qigong')">
-        <div class="modality-card-img">
-          <img style="object-position:center 20%;" src="assets/qigong.jpg" alt="Qigong practice"/>
-        </div>
-        <div class="modality-card-content">
-          <p class="modality-card-num">05</p>
-          <h3>Qigong</h3>
-          <p>An individually prescribed moving practice — sequences chosen for your body, your health, your goals.</p>
-          <span class="modality-card-arrow">Learn more →</span>
-        </div>
-      </div>
+      <!-- Generated dynamically in index.js -->
     </div>
   </div>
 
@@ -183,16 +129,34 @@
   <div class="philosophy-section">
     <div class="philosophy-left reveal-left">
       <div class="philosophy-quote-mark">"</div>
-      <blockquote>"A good treatment is one that makes the client stronger — and strength is achieved through experience and awareness."</blockquote>
-      <cite>— The Pause & Move approach</cite>
+      <blockquote data-copy="home.philosophy.quote">"A good treatment is one that makes the client stronger — and strength is achieved through experience and awareness."</blockquote>
+      <cite data-copy="home.philosophy.cite">— The Pause & Move approach</cite>
     </div>
     <div class="philosophy-right reveal-right">
-      <p>Besides relieving you of what brought you here, the goal is to give you something that will make you <strong>need these sessions less in the future</strong> — not more. That means giving you experience, not just a service.</p>
-      <p>There are many ways to get healthier, stronger and happier — from the food we eat to our daily habits to how we treat others. <strong>What happens in the session ripples outward.</strong> When the experience is positive, those changes tend to cascade into the rest of life.</p>
+      <p data-copy="home.philosophy.body1">Besides relieving you of what brought you here, the goal is to give you something that will make you <strong>need these sessions less in the future</strong> — not more. That means giving you experience, not just a service.</p>
+      <p data-copy="home.philosophy.body2">There are many ways to get healthier, stronger and happier — from the food we eat to our daily habits to how we treat others. <strong>What happens in the session ripples outward.</strong> When the experience is positive, those changes tend to cascade into the rest of life.</p>
       <div class="pillars">
-        <div class="pillar"><span class="pillar-num">I</span><div class="pillar-text"><h4>Experience over service</h4><p>The aim is to pass on knowledge, build awareness, and leave you with something tangible beyond the hour.</p></div></div>
-        <div class="pillar"><span class="pillar-num">II</span><div class="pillar-text"><h4>Honesty about limits</h4><p>Where this practice isn't the right fit, you'll be referred to someone whose system is better equipped for the job.</p></div></div>
-        <div class="pillar"><span class="pillar-num">III</span><div class="pillar-text"><h4>The whole person</h4><p>Body, mind, spirit. Not as a slogan — as a genuine framework for how every session is approached.</p></div></div>
+        <div class="pillar">
+          <span class="pillar-num">I</span>
+          <div class="pillar-text">
+            <h4 data-copy="home.philosophy.pillars.0.title">Experience over service</h4>
+            <p data-copy="home.philosophy.pillars.0.desc">The aim is to pass on knowledge, build awareness, and leave you with something tangible beyond the hour.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">II</span>
+          <div class="pillar-text">
+            <h4 data-copy="home.philosophy.pillars.1.title">Honesty about limits</h4>
+            <p data-copy="home.philosophy.pillars.1.desc">Where this practice isn't the right fit, you'll be referred to someone whose system is better equipped for the job.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">III</span>
+          <div class="pillar-text">
+            <h4 data-copy="home.philosophy.pillars.2.title">The whole person</h4>
+            <p data-copy="home.philosophy.pillars.2.desc">Body, mind, spirit. Not as a slogan — as a genuine framework for how every session is approached.</p>
+          </div>
+        </div>
       </div>
       <div style="margin-top:36px;display:flex;gap:12px;flex-wrap:wrap;">
         <button class="btn-gold" onclick="showSection('about')">About the practice</button>
@@ -209,8 +173,8 @@
     />
     <div class="photo-band-overlay">
       <div class="photo-band-text">
-        <h2>Welcoming Basel's<br><em>international community</em></h2>
-        <p>A practice that knows what it's like to be new somewhere — and wants to help you feel at home in your body first.</p>
+        <h2 data-copy="home.band.title">Welcoming Basel's<br><em>international community</em></h2>
+        <p data-copy="home.band.sub">A practice that knows what it's like to be new somewhere — and wants to help you feel at home in your body first.</p>
         <button class="btn-gold" onclick="openModal()">Book your first session</button>
       </div>
     </div>
@@ -218,8 +182,8 @@
 
   <!-- TESTIMONIAL -->
   <div class="testimonial-section reveal">
-    <blockquote>"I moved to Basel two years ago and finding Pause & Move was the best thing I did for myself. I finally feel at home — in my body and in this city."</blockquote>
-    <cite>— Sarah K., expat from London</cite>
+    <blockquote data-copy="home.testimonial.quote">I came in with persistent shoulder pain that two physical therapists couldn't resolve. After a couple of combined Shiatsu/Tuina sessions, the pain was gone. But more importantly, I finally understood how my posture at my desk was causing the issue in the first place.</blockquote>
+    <cite data-copy="home.testimonial.cite">Thomas, Expat in Basel</cite>
   </div>
 
 </section>
@@ -229,40 +193,36 @@
 
   <div class="about-hero">
     <div class="about-hero-img">
-      <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1600&q=80&auto=format&fit=crop" alt="Massage therapy room"/>
+      <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1600&q=80&auto=format&fit=crop" alt="Gregory — Therapist"/>
     </div>
     <div class="about-hero-content">
-      <p class="eyebrow" style="margin-bottom:16px">About Pause & Move</p>
-      <h1 class="display-xl">The body, the mind,<br>the <em>whole person.</em></h1>
-      <p class="body-lg" style="max-width:480px;margin-top:16px">A practice built on genuine curiosity about how we move, how we feel, and how we can help each other get better.</p>
+      <p class="eyebrow" style="margin-bottom:16px" data-copy="about.eyebrow">Who we are</p>
+      <h1 class="display-xl" data-copy="about.hero_title">About the practice</h1>
+      <p class="body-lg" style="max-width:480px;margin-top:16px">Integrating Eastern manual therapies and Western movement education to help you move with ease.</p>
     </div>
   </div>
 
   <div style="max-width:var(--max);margin:0 auto;padding:0 40px;">
     <div class="sub-nav" role="tablist">
-      <button class="sub-nav-btn active" role="tab" onclick="showSub('about','bio',this)">Biography</button>
-      <button class="sub-nav-btn" role="tab" onclick="showSub('about','philosophy',this)">Philosophy</button>
+      <button class="sub-nav-btn active" role="tab" onclick="showSub('about','bio',this)" data-copy="about.sub_nav.bio">Bio & Approach</button>
+      <button class="sub-nav-btn" role="tab" onclick="showSub('about','philosophy',this)" data-copy="about.sub_nav.pillars">Core Pillars</button>
     </div>
   </div>
 
   <!-- BIO -->
   <div id="about-bio" class="sub-pane active">
-    <div class="bio-layout reveal">
-      <div class="bio-photo-wrap">
-        <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=700&q=80&auto=format&fit=crop" alt="Therapist"/>
+    <div class="bio-layout">
+      <div class="bio-photo-wrap reveal-left">
+        <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=700&q=80&auto=format&fit=crop" alt="Gregory portrait"/>
       </div>
-      <div class="bio-text">
-        <p class="eyebrow" style="margin-bottom:16px">Your therapist</p>
-        <h2 class="display-md" style="margin-bottom:24px">Balancing tradition<br>and <em>modern practice</em></h2>
-        <p class="body-md">I came to bodywork through a long personal journey with movement, martial arts and the Feldenkrais method. What began as curiosity became a calling: I wanted to understand not just how the body works, but how it feels from the inside.</p>
-        <p class="body-md" style="margin-top:16px">Over the years, I trained in Classical Massage, Shiatsu, Tuina and Chinese medicine alongside Western anatomy and movement science. The combination felt natural — because in practice, the body doesn't separate these things. Neither do I.</p>
-        <p class="body-md" style="margin-top:16px">I practise in Basel and see a lot of people from the international community — people navigating a new country, a new body, or simply a very busy week. English and Hebrew are my mother tongues, and my German is getting there.</p>
-        <div class="bio-tags">
-          <span class="bio-tag">Shiatsu Practitioner</span>
-          <span class="bio-tag">Tuina & Chinese Medicine</span>
-          <span class="bio-tag">Classical Massage</span>
-          <span class="bio-tag">Feldenkrais Method</span>
-          <span class="bio-tag">Traditional Martial Arts</span>
+      <div class="bio-text reveal-right">
+        <p class="eyebrow" data-copy="about.bio.eyebrow">Gregory</p>
+        <h2 class="display-md" data-copy="about.bio.title">Gregory — Massage therapist & bodyworker</h2>
+        <div id="about-bio-paragraphs">
+          <!-- Rendered dynamically from about.bio.paragraphs in index.js -->
+        </div>
+        <div class="bio-tags" id="about-bio-tags">
+          <!-- Rendered dynamically from about.bio.tags in index.js -->
         </div>
         <div style="margin-top:36px"><button class="btn-gold" onclick="openModal()">Book a session</button></div>
       </div>
@@ -272,29 +232,14 @@
   <!-- PHILOSOPHY -->
   <div id="about-philosophy" class="sub-pane">
     <div class="pillar-section">
-      <p class="eyebrow" style="margin-bottom:12px">The philosophy</p>
+      <p class="eyebrow" style="margin-bottom:12px" data-copy="about.pillars.title">Core Pillars</p>
       <h2 class="display-md" style="margin-bottom:40px">Experience, not just <em>a service.</em></h2>
-      <p class="body-md reveal" style="max-width:680px;margin-bottom:56px">Besides relieving people of the problem that originally brought them into the clinic, the goal is to give them something that will make them need these services less in the future. A good treatment is one that makes the client stronger — and strength is achieved through experience and awareness.</p>
-      <div class="pillar-grid reveal">
-        <div class="pillar-big-card">
-          <div class="pillar-roman">I</div>
-          <h3>Strength through experience</h3>
-          <p>The body learns through doing, not through being told. Every session is an opportunity to give you a genuine experience — of how your body feels, moves, and responds — that you carry with you long after you leave.</p>
-        </div>
-        <div class="pillar-big-card">
-          <div class="pillar-roman">II</div>
-          <h3>Health in all layers of life</h3>
-          <p>There are many ways to get healthier, stronger and happier — from the food we eat to our daily habits to the way we treat others. The experiences we go through in the clinic affect all of these layers. When the experience is positive, those changes cascade outward.</p>
-        </div>
-        <div class="pillar-big-card">
-          <div class="pillar-roman">III</div>
-          <h3>Honesty about limits</h3>
-          <p>The knowledge entrusted to this practice is passed on openly. And where that knowledge isn't the right fit for what you need, you'll be referred — without hesitation — to a practitioner whose system is better equipped for the job.</p>
-        </div>
+      <div class="pillar-grid reveal" id="about-pillars">
+        <!-- Rendered dynamically from about.pillars.items in index.js -->
       </div>
       <div class="big-quote reveal">
-        <blockquote>"Taking care of oneself takes part in all avenues of life. What happens in the clinic is just one thread — but when it's a good one, it weaves into everything else."</blockquote>
-        <cite>— Pause & Move</cite>
+        <blockquote data-copy="about.quote_section.quote">"Manual therapy isn't about 'fixing' a passive body; it's about initiating a conversation that helps the body remember its own capacity for ease."</blockquote>
+        <cite data-copy="about.quote_section.cite">— Gregory, Founder of Pause & Move</cite>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:80px;">
         <button class="btn-gold" onclick="openModal()">Book a session</button>
@@ -313,9 +258,9 @@
       <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1600&q=80&auto=format&fit=crop" alt="Wellness studio"/>
     </div>
     <div class="services-hero-content">
-      <p class="eyebrow" style="margin-bottom:16px">Services & Pricing</p>
-      <h1 class="display-xl">An investment in<br><em>feeling yourself</em> again.</h1>
-      <p class="body-lg" style="max-width:480px;margin-top:16px">Every session is tailored to you. Choose your therapy, your duration, and let the rest unfold.</p>
+      <p class="eyebrow" style="margin-bottom:16px" data-copy="services.intro.eyebrow">Pricing</p>
+      <h1 class="display-xl" data-copy="services.hero_title">Services & Rates</h1>
+      <p class="body-lg" style="max-width:480px;margin-top:16px" data-copy="services.intro.title">Clear, simple rates for your well-being</p>
     </div>
   </div>
 
@@ -323,9 +268,9 @@
   <div class="services-section">
     <div class="single-session-block reveal">
       <div class="single-session-text">
-        <p class="eyebrow" style="margin-bottom:14px">Single Session</p>
+        <p class="eyebrow" style="margin-bottom:14px" data-copy="services.single.title">Single Session</p>
         <h2 class="display-md">Every session is <em>different,</em><br>because you are.</h2>
-        <p class="body-md" style="margin-top:20px;max-width:480px">Rather than booking a specific technique, you bring what's going on — and the session is built around that. Shiatsu, classic massage, connected movement, Tuina — whatever serves you best that day. Every journey starts somewhere. A single session is complete in itself — and sometimes it's also where something longer begins.</p>
+        <p class="body-md" style="margin-top:20px;max-width:480px" data-copy="services.single.desc">Rather than booking a specific technique, you bring what's going on — and the session is built around that. Shiatsu, classic massage, connected movement, Tuina — whatever serves you best that day. Every journey starts somewhere. A single session is complete in itself — and sometimes it's also where something longer begins.</p>
         <div class="single-session-prices">
           <div class="single-price-item">
             <span class="single-price-dur">60 min</span>
@@ -341,166 +286,19 @@
       </div>
       <div class="single-session-note">
         <div class="note-icon">✦</div>
-        <p><strong>After every session</strong>, you'll receive a short personal note on what was worked on and what to notice in the days that follow. Not a report — just a thread to stay connected to the work between visits.</p>
+        <p data-copy="services.single.note"><strong>Insurance coverage:</strong> My treatments are recognized by most Swiss complementary medicine supplementary insurances (ASCA/EGK). Please verify with your provider using my registration details before booking.</p>
       </div>
     </div>
   </div>
 
-  <!-- PACKAGES INTRO -->
-  <div class="packages-section">
-    <div class="packages-intro reveal">
-      <p class="eyebrow" style="margin-bottom:14px">Packages</p>
-      <h2 class="display-md" style="margin-bottom:20px">Know when to <em>Pause.</em><br>Know when to <em>Move.</em></h2>
-      <p class="body-md" style="max-width:560px">The body responds to regularity. These packages are built around two different intentions — restoration and resolution — each with its own rhythm, its own perks, and its own pace.</p>
-    </div>
+  <!-- PACKAGES SECTION (DYNAMIC) -->
+  <div class="packages-section" id="services-packages-section">
+    <!-- Rendered dynamically from services.packages in index.js -->
+  </div>
 
-    <!-- PAUSE PACKAGES -->
-    <div class="pkg-track reveal">
-      <div class="pkg-track-header">
-        <div>
-          <h3 class="pkg-track-name">Pause</h3>
-          <p class="pkg-track-title">For restoration, relaxation & switching off</p>
-          <p class="body-sm" style="margin-top:12px;max-width:420px">Some things get better simply by doing them regularly. No agenda, no goal — just showing up for yourself, consistently. The body remembers.</p>
-        </div>
-        <div class="pkg-perks">
-          <p class="pkg-perks-label">Included in every Pause package</p>
-          <div class="pkg-perk-item">
-            <span class="pkg-perk-dot"></span>
-            <span>Your recurring slot locked in advance — same time, every session, for the duration of your package</span>
-          </div>
-          <div class="pkg-perk-item">
-            <span class="pkg-perk-dot"></span>
-            <span>A personalised aromatherapy oil, chosen with you at your first session and used throughout</span>
-          </div>
-        </div>
-      </div>
-      <div class="pkg-cards-grid">
-        <div class="pkg-card">
-          <div class="pkg-card-top">
-            <h4>Pause · 4 sessions</h4>
-            <span class="pkg-freq">Fortnightly · 2 months</span>
-          </div>
-          <div class="pkg-price-row">
-            <div>
-              <div class="pkg-price">CHF 440</div>
-              <div class="pkg-save">60 min · save CHF 40</div>
-            </div>
-            <div class="pkg-price-alt">
-              <div class="pkg-price">CHF 580</div>
-              <div class="pkg-save">90 min · save CHF 60</div>
-            </div>
-          </div>
-          <button class="btn-outline-sm" onclick="openModal()">Book</button>
-        </div>
-        <div class="pkg-card pkg-card-featured">
-          <div class="pkg-card-top">
-            <h4>Pause · 8 sessions</h4>
-            <span class="pkg-freq">Fortnightly · 4 months</span>
-          </div>
-          <div class="pkg-price-row">
-            <div>
-              <div class="pkg-price">CHF 840</div>
-              <div class="pkg-save">60 min · save CHF 120</div>
-            </div>
-            <div class="pkg-price-alt">
-              <div class="pkg-price">CHF 1,120</div>
-              <div class="pkg-save">90 min · save CHF 160</div>
-            </div>
-          </div>
-          <button class="btn-gold" onclick="openModal()">Book</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- MOVE PACKAGES -->
-    <div class="pkg-track reveal">
-      <div class="pkg-track-header">
-        <div>
-          <h3 class="pkg-track-name">Move</h3>
-          <p class="pkg-track-title">For specific issues & defined goals</p>
-          <p class="body-sm" style="margin-top:12px;max-width:420px">When something specific needs addressing, frequency matters. These sessions build on each other — each one informed by the last. Skipping breaks the thread.</p>
-        </div>
-        <div class="pkg-perks">
-          <p class="pkg-perks-label">Included in every Move package</p>
-          <div class="pkg-perk-item">
-            <span class="pkg-perk-dot"></span>
-            <span>A personalised video with exercises and self-massage techniques specific to your condition — updated as your needs evolve</span>
-          </div>
-          <div class="pkg-perk-item">
-            <span class="pkg-perk-dot"></span>
-            <span>Option to extend your package at your original rate if we decide together that more sessions would be beneficial</span>
-          </div>
-        </div>
-      </div>
-      <div class="pkg-cards-grid">
-        <div class="pkg-card">
-          <div class="pkg-card-top">
-            <h4>Move · 4 sessions</h4>
-            <span class="pkg-freq">Fortnightly · 2 months · 60 min</span>
-          </div>
-          <div class="pkg-price-row">
-            <div>
-              <div class="pkg-price">CHF 440</div>
-              <div class="pkg-save">CHF 110 per session · save CHF 40</div>
-            </div>
-          </div>
-          <button class="btn-outline-sm" onclick="openModal()">Book</button>
-        </div>
-        <div class="pkg-card pkg-card-featured">
-          <div class="pkg-card-top">
-            <h4>Move · 8 sessions</h4>
-            <span class="pkg-freq">Fortnightly · 4 months · 60 min</span>
-          </div>
-          <div class="pkg-price-row">
-            <div>
-              <div class="pkg-price">CHF 840</div>
-              <div class="pkg-save">CHF 105 per session · save CHF 120</div>
-            </div>
-          </div>
-          <button class="btn-gold" onclick="openModal()">Book</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- LONG GAME -->
-    <div class="pkg-track pkg-track-long-game reveal">
-      <div class="pkg-track-header">
-        <div>
-          <h3 class="pkg-track-name">Move — The Long Game</h3>
-          <p class="pkg-track-title">For people living with a chronic condition</p>
-          <p class="body-sm" style="margin-top:16px;max-width:420px">The goal isn't a quick fix — it's building something sustainable. Regular sessions over an extended period, designed to keep the body from falling too far behind itself and to gradually build resilience over time.</p>
-          <p class="body-sm" style="margin-top:12px;max-width:420px">This programme isn't booked in advance. After your first session, if we both feel that sustained ongoing work makes sense, we'll sit down together and work out the right frequency and duration for where you are and where you want to get to.</p>
-        </div>
-        <div class="pkg-perks">
-          <p class="pkg-perks-label">Included in The Long Game</p>
-          <div class="pkg-perk-item">
-            <span class="pkg-perk-dot"></span>
-            <span>A personalised video with exercises and self-massage techniques specific to your condition — updated when needed</span>
-          </div>
-          <div class="pkg-perk-item">
-            <span class="pkg-perk-dot"></span>
-            <span>A monthly progress note reflecting on how things are shifting over time</span>
-          </div>
-          <div class="pkg-perk-item">
-            <span class="pkg-perk-dot"></span>
-            <span>Option to continue at your agreed rate beyond the programme</span>
-          </div>
-        </div>
-      </div>
-      <div class="long-game-rate">
-        <div class="long-game-rate-inner">
-          <span class="long-game-rate-label">Special rate</span>
-          <span class="long-game-rate-price">CHF 90 <sub>per session</sub></span>
-        </div>
-        <p class="body-sm" style="margin-top:16px;max-width:400px">Duration and frequency are agreed together after your first session. Book a single session to begin — and we'll take it from there.</p>
-        <button class="btn-gold" style="margin-top:24px" onclick="openModal()">Book a first session</button>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:64px;margin-bottom:80px;">
-      <p class="body-sm" style="margin-bottom:16px">Not sure which track is right for you?</p>
-      <button class="btn-outline" onclick="showSection('contact')">Get in touch</button>
-    </div>
+  <div style="text-align:center;margin-top:64px;margin-bottom:80px;">
+    <p class="body-sm" style="margin-bottom:16px">Not sure which track is right for you?</p>
+    <button class="btn-outline" onclick="showSection('contact')">Get in touch</button>
   </div>
 
 </section>
@@ -513,9 +311,9 @@
       <img src="https://images.unsplash.com/photo-1612539465764-44a0e0e53a29?w=1600&q=80&auto=format&fit=crop" alt="Bodywork and massage"/>
     </div>
     <div class="modalities-hero-content">
-      <p class="eyebrow" style="margin-bottom:16px">Our modalities</p>
-      <h1 class="display-xl">Five therapies.<br>One <em>integrative</em> approach.</h1>
-      <p class="body-lg" style="max-width:520px;margin-top:16px">Each modality has its own character and strengths. Together they give us the range to meet wherever you are.</p>
+      <p class="eyebrow" style="margin-bottom:16px" data-copy="modalities.intro.eyebrow">Our modalities</p>
+      <h1 class="display-xl" data-copy="modalities.hero_title">Therapies & Modalities</h1>
+      <p class="body-lg" style="max-width:520px;margin-top:16px" data-copy="modalities.intro.title">A holistic toolset for physical alignment</p>
     </div>
   </div>
 
@@ -529,202 +327,9 @@
     </div>
   </div>
 
-  <!-- CLASSIC MASSAGE -->
-  <div id="modalities-classic" class="sub-pane active">
-    <div class="mod-wrap">
-      <div class="mod-image-banner">
-        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1400&q=80&auto=format&fit=crop" alt="Classic massage"/>
-      </div>
-      <div class="mod-intro reveal">
-        <p class="eyebrow" style="margin-bottom:12px">What is Classic Massage?</p>
-        <h2>Simple, effective, <em>deeply relaxing</em></h2>
-        <p style="margin-top:14px">Classic massage is performed directly on the skin using oil, with smooth rhythmic strokes that warm the muscles and guide you into deep relaxation. It's wonderfully straightforward — and works every time.</p>
-      </div>
-      <div class="mod-benefits reveal">
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M2 12 Q6 6 10 12 Q14 18 18 12 Q20 9 22 12"/></svg></div><h4>Muscle relaxation</h4><p>Flowing strokes release built-up tension, leaving muscles loose, warm and comfortable.</p></div>
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div><h4>Pain relief</h4><p>Gentle kneading eases aches in the back, neck, shoulders and beyond.</p></div>
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div><h4>Body & mind reset</h4><p>The steady rhythm calms the mind as much as the body — many people feel lighter for days.</p></div>
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></div><h4>Better circulation</h4><p>Stimulates blood flow, helping your body feel warmer, lighter and more energised.</p></div>
-      </div>
-      <div class="mod-detail-grid reveal">
-        <p>A session typically covers the whole body — back, shoulders, legs, arms — with the <strong>pressure and focus adjusted entirely to you</strong>. Prefer something firm? Lighter touch? Need extra attention on your lower back? Just say so.</p>
-        <p>Classic massage works beautifully as a <strong>standalone treat</strong> or as a gentle introduction if you're new to massage therapy. It also pairs wonderfully with more targeted work like Tuina.</p>
-      </div>
-      <p class="mod-checks-title">Great for</p>
-      <div class="mod-checks">
-        <div class="mod-check">Stress & tension</div><div class="mod-check">Poor sleep</div>
-        <div class="mod-check">Tight muscles</div><div class="mod-check">Low energy</div>
-        <div class="mod-check">Headaches</div><div class="mod-check">Stiff joints</div>
-        <div class="mod-check">General wellbeing</div><div class="mod-check">Recovery after sport</div>
-      </div>
-      <div class="mod-cta-bar reveal">
-        <div><h2>You deserve a proper break</h2><p>Book your classic massage in Basel.</p></div>
-        <button class="btn-gold" onclick="openModal()">Book a session</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- SHIATSU -->
-  <div id="modalities-shiatsu" class="sub-pane">
-    <div class="mod-wrap">
-      <div class="mod-image-banner">
-        <img src="assets/image_3.jpg" alt="Shiatsu — male therapist treating a clothed client on a massage table"/>
-      </div>
-      <div class="mod-intro reveal">
-        <p class="eyebrow" style="margin-bottom:12px">What is Shiatsu?</p>
-        <h2>A fresh way to listen to <em>your body</em></h2>
-        <p style="margin-top:14px">Rooted in traditional Japanese medicine, Shiatsu uses gentle pressure, kneading and guided stretching to help your body find its natural balance. Done fully clothed — no oils, no undressing.</p>
-      </div>
-      <div class="mod-benefits reveal">
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h4>Fully clothed</h4><p>No oils, no undressing — just wear something comfortable and settle in.</p></div>
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div><h4>Move more freely</h4><p>Stretching and acupressure work together to ease stiffness and improve how you move.</p></div>
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10z"/><path d="M12 8v4l3 3"/></svg></div><h4>Whole-system support</h4><p>Shiatsu supports circulation, energy, and mood — not just where it hurts.</p></div>
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h4>Fits your life</h4><p>Works beautifully on its own or alongside other care you're already receiving.</p></div>
-      </div>
-      <div class="mod-detail-grid reveal">
-        <p>During a session, your therapist uses <strong>gentle pressure and guided movement</strong> to work through areas of tension and help your body find its natural rhythm. It's deeply relaxing — many people fall asleep.</p>
-        <p>Over time, regular sessions can help restore <strong>posture, coordination, and a general sense of ease</strong> that makes everyday life feel lighter.</p>
-      </div>
-      <p class="mod-checks-title">Great for</p>
-      <div class="mod-checks">
-        <div class="mod-check">Neck & back pain</div><div class="mod-check">Joint stiffness</div>
-        <div class="mod-check">Poor posture</div><div class="mod-check">Sprains</div>
-        <div class="mod-check">Sciatica</div><div class="mod-check">Sinus pressure</div>
-        <div class="mod-check">Chest tightness</div><div class="mod-check">Arthritis</div>
-      </div>
-      <div class="mod-cta-bar reveal">
-        <div><h2>Ready to take a breath?</h2><p>Book your first Shiatsu session in Basel.</p></div>
-        <button class="btn-gold" onclick="openModal()">Book a session</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- CONNECTED MOVEMENT -->
-  <div id="modalities-connected" class="sub-pane">
-    <div class="mod-wrap">
-      <div class="mod-image-banner">
-        <img style="object-position:center 20%;" src="assets/connected.jpg" alt="Connected movement"/>
-      </div>
-      <div class="mod-intro reveal">
-        <p class="eyebrow" style="margin-bottom:12px">What is Connected Movement?</p>
-        <h2>A fresh way to listen to <em>your body</em></h2>
-        <p style="margin-top:14px">Drawing on the Feldenkrais method and traditional Japanese martial arts, Connected Movement uses subtle, effortless motion — both guided and self-led — to help you rediscover how your body naturally wants to move.</p>
-      </div>
-      <div class="mod-benefits reveal">
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h4>Gentle & effortless</h4><p>No strain, no forcing. Small, quiet movements that open up big changes over time.</p></div>
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="4"/><circle cx="18" cy="12" r="4"/><path d="M10 12h4"/></svg></div><h4>Body & connection</h4><p>Sessions explore how we relate to ourselves and to others through movement and touch.</p></div>
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v10l6.3 6.3"/></svg></div><h4>Learning through play</h4><p>Experiential and curious — you learn by doing and noticing, not by being told.</p></div>
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div><h4>Tuning in to your senses</h4><p>Each session invites you to pay attention to what your body is actually telling you.</p></div>
-      </div>
-      <div class="mod-detail-grid reveal">
-        <p>Connected Movement doesn't come from a single tradition — it's a blend of <strong>eastern philosophy and western movement science</strong>, shaped by years of personal practice.</p>
-        <p>Whether you come with a specific goal or simply curious, you'll leave with a <strong>clearer sense of how your body moves</strong> — and why.</p>
-      </div>
-      <p class="mod-checks-title">What it can do for you</p>
-      <div class="mod-checks">
-        <div class="mod-check">Better posture</div><div class="mod-check">Improved coordination</div>
-        <div class="mod-check">Reduced tension</div><div class="mod-check">Greater body awareness</div>
-        <div class="mod-check">Ease of movement</div><div class="mod-check">Stress relief</div>
-        <div class="mod-check">Deeper relaxation</div><div class="mod-check">Sense of connection</div>
-      </div>
-      <div class="mod-cta-bar reveal">
-        <div><h2>Curious to try something different?</h2><p>Book a Connected Movement session in Basel.</p></div>
-        <button class="btn-gold" onclick="openModal()">Book a session</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- TUINA -->
-  <div id="modalities-tuina" class="sub-pane">
-    <div class="mod-wrap">
-      <div class="mod-image-banner">
-        <img src="https://images.pexels.com/photos/5794024/pexels-photo-5794024.jpeg?auto=compress&cs=tinysrgb&w=1400&h=700&fit=crop" alt="Tuina — targeted Chinese bodywork therapy on massage table"/>
-      </div>
-      <div class="mod-intro reveal">
-        <p class="eyebrow" style="margin-bottom:12px">What is Tuina?</p>
-        <h2>Chinese medicine <em>in your hands</em></h2>
-        <p style="margin-top:14px">Tuina is more vigorous and fast-paced than Classic Massage or Shiatsu. Rooted in Chinese medicine, it uses strong, targeted techniques to address both physical complaints and wider imbalances.</p>
-      </div>
-      <div class="mod-benefits reveal">
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h4>Dynamic & targeted</h4><p>More active than other therapies — precise techniques applied with real intention and pace.</p></div>
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M4.5 12.5l4 4 10-10"/></svg></div><h4>Joint & muscle relief</h4><p>Particularly effective for stubborn complaints that gentler approaches haven't shifted.</p></div>
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10z"/><path d="M12 2 Q16 12 12 22"/><path d="M2 12h20"/></svg></div><h4>Chinese medicine roots</h4><p>Works with the body's energy pathways to restore balance from the inside out.</p></div>
-        <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><h4>Beyond the physical</h4><p>Tuina's roots in Chinese internal medicine mean it can address systemic issues — digestion, sleep, fatigue, hormonal balance — not just pain and tension.</p></div>
-      </div>
-      <div class="tuina-callout reveal">
-        <div class="tuina-callout-icon">⊕</div>
-        <div>
-          <h3>Woven into your session</h3>
-          <p>Tuina isn't a separate booking — it's brought into your session wherever it's the right tool for the job. When your body calls for more vigorous, targeted work, that's what you'll get, combined with whatever else serves you best that day.</p>
-        </div>
-      </div>
-      <div class="mod-detail-grid reveal">
-        <p>Tuina techniques may be introduced at any point in a session — briefly, or as the main focus — depending on what you're working through. There's no need to request it specifically. <strong>If it's right for you, it'll be there.</strong></p>
-        <p>It's particularly effective for <strong>chronic or recurring complaints</strong> that haven't responded to gentler approaches — and for addressing imbalances that go beyond the physical.</p>
-      </div>
-      <p class="mod-checks-title">Great for</p>
-      <div class="mod-checks">
-        <div class="mod-check">Chronic pain</div><div class="mod-check">Joint problems</div>
-        <div class="mod-check">Neck & back pain</div><div class="mod-check">Sciatica</div>
-        <div class="mod-check">Digestive issues</div><div class="mod-check">Low energy</div>
-        <div class="mod-check">Sleep difficulties</div><div class="mod-check">General imbalance</div>
-      </div>
-      <div class="mod-cta-bar reveal">
-        <div><h2>Ready to go a little deeper?</h2><p>Book a session — Tuina will be there when it's needed.</p></div>
-        <button class="btn-gold" onclick="openModal()">Book a session</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- QIGONG -->
-  <div id="modalities-qigong" class="sub-pane">
-    <div class="mod-wrap">
-      <div class="mod-image-banner">
-        <img style="object-position:center 20%;" src="assets/qigong.jpg" alt="Qigong movement practice"/>
-      </div>
-      <div class="mod-intro reveal">
-        <p class="eyebrow" style="margin-bottom:12px">What is Qigong?</p>
-        <h2>Movement as <em>prescription</em></h2>
-        <p style="margin-top:14px">Most people have seen Qigong practiced in parks, in groups, following a leader. That's a wonderful way to practice. But a one-to-one session is something different — the movements here are chosen specifically for you, drawn from a wide repertoire and prescribed based on your body, your health picture, and the principles of Chinese medicine.</p>
-      </div>
-      <div class="mod-benefits reveal">
-        <div class="mod-benefit">
-          <div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v10l4 4"/></svg></div>
-          <h4>Individually prescribed</h4>
-          <p>Every sequence is selected for your body — your physical limitations, your TCM syndromes, your Western medical picture. Not adapted from a class. Built for you.</p>
-        </div>
-        <div class="mod-benefit">
-          <div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2 Q16 12 12 22"/><path d="M2 12h20"/></svg></div>
-          <h4>Rooted in Chinese medicine</h4>
-          <p>Each exercise carries specific therapeutic intent within the TCM framework — working with the body's energy pathways, not just its muscles and joints.</p>
-        </div>
-        <div class="mod-benefit">
-          <div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-          <h4>Accessible to all</h4>
-          <p>Suitable for a wide range of physical conditions. The practice is shaped around your limitations, not despite them.</p>
-        </div>
-        <div class="mod-benefit">
-          <div class="mod-benefit-icon"><svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div>
-          <h4>Deepens existing practice</h4>
-          <p>Already practice Qigong in a group? Individual sessions let you refine your form, understand specific sequences, and work on what your body needs.</p>
-        </div>
-      </div>
-      <div class="mod-detail-grid reveal">
-        <p>A session is a moving practice — not unlike Taiji in character. Slow, intentional, aware. Some sessions feel like <strong>deep rest in motion</strong>. Others feel like genuine work. Most feel like both. Elements of Connected Movement may be woven in where relevant.</p>
-        <p>Qigong here serves many intentions — restoration, therapeutic goals, chronic condition management, or simply the refinement of a practice you already love. <strong>The prescription changes. The practice is always yours.</strong></p>
-      </div>
-      <p class="mod-checks-title">Great for</p>
-      <div class="mod-checks">
-        <div class="mod-check">Stress & anxiety</div><div class="mod-check">Fatigue & low energy</div>
-        <div class="mod-check">Respiratory conditions</div><div class="mod-check">Digestive health</div>
-        <div class="mod-check">Joint stiffness & pain</div><div class="mod-check">Post-illness recovery</div>
-        <div class="mod-check">Chronic conditions</div><div class="mod-check">Deepening your practice</div>
-      </div>
-      <div class="mod-cta-bar reveal">
-        <div><h2>Your practice, <em>prescribed.</em></h2><p>Book a Qigong session in Basel.</p></div>
-        <button class="btn-gold" onclick="openModal()">Book a session</button>
-      </div>
-    </div>
+  <!-- MODALITIES DETAIL PANES (DYNAMIC) -->
+  <div id="modalities-panes-container">
+    <!-- Rendered dynamically from modalities.list in index.js -->
   </div>
 
 </section>
@@ -749,33 +354,24 @@
         <img src="https://images.unsplash.com/photo-1510894347713-fc3dc6166ef5?w=900&q=80&auto=format&fit=crop" alt="Shoulders and tension"/>
       </div>
       <div class="blog-featured-body">
-        <p class="blog-featured-label">Featured</p>
-        <h2>Why your shoulders carry<br>more than <em>stress.</em></h2>
-        <p>We hold tension in patterns that go beyond the physical. Understanding where your tension lives — and why — is the first step to letting it go for good.</p>
-        <button class="btn-gold">Read the post</button>
+        <span class="blog-featured-label">Featured Post</span>
+        <h2>Moving to a new city and what it does to your body</h2>
+        <p>Relocation stress is real — and it shows up physically in ways most people don't expect. Let's look at what's actually happening when you move, and why your shoulders are up at your ears.</p>
+        <button class="btn-text">Read article</button>
       </div>
     </div>
 
-    <div class="blog-grid reveal" style="margin-top:2px;">
-      <div class="blog-card">
-        <div class="blog-thumb"><img src="assets/image_3.jpg" alt="Shiatsu"/></div>
+    <div class="blog-grid">
+      <div class="blog-card reveal delay-1">
+        <div class="blog-thumb"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=75&auto=format&fit=crop" alt="Sports recovery"/></div>
         <div class="blog-card-body">
-          <p class="blog-cat">Shiatsu</p>
-          <h3>Five things Shiatsu can do that massage can't</h3>
-          <p>Not better, not worse — just different. Here's what makes Shiatsu uniquely useful for certain situations.</p>
+          <p class="blog-cat">Recovery</p>
+          <h3>How to notice structural stiffness before it becomes pain</h3>
+          <p>The body is constantly whispering before it shouts. Learning to read the subtle changes in your posture can save you weeks of recovery.</p>
           <div class="blog-card-foot"><span class="blog-date">May 2025</span><span class="blog-read">5 min →</span></div>
         </div>
       </div>
-      <div class="blog-card">
-        <div class="blog-thumb"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=75&auto=format&fit=crop" alt="New city"/></div>
-        <div class="blog-card-body">
-          <p class="blog-cat">New to Basel</p>
-          <h3>Moving to a new city and what it does to your body</h3>
-          <p>Relocation stress is real — and it shows up physically in ways most people don't expect.</p>
-          <div class="blog-card-foot"><span class="blog-date">April 2025</span><span class="blog-read">4 min →</span></div>
-        </div>
-      </div>
-      <div class="blog-card">
+      <div class="blog-card reveal delay-2">
         <div class="blog-thumb"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=75&auto=format&fit=crop" alt="Body awareness"/></div>
         <div class="blog-card-body">
           <p class="blog-cat">Connected Movement</p>
@@ -797,24 +393,35 @@
 <section id="contact" class="section">
 
   <div style="max-width:var(--max);margin:0 auto;padding:48px 40px 0;">
-    <p class="eyebrow" style="margin-bottom:16px">Get in touch</p>
-    <h1 class="display-xl reveal">We'd love to<br><em>hear from you.</em></h1>
-    <p class="body-lg reveal" style="max-width:400px;margin-top:16px">Questions, booking requests, or just curious about which therapy is right for you — drop us a line.</p>
+    <p class="eyebrow" style="margin-bottom:16px" data-copy="contact.form.eyebrow">Get in touch</p>
+    <h1 class="display-xl reveal" data-copy="contact.form.title">We'd love to<br><em>hear from you.</em></h1>
+    <p class="body-lg reveal" style="max-width:400px;margin-top:16px" data-copy="contact.form.description">Questions, booking requests, or just curious about which therapy is right for you — drop us a line.</p>
   </div>
 
   <div class="contact-layout">
     <div class="contact-form reveal-left">
-      <p class="eyebrow" style="margin-bottom:14px">Send a message</p>
+      <p class="eyebrow" style="margin-bottom:14px" data-copy="contact.form.eyebrow">Send a message</p>
       <h2>Get in touch</h2>
       <p>We reply within one working day.</p>
       <div class="cf-row">
-        <div class="cf-field"><label>First name</label><input type="text" placeholder="Anna"/></div>
-        <div class="cf-field"><label>Last name</label><input type="text" placeholder="Müller"/></div>
+        <div class="cf-field"><label data-copy="contact.form.fields.first_name">First name</label><input type="text" placeholder="Anna"/></div>
+        <div class="cf-field"><label data-copy="contact.form.fields.last_name">Last name</label><input type="text" placeholder="Müller"/></div>
       </div>
-      <div class="cf-field"><label>Email</label><input type="email" placeholder="anna@example.com"/></div>
-      <div class="cf-field"><label>I'm interested in</label><select><option value="">— Choose a therapy —</option><option>Classic Massage</option><option>Shiatsu</option><option>Connected Movement</option><option>Tuina combination</option><option>Qigong</option><option>Not sure yet</option></select></div>
-      <div class="cf-field"><label>Message</label><textarea placeholder="Tell us a little about what you're looking for…"></textarea></div>
-      <button class="cf-submit">Send message</button>
+      <div class="cf-field"><label data-copy="contact.form.fields.email">Email</label><input type="email" placeholder="anna@example.com"/></div>
+      <div class="cf-field">
+        <label data-copy="contact.form.fields.interest">I'm interested in</label>
+        <select>
+          <option value="">— Choose a therapy —</option>
+          <option>Classic Massage</option>
+          <option>Shiatsu</option>
+          <option>Connected Movement</option>
+          <option>Tuina combination</option>
+          <option>Qigong</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="cf-field"><label data-copy="contact.form.fields.message">Message</label><textarea placeholder="Tell us a little about what you're looking for…"></textarea></div>
+      <button class="cf-submit" data-copy="contact.form.submit">Send message</button>
     </div>
     <div class="contact-info reveal-right">
       <div class="contact-map" style="padding:0;overflow:hidden;">
@@ -824,14 +431,24 @@
           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           title="Pause & Move location — inside Physiopunkt Basel">
         </iframe>
-        <div class="contact-map-pin">📍 Inside Physiopunkt Basel</div>
+        <div class="contact-map-pin" data-copy="contact.info.pin">📍 Inside Physiopunkt Basel</div>
       </div>
       <div class="contact-info-block">
-        <h3>Find us</h3>
-        <div class="contact-row"><span class="contact-row-icon">📍</span><p><strong>Pause & Move</strong><br>Inside Physiopunkt Basel<br>Meret Oppenheim-Strasse 6<br>4053 Basel, Switzerland</p></div>
+        <h3 data-copy="contact.info.title">Find us</h3>
+        <div class="contact-row"><span class="contact-row-icon">📍</span><p data-copy="contact.info.address"><strong>Pause & Move</strong><br>Inside Physiopunkt Basel<br>Meret Oppenheim-Strasse 6<br>4053 Basel, Switzerland</p></div>
         <div class="contact-row"><span class="contact-row-icon">✉️</span><p><a href="mailto:hello@pauseandmove.ch" style="color:var(--gold)">hello@pauseandmove.ch</a></p></div>
         <div class="contact-row"><span class="contact-row-icon">📞</span><p><a href="tel:+41612345678" style="color:var(--gold)">+41 61 234 56 78</a></p></div>
-        <div class="contact-row"><span class="contact-row-icon">🕐</span><div><p style="margin-bottom:8px"><strong>Opening hours</strong></p><div class="hours-grid"><span class="day">Mon – Fri</span><span class="hrs">Evenings</span><span class="day">Saturday</span><span class="hrs">Available</span><span class="day">Sunday</span><span class="hrs">Available</span></div></div></div>
+        <div class="contact-row">
+          <span class="contact-row-icon">🕐</span>
+          <div>
+            <p style="margin-bottom:8px"><strong data-copy="contact.info.hours_title">Opening hours</strong></p>
+            <div class="hours-grid">
+              <span class="day">Mon – Fri</span><span class="hrs">Evenings</span>
+              <span class="day">Saturday</span><span class="hrs">Available</span>
+              <span class="day">Sunday</span><span class="hrs">Available</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -844,20 +461,20 @@
 <footer class="footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="footer-logo">Pause <span>&</span> Move</div>
-      <p>Massage and bodywork in Basel for people who want to feel genuinely well — in body, mind, and spirit.</p>
+      <div class="footer-logo" data-copy="nav.logo">Pause <span>&</span> Move</div>
+      <p data-copy="footer.brand_desc">Massage and bodywork in Basel for people who want to feel genuinely well — in body, mind, and spirit.</p>
       <div class="footer-social">
         <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
         <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </div>
     </div>
-    <div class="footer-col"><h4>Navigate</h4><ul><li><a href="#" onclick="showSection('home');return false;">Home</a></li><li><a href="#" onclick="showSection('about');return false;">About</a></li><li><a href="#" onclick="showSection('services');return false;">Services</a></li><li><a href="#" onclick="showSection('modalities');return false;">Modalities</a></li><li><a href="#" onclick="showSection('blog');return false;">Journal</a></li><li><a href="#" onclick="showSection('contact');return false;">Contact</a></li></ul></div>
-    <div class="footer-col"><h4>Therapies</h4><ul><li><a href="#" onclick="showSection('modalities');showMod('classic');return false;">Classic Massage</a></li><li><a href="#" onclick="showSection('modalities');showMod('shiatsu');return false;">Shiatsu</a></li><li><a href="#" onclick="showSection('modalities');showMod('connected');return false;">Connected Movement</a></li><li><a href="#" onclick="showSection('modalities');showMod('tuina');return false;">Tuina</a></li><li><a href="#" onclick="showSection('modalities');showMod('qigong');return false;">Qigong</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">Inside Physiopunkt Basel</a></li><li><a href="#">Meret Oppenheim-Strasse 6, Basel</a></li><li><a href="mailto:hello@pauseandmove.ch">hello@pauseandmove.ch</a></li><li><a href="tel:+41612345678">+41 61 234 56 78</a></li></ul><div style="margin-top:20px"><button class="btn-gold" onclick="openModal()" style="font-size:10px;padding:11px 20px;">Book a session</button></div></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.navigate">Navigate</h4><ul><li><a href="#" onclick="showSection('home');return false;">Home</a></li><li><a href="#" onclick="showSection('about');return false;">About</a></li><li><a href="#" onclick="showSection('services');return false;">Services</a></li><li><a href="#" onclick="showSection('modalities');return false;">Modalities</a></li><li><a href="#" onclick="showSection('blog');return false;">Journal</a></li><li><a href="#" onclick="showSection('contact');return false;">Contact</a></li></ul></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.therapies">Therapies</h4><ul><li><a href="#" onclick="showSection('modalities');showMod('classic');return false;">Classic Massage</a></li><li><a href="#" onclick="showSection('modalities');showMod('shiatsu');return false;">Shiatsu</a></li><li><a href="#" onclick="showSection('modalities');showMod('connected');return false;">Connected Movement</a></li><li><a href="#" onclick="showSection('modalities');showMod('tuina');return false;">Tuina</a></li><li><a href="#" onclick="showSection('modalities');showMod('qigong');return false;">Qigong</a></li></ul></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.contact">Contact</h4><ul><li><a href="#">Inside Physiopunkt Basel</a></li><li><a href="#">Meret Oppenheim-Strasse 6, Basel</a></li><li><a href="mailto:hello@pauseandmove.ch">hello@pauseandmove.ch</a></li><li><a href="tel:+41612345678">+41 61 234 56 78</a></li></ul><div style="margin-top:20px"><button class="btn-gold" onclick="openModal()" style="font-size:10px;padding:11px 20px;">Book a session</button></div></div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 Pause & Move, Basel. All rights reserved.</p>
-    <div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    <p data-copy="footer.bottom">© 2025 Pause & Move, Basel. All rights reserved.</p>
+    <div class="footer-legal"><a href="#" data-copy="footer.legal.privacy">Privacy</a><a href="#" data-copy="footer.legal.terms">Terms</a></div>
   </div>
 </footer>
 
