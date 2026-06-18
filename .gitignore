@@ -19,3 +19,8 @@ dist/
 
 # Local helpers
 Push_To_GitHub.bat
+
+# Temporary / backup files
+content_pre_claude.json
+*.gsheet
+old_version_backup/

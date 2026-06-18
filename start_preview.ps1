@@ -43,6 +43,9 @@ try {
             
             $response.ContentType = $mime
             $response.ContentLength64 = $bytes.Length
+            $response.Headers.Add("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0")
+            $response.Headers.Add("Pragma", "no-cache")
+            $response.Headers.Add("Expires", "0")
             $response.OutputStream.Write($bytes, 0, $bytes.Length)
         } else {
             $response.StatusCode = 404

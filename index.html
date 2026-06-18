@@ -100,10 +100,10 @@
     <p class="modal-sub">We'll confirm your appointment within 24 hours.</p>
     <form id="booking-form" onsubmit="submitBookingForm(event); return false;">
       <div class="modal-row">
-        <div class="modal-field"><label>First name</label><input type="text" id="bm-first-name" placeholder="Anna" required/></div>
-        <div class="modal-field"><label>Last name</label><input type="text" id="bm-last-name" placeholder="Müller" required/></div>
+        <div class="modal-field"><label>First name</label><input type="text" id="bm-first-name" placeholder="" required/></div>
+        <div class="modal-field"><label>Last name</label><input type="text" id="bm-last-name" placeholder="" required/></div>
       </div>
-      <div class="modal-field"><label>Email</label><input type="email" id="bm-email" placeholder="anna@example.com" required/></div>
+      <div class="modal-field"><label>Email</label><input type="email" id="bm-email" placeholder="" required/></div>
       <div class="modal-field">
         <label>Therapy</label>
         <select id="bm-therapy" required>
@@ -240,7 +240,7 @@
 
   <div class="about-hero">
     <div class="about-hero-img">
-      <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1600&q=80&auto=format&fit=crop" alt="Gregory — Therapist"/>
+      <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1600&q=80&auto=format&fit=crop" alt="Your therapist"/>
     </div>
     <div class="about-hero-content">
       <p class="eyebrow" style="margin-bottom:16px" data-copy="about.eyebrow">Who we are</p>
@@ -260,11 +260,11 @@
   <div id="about-bio" class="sub-pane active">
     <div class="bio-layout">
       <div class="bio-photo-wrap reveal-left">
-        <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=700&q=80&auto=format&fit=crop" alt="Gregory portrait"/>
+        <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=700&q=80&auto=format&fit=crop" alt="Therapist portrait"/>
       </div>
       <div class="bio-text reveal-right">
-        <p class="eyebrow" data-copy="about.bio.eyebrow">Gregory</p>
-        <h2 class="display-md" data-copy="about.bio.title">Gregory — Massage therapist & bodyworker</h2>
+        <p class="eyebrow" data-copy="about.bio.eyebrow">Your therapist</p>
+        <h2 class="display-md" data-copy="about.bio.title">Balancing tradition &amp; modern practice</h2>
         <div id="about-bio-paragraphs">
           <!-- Rendered dynamically from about.bio.paragraphs in index.js -->
         </div>
@@ -286,7 +286,7 @@
       </div>
       <div class="big-quote reveal">
         <blockquote data-copy="about.quote_section.quote">"Manual therapy isn't about 'fixing' a passive body; it's about initiating a conversation that helps the body remember its own capacity for ease."</blockquote>
-        <cite data-copy="about.quote_section.cite">— Gregory, Founder of Pause & Move</cite>
+        <cite data-copy="about.quote_section.cite">— Pause &amp; Move</cite>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:80px;">
         <button class="btn-gold" onclick="openModal()">Book a session</button>
@@ -398,7 +398,7 @@
   <div class="blog-section">
     <div class="blog-featured reveal">
       <div class="blog-featured-img">
-        <img src="https://images.unsplash.com/photo-1510894347713-fc3dc6166ef5?w=900&q=80&auto=format&fit=crop" alt="Shoulders and tension"/>
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900&q=80&auto=format&fit=crop" alt="Shoulders and tension"/>
       </div>
       <div class="blog-featured-body">
         <span class="blog-featured-label">Featured Post</span>
@@ -451,10 +451,10 @@
       <h2>Get in touch</h2>
       <p>We reply within one working day.</p>
       <div class="cf-row">
-        <div class="cf-field"><label data-copy="contact.form.fields.first_name">First name</label><input type="text" id="cf-first-name" placeholder="Anna" required/></div>
-        <div class="cf-field"><label data-copy="contact.form.fields.last_name">Last name</label><input type="text" id="cf-last-name" placeholder="Müller" required/></div>
+        <div class="cf-field"><label data-copy="contact.form.fields.first_name">First name</label><input type="text" id="cf-first-name" placeholder="" required/></div>
+        <div class="cf-field"><label data-copy="contact.form.fields.last_name">Last name</label><input type="text" id="cf-last-name" placeholder="" required/></div>
       </div>
-      <div class="cf-field"><label data-copy="contact.form.fields.email">Email</label><input type="email" id="cf-email" placeholder="anna@example.com" required/></div>
+      <div class="cf-field"><label data-copy="contact.form.fields.email">Email</label><input type="email" id="cf-email" placeholder="" required/></div>
       <div class="cf-field">
         <label data-copy="contact.form.fields.interest">I'm interested in</label>
         <select id="cf-interest" required>

@@ -80,7 +80,8 @@ document.querySelectorAll('.nav-links a')[0].classList.add('active');
 let siteData = null;
 let currentLang = localStorage.getItem('lang') || 'en';
 
-fetch('content.json')
+const fetchUrl = window.location.protocol === 'file:' ? 'content.json' : 'content.json?cb=' + new Date().getTime();
+fetch(fetchUrl)
   .then(response => response.json())
   .then(data => {
     siteData = data;
