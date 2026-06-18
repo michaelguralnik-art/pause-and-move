@@ -4,6 +4,17 @@ This log documents all stable versions of the website.
 
 ---
 
+## [2.0] — 2026-06-18
+### Developer & Copy Updates
+- Synchronized latest copy modifications and codebase enhancements.
+- Replaced outdated "Gregory" copy with new Michael Guralnik copy (140+ translation keys).
+- Restructured About section tabs (Biography and Philosophy).
+- Aligned English fallbacks and German premium translations.
+- Updated Sync_Copy.bat script to support local CSV copy syncing.
+
+### Reviewer Comments / Notes
+- Copy and structure aligned with PauseandMove1.0 prototype source of truth.
+
 ## [1.0] — 2026-06-18
 ### Developer Notes
 - Initial release of the refactored, bilingual Single Page Application (SPA).
