@@ -287,6 +287,58 @@ function renderServicesContent(data) {
   container.innerHTML = html;
 }
 
+function getBenefitIcon(modId, idx) {
+  const icons = {
+    classic: [
+      '<path d="M2 12 Q6 6 10 12 Q14 18 18 12 Q20 9 22 12"/>',
+      '<path d="M18 11V6a2 2 0 0 0-4 0"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>',
+      '<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>',
+      '<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/>'
+    ],
+    shiatsu: [
+      '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',
+      '<path d="M5 12h14"/><path d="M12 5l7 7-7 7"/>',
+      '<path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10z"/><path d="M12 8v4l3 3"/>',
+      '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>'
+    ],
+    connected: [
+      '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',
+      '<circle cx="6" cy="12" r="4"/><circle cx="18" cy="12" r="4"/><path d="M10 12h4"/>',
+      '<path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v10l6.3 6.3"/>',
+      '<path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>'
+    ],
+    tuina: [
+      '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+      '<path d="M4.5 12.5l4 4 10-10"/>',
+      '<path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10z"/><path d="M12 2 Q16 12 12 22"/><path d="M2 12h20"/>',
+      '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>'
+    ],
+    qigong: [
+      '<path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v10l4 4"/>',
+      '<circle cx="12" cy="12" r="10"/><path d="M12 2 Q16 12 12 22"/><path d="M2 12h20"/>',
+      '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',
+      '<path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>'
+    ]
+  };
+
+  const modGroup = icons[modId];
+  if (modGroup && modGroup[idx]) {
+    return `
+      <svg viewBox="0 0 24 24" style="width:24px; height:24px;">
+        ${modGroup[idx]}
+      </svg>
+    `;
+  }
+
+  // Fallback checkmark circle
+  return `
+    <svg viewBox="0 0 24 24" style="width:24px; height:24px;">
+      <circle cx="12" cy="12" r="10" stroke="var(--gold)" fill="none" stroke-width="1.5"/>
+      <path d="M8 12l3 3 5-5" stroke="var(--gold)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  `;
+}
+
 function renderModalitiesContent(data) {
   const container = document.getElementById('modalities-panes-container');
   if (!container || !data.modalities.list) return;
@@ -303,13 +355,10 @@ function renderModalitiesContent(data) {
           <p style="margin-top:14px">${mod.desc}</p>
         </div>
         <div class="mod-benefits reveal">
-          ${mod.benefits.map(benefit => `
+          ${mod.benefits.map((benefit, bIdx) => `
             <div class="mod-benefit">
               <div class="mod-benefit-icon">
-                <svg viewBox="0 0 24 24" style="width:24px; height:24px;">
-                  <circle cx="12" cy="12" r="10" stroke="var(--gold)" fill="none" stroke-width="1.5"/>
-                  <path d="M8 12l3 3 5-5" stroke="var(--gold)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                ${getBenefitIcon(mod.id, bIdx)}
               </div>
               <h4>${benefit.title}</h4>
               <p>${benefit.desc}</p>
