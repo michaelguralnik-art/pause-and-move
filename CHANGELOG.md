@@ -4,6 +4,15 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.0] - 2026-06-19
+### Developer & Copy Updates
+- Synchronized latest copy modifications and codebase enhancements.
+
+### Reviewer Comments / Notes
+- Version 3.0: Add dynamic Journal blog section, social share, newsletter subscribe, and update contact phone number with preferred WhatsApp Business translations.
+
+
+
 ## [2.0] — 2026-06-18
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.

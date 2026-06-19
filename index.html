@@ -14,7 +14,7 @@
   "@type": "LocalBusiness",
   "name": "Pause & Move",
   "image": "https://pauseandmove.ch/assets/wellness_band.png",
-  "telePhone": "+41 61 234 56 78",
+  "telePhone": "+41 77 277 60 50",
   "email": "hello@pauseandmove.ch",
   "url": "https://pauseandmove.ch",
   "address": {
@@ -63,7 +63,7 @@
       <li><a href="#" onclick="showSection('about');return false;" data-copy="nav.links.about">About</a></li>
       <li><a href="#" onclick="showSection('services');return false;" data-copy="nav.links.services">Services</a></li>
       <li><a href="#" onclick="showSection('modalities');return false;" data-copy="nav.links.modalities">Modalities</a></li>
-      <li><a href="#" onclick="showSection('blog');return false;" data-copy="nav.links.blog">Journal</a></li>
+      <li><a href="#" onclick="clickJournalLink();return false;" data-copy="nav.links.blog">Journal</a></li>
       <li><a href="#" onclick="showSection('contact');return false;" data-copy="nav.links.contact">Contact</a></li>
     </ul>
     <div style="display:flex; align-items:center; gap:20px;">
@@ -82,45 +82,45 @@
   <a href="#" onclick="showSection('about');closeDrawer();return false;" data-copy="nav.links.about">About</a>
   <a href="#" onclick="showSection('services');closeDrawer();return false;" data-copy="nav.links.services">Services</a>
   <a href="#" onclick="showSection('modalities');closeDrawer();return false;" data-copy="nav.links.modalities">Modalities</a>
-  <a href="#" onclick="showSection('blog');closeDrawer();return false;" data-copy="nav.links.blog">Journal</a>
+  <a href="#" onclick="clickJournalLink();closeDrawer();return false;" data-copy="nav.links.blog">Journal</a>
   <a href="#" onclick="showSection('contact');closeDrawer();return false;" data-copy="nav.links.contact">Contact</a>
   <a href="#" onclick="closeDrawer();toggleLanguage();return false;" class="nav-lang-toggle" style="border-bottom:1px solid var(--border); padding:12px 0;">DE</a>
-  <a href="#" class="drawer-cta" onclick="closeDrawer();openModal();return false;" data-copy="nav.links.contact_cta">Book a Session</a>
+  <a href="#" class="drawer-cta" onclick="closeDrawer();openModal();return false;" data-copy="nav.contact_cta">Book a Session</a>
 </div>
 
 <!-- FLOAT BOOK -->
-<button class="float-book" onclick="openModal()" data-copy="nav.links.contact_cta">Book a Session</button>
+<button class="float-book" onclick="openModal()" data-copy="nav.contact_cta">Book a Session</button>
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
-    <p class="modal-eyebrow">Reserve Your Session</p>
-    <h2>Book Now</h2>
-    <p class="modal-sub">We'll confirm your appointment within 24 hours.</p>
+    <p class="modal-eyebrow" data-copy="booking.modal.eyebrow">Reserve Your Session</p>
+    <h2 data-copy="booking.modal.title">Book Now</h2>
+    <p class="modal-sub" data-copy="booking.modal.sub" data-html="true">We'll confirm your appointment within 24 hours. Or, book directly via <a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline; font-weight: 500;">WhatsApp Business (Preferred)</a></p>
     <form id="booking-form" onsubmit="submitBookingForm(event); return false;">
       <div class="modal-row">
-        <div class="modal-field"><label>First name</label><input type="text" id="bm-first-name" placeholder="" required/></div>
-        <div class="modal-field"><label>Last name</label><input type="text" id="bm-last-name" placeholder="" required/></div>
+        <div class="modal-field"><label data-copy="booking.modal.first_name">First name</label><input type="text" id="bm-first-name" placeholder="" required/></div>
+        <div class="modal-field"><label data-copy="booking.modal.last_name">Last name</label><input type="text" id="bm-last-name" placeholder="" required/></div>
       </div>
-      <div class="modal-field"><label>Email</label><input type="email" id="bm-email" placeholder="" required/></div>
+      <div class="modal-field"><label data-copy="booking.modal.email">Email</label><input type="email" id="bm-email" placeholder="" required/></div>
       <div class="modal-field">
-        <label>Therapy</label>
+        <label data-copy="booking.modal.therapy">Therapy</label>
         <select id="bm-therapy" required>
-          <option value="">— Please choose —</option>
-          <option>Single session — 60 min (CHF 120)</option>
-          <option>Single session — 90 min (CHF 160)</option>
-          <option>Pause package — 4 sessions</option>
-          <option>Pause package — 8 sessions</option>
-          <option>Move package — 4 sessions</option>
-          <option>Move package — 8 sessions</option>
-          <option>Move — The Long Game (first session)</option>
-          <option>Qigong session</option>
-          <option>Not sure — help me choose</option>
+          <option value="" data-copy="booking.modal.please_choose">— Please choose —</option>
+          <option data-copy="booking.modal.therapy_options.0">Single session — 60 min (CHF 120)</option>
+          <option data-copy="booking.modal.therapy_options.1">Single session — 90 min (CHF 160)</option>
+          <option data-copy="booking.modal.therapy_options.2">Pause package — 4 sessions</option>
+          <option data-copy="booking.modal.therapy_options.3">Pause package — 8 sessions</option>
+          <option data-copy="booking.modal.therapy_options.4">Move package — 4 sessions</option>
+          <option data-copy="booking.modal.therapy_options.5">Move package — 8 sessions</option>
+          <option data-copy="booking.modal.therapy_options.6">Move — The Long Game (first session)</option>
+          <option data-copy="booking.modal.therapy_options.7">Qigong session</option>
+          <option data-copy="booking.modal.therapy_options.8">Not sure — help me choose</option>
         </select>
       </div>
-      <div class="modal-field"><label>Notes</label><textarea id="bm-notes" placeholder="Injuries, preferences, questions…"></textarea></div>
-      <button type="submit" class="modal-submit" id="bm-submit">Send Request</button>
+      <div class="modal-field"><label data-copy="booking.modal.notes">Notes</label><textarea id="bm-notes" data-copy="booking.modal.notes_placeholder" placeholder="Injuries, preferences, questions…"></textarea></div>
+      <button type="submit" class="modal-submit" id="bm-submit" data-copy="booking.modal.submit">Send Request</button>
     </form>
   </div>
 </div>
@@ -148,7 +148,7 @@
       </h1>
       <p class="hero-sub" data-copy="home.hero.sub">Professional massage and bodywork for body, mind and spirit — in the heart of Basel, for the international community that calls it home.</p>
       <div class="hero-actions">
-        <button class="btn-gold" onclick="openModal()" data-copy="nav.links.contact_cta">Book a session</button>
+        <button class="btn-gold" onclick="openModal()" data-copy="nav.contact_cta">Book a session</button>
         <button class="btn-outline" onclick="showSection('modalities')" data-copy="home.hero.explore_cta">Explore therapies</button>
       </div>
     </div>
@@ -222,7 +222,7 @@
       <div class="photo-band-text">
         <h2 data-copy="home.band.title">Welcoming Basel's<br><em>international community</em></h2>
         <p data-copy="home.band.sub">A practice that knows what it's like to be new somewhere — and wants to help you feel at home in your body first.</p>
-        <button class="btn-gold" onclick="openModal()">Book your first session</button>
+        <button class="btn-gold" onclick="openModal()" data-copy="nav.contact_cta">Book your first session</button>
       </div>
     </div>
   </div>
@@ -271,7 +271,7 @@
         <div class="bio-tags" id="about-bio-tags">
           <!-- Rendered dynamically from about.bio.tags in index.js -->
         </div>
-        <div style="margin-top:36px"><button class="btn-gold" onclick="openModal()">Book a session</button></div>
+        <div style="margin-top:36px"><button class="btn-gold" onclick="openModal()" data-copy="nav.contact_cta">Book a session</button></div>
       </div>
     </div>
   </div>
@@ -290,7 +290,7 @@
         <cite data-copy="about.quote_section.cite">— Pause &amp; Move</cite>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:80px;">
-        <button class="btn-gold" onclick="openModal()">Book a session</button>
+        <button class="btn-gold" onclick="openModal()" data-copy="nav.contact_cta">Book a session</button>
         <button class="btn-outline" onclick="showSection('modalities')">Explore modalities</button>
       </div>
     </div>
@@ -330,7 +330,7 @@
             <span class="single-price-amt">CHF 160</span>
           </div>
         </div>
-        <button class="btn-gold" style="margin-top:32px" onclick="openModal()">Book a session</button>
+        <button class="btn-gold" style="margin-top:32px" onclick="openModal()" data-copy="nav.contact_cta">Book a session</button>
       </div>
       <div class="single-session-note">
         <div class="note-icon">✦</div>
@@ -397,44 +397,82 @@
   </div>
 
   <div class="blog-section">
-    <div class="blog-featured reveal">
-      <div class="blog-featured-img">
-        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900&q=80&auto=format&fit=crop" alt="Shoulders and tension"/>
-      </div>
-      <div class="blog-featured-body">
-        <span class="blog-featured-label">Featured Post</span>
-        <h2>Moving to a new city and what it does to your body</h2>
-        <p>Relocation stress is real — and it shows up physically in ways most people don't expect. Let's look at what's actually happening when you move, and why your shoulders are up at your ears.</p>
-        <button class="btn-text">Read article</button>
-      </div>
-    </div>
+    <!-- Category Menu -->
+    <div class="blog-category-menu" id="blog-category-menu"></div>
+    
+    <!-- Featured Article Container -->
+    <div class="blog-featured reveal" id="blog-featured"></div>
 
-    <div class="blog-grid">
-      <div class="blog-card reveal delay-1">
-        <div class="blog-thumb"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=75&auto=format&fit=crop" alt="Sports recovery"/></div>
-        <div class="blog-card-body">
-          <p class="blog-cat">Recovery</p>
-          <h3>How to notice structural stiffness before it becomes pain</h3>
-          <p>The body is constantly whispering before it shouts. Learning to read the subtle changes in your posture can save you weeks of recovery.</p>
-          <div class="blog-card-foot"><span class="blog-date">May 2025</span><span class="blog-read">5 min →</span></div>
-        </div>
-      </div>
-      <div class="blog-card reveal delay-2">
-        <div class="blog-thumb"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=75&auto=format&fit=crop" alt="Body awareness"/></div>
-        <div class="blog-card-body">
-          <p class="blog-cat">Connected Movement</p>
-          <h3>What does it mean to feel at home in your body?</h3>
-          <p>It's more than flexibility or strength. It's a quality of attention — and it can be learned.</p>
-          <div class="blog-card-foot"><span class="blog-date">March 2025</span><span class="blog-read">6 min →</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:48px;margin-bottom:80px;">
-      <button class="btn-outline">View all posts</button>
-    </div>
+    <!-- Grid Articles Container -->
+    <div class="blog-grid" id="blog-grid"></div>
   </div>
 
+</section>
+
+<!-- ⑦ ARTICLE DETAIL VIEW -->
+<section id="article-detail" class="section">
+  <div class="article-detail-hero">
+    <div class="article-detail-hero-img" id="article-detail-img-container">
+      <!-- Generated dynamically in index.js -->
+    </div>
+    <div class="article-detail-hero-content">
+      <span class="blog-cat" id="article-detail-cat">Category</span>
+      <h1 class="display-xl" id="article-detail-title">Article Title</h1>
+      <div class="article-detail-meta" id="article-detail-meta">
+        <span id="article-detail-date">Date</span> &middot; <span id="article-detail-read">5 min read</span>
+      </div>
+    </div>
+  </div>
+  <div class="article-detail-body">
+    <div class="article-detail-container">
+      <div class="article-detail-main">
+        <button class="back-to-blog" id="back-to-blog-btn" onclick="showSection('blog');return false;">&larr; Back to Journal</button>
+        <div class="article-detail-text" id="article-detail-text">
+          <!-- Generated dynamically in index.js -->
+        </div>
+        
+        <!-- Share Block -->
+        <div class="article-share-block">
+          <span class="share-title" id="share-title-text">Share this article:</span>
+          <div class="share-buttons">
+            <button class="share-btn share-x" onclick="shareArticle('x')">𝕏</button>
+            <button class="share-btn share-fb" onclick="shareArticle('facebook')">Facebook</button>
+            <button class="share-btn share-in" onclick="shareArticle('linkedin')">LinkedIn</button>
+            <button class="share-btn share-copy" id="share-copy-btn" onclick="copyArticleLink()">Copy Link</button>
+          </div>
+        </div>
+        
+        <!-- Subscribe Block -->
+        <div class="article-subscribe-block">
+          <h3 id="sub-title-text">Subscribe to our newsletter</h3>
+          <p id="sub-desc-text">Get gentle reflections, wellness insights, and breathing practices straight to your inbox.</p>
+          <form class="article-subscribe-form" onsubmit="submitSubscribeForm(event); return false;">
+            <input type="email" id="sub-email" placeholder="Your email address" required />
+            <button type="submit" class="btn-gold" id="sub-submit-btn">Subscribe</button>
+          </form>
+          <p class="sub-success-msg" id="sub-success-msg" style="display:none; color: var(--gold); margin-top: 16px; font-weight: 500;"></p>
+        </div>
+      </div>
+      
+      <aside class="article-detail-sidebar">
+        <!-- Categories Sidebar Section -->
+        <div class="sidebar-widget">
+          <h3 id="sidebar-categories-title">Categories</h3>
+          <ul class="sidebar-categories-list" id="sidebar-categories">
+            <!-- Rendered dynamically -->
+          </ul>
+        </div>
+        
+        <!-- Recent Posts Sidebar Section -->
+        <div class="sidebar-widget">
+          <h3 id="sidebar-recent-title">Recent Posts</h3>
+          <div class="sidebar-recent-list" id="sidebar-recent">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
 </section>
 
 <!-- ⑥ CONTACT -->
@@ -485,7 +523,19 @@
         <h3 data-copy="contact.info.title">Find us</h3>
         <div class="contact-row"><span class="contact-row-icon">📍</span><p data-copy="contact.info.address"><strong>Pause & Move</strong><br>Inside Physiopunkt Basel<br>Meret Oppenheim-Strasse 6<br>4053 Basel, Switzerland</p></div>
         <div class="contact-row"><span class="contact-row-icon">✉️</span><p><a href="mailto:hello@pauseandmove.ch" style="color:var(--gold)">hello@pauseandmove.ch</a></p></div>
-        <div class="contact-row"><span class="contact-row-icon">📞</span><p><a href="tel:+41612345678" style="color:var(--gold)">+41 61 234 56 78</a></p></div>
+        <div class="contact-row">
+          <span class="contact-row-icon">💬</span>
+          <p id="contact-whatsapp" data-copy="contact.info.whatsapp_html" data-html="true">
+            <a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color:var(--gold); font-weight:600;">
+              WhatsApp Business
+              <span style="font-size: 10px; background: rgba(201,169,110,0.15); color: var(--gold); padding: 2px 6px; border-radius: 2px; margin-left: 8px;">Preferred</span>
+            </a>
+          </p>
+        </div>
+        <div class="contact-row">
+          <span class="contact-row-icon">📞</span>
+          <p><a href="tel:+41772776050" style="color:var(--gold)" data-copy="contact.info.phone">+41 77 277 60 50</a></p>
+        </div>
         <div class="contact-row">
           <span class="contact-row-icon">🕐</span>
           <div>
@@ -516,9 +566,9 @@
         <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </div>
     </div>
-    <div class="footer-col"><h4 data-copy="footer.cols.navigate">Navigate</h4><ul><li><a href="#" onclick="showSection('home');return false;">Home</a></li><li><a href="#" onclick="showSection('about');return false;">About</a></li><li><a href="#" onclick="showSection('services');return false;">Services</a></li><li><a href="#" onclick="showSection('modalities');return false;">Modalities</a></li><li><a href="#" onclick="showSection('blog');return false;">Journal</a></li><li><a href="#" onclick="showSection('contact');return false;">Contact</a></li></ul></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.navigate">Navigate</h4><ul><li><a href="#" onclick="showSection('home');return false;">Home</a></li><li><a href="#" onclick="showSection('about');return false;">About</a></li><li><a href="#" onclick="showSection('services');return false;">Services</a></li><li><a href="#" onclick="showSection('modalities');return false;">Modalities</a></li><li><a href="#" onclick="clickJournalLink();return false;">Journal</a></li><li><a href="#" onclick="showSection('contact');return false;">Contact</a></li></ul></div>
     <div class="footer-col"><h4 data-copy="footer.cols.therapies">Therapies</h4><ul><li><a href="#" onclick="showSection('modalities');showMod('classic');return false;">Classic Massage</a></li><li><a href="#" onclick="showSection('modalities');showMod('shiatsu');return false;">Shiatsu</a></li><li><a href="#" onclick="showSection('modalities');showMod('connected');return false;">Connected Movement</a></li><li><a href="#" onclick="showSection('modalities');showMod('tuina');return false;">Tuina</a></li><li><a href="#" onclick="showSection('modalities');showMod('qigong');return false;">Qigong</a></li></ul></div>
-    <div class="footer-col"><h4 data-copy="footer.cols.contact">Contact</h4><ul><li><a href="#">Inside Physiopunkt Basel</a></li><li><a href="#">Meret Oppenheim-Strasse 6, Basel</a></li><li><a href="mailto:hello@pauseandmove.ch">hello@pauseandmove.ch</a></li><li><a href="tel:+41612345678">+41 61 234 56 78</a></li></ul><div style="margin-top:20px"><button class="btn-gold" onclick="openModal()" style="font-size:10px;padding:11px 20px;">Book a session</button></div></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.contact">Contact</h4><ul><li><a href="#" onclick="showSection('contact');return false;" data-copy="contact.info.pin">Inside Physiopunkt Basel</a></li><li><a href="#">Meret Oppenheim-Strasse 6, Basel</a></li><li><a href="mailto:hello@pauseandmove.ch">hello@pauseandmove.ch</a></li><li><a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color:var(--gold); font-weight:500;" data-copy="contact.info.whatsapp_footer">WhatsApp Business (Preferred)</a></li><li><a href="tel:+41772776050" data-copy="contact.info.phone">+41 77 277 60 50</a></li></ul><div style="margin-top:20px"><button class="btn-gold" onclick="openModal()" style="font-size:10px;padding:11px 20px;" data-copy="nav.contact_cta">Book a session</button></div></div>
   </div>
   <div class="footer-bottom">
     <p data-copy="footer.bottom">© 2025 Pause & Move, Basel. All rights reserved.</p>

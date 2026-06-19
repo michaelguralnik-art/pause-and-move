@@ -1,5 +1,7 @@
 // ── Section navigation ──
-function showSection(id) {
+let currentArticleId = null;
+
+function showSection(id, pushToHistory = true) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   const el = document.getElementById(id);
   if (el) el.classList.add('active');
@@ -7,8 +9,35 @@ function showSection(id) {
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.classList.remove('active');
     const oc = a.getAttribute('onclick') || '';
-    if (oc.includes("'"+id+"'")) a.classList.add('active');
+    if (oc.includes("'"+id+"'") || (id === 'article-detail' && oc.includes("'blog'"))) a.classList.add('active');
   });
+  
+  if (id !== 'article-detail') {
+    currentArticleId = null;
+    // Reset metadata to default page metadata
+    if (siteData && siteData[currentLang] && siteData[currentLang].metadata) {
+      document.title = siteData[currentLang].metadata.title;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', siteData[currentLang].metadata.description);
+      
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        metaKeywords.setAttribute('content', 'Massage Basel, Shiatsu Basel, Tuina Basel, Bodywork Basel, manual therapy Basel, expat wellness Basel, Physiopunkt Basel, ASCA, EGK');
+      }
+    }
+  }
+  
+  // Render blog content with the active category filter if opening the blog section
+  if (id === 'blog' && siteBlogData) {
+    renderBlogContent(currentLang);
+  }
+  
+  // Push state to browser history
+  if (pushToHistory) {
+    const hash = id === 'article-detail' ? `article-${currentArticleId}` : id;
+    history.pushState({ sectionId: id, articleId: currentArticleId }, "", "#" + hash);
+  }
+  
   // Re-run reveal on new section
   setTimeout(()=>observeReveals(), 50);
 }
@@ -78,28 +107,61 @@ document.querySelectorAll('.nav-links a')[0].classList.add('active');
 
 // ── Multilingual State & Fetching ──
 let siteData = null;
+let siteBlogData = null;
 let currentLang = localStorage.getItem('lang') || 'en';
+let currentCategory = 'all';
 
-const fetchUrl = window.location.protocol === 'file:' ? 'content.json' : 'content.json?cb=' + new Date().getTime();
-fetch(fetchUrl)
-  .then(response => response.json())
-  .then(data => {
-    siteData = data;
+const contentFetchUrl = window.location.protocol === 'file:' ? 'content.json' : 'content.json?cb=' + new Date().getTime();
+const blogFetchUrl = window.location.protocol === 'file:' ? 'blog.json' : 'blog.json?cb=' + new Date().getTime();
+
+Promise.all([
+  fetch(contentFetchUrl).then(response => response.json()),
+  fetch(blogFetchUrl).then(response => response.json())
+])
+  .then(([contentData, blogData]) => {
+    siteData = contentData;
+    siteBlogData = blogData;
     updateLanguageUI();
     renderLanguage(currentLang);
+    
+    // Initial routing based on hash
+    const hash = window.location.hash.replace('#', '') || 'home';
+    if (hash.startsWith('article-')) {
+      const articleId = hash.replace('article-', '');
+      showArticle(articleId, false);
+    } else {
+      showSection(hash, false);
+    }
+    
+    // Push initial state so popstate behaves correctly
+    history.replaceState({ 
+      sectionId: hash.startsWith('article-') ? 'article-detail' : hash, 
+      articleId: hash.startsWith('article-') ? hash.replace('article-', '') : null 
+    }, "", window.location.hash || "#home");
   })
-  .catch(err => console.error("Error loading content.json:", err));
+  .catch(err => console.error("Error loading content or blog JSON:", err));
 
 function renderLanguage(lang) {
   if (!siteData || !siteData[lang]) return;
   
   const langData = siteData[lang];
   
-  // Update document metadata dynamically
-  if (langData.metadata) {
-    document.title = langData.metadata.title;
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', langData.metadata.description);
+  // Update document metadata dynamically based on active section
+  const isArticleDetailActive = document.getElementById('article-detail') && document.getElementById('article-detail').classList.contains('active');
+  if (isArticleDetailActive && currentArticleId) {
+    showArticle(currentArticleId, false);
+  } else {
+    if (langData.metadata) {
+      document.title = langData.metadata.title;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', langData.metadata.description);
+      
+      // Reset meta keywords to default website keywords
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        metaKeywords.setAttribute('content', 'Massage Basel, Shiatsu Basel, Tuina Basel, Bodywork Basel, manual therapy Basel, expat wellness Basel, Physiopunkt Basel, ASCA, EGK');
+      }
+    }
   }
   
   bindStaticContent(langData);
@@ -108,9 +170,32 @@ function renderLanguage(lang) {
   renderServicesContent(langData);
   renderModalitiesContent(langData);
   
+  // Render blog content
+  renderBlogContent(lang);
+  
   // Re-run scroll animations on the newly loaded elements
   observeReveals();
 }
+
+// ── popstate event listener for browser navigation ──
+window.addEventListener('popstate', (event) => {
+  if (event.state) {
+    const { sectionId, articleId } = event.state;
+    if (sectionId === 'article-detail' && articleId) {
+      showArticle(articleId, false);
+    } else {
+      showSection(sectionId, false);
+    }
+  } else {
+    const hash = window.location.hash.replace('#', '') || 'home';
+    if (hash.startsWith('article-')) {
+      const articleId = hash.replace('article-', '');
+      showArticle(articleId, false);
+    } else {
+      showSection(hash, false);
+    }
+  }
+});
 
 function toggleLanguage() {
   currentLang = currentLang === 'en' ? 'de' : 'en';
@@ -499,4 +584,332 @@ function submitContactForm(event) {
       submitBtn.textContent = originalText;
     }, 3000);
   });
+}
+
+// ── Blog Rendering & Filtering ──
+function renderBlogContent(lang) {
+  const categoryMenu = document.getElementById('blog-category-menu');
+  const featuredContainer = document.getElementById('blog-featured');
+  const gridContainer = document.getElementById('blog-grid');
+  
+  if (!siteBlogData || !siteBlogData[lang]) return;
+  
+  const blogData = siteBlogData[lang];
+  const categories = blogData.categories;
+  const articles = blogData.articles;
+  
+  // 1. Render Category Menu
+  if (categoryMenu) {
+    categoryMenu.innerHTML = Object.keys(categories).map(catKey => `
+      <button class="blog-category-btn${catKey === currentCategory ? ' active' : ''}" onclick="selectCategory('${catKey}')">
+        ${categories[catKey]}
+      </button>
+    `).join('');
+  }
+  
+  // 2. Render Content based on currentCategory filter
+  if (currentCategory === 'all') {
+    // Default Page View: 1 Featured article + 6 grid articles (2 rows of 3 columns)
+    if (featuredContainer && articles.length > 0) {
+      featuredContainer.style.display = 'grid';
+      const featuredArticle = articles[0];
+      featuredContainer.innerHTML = `
+        <div class="blog-featured-img" onclick="showArticle('${featuredArticle.id}')" style="cursor:pointer;">
+          <img src="${featuredArticle.image}" alt="${featuredArticle.title}" loading="lazy"/>
+        </div>
+        <div class="blog-featured-body">
+          <span class="blog-featured-label">${lang === 'en' ? 'Featured Post' : 'Hervorgehobener Beitrag'}</span>
+          <h2 onclick="showArticle('${featuredArticle.id}')" style="cursor:pointer; font-style:italic;">${featuredArticle.title}</h2>
+          <p>${featuredArticle.abstract}</p>
+          <button class="btn-text" onclick="showArticle('${featuredArticle.id}')">
+            ${lang === 'en' ? 'Read article' : 'Artikel lesen'} &rarr;
+          </button>
+        </div>
+      `;
+    }
+    
+    if (gridContainer) {
+      gridContainer.style.display = 'grid';
+      const gridArticles = articles.slice(1, 7); // Show 6 articles in 2 rows
+      if (gridArticles.length > 0) {
+        gridContainer.innerHTML = gridArticles.map((article, idx) => {
+          const categoryName = categories[article.categoryId] || article.categoryId;
+          return `
+            <div class="blog-card reveal delay-${(idx % 3) + 1}" onclick="showArticle('${article.id}')">
+              <div class="blog-thumb">
+                <img src="${article.image}" alt="${article.title}" loading="lazy"/>
+              </div>
+              <div class="blog-card-body">
+                <p class="blog-cat">${categoryName}</p>
+                <h3>${article.title}</h3>
+                <p>${article.abstract}</p>
+                <div class="blog-card-foot">
+                  <span class="blog-date">${article.date}</span>
+                  <span class="blog-read">${article.readTime} &rarr;</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      } else {
+        gridContainer.innerHTML = '';
+      }
+    }
+  } else {
+    // Filtered Category View: Hide featured post, show all matching articles in grid (3 in a row)
+    if (featuredContainer) {
+      featuredContainer.style.display = 'none';
+      featuredContainer.innerHTML = '';
+    }
+    
+    if (gridContainer) {
+      gridContainer.style.display = 'grid';
+      const filteredArticles = articles.filter(art => art.categoryId === currentCategory);
+      
+      if (filteredArticles.length > 0) {
+        gridContainer.innerHTML = filteredArticles.map((article, idx) => {
+          const categoryName = categories[article.categoryId] || article.categoryId;
+          return `
+            <div class="blog-card reveal delay-${(idx % 3) + 1}" onclick="showArticle('${article.id}')">
+              <div class="blog-thumb">
+                <img src="${article.image}" alt="${article.title}" loading="lazy"/>
+              </div>
+              <div class="blog-card-body">
+                <p class="blog-cat">${categoryName}</p>
+                <h3>${article.title}</h3>
+                <p>${article.abstract}</p>
+                <div class="blog-card-foot">
+                  <span class="blog-date">${article.date}</span>
+                  <span class="blog-read">${article.readTime} &rarr;</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      } else {
+        gridContainer.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 64px 0; color: var(--muted); font-size: 15px;">
+            ${lang === 'en' ? 'No articles found in this category.' : 'Keine Artikel in dieser Kategorie gefunden.'}
+          </div>
+        `;
+      }
+    }
+  }
+}
+
+function selectCategory(catId) {
+  currentCategory = catId;
+  renderBlogContent(currentLang);
+  // Re-observe dynamic reveals in the active view
+  observeReveals();
+}
+
+function showArticle(articleId, pushToHistory = true) {
+  if (!siteBlogData || !siteBlogData[currentLang]) return;
+  const blogData = siteBlogData[currentLang];
+  const article = blogData.articles.find(a => a.id === articleId);
+  if (!article) return;
+  
+  currentArticleId = articleId;
+  
+  // Set dynamic browser/SEO metadata
+  document.title = article.title + " — Pause & Move Journal";
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', article.abstract);
+  const metaKeywords = document.querySelector('meta[name="keywords"]');
+  if (metaKeywords && article.keywords) {
+    metaKeywords.setAttribute('content', article.keywords.join(', '));
+  }
+  
+  // Populate content
+  const categoryName = blogData.categories[article.categoryId] || article.categoryId;
+  
+  const catEl = document.getElementById('article-detail-cat');
+  const titleEl = document.getElementById('article-detail-title');
+  const metaEl = document.getElementById('article-detail-meta');
+  const imgContainer = document.getElementById('article-detail-img-container');
+  const textContainer = document.getElementById('article-detail-text');
+  const backBtn = document.getElementById('back-to-blog-btn');
+  
+  if (catEl) catEl.textContent = categoryName;
+  if (titleEl) titleEl.textContent = article.title;
+  if (metaEl) {
+    metaEl.innerHTML = `
+      <span>${article.date}</span> &middot; <span>${article.readTime} ${currentLang === 'en' ? 'read' : 'Lesezeit'}</span>
+    `;
+  }
+  if (imgContainer) {
+    imgContainer.innerHTML = `<img src="${article.image}" alt="${article.title}"/>`;
+  }
+  if (textContainer) {
+    textContainer.innerHTML = article.content.map(p => `<p>${p}</p>`).join('');
+  }
+  if (backBtn) {
+    backBtn.innerHTML = currentLang === 'en' ? '&larr; Back to Journal' : '&larr; Zurück zum Journal';
+  }
+
+  // Update share, subscribe, and sidebar text strings dynamically
+  const shareTitleText = document.getElementById('share-title-text');
+  const shareCopyBtn = document.getElementById('share-copy-btn');
+  const subTitleText = document.getElementById('sub-title-text');
+  const subDescText = document.getElementById('sub-desc-text');
+  const subEmail = document.getElementById('sub-email');
+  const subSubmitBtn = document.getElementById('sub-submit-btn');
+  const sidebarCategoriesTitle = document.getElementById('sidebar-categories-title');
+  const sidebarRecentTitle = document.getElementById('sidebar-recent-title');
+
+  if (shareTitleText) shareTitleText.textContent = currentLang === 'en' ? 'Share this article:' : 'Diesen Artikel teilen:';
+  if (shareCopyBtn) shareCopyBtn.textContent = currentLang === 'en' ? 'Copy Link' : 'Link kopieren';
+  if (subTitleText) subTitleText.textContent = currentLang === 'en' ? 'Subscribe to our newsletter' : 'Newsletter abonnieren';
+  if (subDescText) subDescText.textContent = currentLang === 'en' 
+    ? 'Get gentle reflections, wellness insights, and breathing practices straight to your inbox.' 
+    : 'Erhalten Sie wertvolle Einblicke in Gesundheit, Wohlbefinden und Atemübungen direkt in Ihr Postfach.';
+  if (subEmail) subEmail.placeholder = currentLang === 'en' ? 'Your email address' : 'Ihre E-Mail-Adresse';
+  if (subSubmitBtn) subSubmitBtn.textContent = currentLang === 'en' ? 'Subscribe' : 'Abonnieren';
+  if (sidebarCategoriesTitle) sidebarCategoriesTitle.textContent = currentLang === 'en' ? 'Categories' : 'Kategorien';
+  if (sidebarRecentTitle) sidebarRecentTitle.textContent = currentLang === 'en' ? 'Recent Posts' : 'Neueste Beiträge';
+
+  // Reset newsletter success message
+  const successMsg = document.getElementById('sub-success-msg');
+  if (successMsg) {
+    successMsg.style.display = 'none';
+    successMsg.textContent = '';
+  }
+  const form = document.querySelector('.article-subscribe-form');
+  if (form) form.reset();
+
+  // Populate Sidebar Categories
+  const categoriesContainer = document.getElementById('sidebar-categories');
+  if (categoriesContainer) {
+    const cats = blogData.categories;
+    categoriesContainer.innerHTML = Object.keys(cats)
+      .filter(k => k !== 'all')
+      .map(catKey => {
+        const count = blogData.articles.filter(a => a.categoryId === catKey).length;
+        return `
+          <li class="sidebar-category-item" onclick="selectCategoryAndBack('${catKey}')">
+            <span>${cats[catKey]}</span>
+            <span class="sidebar-category-count">${count}</span>
+          </li>
+        `;
+      }).join('');
+  }
+
+  // Populate Sidebar Recent Posts (3 latest, excluding current one if possible)
+  const recentContainer = document.getElementById('sidebar-recent');
+  if (recentContainer) {
+    const otherArticles = blogData.articles.filter(a => a.id !== articleId);
+    const recentList = otherArticles.length > 0 ? otherArticles.slice(0, 3) : blogData.articles.slice(0, 3);
+    recentContainer.innerHTML = recentList.map(rec => {
+      return `
+        <div class="sidebar-recent-item" onclick="showArticle('${rec.id}')">
+          <div class="sidebar-recent-thumb">
+            <img src="${rec.image}" alt="${rec.title}" loading="lazy"/>
+          </div>
+          <div class="sidebar-recent-info">
+            <h4>${rec.title}</h4>
+            <span class="sidebar-recent-date">${rec.date}</span>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+  
+  // Switch to section
+  showSection('article-detail', pushToHistory);
+}
+
+// ── Social sharing helpers ──
+function shareArticle(platform) {
+  if (!siteBlogData || !siteBlogData[currentLang] || !currentArticleId) return;
+  const article = siteBlogData[currentLang].articles.find(a => a.id === currentArticleId);
+  if (!article) return;
+  
+  const shareUrl = window.location.href;
+  const shareText = article.title;
+  let url = '';
+  
+  if (platform === 'x') {
+    url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+  } else if (platform === 'facebook') {
+    url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+  } else if (platform === 'linkedin') {
+    url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
+  }
+  
+  if (url) {
+    window.open(url, '_blank', 'width=600,height=400,resizable=yes,scrollbars=yes');
+  }
+}
+
+function copyArticleLink() {
+  const shareUrl = window.location.href;
+  navigator.clipboard.writeText(shareUrl)
+    .then(() => {
+      const copyBtn = document.getElementById('share-copy-btn');
+      if (copyBtn) {
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = currentLang === 'en' ? 'Copied!' : 'Kopiert!';
+        copyBtn.style.background = 'var(--gold)';
+        copyBtn.style.color = 'var(--black)';
+        copyBtn.style.borderColor = 'var(--gold)';
+        
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+          copyBtn.style.background = '';
+          copyBtn.style.color = '';
+          copyBtn.style.borderColor = '';
+        }, 2000);
+      }
+    })
+    .catch(err => {
+      console.error('Failed to copy text: ', err);
+    });
+}
+
+// ── Newsletter subscription handler ──
+function submitSubscribeForm(event) {
+  event.preventDefault();
+  const emailInput = document.getElementById('sub-email');
+  const submitBtn = document.getElementById('sub-submit-btn');
+  const successMsg = document.getElementById('sub-success-msg');
+  
+  if (!emailInput || !submitBtn || !successMsg) return;
+  
+  const email = emailInput.value.trim();
+  if (!email) return;
+  
+  submitBtn.disabled = true;
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = currentLang === 'en' ? 'Subscribing...' : 'Abonnieren...';
+  
+  // Simulate API response time (1 second)
+  setTimeout(() => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+    
+    // Clear input
+    emailInput.value = '';
+    
+    // Show success message
+    successMsg.style.display = 'block';
+    successMsg.textContent = currentLang === 'en'
+      ? 'Thank you! You have successfully subscribed to our newsletter.'
+      : 'Vielen Dank! Sie haben unseren Newsletter erfolgreich abonniert.';
+  }, 1000);
+}
+
+// ── Sidebar Category Navigation helper ──
+function selectCategoryAndBack(catId) {
+  currentCategory = catId;
+  // Make sure to render the content first
+  renderBlogContent(currentLang);
+  // Transition back to the blog section
+  showSection('blog');
+}
+
+// ── Navbar/Drawer Journal link click handler ──
+function clickJournalLink() {
+  currentCategory = 'all';
+  showSection('blog');
 }

@@ -97,6 +97,8 @@
                                             "title":  "Nachricht senden"
                                         },
                                "info":  {
+                                            "whatsapp_html":  "\u003ca href=\"https://wa.me/41772776050\" target=\"_blank\" rel=\"noopener=\" style=\"color:var(--gold); font-weight:600;\"\u003eWhatsApp Business \u003cspan style=\"font-size: 10px; background: rgba(201,169,110,0.15); color: var(--gold); padding: 2px 6px; border-radius: 2px; margin-left: 8px;\"\u003eBevorzugt\u003c/span\u003e\u003c/a\u003e",
+                                            "whatsapp_footer":  "WhatsApp Business (Bevorzugt)",
                                             "hours_title":  "Öffnungszeiten",
                                             "pin":  "In den Räumen von Physiopunkt Basel",
                                             "hours":  [
@@ -115,9 +117,35 @@
                                                       ],
                                             "address":  "\u003cstrong\u003ePause \u0026 Move\u003c/strong\u003e\u003cbr\u003eBei Physiopunkt Basel\u003cbr\u003eMeret Oppenheim-Strasse 6\u003cbr\u003e4053 Basel, Schweiz",
                                             "title":  "Kontakt \u0026 Standort",
-                                            "phone":  "+41 61 234 56 78",
+                                            "phone":  "+41 77 277 60 50",
                                             "email":  "hello@pauseandmove.ch"
                                         }
+                           },
+               "booking":  {
+                               "modal":  {
+                                             "notes_placeholder":  "Verletzungen, Vorlieben, Fragen…",
+                                             "email":  "E-Mail",
+                                             "therapy_options":  [
+                                                                     "Einzelsitzung — 60 Min. (CHF 120)",
+                                                                     "Einzelsitzung — 90 Min. (CHF 160)",
+                                                                     "Pause-Paket — 4 Behandlungen",
+                                                                     "Pause-Paket — 8 Behandlungen",
+                                                                     "Move-Paket — 4 Behandlungen",
+                                                                     "Move-Paket — 8 Behandlungen",
+                                                                     "Move — The Long Game (Erstkonsultation)",
+                                                                     "Qigong-Einzelsitzung",
+                                                                     "Noch unsicher — bitte um Beratung"
+                                                                 ],
+                                             "eyebrow":  "Reservieren Sie Ihre Behandlung",
+                                             "notes":  "Anmerkungen",
+                                             "submit":  "Terminanfrage senden",
+                                             "first_name":  "Vorname",
+                                             "therapy":  "Therapiemethode",
+                                             "please_choose":  "— Bitte wählen —",
+                                             "title":  "Jetzt buchen",
+                                             "last_name":  "Nachname",
+                                             "sub":  "Wir bestätigen Ihren Termin innerhalb von 24 Stunden. Oder buchen Sie direkt über \u003ca href=\"https://wa.me/41772776050\" target=\"_blank\" rel=\"noopener\" style=\"color: var(--gold); text-decoration: underline; font-weight: 500;\"\u003eWhatsApp Business (Bevorzugt)\u003c/a\u003e"
+                                         }
                            },
                "about":  {
                              "hero_title":  "Der Körper, der Geist,\u003cbr\u003eder \u003cem\u003eganze Mensch.\u003c/em\u003e",
@@ -544,6 +572,8 @@
                                             "title":  "Send a message"
                                         },
                                "info":  {
+                                            "whatsapp_html":  "\u003ca href=\"https://wa.me/41772776050\" target=\"_blank\" rel=\"noopener=\" style=\"color:var(--gold); font-weight:600;\"\u003eWhatsApp Business \u003cspan style=\"font-size: 10px; background: rgba(201,169,110,0.15); color: var(--gold); padding: 2px 6px; border-radius: 2px; margin-left: 8px;\"\u003ePreferred\u003c/span\u003e\u003c/a\u003e",
+                                            "whatsapp_footer":  "WhatsApp Business (Preferred)",
                                             "hours_title":  "Opening hours",
                                             "pin":  "Inside Physiopunkt Basel",
                                             "hours":  [
@@ -562,9 +592,35 @@
                                                       ],
                                             "address":  "\u003cstrong\u003ePause \u0026 Move\u003c/strong\u003e\u003cbr\u003eInside Physiopunkt Basel\u003cbr\u003eMeret Oppenheim-Strasse 6\u003cbr\u003e4053 Basel, Switzerland",
                                             "title":  "Find us",
-                                            "phone":  "+41 61 234 56 78",
+                                            "phone":  "+41 77 277 60 50",
                                             "email":  "hello@pauseandmove.ch"
                                         }
+                           },
+               "booking":  {
+                               "modal":  {
+                                             "notes_placeholder":  "Injuries, preferences, questions…",
+                                             "email":  "Email",
+                                             "therapy_options":  [
+                                                                     "Single session — 60 min (CHF 120)",
+                                                                     "Single session — 90 min (CHF 160)",
+                                                                     "Pause package — 4 sessions",
+                                                                     "Pause package — 8 sessions",
+                                                                     "Move package — 4 sessions",
+                                                                     "Move package — 8 sessions",
+                                                                     "Move — The Long Game (first session)",
+                                                                     "Qigong session",
+                                                                     "Not sure — help me choose"
+                                                                 ],
+                                             "eyebrow":  "Reserve Your Session",
+                                             "notes":  "Notes",
+                                             "submit":  "Send Request",
+                                             "first_name":  "First name",
+                                             "therapy":  "Therapy",
+                                             "please_choose":  "— Please choose —",
+                                             "title":  "Book Now",
+                                             "last_name":  "Last name",
+                                             "sub":  "We\u0027ll confirm your appointment within 24 hours. Or, book directly via \u003ca href=\"https://wa.me/41772776050\" target=\"_blank\" rel=\"noopener\" style=\"color: var(--gold); text-decoration: underline; font-weight: 500;\"\u003eWhatsApp Business (Preferred)\u003c/a\u003e"
+                                         }
                            },
                "about":  {
                              "hero_title":  "The body, the mind,\u003cbr\u003ethe \u003cem\u003ewhole person.\u003c/em\u003e",
