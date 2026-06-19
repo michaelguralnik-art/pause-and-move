@@ -88,7 +88,7 @@ if (Test-Path $changelogPath) {
     $content = [System.IO.File]::ReadAllText($changelogPath, [System.Text.Encoding]::UTF8)
     $dateString = Get-Date -Format "yyyy-MM-dd"
     
-    $newEntry = "## [$version] — $dateString`r`n### Developer & Copy Updates`r`n- Synchronized latest copy modifications and codebase enhancements.`r`n`r`n### Reviewer Comments / Notes`r`n- $comments"
+    $newEntry = "## [$version] - $dateString`r`n### Developer & Copy Updates`r`n- Synchronized latest copy modifications and codebase enhancements.`r`n`r`n### Reviewer Comments / Notes`r`n- $comments"
     
     $divider = "This log documents all stable versions of the website. `r`n`r`n---"
     $dividerAlt = "This log documents all stable versions of the website. `r`n`r`n---"
@@ -110,10 +110,10 @@ if (Test-Path $changelogPath) {
 # 7. Commit & Tag
 try {
     Write-Host "Staging changes..." -ForegroundColor Gray
-    & $git add content.json CHANGELOG.md index.html config.json
+    & $git add content.json CHANGELOG.md index.html config.json index.js index.css blog.json translations_template.csv
     
     Write-Host "Committing release v$version..." -ForegroundColor Gray
-    $commitMsg = "Release v$version: $comments"
+    $commitMsg = "Release v${version}: $comments"
     & $git commit -m $commitMsg
     
     Write-Host "Creating tag v$version..." -ForegroundColor Gray
