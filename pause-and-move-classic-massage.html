@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classic Massage — Pause and Move</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="favicon.png?v=3" />
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F4F6F3;
+      color: #2C3A2A;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Design tokens ── */
+    :root {
+      --sage-light:   #E8EDE6;
+      --sage-mid:     #5E7A59;
+      --sage-dark:    #3A5038;
+      --sage-pale:    #F4F6F3;
+      --terracotta:   #C47B5A;
+      --terracotta-dark: #AE6A4A;
+      --text-primary: #2C3A2A;
+      --text-secondary: #4A5C48;
+      --text-muted:   #7A9478;
+      --border:       rgba(58, 80, 56, 0.12);
+      --white:        #FFFFFF;
+      --radius-sm:    8px;
+      --radius-md:    12px;
+      --radius-lg:    20px;
+      --radius-xl:    28px;
+    }
+
+    /* ── Layout wrapper ── */
+    .page-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 32px 80px;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 56px;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--sage-dark);
+      letter-spacing: 0.01em;
+    }
+    .nav-logo span { font-style: italic; color: var(--sage-mid); }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-links a.active { color: var(--sage-dark); border-bottom: 1.5px solid var(--sage-mid); padding-bottom: 2px; }
+    .nav-cta {
+      background: var(--sage-dark);
+      color: #E8EDE6;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 9px 20px;
+      border-radius: 24px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--sage-light);
+      border-radius: var(--radius-xl);
+      padding: 64px 56px 56px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 64px;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sage-mid);
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 68px;
+      font-weight: 400;
+      line-height: 1.08;
+      color: var(--text-primary);
+      max-width: 520px;
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--sage-mid);
+    }
+    .hero-sub {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      max-width: 420px;
+    }
+    .hero-deco {
+      position: absolute;
+      right: 48px;
+      top: 40px;
+      opacity: 0.14;
+      pointer-events: none;
+    }
+
+    /* ── SECTION INTRO ── */
+    .section-intro {
+      margin-bottom: 48px;
+    }
+    .section-tag {
+      display: inline-block;
+      background: var(--sage-mid);
+      color: var(--sage-light);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+    .section-sub {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    /* ── BENEFIT CARDS ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 56px;
+    }
+    .card {
+      background: var(--white);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+    }
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--sage-light);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .card-icon svg { width: 20px; height: 20px; stroke: var(--sage-mid); fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+    .card h3 {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .card p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ── DETAIL BLOCK ── */
+    .detail-block {
+      background: var(--sage-pale);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 40px 48px;
+      margin-bottom: 56px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .detail-block p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+    .detail-block strong { color: var(--text-primary); font-weight: 500; }
+
+    /* ── GREAT FOR ── */
+    .great-for { margin-bottom: 64px; }
+    .great-for-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+    .tags-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .tag-item {
+      background: var(--sage-light);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--sage-dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .tag-item svg { width: 15px; height: 15px; stroke: var(--sage-mid); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+    /* ── CTA BLOCK ── */
+    .cta-block {
+      background: var(--sage-dark);
+      border-radius: var(--radius-xl);
+      padding: 52px 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .cta-block h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      font-weight: 400;
+      color: var(--sage-light);
+      margin-bottom: 6px;
+      line-height: 1.1;
+    }
+    .cta-block p {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+    .cta-btn {
+      background: var(--terracotta);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 14px 32px;
+      border-radius: 32px;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .cta-btn:hover { background: var(--terracotta-dark); }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .tags-grid { grid-template-columns: repeat(2, 1fr); }
+      .detail-block { grid-template-columns: 1fr; gap: 20px; }
+      .hero h1 { font-size: 48px; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .page-wrapper { padding: 32px 20px 60px; }
+      .hero { padding: 40px 28px 36px; }
+      .hero h1 { font-size: 38px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .tags-grid { grid-template-columns: repeat(2, 1fr); }
+      .cta-block { flex-direction: column; align-items: flex-start; padding: 36px 28px; }
+      .cta-block h2 { font-size: 30px; }
+      .detail-block { padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="nav-logo">Pause <span>&amp;</span> Move</div>
+      <ul class="nav-links">
+        <li><a href="#">Shiatsu</a></li>
+        <li><a href="#" class="active">Classic Massage</a></li>
+        <li><a href="#">Connected Movement</a></li>
+        <li><a href="#">Tuina</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <a href="#" class="nav-cta">Book a session</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <!-- Decorative SVG motif -->
+      <svg class="hero-deco" width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M40 160 Q100 40 160 160 Q220 280 280 160" stroke="#3A5038" stroke-width="3.5" fill="none"/>
+        <path d="M40 200 Q100 80 160 200 Q220 320 280 200" stroke="#3A5038" stroke-width="2" fill="none"/>
+        <path d="M40 120 Q100 0 160 120 Q220 240 280 120" stroke="#3A5038" stroke-width="1.5" fill="none"/>
+        <path d="M40 240 Q100 120 160 240 Q220 360 280 240" stroke="#3A5038" stroke-width="1" fill="none"/>
+        <path d="M40 80 Q100 -40 160 80 Q220 200 280 80" stroke="#3A5038" stroke-width="1" fill="none"/>
+      </svg>
+      <p class="hero-eyebrow">Pause &amp; Move · Basel</p>
+      <h1>Time to truly <em>switch off</em></h1>
+      <p class="hero-sub">Classic massage uses long, flowing strokes and gentle kneading to ease tension, relieve pain and leave both your body and mind feeling genuinely restored.</p>
+    </section>
+
+    <!-- WHAT IS IT -->
+    <div class="section-intro">
+      <span class="section-tag">What is Classic Massage?</span>
+      <h2 class="section-title">Simple, effective, deeply relaxing</h2>
+      <p class="section-sub">Classic massage is performed directly on the skin using oil, with smooth rhythmic strokes that warm the muscles and guide you into deep relaxation. It's wonderfully straightforward — and works every time.</p>
+    </div>
+
+    <!-- BENEFIT CARDS -->
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">
+          <!-- Wave / muscle relaxation icon -->
+          <svg viewBox="0 0 24 24"><path d="M2 12 Q6 6 10 12 Q14 18 18 12 Q20 9 22 12"/></svg>
+        </div>
+        <h3>Muscle relaxation</h3>
+        <p>Flowing strokes release built-up tension, leaving muscles loose, warm and comfortable.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <!-- Hand / pain relief icon -->
+          <svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+        </div>
+        <h3>Pain relief</h3>
+        <p>Gentle kneading eases aches in the back, neck, shoulders and beyond.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <!-- Smile / mind reset icon -->
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <h3>A reset for body and mind</h3>
+        <p>The steady rhythm calms the mind as much as the body — many people feel lighter for days.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <!-- Circulation / rotate icon -->
+          <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+        </div>
+        <h3>Better circulation</h3>
+        <p>Stimulates blood flow, helping your body feel warmer, lighter and more energised.</p>
+      </div>
+    </div>
+
+    <!-- DETAIL BLOCK -->
+    <div class="detail-block">
+      <p>A session typically covers the whole body — back, shoulders, legs, arms — with the <strong>pressure and focus adjusted entirely to you</strong>. Prefer something firm? Lighter touch? Need extra attention on your shoulders or lower back? Just say so.</p>
+      <p>Classic massage works beautifully as a <strong>standalone treat</strong> or as a gentle introduction if you're new to massage therapy. It also pairs wonderfully with more targeted work like deep tissue or Shiatsu.</p>
+    </div>
+
+    <!-- GREAT FOR -->
+    <div class="great-for">
+      <h2 class="great-for-title">Great for</h2>
+      <div class="tags-grid">
+        <div class="tag-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Stress &amp; tension
+        </div>
+        <div class="tag-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Poor sleep
+        </div>
+        <div class="tag-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Tight muscles
+        </div>
+        <div class="tag-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Low energy
+        </div>
+        <div class="tag-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Headaches
+        </div>
+        <div class="tag-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Stiff joints
+        </div>
+        <div class="tag-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          General wellbeing
+        </div>
+        <div class="tag-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Recovery after sport
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-block">
+      <div>
+        <h2>You deserve a proper break</h2>
+        <p>Book your classic massage in Basel — and give yourself an hour just for you.</p>
+      </div>
+      <a href="#" class="cta-btn">Book a session ↗</a>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -39,6 +39,7 @@ try {
             elseif ($ext -eq ".json") { $mime = "application/json; charset=utf-8" }
             elseif ($ext -eq ".jpg" -or $ext -eq ".jpeg") { $mime = "image/jpeg" }
             elseif ($ext -eq ".png") { $mime = "image/png" }
+            elseif ($ext -eq ".ico") { $mime = "image/x-icon" }
             elseif ($ext -eq ".svg") { $mime = "image/svg+xml" }
             
             $response.ContentType = $mime
