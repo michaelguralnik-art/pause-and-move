@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Was bedeutet es, sich in seinem Körper zu Hause zu fühlen? - Pause & Move Journal</title>
+  <meta name="description" content="Es ist mehr als nur Beweglichkeit oder Kraft. Es ist eine Qualität der Aufmerksamkeit — und diese lässt sich durch somatisches Lernen schulen." />
+  <meta name="keywords" content="Körperwahrnehmung, Bewegungstherapie, Feldenkrais Basel, Achtsamkeit, somatische Bewegung, Propriozeption" />
+  <link rel="canonical" href="https://pauseandmove.ch/journal/de/home-in-body.html" />
+  <link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/home-in-body.html" />
+  <link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/home-in-body.html" />
+  
+  <!-- OpenGraph Metadata for Rich Sharing Previews -->
+  <meta property="og:title" content="Was bedeutet es, sich in seinem Körper zu Hause zu fühlen? - Pause & Move Journal" />
+  <meta property="og:description" content="Es ist mehr als nur Beweglichkeit oder Kraft. Es ist eine Qualität der Aufmerksamkeit — und diese lässt sich durch somatisches Lernen schulen." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80&auto=format&fit=crop" />
+  <meta property="og:url" content="https://pauseandmove.ch/journal/de/home-in-body.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Pause & Move Basel" />
+  <meta name="twitter:card" content="summary_large_image" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+
+
+<!-- Structured Data for Local SEO (Google Schema) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Pause & Move",
+  "image": "https://pauseandmove.ch/assets/wellness_band.png",
+  "telePhone": "+41 77 277 60 50",
+  "email": "hello@pauseandmove.ch",
+  "url": "https://pauseandmove.ch",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Meret Oppenheim-Strasse 6",
+    "addressLocality": "Basel",
+    "postalCode": "4053",
+    "addressCountry": "CH"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.5490,
+    "longitude": 7.5897
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "17:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday", "Sunday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../../index.css"/>
+<link rel="icon" type="image/png" href="../../favicon.png?v=3"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="main-nav">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="window.location.href='../../index.html#home'" role="link" tabindex="0" data-copy="nav.logo">Pause <span>&</span> Move</div>
+    <ul class="nav-links">
+      <li><a href="../../index.html#home" data-copy="nav.links.home">Home</a></li>
+      <li><a href="../../index.html#about" data-copy="nav.links.about">Praxis</a></li>
+      <li><a href="../../index.html#services" data-copy="nav.links.services">Tarife</a></li>
+      <li><a href="../../index.html#modalities" data-copy="nav.links.modalities">Therapien</a></li>
+      <li><a href="../../index.html#blog" data-copy="nav.links.blog">Journal</a></li>
+      <li><a href="../../index.html#contact" data-copy="nav.links.contact">Kontakt</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:20px;">
+      <a class="nav-lang-toggle" href="../en/home-in-body.html" style="text-decoration:none; display:flex; align-items:center;">EN</a>
+      <button class="nav-cta" onclick="openModal()" data-copy="nav.cta">Jetzt buchen</button>
+    </div>
+    <button class="nav-hamburger" onclick="toggleDrawer()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="nav-drawer" id="nav-drawer">
+  <a href="#" onclick="showSection('home');closeDrawer();return false;" data-copy="nav.links.home">Home</a>
+  <a href="#" onclick="showSection('about');closeDrawer();return false;" data-copy="nav.links.about">Praxis</a>
+  <a href="#" onclick="showSection('services');closeDrawer();return false;" data-copy="nav.links.services">Tarife</a>
+  <a href="#" onclick="showSection('modalities');closeDrawer();return false;" data-copy="nav.links.modalities">Therapien</a>
+  <a href="#" onclick="clickJournalLink();closeDrawer();return false;" data-copy="nav.links.blog">Journal</a>
+  <a href="#" onclick="showSection('contact');closeDrawer();return false;" data-copy="nav.links.contact">Kontakt</a>
+  <a href="#" onclick="closeDrawer();toggleLanguage();return false;" class="nav-lang-toggle" style="border-bottom:1px solid var(--border); padding:12px 0;">DE</a>
+  <a href="#" class="drawer-cta" onclick="closeDrawer();openModal();return false;" data-copy="nav.contact_cta">Termin buchen</a>
+</div>
+
+<!-- FLOAT BOOK -->
+<button class="float-book" onclick="openModal()" data-copy="nav.contact_cta">Termin buchen</button>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <p class="modal-eyebrow" data-copy="booking.modal.eyebrow">Reservieren Sie Ihre Behandlung</p>
+    <h2 data-copy="booking.modal.title">Jetzt buchen</h2>
+    <p class="modal-sub" data-copy="booking.modal.sub" data-html="true">Wir bestätigen Ihren Termin innerhalb von 24 Stunden. Oder buchen Sie direkt über <a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline; font-weight: 500;">WhatsApp Business (Bevorzugt)</a></p>
+    <form id="booking-form" onsubmit="submitBookingForm(event); return false;">
+      <div class="modal-row">
+        <div class="modal-field"><label data-copy="booking.modal.first_name">Vorname</label><input type="text" id="bm-first-name" placeholder="" required/></div>
+        <div class="modal-field"><label data-copy="booking.modal.last_name">Nachname</label><input type="text" id="bm-last-name" placeholder="" required/></div>
+      </div>
+      <div class="modal-field"><label data-copy="booking.modal.email">E-Mail</label><input type="email" id="bm-email" placeholder="" required/></div>
+      <div class="modal-field">
+        <label data-copy="booking.modal.therapy">Therapiemethode</label>
+        <select id="bm-therapy" required>
+          <option value="" data-copy="booking.modal.please_choose">— Bitte wählen —</option>
+          <option data-copy="booking.modal.therapy_options.0">Einzelsitzung — 60 Min. (CHF 120)</option>
+          <option data-copy="booking.modal.therapy_options.1">Einzelsitzung — 90 Min. (CHF 160)</option>
+          <option data-copy="booking.modal.therapy_options.2">Pause-Paket — 4 Behandlungen</option>
+          <option data-copy="booking.modal.therapy_options.3">Pause-Paket — 8 Behandlungen</option>
+          <option data-copy="booking.modal.therapy_options.4">Move-Paket — 4 Behandlungen</option>
+          <option data-copy="booking.modal.therapy_options.5">Move-Paket — 8 Behandlungen</option>
+          <option data-copy="booking.modal.therapy_options.6">Move — The Long Game (Erstkonsultation)</option>
+          <option data-copy="booking.modal.therapy_options.7">Qigong-Einzelsitzung</option>
+          <option data-copy="booking.modal.therapy_options.8">Noch unsicher — bitte um Beratung</option>
+        </select>
+      </div>
+      <div class="modal-field"><label data-copy="booking.modal.notes">Anmerkungen</label><textarea id="bm-notes" data-copy="booking.modal.notes_placeholder" placeholder="Verletzungen, Vorlieben, Fragen…"></textarea></div>
+      <button type="submit" class="modal-submit" id="bm-submit" data-copy="booking.modal.submit">Terminanfrage senden</button>
+    </form>
+  </div>
+</div>
+
+<!-- ═══ PAGE BODY ═══ -->
+<main class="page-body">
+    <section id="article-detail" class="section active">
+      <div class="article-detail-hero">
+        <div class="article-detail-hero-img" id="article-detail-img-container">
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80&auto=format&fit=crop" alt="Was bedeutet es, sich in seinem Körper zu Hause zu fühlen?"/>
+        </div>
+        <div class="article-detail-hero-content">
+          <span class="blog-cat" id="article-detail-cat">Bewegung</span>
+          <h1 class="display-xl" id="article-detail-title">Was bedeutet es, sich in seinem Körper zu Hause zu fühlen?</h1>
+          <div class="article-detail-meta" id="article-detail-meta">
+            <span id="article-detail-date">März 2025</span> &middot; <span id="article-detail-read">6 Min. Lesezeit</span>
+          </div>
+        </div>
+      </div>
+      <div class="article-detail-body">
+        <div class="article-detail-container">
+          <div class="article-detail-main">
+            <button class="back-to-blog" id="back-to-blog-btn" onclick="window.location.href='../../index.html#blog';return false;">&larr; ZurÃ¼ck zum Journal</button>
+            <div class="article-detail-text" id="article-detail-text">
+          <p>In unserem schnellen, bildschirmdominierten Alltag leben wir fast nur noch im Kopf. Wir behandeln unseren Körper wie ein Transportmittel, das unseren Verstand von einem Meeting zum nächsten bringt. Doch echte Gesundheit erfordert, dass wir dieses Gefährt nicht nur instand halten, sondern es ganz bewohnen. Es bedeutet, sich im eigenen Körper zu Hause zu fühlen.</p>
+          <p>Sich im Körper zu Hause zu fühlen, beschreibt einen Zustand somatischer Sicherheit und Achtsamkeit. Es ist die Fähigkeit, den eigenen inneren Zustand wertfrei wahrzunehmen: Zu spüren, dass man müde ist, bevor man erschöpft zusammenbricht, Anspannung zu bemerken, wenn sie entsteht, und sich koordiniert und leicht zu bewegen.</p>
+          <p>Wenn diese Verbindung fehlt, fühlen wir uns oft ungeschickt, dauerhaft angespannt oder werden von plötzlichen Schmerzen überrascht. Somatische Bewegungspraktiken wie die Feldenkrais-Methode und Connected Movement setzen genau hier an. Sie zwingen den Körper nicht in starre Posen, sondern leiten zu kleinen, spielerischen Bewegungen an, um die sensorische Wahrnehmung zu erweitern.</p>
+          <p>Durch diese Schulung der Aufmerksamkeit holen Sie sich Ihr körperliches Selbst zurück. Sie lernen, wie sich Ihre Rippen beim Atmen bewegen, wie sich Ihr Gewicht beim Gehen verlagert und wo Sie unnötig Kraft aufwenden. Diese Wahrnehmung ist das wahre Fundament für nachhaltiges Wohlbefinden und körperliche Freiheit.</p>
+            </div>
+            
+            <!-- Share Block -->
+            <div class="article-share-block">
+              <span class="share-title" id="share-title-text">Diesen Artikel teilen:</span>
+              <div class="share-buttons">
+                <button class="share-btn share-x" onclick="shareArticle('x')">ð•</button>
+                <button class="share-btn share-fb" onclick="shareArticle('facebook')">Facebook</button>
+                <button class="share-btn share-in" onclick="shareArticle('linkedin')">LinkedIn</button>
+                <button class="share-btn share-copy" id="share-copy-btn" onclick="copyArticleLink()">Link kopieren</button>
+              </div>
+            </div>
+            
+            <!-- Subscribe Block -->
+            <div class="article-subscribe-block">
+              <h3 id="sub-title-text">Newsletter abonnieren</h3>
+              <p id="sub-desc-text">Erhalten Sie wertvolle Einblicke in Gesundheit, Wohlbefinden und AtemÃ¼bungen direkt in Ihr Postfach.</p>
+              <form class="article-subscribe-form" onsubmit="submitSubscribeForm(event); return false;">
+                <input type="email" id="sub-email" placeholder="Ihre E-Mail-Adresse" required />
+                <button type="submit" class="btn-gold" id="sub-submit-btn">Abonnieren</button>
+              </form>
+              <p class="sub-success-msg" id="sub-success-msg" style="display:none; color: var(--gold); margin-top: 16px; font-weight: 500;"></p>
+            </div>
+          </div>
+          
+          <aside class="article-detail-sidebar">
+            <!-- Categories Sidebar Section -->
+            <div class="sidebar-widget">
+              <h3 id="sidebar-categories-title">Kategorien</h3>
+              <ul class="sidebar-categories-list" id="sidebar-categories">
+          <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-health'">
+            <span>Gesundheit</span>
+            <span class="sidebar-category-count">2</span>
+          </li>
+          <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-healthy_living'">
+            <span>Gesundes Leben</span>
+            <span class="sidebar-category-count"></span>
+          </li>
+          <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-lifestyle'">
+            <span>Lebensstil</span>
+            <span class="sidebar-category-count"></span>
+          </li>
+          <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-nutrition'">
+            <span>Ernährung</span>
+            <span class="sidebar-category-count"></span>
+          </li>
+          <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-movement'">
+            <span>Bewegung</span>
+            <span class="sidebar-category-count"></span>
+          </li>
+          <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-treatment_methods'">
+            <span>Behandlungsmethoden</span>
+            <span class="sidebar-category-count"></span>
+          </li>
+          <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-oriental_medicine'">
+            <span>Fernöstliche Medizin</span>
+            <span class="sidebar-category-count"></span>
+          </li>
+              </ul>
+            </div>
+            
+            <!-- Recent Posts Sidebar Section -->
+            <div class="sidebar-widget">
+              <h3 id="sidebar-recent-title">Neueste BeitrÃ¤ge</h3>
+              <div class="sidebar-recent-list" id="sidebar-recent">
+          <a href="shoulders-stress.html" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
+            <div class="sidebar-recent-thumb">
+              <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900&q=80&auto=format&fit=crop" alt="Warum Ihre Schultern mehr als nur Stress tragen" loading="lazy" />
+            </div>
+            <div class="sidebar-recent-info">
+              <h4>Warum Ihre Schultern mehr als nur Stress tragen</h4>
+              <span class="sidebar-recent-date">Mai 2025</span>
+            </div>
+          </a>
+          <a href="new-city-relocation.html" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
+            <div class="sidebar-recent-thumb">
+              <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=900&q=80&auto=format&fit=crop" alt="Umzug in eine neue Stadt und was er mit Ihrem Körper macht" loading="lazy" />
+            </div>
+            <div class="sidebar-recent-info">
+              <h4>Umzug in eine neue Stadt und was er mit Ihrem Körper macht</h4>
+              <span class="sidebar-recent-date">April 2025</span>
+            </div>
+          </a>
+          <a href="structural-stiffness.html" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
+            <div class="sidebar-recent-thumb">
+              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80&auto=format&fit=crop" alt="Wie Sie strukturelle Steifheit bemerken, bevor sie zu Schmerzen wird" loading="lazy" />
+            </div>
+            <div class="sidebar-recent-info">
+              <h4>Wie Sie strukturelle Steifheit bemerken, bevor sie zu Schmerzen wird</h4>
+              <span class="sidebar-recent-date">Mai 2025</span>
+            </div>
+          </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo" data-copy="nav.logo">Pause <span>&</span> Move</div>
+      <p data-copy="footer.brand_desc">Massage und Körperarbeit in Basel für Menschen, die sich in Körper, Geist und Seele rundum wohlfühlen möchten.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4 data-copy="footer.cols.navigate">Navigation</h4><ul><li><a href="../../index.html#home">Home</a></li><li><a href="../../index.html#about">About</a></li><li><a href="../../index.html#services">Services</a></li><li><a href="../../index.html#modalities">Modalities</a></li><li><a href="../../index.html#blog">Journal</a></li><li><a href="../../index.html#contact">Contact</a></li></ul></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.therapies">Therapien</h4><ul><li><a href="#" onclick="showSection('modalities');showMod('classic');return false;">Classic Massage</a></li><li><a href="#" onclick="showSection('modalities');showMod('shiatsu');return false;">Shiatsu</a></li><li><a href="#" onclick="showSection('modalities');showMod('connected');return false;">Connected Movement</a></li><li><a href="#" onclick="showSection('modalities');showMod('tuina');return false;">Tuina</a></li><li><a href="#" onclick="showSection('modalities');showMod('qigong');return false;">Qigong</a></li></ul></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.contact">Kontakt</h4><ul><li><a href="../../index.html#contact" data-copy="contact.info.pin">In den Räumen von Physiopunkt Basel</a></li><li><a href="#">Meret Oppenheim-Strasse 6, Basel</a></li><li><a href="mailto:hello@pauseandmove.ch">hello@pauseandmove.ch</a></li><li><a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color:var(--gold); font-weight:500;" data-copy="contact.info.whatsapp_footer">WhatsApp Business (Bevorzugt)</a></li><li><a href="tel:+41772776050" data-copy="contact.info.phone">+41 77 277 60 50</a></li></ul><div style="margin-top:20px"><button class="btn-gold" onclick="openModal()" style="font-size:10px;padding:11px 20px;" data-copy="nav.contact_cta">Termin buchen</button></div></div>
+  </div>
+  <div class="footer-bottom">
+    <p data-copy="footer.bottom">© 2025 Pause & Move, Basel. Alle Rechte vorbehalten.</p>
+    <div class="footer-legal"><a href="#" data-copy="footer.legal.privacy">Datenschutz</a><a href="#" data-copy="footer.legal.terms">AGB</a></div>
+  </div>
+</footer>
+
+<script>
+  // Mobile drawer toggles
+  function toggleDrawer() { document.getElementById('nav-drawer').classList.toggle('open'); }
+  function closeDrawer() { document.getElementById('nav-drawer').classList.remove('open'); }
+  
+  // Booking modal toggles
+  function openModal() { document.getElementById('modal-overlay').classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeModal() { document.getElementById('modal-overlay').classList.remove('open'); document.body.style.overflow=''; }
+  document.getElementById('modal-overlay').addEventListener('click', function(e){ if(e.target===this) closeModal(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeModal(); closeDrawer(); } });
+  
+  // Social sharing helpers
+  function shareArticle(platform) {
+    const shareUrl = window.location.href;
+    const shareText = document.getElementById('article-detail-title').textContent;
+    let url = '';
+    if (platform === 'x') {
+      url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl);
+    } else if (platform === 'facebook') {
+      url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(shareUrl);
+    } else if (platform === 'linkedin') {
+      url = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(shareUrl);
+    }
+    if (url) window.open(url, '_blank', 'width=600,height=400,resizable=yes,scrollbars=yes');
+  }
+  
+  // Copy sharing link helper
+  function copyArticleLink() {
+    const shareUrl = window.location.href;
+    navigator.clipboard.writeText(shareUrl).then(() => {
+      const copyBtn = document.getElementById('share-copy-btn');
+      if (copyBtn) {
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = document.documentElement.lang === 'en' ? 'Copied!' : 'Kopiert!';
+        copyBtn.style.background = 'var(--gold)';
+        copyBtn.style.color = 'var(--black)';
+        copyBtn.style.borderColor = 'var(--gold)';
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+          copyBtn.style.background = '';
+          copyBtn.style.color = '';
+          copyBtn.style.borderColor = '';
+        }, 2000);
+      }
+    });
+  }
+  
+  // Form submissions (Dynamic AJAX endpoints)
+  function submitSubscribeForm(event) {
+    event.preventDefault();
+    const emailInput = document.getElementById('sub-email');
+    const submitBtn = document.getElementById('sub-submit-btn');
+    const successMsg = document.getElementById('sub-success-msg');
+    if (!emailInput || !submitBtn || !successMsg) return;
+    const email = emailInput.value.trim();
+    if (!email) return;
+    submitBtn.disabled = true;
+    const originalText = submitBtn.textContent;
+    const lang = document.documentElement.lang;
+    submitBtn.textContent = lang === 'en' ? 'Subscribing...' : 'Abonnieren...';
+    setTimeout(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+      emailInput.value = '';
+      successMsg.style.display = 'block';
+      successMsg.textContent = lang === 'en'
+        ? 'Thank you! You have successfully subscribed to our newsletter.'
+        : 'Vielen Dank! Sie haben unseren Newsletter erfolgreich abonniert.';
+    }, 1000);
+  }
+  
+  function submitBookingForm(event) {
+    event.preventDefault();
+    const submitBtn = document.getElementById('bm-submit');
+    const originalText = submitBtn.textContent;
+    const firstName = document.getElementById('bm-first-name').value.trim();
+    const lastName = document.getElementById('bm-last-name').value.trim();
+    const email = document.getElementById('bm-email').value.trim();
+    const therapy = document.getElementById('bm-therapy').value;
+    const notes = document.getElementById('bm-notes').value.trim();
+    const clientName = firstName + " " + lastName;
+    const lang = document.documentElement.lang;
+    submitBtn.disabled = true;
+    submitBtn.textContent = lang === 'en' ? 'Sending...' : 'Senden...';
+    fetch("https://formsubmit.co/ajax/hello@pauseandmove.ch", {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        _subject: "Booking Request " + clientName,
+        "Name": clientName,
+        "Email": email,
+        "Therapy": therapy,
+        "Notes": notes,
+        _captcha: "false"
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        submitBtn.textContent = lang === 'en' ? 'Sent successfully!' : 'Erfolgreich gesendet!';
+        document.getElementById('booking-form').reset();
+        setTimeout(() => {
+          closeModal();
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }, 1500);
+      } else { throw new Error(); }
+    })
+    .catch(() => {
+      submitBtn.textContent = lang === 'en' ? 'Error. Try again.' : 'Fehler. Erneut versuchen.';
+      submitBtn.disabled = false;
+      setTimeout(() => { submitBtn.textContent = originalText; }, 3000);
+    });
+  }
+</script>
+</body>
+</html>

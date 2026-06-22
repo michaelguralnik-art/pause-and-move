@@ -1,9 +1,109 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pauseandmove.ch/</loc>
-    <lastmod>2026-06-16</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/pause-and-move-classic-massage.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/en/shoulders-stress.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/shoulders-stress.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/shoulders-stress.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/de/shoulders-stress.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/shoulders-stress.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/shoulders-stress.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/en/new-city-relocation.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/new-city-relocation.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/new-city-relocation.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/de/new-city-relocation.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/new-city-relocation.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/new-city-relocation.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/en/structural-stiffness.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/structural-stiffness.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/structural-stiffness.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/de/structural-stiffness.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/structural-stiffness.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/structural-stiffness.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/en/home-in-body.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/home-in-body.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/home-in-body.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/de/home-in-body.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/home-in-body.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/home-in-body.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/en/qi-meridians-wisdom.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/qi-meridians-wisdom.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/qi-meridians-wisdom.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/de/qi-meridians-wisdom.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/qi-meridians-wisdom.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/qi-meridians-wisdom.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/en/myofascial-nutrition.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/myofascial-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/myofascial-nutrition.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/de/myofascial-nutrition.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/myofascial-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/myofascial-nutrition.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/en/breathwork-ritual.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/breathwork-ritual.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/breathwork-ritual.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/de/breathwork-ritual.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/breathwork-ritual.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/breathwork-ritual.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/en/shiatsu-vs-classic.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/shiatsu-vs-classic.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/shiatsu-vs-classic.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/de/shiatsu-vs-classic.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/shiatsu-vs-classic.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/shiatsu-vs-classic.html" />
   </url>
 </urlset>

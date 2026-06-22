@@ -110,7 +110,7 @@ if (Test-Path $changelogPath) {
 # 7. Commit & Tag
 try {
     Write-Host "Staging changes..." -ForegroundColor Gray
-    & $git add content.json CHANGELOG.md index.html config.json index.js index.css blog.json translations_template.csv
+    & $git add content.json CHANGELOG.md index.html config.json index.js index.css blog.json translations_template.csv favicon.png favicon.ico pause-and-move-classic-massage.html admin.html start_preview.ps1 sitemap.xml BingSiteAuth.xml journal/ generate_blog.ps1
     
     Write-Host "Committing release v$version..." -ForegroundColor Gray
     $commitMsg = "Release v${version}: $comments"

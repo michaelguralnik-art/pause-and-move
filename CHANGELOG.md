@@ -4,6 +4,16 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.2] - 2026-06-22
+### Developer & Copy Updates
+- Pre-rendered blog pages for both English and German to enable search engine indexing.
+- Added sitemap.xml and Bing site verification file (BingSiteAuth.xml).
+- Fixed the HTML rendering of the services section title.
+- Updated SPA routing to support category hash filtering and browser history state.
+
+### Reviewer Comments / Notes
+- Pre-rendering and SEO package deployment.
+
 ## [3.1] - 2026-06-20
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.

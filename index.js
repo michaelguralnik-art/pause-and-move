@@ -129,14 +129,26 @@ Promise.all([
     if (hash.startsWith('article-')) {
       const articleId = hash.replace('article-', '');
       showArticle(articleId, false);
+    } else if (hash.startsWith('blog-')) {
+      const catId = hash.replace('blog-', '');
+      currentCategory = catId;
+      showSection('blog', false);
     } else {
       showSection(hash, false);
     }
     
     // Push initial state so popstate behaves correctly
+    let initSection = hash;
+    let initArticle = null;
+    if (hash.startsWith('article-')) {
+      initSection = 'article-detail';
+      initArticle = hash.replace('article-', '');
+    } else if (hash.startsWith('blog-')) {
+      initSection = 'blog';
+    }
     history.replaceState({ 
-      sectionId: hash.startsWith('article-') ? 'article-detail' : hash, 
-      articleId: hash.startsWith('article-') ? hash.replace('article-', '') : null 
+      sectionId: initSection, 
+      articleId: initArticle 
     }, "", window.location.hash || "#home");
   })
   .catch(err => console.error("Error loading content or blog JSON:", err));
@@ -183,6 +195,14 @@ window.addEventListener('popstate', (event) => {
     const { sectionId, articleId } = event.state;
     if (sectionId === 'article-detail' && articleId) {
       showArticle(articleId, false);
+    } else if (sectionId === 'blog') {
+      const hash = window.location.hash.replace('#', '') || 'blog';
+      if (hash.startsWith('blog-')) {
+        currentCategory = hash.replace('blog-', '');
+      } else {
+        currentCategory = 'all';
+      }
+      showSection('blog', false);
     } else {
       showSection(sectionId, false);
     }
@@ -191,6 +211,10 @@ window.addEventListener('popstate', (event) => {
     if (hash.startsWith('article-')) {
       const articleId = hash.replace('article-', '');
       showArticle(articleId, false);
+    } else if (hash.startsWith('blog-')) {
+      const catId = hash.replace('blog-', '');
+      currentCategory = catId;
+      showSection('blog', false);
     } else {
       showSection(hash, false);
     }
@@ -230,7 +254,7 @@ function bindStaticContent(data) {
     if (value) {
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
         el.placeholder = value;
-      } else if (el.getAttribute('data-html') === 'true' || key.endsWith('.headline') || key.endsWith('.title') || key.endsWith('.quote') || key.includes('body') || key.includes('address') || key.includes('note') || key.includes('logo') || key.includes('text')) {
+      } else if (el.getAttribute('data-html') === 'true' || key.endsWith('.headline') || key.endsWith('.title') || key.includes('title') || key.endsWith('.quote') || key.includes('body') || key.includes('address') || key.includes('note') || key.includes('logo') || key.includes('text')) {
         el.innerHTML = value;
       } else {
         el.textContent = value;
@@ -614,16 +638,16 @@ function renderBlogContent(lang) {
       featuredContainer.style.display = 'grid';
       const featuredArticle = articles[0];
       featuredContainer.innerHTML = `
-        <div class="blog-featured-img" onclick="showArticle('${featuredArticle.id}')" style="cursor:pointer;">
+        <a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" class="blog-featured-img" style="display:block;">
           <img src="${featuredArticle.image}" alt="${featuredArticle.title}" loading="lazy"/>
-        </div>
+        </a>
         <div class="blog-featured-body">
           <span class="blog-featured-label">${lang === 'en' ? 'Featured Post' : 'Hervorgehobener Beitrag'}</span>
-          <h2 onclick="showArticle('${featuredArticle.id}')" style="cursor:pointer; font-style:italic;">${featuredArticle.title}</h2>
+          <h2 style="font-style:italic;"><a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" style="color: inherit; text-decoration: none;">${featuredArticle.title}</a></h2>
           <p>${featuredArticle.abstract}</p>
-          <button class="btn-text" onclick="showArticle('${featuredArticle.id}')">
+          <a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" class="btn-text" style="text-decoration: none;">
             ${lang === 'en' ? 'Read article' : 'Artikel lesen'} &rarr;
-          </button>
+          </a>
         </div>
       `;
     }
@@ -635,7 +659,7 @@ function renderBlogContent(lang) {
         gridContainer.innerHTML = gridArticles.map((article, idx) => {
           const categoryName = categories[article.categoryId] || article.categoryId;
           return `
-            <div class="blog-card reveal delay-${(idx % 3) + 1}" onclick="showArticle('${article.id}')">
+            <a href="journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
               <div class="blog-thumb">
                 <img src="${article.image}" alt="${article.title}" loading="lazy"/>
               </div>
@@ -648,7 +672,7 @@ function renderBlogContent(lang) {
                   <span class="blog-read">${article.readTime} &rarr;</span>
                 </div>
               </div>
-            </div>
+            </a>
           `;
         }).join('');
       } else {
@@ -670,7 +694,7 @@ function renderBlogContent(lang) {
         gridContainer.innerHTML = filteredArticles.map((article, idx) => {
           const categoryName = categories[article.categoryId] || article.categoryId;
           return `
-            <div class="blog-card reveal delay-${(idx % 3) + 1}" onclick="showArticle('${article.id}')">
+            <a href="journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
               <div class="blog-thumb">
                 <img src="${article.image}" alt="${article.title}" loading="lazy"/>
               </div>
@@ -683,7 +707,7 @@ function renderBlogContent(lang) {
                   <span class="blog-read">${article.readTime} &rarr;</span>
                 </div>
               </div>
-            </div>
+            </a>
           `;
         }).join('');
       } else {
@@ -702,6 +726,10 @@ function selectCategory(catId) {
   renderBlogContent(currentLang);
   // Re-observe dynamic reveals in the active view
   observeReveals();
+  
+  // Update hash dynamically when category changes
+  const hash = catId === 'all' ? 'blog' : `blog-${catId}`;
+  history.replaceState({ sectionId: 'blog', articleId: null }, "", "#" + hash);
 }
 
 function showArticle(articleId, pushToHistory = true) {
@@ -802,7 +830,7 @@ function showArticle(articleId, pushToHistory = true) {
     const recentList = otherArticles.length > 0 ? otherArticles.slice(0, 3) : blogData.articles.slice(0, 3);
     recentContainer.innerHTML = recentList.map(rec => {
       return `
-        <div class="sidebar-recent-item" onclick="showArticle('${rec.id}')">
+        <a href="journal/${currentLang}/${rec.id}.html" onclick="showArticle('${rec.id}'); return false;" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
           <div class="sidebar-recent-thumb">
             <img src="${rec.image}" alt="${rec.title}" loading="lazy"/>
           </div>
@@ -810,7 +838,7 @@ function showArticle(articleId, pushToHistory = true) {
             <h4>${rec.title}</h4>
             <span class="sidebar-recent-date">${rec.date}</span>
           </div>
-        </div>
+        </a>
       `;
     }).join('');
   }
