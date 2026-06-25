@@ -82,7 +82,7 @@ foreach ($lang in $languages) {
     $langBlog = $blogData.$lang
     $langContent = $contentData.$lang
     
-    $articles = $langBlog.articles
+    $articles = $langBlog.articles | Where-Object { $null -eq $_.published -or $_.published -ne $false }
     $categories = $langBlog.categories
     
     # 1. Translate the base layout (Nav, Drawer, Modals, Footer)
@@ -433,6 +433,7 @@ $sitemapXml = @"
 
 # Loop over articles
 foreach ($article in $blogData.en.articles) {
+    if ($null -ne $article.published -and $article.published -eq $false) { continue }
     $articleId = $article.id
     $enUrl = "https://pauseandmove.ch/journal/en/$articleId.html"
     $deUrl = "https://pauseandmove.ch/journal/de/$articleId.html"

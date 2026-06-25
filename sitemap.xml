@@ -106,4 +106,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/shiatsu-vs-classic.html" />
     <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/shiatsu-vs-classic.html" />
   </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/en/what-does-my-sugar-intake-have-to-do-with-my-pain.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/what-does-my-sugar-intake-have-to-do-with-my-pain.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/what-does-my-sugar-intake-have-to-do-with-my-pain.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/de/what-does-my-sugar-intake-have-to-do-with-my-pain.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/what-does-my-sugar-intake-have-to-do-with-my-pain.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/what-does-my-sugar-intake-have-to-do-with-my-pain.html" />
+  </url>
 </urlset>

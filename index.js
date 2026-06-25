@@ -120,6 +120,12 @@ Promise.all([
 ])
   .then(([contentData, blogData]) => {
     siteData = contentData;
+    if (blogData.en && blogData.en.articles) {
+      blogData.en.articles = blogData.en.articles.filter(a => a.published !== false);
+    }
+    if (blogData.de && blogData.de.articles) {
+      blogData.de.articles = blogData.de.articles.filter(a => a.published !== false);
+    }
     siteBlogData = blogData;
     updateLanguageUI();
     renderLanguage(currentLang);
