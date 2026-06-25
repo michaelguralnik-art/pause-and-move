@@ -616,6 +616,14 @@ function submitContactForm(event) {
   });
 }
 
+// Helper to get category name(s) for an article (supports multiple categories)
+function getArticleCategoryNames(article, categories) {
+  if (article.categoryIds && Array.isArray(article.categoryIds) && article.categoryIds.length > 0) {
+    return article.categoryIds.map(id => categories[id] || id).join(' \u00B7 ');
+  }
+  return categories[article.categoryId] || article.categoryId || '';
+}
+
 // ── Blog Rendering & Filtering ──
 function renderBlogContent(lang) {
   const categoryMenu = document.getElementById('blog-category-menu');
@@ -663,7 +671,7 @@ function renderBlogContent(lang) {
       const gridArticles = articles.slice(1, 7); // Show 6 articles in 2 rows
       if (gridArticles.length > 0) {
         gridContainer.innerHTML = gridArticles.map((article, idx) => {
-          const categoryName = categories[article.categoryId] || article.categoryId;
+          const categoryName = getArticleCategoryNames(article, categories);
           return `
             <a href="journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
               <div class="blog-thumb">
@@ -694,11 +702,16 @@ function renderBlogContent(lang) {
     
     if (gridContainer) {
       gridContainer.style.display = 'grid';
-      const filteredArticles = articles.filter(art => art.categoryId === currentCategory);
+      const filteredArticles = articles.filter(art => {
+        if (art.categoryIds && Array.isArray(art.categoryIds)) {
+          return art.categoryIds.includes(currentCategory);
+        }
+        return art.categoryId === currentCategory;
+      });
       
       if (filteredArticles.length > 0) {
         gridContainer.innerHTML = filteredArticles.map((article, idx) => {
-          const categoryName = categories[article.categoryId] || article.categoryId;
+          const categoryName = getArticleCategoryNames(article, categories);
           return `
             <a href="journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
               <div class="blog-thumb">
@@ -756,7 +769,7 @@ function showArticle(articleId, pushToHistory = true) {
   }
   
   // Populate content
-  const categoryName = blogData.categories[article.categoryId] || article.categoryId;
+  const categoryName = getArticleCategoryNames(article, blogData.categories);
   
   const catEl = document.getElementById('article-detail-cat');
   const titleEl = document.getElementById('article-detail-title');
@@ -819,7 +832,12 @@ function showArticle(articleId, pushToHistory = true) {
     categoriesContainer.innerHTML = Object.keys(cats)
       .filter(k => k !== 'all')
       .map(catKey => {
-        const count = blogData.articles.filter(a => a.categoryId === catKey).length;
+        const count = blogData.articles.filter(a => {
+          if (a.categoryIds && Array.isArray(a.categoryIds)) {
+            return a.categoryIds.includes(catKey);
+          }
+          return a.categoryId === catKey;
+        }).length;
         return `
           <li class="sidebar-category-item" onclick="selectCategoryAndBack('${catKey}')">
             <span>${cats[catKey]}</span>

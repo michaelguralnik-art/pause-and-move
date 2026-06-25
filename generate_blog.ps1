@@ -104,8 +104,6 @@ foreach ($lang in $languages) {
             $sidebarRecentTitle = "Recent Posts"
             $backBtnText = "&larr; Back to Journal"
             $readTimeSuffix = "read"
-            $categoryName = $categories.$($article.categoryId)
-            if ($null -eq $categoryName) { $categoryName = $article.categoryId }
         } else {
             $shareTitle = "Diesen Artikel teilen:"
             $shareCopy = "Link kopieren"
@@ -117,6 +115,19 @@ foreach ($lang in $languages) {
             $sidebarRecentTitle = "Neueste Beiträge"
             $backBtnText = "&larr; Zurück zum Journal"
             $readTimeSuffix = "Lesezeit"
+        }
+        
+        # Resolve category name(s) (supports multiple categories)
+        $categoryName = ""
+        if ($null -ne $article.categoryIds -and $article.categoryIds.Count -gt 0) {
+            $catNames = @()
+            foreach ($catId in $article.categoryIds) {
+                $name = $categories.$catId
+                if ($null -eq $name) { $name = $catId }
+                $catNames += $name
+            }
+            $categoryName = $catNames -join " $([char]0xB7) "
+        } else {
             $categoryName = $categories.$($article.categoryId)
             if ($null -eq $categoryName) { $categoryName = $article.categoryId }
         }
@@ -125,7 +136,13 @@ foreach ($lang in $languages) {
         $sidebarCategoriesHtml = ""
         foreach ($catKey in $categories.psobject.Properties.Name) {
             if ($catKey -ne "all") {
-                $count = ($articles | Where-Object { $_.categoryId -eq $catKey }).Count
+                $count = ($articles | Where-Object {
+                    if ($null -ne $_.categoryIds -and $_.categoryIds.Count -gt 0) {
+                        $_.categoryIds -contains $catKey
+                    } else {
+                        $_.categoryId -eq $catKey
+                    }
+                }).Count
                 $catName = $categories.$catKey
                 $sidebarCategoriesHtml += "          <li class=`"sidebar-category-item`" onclick=`"window.location.href='../../index.html#blog-$catKey'`">`n"
                 $sidebarCategoriesHtml += "            <span>$catName</span>`n"
