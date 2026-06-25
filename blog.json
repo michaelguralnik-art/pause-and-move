@@ -330,7 +330,7 @@
         "readTime": "5 min",
         "author": "Michael Guralnik",
         "abstract": "How acupressure eases orthopedic and musculoskeletal pain — working with the meridians and the whole body to relieve tight muscles, restore movement, and address pain at its source.",
-        "image": "",
+        "image": "assets/cover-acupressure-for-orthopedic-problems.jpg",
         "keywords": [
           "acupressure",
           "orthopedic pain",
@@ -342,9 +342,26 @@
           "manual therapy"
         ],
         "content": [
-          "<h3>What counts as an orthopedic problem?</h3><p>An orthopedic problem is anything affecting our limbs, joints, or muscles where we feel pain or find our movement restricted. It usually shows up as an issue in the musculoskeletal system — a stiff shoulder, an aching knee, a back that won't loosen — though it often reflects something originating elsewhere in the body.</p><h3>How we approach these conditions</h3><p>For musculoskeletal complaints we draw on a few complementary approaches: acupressure, movement lessons, and hands-on manual therapy. They overlap and support one another, and which we lean on depends on you and on what your body is asking for.</p><h3>How acupressure helps</h3><p>We don't yet have a complete, textbook explanation in Western scientific terms for why acupressure works as well as it does — but we do understand some of its effects. Applied to specific points, sustained pressure works directly on the muscles, on the nervous system, and through our hormonal system. Working gently with these points helps align and regulate how other systems function too.</p><p>Here are the main ways acupressure helps with orthopedic issues.</p><h3>Meridian therapy</h3><p>The meridians carry other, more subtle qualities, but they also run along lines that roughly follow the muscular and biomechanical structure of the body. By stimulating points along them, we can ease the unhelpful build-ups and deficiencies that gather along these lines — balancing tissue that's overcharged and tight against tissue that's weak or underused, to relieve pain or support a muscle that has wasted.</p><p>With steady thumb or finger pressure we can release taut muscles, wake up muscles that have gone quiet, and even gently fine-tune posture.</p><p>One surprising feature of meridian therapy: because some meridians are very long — a few run all the way from the head to the toes — we can often press a point far from where it hurts and still ease the pain. In Shiatsu, for instance, the intention is often to soften a tender spot indirectly first, by working systemic and meridian points, before approaching it directly.</p><h3>Systemic treatment</h3><p>Some of our local aches are really the local expression of something broader. Treating that wider pattern often clears not only the specific pain but a whole cluster of other complaints — some we'd never have guessed were connected.</p><p>A familiar example is pain that grows out of unresolved stress. Among many other things, stress leads the body to hold its muscles so tightly that they ache and can no longer lengthen the way they're meant to. We could simply work the tight muscle — but if we can ease the source of the tension, or the way the body habitually responds to it, the results tend to last, because we've resolved something deeper that might otherwise have resurfaced elsewhere, as a different problem.</p><p>Taking care of these systemic patterns also makes the local points more effective, by improving the flow through the meridians. In Shiatsu, a session often begins with exactly this kind of groundwork — a base treatment — and only turns to the local pain afterwards, if it hasn't already eased.</p><h3>In short</h3><p>Acupressure offers a gentle, hands-on way to work with orthopedic pain — meeting it both where it hurts and at its source. When a stiff or painful area has been with you for a while, it's often a sign that the body is asking for attention on more than one level.</p><p>If you'd like to explore an acupressure-based approach to a stubborn ache, you're welcome to get in touch.</p>"
+          "<h3>What counts as an orthopedic problem?</h3>",
+          "An orthopedic problem is anything affecting our limbs, joints, or muscles where we feel pain or find our movement restricted. It usually shows up as an issue in the musculoskeletal system — a stiff shoulder, an aching knee, a back that won't loosen — though it often reflects something originating elsewhere in the body.",
+          "<h3>How we approach these conditions</h3>",
+          "For musculoskeletal complaints we draw on a few complementary approaches: acupressure, movement lessons, and hands-on manual therapy. They overlap and support one another, and which we lean on depends on you and on what your body is asking for.",
+          "<h3>How acupressure helps</h3>",
+          "We don't yet have a complete, textbook explanation in Western scientific terms for why acupressure works as well as it does — but we do understand some of its effects. Applied to specific points, sustained pressure works directly on the muscles, on the nervous system, and through our hormonal system. Working gently with these points helps align and regulate how other systems function too.",
+          "Here are the main ways acupressure helps with orthopedic issues.",
+          "<h3>Meridian therapy</h3>",
+          "The meridians carry other, more subtle qualities, but they also run along lines that roughly follow the muscular and biomechanical structure of the body. By stimulating points along them, we can ease the unhelpful build-ups and deficiencies that gather along these lines — balancing tissue that's overcharged and tight against tissue that's weak or underused, to relieve pain or support a muscle that has wasted.",
+          "With steady thumb or finger pressure we can release taut muscles, wake up muscles that have gone quiet, and even gently fine-tune posture.",
+          "One surprising feature of meridian therapy: because some meridians are very long — a few run all the way from the head to the toes — we can often press a point far from where it hurts and still ease the pain. In Shiatsu, for instance, the intention is often to soften a tender spot indirectly first, by working systemic and meridian points, before approaching it directly.",
+          "<h3>Systemic treatment</h3>",
+          "Some of our local aches are really the local expression of something broader. Treating that wider pattern often clears not only the specific pain but a whole cluster of other complaints — some we'd never have guessed were connected.",
+          "A familiar example is pain that grows out of unresolved stress. Among many other things, stress leads the body to hold its muscles so tightly that they ache and can no longer lengthen the way they're meant to. We could simply work the tight muscle — but if we can ease the source of the tension, or the way the body habitually responds to it, the results tend to last, because we've resolved something deeper that might otherwise have resurfaced elsewhere, as a different problem.",
+          "Taking care of these systemic patterns also makes the local points more effective, by improving the flow through the meridians. In Shiatsu, a session often begins with exactly this kind of groundwork — a base treatment — and only turns to the local pain afterwards, if it hasn't already eased.",
+          "<h3>In short</h3>",
+          "Acupressure offers a gentle, hands-on way to work with orthopedic pain — meeting it both where it hurts and at its source. When a stiff or painful area has been with you for a while, it's often a sign that the body is asking for attention on more than one level.",
+          "If you'd like to explore an acupressure-based approach to a stubborn ache, you're welcome to get in touch."
         ],
-        "published": false
+        "published": true
       }
     ]
   },
@@ -680,7 +697,7 @@
         "readTime": "5 Min.",
         "author": "Michael Guralnik",
         "abstract": "Wie Akupressur orthopädische und muskuloskelettale Schmerzen lindert – indem sie mit den Meridianen und dem gesamten Körper arbeitet, um verspannte Muskeln zu lösen, die Bewegung wiederherzustellen und den Schmerz an seiner Quelle zu bekämpfen.",
-        "image": "",
+        "image": "assets/cover-acupressure-for-orthopedic-problems.jpg",
         "keywords": [
           "Akupressur",
           "orthopädische Schmerzen",
@@ -692,9 +709,26 @@
           "manuelle Therapie"
         ],
         "content": [
-          "<h3><br></h3>"
+          "<h3>Was gilt als orthopädisches Problem?</h3>",
+          "Ein orthopädisches Problem ist alles, was unsere Gliedmaßen, Gelenke oder Muskeln betrifft, bei denen wir Schmerzen verspüren oder unsere Bewegung eingeschränkt ist. Es zeigt sich meist als Problem im Bewegungsapparat – eine steife Schulter, ein schmerzendes Knie, ein Rücken, der sich nicht lockern lässt –, obwohl es oft auf etwas zurückzuführen ist, das anderswo im Körper entsteht.",
+          "<h3>Wie wir diese Beschwerden angehen</h3>",
+          "Bei Muskel- und Skelettbeschwerden greifen wir auf verschiedene, sich ergänzende Ansätze zurück: Akupressur, Bewegungsstunden und manuelle Körpertherapie. Sie überschneiden sich und unterstützen sich gegenseitig. Welchen wir bevorzugen, hängt von Ihnen und den Bedürfnissen Ihres Körpers ab.",
+          "<h3>Wie Akupressur hilft</h3>",
+          "Wir haben zwar noch keine vollständige, wissenschaftliche Erklärung für die genaue Wirkungsweise von Akupressur, aber wir verstehen einige ihrer Effekte. Auf bestimmte Punkte ausgeübter, anhaltender Druck wirkt direkt auf die Muskeln, das Nervensystem und unser hormonelles System. Die sanfte Arbeit mit diesen Punkten hilft auch dabei, die Funktion anderer Körpersysteme zu regulieren und auszubalancieren.",
+          "Hier sind die wichtigsten Wege, wie Akupressur bei orthopädischen Problemen hilft.",
+          "<h3>Meridiantherapie</h3>",
+          "Die Meridiane transportieren feine energetische Qualitäten, verlaufen aber auch entlang von Linien, die grob der muskulären und biomechanischen Struktur des Körpers entsprechen. Durch die Stimulation von Punkten entlang dieser Bahnen können wir unregelmäßige Anspannungen und Schwachstellen ausgleichen – indem wir überlastetes und festes Gewebe entlasten und schwaches Gewebe aktivieren, um Schmerzen zu lindern oder geschwächte Muskeln zu unterstützen.",
+          "Mit gleichmäßigem Daumen- oder Fingerdruck können wir verspannte Muskeln lösen, inaktiviertes Muskelgewebe stimulieren und sogar die Haltung sanft regulieren.",
+          "Ein überraschender Aspekt der Meridiantherapie: Da einige Meridiane sehr lang sind – manche verlaufen vom Kopf bis zu den Zehen –, können wir oft einen Punkt behandeln, der weit von der schmerzenden Stelle entfernt liegt, und dennoch Linderung erzielen. Im Shiatsu versuchen wir beispielsweise häufig, eine empfindliche Stelle zuerst indirekt über System- und Meridianpunkte zu entspannen, bevor wir direkt an ihr arbeiten.",
+          "<h3>Systemische Behandlung</h3>",
+          "Manche unserer lokalen Schmerzen sind eigentlich nur der Ausdruck eines umfassenderen Musters. Die Behandlung dieses Musters lindert oft nicht nur den spezifischen Schmerz, sondern eine ganze Reihe anderer Beschwerden, von denen wir nie geahnt hätten, dass sie zusammenhängen.",
+          "Ein bekanntes Beispiel sind Schmerzen, die durch ungelösten Stress entstehen. Stress führt unter anderem dazu, dass der Körper seine Muskeln so anspannt, dass sie schmerzen und sich nicht mehr richtig dehnen lassen. Wir könnten einfach nur den verspannten Muskel behandeln – aber wenn wir die Ursache der Anspannung oder die gewohnte Reaktion des Körpers darauf lindern können, ist das Ergebnis nachhaltiger, weil wir ein tiefer liegendes Problem gelöst haben, das sonst an anderer Stelle wieder aufgetaucht wäre.",
+          "Die Behandlung dieser systemischen Muster erhöht auch die Wirksamkeit der lokalen Punkte, da der Fluss durch die Meridiane verbessert wird. Im Shiatsu beginnt eine Behandlung oft genau mit dieser Art von Basisbehandlung (Kenshin) und wendet sich erst danach dem lokalen Schmerz zu, falls dieser sich nicht bereits gelöst hat.",
+          "<h3>Kurz gesagt</h3>",
+          "Akupressur bietet eine sanfte, manuelle Möglichkeit, an orthopädischen Schmerzen zu arbeiten – sowohl direkt am Schmerzpunkt als auch an der Ursache. Wenn Sie schon länger unter einer steifen oder schmerzhaften Stelle leiden, ist dies oft ein Zeichen dafür, dass der Körper Aufmerksamkeit auf mehr als einer Ebene benötigt.",
+          "Wenn Sie die Behandlung einer hartnäckigen Verspannung mittels Akupressur ausprobieren möchten, können Sie sich gerne an mich wenden."
         ],
-        "published": false
+        "published": true
       }
     ]
   }
