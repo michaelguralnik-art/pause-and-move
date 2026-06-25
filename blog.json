@@ -1,47 +1,67 @@
-{
+﻿{
   "en": {
     "categories": {
       "all": "All",
-      "health": "Health",
-      "healthy_living": "Healthy Living",
-      "lifestyle": "Lifestyle",
+      "health": "Health topics",
+      "healthy_living": "Healthy living",
       "nutrition": "Nutrition",
       "movement": "Movement",
-      "treatment_methods": "Treatment methods",
-      "oriental_medicine": "Oriental Medicine"
+      "treatment_techniques": "treatment techniques",
+      "oriental_medicine": "oriental medicine",
+      "new_in_clinic": "new in the clinic"
     },
     "articles": [
       {
         "id": "shoulders-stress",
         "categoryId": "health",
-        "title": "Why your shoulders carry more than stress",
-        "date": "May 2025",
+        "title": "The Ease Behind the Effort",
+        "date": "June 2026",
         "readTime": "5 min",
-        "abstract": "We hold tension in patterns that go beyond the physical. Understanding where your tension lives — and why — is the first step to letting it go for good.",
-        "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["shoulder pain", "shoulder tension", "stress release", "massage Basel", "bodywork", "somatic healing"],
+        "abstract": "Why moving well — in sport and in everyday life — depends as much on what you let go of as on what you put in.",
+        "image": "assets/cover-shoulders-stress.jpg",
+        "keywords": [
+          "muscle relaxation · athletic performance · antagonist muscles · recovery and circulation · co-contraction · movement efficiency · motor precision · stress and tension"
+        ],
         "content": [
-          "Have you ever noticed that when you are under pressure, your shoulders seem to creep closer to your ears? This isn't just a physical coincidence; it's a deeply ingrained biological response. The trapezius and levator scapulae muscles are highly sensitive to psychological stress, acting as an emotional barometer for your body.",
-          "From an evolutionary perspective, when we feel threatened or overwhelmed, our brain triggers a fight-or-flight response. This reflex automatically tenses the neck and shoulder area to protect our throat and vital blood supply. In modern life, we rarely face physical predators, but chronic stressors like deadlines, financial worry, or personal conflict keep these muscles permanently contracted.",
-          "Over time, this chronic tension restricts local blood flow, leading to oxygen deprivation in the tissue and the accumulation of metabolic waste products. This is what we feel as painful 'knots' or trigger points. Massage therapy and targeted bodywork do more than just knead these knots away — they signal to the nervous system that the threat has passed, allowing the muscles to truly let go.",
-          "To begin releasing this pattern, practice simple awareness throughout your day. Set a timer to check in on your shoulders. Let them drop, inhale deeply into your abdomen, and exhale fully. Pairing this self-awareness with regular professional bodywork sessions can unravel years of defensive tension."
+          "When we think about strength, we usually picture effort — a muscle working hard, straining against something heavy. But here's the thing: no muscle ever works alone. Every movement you make, even the small ones, is a team effort. Some muscles pull, some gently give way, and others quietly hold a joint steady so the whole thing ends up where you want it. Lifting your coffee, reaching for a door, turning to talk to a friend — each one is a little piece of teamwork happening without you ever having to think about it.",
+          "Here's a detail that surprises people: a muscle can really only do two things. It can contract, or it can relax. It pulls, but it can't push, and it can't lengthen itself on its own. So whenever one muscle shortens to bend a joint, the muscle on the other side has to let go and lengthen to make room. Your biceps can only lift your forearm if your triceps relaxes and allows it. That means the quality of a movement isn't only about how strongly the working muscle pulls — it's just as much about how easily its partner can release. A muscle that won't quite let go is like driving with the handbrake half on: you still get where you're going, but it costs you more, and it never feels quite smooth.",
+          "That two-muscle picture is a handy way to grasp the idea, but it's really a simplified version. In real life, many muscles join in on even the simplest movement — and that's exactly what gives us such a wonderful range of motion and such fine control. It's a beautiful system when it's relaxed and free to do its job.",
+          "Stress, though, throws a wrench into it. When we're under pressure — a deadline, a heavy bag, or just a hard day — the body tends to tense up and brace, switching on muscles that aren't actually helping. We clench the jaw, hunch the shoulders, grip with the hands. None of that extra tension gets us anywhere; it just muddies the signal, wastes energy, and makes our movements clumsier. The more wound up we are, the stiffer and less precise we become — we even heat up a little — and everything starts to feel like more work than it should. It's why top athletes and dancers train themselves to stay loose under pressure: they know that tension is the enemy of skill.",
+          "And here's the part that matters most — because you really don't have to be an athlete for any of this to apply to you. That same tension quietly builds up in all of us, day after day: from sitting at a desk, from carrying worry in our shoulders, from simply getting through a busy week. Left alone, it doesn't just melt away. It keeps stacking up, and little by little it makes everything you do feel heavier and less easy — your posture, your sleep, the way you reach and bend and walk.",
+          "The good news is that letting go is a skill, and it's one you can absolutely build. Gentle movement, stretching, and hands-on work like massage all teach your body what genuine release actually feels like — and gradually help it find that ease on its own. You don't need to be training for anything. The very same things that help an athlete move with more freedom and precision will help you move through an ordinary day with a lot more ease.",
+          "There's a bonus, too. Soft, relaxed muscle lets blood and nutrients flow through it freely, while tense muscle squeezes that flow down. So the better your muscles can release, the better they're nourished — and the quicker your body bounces back, whether from a workout or a long day on your feet.",
+          "So if there's one thing to take away, it's this: moving well — in sport, or simply in life — isn't only about working harder. A surprising amount of it comes down to learning to let go. And that's something every one of us can get better at."
+        ],
+        "author": "Michael Guralnik",
+        "categoryIds": [
+          "health",
+          "healthy_living",
+          "treatment_techniques"
         ]
       },
       {
         "id": "new-city-relocation",
-        "categoryId": "lifestyle",
+        "categoryId": "healthy_living",
         "title": "Moving to a new city and what it does to your body",
         "date": "April 2025",
         "readTime": "4 min",
-        "abstract": "Relocation stress is real — and it shows up physically in ways most people don't expect. Let's look at what's actually happening when you move, and why your shoulders are up at your ears.",
+        "abstract": "Relocation stress is real â€” and it shows up physically in ways most people don't expect. Let's look at what's actually happening when you move, and why your shoulders are up at your ears.",
         "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["relocation stress", "moving Basel", "expat wellness", "body posture", "massage therapist", "grounding"],
+        "keywords": [
+          "relocation stress",
+          "moving Basel",
+          "expat wellness",
+          "body posture",
+          "massage therapist",
+          "grounding"
+        ],
         "content": [
-          "Moving to a new city is widely ranked as one of life's most intense stressors. While we focus on the logistics — finding an apartment in Basel, registering at the town hall, setting up bank accounts — our bodies are quietly bearing the brunt of the transition. This is relocation stress, and it is a physical reality.",
+          "Moving to a new city is widely ranked as one of life's most intense stressors. While we focus on the logistics â€” finding an apartment in Basel, registering at the town hall, setting up bank accounts â€” our bodies are quietly bearing the brunt of the transition. This is relocation stress, and it is a physical reality.",
           "When you enter a new environment, every sight, sound, and spatial layout is unfamiliar. Your nervous system operates on high alert to process this influx of new data. Without realizing it, you might find yourself walking with slightly more tension, sleeping less deeply, or holding your breath as you navigate public transit.",
           "Moreover, the physical acts of packing, lifting heavy boxes, and sleeping on temporary mattresses create structural strain. Combined with emotional fatigue and the absence of your usual social support networks, this physical strain easily manifests as lower back pain, tension headaches, or digestive issues.",
           "To settle into a new city, you must first settle into your own body. Establishing a grounding routine is crucial. Explore local parks, set regular sleep schedules, and consider scheduling a manual bodywork session. Dedicated bodywork acts as a physical anchor, calming the overstimulated nervous system and helping you feel at home in your body first."
-        ]
+        ],
+        "author": "Michael Guralnik"
       },
       {
         "id": "structural-stiffness",
@@ -51,13 +71,21 @@
         "readTime": "5 min",
         "abstract": "The body is constantly whispering before it shouts. Learning to read the subtle changes in your posture can save you weeks of recovery.",
         "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["back pain prevention", "body awareness", "stiff joints", "fascia release", "manual therapy", "early signs"],
+        "keywords": [
+          "back pain prevention",
+          "body awareness",
+          "stiff joints",
+          "fascia release",
+          "manual therapy",
+          "early signs"
+        ],
         "content": [
           "We often wait until we are in acute pain before we seek help. But pain is rarely the first stage of a structural problem; it is the final alarm. Long before a muscle spasms or a joint inflames, the body signals restriction through subtle, structural stiffness.",
           "Structural stiffness is a gradual loss of mobility in your joints and myofascial tissues. It might show up as difficulty turning your head fully to check your blind spot while driving, a slight tightness in your lower back when tying your shoes, or feeling unusually heavy and stiff when getting out of bed in the morning.",
-          "This stiffness is caused by the dehydration and thickening of the fascia — the web of connective tissue that wraps around all your muscles and organs. When you sit for long hours or repeat the same movements, the fascia loses its elasticity and begins to stick together, binding muscles and restricting joint movement.",
+          "This stiffness is caused by the dehydration and thickening of the fascia â€” the web of connective tissue that wraps around all your muscles and organs. When you sit for long hours or repeat the same movements, the fascia loses its elasticity and begins to stick together, binding muscles and restricting joint movement.",
           "By learning to listen to these subtle whispers of stiffness, you can intervene early. Dynamic stretching, staying well-hydated, and receiving targeted bodywork treatments can break up fascial adhesions, restore fluid flow, and keep your structural system moving smoothly before pain ever sets in."
-        ]
+        ],
+        "author": "Michael Guralnik"
       },
       {
         "id": "home-in-body",
@@ -65,15 +93,23 @@
         "title": "What does it mean to feel at home in your body?",
         "date": "March 2025",
         "readTime": "6 min",
-        "abstract": "It's more than flexibility or strength. It's a quality of attention — and it can be learned through somatic awareness.",
+        "abstract": "It's more than flexibility or strength. It's a quality of attention â€” and it can be learned through somatic awareness.",
         "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["body awareness", "connected movement", "Feldenkrais Basel", "mindfulness", "somatic movement", "proprioception"],
+        "keywords": [
+          "body awareness",
+          "connected movement",
+          "Feldenkrais Basel",
+          "mindfulness",
+          "somatic movement",
+          "proprioception"
+        ],
         "content": [
           "In our fast-paced, screen-dominated lives, we tend to live almost entirely in our heads. We treat our bodies like vehicles to transport our minds from one meeting to the next. But truly feeling healthy requires more than just maintaining the vehicle; it requires occupying it fully. It means feeling at home in your body.",
           "Feeling at home in your body is a state of somatic comfort and awareness. It is the ability to perceive your internal state without judgment. It is knowing when you are tired before you collapse, recognizing tension as it starts rather than when it hurts, and moving with a sense of ease and coordination.",
           "When we lack this connection, we experience a sense of somatic alienation. We feel clumsy, perpetually tense, or surprised by sudden physical pain. Somatic movement practices, such as the Feldenkrais method and Connected Movement, focus on rebuilding this connection. They do not force the body into rigid postures; instead, they guide you through small, curious movements to expand your sensory awareness.",
           "By cultivating this quality of attention, you start to reclaim your physical self. You learn how your ribs move as you breathe, how your weight shifts as you walk, and where you hold unnecessary effort. This sensory awareness is the true foundation of lasting wellness and physical freedom."
-        ]
+        ],
+        "author": "Michael Guralnik"
       },
       {
         "id": "qi-meridians-wisdom",
@@ -83,13 +119,21 @@
         "readTime": "7 min",
         "abstract": "How traditional eastern models of energy lines correspond to myofascial networks and nervous system pathways in modern manual therapy.",
         "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["Traditional Chinese Medicine", "meridian massage", "Shiatsu therapy", "Qigong flow", "energy pathways", "fascia networks"],
+        "keywords": [
+          "Traditional Chinese Medicine",
+          "meridian massage",
+          "Shiatsu therapy",
+          "Qigong flow",
+          "energy pathways",
+          "fascia networks"
+        ],
         "content": [
           "Traditional Chinese Medicine (TCM) has long described the body in terms of Qi (vital energy) flowing through a network of pathways called meridians. For centuries, this was viewed by Western science as a purely metaphorical system. Today, however, exciting parallels are emerging between these ancient maps and modern anatomy.",
-          "When we look at myofascial meridian lines — the continuous chains of connective tissue that run from our toes to our head — we find they trace almost identical pathways to the classical acupuncture meridians. Fascia is highly conductive, transporting fluid, electrical signals, and mechanical force throughout the body. What ancient practitioners called Qi blockage, modern therapists recognize as fascial restriction or poor fluid circulation.",
+          "When we look at myofascial meridian lines â€” the continuous chains of connective tissue that run from our toes to our head â€” we find they trace almost identical pathways to the classical acupuncture meridians. Fascia is highly conductive, transporting fluid, electrical signals, and mechanical force throughout the body. What ancient practitioners called Qi blockage, modern therapists recognize as fascial restriction or poor fluid circulation.",
           "In Shiatsu and Tuina, applying pressure along these meridians stimulates the autonomic nervous system, improves lymphatic flow, and hydrates the fascial pathways. Rather than working on isolated muscles, these modalities address the whole line of tension, matching the holistic view of Chinese medicine.",
           "Integrating Qigong or Shiatsu into your wellness routine helps maintain the smooth flow of energy and fluid through these myofascial networks. By bridging Eastern wisdom and Western science, we gain a deeper, more complete toolkit for resolving chronic tension and cultivating vital health."
-        ]
+        ],
+        "author": "Michael Guralnik"
       },
       {
         "id": "myofascial-nutrition",
@@ -99,13 +143,21 @@
         "readTime": "5 min",
         "abstract": "Deep tissue work releases metabolites and creates micro-changes in tissue. Here is how hydration and specific nutrients support fascia healing.",
         "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["fascia recovery", "post-massage nutrition", "anti-inflammatory foods", "hydration tips", "connective tissue", "collagen synthesis"],
+        "keywords": [
+          "fascia recovery",
+          "post-massage nutrition",
+          "anti-inflammatory foods",
+          "hydration tips",
+          "connective tissue",
+          "collagen synthesis"
+        ],
         "content": [
           "What you do after a bodywork session is just as important as the treatment itself. A deep therapeutic massage or Tuina session stimulates blood flow, breaks down tissue restrictions, and releases metabolic waste. To rebuild and repair this tissue, your body requires the right nutritional building blocks.",
           "First and foremost is hydration. Fascia is primarily composed of water and collagen. When fascia gets restricted, it becomes dehydrated and sticky. Bodywork acts like squeezing a sponge, forcing stale fluid out so that clean, nutrient-rich fluid can rush back in. Drinking plenty of water after your session is essential to rehydrate these tissues and support their elasticity.",
-          "In addition to water, your body needs specific nutrients to support collagen synthesis and repair. Vitamin C is a critical cofactor in collagen production — foods like bell peppers, citrus fruits, and leafy greens are excellent choices. Amino acids, particularly proline and glycine found in bone broth, fish, and legumes, provide the direct building blocks for connective tissue repair.",
+          "In addition to water, your body needs specific nutrients to support collagen synthesis and repair. Vitamin C is a critical cofactor in collagen production â€” foods like bell peppers, citrus fruits, and leafy greens are excellent choices. Amino acids, particularly proline and glycine found in bone broth, fish, and legumes, provide the direct building blocks for connective tissue repair.",
           "Finally, focus on anti-inflammatory nutrition to manage post-treatment soreness. Healthy fats like omega-3s from walnuts or wild fish, along with spices like ginger and turmeric, help soothe the inflammatory response, allowing your myofascial system to heal stronger and more flexible."
-        ]
+        ],
+        "author": "Michael Guralnik"
       },
       {
         "id": "breathwork-ritual",
@@ -115,75 +167,112 @@
         "readTime": "4 min",
         "abstract": "A simple 5-minute daily breathing practice can regulate your autonomic nervous system and lower cortisol levels.",
         "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["mindful breathing", "vagus nerve stimulation", "stress relief", "daily meditation", "breathwork Basel", "parasympathetic"],
+        "keywords": [
+          "mindful breathing",
+          "vagus nerve stimulation",
+          "stress relief",
+          "daily meditation",
+          "breathwork Basel",
+          "parasympathetic"
+        ],
         "content": [
           "We take around 20,000 breaths every single day, yet we rarely pay attention to a single one. Most of the time, we breathe shallowly into our upper chest, a pattern that signals mild stress to our nervous system. Taking control of your breath is the fastest way to change your physiological state.",
           "Mindful diaphragmatic breathing stimulates the vagus nerve, which acts as the main highway for your parasympathetic ('rest and digest') nervous system. By slowing down your breath and breathing deeply into your abdomen, you send an immediate signal to your brain that you are safe. This lowers your heart rate, reduces blood pressure, and decreases cortisol levels.",
           "Creating a daily breathing ritual does not require hours of meditation. Just five minutes a day can yield profound benefits. Find a comfortable seat, place one hand on your chest and one on your belly. Inhale through your nose for a count of four, letting your belly expand, and exhale slowly through your mouth for a count of six.",
           "This simple pause acts as a reset button for your mind and body. Over time, this practice builds somatic resilience, helping you navigate daily stressors with greater calm and preventing stress from accumulating as physical tension in your body."
-        ]
+        ],
+        "author": "Michael Guralnik"
       },
       {
         "id": "shiatsu-vs-classic",
-        "categoryId": "treatment_methods",
+        "categoryId": "treatment_techniques",
         "title": "Understanding the difference between Shiatsu and Classic Massage",
         "date": "November 2024",
         "readTime": "6 min",
         "abstract": "One uses oil and works on naked skin; the other is fully clothed pressure-point therapy. Discover which fits your current physical needs.",
         "image": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["Shiatsu vs massage", "acupressure therapy", "oil-free massage", "body alignment", "massage choices", "TCM bodywork"],
+        "keywords": [
+          "Shiatsu vs massage",
+          "acupressure therapy",
+          "oil-free massage",
+          "body alignment",
+          "massage choices",
+          "TCM bodywork"
+        ],
         "content": [
           "When looking to book a bodywork session, the options can be confusing. Two of the most popular therapies are Classic Massage and Shiatsu. While both aim to relieve tension and promote well-being, they come from entirely different lineages and offer very different client experiences.",
           "Classic Massage (often called Swedish massage) is rooted in Western anatomy and physiology. It is performed directly on the skin using oils or creams. The therapist uses strokes like effleurage (sliding) and petrissage (kneading) to work directly on muscle fibers, increasing circulation and easing physical tension. It is highly effective for localized muscle stiffness and general relaxation.",
           "Shiatsu, on the other hand, is a traditional Japanese therapy rooted in Chinese Medicine. It is performed fully clothed on a futon mat on the floor, without any oils. Instead of kneading muscles, the practitioner uses fingers, thumbs, elbows, and palms to apply precise pressure along meridian lines. They also guide the client through gentle stretches and joint rotations to restore energy flow and balance the nervous system.",
           "Choosing between the two depends on your goals and preferences. If you prefer direct skin contact, rhythmic muscular work, and deep relaxation, Classic Massage is ideal. If you prefer to stay clothed, are interested in structural alignment and energy balance, and enjoy deep, static pressure and stretching, Shiatsu may be the perfect fit."
-        ]
+        ],
+        "author": "Michael Guralnik"
       }
     ]
   },
   "de": {
     "categories": {
       "all": "Alle",
-      "health": "Gesundheit",
+      "health": "Gesundheitsthemen",
       "healthy_living": "Gesundes Leben",
-      "lifestyle": "Lebensstil",
-      "nutrition": "Ernährung",
+      "nutrition": "ErnÃ¤hrung",
       "movement": "Bewegung",
-      "treatment_methods": "Behandlungsmethoden",
-      "oriental_medicine": "Fernöstliche Medizin"
+      "treatment_techniques": "Behandlungstechniken",
+      "oriental_medicine": "FernÃ¶stliche Medizin",
+      "new_in_clinic": "Neu in der Praxis"
     },
     "articles": [
       {
         "id": "shoulders-stress",
         "categoryId": "health",
-        "title": "Warum Ihre Schultern mehr als nur Stress tragen",
-        "date": "Mai 2025",
+        "title": "Die Leichtigkeit hinter der Anstrengung",
+        "date": "June 2026",
         "readTime": "5 Min.",
-        "abstract": "Wir halten emotionale und körperliche Anspannung in Mustern fest, die weit über das Physische hinausgehen. Zu verstehen, wo Ihre Spannung sitzt — und warum — ist der erste Schritt, sie dauerhaft loszulassen.",
-        "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["Schulterschmerzen", "Schulterverspannung", "Stressabbau", "Massage Basel", "Körpertherapie", "somatische Heilung"],
+        "abstract": "Wir halten emotionale und kÃ¶rperliche Anspannung in Mustern fest, die weit Ã¼ber das Physische hinausgehen. Zu verstehen, wo Ihre Spannung sitzt â€” und warum â€” ist der erste Schritt, sie dauerhaft loszulassen.",
+        "image": "assets/cover-shoulders-stress.jpg",
+        "keywords": [
+          "Muskelentspannung · sportliche Leistung · antagonistische Muskeln · Regeneration und Durchblutung · Kokontraktion · Bewegungseffizienz · motorische Präzision · Stress und Anspannung"
+        ],
         "content": [
-          "Haben Sie jemals bemerkt, dass Ihre Schultern unter Druck immer näher an Ihre Ohren wandern? Das ist kein physischer Zufall, sondern eine tief verwurzelte biologische Reaktion. Die Trapez- und Schulterblattheber-Muskeln reagieren hochempfindlich auf psychischen Stress und wirken wie ein emotionales Barometer für Ihren Körper.",
-          "Aus evolutionärer Sicht spannt unser Gehirn bei Bedrohung oder Überforderung automatisch den Nacken- und Schulterbereich an, um die Kehle und die lebenswichtige Blutzufuhr zu schützen (Kampf-oder-Flucht-Reflex). Im modernen Leben sind wir zwar selten Raubtieren ausgesetzt, aber chronischer Stress wie Deadlines, finanzielle Sorgen oder Konflikte hält diese Muskeln in ständiger Kontraktion.",
-          "Mit der Zeit schränkt diese chronische Anspannung die lokale Durchblutung ein, was zu Sauerstoffmangel im Gewebe und zur Anhäufung von Stoffwechselabbauprodukten führt. Das spüren wir dann als schmerzhafte 'Knoten' oder Triggerpunkte. Massagen und gezielte Körpertherapie lösen diese Blockaden nicht nur mechanisch, sondern signalisieren dem Nervensystem, dass die Gefahr vorbei ist, sodass die Muskeln wirklich entspannen können.",
-          "Um dieses Muster zu durchbrechen, üben Sie über den Tag verteilt einfache Achtsamkeit. Stellen Sie sich einen Timer für einen kurzen Schulter-Check. Lassen Sie sie bewusst sinken, atmen Sie tief in den Bauch ein und atmen Sie vollständig aus. Die Kombination aus dieser Selbstwahrnehmung und regelmäßiger professioneller Körperarbeit kann jahrelang aufgestaute Abwehrspannung auflösen."
+          "Warum gute Bewegung — im Sport wie im Alltag — ebenso davon abhängt, was wir loslassen, wie davon, was wir hineingeben.",
+          "Wenn wir an Kraft denken, stellen wir uns meist Anstrengung vor — einen Muskel, der hart arbeitet und sich gegen etwas Schweres stemmt. Doch eines ist entscheidend: Kein Muskel arbeitet je allein. Jede Bewegung, die wir machen, auch die kleinste, ist Teamarbeit. Einige Muskeln ziehen, andere geben sanft nach, und wieder andere halten still ein Gelenk stabil, damit das Ganze dort ankommt, wo wir es haben wollen. Die Kaffeetasse heben, nach einer Türklinke greifen, sich umdrehen, um mit einer Freundin zu sprechen — jede dieser Bewegungen ist ein kleines Stück Teamarbeit, das geschieht, ohne dass wir je darüber nachdenken müssen.",
+          "Ein Detail, das viele überrascht: Ein Muskel kann eigentlich nur zweierlei. Er kann sich anspannen oder entspannen. Er zieht, aber er kann nicht schieben, und er kann sich nicht aus eigener Kraft verlängern. Wann immer sich also ein Muskel verkürzt, um ein Gelenk zu beugen, muss der Muskel auf der anderen Seite loslassen und sich verlängern, um Platz zu schaffen. Der Bizeps kann den Unterarm nur dann heben, wenn der Trizeps sich entspannt und es zulässt. Das heisst: Die Qualität einer Bewegung hängt nicht nur davon ab, wie kräftig der arbeitende Muskel zieht — sondern ebenso davon, wie leicht sein Partner loslassen kann. Ein Muskel, der nicht ganz loslassen will, ist wie Autofahren mit halb angezogener Handbremse: Man kommt zwar ans Ziel, aber es kostet mehr, und es fühlt sich nie richtig geschmeidig an.",
+          "Dieses Bild zweier Muskeln ist eine praktische Art, die Idee zu verstehen, doch in Wirklichkeit ist es eine starke Vereinfachung. Tatsächlich wirken bei selbst der einfachsten Bewegung viele Muskeln zusammen — und genau das verschafft uns einen so grossen Bewegungsspielraum und eine so feine Kontrolle. Es ist ein wunderbares System, wenn es entspannt ist und frei seine Arbeit tun kann.",
+          "Stress aber bringt das Ganze durcheinander. Wenn wir unter Druck stehen — eine Deadline, eine schwere Tasche oder einfach ein anstrengender Tag —, neigt der Körper dazu, sich zu verspannen und sich zu wappnen, und schaltet Muskeln ein, die gar nicht helfen. Wir pressen den Kiefer zusammen, ziehen die Schultern hoch, verkrampfen die Hände. Nichts von dieser zusätzlichen Spannung bringt uns voran; sie trübt nur das Signal, verschwendet Energie und macht unsere Bewegungen ungeschickter. Je angespannter wir sind, desto steifer und ungenauer werden wir — wir laufen sogar ein wenig heiss — und alles beginnt, sich mühsamer anzufühlen, als es sein müsste. Darum trainieren Spitzensportlerinnen und Tänzer, unter Druck locker zu bleiben: Sie wissen, dass Anspannung der Feind des Könnens ist.",
+          "Und jetzt kommt das Wichtigste — denn man muss wirklich kein Sportler sein, damit all das auf einen zutrifft. Dieselbe Spannung baut sich bei uns allen leise auf, Tag für Tag: vom Sitzen am Schreibtisch, vom Tragen unserer Sorgen in den Schultern, vom blossen Bewältigen einer vollen Woche. Sich selbst überlassen, löst sie sich nicht einfach auf. Sie staut sich weiter an, und Stück für Stück lässt sie alles, was wir tun, schwerer und mühsamer wirken — unsere Haltung, unseren Schlaf, die Art, wie wir greifen, uns bücken und gehen.",
+          "Die gute Nachricht: Loslassen ist eine Fähigkeit — und eine, die wir uns durchaus aneignen können. Sanfte Bewegung, Dehnen und Körperarbeit wie Massage zeigen dem Körper, wie sich echtes Loslassen tatsächlich anfühlt — und helfen ihm nach und nach, diese Leichtigkeit von selbst zu finden. Man muss für nichts trainieren. Genau dieselben Dinge, die einem Sportler zu mehr Freiheit und Präzision verhelfen, lassen auch uns mit deutlich mehr Leichtigkeit durch einen ganz normalen Tag kommen.",
+          "Und es gibt noch einen schönen Nebeneffekt. Weiches, entspanntes Muskelgewebe lässt Blut und Nährstoffe frei hindurchströmen, während verspanntes Gewebe diesen Fluss drosselt. Je besser unsere Muskeln also loslassen können, desto besser werden sie versorgt — und desto schneller erholt sich unser Körper, ob nach einem Training oder nach einem langen Tag auf den Beinen.",
+          "Wenn es also eines mitzunehmen gibt, dann dies: Sich gut zu bewegen — im Sport oder einfach im Leben — hat nicht nur mit härterem Arbeiten zu tun. Überraschend viel davon liegt darin, das Loslassen zu lernen. Und darin kann jede und jeder von uns besser werden."
+        ],
+        "author": "Michael Guralnik",
+        "categoryIds": [
+          "health",
+          "healthy_living",
+          "treatment_techniques"
         ]
       },
       {
         "id": "new-city-relocation",
-        "categoryId": "lifestyle",
-        "title": "Umzug in eine neue Stadt und was er mit Ihrem Körper macht",
+        "categoryId": "healthy_living",
+        "title": "Umzug in eine neue Stadt und was er mit Ihrem KÃ¶rper macht",
         "date": "April 2025",
         "readTime": "4 Min.",
-        "abstract": "Umzugsstress ist real — und er zeigt sich körperlich auf Weisen, die die meisten Menschen nicht erwarten. Sehen wir uns an, was beim Umzug wirklich im Körper passiert und warum Ihre Schultern so angespannt sind.",
+        "abstract": "Umzugsstress ist real â€” und er zeigt sich kÃ¶rperlich auf Weisen, die die meisten Menschen nicht erwarten. Sehen wir uns an, was beim Umzug wirklich im KÃ¶rper passiert und warum Ihre Schultern so angespannt sind.",
         "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["Umzugsstress", "Umzug Basel", "Expat Wellness", "Körperhaltung", "Massagetherapeut", "Erdung"],
+        "keywords": [
+          "Umzugsstress",
+          "Umzug Basel",
+          "Expat Wellness",
+          "KÃ¶rperhaltung",
+          "Massagetherapeut",
+          "Erdung"
+        ],
         "content": [
-          "Der Umzug in eine neue Stadt gilt als einer der intensivsten Stressfaktoren im Leben. Während wir uns auf die Logistik konzentrieren — Wohnungssuche in Basel, Anmeldung im Rathaus, Bankkonten einrichten —, trägt unser Körper leise die Hauptlast dieses Übergangs. Das ist Umzugsstress, und er ist eine körperliche Realität.",
-          "Wenn Sie in eine neue Umgebung kommen, ist jeder Anblick, jedes Geräusch und jeder Weg ungewohnt. Ihr Nervensystem arbeitet auf Hochtouren, um diese Flut neuer Daten zu verarbeiten. Ohne es zu merken, gehen Sie vielleicht mit etwas mehr Anspannung, schlafen weniger tief oder halten in der Straßenbahn unbewusst den Atem an.",
-          "Zudem belasten das Kistenpacken, das Tragen schwerer Lasten und das Schlafen auf provisorischen Matratzen den Bewegungsapparat. Zusammen mit emotionaler Erschöpfung und dem Fehlen Ihres gewohnten sozialen Umfelds äußert sich diese Belastung schnell in Rückenschmerzen, Spannungskopfschmerzen oder Verdauungsproblemen.",
-          "Um in einer neuen Stadt anzukommen, müssen Sie zuerst in Ihrem eigenen Körper ankommen. Eine erdende Routine ist dabei entscheidend. Erkunden Sie lokale Parks, achten Sie auf regelmäßige Schlafenszeiten und gönnen Sie sich eine manuelle Körpertherapie. Gezielte Körperarbeit wirkt wie ein physischer Anker, der das überreizte Nervensystem beruhigt und Ihnen hilft, sich zuerst im eigenen Körper zu Hause zu fühlen."
-        ]
+          "Der Umzug in eine neue Stadt gilt als einer der intensivsten Stressfaktoren im Leben. WÃ¤hrend wir uns auf die Logistik konzentrieren â€” Wohnungssuche in Basel, Anmeldung im Rathaus, Bankkonten einrichten â€”, trÃ¤gt unser KÃ¶rper leise die Hauptlast dieses Ãœbergangs. Das ist Umzugsstress, und er ist eine kÃ¶rperliche RealitÃ¤t.",
+          "Wenn Sie in eine neue Umgebung kommen, ist jeder Anblick, jedes GerÃ¤usch und jeder Weg ungewohnt. Ihr Nervensystem arbeitet auf Hochtouren, um diese Flut neuer Daten zu verarbeiten. Ohne es zu merken, gehen Sie vielleicht mit etwas mehr Anspannung, schlafen weniger tief oder halten in der StraÃŸenbahn unbewusst den Atem an.",
+          "Zudem belasten das Kistenpacken, das Tragen schwerer Lasten und das Schlafen auf provisorischen Matratzen den Bewegungsapparat. Zusammen mit emotionaler ErschÃ¶pfung und dem Fehlen Ihres gewohnten sozialen Umfelds Ã¤uÃŸert sich diese Belastung schnell in RÃ¼ckenschmerzen, Spannungskopfschmerzen oder Verdauungsproblemen.",
+          "Um in einer neuen Stadt anzukommen, mÃ¼ssen Sie zuerst in Ihrem eigenen KÃ¶rper ankommen. Eine erdende Routine ist dabei entscheidend. Erkunden Sie lokale Parks, achten Sie auf regelmÃ¤ÃŸige Schlafenszeiten und gÃ¶nnen Sie sich eine manuelle KÃ¶rpertherapie. Gezielte KÃ¶rperarbeit wirkt wie ein physischer Anker, der das Ã¼berreizte Nervensystem beruhigt und Ihnen hilft, sich zuerst im eigenen KÃ¶rper zu Hause zu fÃ¼hlen."
+        ],
+        "author": "Michael Guralnik"
       },
       {
         "id": "structural-stiffness",
@@ -191,31 +280,47 @@
         "title": "Wie Sie strukturelle Steifheit bemerken, bevor sie zu Schmerzen wird",
         "date": "Mai 2025",
         "readTime": "5 Min.",
-        "abstract": "Der Körper flüstert, bevor er schreit. Wenn Sie lernen, die subtilen Veränderungen in Ihrer Haltung zu lesen, können Sie sich wochenlange Regeneration sparen.",
+        "abstract": "Der KÃ¶rper flÃ¼stert, bevor er schreit. Wenn Sie lernen, die subtilen VerÃ¤nderungen in Ihrer Haltung zu lesen, kÃ¶nnen Sie sich wochenlange Regeneration sparen.",
         "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["Rückenschmerzen Prävention", "Körperbewusstsein", "steife Gelenke", "Faszienlösung", "manuelle Therapie", "Frühwarnzeichen"],
+        "keywords": [
+          "RÃ¼ckenschmerzen PrÃ¤vention",
+          "KÃ¶rperbewusstsein",
+          "steife Gelenke",
+          "FaszienlÃ¶sung",
+          "manuelle Therapie",
+          "FrÃ¼hwarnzeichen"
+        ],
         "content": [
-          "Oft warten wir, bis wir akute Schmerzen haben, bevor wir etwas unternehmen. Aber Schmerz ist selten die erste Stufe eines structuralen Problems, sondern der letzte Alarm. Lange bevor ein Muskel verkrampft oder sich ein Gelenk entzündet, signalisiert der Körper Einschränkungen durch subtile, strukturelle Steifheit.",
-          "Strukturelle Steifheit ist ein schleichender Verlust der Beweglichkeit in Gelenken und myofaszialen Geweben. Sie äußert sich zum Beispiel darin, dass es schwerfällt, den Kopf beim Autofahren für den Schulterblick ganz zu drehen, dass sich der untere Rücken beim Schuhebinden eng anfühlt oder dass man morgens nur schwer aus dem Bett kommt.",
-          "Diese Steifheit wird durch das Verkleben und Verdicken der Faszien verursacht — dem Bindegewebsnetz, das all unsere Muskeln und Organe umhüllt. Bei langem Sitzen oder einseitigen Bewegungen verlieren die Faszien ihre Elastizität, verkleben und schränken die Gleitfähigkeit der Muskeln und Gelenke ein.",
-          "Indem Sie lernen, auf dieses leise Flüstern der Steifheit zu hören, können Sie frühzeitig gegensteuern. Dynamisches Dehnen, ausreichende Flüssigkeitszufuhr und gezielte Körpertherapie lösen Faszienverklebungen, regen den Flüssigkeitsfluss an und halten Ihren Bewegungsapparat geschmeidig, noch bevor Schmerzen entstehen."
-        ]
+          "Oft warten wir, bis wir akute Schmerzen haben, bevor wir etwas unternehmen. Aber Schmerz ist selten die erste Stufe eines structuralen Problems, sondern der letzte Alarm. Lange bevor ein Muskel verkrampft oder sich ein Gelenk entzÃ¼ndet, signalisiert der KÃ¶rper EinschrÃ¤nkungen durch subtile, strukturelle Steifheit.",
+          "Strukturelle Steifheit ist ein schleichender Verlust der Beweglichkeit in Gelenken und myofaszialen Geweben. Sie Ã¤uÃŸert sich zum Beispiel darin, dass es schwerfÃ¤llt, den Kopf beim Autofahren fÃ¼r den Schulterblick ganz zu drehen, dass sich der untere RÃ¼cken beim Schuhebinden eng anfÃ¼hlt oder dass man morgens nur schwer aus dem Bett kommt.",
+          "Diese Steifheit wird durch das Verkleben und Verdicken der Faszien verursacht â€” dem Bindegewebsnetz, das all unsere Muskeln und Organe umhÃ¼llt. Bei langem Sitzen oder einseitigen Bewegungen verlieren die Faszien ihre ElastizitÃ¤t, verkleben und schrÃ¤nken die GleitfÃ¤higkeit der Muskeln und Gelenke ein.",
+          "Indem Sie lernen, auf dieses leise FlÃ¼stern der Steifheit zu hÃ¶ren, kÃ¶nnen Sie frÃ¼hzeitig gegensteuern. Dynamisches Dehnen, ausreichende FlÃ¼ssigkeitszufuhr und gezielte KÃ¶rpertherapie lÃ¶sen Faszienverklebungen, regen den FlÃ¼ssigkeitsfluss an und halten Ihren Bewegungsapparat geschmeidig, noch bevor Schmerzen entstehen."
+        ],
+        "author": "Michael Guralnik"
       },
       {
         "id": "home-in-body",
         "categoryId": "movement",
-        "title": "Was bedeutet es, sich in seinem Körper zu Hause zu fühlen?",
-        "date": "März 2025",
+        "title": "Was bedeutet es, sich in seinem KÃ¶rper zu Hause zu fÃ¼hlen?",
+        "date": "MÃ¤rz 2025",
         "readTime": "6 Min.",
-        "abstract": "Es ist mehr als nur Beweglichkeit oder Kraft. Es ist eine Qualität der Aufmerksamkeit — und diese lässt sich durch somatisches Lernen schulen.",
+        "abstract": "Es ist mehr als nur Beweglichkeit oder Kraft. Es ist eine QualitÃ¤t der Aufmerksamkeit â€” und diese lÃ¤sst sich durch somatisches Lernen schulen.",
         "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["Körperwahrnehmung", "Bewegungstherapie", "Feldenkrais Basel", "Achtsamkeit", "somatische Bewegung", "Propriozeption"],
+        "keywords": [
+          "KÃ¶rperwahrnehmung",
+          "Bewegungstherapie",
+          "Feldenkrais Basel",
+          "Achtsamkeit",
+          "somatische Bewegung",
+          "Propriozeption"
+        ],
         "content": [
-          "In unserem schnellen, bildschirmdominierten Alltag leben wir fast nur noch im Kopf. Wir behandeln unseren Körper wie ein Transportmittel, das unseren Verstand von einem Meeting zum nächsten bringt. Doch echte Gesundheit erfordert, dass wir dieses Gefährt nicht nur instand halten, sondern es ganz bewohnen. Es bedeutet, sich im eigenen Körper zu Hause zu fühlen.",
-          "Sich im Körper zu Hause zu fühlen, beschreibt einen Zustand somatischer Sicherheit und Achtsamkeit. Es ist die Fähigkeit, den eigenen inneren Zustand wertfrei wahrzunehmen: Zu spüren, dass man müde ist, bevor man erschöpft zusammenbricht, Anspannung zu bemerken, wenn sie entsteht, und sich koordiniert und leicht zu bewegen.",
-          "Wenn diese Verbindung fehlt, fühlen wir uns oft ungeschickt, dauerhaft angespannt oder werden von plötzlichen Schmerzen überrascht. Somatische Bewegungspraktiken wie die Feldenkrais-Methode und Connected Movement setzen genau hier an. Sie zwingen den Körper nicht in starre Posen, sondern leiten zu kleinen, spielerischen Bewegungen an, um die sensorische Wahrnehmung zu erweitern.",
-          "Durch diese Schulung der Aufmerksamkeit holen Sie sich Ihr körperliches Selbst zurück. Sie lernen, wie sich Ihre Rippen beim Atmen bewegen, wie sich Ihr Gewicht beim Gehen verlagert und wo Sie unnötig Kraft aufwenden. Diese Wahrnehmung ist das wahre Fundament für nachhaltiges Wohlbefinden und körperliche Freiheit."
-        ]
+          "In unserem schnellen, bildschirmdominierten Alltag leben wir fast nur noch im Kopf. Wir behandeln unseren KÃ¶rper wie ein Transportmittel, das unseren Verstand von einem Meeting zum nÃ¤chsten bringt. Doch echte Gesundheit erfordert, dass wir dieses GefÃ¤hrt nicht nur instand halten, sondern es ganz bewohnen. Es bedeutet, sich im eigenen KÃ¶rper zu Hause zu fÃ¼hlen.",
+          "Sich im KÃ¶rper zu Hause zu fÃ¼hlen, beschreibt einen Zustand somatischer Sicherheit und Achtsamkeit. Es ist die FÃ¤higkeit, den eigenen inneren Zustand wertfrei wahrzunehmen: Zu spÃ¼ren, dass man mÃ¼de ist, bevor man erschÃ¶pft zusammenbricht, Anspannung zu bemerken, wenn sie entsteht, und sich koordiniert und leicht zu bewegen.",
+          "Wenn diese Verbindung fehlt, fÃ¼hlen wir uns oft ungeschickt, dauerhaft angespannt oder werden von plÃ¶tzlichen Schmerzen Ã¼berrascht. Somatische Bewegungspraktiken wie die Feldenkrais-Methode und Connected Movement setzen genau hier an. Sie zwingen den KÃ¶rper nicht in starre Posen, sondern leiten zu kleinen, spielerischen Bewegungen an, um die sensorische Wahrnehmung zu erweitern.",
+          "Durch diese Schulung der Aufmerksamkeit holen Sie sich Ihr kÃ¶rperliches Selbst zurÃ¼ck. Sie lernen, wie sich Ihre Rippen beim Atmen bewegen, wie sich Ihr Gewicht beim Gehen verlagert und wo Sie unnÃ¶tig Kraft aufwenden. Diese Wahrnehmung ist das wahre Fundament fÃ¼r nachhaltiges Wohlbefinden und kÃ¶rperliche Freiheit."
+        ],
+        "author": "Michael Guralnik"
       },
       {
         "id": "qi-meridians-wisdom",
@@ -223,63 +328,95 @@
         "title": "Die alte Weisheit von Qi und Meridianen im modernen Leben",
         "date": "Februar 2025",
         "readTime": "7 Min.",
-        "abstract": "Wie traditionelle östliche Konzepte von Energiebahnen mit den myofaszialen Leitbahnen und Nervenbahnen der modernen manuellen Therapie übereinstimmen.",
+        "abstract": "Wie traditionelle Ã¶stliche Konzepte von Energiebahnen mit den myofaszialen Leitbahnen und Nervenbahnen der modernen manuellen Therapie Ã¼bereinstimmen.",
         "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["Traditionelle Chinesische Medizin", "Meridianmassage", "Shiatsu-Therapie", "Qigong-Fluss", "Energiebahnen", "Fasziennetzwerk"],
+        "keywords": [
+          "Traditionelle Chinesische Medizin",
+          "Meridianmassage",
+          "Shiatsu-Therapie",
+          "Qigong-Fluss",
+          "Energiebahnen",
+          "Fasziennetzwerk"
+        ],
         "content": [
-          "Die Traditionelle Chinesische Medizin (TCM) beschreibt den Körper seit jeher über den Fluss von Qi (Lebensenergie) durch ein System von Leitbahnen, den Meridianen. Lange Zeit wurde dies von der westlichen Wissenschaft als rein metaphorisch abgetan. Heute zeigen sich jedoch faszinierende Parallelen zwischen diesen alten Karten und der modernen Anatomie.",
-          "Betrachtet man die myofaszialen Meridiane — die kontinuierlichen Bindegewebsketten, die von den Zehen bis zum Kopf verlaufen —, stellt man fest, dass sie fast identisch mit den klassischen Akupunkturmeridianen sind. Faszien sind hochgradig leitfähig; sie transportieren Flüssigkeit, elektrische Signale und mechanische Kräfte. Was die TCM als Qi-Blockade bezeichnet, beschreibt die moderne Medizin als Faszienverklebung oder gestörte Mikrozirkulation.",
+          "Die Traditionelle Chinesische Medizin (TCM) beschreibt den KÃ¶rper seit jeher Ã¼ber den Fluss von Qi (Lebensenergie) durch ein System von Leitbahnen, den Meridianen. Lange Zeit wurde dies von der westlichen Wissenschaft als rein metaphorisch abgetan. Heute zeigen sich jedoch faszinierende Parallelen zwischen diesen alten Karten und der modernen Anatomie.",
+          "Betrachtet man die myofaszialen Meridiane â€” die kontinuierlichen Bindegewebsketten, die von den Zehen bis zum Kopf verlaufen â€”, stellt man fest, dass sie fast identisch mit den klassischen Akupunkturmeridianen sind. Faszien sind hochgradig leitfÃ¤hig; sie transportieren FlÃ¼ssigkeit, elektrische Signale und mechanische KrÃ¤fte. Was die TCM als Qi-Blockade bezeichnet, beschreibt die moderne Medizin als Faszienverklebung oder gestÃ¶rte Mikrozirkulation.",
           "Im Shiatsu und Tuina regt der Druck entlang dieser Meridiane das vegetative Nervensystem an, verbessert den Lymphfluss und rehydriert die Faszienbahnen. Statt isolierte Muskeln zu behandeln, sprechen diese Methoden ganze Spannungslinien an, was dem ganzheitlichen Ansatz der TCM entspricht.",
-          "Die Integration von Qigong oder Shiatsu in den Alltag hilft, den freien Fluss von Energie und Flüssigkeit in diesen myofaszialen Netzen zu erhalten. Indem wir östliche Weisheit und westliche Wissenschaft verbinden, erhalten wir ein tieferes Verständnis und wirksamere Werkzeuge für unsere Gesundheit."
-        ]
+          "Die Integration von Qigong oder Shiatsu in den Alltag hilft, den freien Fluss von Energie und FlÃ¼ssigkeit in diesen myofaszialen Netzen zu erhalten. Indem wir Ã¶stliche Weisheit und westliche Wissenschaft verbinden, erhalten wir ein tieferes VerstÃ¤ndnis und wirksamere Werkzeuge fÃ¼r unsere Gesundheit."
+        ],
+        "author": "Michael Guralnik"
       },
       {
         "id": "myofascial-nutrition",
         "categoryId": "nutrition",
-        "title": "Ernährung für die myofasziale Regeneration: Was man nach der Körperarbeit essen sollte",
+        "title": "ErnÃ¤hrung fÃ¼r die myofasziale Regeneration: Was man nach der KÃ¶rperarbeit essen sollte",
         "date": "Januar 2025",
         "readTime": "5 Min.",
-        "abstract": "Tiefenwirksame Körperarbeit setzt Stoffwechselprodukte frei und erzeugt Mikroveränderungen im Gewebe. So unterstützen Flüssigkeit und gezielte Nährstoffe die Heilung der Faszien.",
+        "abstract": "Tiefenwirksame KÃ¶rperarbeit setzt Stoffwechselprodukte frei und erzeugt MikroverÃ¤nderungen im Gewebe. So unterstÃ¼tzen FlÃ¼ssigkeit und gezielte NÃ¤hrstoffe die Heilung der Faszien.",
         "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["Faszienregeneration", "Ernährung nach Massage", "entzündungshemmende Lebensmittel", "Hydratationstipps", "Bindegewebe", "Kollagensynthese"],
+        "keywords": [
+          "Faszienregeneration",
+          "ErnÃ¤hrung nach Massage",
+          "entzÃ¼ndungshemmende Lebensmittel",
+          "Hydratationstipps",
+          "Bindegewebe",
+          "Kollagensynthese"
+        ],
         "content": [
-          "Was Sie nach einer Körpertherapie-Sitzung tun, ist genauso wichtig wie die Behandlung selbst. Eine tiefe Massage oder Tuina-Sitzung regt die Durchblutung an, löst Gewebeverklebungen und bringt Stoffwechselendprodukte in Bewegung. Um dieses Gewebe nun optimal zu reparieren, benötigt Ihr Körper die richtigen Bausteine.",
-          "An erster Stelle steht die Flüssigkeitszufuhr. Faszien bestehen hauptsächlich aus Wasser und Kollagen. Bei Verspannungen trocknen sie aus und verkleben. Die manuelle Behandlung wirkt wie das Auswringen eines Schwamms: Altes Gewebewasser wird herausgepresst, damit frische, nährstoffreiche Flüssigkeit nachströmen kann. Trinken Sie danach reichlich Wasser, um diesen Prozess zu unterstützen.",
-          "Zusätzlich benötigt Ihr Körper bestimmte Nährstoffe für die Kollagensynthese. Vitamin C ist hierfür ein essenzieller Kofaktor — Paprika, Zitrusfrüchte und grünes Blattgemüse sind ideal. Aminosäuren wie Prolin und Glycin, die in Knochenbrühe, Fisch und Hülsenfrüchten vorkommen, liefern die direkten Bausteine für die Reparatur des Bindegewebes.",
-          "Setzen Sie schließlich auf entzündungshemmende Nahrungsmittel, um eventuellen Muskelkater nach der Behandlung abzumildern. Gesunde Fette (Omega-3-Fettsäuren aus Walnüssen oder Wildfisch) sowie Gewürze wie Ingwer und Kurkuma regulieren die Entzündungsreaktion und helfen dem myofaszialen System, elastischer und stärker zu heilen."
-        ]
+          "Was Sie nach einer KÃ¶rpertherapie-Sitzung tun, ist genauso wichtig wie die Behandlung selbst. Eine tiefe Massage oder Tuina-Sitzung regt die Durchblutung an, lÃ¶st Gewebeverklebungen und bringt Stoffwechselendprodukte in Bewegung. Um dieses Gewebe nun optimal zu reparieren, benÃ¶tigt Ihr KÃ¶rper die richtigen Bausteine.",
+          "An erster Stelle steht die FlÃ¼ssigkeitszufuhr. Faszien bestehen hauptsÃ¤chlich aus Wasser und Kollagen. Bei Verspannungen trocknen sie aus und verkleben. Die manuelle Behandlung wirkt wie das Auswringen eines Schwamms: Altes Gewebewasser wird herausgepresst, damit frische, nÃ¤hrstoffreiche FlÃ¼ssigkeit nachstrÃ¶men kann. Trinken Sie danach reichlich Wasser, um diesen Prozess zu unterstÃ¼tzen.",
+          "ZusÃ¤tzlich benÃ¶tigt Ihr KÃ¶rper bestimmte NÃ¤hrstoffe fÃ¼r die Kollagensynthese. Vitamin C ist hierfÃ¼r ein essenzieller Kofaktor â€” Paprika, ZitrusfrÃ¼chte und grÃ¼nes BlattgemÃ¼se sind ideal. AminosÃ¤uren wie Prolin und Glycin, die in KnochenbrÃ¼he, Fisch und HÃ¼lsenfrÃ¼chten vorkommen, liefern die direkten Bausteine fÃ¼r die Reparatur des Bindegewebes.",
+          "Setzen Sie schlieÃŸlich auf entzÃ¼ndungshemmende Nahrungsmittel, um eventuellen Muskelkater nach der Behandlung abzumildern. Gesunde Fette (Omega-3-FettsÃ¤uren aus WalnÃ¼ssen oder Wildfisch) sowie GewÃ¼rze wie Ingwer und Kurkuma regulieren die EntzÃ¼ndungsreaktion und helfen dem myofaszialen System, elastischer und stÃ¤rker zu heilen."
+        ],
+        "author": "Michael Guralnik"
       },
       {
         "id": "breathwork-ritual",
         "categoryId": "healthy_living",
-        "title": "Ein tägliches Ritual des achtsamen Atmens und Innehaltens schaffen",
+        "title": "Ein tÃ¤gliches Ritual des achtsamen Atmens und Innehaltens schaffen",
         "date": "Dezember 2024",
         "readTime": "4 Min.",
-        "abstract": "Eine einfache 5-minütige tägliche Atemübung kann Ihr vegetatives Nervensystem regulieren und den Cortisolspiegel senken.",
+        "abstract": "Eine einfache 5-minÃ¼tige tÃ¤gliche AtemÃ¼bung kann Ihr vegetatives Nervensystem regulieren und den Cortisolspiegel senken.",
         "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["achtsames Atmen", "Vagusnerv-Stimulation", "Stressabbau", "tägliche Meditation", "Atemübungen Basel", "Parasympathikus"],
+        "keywords": [
+          "achtsames Atmen",
+          "Vagusnerv-Stimulation",
+          "Stressabbau",
+          "tÃ¤gliche Meditation",
+          "AtemÃ¼bungen Basel",
+          "Parasympathikus"
+        ],
         "content": [
-          "Wir atmen täglich etwa 20.000 Mal, schenken aber kaum einem einzigen Atemzug Beachtung. Meistens atmen wir flach in die Brust, was dem Nervensystem unterschwellig Stress signalisiert. Den Atem bewusst zu steuern, ist der schnellste Weg, den eigenen physiologischen Zustand zu verändern.",
-          "Die tiefe Zwerchfellatmung stimuliert den Vagusnerv, die Hauptleitung unseres Parasympathikus ('Ruhen und Verdauen'). Wenn Sie den Atem verlangsamen und tief in den Bauch lenken, signalisieren Sie dem Gehirn sofortige Sicherheit. Der Puls sinkt, der Blutdruck reguliert sich und die Ausschüttung von Stresshormonen wird gebremst.",
-          "Für ein tägliches Atemritual müssen Sie nicht stundenlang meditieren. Schon fünf Minuten am Tag haben eine spürbare Wirkung. Setzen Sie sich aufrecht hin, legen Sie eine Hand auf die Brust und die andere auf den Bauch. Atmen Sie vier Sekunden lang durch die Nase ein, sodass sich der Bauch hebt, und atmen Sie sechs Sekunden lang langsam durch den Mund aus.",
-          "Dieses bewusste Innehalten wirkt wie ein Reset-Knopf für Körper und Geist. Regelmäßig geübt, stärkt es Ihre somatische Widerstandskraft, hilft Ihnen, gelassener auf Alltagsstressoren zu reagieren, und verhindert, dass sich Stress als chronische Anspannung im Körper festsetzt."
-        ]
+          "Wir atmen tÃ¤glich etwa 20.000 Mal, schenken aber kaum einem einzigen Atemzug Beachtung. Meistens atmen wir flach in die Brust, was dem Nervensystem unterschwellig Stress signalisiert. Den Atem bewusst zu steuern, ist der schnellste Weg, den eigenen physiologischen Zustand zu verÃ¤ndern.",
+          "Die tiefe Zwerchfellatmung stimuliert den Vagusnerv, die Hauptleitung unseres Parasympathikus ('Ruhen und Verdauen'). Wenn Sie den Atem verlangsamen und tief in den Bauch lenken, signalisieren Sie dem Gehirn sofortige Sicherheit. Der Puls sinkt, der Blutdruck reguliert sich und die AusschÃ¼ttung von Stresshormonen wird gebremst.",
+          "FÃ¼r ein tÃ¤gliches Atemritual mÃ¼ssen Sie nicht stundenlang meditieren. Schon fÃ¼nf Minuten am Tag haben eine spÃ¼rbare Wirkung. Setzen Sie sich aufrecht hin, legen Sie eine Hand auf die Brust und die andere auf den Bauch. Atmen Sie vier Sekunden lang durch die Nase ein, sodass sich der Bauch hebt, und atmen Sie sechs Sekunden lang langsam durch den Mund aus.",
+          "Dieses bewusste Innehalten wirkt wie ein Reset-Knopf fÃ¼r KÃ¶rper und Geist. RegelmÃ¤ÃŸig geÃ¼bt, stÃ¤rkt es Ihre somatische Widerstandskraft, hilft Ihnen, gelassener auf Alltagsstressoren zu reagieren, und verhindert, dass sich Stress als chronische Anspannung im KÃ¶rper festsetzt."
+        ],
+        "author": "Michael Guralnik"
       },
       {
         "id": "shiatsu-vs-classic",
-        "categoryId": "treatment_methods",
+        "categoryId": "treatment_techniques",
         "title": "Den Unterschied zwischen Shiatsu und klassischer Massage verstehen",
         "date": "November 2024",
         "readTime": "6 Min.",
-        "abstract": "Die eine Behandlung nutzt Öl auf der nackten Haut, die andere ist eine Druckpunkttherapie am bekleideten Körper. Finden Sie heraus, was am besten zu Ihnen passt.",
+        "abstract": "Die eine Behandlung nutzt Ã–l auf der nackten Haut, die andere ist eine Druckpunkttherapie am bekleideten KÃ¶rper. Finden Sie heraus, was am besten zu Ihnen passt.",
         "image": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=900&q=80&auto=format&fit=crop",
-        "keywords": ["Shiatsu vs. Massage", "Akupressur-Therapie", "ölfreie Massage", "Körperausrichtung", "Massage-Auswahl", "TCM Körperarbeit"],
+        "keywords": [
+          "Shiatsu vs. Massage",
+          "Akupressur-Therapie",
+          "Ã¶lfreie Massage",
+          "KÃ¶rperausrichtung",
+          "Massage-Auswahl",
+          "TCM KÃ¶rperarbeit"
+        ],
         "content": [
-          "Bei der Suche nach der passenden Körpertherapie verliert man bei den vielen Begriffen schnell den Überblick. Zwei der beliebtesten Methoden sind die Klassische Massage und Shiatsu. Beide lindern Verspannungen und fördern das Wohlbefinden, basieren jedoch auf völlig unterschiedlichen Ansätzen.",
-          "Die Klassische Massage (auch schwedische Massage genannt) gründet auf der westlichen Anatomie und Physiologie. Sie wird mit Öl direkt auf der Haut durchgeführt. Mit Streichungen, Knetungen und Friktionen arbeitet der Therapeut direkt an den Muskelfasern, um die Durchblutung zu fördern und lokale Verspannungen zu lösen. Sie ist ideal bei Muskelkater, Verspannungen und für allgemeine Entspannung.",
-          "Shiatsu hingegen ist eine traditionelle japanische Therapie, die auf der Chinesischen Medizin basiert. Sie wird ohne Öl und am bekleideten Körper auf einer Futonmatte am Boden praktiziert. Statt Muskeln zu kneten, übt der Therapeut mit Fingern, Daumen, Ellbogen und Handflächen tiefen, konstanten Druck auf Akupunkturpunkte und Meridiane aus. Ergänzt wird dies durch Dehnungen und Gelenkmobilisationen.",
-          "Die Wahl hängt ganz von Ihren Bedürfnissen ab: Wenn Sie direkten Hautkontakt, fließende Knetbewegungen und tiefe Entspannung suchen, ist die Klassische Massage ideal. Wenn Sie bekleidet bleiben möchten, eine tiefere Ausrichtung von Körper und Nervensystem suchen und statischen Druck sowie Dehnungen schätzen, ist Shiatsu die perfekte Wahl."
-        ]
+          "Bei der Suche nach der passenden KÃ¶rpertherapie verliert man bei den vielen Begriffen schnell den Ãœberblick. Zwei der beliebtesten Methoden sind die Klassische Massage und Shiatsu. Beide lindern Verspannungen und fÃ¶rdern das Wohlbefinden, basieren jedoch auf vÃ¶llig unterschiedlichen AnsÃ¤tzen.",
+          "Die Klassische Massage (auch schwedische Massage genannt) grÃ¼ndet auf der westlichen Anatomie und Physiologie. Sie wird mit Ã–l direkt auf der Haut durchgefÃ¼hrt. Mit Streichungen, Knetungen und Friktionen arbeitet der Therapeut direkt an den Muskelfasern, um die Durchblutung zu fÃ¶rdern und lokale Verspannungen zu lÃ¶sen. Sie ist ideal bei Muskelkater, Verspannungen und fÃ¼r allgemeine Entspannung.",
+          "Shiatsu hingegen ist eine traditionelle japanische Therapie, die auf der Chinesischen Medizin basiert. Sie wird ohne Ã–l und am bekleideten KÃ¶rper auf einer Futonmatte am Boden praktiziert. Statt Muskeln zu kneten, Ã¼bt der Therapeut mit Fingern, Daumen, Ellbogen und HandflÃ¤chen tiefen, konstanten Druck auf Akupunkturpunkte und Meridiane aus. ErgÃ¤nzt wird dies durch Dehnungen und Gelenkmobilisationen.",
+          "Die Wahl hÃ¤ngt ganz von Ihren BedÃ¼rfnissen ab: Wenn Sie direkten Hautkontakt, flieÃŸende Knetbewegungen und tiefe Entspannung suchen, ist die Klassische Massage ideal. Wenn Sie bekleidet bleiben mÃ¶chten, eine tiefere Ausrichtung von KÃ¶rper und Nervensystem suchen und statischen Druck sowie Dehnungen schÃ¤tzen, ist Shiatsu die perfekte Wahl."
+        ],
+        "author": "Michael Guralnik"
       }
     ]
   }
