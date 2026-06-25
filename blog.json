@@ -1,643 +1,701 @@
 ﻿{
-    "en":  {
-               "categories":  {
-                                  "all":  "All",
-                                  "health":  "Health topics",
-                                  "healthy_living":  "Healthy living",
-                                  "nutrition":  "Nutrition",
-                                  "movement":  "Movement",
-                                  "treatment_techniques":  "treatment techniques",
-                                  "oriental_medicine":  "oriental medicine",
-                                  "new_in_clinic":  "new in the clinic"
-                              },
-               "articles":  [
-                                {
-                                    "id":  "shoulders-stress",
-                                    "categoryId":  "health",
-                                    "title":  "The Ease Behind the Effort",
-                                    "date":  "June 2026",
-                                    "readTime":  "5 min",
-                                    "abstract":  "Why moving well — in sport and in everyday life — depends as much on what you let go of as on what you put in.",
-                                    "image":  "assets/cover-shoulders-stress.jpg",
-                                    "keywords":  [
-                                                     "muscle relaxation · athletic performance · antagonist muscles · recovery and circulation · co-contraction · movement efficiency · motor precision · stress and tension"
-                                                 ],
-                                    "content":  [
-                                                    "When we think about strength, we usually picture effort — a muscle working hard, straining against something heavy. But here\u0027s the thing: no muscle ever works alone. Every movement you make, even the small ones, is a team effort. Some muscles pull, some gently give way, and others quietly hold a joint steady so the whole thing ends up where you want it. Lifting your coffee, reaching for a door, turning to talk to a friend — each one is a little piece of teamwork happening without you ever having to think about it.",
-                                                    "Here\u0027s a detail that surprises people: a muscle can really only do two things. It can contract, or it can relax. It pulls, but it can\u0027t push, and it can\u0027t lengthen itself on its own. So whenever one muscle shortens to bend a joint, the muscle on the other side has to let go and lengthen to make room. Your biceps can only lift your forearm if your triceps relaxes and allows it. That means the quality of a movement isn\u0027t only about how strongly the working muscle pulls — it\u0027s just as much about how easily its partner can release. A muscle that won\u0027t quite let go is like driving with the handbrake half on: you still get where you\u0027re going, but it costs you more, and it never feels quite smooth.",
-                                                    "That two-muscle picture is a handy way to grasp the idea, but it\u0027s really a simplified version. In real life, many muscles join in on even the simplest movement — and that\u0027s exactly what gives us such a wonderful range of motion and such fine control. It\u0027s a beautiful system when it\u0027s relaxed and free to do its job.",
-                                                    "Stress, though, throws a wrench into it. When we\u0027re under pressure — a deadline, a heavy bag, or just a hard day — the body tends to tense up and brace, switching on muscles that aren\u0027t actually helping. We clench the jaw, hunch the shoulders, grip with the hands. None of that extra tension gets us anywhere; it just muddies the signal, wastes energy, and makes our movements clumsier. The more wound up we are, the stiffer and less precise we become — we even heat up a little — and everything starts to feel like more work than it should. It\u0027s why top athletes and dancers train themselves to stay loose under pressure: they know that tension is the enemy of skill.",
-                                                    "And here\u0027s the part that matters most — because you really don\u0027t have to be an athlete for any of this to apply to you. That same tension quietly builds up in all of us, day after day: from sitting at a desk, from carrying worry in our shoulders, from simply getting through a busy week. Left alone, it doesn\u0027t just melt away. It keeps stacking up, and little by little it makes everything you do feel heavier and less easy — your posture, your sleep, the way you reach and bend and walk.",
-                                                    "The good news is that letting go is a skill, and it\u0027s one you can absolutely build. Gentle movement, stretching, and hands-on work like massage all teach your body what genuine release actually feels like — and gradually help it find that ease on its own. You don\u0027t need to be training for anything. The very same things that help an athlete move with more freedom and precision will help you move through an ordinary day with a lot more ease.",
-                                                    "There\u0027s a bonus, too. Soft, relaxed muscle lets blood and nutrients flow through it freely, while tense muscle squeezes that flow down. So the better your muscles can release, the better they\u0027re nourished — and the quicker your body bounces back, whether from a workout or a long day on your feet.",
-                                                    "So if there\u0027s one thing to take away, it\u0027s this: moving well — in sport, or simply in life — isn\u0027t only about working harder. A surprising amount of it comes down to learning to let go. And that\u0027s something every one of us can get better at."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "categoryIds":  [
-                                                        "health",
-                                                        "healthy_living",
-                                                        "treatment_techniques"
-                                                    ]
-                                },
-                                {
-                                    "id":  "new-city-relocation",
-                                    "categoryId":  "healthy_living",
-                                    "title":  "Moving to a new city and what it does to your body",
-                                    "date":  "April 2025",
-                                    "readTime":  "4 min",
-                                    "abstract":  "Relocation stress is real â€” and it shows up physically in ways most people don\u0027t expect. Let\u0027s look at what\u0027s actually happening when you move, and why your shoulders are up at your ears.",
-                                    "image":  "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "relocation stress",
-                                                     "moving Basel",
-                                                     "expat wellness",
-                                                     "body posture",
-                                                     "massage therapist",
-                                                     "grounding"
-                                                 ],
-                                    "content":  [
-                                                    "Moving to a new city is widely ranked as one of life\u0027s most intense stressors. While we focus on the logistics â€” finding an apartment in Basel, registering at the town hall, setting up bank accounts â€” our bodies are quietly bearing the brunt of the transition. This is relocation stress, and it is a physical reality.",
-                                                    "When you enter a new environment, every sight, sound, and spatial layout is unfamiliar. Your nervous system operates on high alert to process this influx of new data. Without realizing it, you might find yourself walking with slightly more tension, sleeping less deeply, or holding your breath as you navigate public transit.",
-                                                    "Moreover, the physical acts of packing, lifting heavy boxes, and sleeping on temporary mattresses create structural strain. Combined with emotional fatigue and the absence of your usual social support networks, this physical strain easily manifests as lower back pain, tension headaches, or digestive issues.",
-                                                    "To settle into a new city, you must first settle into your own body. Establishing a grounding routine is crucial. Explore local parks, set regular sleep schedules, and consider scheduling a manual bodywork session. Dedicated bodywork acts as a physical anchor, calming the overstimulated nervous system and helping you feel at home in your body first."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "structural-stiffness",
-                                    "categoryId":  "health",
-                                    "title":  "How to notice structural stiffness before it becomes pain",
-                                    "date":  "May 2025",
-                                    "readTime":  "5 min",
-                                    "abstract":  "The body is constantly whispering before it shouts. Learning to read the subtle changes in your posture can save you weeks of recovery.",
-                                    "image":  "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "back pain prevention",
-                                                     "body awareness",
-                                                     "stiff joints",
-                                                     "fascia release",
-                                                     "manual therapy",
-                                                     "early signs"
-                                                 ],
-                                    "content":  [
-                                                    "We often wait until we are in acute pain before we seek help. But pain is rarely the first stage of a structural problem; it is the final alarm. Long before a muscle spasms or a joint inflames, the body signals restriction through subtle, structural stiffness.",
-                                                    "Structural stiffness is a gradual loss of mobility in your joints and myofascial tissues. It might show up as difficulty turning your head fully to check your blind spot while driving, a slight tightness in your lower back when tying your shoes, or feeling unusually heavy and stiff when getting out of bed in the morning.",
-                                                    "This stiffness is caused by the dehydration and thickening of the fascia â€” the web of connective tissue that wraps around all your muscles and organs. When you sit for long hours or repeat the same movements, the fascia loses its elasticity and begins to stick together, binding muscles and restricting joint movement.",
-                                                    "By learning to listen to these subtle whispers of stiffness, you can intervene early. Dynamic stretching, staying well-hydated, and receiving targeted bodywork treatments can break up fascial adhesions, restore fluid flow, and keep your structural system moving smoothly before pain ever sets in."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "home-in-body",
-                                    "categoryId":  "movement",
-                                    "title":  "What does it mean to feel at home in your body?",
-                                    "date":  "March 2025",
-                                    "readTime":  "6 min",
-                                    "abstract":  "It\u0027s more than flexibility or strength. It\u0027s a quality of attention â€” and it can be learned through somatic awareness.",
-                                    "image":  "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "body awareness",
-                                                     "connected movement",
-                                                     "Feldenkrais Basel",
-                                                     "mindfulness",
-                                                     "somatic movement",
-                                                     "proprioception"
-                                                 ],
-                                    "content":  [
-                                                    "In our fast-paced, screen-dominated lives, we tend to live almost entirely in our heads. We treat our bodies like vehicles to transport our minds from one meeting to the next. But truly feeling healthy requires more than just maintaining the vehicle; it requires occupying it fully. It means feeling at home in your body.",
-                                                    "Feeling at home in your body is a state of somatic comfort and awareness. It is the ability to perceive your internal state without judgment. It is knowing when you are tired before you collapse, recognizing tension as it starts rather than when it hurts, and moving with a sense of ease and coordination.",
-                                                    "When we lack this connection, we experience a sense of somatic alienation. We feel clumsy, perpetually tense, or surprised by sudden physical pain. Somatic movement practices, such as the Feldenkrais method and Connected Movement, focus on rebuilding this connection. They do not force the body into rigid postures; instead, they guide you through small, curious movements to expand your sensory awareness.",
-                                                    "By cultivating this quality of attention, you start to reclaim your physical self. You learn how your ribs move as you breathe, how your weight shifts as you walk, and where you hold unnecessary effort. This sensory awareness is the true foundation of lasting wellness and physical freedom."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "qi-meridians-wisdom",
-                                    "categoryId":  "oriental_medicine",
-                                    "title":  "The ancient wisdom of Qi and meridians in modern life",
-                                    "date":  "February 2025",
-                                    "readTime":  "7 min",
-                                    "abstract":  "How traditional eastern models of energy lines correspond to myofascial networks and nervous system pathways in modern manual therapy.",
-                                    "image":  "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "Traditional Chinese Medicine",
-                                                     "meridian massage",
-                                                     "Shiatsu therapy",
-                                                     "Qigong flow",
-                                                     "energy pathways",
-                                                     "fascia networks"
-                                                 ],
-                                    "content":  [
-                                                    "Traditional Chinese Medicine (TCM) has long described the body in terms of Qi (vital energy) flowing through a network of pathways called meridians. For centuries, this was viewed by Western science as a purely metaphorical system. Today, however, exciting parallels are emerging between these ancient maps and modern anatomy.",
-                                                    "When we look at myofascial meridian lines â€” the continuous chains of connective tissue that run from our toes to our head â€” we find they trace almost identical pathways to the classical acupuncture meridians. Fascia is highly conductive, transporting fluid, electrical signals, and mechanical force throughout the body. What ancient practitioners called Qi blockage, modern therapists recognize as fascial restriction or poor fluid circulation.",
-                                                    "In Shiatsu and Tuina, applying pressure along these meridians stimulates the autonomic nervous system, improves lymphatic flow, and hydrates the fascial pathways. Rather than working on isolated muscles, these modalities address the whole line of tension, matching the holistic view of Chinese medicine.",
-                                                    "Integrating Qigong or Shiatsu into your wellness routine helps maintain the smooth flow of energy and fluid through these myofascial networks. By bridging Eastern wisdom and Western science, we gain a deeper, more complete toolkit for resolving chronic tension and cultivating vital health."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "myofascial-nutrition",
-                                    "categoryId":  "nutrition",
-                                    "title":  "Nutrition for myofascial recovery: What to eat after bodywork",
-                                    "date":  "January 2025",
-                                    "readTime":  "5 min",
-                                    "abstract":  "Deep tissue work releases metabolites and creates micro-changes in tissue. Here is how hydration and specific nutrients support fascia healing.",
-                                    "image":  "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "fascia recovery",
-                                                     "post-massage nutrition",
-                                                     "anti-inflammatory foods",
-                                                     "hydration tips",
-                                                     "connective tissue",
-                                                     "collagen synthesis"
-                                                 ],
-                                    "content":  [
-                                                    "What you do after a bodywork session is just as important as the treatment itself. A deep therapeutic massage or Tuina session stimulates blood flow, breaks down tissue restrictions, and releases metabolic waste. To rebuild and repair this tissue, your body requires the right nutritional building blocks.",
-                                                    "First and foremost is hydration. Fascia is primarily composed of water and collagen. When fascia gets restricted, it becomes dehydrated and sticky. Bodywork acts like squeezing a sponge, forcing stale fluid out so that clean, nutrient-rich fluid can rush back in. Drinking plenty of water after your session is essential to rehydrate these tissues and support their elasticity.",
-                                                    "In addition to water, your body needs specific nutrients to support collagen synthesis and repair. Vitamin C is a critical cofactor in collagen production â€” foods like bell peppers, citrus fruits, and leafy greens are excellent choices. Amino acids, particularly proline and glycine found in bone broth, fish, and legumes, provide the direct building blocks for connective tissue repair.",
-                                                    "Finally, focus on anti-inflammatory nutrition to manage post-treatment soreness. Healthy fats like omega-3s from walnuts or wild fish, along with spices like ginger and turmeric, help soothe the inflammatory response, allowing your myofascial system to heal stronger and more flexible."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "breathwork-ritual",
-                                    "categoryId":  "healthy_living",
-                                    "title":  "Creating a daily ritual of mindful breathing and pause",
-                                    "date":  "December 2024",
-                                    "readTime":  "4 min",
-                                    "abstract":  "A simple 5-minute daily breathing practice can regulate your autonomic nervous system and lower cortisol levels.",
-                                    "image":  "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "mindful breathing",
-                                                     "vagus nerve stimulation",
-                                                     "stress relief",
-                                                     "daily meditation",
-                                                     "breathwork Basel",
-                                                     "parasympathetic"
-                                                 ],
-                                    "content":  [
-                                                    "We take around 20,000 breaths every single day, yet we rarely pay attention to a single one. Most of the time, we breathe shallowly into our upper chest, a pattern that signals mild stress to our nervous system. Taking control of your breath is the fastest way to change your physiological state.",
-                                                    "Mindful diaphragmatic breathing stimulates the vagus nerve, which acts as the main highway for your parasympathetic (\u0027rest and digest\u0027) nervous system. By slowing down your breath and breathing deeply into your abdomen, you send an immediate signal to your brain that you are safe. This lowers your heart rate, reduces blood pressure, and decreases cortisol levels.",
-                                                    "Creating a daily breathing ritual does not require hours of meditation. Just five minutes a day can yield profound benefits. Find a comfortable seat, place one hand on your chest and one on your belly. Inhale through your nose for a count of four, letting your belly expand, and exhale slowly through your mouth for a count of six.",
-                                                    "This simple pause acts as a reset button for your mind and body. Over time, this practice builds somatic resilience, helping you navigate daily stressors with greater calm and preventing stress from accumulating as physical tension in your body."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "shiatsu-vs-classic",
-                                    "categoryId":  "treatment_techniques",
-                                    "title":  "Understanding the difference between Shiatsu and Classic Massage",
-                                    "date":  "June 2026",
-                                    "readTime":  "6 min",
-                                    "abstract":  "One uses oil and works on naked skin; the other is fully clothed pressure-point therapy. Discover which fits your current physical needs.",
-                                    "image":  "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "Shiatsu vs massage",
-                                                     "acupressure therapy",
-                                                     "oil-free massage",
-                                                     "body alignment",
-                                                     "massage choices",
-                                                     "TCM bodywork"
-                                                 ],
-                                    "content":  [
-                                                    "When looking to book a bodywork session, the options can be confusing. Two of the most popular therapies are Classic Massage and Shiatsu. While both aim to relieve tension and promote well-being, they come from entirely different lineages and offer very different client experiences.",
-                                                    "Classic Massage (often called Swedish massage) is rooted in Western anatomy and physiology. It is performed directly on the skin using oils or creams. The therapist uses strokes like effleurage (sliding) and petrissage (kneading) to work directly on muscle fibers, increasing circulation and easing physical tension. It is highly effective for localized muscle stiffness and general relaxation.",
-                                                    "Shiatsu, on the other hand, is a traditional Japanese therapy rooted in Chinese Medicine. It is performed fully clothed on a futon mat on the floor, without any oils. Instead of kneading muscles, the practitioner uses fingers, thumbs, elbows, and palms to apply precise pressure along meridian lines. They also guide the client through gentle stretches and joint rotations to restore energy flow and balance the nervous system.",
-                                                    "Choosing between the two depends on your goals and preferences. If you prefer direct skin contact, rhythmic muscular work, and deep relaxation, Classic Massage is ideal. If you prefer to stay clothed, are interested in structural alignment and energy balance, and enjoy deep, static pressure and stretching, Shiatsu may be the perfect fit."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "what-does-my-sugar-intake-have-to-do-with-my-pain",
-                                    "categoryId":  "health",
-                                    "categoryIds":  [
-                                                        "health",
-                                                        "nutrition",
-                                                        "oriental_medicine"
-                                                    ],
-                                    "title":  "What does my sugar intake have to do with my pain?",
-                                    "date":  "June 2026",
-                                    "readTime":  "5 min",
-                                    "author":  "Michael Guralnik",
-                                    "abstract":  "The efect sugar has on our joints from a Chinese Medicine (TCM) perspective ",
-                                    "image":  "assets/cover-what-does-my-sugar-intake-have-to-do-with-my-pain.jpg",
-                                    "keywords":  [
-                                                     "Sugar",
-                                                     "inflamation",
-                                                     "TCM",
-                                                     "Dampness",
-                                                     "Advanced glycation end products"
-                                                 ],
-                                    "content":  [
-                                                    "Chinese medicine has been claiming for thousands of years that one of the most common causes for joint pains we have is “dampness” which is caused by inadequate nutrition that causes the accumulation of undesired “liquids” in the joints.",
-                                                    "Modern practitioners of Chinese medicine do not necessarily expect to find actual liquids in these joints, but rather a stiffness, reduced Range of motion and pressure pain as if these liquids are present in these joints. These pathological (unhealthy) liquids can either be cold, in which case the joint will inflict sharp, stabbing pain, or hot, in which case the joint will be hot and red.",
-                                                    "Based on the distinction between hot and cold dampness, Chinese medicine devised techniques using herbs, acupuncture and manual therapy to deal with these types of “dampness”.",
-                                                    "As farfetched as it sounds, western science now seems to concur with this assumption. Western medicine preferred referring to the syndrome that causes impairment of joints as “rheumatism”, and regards it as an inflammation that is not caused by a pathogen. It is often referred to as either a sterile inflammation or autoimmune disease, which is again a disease that is formed within the body with no external cause.",
-                                                    "For years we see an increase in the popularity of autoimmune diseases, allergies and rheumatic occurrences. Researchers started looking for environmental factors that may explain this increase in these occurrences.",
-                                                    "The culprits that were found so far are processed foods and sugar. Consistent research results indicate the link between added sugar and higher inflammatory markers. Another research stated that drinking sugary drinks can spike inflammations, and their affect may linger over a considerable period of time.",
-                                                    "More dramatic experiments show the connection between consumption of excessive amount of sugar will dramatically increase the production of AGE (Advanced glycation end products) which lead to systemic increase in oxidative stress and inflammation factors.",
-                                                    "Examples of sterile inflammations we frequently see in the clinic occur in the shoulders, little joint arthritic pain (fingers, toes), ankles (particularly plantar fasciitis) and lower back pain cases.",
-                                                    "Often times a drastic reduction in the consumption of sugar can by itself resolve the problem!"
-                                                ]
-                                },
-                                {
-                                    "id":  "reflux-and-heartburn-relief",
-                                    "categoryId":  "health",
-                                    "categoryIds":  [
-                                                        "health",
-                                                        "healthy_living",
-                                                        "nutrition",
-                                                        "movement"
-                                                    ],
-                                    "title":  "Reflux and Heartburn Relief",
-                                    "date":  "June 2026",
-                                    "readTime":  "5 min",
-                                    "author":  "Michael Guralnik",
-                                    "abstract":  "Reflux and heartburn explained for everyday life — the high-acid and low-acid pictures, the stress and vagus nerve connection, plus practical nutrition, supplement, and breathing tips for lasting relief.",
-                                    "image":  "assets/cover-reflux-and-heartburn-relief.jpg",
-                                    "keywords":  [
-                                                     "reflux",
-                                                     "heartburn",
-                                                     "GERD",
-                                                     "stomach acid",
-                                                     "vagus nerve",
-                                                     "diaphragmatic breathing",
-                                                     "stress and digestion",
-                                                     "lower oesophageal sphincter"
-                                                 ],
-                                    "content":  [
-                                                    "That warm, rising burn behind the breastbone after a good meal. The sour taste at the back of the throat when you lie down. A cough that won\u0027t quite explain itself. Reflux is one of the most common complaints people quietly live with — often for years — assuming it\u0027s simply part of how their body works. Sometimes it is something to accept, but very often there\u0027s room to feel considerably better.",
-                                                    "\u003ch3\u003eWhat\u0027s actually happening\u003c/h3\u003e",
-                                                    "Between your oesophagus (the tube that carries food down) and your stomach sits a ring of muscle called the lower oesophageal sphincter. Its job is simple: open to let food in, then close to keep stomach contents where they belong. Reflux happens when that ring relaxes at the wrong moment, allowing acidic stomach contents to travel back upward. The stomach lining is built to handle acid; the oesophagus is not. That mismatch is what you feel as heartburn.",
-                                                    "Occasional reflux is normal and harmless. When it becomes frequent or persistent, it\u0027s usually called GERD (gastro-oesophageal reflux disease) — and that\u0027s worth paying attention to.",
-                                                    "\u003ch3\u003eWhy it happens\u003c/h3\u003e",
-                                                    "The causes are rarely single. Common contributors include eating large or rushed meals, lying down too soon after eating, carrying extra weight around the middle, certain foods (fatty or fried meals, coffee, alcohol, chocolate, mint, very spicy dishes), smoking, some medications, and a hiatal hernia, where part of the stomach pushes up through the diaphragm. And — more on this shortly — stress plays a larger role than most people realise.",
-                                                    "\u003ch3\u003eTwo faces of the same fire\u003c/h3\u003e",
-                                                    "Here\u0027s a distinction that surprises many people. Heartburn feels like too much acid, and for many that\u0027s exactly what it is. But not always.",
-                                                    "In the high-acidity picture, the stomach produces plenty of acid, and the problem is mechanical: the sphincter isn\u0027t holding, so acid escapes upward. This is the version most antacids and acid-blocking medications are designed for, and for many people they bring real relief.",
-                                                    "In the low-acidity picture, the issue is too little stomach acid. The thinking goes that without enough acid, food sits and ferments rather than moving on, building pressure that pushes contents upward, while the sphincter doesn\u0027t get the strong acidic signal it needs to close firmly. People in this group sometimes notice bloating, fullness, and a sense that meals \"just sit there.\"",
-                                                    "Why does the distinction matter? Because the two can call for opposite approaches, and what soothes one may aggravate the other. The honest answer is that telling them apart isn\u0027t always straightforward, and self-diagnosis has limits. If reflux is a regular part of your life, this is genuinely worth exploring with a doctor or a qualified practitioner rather than guessing.",
-                                                    "\u003ch3\u003eThe stress connection — and your vagus nerve\u003c/h3\u003e",
-                                                    "If you\u0027ve ever noticed your stomach tightening during a stressful week, you\u0027ve already felt the link. Digestion runs largely on the parasympathetic nervous system — your \"rest and digest\" mode. Stress flips you into \"fight or flight,\" and digestion is one of the first things the body deprioritises when it thinks you\u0027re in danger.",
-                                                    "At the centre of this sits the vagus nerve, the long wandering nerve that connects brain and gut. It helps set the tone of the oesophageal sphincter, governs the rhythm of stomach movement, and influences acid secretion. When vagal activity is healthy and steady, the digestive system tends to work smoothly. When you\u0027re chronically stressed, that signalling becomes erratic — motility slows, the sphincter behaves less reliably, and reflux finds an opening.",
-                                                    "This is encouraging news, in a way: it means reflux isn\u0027t only about what you eat, but about the state you\u0027re in when you eat it. And the state of your nervous system is something you can influence.",
-                                                    "\u003ch3\u003eEating habits that help\u003c/h3\u003e",
-                                                    "Small changes to how you eat often matter as much as what\u0027s on the plate:",
-                                                    "Eat smaller meals. A full stomach puts pressure on the sphincter. Smaller, more frequent meals ask less of it.",
-                                                    "Don\u0027t eat right before bed. Lying down removes gravity\u0027s help. Aim to finish eating around three hours before lying down, so your stomach has time to empty.",
-                                                    "Slow down. Eating quickly means swallowing air and under-chewing, which adds pressure and makes digestion harder. A few unhurried minutes before the first bite — even three slow breaths — shifts you toward that \"rest and digest\" state.\u003cbr\u003e\u003cbr\u003eCreate joy around your dining table. A meal that is tasty, beautifully served and eaten with no rush reduces the stress, slows down the process, and enables a mindful environment around food and eating. What could be wrong with that?\u0026nbsp;\u003cbr\u003eAvoid processed food. Food coming of a shelf in a package often contains ingredients you never expected to be there, and many of the ingredients added to it may not agree with your system. In some industrialized products, these added substances can be downright unhealthy.",
-                                                    "Notice your triggers. Coffee, alcohol, large fatty meals, and very spicy or acidic foods are common culprits, but everyone\u0027s list is personal. A short food diary often reveals patterns faster than guesswork.",
-                                                    "Raise the head of the bed slightly if night-time reflux is an issue — a wedge under the mattress works better than stacking pillows.",
-                                                    "\u003ch3\u003eA word on supplements\u003c/h3\u003e",
-                                                    "These can support comfort, but they\u0027re not a substitute for sorting out the underlying picture — and a few interact with medications or conditions, so it\u0027s worth a conversation with a healthcare provider first, especially if you\u0027re already on acid-reducing medication.",
-                                                    "i\u003cu style=\"background-color: transparent;\"\u003eDGL (deglycyrrhizinated licorice) \u003c/u\u003e\u003cspan style=\"background-color: transparent;\"\u003es a traditional soothing remedy for the digestive lining, with the blood-pressure-raising compound removed.\u003c/span\u003e",
-                                                    "\u003cu\u003eSlippery elm and marshmallow root\u003c/u\u003e form a gentle, protective coating that many find calming for an irritated throat and oesophagus.",
-                                                    "\u003cu\u003eMelatonin\u003c/u\u003e is best known for sleep, but there\u0027s interesting evidence it also helps protect the oesophageal lining.",
-                                                    "\u003cu\u003eMagnesium\u003c/u\u003e supports muscle function and relaxation, and is gentle for most people.",
-                                                    "\u003ch3\u003eBreathing your way to a calmer gut\u003c/h3\u003e",
-                                                    "This is where something genuinely simple meets something genuinely effective. The diaphragm — your main breathing muscle — also wraps around the oesophagus and acts as a natural support to that sphincter. Slow, deep belly breathing does two things at once: it strengthens that diaphragmatic support, and it stimulates the vagus nerve, nudging you into digestive mode.",
-                                                    "A practice to try, ideally before meals and again before bed:",
-                                                    "Sit or lie comfortably with one hand on your belly.",
-                                                    "Breathe in slowly through the nose for about four counts, letting the belly rise — not the chest.",
-                                                    "Exhale gently for about six counts, longer than the in-breath. The extended exhale is what most strongly engages the vagus nerve.",
-                                                    "Continue for five to ten minutes.",
-                                                    "Done regularly, diaphragmatic breathing is one of the few reflux strategies with both research support and no downside. It\u0027s also the thread connecting much of what we explore in our movement and Qigong work, where breath and a settled nervous system are the starting point for the body working well.",
-                                                    "\u003ch3\u003eWhen to see a doctor\u003c/h3\u003e",
-                                                    "Reflux is usually a comfort issue, but some signs deserve prompt medical attention: difficulty or pain when swallowing, unexplained weight loss, vomiting, black or bloody stools, or symptoms that persist despite changes and over-the-counter remedies. And because chest discomfort can occasionally signal something to do with the heart rather than the stomach, anything intense, unfamiliar, or accompanied by breathlessness or arm or jaw pain should be checked without delay.",
-                                                    "\u003ch3\u003eThe bigger picture\u003c/h3\u003e",
-                                                    "Reflux sits right at the meeting point of body and mind — diet, posture, and the state of your nervous system all converge in that one burning sensation. Small, consistent adjustments to how you eat, how you breathe, and how you carry stress can shift things meaningfully. Calming the system that governs digestion is exactly the kind of whole-person work — through breath, movement, and easing the grip of stress on the body — that sits at the heart of what we do.",
-                                                    "If reflux is a regular companion and you\u0027d like to look at the stress and nervous-system side of it, you\u0027re welcome to get in touch."
-                                                ],
-                                    "published":  true
-                                }
-                            ]
-           },
-    "de":  {
-               "categories":  {
-                                  "all":  "Alle",
-                                  "health":  "Gesundheitsthemen",
-                                  "healthy_living":  "Gesundes Leben",
-                                  "nutrition":  "ErnÃ¤hrung",
-                                  "movement":  "Bewegung",
-                                  "treatment_techniques":  "Behandlungstechniken",
-                                  "oriental_medicine":  "FernÃ¶stliche Medizin",
-                                  "new_in_clinic":  "Neu in der Praxis"
-                              },
-               "articles":  [
-                                {
-                                    "id":  "shoulders-stress",
-                                    "categoryId":  "health",
-                                    "title":  "Die Leichtigkeit hinter der Anstrengung",
-                                    "date":  "Juni 2026",
-                                    "readTime":  "5 Min.",
-                                    "abstract":  "Wir halten emotionale und kÃ¶rperliche Anspannung in Mustern fest, die weit Ã¼ber das Physische hinausgehen. Zu verstehen, wo Ihre Spannung sitzt â€” und warum â€” ist der erste Schritt, sie dauerhaft loszulassen.",
-                                    "image":  "assets/cover-shoulders-stress.jpg",
-                                    "keywords":  [
-                                                     "Muskelentspannung · sportliche Leistung · antagonistische Muskeln · Regeneration und Durchblutung · Kokontraktion · Bewegungseffizienz · motorische Präzision · Stress und Anspannung"
-                                                 ],
-                                    "content":  [
-                                                    "Warum gute Bewegung — im Sport wie im Alltag — ebenso davon abhängt, was wir loslassen, wie davon, was wir hineingeben.",
-                                                    "Wenn wir an Kraft denken, stellen wir uns meist Anstrengung vor — einen Muskel, der hart arbeitet und sich gegen etwas Schweres stemmt. Doch eines ist entscheidend: Kein Muskel arbeitet je allein. Jede Bewegung, die wir machen, auch die kleinste, ist Teamarbeit. Einige Muskeln ziehen, andere geben sanft nach, und wieder andere halten still ein Gelenk stabil, damit das Ganze dort ankommt, wo wir es haben wollen. Die Kaffeetasse heben, nach einer Türklinke greifen, sich umdrehen, um mit einer Freundin zu sprechen — jede dieser Bewegungen ist ein kleines Stück Teamarbeit, das geschieht, ohne dass wir je darüber nachdenken müssen.",
-                                                    "Ein Detail, das viele überrascht: Ein Muskel kann eigentlich nur zweierlei. Er kann sich anspannen oder entspannen. Er zieht, aber er kann nicht schieben, und er kann sich nicht aus eigener Kraft verlängern. Wann immer sich also ein Muskel verkürzt, um ein Gelenk zu beugen, muss der Muskel auf der anderen Seite loslassen und sich verlängern, um Platz zu schaffen. Der Bizeps kann den Unterarm nur dann heben, wenn der Trizeps sich entspannt und es zulässt. Das heisst: Die Qualität einer Bewegung hängt nicht nur davon ab, wie kräftig der arbeitende Muskel zieht — sondern ebenso davon, wie leicht sein Partner loslassen kann. Ein Muskel, der nicht ganz loslassen will, ist wie Autofahren mit halb angezogener Handbremse: Man kommt zwar ans Ziel, aber es kostet mehr, und es fühlt sich nie richtig geschmeidig an.",
-                                                    "Dieses Bild zweier Muskeln ist eine praktische Art, die Idee zu verstehen, doch in Wirklichkeit ist es eine starke Vereinfachung. Tatsächlich wirken bei selbst der einfachsten Bewegung viele Muskeln zusammen — und genau das verschafft uns einen so grossen Bewegungsspielraum und eine so feine Kontrolle. Es ist ein wunderbares System, wenn es entspannt ist und frei seine Arbeit tun kann.",
-                                                    "Stress aber bringt das Ganze durcheinander. Wenn wir unter Druck stehen — eine Deadline, eine schwere Tasche oder einfach ein anstrengender Tag —, neigt der Körper dazu, sich zu verspannen und sich zu wappnen, und schaltet Muskeln ein, die gar nicht helfen. Wir pressen den Kiefer zusammen, ziehen die Schultern hoch, verkrampfen die Hände. Nichts von dieser zusätzlichen Spannung bringt uns voran; sie trübt nur das Signal, verschwendet Energie und macht unsere Bewegungen ungeschickter. Je angespannter wir sind, desto steifer und ungenauer werden wir — wir laufen sogar ein wenig heiss — und alles beginnt, sich mühsamer anzufühlen, als es sein müsste. Darum trainieren Spitzensportlerinnen und Tänzer, unter Druck locker zu bleiben: Sie wissen, dass Anspannung der Feind des Könnens ist.",
-                                                    "Und jetzt kommt das Wichtigste — denn man muss wirklich kein Sportler sein, damit all das auf einen zutrifft. Dieselbe Spannung baut sich bei uns allen leise auf, Tag für Tag: vom Sitzen am Schreibtisch, vom Tragen unserer Sorgen in den Schultern, vom blossen Bewältigen einer vollen Woche. Sich selbst überlassen, löst sie sich nicht einfach auf. Sie staut sich weiter an, und Stück für Stück lässt sie alles, was wir tun, schwerer und mühsamer wirken — unsere Haltung, unseren Schlaf, die Art, wie wir greifen, uns bücken und gehen.",
-                                                    "Die gute Nachricht: Loslassen ist eine Fähigkeit — und eine, die wir uns durchaus aneignen können. Sanfte Bewegung, Dehnen und Körperarbeit wie Massage zeigen dem Körper, wie sich echtes Loslassen tatsächlich anfühlt — und helfen ihm nach und nach, diese Leichtigkeit von selbst zu finden. Man muss für nichts trainieren. Genau dieselben Dinge, die einem Sportler zu mehr Freiheit und Präzision verhelfen, lassen auch uns mit deutlich mehr Leichtigkeit durch einen ganz normalen Tag kommen.",
-                                                    "Und es gibt noch einen schönen Nebeneffekt. Weiches, entspanntes Muskelgewebe lässt Blut und Nährstoffe frei hindurchströmen, während verspanntes Gewebe diesen Fluss drosselt. Je besser unsere Muskeln also loslassen können, desto besser werden sie versorgt — und desto schneller erholt sich unser Körper, ob nach einem Training oder nach einem langen Tag auf den Beinen.",
-                                                    "Wenn es also eines mitzunehmen gibt, dann dies: Sich gut zu bewegen — im Sport oder einfach im Leben — hat nicht nur mit härterem Arbeiten zu tun. Überraschend viel davon liegt darin, das Loslassen zu lernen. Und darin kann jede und jeder von uns besser werden."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "categoryIds":  [
-                                                        "health",
-                                                        "healthy_living",
-                                                        "treatment_techniques"
-                                                    ]
-                                },
-                                {
-                                    "id":  "new-city-relocation",
-                                    "categoryId":  "healthy_living",
-                                    "title":  "Umzug in eine neue Stadt und was er mit Ihrem KÃ¶rper macht",
-                                    "date":  "April 2025",
-                                    "readTime":  "4 Min.",
-                                    "abstract":  "Umzugsstress ist real â€” und er zeigt sich kÃ¶rperlich auf Weisen, die die meisten Menschen nicht erwarten. Sehen wir uns an, was beim Umzug wirklich im KÃ¶rper passiert und warum Ihre Schultern so angespannt sind.",
-                                    "image":  "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "Umzugsstress",
-                                                     "Umzug Basel",
-                                                     "Expat Wellness",
-                                                     "KÃ¶rperhaltung",
-                                                     "Massagetherapeut",
-                                                     "Erdung"
-                                                 ],
-                                    "content":  [
-                                                    "Der Umzug in eine neue Stadt gilt als einer der intensivsten Stressfaktoren im Leben. WÃ¤hrend wir uns auf die Logistik konzentrieren â€” Wohnungssuche in Basel, Anmeldung im Rathaus, Bankkonten einrichten â€”, trÃ¤gt unser KÃ¶rper leise die Hauptlast dieses Ãœbergangs. Das ist Umzugsstress, und er ist eine kÃ¶rperliche RealitÃ¤t.",
-                                                    "Wenn Sie in eine neue Umgebung kommen, ist jeder Anblick, jedes GerÃ¤usch und jeder Weg ungewohnt. Ihr Nervensystem arbeitet auf Hochtouren, um diese Flut neuer Daten zu verarbeiten. Ohne es zu merken, gehen Sie vielleicht mit etwas mehr Anspannung, schlafen weniger tief oder halten in der StraÃŸenbahn unbewusst den Atem an.",
-                                                    "Zudem belasten das Kistenpacken, das Tragen schwerer Lasten und das Schlafen auf provisorischen Matratzen den Bewegungsapparat. Zusammen mit emotionaler ErschÃ¶pfung und dem Fehlen Ihres gewohnten sozialen Umfelds Ã¤uÃŸert sich diese Belastung schnell in RÃ¼ckenschmerzen, Spannungskopfschmerzen oder Verdauungsproblemen.",
-                                                    "Um in einer neuen Stadt anzukommen, mÃ¼ssen Sie zuerst in Ihrem eigenen KÃ¶rper ankommen. Eine erdende Routine ist dabei entscheidend. Erkunden Sie lokale Parks, achten Sie auf regelmÃ¤ÃŸige Schlafenszeiten und gÃ¶nnen Sie sich eine manuelle KÃ¶rpertherapie. Gezielte KÃ¶rperarbeit wirkt wie ein physischer Anker, der das Ã¼berreizte Nervensystem beruhigt und Ihnen hilft, sich zuerst im eigenen KÃ¶rper zu Hause zu fÃ¼hlen."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "structural-stiffness",
-                                    "categoryId":  "health",
-                                    "title":  "Wie Sie strukturelle Steifheit bemerken, bevor sie zu Schmerzen wird",
-                                    "date":  "Mai 2025",
-                                    "readTime":  "5 Min.",
-                                    "abstract":  "Der KÃ¶rper flÃ¼stert, bevor er schreit. Wenn Sie lernen, die subtilen VerÃ¤nderungen in Ihrer Haltung zu lesen, kÃ¶nnen Sie sich wochenlange Regeneration sparen.",
-                                    "image":  "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "RÃ¼ckenschmerzen PrÃ¤vention",
-                                                     "KÃ¶rperbewusstsein",
-                                                     "steife Gelenke",
-                                                     "FaszienlÃ¶sung",
-                                                     "manuelle Therapie",
-                                                     "FrÃ¼hwarnzeichen"
-                                                 ],
-                                    "content":  [
-                                                    "Oft warten wir, bis wir akute Schmerzen haben, bevor wir etwas unternehmen. Aber Schmerz ist selten die erste Stufe eines structuralen Problems, sondern der letzte Alarm. Lange bevor ein Muskel verkrampft oder sich ein Gelenk entzÃ¼ndet, signalisiert der KÃ¶rper EinschrÃ¤nkungen durch subtile, strukturelle Steifheit.",
-                                                    "Strukturelle Steifheit ist ein schleichender Verlust der Beweglichkeit in Gelenken und myofaszialen Geweben. Sie Ã¤uÃŸert sich zum Beispiel darin, dass es schwerfÃ¤llt, den Kopf beim Autofahren fÃ¼r den Schulterblick ganz zu drehen, dass sich der untere RÃ¼cken beim Schuhebinden eng anfÃ¼hlt oder dass man morgens nur schwer aus dem Bett kommt.",
-                                                    "Diese Steifheit wird durch das Verkleben und Verdicken der Faszien verursacht â€” dem Bindegewebsnetz, das all unsere Muskeln und Organe umhÃ¼llt. Bei langem Sitzen oder einseitigen Bewegungen verlieren die Faszien ihre ElastizitÃ¤t, verkleben und schrÃ¤nken die GleitfÃ¤higkeit der Muskeln und Gelenke ein.",
-                                                    "Indem Sie lernen, auf dieses leise FlÃ¼stern der Steifheit zu hÃ¶ren, kÃ¶nnen Sie frÃ¼hzeitig gegensteuern. Dynamisches Dehnen, ausreichende FlÃ¼ssigkeitszufuhr und gezielte KÃ¶rpertherapie lÃ¶sen Faszienverklebungen, regen den FlÃ¼ssigkeitsfluss an und halten Ihren Bewegungsapparat geschmeidig, noch bevor Schmerzen entstehen."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "home-in-body",
-                                    "categoryId":  "movement",
-                                    "title":  "Was bedeutet es, sich in seinem KÃ¶rper zu Hause zu fÃ¼hlen?",
-                                    "date":  "MÃ¤rz 2025",
-                                    "readTime":  "6 Min.",
-                                    "abstract":  "Es ist mehr als nur Beweglichkeit oder Kraft. Es ist eine QualitÃ¤t der Aufmerksamkeit â€” und diese lÃ¤sst sich durch somatisches Lernen schulen.",
-                                    "image":  "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "KÃ¶rperwahrnehmung",
-                                                     "Bewegungstherapie",
-                                                     "Feldenkrais Basel",
-                                                     "Achtsamkeit",
-                                                     "somatische Bewegung",
-                                                     "Propriozeption"
-                                                 ],
-                                    "content":  [
-                                                    "In unserem schnellen, bildschirmdominierten Alltag leben wir fast nur noch im Kopf. Wir behandeln unseren KÃ¶rper wie ein Transportmittel, das unseren Verstand von einem Meeting zum nÃ¤chsten bringt. Doch echte Gesundheit erfordert, dass wir dieses GefÃ¤hrt nicht nur instand halten, sondern es ganz bewohnen. Es bedeutet, sich im eigenen KÃ¶rper zu Hause zu fÃ¼hlen.",
-                                                    "Sich im KÃ¶rper zu Hause zu fÃ¼hlen, beschreibt einen Zustand somatischer Sicherheit und Achtsamkeit. Es ist die FÃ¤higkeit, den eigenen inneren Zustand wertfrei wahrzunehmen: Zu spÃ¼ren, dass man mÃ¼de ist, bevor man erschÃ¶pft zusammenbricht, Anspannung zu bemerken, wenn sie entsteht, und sich koordiniert und leicht zu bewegen.",
-                                                    "Wenn diese Verbindung fehlt, fÃ¼hlen wir uns oft ungeschickt, dauerhaft angespannt oder werden von plÃ¶tzlichen Schmerzen Ã¼berrascht. Somatische Bewegungspraktiken wie die Feldenkrais-Methode und Connected Movement setzen genau hier an. Sie zwingen den KÃ¶rper nicht in starre Posen, sondern leiten zu kleinen, spielerischen Bewegungen an, um die sensorische Wahrnehmung zu erweitern.",
-                                                    "Durch diese Schulung der Aufmerksamkeit holen Sie sich Ihr kÃ¶rperliches Selbst zurÃ¼ck. Sie lernen, wie sich Ihre Rippen beim Atmen bewegen, wie sich Ihr Gewicht beim Gehen verlagert und wo Sie unnÃ¶tig Kraft aufwenden. Diese Wahrnehmung ist das wahre Fundament fÃ¼r nachhaltiges Wohlbefinden und kÃ¶rperliche Freiheit."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "qi-meridians-wisdom",
-                                    "categoryId":  "oriental_medicine",
-                                    "title":  "Die alte Weisheit von Qi und Meridianen im modernen Leben",
-                                    "date":  "Februar 2025",
-                                    "readTime":  "7 Min.",
-                                    "abstract":  "Wie traditionelle Ã¶stliche Konzepte von Energiebahnen mit den myofaszialen Leitbahnen und Nervenbahnen der modernen manuellen Therapie Ã¼bereinstimmen.",
-                                    "image":  "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "Traditionelle Chinesische Medizin",
-                                                     "Meridianmassage",
-                                                     "Shiatsu-Therapie",
-                                                     "Qigong-Fluss",
-                                                     "Energiebahnen",
-                                                     "Fasziennetzwerk"
-                                                 ],
-                                    "content":  [
-                                                    "Die Traditionelle Chinesische Medizin (TCM) beschreibt den KÃ¶rper seit jeher Ã¼ber den Fluss von Qi (Lebensenergie) durch ein System von Leitbahnen, den Meridianen. Lange Zeit wurde dies von der westlichen Wissenschaft als rein metaphorisch abgetan. Heute zeigen sich jedoch faszinierende Parallelen zwischen diesen alten Karten und der modernen Anatomie.",
-                                                    "Betrachtet man die myofaszialen Meridiane â€” die kontinuierlichen Bindegewebsketten, die von den Zehen bis zum Kopf verlaufen â€”, stellt man fest, dass sie fast identisch mit den klassischen Akupunkturmeridianen sind. Faszien sind hochgradig leitfÃ¤hig; sie transportieren FlÃ¼ssigkeit, elektrische Signale und mechanische KrÃ¤fte. Was die TCM als Qi-Blockade bezeichnet, beschreibt die moderne Medizin als Faszienverklebung oder gestÃ¶rte Mikrozirkulation.",
-                                                    "Im Shiatsu und Tuina regt der Druck entlang dieser Meridiane das vegetative Nervensystem an, verbessert den Lymphfluss und rehydriert die Faszienbahnen. Statt isolierte Muskeln zu behandeln, sprechen diese Methoden ganze Spannungslinien an, was dem ganzheitlichen Ansatz der TCM entspricht.",
-                                                    "Die Integration von Qigong oder Shiatsu in den Alltag hilft, den freien Fluss von Energie und FlÃ¼ssigkeit in diesen myofaszialen Netzen zu erhalten. Indem wir Ã¶stliche Weisheit und westliche Wissenschaft verbinden, erhalten wir ein tieferes VerstÃ¤ndnis und wirksamere Werkzeuge fÃ¼r unsere Gesundheit."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "myofascial-nutrition",
-                                    "categoryId":  "nutrition",
-                                    "title":  "ErnÃ¤hrung fÃ¼r die myofasziale Regeneration: Was man nach der KÃ¶rperarbeit essen sollte",
-                                    "date":  "Januar 2025",
-                                    "readTime":  "5 Min.",
-                                    "abstract":  "Tiefenwirksame KÃ¶rperarbeit setzt Stoffwechselprodukte frei und erzeugt MikroverÃ¤nderungen im Gewebe. So unterstÃ¼tzen FlÃ¼ssigkeit und gezielte NÃ¤hrstoffe die Heilung der Faszien.",
-                                    "image":  "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "Faszienregeneration",
-                                                     "ErnÃ¤hrung nach Massage",
-                                                     "entzÃ¼ndungshemmende Lebensmittel",
-                                                     "Hydratationstipps",
-                                                     "Bindegewebe",
-                                                     "Kollagensynthese"
-                                                 ],
-                                    "content":  [
-                                                    "Was Sie nach einer KÃ¶rpertherapie-Sitzung tun, ist genauso wichtig wie die Behandlung selbst. Eine tiefe Massage oder Tuina-Sitzung regt die Durchblutung an, lÃ¶st Gewebeverklebungen und bringt Stoffwechselendprodukte in Bewegung. Um dieses Gewebe nun optimal zu reparieren, benÃ¶tigt Ihr KÃ¶rper die richtigen Bausteine.",
-                                                    "An erster Stelle steht die FlÃ¼ssigkeitszufuhr. Faszien bestehen hauptsÃ¤chlich aus Wasser und Kollagen. Bei Verspannungen trocknen sie aus und verkleben. Die manuelle Behandlung wirkt wie das Auswringen eines Schwamms: Altes Gewebewasser wird herausgepresst, damit frische, nÃ¤hrstoffreiche FlÃ¼ssigkeit nachstrÃ¶men kann. Trinken Sie danach reichlich Wasser, um diesen Prozess zu unterstÃ¼tzen.",
-                                                    "ZusÃ¤tzlich benÃ¶tigt Ihr KÃ¶rper bestimmte NÃ¤hrstoffe fÃ¼r die Kollagensynthese. Vitamin C ist hierfÃ¼r ein essenzieller Kofaktor â€” Paprika, ZitrusfrÃ¼chte und grÃ¼nes BlattgemÃ¼se sind ideal. AminosÃ¤uren wie Prolin und Glycin, die in KnochenbrÃ¼he, Fisch und HÃ¼lsenfrÃ¼chten vorkommen, liefern die direkten Bausteine fÃ¼r die Reparatur des Bindegewebes.",
-                                                    "Setzen Sie schlieÃŸlich auf entzÃ¼ndungshemmende Nahrungsmittel, um eventuellen Muskelkater nach der Behandlung abzumildern. Gesunde Fette (Omega-3-FettsÃ¤uren aus WalnÃ¼ssen oder Wildfisch) sowie GewÃ¼rze wie Ingwer und Kurkuma regulieren die EntzÃ¼ndungsreaktion und helfen dem myofaszialen System, elastischer und stÃ¤rker zu heilen."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "breathwork-ritual",
-                                    "categoryId":  "healthy_living",
-                                    "title":  "Ein tÃ¤gliches Ritual des achtsamen Atmens und Innehaltens schaffen",
-                                    "date":  "Dezember 2024",
-                                    "readTime":  "4 Min.",
-                                    "abstract":  "Eine einfache 5-minÃ¼tige tÃ¤gliche AtemÃ¼bung kann Ihr vegetatives Nervensystem regulieren und den Cortisolspiegel senken.",
-                                    "image":  "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "achtsames Atmen",
-                                                     "Vagusnerv-Stimulation",
-                                                     "Stressabbau",
-                                                     "tÃ¤gliche Meditation",
-                                                     "AtemÃ¼bungen Basel",
-                                                     "Parasympathikus"
-                                                 ],
-                                    "content":  [
-                                                    "Wir atmen tÃ¤glich etwa 20.000 Mal, schenken aber kaum einem einzigen Atemzug Beachtung. Meistens atmen wir flach in die Brust, was dem Nervensystem unterschwellig Stress signalisiert. Den Atem bewusst zu steuern, ist der schnellste Weg, den eigenen physiologischen Zustand zu verÃ¤ndern.",
-                                                    "Die tiefe Zwerchfellatmung stimuliert den Vagusnerv, die Hauptleitung unseres Parasympathikus (\u0027Ruhen und Verdauen\u0027). Wenn Sie den Atem verlangsamen und tief in den Bauch lenken, signalisieren Sie dem Gehirn sofortige Sicherheit. Der Puls sinkt, der Blutdruck reguliert sich und die AusschÃ¼ttung von Stresshormonen wird gebremst.",
-                                                    "FÃ¼r ein tÃ¤gliches Atemritual mÃ¼ssen Sie nicht stundenlang meditieren. Schon fÃ¼nf Minuten am Tag haben eine spÃ¼rbare Wirkung. Setzen Sie sich aufrecht hin, legen Sie eine Hand auf die Brust und die andere auf den Bauch. Atmen Sie vier Sekunden lang durch die Nase ein, sodass sich der Bauch hebt, und atmen Sie sechs Sekunden lang langsam durch den Mund aus.",
-                                                    "Dieses bewusste Innehalten wirkt wie ein Reset-Knopf fÃ¼r KÃ¶rper und Geist. RegelmÃ¤ÃŸig geÃ¼bt, stÃ¤rkt es Ihre somatische Widerstandskraft, hilft Ihnen, gelassener auf Alltagsstressoren zu reagieren, und verhindert, dass sich Stress als chronische Anspannung im KÃ¶rper festsetzt."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "shiatsu-vs-classic",
-                                    "categoryId":  "treatment_techniques",
-                                    "title":  "Den Unterschied zwischen Shiatsu und klassischer Massage verstehen",
-                                    "date":  "Juni 2026",
-                                    "readTime":  "6 Min.",
-                                    "abstract":  "Die eine Behandlung nutzt Ã–l auf der nackten Haut, die andere ist eine Druckpunkttherapie am bekleideten KÃ¶rper. Finden Sie heraus, was am besten zu Ihnen passt.",
-                                    "image":  "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=900\u0026q=80\u0026auto=format\u0026fit=crop",
-                                    "keywords":  [
-                                                     "Shiatsu vs. Massage",
-                                                     "Akupressur-Therapie",
-                                                     "Ã¶lfreie Massage",
-                                                     "KÃ¶rperausrichtung",
-                                                     "Massage-Auswahl",
-                                                     "TCM KÃ¶rperarbeit"
-                                                 ],
-                                    "content":  [
-                                                    "Bei der Suche nach der passenden KÃ¶rpertherapie verliert man bei den vielen Begriffen schnell den Ãœberblick. Zwei der beliebtesten Methoden sind die Klassische Massage und Shiatsu. Beide lindern Verspannungen und fÃ¶rdern das Wohlbefinden, basieren jedoch auf vÃ¶llig unterschiedlichen AnsÃ¤tzen.",
-                                                    "Die Klassische Massage (auch schwedische Massage genannt) grÃ¼ndet auf der westlichen Anatomie und Physiologie. Sie wird mit Ã–l direkt auf der Haut durchgefÃ¼hrt. Mit Streichungen, Knetungen und Friktionen arbeitet der Therapeut direkt an den Muskelfasern, um die Durchblutung zu fÃ¶rdern und lokale Verspannungen zu lÃ¶sen. Sie ist ideal bei Muskelkater, Verspannungen und fÃ¼r allgemeine Entspannung.",
-                                                    "Shiatsu hingegen ist eine traditionelle japanische Therapie, die auf der Chinesischen Medizin basiert. Sie wird ohne Ã–l und am bekleideten KÃ¶rper auf einer Futonmatte am Boden praktiziert. Statt Muskeln zu kneten, Ã¼bt der Therapeut mit Fingern, Daumen, Ellbogen und HandflÃ¤chen tiefen, konstanten Druck auf Akupunkturpunkte und Meridiane aus. ErgÃ¤nzt wird dies durch Dehnungen und Gelenkmobilisationen.",
-                                                    "Die Wahl hÃ¤ngt ganz von Ihren BedÃ¼rfnissen ab: Wenn Sie direkten Hautkontakt, flieÃŸende Knetbewegungen und tiefe Entspannung suchen, ist die Klassische Massage ideal. Wenn Sie bekleidet bleiben mÃ¶chten, eine tiefere Ausrichtung von KÃ¶rper und Nervensystem suchen und statischen Druck sowie Dehnungen schÃ¤tzen, ist Shiatsu die perfekte Wahl."
-                                                ],
-                                    "author":  "Michael Guralnik",
-                                    "published":  false
-                                },
-                                {
-                                    "id":  "what-does-my-sugar-intake-have-to-do-with-my-pain",
-                                    "categoryId":  "health",
-                                    "categoryIds":  [
-                                                        "health",
-                                                        "nutrition",
-                                                        "oriental_medicine"
-                                                    ],
-                                    "title":  "Was hat meine Zuckeraufnahme mit meinen Schmerzen zu tun?",
-                                    "date":  "Juni 2026",
-                                    "readTime":  "5 Min.",
-                                    "author":  "Michael Guralnik",
-                                    "abstract":  "Der Efektzucker hat aus Sicht der Chinesischen Medizin (TCM) auf unseren Gelenken",
-                                    "image":  "assets/cover-what-does-my-sugar-intake-have-to-do-with-my-pain.jpg",
-                                    "keywords":  [
-                                                     "Zucker",
-                                                     "Entzündung",
-                                                     "TCM",
-                                                     "Feuchtigkeit",
-                                                     "Endprodukte für fortgeschrittene Glykierung"
-                                                 ],
-                                    "content":  [
-                                                    "Die chinesische Medizin behauptet seit Tausenden von Jahren, dass eine der häufigsten Ursachen für Gelenkschmerzen „Feuchtigkeit“ ist, die durch eine unzureichende Ernährung verursacht wird, die die Ansammlung unerwünschter „Flüssigkeiten“ in den Gelenken verursacht.",
-                                                    "Moderne Praktiker der chinesischen Medizin erwarten nicht unbedingt, in diesen Gelenken tatsächliche Flüssigkeiten zu finden, sondern eher eine Steifheit, einen reduzierten Bewegungsumfang und Druckschmerzen, als ob diese Flüssigkeiten in diesen Gelenken vorhanden wären. Diese pathologischen (ungesunden) Flüssigkeiten können entweder kalt sein, wobei das Gelenk scharfe, stechende Schmerzen verursacht, oder heiß, wobei das Gelenk heiß und rot ist.",
-                                                    "Basierend auf der Unterscheidung zwischen heißer und kalter Feuchtigkeit entwickelte die chinesische Medizin Techniken mit Kräutern, Akupunktur und manueller Therapie, um mit diesen Arten von „Feuchtigkeit“ umzugehen.",
-                                                    "So weit hergeholt es auch klingen mag, die westliche Wissenschaft scheint dieser Annahme nun zuzustimmen. Die westliche Medizin zieht es vor, das Syndrom, das eine Beeinträchtigung der Gelenke verursacht, als „Rheuma“ zu bezeichnen, und betrachtet es als eine Entzündung, die nicht durch einen Erreger verursacht wird. Es wird oft entweder als sterile Entzündung oder als Autoimmunerkrankung bezeichnet, bei der es sich wiederum um eine Krankheit handelt, die sich ohne äußere Ursache im Körper bildet.",
-                                                    "Seit Jahren beobachten wir eine zunehmende Beliebtheit von Autoimmunerkrankungen, Allergien und rheumatischen Erkrankungen. Die Forscher begannen, nach Umweltfaktoren zu suchen, die diesen Anstieg dieser Vorkommen erklären könnten.",
-                                                    "Die Täter, die bisher gefunden wurden, sind verarbeitete Lebensmittel und Zucker. Konsistente Forschungsergebnisse weisen auf den Zusammenhang zwischen zugesetztem Zucker und höheren Entzündungsmarkern hin. Eine andere Studie ergab, dass das Trinken zuckerhaltiger Getränke Entzündungen auslösen kann und ihre Auswirkungen über einen beträchtlichen Zeitraum anhalten können.",
-                                                    "Dramatischere Experimente zeigen, dass der Zusammenhang zwischen dem Konsum übermäßiger Zuckermengen die Produktion von AGE (Advanced glycation end products) dramatisch erhöht, was zu einem systemischen Anstieg von oxidativem Stress und Entzündungsfaktoren führt.",
-                                                    "Beispiele für sterile Entzündungen, die wir in der Klinik häufig sehen, treten in den Schultern, kleinen arthritischen Gelenkschmerzen (Finger, Zehen), Knöcheln (insbesondere Plantarfasziitis) und Fällen von Rückenschmerzen auf.",
-                                                    "Oft kann eine drastische Reduzierung des Zuckerkonsums das Problem allein lösen!"
-                                                ]
-                                },
-                                {
-                                    "id":  "reflux-and-heartburn-relief",
-                                    "categoryId":  "health",
-                                    "categoryIds":  [
-                                                        "health",
-                                                        "healthy_living",
-                                                        "nutrition",
-                                                        "movement"
-                                                    ],
-                                    "title":  "Linderung von Reflux und Sodbrennen",
-                                    "date":  "Juni 2026",
-                                    "readTime":  "5 Min.",
-                                    "author":  "Michael Guralnik",
-                                    "abstract":  "Reflux und Sodbrennen für den Alltag erklärt – die Bilder mit hohem und niedrigem Säuregehalt, der Stress- und Vagusnerv-Verbindung sowie praktische Ernährungs-, Nahrungsergänzungsmittel- und Atemtipps für dauerhafte Linderung.",
-                                    "image":  "assets/cover-reflux-and-heartburn-relief.jpg",
-                                    "keywords":  [
-                                                     "Reflux",
-                                                     "Sodbrennen",
-                                                     "GERD",
-                                                     "Magensäure",
-                                                     "Vagusnerv",
-                                                     "Zwerchfellatmung",
-                                                     "Stress und Verdauung",
-                                                     "unterer Schließmuskel der Speiseröhre"
-                                                 ],
-                                    "content":  [
-                                                    "Diese warme, aufsteigende Verbrennung hinter dem Brustbein nach einer guten Mahlzeit. Der saure Geschmack an der Rückseite der Kehle, wenn du dich hinlegst. Ein Husten, der sich nicht ganz erklären lässt. Reflux ist eine der häufigsten Beschwerden, mit denen Menschen ruhig leben — oft jahrelang — unter der Annahme, dass es einfach Teil der Funktionsweise ihres Körpers ist. Manchmal ist es etwas, das man akzeptieren kann, aber sehr oft gibt es Raum, sich wesentlich besser zu fühlen.",
-                                                    "\u003ch3\u003ewas eigentlich gerade passiert.\u003c/h3\u003e",
-                                                    "Zwischen Ihrer Speiseröhre (der Röhre, die Nahrung nach unten transportiert) und Ihrem Magen sitzt ein Muskelring, der als unterer Ösophagusschließmuskel bezeichnet wird. Seine Aufgabe ist einfach: öffnen, um Nahrung hereinzulassen, dann schließen, um den Mageninhalt dort aufzubewahren, wo er hingehört. Reflux tritt auf, wenn sich dieser Ring im falschen Moment entspannt, so dass saurer Mageninhalt wieder nach oben wandern kann. Die Magenschleimhaut ist für den Umgang mit Säure ausgelegt; die Speiseröhre nicht. Dieses Missverhältnis ist das, was Sie als Sodbrennen empfinden.",
-                                                    "Gelegentlicher Reflux ist normal und harmlos. Wenn es häufig oder hartnäckig wird, wird es normalerweise GERD (gastroösophageale Refluxkrankheit) genannt — und das ist es wert, darauf zu achten.",
-                                                    "\u003ch3\u003eProblem\u003c/h3\u003e",
-                                                    "Die Ursachen sind selten einzeln. Häufige Mitwirkende sind große oder überstürzte Mahlzeiten, zu frühes Liegen nach dem Essen, zusätzliches Gewicht in der Mitte, bestimmte Lebensmittel (fettige oder frittierte Mahlzeiten, Kaffee, Alkohol, Schokolade, Minze, sehr würzige Gerichte), Rauchen, einige Medikamente und eine Hiatushernie, bei der ein Teil des Magens durch das Zwerchfell nach oben drückt. Und — in Kürze mehr dazu — Stress spielt eine größere Rolle, als die meisten Menschen erkennen.",
-                                                    "\u003ch3\u003eZwei Gesichter desselben Feuers\u003c/h3\u003e",
-                                                    "Hier ist ein Unterschied, der viele Menschen überrascht. Sodbrennen fühlt sich wie zu viel Säure an, und für viele ist es genau das, was es ist. Aber nicht immer.",
-                                                    "Im Bild mit hoher Säure produziert der Magen viel Säure, und das Problem ist mechanisch: Der Schließmuskel hält nicht, so dass Säure nach oben entweicht. Dies ist die Version, für die die meisten Antazida und säureblockierenden Medikamente entwickelt wurden, und für viele Menschen bringen sie echte Erleichterung.",
-                                                    "Im Niedrigsäurebild geht es um zu wenig Magensäure. Es wird angenommen, dass Nahrung ohne genügend Säure sitzt und fermentiert, anstatt weiterzumachen, wodurch Druck aufgebaut wird, der den Inhalt nach oben drückt, während der Schließmuskel nicht das starke saure Signal erhält, das er benötigt, um sich fest zu schließen. Menschen in dieser Gruppe bemerken manchmal Blähungen, Fülle und das Gefühl, dass Mahlzeiten \"einfach da sitzen\".",
-                                                    "Warum ist die Unterscheidung wichtig? Denn die beiden können gegensätzliche Ansätze verlangen, und was das eine beruhigt, kann das andere verschlimmern. Die ehrliche Antwort ist, dass es nicht immer einfach ist, sie auseinander zu halten, und die Selbstdiagnose hat Grenzen. Wenn Reflux ein fester Bestandteil Ihres Lebens ist, lohnt es sich wirklich, dies mit einem Arzt oder einem qualifizierten Arzt zu erkunden, anstatt zu raten.",
-                                                    "\u003ch3\u003eDie Stressverbindung — und Ihr Vagusnerv\u003c/h3\u003e",
-                                                    "Wenn Sie jemals bemerkt haben, dass sich Ihr Magen während einer stressigen Woche gestrafft hat, haben Sie die Verbindung bereits gespürt. Die Verdauung erfolgt weitgehend über das parasympathische Nervensystem — den „Ruhe- und Verdauungsmodus“. Stress versetzt Sie in \"Kampf oder Flucht\", und die Verdauung ist eines der ersten Dinge, denen der Körper den Vorrang nimmt, wenn er denkt, dass Sie in Gefahr sind.",
-                                                    "Im Zentrum davon sitzt der Vagusnerv, der lange wandernde Nerv, der Gehirn und Darm verbindet. Es hilft, den Tonus des Ösophagussphinkters einzustellen, regelt den Rhythmus der Magenbewegung und beeinflusst die Säuresekretion. Wenn die vagale Aktivität gesund und stabil ist, neigt das Verdauungssystem dazu, reibungslos zu funktionieren. Wenn Sie chronisch gestresst sind, wird diese Signalisierung unregelmäßig — die Motilität verlangsamt sich, der Schließmuskel verhält sich weniger zuverlässig und der Reflux findet eine Öffnung.",
-                                                    "Dies ist in gewisser Weise eine ermutigende Nachricht: Es bedeutet, dass es bei Reflux nicht nur darum geht, was Sie essen, sondern auch um den Zustand, in dem Sie sich befinden, wenn Sie es essen. Und der Zustand Ihres Nervensystems ist etwas, das Sie beeinflussen können.",
-                                                    "\u003ch3\u003eEssgewohnheiten, die helfen\u003c/h3\u003e",
-                                                    "Kleine Veränderungen in der Art und Weise, wie Sie essen, sind oft genauso wichtig wie das, was auf dem Teller ist:",
-                                                    "Essen Sie kleinere Mahlzeiten. Ein voller Magen übt Druck auf den Schließmuskel aus. Kleinere, häufigere Mahlzeiten verlangen weniger davon.",
-                                                    "Essen Sie nicht direkt vor dem Schlafengehen. Das Hinlegen entfernt die Hilfe der Schwerkraft. Ziel ist es, etwa drei Stunden vor dem Liegen mit dem Essen fertig zu sein, damit dein Magen Zeit hat, sich zu leeren.",
-                                                    "Langsam. Schnell essen bedeutet, Luft zu schlucken und zu wenig zu kauen, was den Druck erhöht und die Verdauung erschwert. Ein paar ruhige Minuten vor dem ersten Bissen — sogar drei langsame Atemzüge — versetzen Sie in diesen \"Ruhe- und Verdauungszustand\".\u003cbr\u003e\u003cbr\u003eSchaffen Sie Freude rund um Ihren Esstisch. Eine Mahlzeit, die schmackhaft ist, schön serviert und ohne Eile gegessen wird, reduziert den Stress, verlangsamt den Prozess und ermöglicht eine achtsame Umgebung rund um Essen und Essen. Was könnte daran falsch sein?\u0026nbsp;",
-                                                    "Beachten Sie Ihre Auslöser. Kaffee, Alkohol, große fetthaltige Mahlzeiten und sehr würzige oder säurehaltige Lebensmittel sind häufige Schuldige, aber die Liste aller ist persönlich. Ein kurzes Ernährungstagebuch deckt Muster oft schneller auf als Vermutungen.",
-                                                    "Heben Sie den Kopf des Bettes leicht an, wenn nächtlicher Reflux ein Problem ist — ein Keil unter der Matratze funktioniert besser als das Stapeln von Kissen.",
-                                                    "\u003ch3\u003eEin Wort zu Nahrungsergänzungsmitteln\u003c/h3\u003e",
-                                                    "Diese können den Komfort unterstützen, sind aber kein Ersatz für das zugrunde liegende Bild — und einige interagieren mit Medikamenten oder Erkrankungen. Daher lohnt es sich, zuerst mit einem Arzt zu sprechen, insbesondere wenn Sie bereits säurereduzierende Medikamente einnehmen.",
-                                                    "i\u003cu style=\"background-color: transparent;\"\u003edgl (deglycyrrhiziniertes Lakritz) \u003c/u\u003e\u003cspan style=\"background-color: transparent;\"\u003eist ein traditionelles beruhigendes Mittel für die Verdauungsschleimhaut, bei dem die blutdruckerhöhende Verbindung entfernt wurde.\u003c/span\u003e",
-                                                    "\u003cu\u003eRutschige Ulme und Marshmallowwurzel\u003c/u\u003e bilden eine sanfte, schützende Beschichtung, die viele bei einer gereizten Kehle und Speiseröhre beruhigend finden.",
-                                                    "\u003cu\u003eMelatonin\u003c/u\u003e ist am besten für den Schlaf bekannt, aber es gibt interessante Beweise dafür, dass es auch zum Schutz der Speiseröhrenschleimhaut beiträgt.",
-                                                    "\u003cu\u003eMagnesium\u003c/u\u003e unterstützt die Muskelfunktion und Entspannung und ist für die meisten Menschen sanft.",
-                                                    "\u003ch3\u003eAtmen Sie Ihren Weg zu einem ruhigeren Darm\u003c/h3\u003e",
-                                                    "Hier trifft etwas wirklich Einfaches auf etwas Wirkungsvolles. Das Zwerchfell — Ihr Hauptatemmuskel — umschließt auch die Speiseröhre und wirkt als natürliche Unterstützung für diesen Schließmuskel. Die langsame, tiefe Bauchatmung bewirkt zwei Dinge gleichzeitig: Sie stärkt die Zwerchfellunterstützung und stimuliert den Vagusnerv, wodurch Sie in den Verdauungsmodus versetzt werden.",
-                                                    "Eine Übung zum Ausprobieren, idealerweise vor den Mahlzeiten und erneut vor dem Schlafengehen:",
-                                                    "Sitze oder lege dich bequem mit einer Hand auf deinen Bauch.",
-                                                    "Atme etwa viermal langsam durch die Nase ein und lasse den Bauch aufsteigen — nicht die Brust.",
-                                                    "Atme etwa sechs Mal sanft aus, länger als beim Einatmen. Am stärksten greift der Vagusnerv durch das verlängerte Ausatmen an.",
-                                                    "Fahren Sie fünf bis zehn Minuten fort.",
-                                                    "Regelmäßig durchgeführt, ist die Zwerchfellatmung eine der wenigen Refluxstrategien, die sowohl die Forschung unterstützen als auch keinen Nachteil haben. Es ist auch der Faden, der viel von dem verbindet, was wir in unserer Bewegung und Qigong-Arbeit erforschen, wo Atem und ein beruhigtes Nervensystem der Ausgangspunkt für den Körper sind, der gut arbeitet.",
-                                                    "\u003ch3\u003eWann man einen Arzt aufsuchen sollte\u003c/h3\u003e",
-                                                    "Reflux ist in der Regel ein Komfortproblem, aber einige Anzeichen verdienen sofortige medizinische Hilfe: Schwierigkeiten oder Schmerzen beim Schlucken, unerklärlicher Gewichtsverlust, Erbrechen, schwarzer oder blutiger Stuhl oder Symptome, die trotz Veränderungen und rezeptfreien Mitteln bestehen bleiben. Und weil Brustbeschwerden gelegentlich etwas mit dem Herzen und nicht mit dem Magen zu tun haben können, sollte alles Intensive, Unbekannte oder Begleiterscheinungen von Atemnot oder Arm- oder Kieferschmerzen unverzüglich überprüft werden.",
-                                                    "\u003ch3\u003eDas größerer Ganze\u003c/h3\u003e",
-                                                    "Reflux sitzt direkt am Treffpunkt von Körper und Geist — Ernährung, Haltung und der Zustand Ihres Nervensystems laufen in diesem einen brennenden Gefühl zusammen. Kleine, konsistente Anpassungen an die Art und Weise, wie Sie essen, wie Sie atmen und wie Sie Stress tragen, können die Dinge sinnvoll verändern. Die Beruhigung des Systems, das die Verdauung steuert, ist genau die Art von Ganzkörperarbeit — durch Atem, Bewegung und die Lockerung des Stresses auf den Körper —, die im Mittelpunkt dessen steht, was wir tun.",
-                                                    "Wenn Reflux ein regelmäßiger Begleiter ist und Sie sich die Stress- und Nervensystemseite ansehen möchten, können Sie sich gerne mit uns in Verbindung setzen."
-                                                ],
-                                    "published":  true
-                                }
-                            ]
-           }
+  "en": {
+    "categories": {
+      "all": "All",
+      "health": "Health topics",
+      "healthy_living": "Healthy living",
+      "nutrition": "Nutrition",
+      "movement": "Movement",
+      "treatment_techniques": "treatment techniques",
+      "oriental_medicine": "oriental medicine",
+      "new_in_clinic": "new in the clinic"
+    },
+    "articles": [
+      {
+        "id": "shoulders-stress",
+        "categoryId": "health",
+        "title": "The Ease Behind the Effort",
+        "date": "June 2026",
+        "readTime": "5 min",
+        "abstract": "Why moving well — in sport and in everyday life — depends as much on what you let go of as on what you put in.",
+        "image": "assets/cover-shoulders-stress.jpg",
+        "keywords": [
+          "muscle relaxation · athletic performance · antagonist muscles · recovery and circulation · co-contraction · movement efficiency · motor precision · stress and tension"
+        ],
+        "content": [
+          "When we think about strength, we usually picture effort — a muscle working hard, straining against something heavy. But here's the thing: no muscle ever works alone. Every movement you make, even the small ones, is a team effort. Some muscles pull, some gently give way, and others quietly hold a joint steady so the whole thing ends up where you want it. Lifting your coffee, reaching for a door, turning to talk to a friend — each one is a little piece of teamwork happening without you ever having to think about it.",
+          "Here's a detail that surprises people: a muscle can really only do two things. It can contract, or it can relax. It pulls, but it can't push, and it can't lengthen itself on its own. So whenever one muscle shortens to bend a joint, the muscle on the other side has to let go and lengthen to make room. Your biceps can only lift your forearm if your triceps relaxes and allows it. That means the quality of a movement isn't only about how strongly the working muscle pulls — it's just as much about how easily its partner can release. A muscle that won't quite let go is like driving with the handbrake half on: you still get where you're going, but it costs you more, and it never feels quite smooth.",
+          "That two-muscle picture is a handy way to grasp the idea, but it's really a simplified version. In real life, many muscles join in on even the simplest movement — and that's exactly what gives us such a wonderful range of motion and such fine control. It's a beautiful system when it's relaxed and free to do its job.",
+          "Stress, though, throws a wrench into it. When we're under pressure — a deadline, a heavy bag, or just a hard day — the body tends to tense up and brace, switching on muscles that aren't actually helping. We clench the jaw, hunch the shoulders, grip with the hands. None of that extra tension gets us anywhere; it just muddies the signal, wastes energy, and makes our movements clumsier. The more wound up we are, the stiffer and less precise we become — we even heat up a little — and everything starts to feel like more work than it should. It's why top athletes and dancers train themselves to stay loose under pressure: they know that tension is the enemy of skill.",
+          "And here's the part that matters most — because you really don't have to be an athlete for any of this to apply to you. That same tension quietly builds up in all of us, day after day: from sitting at a desk, from carrying worry in our shoulders, from simply getting through a busy week. Left alone, it doesn't just melt away. It keeps stacking up, and little by little it makes everything you do feel heavier and less easy — your posture, your sleep, the way you reach and bend and walk.",
+          "The good news is that letting go is a skill, and it's one you can absolutely build. Gentle movement, stretching, and hands-on work like massage all teach your body what genuine release actually feels like — and gradually help it find that ease on its own. You don't need to be training for anything. The very same things that help an athlete move with more freedom and precision will help you move through an ordinary day with a lot more ease.",
+          "There's a bonus, too. Soft, relaxed muscle lets blood and nutrients flow through it freely, while tense muscle squeezes that flow down. So the better your muscles can release, the better they're nourished — and the quicker your body bounces back, whether from a workout or a long day on your feet.",
+          "So if there's one thing to take away, it's this: moving well — in sport, or simply in life — isn't only about working harder. A surprising amount of it comes down to learning to let go. And that's something every one of us can get better at."
+        ],
+        "author": "Michael Guralnik",
+        "categoryIds": [
+          "health",
+          "healthy_living",
+          "treatment_techniques"
+        ]
+      },
+      {
+        "id": "new-city-relocation",
+        "categoryId": "healthy_living",
+        "title": "Moving to a new city and what it does to your body",
+        "date": "April 2025",
+        "readTime": "4 min",
+        "abstract": "Relocation stress is real â€” and it shows up physically in ways most people don't expect. Let's look at what's actually happening when you move, and why your shoulders are up at your ears.",
+        "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "relocation stress",
+          "moving Basel",
+          "expat wellness",
+          "body posture",
+          "massage therapist",
+          "grounding"
+        ],
+        "content": [
+          "Moving to a new city is widely ranked as one of life's most intense stressors. While we focus on the logistics â€” finding an apartment in Basel, registering at the town hall, setting up bank accounts â€” our bodies are quietly bearing the brunt of the transition. This is relocation stress, and it is a physical reality.",
+          "When you enter a new environment, every sight, sound, and spatial layout is unfamiliar. Your nervous system operates on high alert to process this influx of new data. Without realizing it, you might find yourself walking with slightly more tension, sleeping less deeply, or holding your breath as you navigate public transit.",
+          "Moreover, the physical acts of packing, lifting heavy boxes, and sleeping on temporary mattresses create structural strain. Combined with emotional fatigue and the absence of your usual social support networks, this physical strain easily manifests as lower back pain, tension headaches, or digestive issues.",
+          "To settle into a new city, you must first settle into your own body. Establishing a grounding routine is crucial. Explore local parks, set regular sleep schedules, and consider scheduling a manual bodywork session. Dedicated bodywork acts as a physical anchor, calming the overstimulated nervous system and helping you feel at home in your body first."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "structural-stiffness",
+        "categoryId": "health",
+        "title": "How to notice structural stiffness before it becomes pain",
+        "date": "May 2025",
+        "readTime": "5 min",
+        "abstract": "The body is constantly whispering before it shouts. Learning to read the subtle changes in your posture can save you weeks of recovery.",
+        "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "back pain prevention",
+          "body awareness",
+          "stiff joints",
+          "fascia release",
+          "manual therapy",
+          "early signs"
+        ],
+        "content": [
+          "We often wait until we are in acute pain before we seek help. But pain is rarely the first stage of a structural problem; it is the final alarm. Long before a muscle spasms or a joint inflames, the body signals restriction through subtle, structural stiffness.",
+          "Structural stiffness is a gradual loss of mobility in your joints and myofascial tissues. It might show up as difficulty turning your head fully to check your blind spot while driving, a slight tightness in your lower back when tying your shoes, or feeling unusually heavy and stiff when getting out of bed in the morning.",
+          "This stiffness is caused by the dehydration and thickening of the fascia â€” the web of connective tissue that wraps around all your muscles and organs. When you sit for long hours or repeat the same movements, the fascia loses its elasticity and begins to stick together, binding muscles and restricting joint movement.",
+          "By learning to listen to these subtle whispers of stiffness, you can intervene early. Dynamic stretching, staying well-hydated, and receiving targeted bodywork treatments can break up fascial adhesions, restore fluid flow, and keep your structural system moving smoothly before pain ever sets in."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "home-in-body",
+        "categoryId": "movement",
+        "title": "What does it mean to feel at home in your body?",
+        "date": "March 2025",
+        "readTime": "6 min",
+        "abstract": "It's more than flexibility or strength. It's a quality of attention â€” and it can be learned through somatic awareness.",
+        "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "body awareness",
+          "connected movement",
+          "Feldenkrais Basel",
+          "mindfulness",
+          "somatic movement",
+          "proprioception"
+        ],
+        "content": [
+          "In our fast-paced, screen-dominated lives, we tend to live almost entirely in our heads. We treat our bodies like vehicles to transport our minds from one meeting to the next. But truly feeling healthy requires more than just maintaining the vehicle; it requires occupying it fully. It means feeling at home in your body.",
+          "Feeling at home in your body is a state of somatic comfort and awareness. It is the ability to perceive your internal state without judgment. It is knowing when you are tired before you collapse, recognizing tension as it starts rather than when it hurts, and moving with a sense of ease and coordination.",
+          "When we lack this connection, we experience a sense of somatic alienation. We feel clumsy, perpetually tense, or surprised by sudden physical pain. Somatic movement practices, such as the Feldenkrais method and Connected Movement, focus on rebuilding this connection. They do not force the body into rigid postures; instead, they guide you through small, curious movements to expand your sensory awareness.",
+          "By cultivating this quality of attention, you start to reclaim your physical self. You learn how your ribs move as you breathe, how your weight shifts as you walk, and where you hold unnecessary effort. This sensory awareness is the true foundation of lasting wellness and physical freedom."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "qi-meridians-wisdom",
+        "categoryId": "oriental_medicine",
+        "title": "The ancient wisdom of Qi and meridians in modern life",
+        "date": "February 2025",
+        "readTime": "7 min",
+        "abstract": "How traditional eastern models of energy lines correspond to myofascial networks and nervous system pathways in modern manual therapy.",
+        "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "Traditional Chinese Medicine",
+          "meridian massage",
+          "Shiatsu therapy",
+          "Qigong flow",
+          "energy pathways",
+          "fascia networks"
+        ],
+        "content": [
+          "Traditional Chinese Medicine (TCM) has long described the body in terms of Qi (vital energy) flowing through a network of pathways called meridians. For centuries, this was viewed by Western science as a purely metaphorical system. Today, however, exciting parallels are emerging between these ancient maps and modern anatomy.",
+          "When we look at myofascial meridian lines â€” the continuous chains of connective tissue that run from our toes to our head â€” we find they trace almost identical pathways to the classical acupuncture meridians. Fascia is highly conductive, transporting fluid, electrical signals, and mechanical force throughout the body. What ancient practitioners called Qi blockage, modern therapists recognize as fascial restriction or poor fluid circulation.",
+          "In Shiatsu and Tuina, applying pressure along these meridians stimulates the autonomic nervous system, improves lymphatic flow, and hydrates the fascial pathways. Rather than working on isolated muscles, these modalities address the whole line of tension, matching the holistic view of Chinese medicine.",
+          "Integrating Qigong or Shiatsu into your wellness routine helps maintain the smooth flow of energy and fluid through these myofascial networks. By bridging Eastern wisdom and Western science, we gain a deeper, more complete toolkit for resolving chronic tension and cultivating vital health."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "myofascial-nutrition",
+        "categoryId": "nutrition",
+        "title": "Nutrition for myofascial recovery: What to eat after bodywork",
+        "date": "January 2025",
+        "readTime": "5 min",
+        "abstract": "Deep tissue work releases metabolites and creates micro-changes in tissue. Here is how hydration and specific nutrients support fascia healing.",
+        "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "fascia recovery",
+          "post-massage nutrition",
+          "anti-inflammatory foods",
+          "hydration tips",
+          "connective tissue",
+          "collagen synthesis"
+        ],
+        "content": [
+          "What you do after a bodywork session is just as important as the treatment itself. A deep therapeutic massage or Tuina session stimulates blood flow, breaks down tissue restrictions, and releases metabolic waste. To rebuild and repair this tissue, your body requires the right nutritional building blocks.",
+          "First and foremost is hydration. Fascia is primarily composed of water and collagen. When fascia gets restricted, it becomes dehydrated and sticky. Bodywork acts like squeezing a sponge, forcing stale fluid out so that clean, nutrient-rich fluid can rush back in. Drinking plenty of water after your session is essential to rehydrate these tissues and support their elasticity.",
+          "In addition to water, your body needs specific nutrients to support collagen synthesis and repair. Vitamin C is a critical cofactor in collagen production â€” foods like bell peppers, citrus fruits, and leafy greens are excellent choices. Amino acids, particularly proline and glycine found in bone broth, fish, and legumes, provide the direct building blocks for connective tissue repair.",
+          "Finally, focus on anti-inflammatory nutrition to manage post-treatment soreness. Healthy fats like omega-3s from walnuts or wild fish, along with spices like ginger and turmeric, help soothe the inflammatory response, allowing your myofascial system to heal stronger and more flexible."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "breathwork-ritual",
+        "categoryId": "healthy_living",
+        "title": "Creating a daily ritual of mindful breathing and pause",
+        "date": "December 2024",
+        "readTime": "4 min",
+        "abstract": "A simple 5-minute daily breathing practice can regulate your autonomic nervous system and lower cortisol levels.",
+        "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "mindful breathing",
+          "vagus nerve stimulation",
+          "stress relief",
+          "daily meditation",
+          "breathwork Basel",
+          "parasympathetic"
+        ],
+        "content": [
+          "We take around 20,000 breaths every single day, yet we rarely pay attention to a single one. Most of the time, we breathe shallowly into our upper chest, a pattern that signals mild stress to our nervous system. Taking control of your breath is the fastest way to change your physiological state.",
+          "Mindful diaphragmatic breathing stimulates the vagus nerve, which acts as the main highway for your parasympathetic ('rest and digest') nervous system. By slowing down your breath and breathing deeply into your abdomen, you send an immediate signal to your brain that you are safe. This lowers your heart rate, reduces blood pressure, and decreases cortisol levels.",
+          "Creating a daily breathing ritual does not require hours of meditation. Just five minutes a day can yield profound benefits. Find a comfortable seat, place one hand on your chest and one on your belly. Inhale through your nose for a count of four, letting your belly expand, and exhale slowly through your mouth for a count of six.",
+          "This simple pause acts as a reset button for your mind and body. Over time, this practice builds somatic resilience, helping you navigate daily stressors with greater calm and preventing stress from accumulating as physical tension in your body."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "shiatsu-vs-classic",
+        "categoryId": "treatment_techniques",
+        "title": "Understanding the difference between Shiatsu and Classic Massage",
+        "date": "June 2026",
+        "readTime": "6 min",
+        "abstract": "One uses oil and works on naked skin; the other is fully clothed pressure-point therapy. Discover which fits your current physical needs.",
+        "image": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "Shiatsu vs massage",
+          "acupressure therapy",
+          "oil-free massage",
+          "body alignment",
+          "massage choices",
+          "TCM bodywork"
+        ],
+        "content": [
+          "When looking to book a bodywork session, the options can be confusing. Two of the most popular therapies are Classic Massage and Shiatsu. While both aim to relieve tension and promote well-being, they come from entirely different lineages and offer very different client experiences.",
+          "Classic Massage (often called Swedish massage) is rooted in Western anatomy and physiology. It is performed directly on the skin using oils or creams. The therapist uses strokes like effleurage (sliding) and petrissage (kneading) to work directly on muscle fibers, increasing circulation and easing physical tension. It is highly effective for localized muscle stiffness and general relaxation.",
+          "Shiatsu, on the other hand, is a traditional Japanese therapy rooted in Chinese Medicine. It is performed fully clothed on a futon mat on the floor, without any oils. Instead of kneading muscles, the practitioner uses fingers, thumbs, elbows, and palms to apply precise pressure along meridian lines. They also guide the client through gentle stretches and joint rotations to restore energy flow and balance the nervous system.",
+          "Choosing between the two depends on your goals and preferences. If you prefer direct skin contact, rhythmic muscular work, and deep relaxation, Classic Massage is ideal. If you prefer to stay clothed, are interested in structural alignment and energy balance, and enjoy deep, static pressure and stretching, Shiatsu may be the perfect fit."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "what-does-my-sugar-intake-have-to-do-with-my-pain",
+        "categoryId": "health",
+        "categoryIds": [
+          "health",
+          "nutrition",
+          "oriental_medicine"
+        ],
+        "title": "What does my sugar intake have to do with my pain?",
+        "date": "June 2026",
+        "readTime": "5 min",
+        "author": "Michael Guralnik",
+        "abstract": "The efect sugar has on our joints from a Chinese Medicine (TCM) perspective ",
+        "image": "assets/cover-what-does-my-sugar-intake-have-to-do-with-my-pain.jpg",
+        "keywords": [
+          "Sugar",
+          "inflamation",
+          "TCM",
+          "Dampness",
+          "Advanced glycation end products"
+        ],
+        "content": [
+          "Chinese medicine has been claiming for thousands of years that one of the most common causes for joint pains we have is “dampness” which is caused by inadequate nutrition that causes the accumulation of undesired “liquids” in the joints.",
+          "Modern practitioners of Chinese medicine do not necessarily expect to find actual liquids in these joints, but rather a stiffness, reduced Range of motion and pressure pain as if these liquids are present in these joints. These pathological (unhealthy) liquids can either be cold, in which case the joint will inflict sharp, stabbing pain, or hot, in which case the joint will be hot and red.",
+          "Based on the distinction between hot and cold dampness, Chinese medicine devised techniques using herbs, acupuncture and manual therapy to deal with these types of “dampness”.",
+          "As farfetched as it sounds, western science now seems to concur with this assumption. Western medicine preferred referring to the syndrome that causes impairment of joints as “rheumatism”, and regards it as an inflammation that is not caused by a pathogen. It is often referred to as either a sterile inflammation or autoimmune disease, which is again a disease that is formed within the body with no external cause.",
+          "For years we see an increase in the popularity of autoimmune diseases, allergies and rheumatic occurrences. Researchers started looking for environmental factors that may explain this increase in these occurrences.",
+          "The culprits that were found so far are processed foods and sugar. Consistent research results indicate the link between added sugar and higher inflammatory markers. Another research stated that drinking sugary drinks can spike inflammations, and their affect may linger over a considerable period of time.",
+          "More dramatic experiments show the connection between consumption of excessive amount of sugar will dramatically increase the production of AGE (Advanced glycation end products) which lead to systemic increase in oxidative stress and inflammation factors.",
+          "Examples of sterile inflammations we frequently see in the clinic occur in the shoulders, little joint arthritic pain (fingers, toes), ankles (particularly plantar fasciitis) and lower back pain cases.",
+          "Often times a drastic reduction in the consumption of sugar can by itself resolve the problem!"
+        ]
+      },
+      {
+        "id": "reflux-and-heartburn-relief",
+        "categoryId": "health",
+        "categoryIds": [
+          "health",
+          "healthy_living",
+          "nutrition",
+          "movement"
+        ],
+        "title": "Reflux and Heartburn Relief",
+        "date": "June 2026",
+        "readTime": "5 min",
+        "author": "Michael Guralnik",
+        "abstract": "Reflux and heartburn explained for everyday life — the high-acid and low-acid pictures, the stress and vagus nerve connection, plus practical nutrition, supplement, and breathing tips for lasting relief.",
+        "image": "assets/cover-reflux-and-heartburn-relief.jpg",
+        "keywords": [
+          "reflux",
+          "heartburn",
+          "GERD",
+          "stomach acid",
+          "vagus nerve",
+          "diaphragmatic breathing",
+          "stress and digestion",
+          "lower oesophageal sphincter"
+        ],
+        "content": [
+          "That warm, rising burn behind the breastbone after a good meal. The sour taste at the back of the throat when you lie down. A cough that won't quite explain itself. Reflux is one of the most common complaints people quietly live with — often for years — assuming it's simply part of how their body works. Sometimes it is something to accept, but very often there's room to feel considerably better.",
+          "<h3>What's actually happening</h3>",
+          "Between your oesophagus (the tube that carries food down) and your stomach sits a ring of muscle called the lower oesophageal sphincter. Its job is simple: open to let food in, then close to keep stomach contents where they belong. Reflux happens when that ring relaxes at the wrong moment, allowing acidic stomach contents to travel back upward. The stomach lining is built to handle acid; the oesophagus is not. That mismatch is what you feel as heartburn.",
+          "Occasional reflux is normal and harmless. When it becomes frequent or persistent, it's usually called GERD (gastro-oesophageal reflux disease) — and that's worth paying attention to.",
+          "<h3>Why it happens</h3>",
+          "The causes are rarely single. Common contributors include eating large or rushed meals, lying down too soon after eating, carrying extra weight around the middle, certain foods (fatty or fried meals, coffee, alcohol, chocolate, mint, very spicy dishes), smoking, some medications, and a hiatal hernia, where part of the stomach pushes up through the diaphragm. And — more on this shortly — stress plays a larger role than most people realise.",
+          "<h3>Two faces of the same fire</h3>",
+          "Here's a distinction that surprises many people. Heartburn feels like too much acid, and for many that's exactly what it is. But not always.",
+          "In the high-acidity picture, the stomach produces plenty of acid, and the problem is mechanical: the sphincter isn't holding, so acid escapes upward. This is the version most antacids and acid-blocking medications are designed for, and for many people they bring real relief.",
+          "In the low-acidity picture, the issue is too little stomach acid. The thinking goes that without enough acid, food sits and ferments rather than moving on, building pressure that pushes contents upward, while the sphincter doesn't get the strong acidic signal it needs to close firmly. People in this group sometimes notice bloating, fullness, and a sense that meals \"just sit there.\"",
+          "Why does the distinction matter? Because the two can call for opposite approaches, and what soothes one may aggravate the other. The honest answer is that telling them apart isn't always straightforward, and self-diagnosis has limits. If reflux is a regular part of your life, this is genuinely worth exploring with a doctor or a qualified practitioner rather than guessing.",
+          "<h3>The stress connection — and your vagus nerve</h3>",
+          "If you've ever noticed your stomach tightening during a stressful week, you've already felt the link. Digestion runs largely on the parasympathetic nervous system — your \"rest and digest\" mode. Stress flips you into \"fight or flight,\" and digestion is one of the first things the body deprioritises when it thinks you're in danger.",
+          "At the centre of this sits the vagus nerve, the long wandering nerve that connects brain and gut. It helps set the tone of the oesophageal sphincter, governs the rhythm of stomach movement, and influences acid secretion. When vagal activity is healthy and steady, the digestive system tends to work smoothly. When you're chronically stressed, that signalling becomes erratic — motility slows, the sphincter behaves less reliably, and reflux finds an opening.",
+          "This is encouraging news, in a way: it means reflux isn't only about what you eat, but about the state you're in when you eat it. And the state of your nervous system is something you can influence.",
+          "<h3>Eating habits that help</h3>",
+          "Small changes to how you eat often matter as much as what's on the plate:",
+          "Eat smaller meals. A full stomach puts pressure on the sphincter. Smaller, more frequent meals ask less of it.",
+          "Don't eat right before bed. Lying down removes gravity's help. Aim to finish eating around three hours before lying down, so your stomach has time to empty.",
+          "Slow down. Eating quickly means swallowing air and under-chewing, which adds pressure and makes digestion harder. A few unhurried minutes before the first bite — even three slow breaths — shifts you toward that \"rest and digest\" state.<br><br>Create joy around your dining table. A meal that is tasty, beautifully served and eaten with no rush reduces the stress, slows down the process, and enables a mindful environment around food and eating. What could be wrong with that?&nbsp;<br>Avoid processed food. Food coming of a shelf in a package often contains ingredients you never expected to be there, and many of the ingredients added to it may not agree with your system. In some industrialized products, these added substances can be downright unhealthy.",
+          "Notice your triggers. Coffee, alcohol, large fatty meals, and very spicy or acidic foods are common culprits, but everyone's list is personal. A short food diary often reveals patterns faster than guesswork.",
+          "Raise the head of the bed slightly if night-time reflux is an issue — a wedge under the mattress works better than stacking pillows.",
+          "<h3>A word on supplements</h3>",
+          "These can support comfort, but they're not a substitute for sorting out the underlying picture — and a few interact with medications or conditions, so it's worth a conversation with a healthcare provider first, especially if you're already on acid-reducing medication.",
+          "i<u style=\"background-color: transparent;\">DGL (deglycyrrhizinated licorice) </u><span style=\"background-color: transparent;\">s a traditional soothing remedy for the digestive lining, with the blood-pressure-raising compound removed.</span>",
+          "<u>Slippery elm and marshmallow root</u> form a gentle, protective coating that many find calming for an irritated throat and oesophagus.",
+          "<u>Melatonin</u> is best known for sleep, but there's interesting evidence it also helps protect the oesophageal lining.",
+          "<u>Magnesium</u> supports muscle function and relaxation, and is gentle for most people.",
+          "<h3>Breathing your way to a calmer gut</h3>",
+          "This is where something genuinely simple meets something genuinely effective. The diaphragm — your main breathing muscle — also wraps around the oesophagus and acts as a natural support to that sphincter. Slow, deep belly breathing does two things at once: it strengthens that diaphragmatic support, and it stimulates the vagus nerve, nudging you into digestive mode.",
+          "A practice to try, ideally before meals and again before bed:",
+          "Sit or lie comfortably with one hand on your belly.",
+          "Breathe in slowly through the nose for about four counts, letting the belly rise — not the chest.",
+          "Exhale gently for about six counts, longer than the in-breath. The extended exhale is what most strongly engages the vagus nerve.",
+          "Continue for five to ten minutes.",
+          "Done regularly, diaphragmatic breathing is one of the few reflux strategies with both research support and no downside. It's also the thread connecting much of what we explore in our movement and Qigong work, where breath and a settled nervous system are the starting point for the body working well.",
+          "<h3>When to see a doctor</h3>",
+          "Reflux is usually a comfort issue, but some signs deserve prompt medical attention: difficulty or pain when swallowing, unexplained weight loss, vomiting, black or bloody stools, or symptoms that persist despite changes and over-the-counter remedies. And because chest discomfort can occasionally signal something to do with the heart rather than the stomach, anything intense, unfamiliar, or accompanied by breathlessness or arm or jaw pain should be checked without delay.",
+          "<h3>The bigger picture</h3>",
+          "Reflux sits right at the meeting point of body and mind — diet, posture, and the state of your nervous system all converge in that one burning sensation. Small, consistent adjustments to how you eat, how you breathe, and how you carry stress can shift things meaningfully. Calming the system that governs digestion is exactly the kind of whole-person work — through breath, movement, and easing the grip of stress on the body — that sits at the heart of what we do.",
+          "If reflux is a regular companion and you'd like to look at the stress and nervous-system side of it, you're welcome to get in touch."
+        ],
+        "published": true
+      },
+      {
+        "id": "acupressure-for-orthopedic-problems",
+        "categoryId": "health",
+        "categoryIds": [
+          "health",
+          "treatment_techniques",
+          "oriental_medicine"
+        ],
+        "title": "Acupressure for Orthopedic Problems",
+        "date": "June 2026",
+        "readTime": "5 min",
+        "author": "Michael Guralnik",
+        "abstract": "How acupressure eases orthopedic and musculoskeletal pain — working with the meridians and the whole body to relieve tight muscles, restore movement, and address pain at its source.",
+        "image": "",
+        "keywords": [
+          "acupressure",
+          "orthopedic pain",
+          "meridian therapy",
+          "musculoskeletal pain",
+          "Shiatsu",
+          "muscle tension",
+          "stress and pain",
+          "manual therapy"
+        ],
+        "content": [
+          "<h3>What counts as an orthopedic problem?</h3><p>An orthopedic problem is anything affecting our limbs, joints, or muscles where we feel pain or find our movement restricted. It usually shows up as an issue in the musculoskeletal system — a stiff shoulder, an aching knee, a back that won't loosen — though it often reflects something originating elsewhere in the body.</p><h3>How we approach these conditions</h3><p>For musculoskeletal complaints we draw on a few complementary approaches: acupressure, movement lessons, and hands-on manual therapy. They overlap and support one another, and which we lean on depends on you and on what your body is asking for.</p><h3>How acupressure helps</h3><p>We don't yet have a complete, textbook explanation in Western scientific terms for why acupressure works as well as it does — but we do understand some of its effects. Applied to specific points, sustained pressure works directly on the muscles, on the nervous system, and through our hormonal system. Working gently with these points helps align and regulate how other systems function too.</p><p>Here are the main ways acupressure helps with orthopedic issues.</p><h3>Meridian therapy</h3><p>The meridians carry other, more subtle qualities, but they also run along lines that roughly follow the muscular and biomechanical structure of the body. By stimulating points along them, we can ease the unhelpful build-ups and deficiencies that gather along these lines — balancing tissue that's overcharged and tight against tissue that's weak or underused, to relieve pain or support a muscle that has wasted.</p><p>With steady thumb or finger pressure we can release taut muscles, wake up muscles that have gone quiet, and even gently fine-tune posture.</p><p>One surprising feature of meridian therapy: because some meridians are very long — a few run all the way from the head to the toes — we can often press a point far from where it hurts and still ease the pain. In Shiatsu, for instance, the intention is often to soften a tender spot indirectly first, by working systemic and meridian points, before approaching it directly.</p><h3>Systemic treatment</h3><p>Some of our local aches are really the local expression of something broader. Treating that wider pattern often clears not only the specific pain but a whole cluster of other complaints — some we'd never have guessed were connected.</p><p>A familiar example is pain that grows out of unresolved stress. Among many other things, stress leads the body to hold its muscles so tightly that they ache and can no longer lengthen the way they're meant to. We could simply work the tight muscle — but if we can ease the source of the tension, or the way the body habitually responds to it, the results tend to last, because we've resolved something deeper that might otherwise have resurfaced elsewhere, as a different problem.</p><p>Taking care of these systemic patterns also makes the local points more effective, by improving the flow through the meridians. In Shiatsu, a session often begins with exactly this kind of groundwork — a base treatment — and only turns to the local pain afterwards, if it hasn't already eased.</p><h3>In short</h3><p>Acupressure offers a gentle, hands-on way to work with orthopedic pain — meeting it both where it hurts and at its source. When a stiff or painful area has been with you for a while, it's often a sign that the body is asking for attention on more than one level.</p><p>If you'd like to explore an acupressure-based approach to a stubborn ache, you're welcome to get in touch.</p>"
+        ],
+        "published": false
+      }
+    ]
+  },
+  "de": {
+    "categories": {
+      "all": "Alle",
+      "health": "Gesundheitsthemen",
+      "healthy_living": "Gesundes Leben",
+      "nutrition": "ErnÃ¤hrung",
+      "movement": "Bewegung",
+      "treatment_techniques": "Behandlungstechniken",
+      "oriental_medicine": "FernÃ¶stliche Medizin",
+      "new_in_clinic": "Neu in der Praxis"
+    },
+    "articles": [
+      {
+        "id": "shoulders-stress",
+        "categoryId": "health",
+        "title": "Die Leichtigkeit hinter der Anstrengung",
+        "date": "Juni 2026",
+        "readTime": "5 Min.",
+        "abstract": "Wir halten emotionale und kÃ¶rperliche Anspannung in Mustern fest, die weit Ã¼ber das Physische hinausgehen. Zu verstehen, wo Ihre Spannung sitzt â€” und warum â€” ist der erste Schritt, sie dauerhaft loszulassen.",
+        "image": "assets/cover-shoulders-stress.jpg",
+        "keywords": [
+          "Muskelentspannung · sportliche Leistung · antagonistische Muskeln · Regeneration und Durchblutung · Kokontraktion · Bewegungseffizienz · motorische Präzision · Stress und Anspannung"
+        ],
+        "content": [
+          "Warum gute Bewegung — im Sport wie im Alltag — ebenso davon abhängt, was wir loslassen, wie davon, was wir hineingeben.",
+          "Wenn wir an Kraft denken, stellen wir uns meist Anstrengung vor — einen Muskel, der hart arbeitet und sich gegen etwas Schweres stemmt. Doch eines ist entscheidend: Kein Muskel arbeitet je allein. Jede Bewegung, die wir machen, auch die kleinste, ist Teamarbeit. Einige Muskeln ziehen, andere geben sanft nach, und wieder andere halten still ein Gelenk stabil, damit das Ganze dort ankommt, wo wir es haben wollen. Die Kaffeetasse heben, nach einer Türklinke greifen, sich umdrehen, um mit einer Freundin zu sprechen — jede dieser Bewegungen ist ein kleines Stück Teamarbeit, das geschieht, ohne dass wir je darüber nachdenken müssen.",
+          "Ein Detail, das viele überrascht: Ein Muskel kann eigentlich nur zweierlei. Er kann sich anspannen oder entspannen. Er zieht, aber er kann nicht schieben, und er kann sich nicht aus eigener Kraft verlängern. Wann immer sich also ein Muskel verkürzt, um ein Gelenk zu beugen, muss der Muskel auf der anderen Seite loslassen und sich verlängern, um Platz zu schaffen. Der Bizeps kann den Unterarm nur dann heben, wenn der Trizeps sich entspannt und es zulässt. Das heisst: Die Qualität einer Bewegung hängt nicht nur davon ab, wie kräftig der arbeitende Muskel zieht — sondern ebenso davon, wie leicht sein Partner loslassen kann. Ein Muskel, der nicht ganz loslassen will, ist wie Autofahren mit halb angezogener Handbremse: Man kommt zwar ans Ziel, aber es kostet mehr, und es fühlt sich nie richtig geschmeidig an.",
+          "Dieses Bild zweier Muskeln ist eine praktische Art, die Idee zu verstehen, doch in Wirklichkeit ist es eine starke Vereinfachung. Tatsächlich wirken bei selbst der einfachsten Bewegung viele Muskeln zusammen — und genau das verschafft uns einen so grossen Bewegungsspielraum und eine so feine Kontrolle. Es ist ein wunderbares System, wenn es entspannt ist und frei seine Arbeit tun kann.",
+          "Stress aber bringt das Ganze durcheinander. Wenn wir unter Druck stehen — eine Deadline, eine schwere Tasche oder einfach ein anstrengender Tag —, neigt der Körper dazu, sich zu verspannen und sich zu wappnen, und schaltet Muskeln ein, die gar nicht helfen. Wir pressen den Kiefer zusammen, ziehen die Schultern hoch, verkrampfen die Hände. Nichts von dieser zusätzlichen Spannung bringt uns voran; sie trübt nur das Signal, verschwendet Energie und macht unsere Bewegungen ungeschickter. Je angespannter wir sind, desto steifer und ungenauer werden wir — wir laufen sogar ein wenig heiss — und alles beginnt, sich mühsamer anzufühlen, als es sein müsste. Darum trainieren Spitzensportlerinnen und Tänzer, unter Druck locker zu bleiben: Sie wissen, dass Anspannung der Feind des Könnens ist.",
+          "Und jetzt kommt das Wichtigste — denn man muss wirklich kein Sportler sein, damit all das auf einen zutrifft. Dieselbe Spannung baut sich bei uns allen leise auf, Tag für Tag: vom Sitzen am Schreibtisch, vom Tragen unserer Sorgen in den Schultern, vom blossen Bewältigen einer vollen Woche. Sich selbst überlassen, löst sie sich nicht einfach auf. Sie staut sich weiter an, und Stück für Stück lässt sie alles, was wir tun, schwerer und mühsamer wirken — unsere Haltung, unseren Schlaf, die Art, wie wir greifen, uns bücken und gehen.",
+          "Die gute Nachricht: Loslassen ist eine Fähigkeit — und eine, die wir uns durchaus aneignen können. Sanfte Bewegung, Dehnen und Körperarbeit wie Massage zeigen dem Körper, wie sich echtes Loslassen tatsächlich anfühlt — und helfen ihm nach und nach, diese Leichtigkeit von selbst zu finden. Man muss für nichts trainieren. Genau dieselben Dinge, die einem Sportler zu mehr Freiheit und Präzision verhelfen, lassen auch uns mit deutlich mehr Leichtigkeit durch einen ganz normalen Tag kommen.",
+          "Und es gibt noch einen schönen Nebeneffekt. Weiches, entspanntes Muskelgewebe lässt Blut und Nährstoffe frei hindurchströmen, während verspanntes Gewebe diesen Fluss drosselt. Je besser unsere Muskeln also loslassen können, desto besser werden sie versorgt — und desto schneller erholt sich unser Körper, ob nach einem Training oder nach einem langen Tag auf den Beinen.",
+          "Wenn es also eines mitzunehmen gibt, dann dies: Sich gut zu bewegen — im Sport oder einfach im Leben — hat nicht nur mit härterem Arbeiten zu tun. Überraschend viel davon liegt darin, das Loslassen zu lernen. Und darin kann jede und jeder von uns besser werden."
+        ],
+        "author": "Michael Guralnik",
+        "categoryIds": [
+          "health",
+          "healthy_living",
+          "treatment_techniques"
+        ]
+      },
+      {
+        "id": "new-city-relocation",
+        "categoryId": "healthy_living",
+        "title": "Umzug in eine neue Stadt und was er mit Ihrem KÃ¶rper macht",
+        "date": "April 2025",
+        "readTime": "4 Min.",
+        "abstract": "Umzugsstress ist real â€” und er zeigt sich kÃ¶rperlich auf Weisen, die die meisten Menschen nicht erwarten. Sehen wir uns an, was beim Umzug wirklich im KÃ¶rper passiert und warum Ihre Schultern so angespannt sind.",
+        "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "Umzugsstress",
+          "Umzug Basel",
+          "Expat Wellness",
+          "KÃ¶rperhaltung",
+          "Massagetherapeut",
+          "Erdung"
+        ],
+        "content": [
+          "Der Umzug in eine neue Stadt gilt als einer der intensivsten Stressfaktoren im Leben. WÃ¤hrend wir uns auf die Logistik konzentrieren â€” Wohnungssuche in Basel, Anmeldung im Rathaus, Bankkonten einrichten â€”, trÃ¤gt unser KÃ¶rper leise die Hauptlast dieses Ãœbergangs. Das ist Umzugsstress, und er ist eine kÃ¶rperliche RealitÃ¤t.",
+          "Wenn Sie in eine neue Umgebung kommen, ist jeder Anblick, jedes GerÃ¤usch und jeder Weg ungewohnt. Ihr Nervensystem arbeitet auf Hochtouren, um diese Flut neuer Daten zu verarbeiten. Ohne es zu merken, gehen Sie vielleicht mit etwas mehr Anspannung, schlafen weniger tief oder halten in der StraÃŸenbahn unbewusst den Atem an.",
+          "Zudem belasten das Kistenpacken, das Tragen schwerer Lasten und das Schlafen auf provisorischen Matratzen den Bewegungsapparat. Zusammen mit emotionaler ErschÃ¶pfung und dem Fehlen Ihres gewohnten sozialen Umfelds Ã¤uÃŸert sich diese Belastung schnell in RÃ¼ckenschmerzen, Spannungskopfschmerzen oder Verdauungsproblemen.",
+          "Um in einer neuen Stadt anzukommen, mÃ¼ssen Sie zuerst in Ihrem eigenen KÃ¶rper ankommen. Eine erdende Routine ist dabei entscheidend. Erkunden Sie lokale Parks, achten Sie auf regelmÃ¤ÃŸige Schlafenszeiten und gÃ¶nnen Sie sich eine manuelle KÃ¶rpertherapie. Gezielte KÃ¶rperarbeit wirkt wie ein physischer Anker, der das Ã¼berreizte Nervensystem beruhigt und Ihnen hilft, sich zuerst im eigenen KÃ¶rper zu Hause zu fÃ¼hlen."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "structural-stiffness",
+        "categoryId": "health",
+        "title": "Wie Sie strukturelle Steifheit bemerken, bevor sie zu Schmerzen wird",
+        "date": "Mai 2025",
+        "readTime": "5 Min.",
+        "abstract": "Der KÃ¶rper flÃ¼stert, bevor er schreit. Wenn Sie lernen, die subtilen VerÃ¤nderungen in Ihrer Haltung zu lesen, kÃ¶nnen Sie sich wochenlange Regeneration sparen.",
+        "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "RÃ¼ckenschmerzen PrÃ¤vention",
+          "KÃ¶rperbewusstsein",
+          "steife Gelenke",
+          "FaszienlÃ¶sung",
+          "manuelle Therapie",
+          "FrÃ¼hwarnzeichen"
+        ],
+        "content": [
+          "Oft warten wir, bis wir akute Schmerzen haben, bevor wir etwas unternehmen. Aber Schmerz ist selten die erste Stufe eines structuralen Problems, sondern der letzte Alarm. Lange bevor ein Muskel verkrampft oder sich ein Gelenk entzÃ¼ndet, signalisiert der KÃ¶rper EinschrÃ¤nkungen durch subtile, strukturelle Steifheit.",
+          "Strukturelle Steifheit ist ein schleichender Verlust der Beweglichkeit in Gelenken und myofaszialen Geweben. Sie Ã¤uÃŸert sich zum Beispiel darin, dass es schwerfÃ¤llt, den Kopf beim Autofahren fÃ¼r den Schulterblick ganz zu drehen, dass sich der untere RÃ¼cken beim Schuhebinden eng anfÃ¼hlt oder dass man morgens nur schwer aus dem Bett kommt.",
+          "Diese Steifheit wird durch das Verkleben und Verdicken der Faszien verursacht â€” dem Bindegewebsnetz, das all unsere Muskeln und Organe umhÃ¼llt. Bei langem Sitzen oder einseitigen Bewegungen verlieren die Faszien ihre ElastizitÃ¤t, verkleben und schrÃ¤nken die GleitfÃ¤higkeit der Muskeln und Gelenke ein.",
+          "Indem Sie lernen, auf dieses leise FlÃ¼stern der Steifheit zu hÃ¶ren, kÃ¶nnen Sie frÃ¼hzeitig gegensteuern. Dynamisches Dehnen, ausreichende FlÃ¼ssigkeitszufuhr und gezielte KÃ¶rpertherapie lÃ¶sen Faszienverklebungen, regen den FlÃ¼ssigkeitsfluss an und halten Ihren Bewegungsapparat geschmeidig, noch bevor Schmerzen entstehen."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "home-in-body",
+        "categoryId": "movement",
+        "title": "Was bedeutet es, sich in seinem KÃ¶rper zu Hause zu fÃ¼hlen?",
+        "date": "MÃ¤rz 2025",
+        "readTime": "6 Min.",
+        "abstract": "Es ist mehr als nur Beweglichkeit oder Kraft. Es ist eine QualitÃ¤t der Aufmerksamkeit â€” und diese lÃ¤sst sich durch somatisches Lernen schulen.",
+        "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "KÃ¶rperwahrnehmung",
+          "Bewegungstherapie",
+          "Feldenkrais Basel",
+          "Achtsamkeit",
+          "somatische Bewegung",
+          "Propriozeption"
+        ],
+        "content": [
+          "In unserem schnellen, bildschirmdominierten Alltag leben wir fast nur noch im Kopf. Wir behandeln unseren KÃ¶rper wie ein Transportmittel, das unseren Verstand von einem Meeting zum nÃ¤chsten bringt. Doch echte Gesundheit erfordert, dass wir dieses GefÃ¤hrt nicht nur instand halten, sondern es ganz bewohnen. Es bedeutet, sich im eigenen KÃ¶rper zu Hause zu fÃ¼hlen.",
+          "Sich im KÃ¶rper zu Hause zu fÃ¼hlen, beschreibt einen Zustand somatischer Sicherheit und Achtsamkeit. Es ist die FÃ¤higkeit, den eigenen inneren Zustand wertfrei wahrzunehmen: Zu spÃ¼ren, dass man mÃ¼de ist, bevor man erschÃ¶pft zusammenbricht, Anspannung zu bemerken, wenn sie entsteht, und sich koordiniert und leicht zu bewegen.",
+          "Wenn diese Verbindung fehlt, fÃ¼hlen wir uns oft ungeschickt, dauerhaft angespannt oder werden von plÃ¶tzlichen Schmerzen Ã¼berrascht. Somatische Bewegungspraktiken wie die Feldenkrais-Methode und Connected Movement setzen genau hier an. Sie zwingen den KÃ¶rper nicht in starre Posen, sondern leiten zu kleinen, spielerischen Bewegungen an, um die sensorische Wahrnehmung zu erweitern.",
+          "Durch diese Schulung der Aufmerksamkeit holen Sie sich Ihr kÃ¶rperliches Selbst zurÃ¼ck. Sie lernen, wie sich Ihre Rippen beim Atmen bewegen, wie sich Ihr Gewicht beim Gehen verlagert und wo Sie unnÃ¶tig Kraft aufwenden. Diese Wahrnehmung ist das wahre Fundament fÃ¼r nachhaltiges Wohlbefinden und kÃ¶rperliche Freiheit."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "qi-meridians-wisdom",
+        "categoryId": "oriental_medicine",
+        "title": "Die alte Weisheit von Qi und Meridianen im modernen Leben",
+        "date": "Februar 2025",
+        "readTime": "7 Min.",
+        "abstract": "Wie traditionelle Ã¶stliche Konzepte von Energiebahnen mit den myofaszialen Leitbahnen und Nervenbahnen der modernen manuellen Therapie Ã¼bereinstimmen.",
+        "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "Traditionelle Chinesische Medizin",
+          "Meridianmassage",
+          "Shiatsu-Therapie",
+          "Qigong-Fluss",
+          "Energiebahnen",
+          "Fasziennetzwerk"
+        ],
+        "content": [
+          "Die Traditionelle Chinesische Medizin (TCM) beschreibt den KÃ¶rper seit jeher Ã¼ber den Fluss von Qi (Lebensenergie) durch ein System von Leitbahnen, den Meridianen. Lange Zeit wurde dies von der westlichen Wissenschaft als rein metaphorisch abgetan. Heute zeigen sich jedoch faszinierende Parallelen zwischen diesen alten Karten und der modernen Anatomie.",
+          "Betrachtet man die myofaszialen Meridiane â€” die kontinuierlichen Bindegewebsketten, die von den Zehen bis zum Kopf verlaufen â€”, stellt man fest, dass sie fast identisch mit den klassischen Akupunkturmeridianen sind. Faszien sind hochgradig leitfÃ¤hig; sie transportieren FlÃ¼ssigkeit, elektrische Signale und mechanische KrÃ¤fte. Was die TCM als Qi-Blockade bezeichnet, beschreibt die moderne Medizin als Faszienverklebung oder gestÃ¶rte Mikrozirkulation.",
+          "Im Shiatsu und Tuina regt der Druck entlang dieser Meridiane das vegetative Nervensystem an, verbessert den Lymphfluss und rehydriert die Faszienbahnen. Statt isolierte Muskeln zu behandeln, sprechen diese Methoden ganze Spannungslinien an, was dem ganzheitlichen Ansatz der TCM entspricht.",
+          "Die Integration von Qigong oder Shiatsu in den Alltag hilft, den freien Fluss von Energie und FlÃ¼ssigkeit in diesen myofaszialen Netzen zu erhalten. Indem wir Ã¶stliche Weisheit und westliche Wissenschaft verbinden, erhalten wir ein tieferes VerstÃ¤ndnis und wirksamere Werkzeuge fÃ¼r unsere Gesundheit."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "myofascial-nutrition",
+        "categoryId": "nutrition",
+        "title": "ErnÃ¤hrung fÃ¼r die myofasziale Regeneration: Was man nach der KÃ¶rperarbeit essen sollte",
+        "date": "Januar 2025",
+        "readTime": "5 Min.",
+        "abstract": "Tiefenwirksame KÃ¶rperarbeit setzt Stoffwechselprodukte frei und erzeugt MikroverÃ¤nderungen im Gewebe. So unterstÃ¼tzen FlÃ¼ssigkeit und gezielte NÃ¤hrstoffe die Heilung der Faszien.",
+        "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "Faszienregeneration",
+          "ErnÃ¤hrung nach Massage",
+          "entzÃ¼ndungshemmende Lebensmittel",
+          "Hydratationstipps",
+          "Bindegewebe",
+          "Kollagensynthese"
+        ],
+        "content": [
+          "Was Sie nach einer KÃ¶rpertherapie-Sitzung tun, ist genauso wichtig wie die Behandlung selbst. Eine tiefe Massage oder Tuina-Sitzung regt die Durchblutung an, lÃ¶st Gewebeverklebungen und bringt Stoffwechselendprodukte in Bewegung. Um dieses Gewebe nun optimal zu reparieren, benÃ¶tigt Ihr KÃ¶rper die richtigen Bausteine.",
+          "An erster Stelle steht die FlÃ¼ssigkeitszufuhr. Faszien bestehen hauptsÃ¤chlich aus Wasser und Kollagen. Bei Verspannungen trocknen sie aus und verkleben. Die manuelle Behandlung wirkt wie das Auswringen eines Schwamms: Altes Gewebewasser wird herausgepresst, damit frische, nÃ¤hrstoffreiche FlÃ¼ssigkeit nachstrÃ¶men kann. Trinken Sie danach reichlich Wasser, um diesen Prozess zu unterstÃ¼tzen.",
+          "ZusÃ¤tzlich benÃ¶tigt Ihr KÃ¶rper bestimmte NÃ¤hrstoffe fÃ¼r die Kollagensynthese. Vitamin C ist hierfÃ¼r ein essenzieller Kofaktor â€” Paprika, ZitrusfrÃ¼chte und grÃ¼nes BlattgemÃ¼se sind ideal. AminosÃ¤uren wie Prolin und Glycin, die in KnochenbrÃ¼he, Fisch und HÃ¼lsenfrÃ¼chten vorkommen, liefern die direkten Bausteine fÃ¼r die Reparatur des Bindegewebes.",
+          "Setzen Sie schlieÃŸlich auf entzÃ¼ndungshemmende Nahrungsmittel, um eventuellen Muskelkater nach der Behandlung abzumildern. Gesunde Fette (Omega-3-FettsÃ¤uren aus WalnÃ¼ssen oder Wildfisch) sowie GewÃ¼rze wie Ingwer und Kurkuma regulieren die EntzÃ¼ndungsreaktion und helfen dem myofaszialen System, elastischer und stÃ¤rker zu heilen."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "breathwork-ritual",
+        "categoryId": "healthy_living",
+        "title": "Ein tÃ¤gliches Ritual des achtsamen Atmens und Innehaltens schaffen",
+        "date": "Dezember 2024",
+        "readTime": "4 Min.",
+        "abstract": "Eine einfache 5-minÃ¼tige tÃ¤gliche AtemÃ¼bung kann Ihr vegetatives Nervensystem regulieren und den Cortisolspiegel senken.",
+        "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "achtsames Atmen",
+          "Vagusnerv-Stimulation",
+          "Stressabbau",
+          "tÃ¤gliche Meditation",
+          "AtemÃ¼bungen Basel",
+          "Parasympathikus"
+        ],
+        "content": [
+          "Wir atmen tÃ¤glich etwa 20.000 Mal, schenken aber kaum einem einzigen Atemzug Beachtung. Meistens atmen wir flach in die Brust, was dem Nervensystem unterschwellig Stress signalisiert. Den Atem bewusst zu steuern, ist der schnellste Weg, den eigenen physiologischen Zustand zu verÃ¤ndern.",
+          "Die tiefe Zwerchfellatmung stimuliert den Vagusnerv, die Hauptleitung unseres Parasympathikus ('Ruhen und Verdauen'). Wenn Sie den Atem verlangsamen und tief in den Bauch lenken, signalisieren Sie dem Gehirn sofortige Sicherheit. Der Puls sinkt, der Blutdruck reguliert sich und die AusschÃ¼ttung von Stresshormonen wird gebremst.",
+          "FÃ¼r ein tÃ¤gliches Atemritual mÃ¼ssen Sie nicht stundenlang meditieren. Schon fÃ¼nf Minuten am Tag haben eine spÃ¼rbare Wirkung. Setzen Sie sich aufrecht hin, legen Sie eine Hand auf die Brust und die andere auf den Bauch. Atmen Sie vier Sekunden lang durch die Nase ein, sodass sich der Bauch hebt, und atmen Sie sechs Sekunden lang langsam durch den Mund aus.",
+          "Dieses bewusste Innehalten wirkt wie ein Reset-Knopf fÃ¼r KÃ¶rper und Geist. RegelmÃ¤ÃŸig geÃ¼bt, stÃ¤rkt es Ihre somatische Widerstandskraft, hilft Ihnen, gelassener auf Alltagsstressoren zu reagieren, und verhindert, dass sich Stress als chronische Anspannung im KÃ¶rper festsetzt."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "shiatsu-vs-classic",
+        "categoryId": "treatment_techniques",
+        "title": "Den Unterschied zwischen Shiatsu und klassischer Massage verstehen",
+        "date": "Juni 2026",
+        "readTime": "6 Min.",
+        "abstract": "Die eine Behandlung nutzt Ã–l auf der nackten Haut, die andere ist eine Druckpunkttherapie am bekleideten KÃ¶rper. Finden Sie heraus, was am besten zu Ihnen passt.",
+        "image": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=900&q=80&auto=format&fit=crop",
+        "keywords": [
+          "Shiatsu vs. Massage",
+          "Akupressur-Therapie",
+          "Ã¶lfreie Massage",
+          "KÃ¶rperausrichtung",
+          "Massage-Auswahl",
+          "TCM KÃ¶rperarbeit"
+        ],
+        "content": [
+          "Bei der Suche nach der passenden KÃ¶rpertherapie verliert man bei den vielen Begriffen schnell den Ãœberblick. Zwei der beliebtesten Methoden sind die Klassische Massage und Shiatsu. Beide lindern Verspannungen und fÃ¶rdern das Wohlbefinden, basieren jedoch auf vÃ¶llig unterschiedlichen AnsÃ¤tzen.",
+          "Die Klassische Massage (auch schwedische Massage genannt) grÃ¼ndet auf der westlichen Anatomie und Physiologie. Sie wird mit Ã–l direkt auf der Haut durchgefÃ¼hrt. Mit Streichungen, Knetungen und Friktionen arbeitet der Therapeut direkt an den Muskelfasern, um die Durchblutung zu fÃ¶rdern und lokale Verspannungen zu lÃ¶sen. Sie ist ideal bei Muskelkater, Verspannungen und fÃ¼r allgemeine Entspannung.",
+          "Shiatsu hingegen ist eine traditionelle japanische Therapie, die auf der Chinesischen Medizin basiert. Sie wird ohne Ã–l und am bekleideten KÃ¶rper auf einer Futonmatte am Boden praktiziert. Statt Muskeln zu kneten, Ã¼bt der Therapeut mit Fingern, Daumen, Ellbogen und HandflÃ¤chen tiefen, konstanten Druck auf Akupunkturpunkte und Meridiane aus. ErgÃ¤nzt wird dies durch Dehnungen und Gelenkmobilisationen.",
+          "Die Wahl hÃ¤ngt ganz von Ihren BedÃ¼rfnissen ab: Wenn Sie direkten Hautkontakt, flieÃŸende Knetbewegungen und tiefe Entspannung suchen, ist die Klassische Massage ideal. Wenn Sie bekleidet bleiben mÃ¶chten, eine tiefere Ausrichtung von KÃ¶rper und Nervensystem suchen und statischen Druck sowie Dehnungen schÃ¤tzen, ist Shiatsu die perfekte Wahl."
+        ],
+        "author": "Michael Guralnik",
+        "published": false
+      },
+      {
+        "id": "what-does-my-sugar-intake-have-to-do-with-my-pain",
+        "categoryId": "health",
+        "categoryIds": [
+          "health",
+          "nutrition",
+          "oriental_medicine"
+        ],
+        "title": "Was hat meine Zuckeraufnahme mit meinen Schmerzen zu tun?",
+        "date": "Juni 2026",
+        "readTime": "5 Min.",
+        "author": "Michael Guralnik",
+        "abstract": "Der Efektzucker hat aus Sicht der Chinesischen Medizin (TCM) auf unseren Gelenken",
+        "image": "assets/cover-what-does-my-sugar-intake-have-to-do-with-my-pain.jpg",
+        "keywords": [
+          "Zucker",
+          "Entzündung",
+          "TCM",
+          "Feuchtigkeit",
+          "Endprodukte für fortgeschrittene Glykierung"
+        ],
+        "content": [
+          "Die chinesische Medizin behauptet seit Tausenden von Jahren, dass eine der häufigsten Ursachen für Gelenkschmerzen „Feuchtigkeit“ ist, die durch eine unzureichende Ernährung verursacht wird, die die Ansammlung unerwünschter „Flüssigkeiten“ in den Gelenken verursacht.",
+          "Moderne Praktiker der chinesischen Medizin erwarten nicht unbedingt, in diesen Gelenken tatsächliche Flüssigkeiten zu finden, sondern eher eine Steifheit, einen reduzierten Bewegungsumfang und Druckschmerzen, als ob diese Flüssigkeiten in diesen Gelenken vorhanden wären. Diese pathologischen (ungesunden) Flüssigkeiten können entweder kalt sein, wobei das Gelenk scharfe, stechende Schmerzen verursacht, oder heiß, wobei das Gelenk heiß und rot ist.",
+          "Basierend auf der Unterscheidung zwischen heißer und kalter Feuchtigkeit entwickelte die chinesische Medizin Techniken mit Kräutern, Akupunktur und manueller Therapie, um mit diesen Arten von „Feuchtigkeit“ umzugehen.",
+          "So weit hergeholt es auch klingen mag, die westliche Wissenschaft scheint dieser Annahme nun zuzustimmen. Die westliche Medizin zieht es vor, das Syndrom, das eine Beeinträchtigung der Gelenke verursacht, als „Rheuma“ zu bezeichnen, und betrachtet es als eine Entzündung, die nicht durch einen Erreger verursacht wird. Es wird oft entweder als sterile Entzündung oder als Autoimmunerkrankung bezeichnet, bei der es sich wiederum um eine Krankheit handelt, die sich ohne äußere Ursache im Körper bildet.",
+          "Seit Jahren beobachten wir eine zunehmende Beliebtheit von Autoimmunerkrankungen, Allergien und rheumatischen Erkrankungen. Die Forscher begannen, nach Umweltfaktoren zu suchen, die diesen Anstieg dieser Vorkommen erklären könnten.",
+          "Die Täter, die bisher gefunden wurden, sind verarbeitete Lebensmittel und Zucker. Konsistente Forschungsergebnisse weisen auf den Zusammenhang zwischen zugesetztem Zucker und höheren Entzündungsmarkern hin. Eine andere Studie ergab, dass das Trinken zuckerhaltiger Getränke Entzündungen auslösen kann und ihre Auswirkungen über einen beträchtlichen Zeitraum anhalten können.",
+          "Dramatischere Experimente zeigen, dass der Zusammenhang zwischen dem Konsum übermäßiger Zuckermengen die Produktion von AGE (Advanced glycation end products) dramatisch erhöht, was zu einem systemischen Anstieg von oxidativem Stress und Entzündungsfaktoren führt.",
+          "Beispiele für sterile Entzündungen, die wir in der Klinik häufig sehen, treten in den Schultern, kleinen arthritischen Gelenkschmerzen (Finger, Zehen), Knöcheln (insbesondere Plantarfasziitis) und Fällen von Rückenschmerzen auf.",
+          "Oft kann eine drastische Reduzierung des Zuckerkonsums das Problem allein lösen!"
+        ]
+      },
+      {
+        "id": "reflux-and-heartburn-relief",
+        "categoryId": "health",
+        "categoryIds": [
+          "health",
+          "healthy_living",
+          "nutrition",
+          "movement"
+        ],
+        "title": "Linderung von Reflux und Sodbrennen",
+        "date": "Juni 2026",
+        "readTime": "5 Min.",
+        "author": "Michael Guralnik",
+        "abstract": "Reflux und Sodbrennen für den Alltag erklärt – die Bilder mit hohem und niedrigem Säuregehalt, der Stress- und Vagusnerv-Verbindung sowie praktische Ernährungs-, Nahrungsergänzungsmittel- und Atemtipps für dauerhafte Linderung.",
+        "image": "assets/cover-reflux-and-heartburn-relief.jpg",
+        "keywords": [
+          "Reflux",
+          "Sodbrennen",
+          "GERD",
+          "Magensäure",
+          "Vagusnerv",
+          "Zwerchfellatmung",
+          "Stress und Verdauung",
+          "unterer Schließmuskel der Speiseröhre"
+        ],
+        "content": [
+          "Diese warme, aufsteigende Verbrennung hinter dem Brustbein nach einer guten Mahlzeit. Der saure Geschmack an der Rückseite der Kehle, wenn du dich hinlegst. Ein Husten, der sich nicht ganz erklären lässt. Reflux ist eine der häufigsten Beschwerden, mit denen Menschen ruhig leben — oft jahrelang — unter der Annahme, dass es einfach Teil der Funktionsweise ihres Körpers ist. Manchmal ist es etwas, das man akzeptieren kann, aber sehr oft gibt es Raum, sich wesentlich besser zu fühlen.",
+          "<h3>was eigentlich gerade passiert.</h3>",
+          "Zwischen Ihrer Speiseröhre (der Röhre, die Nahrung nach unten transportiert) und Ihrem Magen sitzt ein Muskelring, der als unterer Ösophagusschließmuskel bezeichnet wird. Seine Aufgabe ist einfach: öffnen, um Nahrung hereinzulassen, dann schließen, um den Mageninhalt dort aufzubewahren, wo er hingehört. Reflux tritt auf, wenn sich dieser Ring im falschen Moment entspannt, so dass saurer Mageninhalt wieder nach oben wandern kann. Die Magenschleimhaut ist für den Umgang mit Säure ausgelegt; die Speiseröhre nicht. Dieses Missverhältnis ist das, was Sie als Sodbrennen empfinden.",
+          "Gelegentlicher Reflux ist normal und harmlos. Wenn es häufig oder hartnäckig wird, wird es normalerweise GERD (gastroösophageale Refluxkrankheit) genannt — und das ist es wert, darauf zu achten.",
+          "<h3>Problem</h3>",
+          "Die Ursachen sind selten einzeln. Häufige Mitwirkende sind große oder überstürzte Mahlzeiten, zu frühes Liegen nach dem Essen, zusätzliches Gewicht in der Mitte, bestimmte Lebensmittel (fettige oder frittierte Mahlzeiten, Kaffee, Alkohol, Schokolade, Minze, sehr würzige Gerichte), Rauchen, einige Medikamente und eine Hiatushernie, bei der ein Teil des Magens durch das Zwerchfell nach oben drückt. Und — in Kürze mehr dazu — Stress spielt eine größere Rolle, als die meisten Menschen erkennen.",
+          "<h3>Zwei Gesichter desselben Feuers</h3>",
+          "Hier ist ein Unterschied, der viele Menschen überrascht. Sodbrennen fühlt sich wie zu viel Säure an, und für viele ist es genau das, was es ist. Aber nicht immer.",
+          "Im Bild mit hoher Säure produziert der Magen viel Säure, und das Problem ist mechanisch: Der Schließmuskel hält nicht, so dass Säure nach oben entweicht. Dies ist die Version, für die die meisten Antazida und säureblockierenden Medikamente entwickelt wurden, und für viele Menschen bringen sie echte Erleichterung.",
+          "Im Niedrigsäurebild geht es um zu wenig Magensäure. Es wird angenommen, dass Nahrung ohne genügend Säure sitzt und fermentiert, anstatt weiterzumachen, wodurch Druck aufgebaut wird, der den Inhalt nach oben drückt, während der Schließmuskel nicht das starke saure Signal erhält, das er benötigt, um sich fest zu schließen. Menschen in dieser Gruppe bemerken manchmal Blähungen, Fülle und das Gefühl, dass Mahlzeiten \"einfach da sitzen\".",
+          "Warum ist die Unterscheidung wichtig? Denn die beiden können gegensätzliche Ansätze verlangen, und was das eine beruhigt, kann das andere verschlimmern. Die ehrliche Antwort ist, dass es nicht immer einfach ist, sie auseinander zu halten, und die Selbstdiagnose hat Grenzen. Wenn Reflux ein fester Bestandteil Ihres Lebens ist, lohnt es sich wirklich, dies mit einem Arzt oder einem qualifizierten Arzt zu erkunden, anstatt zu raten.",
+          "<h3>Die Stressverbindung — und Ihr Vagusnerv</h3>",
+          "Wenn Sie jemals bemerkt haben, dass sich Ihr Magen während einer stressigen Woche gestrafft hat, haben Sie die Verbindung bereits gespürt. Die Verdauung erfolgt weitgehend über das parasympathische Nervensystem — den „Ruhe- und Verdauungsmodus“. Stress versetzt Sie in \"Kampf oder Flucht\", und die Verdauung ist eines der ersten Dinge, denen der Körper den Vorrang nimmt, wenn er denkt, dass Sie in Gefahr sind.",
+          "Im Zentrum davon sitzt der Vagusnerv, der lange wandernde Nerv, der Gehirn und Darm verbindet. Es hilft, den Tonus des Ösophagussphinkters einzustellen, regelt den Rhythmus der Magenbewegung und beeinflusst die Säuresekretion. Wenn die vagale Aktivität gesund und stabil ist, neigt das Verdauungssystem dazu, reibungslos zu funktionieren. Wenn Sie chronisch gestresst sind, wird diese Signalisierung unregelmäßig — die Motilität verlangsamt sich, der Schließmuskel verhält sich weniger zuverlässig und der Reflux findet eine Öffnung.",
+          "Dies ist in gewisser Weise eine ermutigende Nachricht: Es bedeutet, dass es bei Reflux nicht nur darum geht, was Sie essen, sondern auch um den Zustand, in dem Sie sich befinden, wenn Sie es essen. Und der Zustand Ihres Nervensystems ist etwas, das Sie beeinflussen können.",
+          "<h3>Essgewohnheiten, die helfen</h3>",
+          "Kleine Veränderungen in der Art und Weise, wie Sie essen, sind oft genauso wichtig wie das, was auf dem Teller ist:",
+          "Essen Sie kleinere Mahlzeiten. Ein voller Magen übt Druck auf den Schließmuskel aus. Kleinere, häufigere Mahlzeiten verlangen weniger davon.",
+          "Essen Sie nicht direkt vor dem Schlafengehen. Das Hinlegen entfernt die Hilfe der Schwerkraft. Ziel ist es, etwa drei Stunden vor dem Liegen mit dem Essen fertig zu sein, damit dein Magen Zeit hat, sich zu leeren.",
+          "Langsam. Schnell essen bedeutet, Luft zu schlucken und zu wenig zu kauen, was den Druck erhöht und die Verdauung erschwert. Ein paar ruhige Minuten vor dem ersten Bissen — sogar drei langsame Atemzüge — versetzen Sie in diesen \"Ruhe- und Verdauungszustand\".<br><br>Schaffen Sie Freude rund um Ihren Esstisch. Eine Mahlzeit, die schmackhaft ist, schön serviert und ohne Eile gegessen wird, reduziert den Stress, verlangsamt den Prozess und ermöglicht eine achtsame Umgebung rund um Essen und Essen. Was könnte daran falsch sein?&nbsp;",
+          "Beachten Sie Ihre Auslöser. Kaffee, Alkohol, große fetthaltige Mahlzeiten und sehr würzige oder säurehaltige Lebensmittel sind häufige Schuldige, aber die Liste aller ist persönlich. Ein kurzes Ernährungstagebuch deckt Muster oft schneller auf als Vermutungen.",
+          "Heben Sie den Kopf des Bettes leicht an, wenn nächtlicher Reflux ein Problem ist — ein Keil unter der Matratze funktioniert besser als das Stapeln von Kissen.",
+          "<h3>Ein Wort zu Nahrungsergänzungsmitteln</h3>",
+          "Diese können den Komfort unterstützen, sind aber kein Ersatz für das zugrunde liegende Bild — und einige interagieren mit Medikamenten oder Erkrankungen. Daher lohnt es sich, zuerst mit einem Arzt zu sprechen, insbesondere wenn Sie bereits säurereduzierende Medikamente einnehmen.",
+          "i<u style=\"background-color: transparent;\">dgl (deglycyrrhiziniertes Lakritz) </u><span style=\"background-color: transparent;\">ist ein traditionelles beruhigendes Mittel für die Verdauungsschleimhaut, bei dem die blutdruckerhöhende Verbindung entfernt wurde.</span>",
+          "<u>Rutschige Ulme und Marshmallowwurzel</u> bilden eine sanfte, schützende Beschichtung, die viele bei einer gereizten Kehle und Speiseröhre beruhigend finden.",
+          "<u>Melatonin</u> ist am besten für den Schlaf bekannt, aber es gibt interessante Beweise dafür, dass es auch zum Schutz der Speiseröhrenschleimhaut beiträgt.",
+          "<u>Magnesium</u> unterstützt die Muskelfunktion und Entspannung und ist für die meisten Menschen sanft.",
+          "<h3>Atmen Sie Ihren Weg zu einem ruhigeren Darm</h3>",
+          "Hier trifft etwas wirklich Einfaches auf etwas Wirkungsvolles. Das Zwerchfell — Ihr Hauptatemmuskel — umschließt auch die Speiseröhre und wirkt als natürliche Unterstützung für diesen Schließmuskel. Die langsame, tiefe Bauchatmung bewirkt zwei Dinge gleichzeitig: Sie stärkt die Zwerchfellunterstützung und stimuliert den Vagusnerv, wodurch Sie in den Verdauungsmodus versetzt werden.",
+          "Eine Übung zum Ausprobieren, idealerweise vor den Mahlzeiten und erneut vor dem Schlafengehen:",
+          "Sitze oder lege dich bequem mit einer Hand auf deinen Bauch.",
+          "Atme etwa viermal langsam durch die Nase ein und lasse den Bauch aufsteigen — nicht die Brust.",
+          "Atme etwa sechs Mal sanft aus, länger als beim Einatmen. Am stärksten greift der Vagusnerv durch das verlängerte Ausatmen an.",
+          "Fahren Sie fünf bis zehn Minuten fort.",
+          "Regelmäßig durchgeführt, ist die Zwerchfellatmung eine der wenigen Refluxstrategien, die sowohl die Forschung unterstützen als auch keinen Nachteil haben. Es ist auch der Faden, der viel von dem verbindet, was wir in unserer Bewegung und Qigong-Arbeit erforschen, wo Atem und ein beruhigtes Nervensystem der Ausgangspunkt für den Körper sind, der gut arbeitet.",
+          "<h3>Wann man einen Arzt aufsuchen sollte</h3>",
+          "Reflux ist in der Regel ein Komfortproblem, aber einige Anzeichen verdienen sofortige medizinische Hilfe: Schwierigkeiten oder Schmerzen beim Schlucken, unerklärlicher Gewichtsverlust, Erbrechen, schwarzer oder blutiger Stuhl oder Symptome, die trotz Veränderungen und rezeptfreien Mitteln bestehen bleiben. Und weil Brustbeschwerden gelegentlich etwas mit dem Herzen und nicht mit dem Magen zu tun haben können, sollte alles Intensive, Unbekannte oder Begleiterscheinungen von Atemnot oder Arm- oder Kieferschmerzen unverzüglich überprüft werden.",
+          "<h3>Das größerer Ganze</h3>",
+          "Reflux sitzt direkt am Treffpunkt von Körper und Geist — Ernährung, Haltung und der Zustand Ihres Nervensystems laufen in diesem einen brennenden Gefühl zusammen. Kleine, konsistente Anpassungen an die Art und Weise, wie Sie essen, wie Sie atmen und wie Sie Stress tragen, können die Dinge sinnvoll verändern. Die Beruhigung des Systems, das die Verdauung steuert, ist genau die Art von Ganzkörperarbeit — durch Atem, Bewegung und die Lockerung des Stresses auf den Körper —, die im Mittelpunkt dessen steht, was wir tun.",
+          "Wenn Reflux ein regelmäßiger Begleiter ist und Sie sich die Stress- und Nervensystemseite ansehen möchten, können Sie sich gerne mit uns in Verbindung setzen."
+        ],
+        "published": true
+      },
+      {
+        "id": "acupressure-for-orthopedic-problems",
+        "categoryId": "health",
+        "categoryIds": [
+          "health",
+          "treatment_techniques",
+          "oriental_medicine"
+        ],
+        "title": "Akupressur bei orthopädischen Problemen",
+        "date": "Juni 2026",
+        "readTime": "5 Min.",
+        "author": "Michael Guralnik",
+        "abstract": "Wie Akupressur orthopädische und muskuloskelettale Schmerzen lindert – indem sie mit den Meridianen und dem gesamten Körper arbeitet, um verspannte Muskeln zu lösen, die Bewegung wiederherzustellen und den Schmerz an seiner Quelle zu bekämpfen.",
+        "image": "",
+        "keywords": [
+          "Akupressur",
+          "orthopädische Schmerzen",
+          "Meridiantherapie",
+          "Schmerzen des Bewegungsapparates",
+          "Shiatsu",
+          "Muskelverspannungen",
+          "Stress und Schmerzen",
+          "manuelle Therapie"
+        ],
+        "content": [
+          "<h3>Was zählt als Orthopädie Ein orthopädisches Problem ist alles, was unsere Gliedmaßen, Gelenke oder Muskeln betrifft und bei dem wir Schmerzen verspüren oder unsere Bewegung eingeschränkt sind. Normalerweise zeigt es sich als ein Problem im Bewegungsapparat – eine steife Schulter, ein schmerzendes Knie, ein Rücken, der sich nicht lockern lässt – obwohl es oft auf etwas zurückzuführen ist, das anderswo im Körper entsteht Wie wir mit diesen Erkrankungen umgehenBei Beschwerden des Bewegungsapparates greifen wir auf einige komplementäre Ansätze zurück: Akupressur, Bewegungsunterricht und praktische manuelle Therapie. Sie überschneiden sich und unterstützen einander, und worauf wir uns stützen, hängt von Ihnen und den Anforderungen Ihres Körpers ab Wie Akupressur hilftWir haben noch keine vollständige, lehrbuchmäßige Erklärung in westlichen wissenschaftlichen Begriffen dafür, warum Akupressur so gut funktioniert – aber wir verstehen einige ihrer Wirkungen. Auf bestimmte Punkte angewendet, wirkt sich anhaltender Druck direkt auf die Muskeln, auf das Nervensystem und über unser Hormonsystem aus. Die sanfte Arbeit mit diesen Punkten hilft dabei, die Funktionsweise anderer Systeme auszurichten und zu regulieren Hier sind die wichtigsten Möglichkeiten, wie Akupressur in der Orthopädie hilft MeridiantherapieDie Meridiane tragen andere, subtilere Eigenschaften in sich, verlaufen aber auch entlang von Linien, die grob der muskulären und biomechanischen Struktur des Körpers folgen. Indem wir Punkte entlang dieser Linien stimulieren, können wir die ungünstigen Ansammlungen und Defizite lindern, die sich entlang dieser Linien ansammeln – indem wir überlastetes und angespanntes Gewebe mit schwachem oder nicht ausreichend beanspruchtem Gewebe ins Gleichgewicht bringen, um Schmerzen zu lindern oder einen Muskel zu unterstützen, bei dem dies der Fall ist Mit gleichmäßigem Daumen- oder Fingerdruck können wir verspannte Muskeln lösen, verschlafene Muskeln aufwecken und sogar eine sanfte Feinabstimmung vornehmen Ein überraschendes Merkmal der Meridiantherapie: Da einige Meridiane sehr lang sind – einige verlaufen vom Kopf bis zu den Zehen – können wir oft auf einen Punkt drücken, der weit von der Stelle entfernt ist, an der es wehtut, und trotzdem den Schmerz lindern. Beim Shiatsu zum Beispiel besteht die Absicht oft darin, eine empfindliche Stelle zunächst indirekt zu mildern, indem man systemische und Meridianpunkte bearbeitet, bevor man sich ihr nähert Systemische BehandlungEinige unserer lokalen Schmerzen sind in Wirklichkeit der lokale Ausdruck von etwas Größerem. Die Behandlung dieses breiteren Musters lindert oft nicht nur den spezifischen Schmerz, sondern auch eine ganze Reihe anderer Beschwerden – von denen wir nie gedacht hätten, dass sie so sind Ein bekanntes Beispiel sind Schmerzen, die aus ungelöstem Stress entstehen. Stress führt unter anderem dazu, dass der Körper seine Muskeln so anspannt, dass sie schmerzen und sich nicht mehr wie vorgesehen verlängern können. Wir könnten einfach den verspannten Muskel trainieren – aber wenn wir die Quelle der Anspannung oder die Art und Weise, wie der Körper normalerweise darauf reagiert, lindern können, sind die Ergebnisse tendenziell von Dauer, weil wir etwas Tiefgründigeres gelöst haben, das andernfalls anderswo vielleicht wieder an die Oberfläche gekommen wäre Durch die Pflege dieser systemischen Muster werden auch die lokalen Punkte effektiver, indem der Fluss durch die Meridiane verbessert wird. Im Shiatsu beginnt eine Sitzung häufig mit genau dieser Art der Vorarbeit – einer Basisbehandlung – und wendet sich erst danach den lokalen Schmerzen zu, sofern dies noch nicht geschehen ist Kurz gesagt: Akupressur bietet eine sanfte, praktische Möglichkeit, mit orthopädischen Schmerzen umzugehen und sie sowohl dort zu bekämpfen, wo sie schmerzen, als auch an ihrer Quelle. Wenn eine steife oder schmerzhafte Stelle schon seit einiger Zeit vorhanden ist, ist das oft ein Zeichen dafür, dass der Körper bei mehr als einer Stelle nach Aufmerksamkeit verlangt Wenn Sie einen auf Akupressur basierenden Ansatz zur Behandlung hartnäckiger Schmerzen ausprobieren möchten, können Sie sich gerne an uns wenden.</h3>"
+        ],
+        "published": false
+      }
+    ]
+  }
 }
