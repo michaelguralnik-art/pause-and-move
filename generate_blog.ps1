@@ -188,7 +188,7 @@ foreach ($lang in $languages) {
           <span class="blog-cat" id="article-detail-cat">$categoryName</span>
           <h1 class="display-xl" id="article-detail-title">$($article.title)</h1>
           <div class="article-detail-meta" id="article-detail-meta">
-            <span id="article-detail-date">$($article.date)</span> &middot; <span id="article-detail-read">$($article.readTime) $readTimeSuffix</span>
+            <span class="article-author">$(if ($lang -eq "en") { "By" } else { "Von" }) $($article.author)</span> &middot; <span id="article-detail-date">$($article.date)</span> &middot; <span id="article-detail-read">$($article.readTime) $readTimeSuffix</span>
           </div>
         </div>
       </div>

@@ -942,6 +942,10 @@
             <label class="field-label">Read / Duration Time</label>
             <input type="text" class="input-field" id="post-readtime" placeholder="e.g. 5 min">
           </div>
+          <div>
+            <label class="field-label">Author</label>
+            <input type="text" class="input-field" id="post-author" placeholder="e.g. Michael Guralnik">
+          </div>
           <div class="full-width-meta">
             <label class="field-label">Cover Image Path</label>
             <input type="text" class="input-field" id="post-cover" placeholder="e.g. https://images.unsplash.com/... or assets/cover.png">
@@ -1178,6 +1182,7 @@
     const elPostSlug = document.getElementById('post-slug');
     const elPostDate = document.getElementById('post-date');
     const elPostReadtime = document.getElementById('post-readtime');
+    const elPostAuthor = document.getElementById('post-author');
     const elPostCover = document.getElementById('post-cover');
     const elPostVideoUrl = document.getElementById('post-video-url');
     const elVideoUrlContainer = document.getElementById('video-url-container');
@@ -1238,7 +1243,7 @@
       
       // Auto-save form inputs to local javascript memory cache on input change
       const syncInputs = [
-        elPostType, elPostCategory, elPostSlug, elPostDate, elPostReadtime, elPostCover, elPostVideoUrl,
+        elPostType, elPostCategory, elPostSlug, elPostDate, elPostReadtime, elPostAuthor, elPostCover, elPostVideoUrl,
         elEnTitle, elEnAbstract, elEnKeywords, elEnTranscriptTextarea,
         elDeTitle, elDeAbstract, elDeKeywords, elDeTranscriptTextarea
       ];
@@ -1559,6 +1564,7 @@
       elPostSlug.value = enArt.id || '';
       elPostDate.value = enArt.date || '';
       elPostReadtime.value = enArt.readTime || '';
+      elPostAuthor.value = enArt.author || 'Michael Guralnik';
       elPostCover.value = enArt.image || '';
       elPostVideoUrl.value = enArt.videoUrl || '';
 
@@ -1769,6 +1775,7 @@
         title: elEnTitle.value.trim(),
         date: elPostDate.value.trim(),
         readTime: elPostReadtime.value.trim(),
+        author: elPostAuthor.value.trim(),
         abstract: elEnAbstract.value.trim(),
         image: elPostCover.value.trim(),
         keywords: elEnKeywords.value.split(',').map(x => x.trim()).filter(Boolean)
@@ -1790,6 +1797,7 @@
         title: elDeTitle.value.trim(),
         date: elPostDate.value.trim(),
         readTime: elPostReadtime.value.trim(),
+        author: elPostAuthor.value.trim(),
         abstract: elDeAbstract.value.trim(),
         image: elPostCover.value.trim(),
         keywords: elDeKeywords.value.split(',').map(x => x.trim()).filter(Boolean)
@@ -1829,6 +1837,7 @@
         title: 'New Post Title',
         date: formatCurrentMonthYear(),
         readTime: '1 min',
+        author: 'Michael Guralnik',
         abstract: 'New article summary...',
         image: 'assets/hero.png',
         keywords: ['wellness'],
@@ -1841,6 +1850,7 @@
         title: 'Neuer Beitrag Titel',
         date: formatCurrentMonthYear(),
         readTime: '1 min',
+        author: 'Michael Guralnik',
         abstract: 'Deutsche Zusammenfassung...',
         image: 'assets/hero.png',
         keywords: ['wellness'],

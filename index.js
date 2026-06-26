@@ -659,6 +659,10 @@ function renderBlogContent(lang) {
           <span class="blog-featured-label">${lang === 'en' ? 'Featured Post' : 'Hervorgehobener Beitrag'}</span>
           <h2 style="font-style:italic;"><a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" style="color: inherit; text-decoration: none;">${featuredArticle.title}</a></h2>
           <p>${featuredArticle.abstract}</p>
+          <div class="blog-featured-meta" style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--muted); margin-bottom: 24px;">
+            <span>${lang === 'en' ? 'By' : 'Von'} ${featuredArticle.author || 'Michael Guralnik'} &middot; ${featuredArticle.date}</span>
+            <span style="font-weight: 600; text-transform: uppercase; color: var(--gold); letter-spacing: 0.08em; font-size: 11px;">${featuredArticle.readTime}</span>
+          </div>
           <a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" class="btn-text" style="text-decoration: none;">
             ${lang === 'en' ? 'Read article' : 'Artikel lesen'} &rarr;
           </a>
@@ -682,7 +686,7 @@ function renderBlogContent(lang) {
                 <h3>${article.title}</h3>
                 <p>${article.abstract}</p>
                 <div class="blog-card-foot">
-                  <span class="blog-date">${article.date}</span>
+                  <span class="blog-date">${lang === 'en' ? 'By' : 'Von'} ${article.author || 'Michael Guralnik'} &middot; ${article.date}</span>
                   <span class="blog-read">${article.readTime} &rarr;</span>
                 </div>
               </div>
@@ -722,7 +726,7 @@ function renderBlogContent(lang) {
                 <h3>${article.title}</h3>
                 <p>${article.abstract}</p>
                 <div class="blog-card-foot">
-                  <span class="blog-date">${article.date}</span>
+                  <span class="blog-date">${lang === 'en' ? 'By' : 'Von'} ${article.author || 'Michael Guralnik'} &middot; ${article.date}</span>
                   <span class="blog-read">${article.readTime} &rarr;</span>
                 </div>
               </div>
@@ -782,7 +786,7 @@ function showArticle(articleId, pushToHistory = true) {
   if (titleEl) titleEl.textContent = article.title;
   if (metaEl) {
     metaEl.innerHTML = `
-      <span>${article.date}</span> &middot; <span>${article.readTime} ${currentLang === 'en' ? 'read' : 'Lesezeit'}</span>
+      <span class="article-author">${currentLang === 'en' ? 'By' : 'Von'} ${article.author || 'Michael Guralnik'}</span> &middot; <span>${article.date}</span> &middot; <span>${article.readTime} ${currentLang === 'en' ? 'read' : 'Lesezeit'}</span>
     `;
   }
   if (imgContainer) {
