@@ -210,6 +210,7 @@
                                                                   "Energiemangel"
                                                               ],
                                                    "id":  "classic",
+                                                   "eyebrow":  "Was ist klassische Massage?",
                                                    "benefits":  [
                                                                     {
                                                                         "title":  "Muskelentspannung",
@@ -242,6 +243,7 @@
                                                                   "Verstauchungen"
                                                               ],
                                                    "id":  "shiatsu",
+                                                   "eyebrow":  "Eine jahrhundertealte Praxis: methodisch, präzise und im Stillen kraftvoll.",
                                                    "benefits":  [
                                                                     {
                                                                         "title":  "Bequem bekleidet",
@@ -262,7 +264,7 @@
                                                                 ],
                                                    "details":  "Während einer Sitzung nutzt der Therapeut **sanften Druck und geführte Bewegungen**, um Spannungen zu lösen und Ihrem Körper zu seinem natürlichen Rhythmus zu verhelfen. Tief entspannend — viele schlafen dabei ein.\u003c/p\u003e\u003cp\u003eMit der Zeit können regelmäßige Behandlungen helfen, **Haltung, Koordination und eine allgemeine Leichtigkeit** wiederherzustellen, die den Alltag entlastet.",
                                                    "desc":  "Shiatsu hat seine Wurzeln in der traditionellen japanischen Medizin und nutzt sanften Druck, Dehnungen und geführte Bewegungen, um dem Körper zu seiner natürlichen Balance zu verhelfen. Bekleidet durchgeführt — ohne Öl, ohne Entkleiden.",
-                                                   "title":  "Ein neuer Weg, auf Ihren Körper zu hören",
+                                                   "title":  "Form folgt Funktion. Technik folgt Tradition.",
                                                    "checks_title":  "Ideal bei"
                                                },
                                                {
@@ -274,6 +276,7 @@
                                                                   "Ischiasbeschwerden"
                                                               ],
                                                    "id":  "tuina",
+                                                   "eyebrow":  "Was ist Tuina?",
                                                    "benefits":  [
                                                                     {
                                                                         "title":  "Dynamisch \u0026 gezielt",
@@ -311,6 +314,7 @@
                                                                   "Mehr Körperbewusstsein"
                                                               ],
                                                    "id":  "connected",
+                                                   "eyebrow":  "Was ist Connected Movement?",
                                                    "benefits":  [
                                                                     {
                                                                         "title":  "Sanft \u0026 mühelos",
@@ -331,7 +335,7 @@
                                                                 ],
                                                    "details":  "Connected Movement entstammt keiner einzelnen Tradition — es ist eine Mischung aus **östlicher Philosophie und westlicher Bewegungswissenschaft**, geprägt von jahrelanger persönlicher Praxis.\u003c/p\u003e\u003cp\u003eOb Sie mit einem bestimmten Ziel kommen oder einfach neugierig sind: Sie werden mit einem **klareren Gefühl dafür nach Hause gehen, wie sich Ihr Körper bewegt** — und warum.",
                                                    "desc":  "Basierend auf der Feldenkrais-Methode und traditionellen japanischen Kampfkünsten nutzt Connected Movement feine, mühelose Bewegungen — geführt und selbst ausgeführt —, um die natürliche Bewegung Ihres Körpers wiederzuentdecken.",
-                                                   "title":  "Ein neuer Weg, auf Ihren Körper zu hören",
+                                                   "title":  "Bewegung als Erforschung, nicht als Training.",
                                                    "checks_title":  "Was es für Sie tun kann"
                                                },
                                                {
@@ -343,6 +347,7 @@
                                                                   "Verdauungsgesundheit"
                                                               ],
                                                    "id":  "qigong",
+                                                   "eyebrow":  "Was ist Qigong?",
                                                    "benefits":  [
                                                                     {
                                                                         "title":  "Individuell angepasst",
@@ -686,6 +691,7 @@
                                                                   "Low energy"
                                                               ],
                                                    "id":  "classic",
+                                                   "eyebrow":  "What is Classic Massage?",
                                                    "benefits":  [
                                                                     {
                                                                         "title":  "Muscle relaxation",
@@ -718,6 +724,7 @@
                                                                   "Sprains"
                                                               ],
                                                    "id":  "shiatsu",
+                                                   "eyebrow":  "A centuries-old practice : methodical, precise, and quietly powerful.",
                                                    "benefits":  [
                                                                     {
                                                                         "title":  "Fully clothed",
@@ -738,7 +745,7 @@
                                                                 ],
                                                    "details":  "During a session, your therapist uses \u003cstrong\u003egentle pressure and guided movement\u003c/strong\u003e to work through areas of tension and help your body find its natural rhythm. It\u0027s deeply relaxing — many people fall asleep.\u003c/p\u003e\u003cp\u003eOver time, regular sessions can help restore \u003cstrong\u003eposture, coordination, and a general sense of ease\u003c/strong\u003e that makes everyday life feel lighter.",
                                                    "desc":  "Rooted in traditional Japanese medicine, Shiatsu uses gentle pressure, kneading and guided stretching to help your body find its natural balance. Done fully clothed — no oils, no undressing.",
-                                                   "title":  "A fresh way to listen to your body",
+                                                   "title":  "Form follows function. Technique follows tradition.",
                                                    "checks_title":  "Great for"
                                                },
                                                {
@@ -750,6 +757,7 @@
                                                                   "Sciatica"
                                                               ],
                                                    "id":  "tuina",
+                                                   "eyebrow":  "What is Tuina?",
                                                    "benefits":  [
                                                                     {
                                                                         "title":  "Dynamic \u0026 targeted",
@@ -787,6 +795,7 @@
                                                                   "Greater body awareness"
                                                               ],
                                                    "id":  "connected",
+                                                   "eyebrow":  "What is Connected Movement?",
                                                    "benefits":  [
                                                                     {
                                                                         "title":  "Gentle \u0026 effortless",
@@ -807,7 +816,7 @@
                                                                 ],
                                                    "details":  "Connected Movement doesn\u0027t come from a single tradition — it\u0027s a blend of \u003cstrong\u003eeastern philosophy and western movement science\u003c/strong\u003e, shaped by years of personal practice.\u003c/p\u003e\u003cp\u003eWhether you come with a specific goal or simply curious, you\u0027ll leave with a \u003cstrong\u003eclearer sense of how your body moves\u003c/strong\u003e — and why.",
                                                    "desc":  "Drawing on the Feldenkrais method and traditional Japanese martial arts, Connected Movement uses subtle, effortless motion — both guided and self-led — to help you rediscover how your body naturally wants to move.",
-                                                   "title":  "A fresh way to listen to your body",
+                                                   "title":  "Movement as inquiry, not exercise.",
                                                    "checks_title":  "What it can do for you"
                                                },
                                                {
@@ -819,6 +828,7 @@
                                                                   "Digestive health"
                                                               ],
                                                    "id":  "qigong",
+                                                   "eyebrow":  "What is Qigong?",
                                                    "benefits":  [
                                                                     {
                                                                         "title":  "Individually prescribed",

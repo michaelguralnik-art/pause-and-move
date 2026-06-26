@@ -4,6 +4,15 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.26] - 2026-06-26
+### Developer & Copy Updates
+- Synchronized latest copy modifications and codebase enhancements.
+
+### Reviewer Comments / Notes
+- Update Shiatsu and Connected Movement titles and eyebrows.
+
+
+
 ## [3.25] - 2026-06-26
 ### Developer & Copy Updates
 - Upgraded Google Schema LocalBusiness structure to HealthAndBeautyBusiness to optimize local ranking.
