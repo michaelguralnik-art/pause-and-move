@@ -4,6 +4,14 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.25] - 2026-06-26
+### Developer & Copy Updates
+- Upgraded Google Schema LocalBusiness structure to HealthAndBeautyBusiness to optimize local ranking.
+- Added priceRange schema field.
+
+### Reviewer Comments / Notes
+- Optimize targeting for "Massage in Basel" searches.
+
 ## [3.24] - 2026-06-26
 ### Developer & Copy Updates
 - Added author meta tags to index.html and pre-rendered blog pages.
