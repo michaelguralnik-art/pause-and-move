@@ -58,4 +58,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems.html" />
     <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/acupressure-for-orthopedic-problems.html" />
   </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/en/about-meridians.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/about-meridians.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/about-meridians.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/de/about-meridians.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/about-meridians.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/about-meridians.html" />
+  </url>
 </urlset>
