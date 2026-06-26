@@ -4,6 +4,15 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.24] - 2026-06-26
+### Developer & Copy Updates
+- Added author meta tags to index.html and pre-rendered blog pages.
+- Added founder schema property to local business structured data for "Michael Guralnik".
+- Added "Michael Guralnik" to keyword metadata on home page.
+
+### Reviewer Comments / Notes
+- Optimize SEO targeting for searches matching "Michael Guralnik".
+
 ## [3.23] - 2026-06-26
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.

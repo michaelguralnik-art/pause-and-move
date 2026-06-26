@@ -82,7 +82,7 @@ foreach ($lang in $languages) {
     $langBlog = $blogData.$lang
     $langContent = $contentData.$lang
     
-    $articles = $langBlog.articles | Where-Object { $null -eq $_.published -or $_.published -ne $false }
+    $articles = $langBlog.articles
     $categories = $langBlog.categories
     
     # 1. Translate the base layout (Nav, Drawer, Modals, Footer)
@@ -104,6 +104,8 @@ foreach ($lang in $languages) {
             $sidebarRecentTitle = "Recent Posts"
             $backBtnText = "&larr; Back to Journal"
             $readTimeSuffix = "read"
+            $categoryName = $categories.$($article.categoryId)
+            if ($null -eq $categoryName) { $categoryName = $article.categoryId }
         } else {
             $shareTitle = "Diesen Artikel teilen:"
             $shareCopy = "Link kopieren"
@@ -115,19 +117,6 @@ foreach ($lang in $languages) {
             $sidebarRecentTitle = "Neueste Beiträge"
             $backBtnText = "&larr; Zurück zum Journal"
             $readTimeSuffix = "Lesezeit"
-        }
-        
-        # Resolve category name(s) (supports multiple categories)
-        $categoryName = ""
-        if ($null -ne $article.categoryIds -and $article.categoryIds.Count -gt 0) {
-            $catNames = @()
-            foreach ($catId in $article.categoryIds) {
-                $name = $categories.$catId
-                if ($null -eq $name) { $name = $catId }
-                $catNames += $name
-            }
-            $categoryName = $catNames -join " $([char]0xB7) "
-        } else {
             $categoryName = $categories.$($article.categoryId)
             if ($null -eq $categoryName) { $categoryName = $article.categoryId }
         }
@@ -136,13 +125,7 @@ foreach ($lang in $languages) {
         $sidebarCategoriesHtml = ""
         foreach ($catKey in $categories.psobject.Properties.Name) {
             if ($catKey -ne "all") {
-                $count = ($articles | Where-Object {
-                    if ($null -ne $_.categoryIds -and $_.categoryIds.Count -gt 0) {
-                        $_.categoryIds -contains $catKey
-                    } else {
-                        $_.categoryId -eq $catKey
-                    }
-                }).Count
+                $count = ($articles | Where-Object { $_.categoryId -eq $catKey }).Count
                 $catName = $categories.$catKey
                 $sidebarCategoriesHtml += "          <li class=`"sidebar-category-item`" onclick=`"window.location.href='../../index.html#blog-$catKey'`">`n"
                 $sidebarCategoriesHtml += "            <span>$catName</span>`n"
@@ -280,6 +263,7 @@ $sidebarRecentHtml              </div>
   <title>$seoTitle</title>
   <meta name="description" content="$seoDesc" />
   <meta name="keywords" content="$seoKeywords" />
+  <meta name="author" content="Michael Guralnik" />
   <link rel="canonical" href="$articleUrl" />
   <link rel="alternate" hreflang="$lang" href="$articleUrl" />
   <link rel="alternate" hreflang="$otherLang" href="$altArticleUrl" />
@@ -450,7 +434,6 @@ $sitemapXml = @"
 
 # Loop over articles
 foreach ($article in $blogData.en.articles) {
-    if ($null -ne $article.published -and $article.published -eq $false) { continue }
     $articleId = $article.id
     $enUrl = "https://pauseandmove.ch/journal/en/$articleId.html"
     $deUrl = "https://pauseandmove.ch/journal/de/$articleId.html"
