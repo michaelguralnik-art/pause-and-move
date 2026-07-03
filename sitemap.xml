@@ -70,4 +70,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/about-meridians.html" />
     <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/about-meridians.html" />
   </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/en/whats-the-difference-between-massage-and-oriental-bodywork.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/whats-the-difference-between-massage-and-oriental-bodywork.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/whats-the-difference-between-massage-and-oriental-bodywork.html" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/de/whats-the-difference-between-massage-and-oriental-bodywork.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/whats-the-difference-between-massage-and-oriental-bodywork.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/whats-the-difference-between-massage-and-oriental-bodywork.html" />
+  </url>
 </urlset>
