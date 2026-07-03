@@ -125,7 +125,7 @@ foreach ($lang in $languages) {
         $sidebarCategoriesHtml = ""
         foreach ($catKey in $categories.psobject.Properties.Name) {
             if ($catKey -ne "all") {
-                $count = ($articles | Where-Object { $_.categoryId -eq $catKey }).Count
+                $count = ($articles | Where-Object { $_.categoryId -eq $catKey -or ($null -ne $_.categoryIds -and $_.categoryIds -contains $catKey) }).Count
                 $catName = $categories.$catKey
                 $sidebarCategoriesHtml += "          <li class=`"sidebar-category-item`" onclick=`"window.location.href='../../index.html#blog-$catKey'`">`n"
                 $sidebarCategoriesHtml += "            <span>$catName</span>`n"

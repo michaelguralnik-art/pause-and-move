@@ -4,6 +4,15 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.31] - 2026-07-03
+### Developer & Copy Updates
+- Synchronized latest copy modifications and codebase enhancements.
+
+### Reviewer Comments / Notes
+- Support filtering and counting articles that belong to multiple categories using the categoryIds array.
+
+
+
 ## [3.30] - 2026-07-03
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.

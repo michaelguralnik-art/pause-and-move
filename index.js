@@ -692,7 +692,7 @@ function renderBlogContent(lang) {
     
     if (gridContainer) {
       gridContainer.style.display = 'grid';
-      const filteredArticles = articles.filter(art => art.categoryId === currentCategory);
+      const filteredArticles = articles.filter(art => art.categoryId === currentCategory || (art.categoryIds && art.categoryIds.includes(currentCategory)));
       
       if (filteredArticles.length > 0) {
         gridContainer.innerHTML = filteredArticles.map((article, idx) => {
@@ -817,7 +817,7 @@ function showArticle(articleId, pushToHistory = true) {
     categoriesContainer.innerHTML = Object.keys(cats)
       .filter(k => k !== 'all')
       .map(catKey => {
-        const count = blogData.articles.filter(a => a.categoryId === catKey && a.published !== false).length;
+        const count = blogData.articles.filter(a => (a.categoryId === catKey || (a.categoryIds && a.categoryIds.includes(catKey))) && a.published !== false).length;
         return `
           <li class="sidebar-category-item" onclick="selectCategoryAndBack('${catKey}')">
             <span>${cats[catKey]}</span>
