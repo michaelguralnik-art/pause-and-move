@@ -1466,6 +1466,28 @@
     async function saveFile() {
       if (!dbState) return;
       
+      // Attempt to save directly via HTTP POST if running on a web server (e.g. localhost preview)
+      if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+        try {
+          showToast("Saving database to server...", "info");
+          const response = await fetch('blog.json', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dbState, null, 2)
+          });
+          if (response.ok) {
+            showToast("Database saved successfully back to blog.json via server", "success");
+            return;
+          } else {
+            console.warn("Server save failed. Falling back to local file picker save.");
+          }
+        } catch (err) {
+          console.warn("Server save error. Falling back to local file picker save.", err);
+        }
+      }
+
       // If we don't have a file handle yet (e.g. we auto-loaded via HTTP fetch),
       // we must ask the user to authorize saving by selecting the local file.
       if (!fileHandle) {

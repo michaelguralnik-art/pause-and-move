@@ -4,77 +4,10 @@ This log documents all stable versions of the website.
 
 ---
 
-## [3.33] - 2026-07-03
+## [4.0] - 2026-07-03
 ### Developer & Copy Updates
-- Synchronized latest copy modifications and codebase enhancements.
-
-### Reviewer Comments / Notes
-- Published via AntiGravity CMS
-
-
-
-## [3.32] - 2026-07-03
-### Developer & Copy Updates
-- Synchronized latest copy modifications and codebase enhancements.
-
-### Reviewer Comments / Notes
-- Published via AntiGravity CMS
-
-
-
-## [3.31] - 2026-07-03
-### Developer & Copy Updates
-- Synchronized latest copy modifications and codebase enhancements.
-
-### Reviewer Comments / Notes
-- Support filtering and counting articles that belong to multiple categories using the categoryIds array.
-
-
-
-## [3.30] - 2026-07-03
-### Developer & Copy Updates
-- Synchronized latest copy modifications and codebase enhancements.
-
-### Reviewer Comments / Notes
-- Published via AntiGravity CMS
-
-
-
-## [3.29] - 2026-07-03
-### Developer & Copy Updates
-- Synchronized latest copy modifications and codebase enhancements.
-
-### Reviewer Comments / Notes
-- Filter out draft articles from website rendering, sitemap, and pre-rendering.
-
-
-
-## [3.28] - 2026-07-03
-### Developer & Copy Updates
-- Synchronized latest copy modifications and codebase enhancements.
-
-### Reviewer Comments / Notes
-- Published via AntiGravity CMS
-
-
-
-## [3.27] - 2026-07-02
-### Developer & Copy Updates
-- Synchronized latest copy modifications and codebase enhancements.
-
-### Reviewer Comments / Notes
-- Fix broken Modalities hero image
-
-
-
-## [3.26] - 2026-06-26
-### Developer & Copy Updates
-- Synchronized latest copy modifications and codebase enhancements.
-
-### Reviewer Comments / Notes
-- Update Shiatsu and Connected Movement titles and eyebrows.
-
-
+- Upgraded the local preview server (`start_preview.ps1`) to support HTTP `POST` requests, allowing direct database writes to the local workspace.
+- Enhanced the admin panel (`admin.html`) to save database changes directly to `blog.json` via HTTP `POST` when served through the preview server, eliminating the need for manual file picker selection.
 
 ## [3.25] - 2026-06-26
 ### Developer & Copy Updates
