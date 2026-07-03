@@ -620,7 +620,7 @@ function renderBlogContent(lang) {
   
   const blogData = siteBlogData[lang];
   const categories = blogData.categories;
-  const articles = blogData.articles;
+  const articles = blogData.articles.filter(a => a.published !== false);
   
   // 1. Render Category Menu
   if (categoryMenu) {
@@ -739,7 +739,7 @@ function selectCategory(catId) {
 function showArticle(articleId, pushToHistory = true) {
   if (!siteBlogData || !siteBlogData[currentLang]) return;
   const blogData = siteBlogData[currentLang];
-  const article = blogData.articles.find(a => a.id === articleId);
+  const article = blogData.articles.find(a => a.id === articleId && a.published !== false);
   if (!article) return;
   
   currentArticleId = articleId;
@@ -817,7 +817,7 @@ function showArticle(articleId, pushToHistory = true) {
     categoriesContainer.innerHTML = Object.keys(cats)
       .filter(k => k !== 'all')
       .map(catKey => {
-        const count = blogData.articles.filter(a => a.categoryId === catKey).length;
+        const count = blogData.articles.filter(a => a.categoryId === catKey && a.published !== false).length;
         return `
           <li class="sidebar-category-item" onclick="selectCategoryAndBack('${catKey}')">
             <span>${cats[catKey]}</span>
@@ -830,8 +830,9 @@ function showArticle(articleId, pushToHistory = true) {
   // Populate Sidebar Recent Posts (3 latest, excluding current one if possible)
   const recentContainer = document.getElementById('sidebar-recent');
   if (recentContainer) {
-    const otherArticles = blogData.articles.filter(a => a.id !== articleId);
-    const recentList = otherArticles.length > 0 ? otherArticles.slice(0, 3) : blogData.articles.slice(0, 3);
+    const publishedArticles = blogData.articles.filter(a => a.published !== false);
+    const otherArticles = publishedArticles.filter(a => a.id !== articleId);
+    const recentList = otherArticles.length > 0 ? otherArticles.slice(0, 3) : publishedArticles.slice(0, 3);
     recentContainer.innerHTML = recentList.map(rec => {
       return `
         <a href="journal/${currentLang}/${rec.id}.html" onclick="showArticle('${rec.id}'); return false;" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
@@ -854,7 +855,7 @@ function showArticle(articleId, pushToHistory = true) {
 // ── Social sharing helpers ──
 function shareArticle(platform) {
   if (!siteBlogData || !siteBlogData[currentLang] || !currentArticleId) return;
-  const article = siteBlogData[currentLang].articles.find(a => a.id === currentArticleId);
+  const article = siteBlogData[currentLang].articles.find(a => a.id === currentArticleId && a.published !== false);
   if (!article) return;
   
   const shareUrl = window.location.href;

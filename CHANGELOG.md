@@ -4,6 +4,15 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.29] - 2026-07-03
+### Developer & Copy Updates
+- Synchronized latest copy modifications and codebase enhancements.
+
+### Reviewer Comments / Notes
+- Filter out draft articles from website rendering, sitemap, and pre-rendering.
+
+
+
 ## [3.28] - 2026-07-03
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.
