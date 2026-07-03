@@ -401,6 +401,39 @@
           "Using the modalities we practice in Pause and Move, we learn to listen to these meridians as well as to stimulate them&nbsp; in order to improve their function as a channel to transfer information to and from our internal organs and emotions to our limbs and surface area."
         ],
         "published": true
+      },
+      {
+        "id": "whats-the-difference-between-massage-and-oriental-bodywork",
+        "categoryId": "treatment_techniques",
+        "categoryIds": [
+          "treatment_techniques",
+          "oriental_medicine"
+        ],
+        "title": "What's the Difference Between Massage and Oriental Bodywork",
+        "date": "July 2026",
+        "readTime": "5 min",
+        "author": "Michael Guralnik",
+        "abstract": "Oriental bodywork modalities such as Tuina or Shiatsu have a very different outlook than western massage. This article pinpoints the major differences.",
+        "image": "assets/cover-whats-the-difference-between-massage-and-oriental-bodywork.jpg",
+        "keywords": [
+          "Massage",
+          "Tuina",
+          "Shiatsu",
+          "TCM",
+          "Myofascial"
+        ],
+        "content": [
+          "Shiatsu and Tuina are perhaps the most well recognized body works systems introduced to the west. And in many ways they are radically different than massage therapy.",
+          "Western Body work systems were developed out of a western medical tradition which analyzes movement and function of the body from a bio-mechanical standpoint. It studies the human body like if our body was a machine. The main science applied using this concept is physics: forces, vectors, torque etc.",
+          "Early massage therapy methods were based solely on the idea that by affecting the moving parts in the system (muscles and ligaments) they will resolve underlying problems that have to do with posture, movement and mechanical damages (such as injuries) through muscles.",
+          "With time this view was broadened to take into consideration other systems, like the nerves and to an extent even the hormonal system. However, the focus remains on the muscular system.",
+          "The Eastern traditions, on the other hand were developed way before modern anatomy and physiology were introduced in the East, and are following the eastern medicine approach, which is focused on the internal organs as the prime interest of the therapist.",
+          "A manual therapist, like an acupuncturist is seeking ways to affect the internal organs by finding areas on the surface of the body that will affect the organs lying deep inside, at times in places so far away from each other that we may wonder how did they even come up with these connections.",
+          "A traditional Tuina or Shiatsu therapist will try and affect an internal organ such as the lung, the stomach or the kidney by affecting superficial tissue that has an affinity with this underlying organ.",
+          "This does not mean that oriental body workers are not familiar with body mechanics. On the contrary. Many of these systems were developed side by side with martial arts that studied movement and the relationships between different body parts in a very precise and intimate manner.",
+          "However, the broader picture an oriental body worker is seeking incorporates a bigger picture. It looks for a connection between an injury site and the entire person that is injured."
+        ],
+        "published": false
       }
     ]
   },
@@ -807,6 +840,39 @@
           "Mit den Modalitäten, die wir in Pause und Bewegung üben, lernen wir, auf diese Meridiane zu hören und sie zu stimulieren, um ihre Funktion als Kanal zur Übertragung von Informationen zu und von unseren inneren Organen und Emotionen zu unseren Gliedmaßen und unserer Oberfläche zu verbessern."
         ],
         "published": true
+      },
+      {
+        "id": "whats-the-difference-between-massage-and-oriental-bodywork",
+        "categoryId": "treatment_techniques",
+        "categoryIds": [
+          "treatment_techniques",
+          "oriental_medicine"
+        ],
+        "title": "Was ist der Unterschied zwischen Massage und orientalischer Körperarbeit?",
+        "date": "Juli 2026",
+        "readTime": "5 Min.",
+        "author": "Michael Guralnik",
+        "abstract": "Orientalische Körpermodalitäten wie Tuina oder Shiatsu haben eine ganz andere Einstellung als westliche Massagen. Dieser Artikel zeigt die wichtigsten Unterschiede auf.",
+        "image": "assets/cover-whats-the-difference-between-massage-and-oriental-bodywork.jpg",
+        "keywords": [
+          "Massage",
+          "Tuina",
+          "Shiatsu",
+          "TCM",
+          "Myofaszial"
+        ],
+        "content": [
+          "Shiatsu und Tuina sind vielleicht die bekanntesten Körpersysteme, die im Westen eingeführt wurden. Und in vielerlei Hinsicht unterscheiden sie sich radikal von der Massagetherapie.",
+          "Western Body Arbeitssysteme wurden aus einer westlichen medizinischen Tradition entwickelt, die Bewegung und Funktion des Körpers aus biomechanischer Sicht analysiert. Es untersucht den menschlichen Körper, als wäre unser Körper eine Maschine. Die Hauptwissenschaft, die mit diesem Konzept angewendet wird, ist die Physik: Kräfte, Vektoren, Drehmomente usw.",
+          "Frühe Massagetherapiemethoden basierten ausschließlich auf der Idee, dass sie durch die Beeinflussung der beweglichen Teile im System (Muskeln und Bänder) die zugrunde liegenden Probleme lösen, die mit Körperhaltung, Bewegung und mechanischen Schäden (wie Verletzungen) durch Muskeln zu tun haben.",
+          "Mit der Zeit wurde diese Sicht erweitert, um andere Systeme, wie die Nerven und in gewissem Maße sogar das Hormonsystem, zu berücksichtigen. Der Fokus bleibt jedoch auf der Muskulatur.",
+          "Die östlichen Traditionen hingegen wurden weit vor der Einführung der modernen Anatomie und Physiologie im Osten entwickelt und folgen dem östlichen Medizinansatz, der sich auf die inneren Organe als Hauptinteresse des Therapeuten konzentriert.",
+          "Ein manueller Therapeut, wie ein Akupunkteur, sucht nach Möglichkeiten, die inneren Organe zu beeinflussen, indem er Bereiche auf der Körperoberfläche findet, die die tief im Inneren liegenden Organe beeinflussen, manchmal an Orten, die so weit voneinander entfernt sind, dass wir uns fragen können, wie sie überhaupt auf diese Verbindungen gekommen sind.",
+          "Ein traditioneller Tuina- oder Shiatsu-Therapeut wird versuchen, ein inneres Organ wie die Lunge, den Magen oder die Niere zu beeinflussen, indem er oberflächliches Gewebe beeinflusst, das eine Affinität zu diesem zugrunde liegenden Organ hat.",
+          "Dies bedeutet nicht, dass orientalische Körperarbeiter nicht mit der Körpermechanik vertraut sind. Im Gegenteil. Viele dieser Systeme wurden Seite an Seite mit Kampfkünsten entwickelt, die Bewegung und die Beziehungen zwischen verschiedenen Körperteilen auf sehr präzise und intime Weise untersuchten.",
+          "Das breitere Bild, das ein orientalischer Körperarbeiter sucht, beinhaltet jedoch ein größeres Bild. Es sucht nach einer Verbindung zwischen einer Verletzungsstelle und der gesamten verletzten Person."
+        ],
+        "published": false
       }
     ]
   }
