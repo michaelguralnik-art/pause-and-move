@@ -433,6 +433,38 @@
           "However, the broader picture an oriental body worker is seeking incorporates a bigger picture. It looks for a connection between an injury site and the entire person that is injured."
         ],
         "published": true
+      },
+      {
+        "id": "massage-oils-and-other-lubricats",
+        "categoryId": "treatment_techniques",
+        "categoryIds": [
+          "treatment_techniques"
+        ],
+        "title": "Massage Oils and Other Lubricats",
+        "date": "July 2026",
+        "readTime": "5 min",
+        "author": "Michael Guralnik",
+        "abstract": "Oil, lotion, or gel? A massage therapist explains the differences between massage lubricants and how the right choice shapes your treatment.",
+        "image": "assets/cover-massage-oils-and-other-lubricats.jpg",
+        "keywords": [
+          "massage oil",
+          "massage lotion",
+          "massage gel",
+          "massage lubricant",
+          "glide",
+          "essential oils",
+          "arnica",
+          "Tiger Balm"
+        ],
+        "content": [
+          "Massage lubricants serve much the same purpose as oil in machinery: they reduce friction — in this case, between the therapist's hand and the client's skin. With a lubricant, I can apply firm vertical pressure while my hand, palm, or elbow glides smoothly over the skin. Without one, that same pressure would drag at the skin and quickly become irritating.",
+          "Massage therapists have three types of lubricant to choose from: oil, lotion, and gel.",
+          "Oil absorbs into the skin the least, which means it stays useful for the entire session. That's also why therapists tend to use it sparingly — too much, and the client leaves feeling oily.",
+          "Lotion, being an emulsion, absorbs the best of the three, which makes it a good choice for dry skin. The trade-off is that it disappears quickly and turns sticky if not reapplied often. It's also the least smooth of the three.",
+          "Gel is the modern addition to the family. Like lotion, it's an emulsion, but with a much higher oil content. It glides slightly less smoothly than pure oil, yet still gives a pleasant slip — without lotion's constant need for reapplication.",
+          "Personally, I choose between the three case by case, depending on the purpose of the session and the client's preference. One clear reason to reach for oil: when adding essential oils or therapeutic substances such as arnica, CBD, or Eastern liniments like Po Sum On, Tiger Balm, or Dit Da Jow — these blend into oil far better than into the other two."
+        ],
+        "published": false
       }
     ]
   },
@@ -871,6 +903,38 @@
           "Das breitere Bild, das ein orientalischer Körperarbeiter sucht, beinhaltet jedoch ein größeres Bild. Es sucht nach einer Verbindung zwischen einer Verletzungsstelle und der gesamten verletzten Person."
         ],
         "published": true
+      },
+      {
+        "id": "massage-oils-and-other-lubricats",
+        "categoryId": "treatment_techniques",
+        "categoryIds": [
+          "treatment_techniques"
+        ],
+        "title": "Massageöle und andere Schmierstoffe",
+        "date": "Juli 2026",
+        "readTime": "5 Min.",
+        "author": "Michael Guralnik",
+        "abstract": "Öl, Lotion oder Gel? Ein Massagetherapeut erklärt die Unterschiede zwischen Massagemedien und wie die richtige Wahl Ihre Behandlung prägt.",
+        "image": "assets/cover-massage-oils-and-other-lubricats.jpg",
+        "keywords": [
+          "Massageöl",
+          "Massagelotion",
+          "Massagegel",
+          "Massagemedium",
+          "Gleitfähigkeit",
+          "ätherische Öle",
+          "Arnika",
+          "Tiger Balm"
+        ],
+        "content": [
+          "Massageschmierstoffe dienen dem gleichen Zweck wie Öl in Maschinen: Sie reduzieren die Reibung — in diesem Fall zwischen der Hand des Therapeuten und der Haut des Klienten. Mit einem Gleitmittel kann ich einen festen vertikalen Druck ausüben, während meine Hand, meine Handfläche oder mein Ellbogen sanft über die Haut gleiten. Ohne einen würde der gleiche Druck an der Haut schleifen und schnell irritierend werden.",
+          "Massagetherapeuten haben drei Arten von Gleitmitteln zur Auswahl: Öl, Lotion und Gel.",
+          "Öl zieht am wenigsten in die Haut ein, was bedeutet, dass es für die gesamte Sitzung nützlich bleibt. Das ist auch der Grund, warum Therapeuten dazu neigen, es sparsam zu verwenden — zu viel, und der Klient fühlt sich fettig.",
+          "Lotion ist eine Emulsion, die das Beste aus den dreien aufnimmt, was sie zu einer guten Wahl für trockene Haut macht. Der Nachteil ist, dass es schnell verschwindet und klebrig wird, wenn es nicht oft erneut aufgetragen wird. Es ist auch das am wenigsten glatte von den dreien.",
+          "Gel ist die moderne Ergänzung der Familie. Wie Lotion ist es eine Emulsion, aber mit einem viel höheren Ölgehalt. Es gleitet etwas weniger glatt als reines Öl und gibt dennoch einen angenehmen Schlupf — ohne dass die Lotion ständig neu aufgetragen werden muss.",
+          "Persönlich wähle ich von Fall zu Fall zwischen den drei, abhängig vom Zweck der Sitzung und der Präferenz des Kunden. Ein klarer Grund, nach Öl zu greifen: Wenn man ätherische Öle oder therapeutische Substanzen wie Arnika, CBD oder östliche Einschlüsse wie Po Sum On, Tiger Balm oder Dit Da Jow hinzufügt, mischen sich diese viel besser in Öl als in die anderen beiden."
+        ],
+        "published": false
       }
     ]
   }
