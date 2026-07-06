@@ -3,2205 +3,473 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pause & Move — Blog Authoring Dashboard</title>
-  <!-- Outfit & Playfair Display Google Fonts -->
+  <title>AntiGravity - CMS Journal Editor</title>
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="favicon.png?v=3">
-  
-  <style>
-    /* ── DESIGN SYSTEM & CONSTANTS ── */
-    :root {
-      --bg-obsidian: #080c10;
-      --bg-panel: #11141e;
-      --bg-panel-light: #181d2a;
-      --border-color: #21283a;
-      --border-color-focus: #3d4a6a;
-      
-      --gold-accent: #c9a96e;
-      --gold-hover: #dcc395;
-      --gold-glow: rgba(201, 169, 110, 0.2);
-      
-      --text-primary: #f1f3f7;
-      --text-secondary: #94a3b8;
-      --text-muted: #5e6c84;
-      
-      --red-danger: #ef4444;
-      --red-glow: rgba(239, 68, 68, 0.15);
-      --green-success: #10b981;
-      --green-glow: rgba(16, 185, 129, 0.15);
-      
-      --sidebar-width: 320px;
-      --control-bar-height: 70px;
-      --bottom-bar-height: 70px;
-      
-      --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      --shadow-premium: 0 12px 32px rgba(0, 0, 0, 0.5);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Outfit', sans-serif;
-      background-color: var(--bg-obsidian);
-      color: var(--text-primary);
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Scrollbar Styling */
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: var(--bg-obsidian);
-    }
-    ::-webkit-scrollbar-thumb {
-      background: var(--border-color);
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--border-color-focus);
-    }
-
-    /* ── BASE COMPONENTS: BUTTONS & INPUTS ── */
-    button, input, select, textarea {
-      font-family: inherit;
-      font-size: 14px;
-      color: var(--text-primary);
-      background: transparent;
-      border: none;
-      outline: none;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 10px 18px;
-      border-radius: 6px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: var(--transition-smooth);
-      border: 1px solid transparent;
-      user-select: none;
-    }
-
-    .btn-gold {
-      background: var(--gold-accent);
-      color: var(--bg-obsidian);
-      font-weight: 600;
-    }
-    .btn-gold:hover {
-      background: var(--gold-hover);
-      box-shadow: 0 0 15px var(--gold-glow);
-      transform: translateY(-1px);
-    }
-    .btn-gold:active {
-      transform: translateY(0);
-    }
-
-    .btn-secondary {
-      background: var(--bg-panel-light);
-      border-color: var(--border-color);
-      color: var(--text-primary);
-    }
-    .btn-secondary:hover {
-      border-color: var(--border-color-focus);
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .btn-danger {
-      background: rgba(239, 68, 68, 0.1);
-      border-color: var(--red-danger);
-      color: var(--red-danger);
-    }
-    .btn-danger:hover {
-      background: var(--red-danger);
-      color: #fff;
-      box-shadow: 0 0 15px var(--red-glow);
-    }
-
-    .btn-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 6px;
-      cursor: pointer;
-      border: 1px solid var(--border-color);
-      background: var(--bg-panel-light);
-      transition: var(--transition-smooth);
-    }
-    .btn-icon:hover {
-      border-color: var(--gold-accent);
-      color: var(--gold-accent);
-    }
-    .btn-icon svg {
-      width: 18px;
-      height: 18px;
-      fill: currentColor;
-    }
-
-    .input-field {
-      width: 100%;
-      padding: 10px 14px;
-      background: var(--bg-obsidian);
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      transition: var(--transition-smooth);
-    }
-    .input-field:focus {
-      border-color: var(--gold-accent);
-      box-shadow: 0 0 8px var(--gold-glow);
-    }
-
-    .field-label {
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-secondary);
-      margin-bottom: 6px;
-      display: block;
-    }
-
-    /* ── LAYOUT STRUCTURE ── */
-    .app-container {
-      display: flex;
-      flex: 1;
-      height: calc(100vh - var(--bottom-bar-height));
-      overflow: hidden;
-    }
-
-    /* ── SIDEBAR ── */
-    .sidebar {
-      width: var(--sidebar-width);
-      background-color: var(--bg-panel);
-      border-right: 1px solid var(--border-color);
-      display: flex;
-      flex-direction: column;
-      flex-shrink: 0;
-    }
-
-    .sidebar-header {
-      padding: 20px;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 15px;
-    }
-
-    .brand-logo {
-      width: 28px;
-      height: 28px;
-      border: 2px solid var(--gold-accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold-accent);
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .brand-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      font-style: italic;
-      color: var(--text-primary);
-    }
-
-    .search-filter-box {
-      padding: 12px 20px;
-      border-bottom: 1px solid var(--border-color);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .category-filter-select {
-      width: 100%;
-      padding: 8px 12px;
-      background: var(--bg-obsidian);
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .posts-list-container {
-      flex: 1;
-      overflow-y: auto;
-      padding: 10px 0;
-    }
-
-    .post-item {
-      padding: 14px 20px;
-      border-bottom: 1px solid rgba(33, 40, 58, 0.3);
-      cursor: pointer;
-      transition: var(--transition-smooth);
-      border-left: 3px solid transparent;
-    }
-    .post-item:hover {
-      background: rgba(255, 255, 255, 0.02);
-    }
-    .post-item.active {
-      background: var(--bg-panel-light);
-      border-left-color: var(--gold-accent);
-    }
-
-    .post-item-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 6px;
-      font-size: 11px;
-    }
-
-    .badge-type {
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 10px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-    }
-    .badge-article {
-      background: rgba(201, 169, 110, 0.15);
-      color: var(--gold-accent);
-    }
-    .badge-video {
-      background: rgba(59, 130, 246, 0.15);
-      color: #60a5fa;
-    }
-
-    .post-item-date {
-      color: var(--text-muted);
-    }
-
-    .post-item-title {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1.4;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      color: var(--text-primary);
-    }
-    .post-item.active .post-item-title {
-      color: var(--gold-accent);
-    }
-
-    .post-item-cat {
-      font-size: 11px;
-      color: var(--text-secondary);
-      margin-top: 4px;
-    }
-
-    .sidebar-actions {
-      padding: 15px 20px;
-      border-top: 1px solid var(--border-color);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    /* ── WORKSPACE ── */
-    .workspace {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      background-color: var(--bg-obsidian);
-      overflow: hidden;
-      position: relative;
-    }
-
-    /* Empty State View */
-    .empty-state {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px;
-      z-index: 10;
-      background: var(--bg-obsidian);
-      transition: opacity 0.3s ease;
-    }
-
-    .empty-state-icon {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 24px;
-      color: var(--text-muted);
-      border: 2px dashed var(--border-color);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .empty-state-icon svg {
-      width: 40px;
-      height: 40px;
-      fill: currentColor;
-    }
-
-    .empty-state-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      font-style: italic;
-      color: var(--text-primary);
-      margin-bottom: 8px;
-    }
-
-    .empty-state-desc {
-      color: var(--text-secondary);
-      max-width: 400px;
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 24px;
-    }
-
-    .empty-state-actions {
-      display: flex;
-      gap: 15px;
-    }
-
-    /* Editor Form Panel */
-    .editor-form-panel {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      overflow: hidden;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-    .editor-form-panel.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    /* Workspace Meta Row */
-    .editor-meta-section {
-      padding: 24px;
-      background: var(--bg-panel);
-      border-bottom: 1px solid var(--border-color);
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-    }
-
-    .editor-meta-section .full-width-meta {
-      grid-column: 1 / -1;
-    }
-
-    .slug-input-wrapper {
-      display: flex;
-      gap: 8px;
-    }
-
-    /* Split Editor Columns */
-    .split-editor-body {
-      flex: 1;
-      display: flex;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .editor-column {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      overflow-y: auto;
-      padding: 24px;
-    }
-
-    .editor-column-en {
-      border-right: 1px solid var(--border-color);
-    }
-
-    .editor-column-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .lang-flag {
-      width: 20px;
-      height: 14px;
-      border-radius: 2px;
-      object-fit: cover;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .lang-title {
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      color: var(--gold-accent);
-      text-transform: uppercase;
-    }
-
-    .editor-group {
-      margin-bottom: 20px;
-    }
-
-    .editor-group-title {
-      font-size: 20px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-    }
-
-    /* ── PARAGRAPH BLOCK EDITOR ── */
-    .paragraphs-editor-container {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .paragraph-block-row {
-      display: flex;
-      gap: 16px;
-      align-items: stretch;
-      position: relative;
-    }
-
-    .paragraph-controls {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 6px;
-      width: 40px;
-      flex-shrink: 0;
-      padding-top: 10px;
-      background: var(--bg-panel);
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-    }
-
-    .paragraph-num {
-      font-size: 11px;
-      font-weight: bold;
-      color: var(--text-secondary);
-    }
-
-    .paragraph-nav-btn {
-      width: 24px;
-      height: 24px;
-      border-radius: 4px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
-      color: var(--text-secondary);
-      border: 1px solid var(--border-color);
-      transition: var(--transition-smooth);
-    }
-    .paragraph-nav-btn:hover {
-      background: var(--bg-panel-light);
-      color: var(--gold-accent);
-      border-color: var(--gold-accent);
-    }
-
-    .paragraph-del-btn {
-      margin-top: auto;
-      margin-bottom: 6px;
-      color: var(--red-danger);
-      font-weight: bold;
-    }
-    .paragraph-del-btn:hover {
-      background: var(--red-glow);
-    }
-
-    .paragraph-text-wrapper {
-      flex: 1;
-    }
-
-    .paragraph-textarea {
-      width: 100%;
-      height: 120px;
-      padding: 12px;
-      background: var(--bg-panel);
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      resize: vertical;
-      line-height: 1.6;
-      transition: var(--transition-smooth);
-    }
-    .paragraph-textarea:focus {
-      border-color: var(--gold-accent);
-      box-shadow: 0 0 8px var(--gold-glow);
-    }
-
-    /* Inline Insertion Line */
-    .paragraph-insert-divider {
-      height: 12px;
-      position: relative;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: -6px 0;
-      z-index: 5;
-    }
-    .paragraph-insert-divider::before {
-      content: '';
-      position: absolute;
-      left: 56px;
-      right: 0;
-      height: 1px;
-      background: transparent;
-      transition: var(--transition-smooth);
-    }
-    .paragraph-insert-divider:hover::before {
-      background: var(--gold-accent);
-    }
-
-    .paragraph-insert-btn {
-      background: var(--gold-accent);
-      color: var(--bg-obsidian);
-      font-size: 9px;
-      font-weight: bold;
-      padding: 2px 8px;
-      border-radius: 10px;
-      opacity: 0;
-      transform: scale(0.8);
-      transition: var(--transition-smooth);
-      pointer-events: none;
-      z-index: 6;
-      box-shadow: 0 0 10px var(--gold-glow);
-    }
-    .paragraph-insert-divider:hover .paragraph-insert-btn {
-      opacity: 1;
-      transform: scale(1);
-      pointer-events: auto;
-    }
-
-    .add-block-footer {
-      display: flex;
-      justify-content: center;
-      padding: 20px 0;
-      border-top: 1px dashed var(--border-color);
-      margin-top: 20px;
-    }
-
-    /* ── FLOATING BOTTOM BAR ── */
-    .bottom-ai-bar {
-      height: var(--bottom-bar-height);
-      background-color: var(--bg-panel);
-      border-top: 1px solid var(--border-color);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 24px;
-      z-index: 100;
-      backdrop-filter: blur(12px);
-    }
-
-    .ai-bar-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .ai-status-indicator {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      color: var(--text-secondary);
-    }
-    .ai-status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--text-muted);
-    }
-    .ai-status-dot.active {
-      background: var(--green-success);
-      box-shadow: 0 0 8px var(--green-success);
-    }
-
-    .ai-bar-center {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .ai-bar-right {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      width: 400px;
-    }
-
-    .ai-prompt-input-group {
-      display: flex;
-      width: 100%;
-      border: 1px solid var(--border-color);
-      background: var(--bg-obsidian);
-      border-radius: 6px;
-      overflow: hidden;
-      transition: var(--transition-smooth);
-    }
-    .ai-prompt-input-group:focus-within {
-      border-color: var(--gold-accent);
-      box-shadow: 0 0 8px var(--gold-glow);
-    }
-
-    .ai-prompt-input {
-      flex: 1;
-      padding: 8px 12px;
-      font-size: 13px;
-    }
-
-    .ai-prompt-btn {
-      background: transparent;
-      color: var(--gold-accent);
-      padding: 0 12px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-left: 1px solid var(--border-color);
-      transition: var(--transition-smooth);
-    }
-    .ai-prompt-btn:hover {
-      background: rgba(201, 169, 110, 0.1);
-    }
-
-    /* ── MODALS ── */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(4px);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-    .modal-overlay.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .modal {
-      background: var(--bg-panel);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      width: 90%;
-      max-width: 500px;
-      box-shadow: var(--shadow-premium);
-      transform: translateY(20px);
-      transition: transform 0.3s ease;
-      overflow: hidden;
-    }
-    .modal-overlay.active .modal {
-      transform: translateY(0);
-    }
-
-    .modal-header {
-      padding: 20px;
-      border-bottom: 1px solid var(--border-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .modal-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      font-style: italic;
-      color: var(--text-primary);
-    }
-
-    .modal-close {
-      cursor: pointer;
-      color: var(--text-secondary);
-      font-size: 20px;
-      font-weight: bold;
-    }
-    .modal-close:hover {
-      color: var(--gold-accent);
-    }
-
-    .modal-body {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .modal-footer {
-      padding: 15px 20px;
-      border-top: 1px solid var(--border-color);
-      display: flex;
-      justify-content: flex-end;
-      gap: 12px;
-      background: rgba(0,0,0,0.1);
-    }
-
-    /* Settings Modal Special styling */
-    .api-option-tabs {
-      display: flex;
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      overflow: hidden;
-      margin-bottom: 10px;
-    }
-
-    .api-tab {
-      flex: 1;
-      padding: 10px;
-      text-align: center;
-      cursor: pointer;
-      background: var(--bg-obsidian);
-      font-weight: 500;
-      transition: var(--transition-smooth);
-    }
-    .api-tab.active {
-      background: var(--gold-accent);
-      color: var(--bg-obsidian);
-      font-weight: 600;
-    }
-
-    /* ── TOAST NOTIFICATIONS ── */
-    .toast-container {
-      position: fixed;
-      top: 24px;
-      right: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      z-index: 2000;
-    }
-
-    .toast {
-      min-width: 250px;
-      padding: 14px 20px;
-      border-radius: 6px;
-      border-left: 4px solid transparent;
-      background: var(--bg-panel);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-      color: var(--text-primary);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-      transform: translateX(50px);
-      opacity: 0;
-      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    }
-    .toast.show {
-      transform: translateX(0);
-      opacity: 1;
-    }
-
-    .toast-success {
-      border-left-color: var(--green-success);
-      box-shadow: 0 4px 12px var(--green-glow);
-    }
-
-    .toast-danger {
-      border-left-color: var(--red-danger);
-      box-shadow: 0 4px 12px var(--red-glow);
-    }
-
-    .toast-close {
-      cursor: pointer;
-      color: var(--text-secondary);
-      font-weight: bold;
-    }
-
-    /* ── LOADING SPINNER ── */
-    .spinner {
-      border: 2px solid rgba(255,255,255,0.1);
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      border-left-color: var(--gold-accent);
-      animation: spin 1s linear infinite;
-      display: inline-block;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="admin.css">
 </head>
 <body>
 
-  <!-- ── MAIN CONTAINER ── -->
-  <div class="app-container">
+  <!-- Premium Top Navbar -->
+  <header class="navbar">
+    <div class="nav-brand">
+      <div class="logo-orb"></div>
+      <h1>AntiGravity <span>Journal CMS</span></h1>
+    </div>
+    <div class="nav-actions">
+      <button id="btn-undo" class="btn btn-secondary btn-icon-only" title="Undo (Ctrl+Z)">
+        <i data-lucide="undo-2"></i>
+      </button>
+      <button id="btn-redo" class="btn btn-secondary btn-icon-only" title="Redo (Ctrl+Y)">
+        <i data-lucide="redo-2"></i>
+      </button>
+      <div class="divider"></div>
+      <button id="btn-save" class="btn btn-primary">
+        <i data-lucide="save"></i> Save Changes
+      </button>
+      <button id="btn-publish" class="btn btn-success">
+        <i data-lucide="globe"></i> Publish
+      </button>
+    </div>
+  </header>
 
-    <!-- ── SIDEBAR (LEFT) ── -->
+  <!-- Main Grid Workspace -->
+  <main class="workspace">
+    
+    <!-- Sidebar: Article Browser -->
     <aside class="sidebar">
-      <div class="sidebar-header">
-        <div class="brand">
-          <div class="brand-logo">P</div>
-          <h1 class="brand-title">Pause & Move</h1>
-        </div>
-        
-        <button class="btn btn-gold" style="width: 100%;" id="btn-load-file">
-          <svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M19 12v7H5v-7H3v7c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2v9.67z"/></svg>
-          Load blog.json
-        </button>
+      <div class="sidebar-search">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" id="search-articles" placeholder="Search articles...">
       </div>
-
-      <div class="search-filter-box">
-        <input type="text" class="input-field" id="search-input" placeholder="Search posts...">
-        <select class="category-filter-select" id="cat-filter">
-          <option value="all">All Categories</option>
-        </select>
+      
+      <button id="btn-new-article" class="btn btn-primary w-full" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <i data-lucide="plus" style="width: 16px; height: 16px;"></i> New Journal Post
+      </button>
+      
+      <div class="sidebar-section-title">Categories</div>
+      <div class="category-filters" id="category-filter-list">
+        <!-- Rendered dynamically -->
       </div>
-
-      <div class="posts-list-container" id="posts-list">
-        <!-- Rendered list items -->
-      </div>
-
-      <div class="sidebar-actions">
-        <button class="btn btn-secondary" id="btn-create-post" disabled>
-          <svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-          Create New Post
-        </button>
+      
+      <div class="sidebar-section-title">Articles</div>
+      <div class="article-list" id="article-list-container">
+        <!-- Rendered dynamically -->
       </div>
     </aside>
 
-    <!-- ── WORKSPACE (RIGHT) ── -->
-    <main class="workspace" id="workspace">
-
-      <!-- Empty State View -->
-      <div class="empty-state" id="empty-state">
-        <div class="empty-state-icon">
-          <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-        </div>
-        <h2 class="empty-state-title">No Database Loaded</h2>
-        <p class="empty-state-desc">To get started, click the "Load blog.json" button in the sidebar and choose the website's database file.</p>
-        <div class="empty-state-actions">
-          <button class="btn btn-gold" id="btn-empty-load">Open Database</button>
-        </div>
+    <!-- Editor Canvas -->
+    <section class="editor-canvas">
+      
+      <!-- No Article Selected State -->
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon"><i data-lucide="file-text"></i></div>
+        <h3>No Article Selected</h3>
+        <p>Choose an article from the sidebar to begin editing or translating.</p>
       </div>
 
-      <!-- Editor Panel (hidden by default) -->
-      <div class="editor-form-panel" id="editor-panel">
+      <!-- Editor Content -->
+      <div id="editor-content" class="editor-content" style="display: none;">
         
-        <!-- Metadata Header Area -->
-        <section class="editor-meta-section">
-          <div>
-            <label class="field-label">Post Type</label>
-            <select class="input-field" id="post-type" style="cursor: pointer;">
-              <option value="article">Standard Article</option>
-              <option value="video">Video Post (Vlog)</option>
-            </select>
-          </div>
-          <div>
-            <label class="field-label">Category</label>
-            <select class="input-field" id="post-category" style="cursor: pointer;">
-              <!-- Populated dynamically -->
-            </select>
-          </div>
-          <div>
-            <label class="field-label">Slug / ID</label>
-            <div class="slug-input-wrapper">
-              <input type="text" class="input-field" id="post-slug" placeholder="e.g. mindfulness-tips">
-              <button class="btn btn-secondary" id="btn-gen-slug" title="Generate from English Title">Gen</button>
+        <!-- Metadata Section -->
+        <div class="editor-card metadata-card">
+          <div class="card-header">
+            <h2><i data-lucide="settings"></i> Article Details</h2>
+            <div class="article-meta-info" style="display: flex; gap: 8px; align-items: center;">
+              <span id="meta-article-id" class="badge">ID: shoulders-stress</span>
+              <span id="meta-article-status" class="badge">Published</span>
             </div>
           </div>
-          <div>
-            <label class="field-label">Date</label>
-            <input type="text" class="input-field" id="post-date" placeholder="e.g. June 2026">
-          </div>
-          <div>
-            <label class="field-label">Read / Duration Time</label>
-            <input type="text" class="input-field" id="post-readtime" placeholder="e.g. 5 min">
-          </div>
-          <div>
-            <label class="field-label">Author</label>
-            <input type="text" class="input-field" id="post-author" placeholder="e.g. Michael Guralnik">
-          </div>
-          <div class="full-width-meta">
-            <label class="field-label">Cover Image Path</label>
-            <input type="text" class="input-field" id="post-cover" placeholder="e.g. https://images.unsplash.com/... or assets/cover.png">
-          </div>
-          <div class="full-width-meta" id="video-url-container" style="display: none;">
-            <label class="field-label">Video Embed URL (YouTube/Vimeo)</label>
-            <input type="text" class="input-field" id="post-video-url" placeholder="e.g. https://www.youtube.com/embed/dQw4w9WgXcQ">
-          </div>
-        </section>
-
-        <!-- Main Language Columns Split -->
-        <div class="split-editor-body">
-
-          <!-- English Drafting (Left) -->
-          <div class="editor-column editor-column-en">
-            <div class="editor-column-header">
-              <span class="lang-title">English Column</span>
-            </div>
-            
-            <div class="editor-group">
-              <label class="field-label">Blog Title</label>
-              <input type="text" class="input-field" id="en-title" placeholder="Enter English Title...">
-            </div>
-            
-            <div class="editor-group">
-              <label class="field-label">SEO Abstract / Meta Description (under 160 chars)</label>
-              <textarea class="input-field" id="en-abstract" style="height: 70px; resize: none;" placeholder="Brief English summary..."></textarea>
-              <div style="font-size: 11px; color: var(--text-muted); text-align: right; margin-top: 4px;" id="en-abstract-counter">0 / 160 chars</div>
-            </div>
-
-            <div class="editor-group">
-              <label class="field-label">Keywords / Tags (comma separated)</label>
-              <input type="text" class="input-field" id="en-keywords" placeholder="mindfulness, shoulders, Basel">
-            </div>
-
-            <!-- Dynamic Body Content -->
-            <div class="editor-group" id="en-body-group">
-              <label class="field-label" id="en-body-label">Content Paragraphs</label>
-              
-              <!-- Paragraph Blocks will render here -->
-              <div class="paragraphs-editor-container" id="en-paragraphs-container"></div>
-              
-              <!-- Video Transcript Single Text Area (Hidden if Article) -->
-              <textarea class="paragraph-textarea" id="en-transcript-textarea" style="display: none; height: 350px;" placeholder="Write English video transcript here (HTML tags allowed)..."></textarea>
-              
-              <div class="add-block-footer" id="en-add-block-footer">
-                <button class="btn btn-secondary" onclick="addParagraphAtEnd()">
-                  <svg style="width:14px;height:14px;fill:currentColor;" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-                  Add Paragraph
+          
+          <div class="metadata-grid">
+            <div class="form-group col-span-2">
+              <label for="edit-title-en">Title (English)</label>
+              <div class="input-group">
+                <input type="text" id="edit-title-en" class="form-control" placeholder="Enter English Title">
+                <button id="btn-translate-title" class="btn btn-secondary" title="Translate Title to German">
+                  <i data-lucide="languages"></i> Translate
                 </button>
               </div>
             </div>
+            
+            <div class="form-group col-span-2">
+              <label for="edit-title-de">Title (German)</label>
+              <input type="text" id="edit-title-de" class="form-control" placeholder="Enter German Title">
+            </div>
+
+            <div class="form-group">
+              <label for="edit-date">Publish Date</label>
+              <input type="text" id="edit-date" class="form-control" placeholder="e.g. May 2025 / Mai 2025">
+            </div>
+
+            <div class="form-group">
+              <label for="edit-read-time">Read Time</label>
+              <input type="text" id="edit-read-time" class="form-control" placeholder="e.g. 5 min / 5 Min.">
+            </div>
+
+            <div class="form-group">
+              <label for="edit-author">Author</label>
+              <input type="text" id="edit-author" class="form-control" placeholder="Enter Author Name">
+            </div>
+
+            <div class="form-group">
+              <label>Article Status</label>
+              <div style="display: flex; gap: 8px; align-items: center; height: 38px;">
+                <button id="btn-toggle-publish" class="btn btn-secondary btn-sm" style="display: flex; align-items: center; gap: 6px; font-weight: 500;">
+                  <i data-lucide="eye-off" style="width: 14px; height: 14px;"></i> Unpublish
+                </button>
+              </div>
+            </div>
+
+            <div class="form-group col-span-2">
+              <label for="edit-image">Cover Image URL</label>
+              <div class="image-input-group">
+                <input type="text" id="edit-image" class="form-control" placeholder="Unsplash or custom image link">
+                <button id="btn-image-ai" class="btn btn-secondary" title="AI Cover Assistant">
+                  <i data-lucide="image" style="color: var(--primary-hover);"></i> Cover Assistant
+                </button>
+                <button id="btn-reload-image" class="btn btn-secondary" title="Preview Image"><i data-lucide="refresh-cw"></i></button>
+              </div>
+            </div>
+
+            <!-- Cover Image Preview -->
+            <div class="form-group col-span-2 image-preview-wrapper">
+              <label>Cover Image Preview</label>
+              <div class="image-preview-container">
+                <img id="cover-image-preview" src="" alt="Cover Image Preview">
+                <div class="image-placeholder"><i data-lucide="image"></i><span>No Image Loaded</span></div>
+              </div>
+            </div>
+
+            <div class="form-group col-span-2">
+              <label>Categories (Select Multiple)</label>
+              <div class="categories-checkbox-grid" id="categories-checkboxes">
+                <!-- Checkboxes populated dynamically -->
+              </div>
+            </div>
+
+            <div class="form-group col-span-2">
+              <label for="edit-keywords-en">Keywords (English, comma separated)</label>
+              <div class="input-group">
+                <input type="text" id="edit-keywords-en" class="form-control" placeholder="shoulder, stress, massage">
+                <button id="btn-translate-keywords" class="btn btn-secondary" title="Translate Keywords to German">
+                  <i data-lucide="languages"></i> Translate
+                </button>
+              </div>
+            </div>
+            
+            <div class="form-group col-span-2">
+              <label for="edit-keywords-de">Keywords (German, comma separated)</label>
+              <input type="text" id="edit-keywords-de" class="form-control" placeholder="schulter, stress, massage">
+            </div>
+
+            <div class="form-group col-span-2">
+              <label for="edit-abstract-en">Abstract (English)</label>
+              <div class="input-group">
+                <textarea id="edit-abstract-en" class="form-control" rows="2" placeholder="Brief summary of the article..."></textarea>
+                <button id="btn-translate-abstract" class="btn btn-secondary" style="align-self: flex-start;" title="Translate Abstract to German">
+                  <i data-lucide="languages"></i> Translate
+                </button>
+              </div>
+            </div>
+            
+            <div class="form-group col-span-2">
+              <label for="edit-abstract-de">Abstract (German)</label>
+              <textarea id="edit-abstract-de" class="form-control" rows="2" placeholder="Kurze Zusammenfassung..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Overhauled WYSIWYG Editor split layout -->
+        <div class="editor-card content-card">
+          <div class="card-header">
+            <div>
+              <h2><i data-lucide="file-edit"></i> Article Body Content</h2>
+              <p class="subtitle">WYSIWYG layout: changes display live. Use Enter key to separate paragraphs.</p>
+            </div>
           </div>
 
-          <!-- German Drafting (Right) -->
-          <div class="editor-column editor-column-de">
-            <div class="editor-column-header">
-              <span class="lang-title">German Column</span>
-            </div>
-            
-            <div class="editor-group">
-              <label class="field-label">Blog Title (DE)</label>
-              <input type="text" class="input-field" id="de-title" placeholder="Deutscher Titel...">
-            </div>
-            
-            <div class="editor-group">
-              <label class="field-label">SEO Abstract / Meta Description (DE)</label>
-              <textarea class="input-field" id="de-abstract" style="height: 70px; resize: none;" placeholder="Deutsche Zusammenfassung..."></textarea>
-              <div style="font-size: 11px; color: var(--text-muted); text-align: right; margin-top: 4px;" id="de-abstract-counter">0 / 160 chars</div>
+          <div class="workspace-editor-split">
+            <!-- English WYSIWYG Pane -->
+            <div class="pane">
+              <div class="pane-header">
+                <div class="pane-title"><span class="lang-tag lang-en">EN</span> English Editor</div>
+                <div class="toolbar" id="toolbar-en">
+                  <button class="toolbar-btn" data-cmd="bold" title="Bold (Ctrl+B)"><i data-lucide="bold"></i></button>
+                  <button class="toolbar-btn" data-cmd="italic" title="Italic (Ctrl+I)"><i data-lucide="italic"></i></button>
+                  <button class="toolbar-btn" data-cmd="underline" title="Underline (Ctrl+U)"><i data-lucide="underline"></i></button>
+                  <div class="toolbar-divider"></div>
+                  <button class="toolbar-btn" data-cmd="h2" title="Heading 2"><i data-lucide="heading-2"></i></button>
+                  <button class="toolbar-btn" data-cmd="h3" title="Heading 3"><i data-lucide="heading-3"></i></button>
+                  <button class="toolbar-btn" data-cmd="insertUnorderedList" title="Bullet List"><i data-lucide="list"></i></button>
+                  <div class="toolbar-divider"></div>
+                  <button class="toolbar-btn" data-cmd="tab" title="Insert Tab space"><i data-lucide="arrow-right"></i></button>
+                  <button class="toolbar-btn" data-cmd="indent" title="Increase Indent"><i data-lucide="indent"></i></button>
+                  <button class="toolbar-btn" data-cmd="outdent" title="Decrease Indent"><i data-lucide="outdent"></i></button>
+                </div>
+              </div>
+              <div id="body-text-en" class="body-textarea" contenteditable="true" placeholder="Write English article body here..."></div>
+              <div class="pane-footer">
+                <div class="char-count" id="body-char-en">0 characters</div>
+                <div class="pane-footer-actions">
+                  <button id="btn-ai-assist-en" class="btn btn-secondary btn-sm btn-ai-assist">
+                    <i data-lucide="sparkles" style="color: var(--primary-hover);"></i> AI Assist
+                  </button>
+                  <button id="btn-translate" class="btn btn-secondary btn-sm">
+                    <i data-lucide="languages"></i> Translate to German
+                  </button>
+                </div>
+              </div>
             </div>
 
-            <div class="editor-group">
-              <label class="field-label">Keywords / Tags (DE)</label>
-              <input type="text" class="input-field" id="de-keywords" placeholder="Achtsamkeit, Schultern, Basel">
-            </div>
-
-            <!-- Dynamic Body Content (DE) -->
-            <div class="editor-group" id="de-body-group">
-              <label class="field-label" id="de-body-label">Content Paragraphs (DE)</label>
-              
-              <!-- Paragraph Blocks DE render here -->
-              <div class="paragraphs-editor-container" id="de-paragraphs-container"></div>
-
-              <!-- Video Transcript Single Text Area DE (Hidden if Article) -->
-              <textarea class="paragraph-textarea" id="de-transcript-textarea" style="display: none; height: 350px;" placeholder="Deutsches Videotranskript hier eintragen (HTML erlaubt)..."></textarea>
-              
-              <!-- Footers for actions align with left side -->
-              <div class="add-block-footer" id="de-add-block-footer" style="visibility: hidden;">
-                <button class="btn btn-secondary">Hidden Offset Spacer</button>
+            <!-- German WYSIWYG Pane -->
+            <div class="pane">
+              <div class="pane-header">
+                <div class="pane-title"><span class="lang-tag lang-de">DE</span> German Editor</div>
+                <div class="toolbar" id="toolbar-de">
+                  <button class="toolbar-btn" data-cmd="bold" title="Bold (Ctrl+B)"><i data-lucide="bold"></i></button>
+                  <button class="toolbar-btn" data-cmd="italic" title="Italic (Ctrl+I)"><i data-lucide="italic"></i></button>
+                  <button class="toolbar-btn" data-cmd="underline" title="Underline (Ctrl+U)"><i data-lucide="underline"></i></button>
+                  <div class="toolbar-divider"></div>
+                  <button class="toolbar-btn" data-cmd="h2" title="Heading 2"><i data-lucide="heading-2"></i></button>
+                  <button class="toolbar-btn" data-cmd="h3" title="Heading 3"><i data-lucide="heading-3"></i></button>
+                  <button class="toolbar-btn" data-cmd="insertUnorderedList" title="Bullet List"><i data-lucide="list"></i></button>
+                  <div class="toolbar-divider"></div>
+                  <button class="toolbar-btn" data-cmd="tab" title="Insert Tab space"><i data-lucide="arrow-right"></i></button>
+                  <button class="toolbar-btn" data-cmd="indent" title="Increase Indent"><i data-lucide="indent"></i></button>
+                  <button class="toolbar-btn" data-cmd="outdent" title="Decrease Indent"><i data-lucide="outdent"></i></button>
+                </div>
+              </div>
+              <div id="body-text-de" class="body-textarea" contenteditable="true" placeholder="Deutsche Übersetzung hier schreiben..."></div>
+              <div class="pane-footer">
+                <div class="char-count" id="body-char-de">0 characters</div>
+                <div class="pane-footer-actions">
+                  <button id="btn-ai-assist-de" class="btn btn-secondary btn-sm btn-ai-assist">
+                    <i data-lucide="sparkles" style="color: var(--success);"></i> AI Assist
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
 
       </div>
+    </section>
+  </main>
 
-    </main>
-
-  </div>
-
-  <!-- ── FLOATING BOTTOM BAR ── -->
-  <footer class="bottom-ai-bar">
-    <div class="ai-bar-left">
-      <button class="btn-icon" id="btn-settings-modal" title="AI Settings">
-        <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
-      </button>
-      <div class="ai-status-indicator">
-        <span class="ai-status-dot" id="ai-status-dot"></span>
-        <span id="ai-status-text">API Offline</span>
+  <!-- Neural AI Copywriting Assistant Modal -->
+  <div id="ai-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card modal-ai">
+      <div class="modal-header">
+        <h3><i data-lucide="sparkles" class="ai-glow-icon" style="color: var(--primary-hover);"></i> AI Copywriting Agent</h3>
+        <button class="modal-close" id="btn-ai-close"><i data-lucide="x"></i></button>
       </div>
-    </div>
-
-    <div class="ai-bar-center">
-      <button class="btn btn-secondary" id="btn-ai-translate" disabled>
-        <svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
-        Translate EN ➔ DE
-      </button>
-      <button class="btn btn-secondary" id="btn-ai-seo" disabled>
-        <svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-        Automate SEO & Tags
-      </button>
-      <button class="btn btn-gold" id="btn-save-file" disabled>
-        <svg style="width:16px;height:16px;fill:var(--bg-obsidian);" viewBox="0 0 24 24"><path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/></svg>
-        Save Database
-      </button>
-    </div>
-
-    <div class="ai-bar-right">
-      <div class="ai-prompt-input-group">
-        <input type="text" class="ai-prompt-input" id="ai-rewrite-prompt" placeholder="Instruct AI Co-Writer (e.g. 'Shorten text', 'Calm tone')" disabled>
-        <button class="ai-prompt-btn" id="btn-ai-rewrite" title="Execute Co-writer rewrite" disabled>
-          <svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M7.5 5.6L10 7 8.6 4.5 10 2 7.5 3.4 5 2l1.4 2.5L5 7zm12 9.8L17 14l1.4 2.5-1.4 2.5 2.5-1.4L22 20l-1.4-2.5L22 15zm0-12.08L17 4.72l1.4 2.5-1.4 2.5 2.5-1.4L22 9.72l-1.4-2.5L22 4.72zm-8.02 5.09c-.39-.39-1.02-.39-1.41 0L1.12 17.78c-.39.39-.39 1.02 0 1.41l2.12 2.12c.39.39 1.02.39 1.41 0l9.37-9.37c.39-.39.39-1.02 0-1.41l-2.12-2.12zm-.3 2.12L9.06 12.9l-5.5 5.5-1.42-1.42 5.5-5.5 2.12 2.12z"/></svg>
+      <div class="modal-body">
+        <div class="ai-modal-layout">
+          <!-- Configurations -->
+          <div class="ai-config-pane">
+            <div class="form-group">
+              <label for="ai-tone">Copywriting Objective / Style</label>
+              <select id="ai-tone" class="form-control">
+                <option value="somatic">(Recommended) Somatic & Gentle (Wellness Focus)</option>
+                <option value="expat">Expat Relocation (Basel Local Focus)</option>
+                <option value="seo">SEO Optimized (Keywords Focus)</option>
+                <option value="professional">Professional & Medical (ASCA/EGK Billing)</option>
+                <option value="creative">Creative & Flowing (Metaphorical)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="ai-prompt">Special Instructions (Optional)</label>
+              <textarea id="ai-prompt" class="form-control" rows="4" placeholder="e.g. Make it more punchy, add breathing focus, focus on Expats moving to Switzerland..."></textarea>
+            </div>
+            <button id="btn-ai-generate" class="btn btn-primary w-full">
+              <i data-lucide="wand-2"></i> Rewrite Selected Text
+            </button>
+          </div>
+          
+          <!-- Text Previews -->
+          <div class="ai-preview-pane">
+            <div class="preview-box-header">Selected Text to Rewrite</div>
+            <div class="preview-box" id="ai-original-text">Select some text in the editor first.</div>
+            
+            <div class="preview-box-header">AI Copywriter Suggestion</div>
+            <div class="preview-box suggestion-box" id="ai-suggestion-text">
+              <div style="color: var(--text-muted); font-style: italic;">Generated suggestion will appear here...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-ai-cancel" class="btn btn-secondary">Cancel</button>
+        <button id="btn-ai-apply" class="btn btn-primary" disabled>
+          <i data-lucide="check"></i> Apply Rewritten Copy
         </button>
       </div>
     </div>
-  </footer>
+  </div>
 
-  <!-- ── SETTINGS MODAL ── -->
-  <div class="modal-overlay" id="settings-modal-overlay">
-    <div class="modal">
+  <!-- Custom Translation Confirm Prompt Modal -->
+  <div id="confirm-save-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card modal-prompt">
       <div class="modal-header">
-        <h3 class="modal-title">AI API Integration Settings</h3>
-        <span class="modal-close" onclick="closeModal('settings-modal-overlay')">✕</span>
+        <h3><i data-lucide="alert-triangle" style="color: var(--warning);"></i> Unsaved Translation Changes</h3>
+        <button class="modal-close" id="btn-confirm-close"><i data-lucide="x"></i></button>
       </div>
       <div class="modal-body">
-        
-        <div>
-          <label class="field-label">API Provider</label>
-          <div class="api-option-tabs">
-            <div class="api-tab active" data-provider="gemini" onclick="selectApiProvider('gemini')">Google Gemini</div>
-            <div class="api-tab" data-provider="openai" onclick="selectApiProvider('openai')">OpenAI GPT</div>
-          </div>
+        <p>You have made changes to the <strong>English text</strong> since you last translated it into German. Would you like to translate the text now before saving?</p>
+        <div class="prompt-details">
+          If you proceed with translating, the German text area will be updated to match your latest English changes.
         </div>
-
-        <div id="gemini-settings-group">
-          <div>
-            <label class="field-label">Gemini API Key</label>
-            <input type="password" class="input-field" id="settings-gemini-key" placeholder="AIzaSy...">
-          </div>
-          <div style="margin-top: 10px;">
-            <label class="field-label">Gemini Model</label>
-            <select class="input-field" id="settings-gemini-model" style="cursor: pointer;">
-              <option value="gemini-1.5-flash">Gemini 1.5 Flash (Fast, Recommended)</option>
-              <option value="gemini-1.5-pro">Gemini 1.5 Pro (Highly Creative & Human)</option>
-            </select>
-          </div>
-        </div>
-
-        <div id="openai-settings-group" style="display: none;">
-          <div>
-            <label class="field-label">OpenAI API Key</label>
-            <input type="password" class="input-field" id="settings-openai-key" placeholder="sk-proj-...">
-          </div>
-          <div style="margin-top: 10px;">
-            <label class="field-label">GPT Model</label>
-            <select class="input-field" id="settings-openai-model" style="cursor: pointer;">
-              <option value="gpt-4o-mini">GPT-4o Mini (Cost Effective)</option>
-              <option value="gpt-4o">GPT-4o (Premium Text Quality)</option>
-            </select>
-          </div>
-        </div>
-
-        <p style="font-size: 11px; color: var(--text-secondary); line-height: 1.4;">
-          Your API keys are saved directly in your browser's local sandbox storage (`localStorage`) and are only ever sent directly to the model's official API endpoints.
-        </p>
-
       </div>
       <div class="modal-footer">
-        <button class="btn btn-secondary" onclick="closeModal('settings-modal-overlay')">Cancel</button>
-        <button class="btn btn-gold" id="btn-save-settings">Save API Configuration</button>
+        <button id="btn-confirm-cancel" class="btn btn-secondary">Cancel</button>
+        <button id="btn-confirm-no" class="btn btn-danger">No, Save As Is</button>
+        <button id="btn-confirm-yes" class="btn btn-primary">Yes, Translate & Save</button>
       </div>
     </div>
   </div>
 
-  <!-- ── TOAST NOTIFICATIONS CONTAINER ── -->
-  <div class="toast-container" id="toast-container"></div>
+  <!-- Translation Loading Overlay -->
+  <div id="loading-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card modal-loading">
+      <div class="modal-body text-center">
+        <div class="loading-spinner"></div>
+        <p id="loading-modal-message">Translating paragraphs using MyMemory...</p>
+        <div class="progress-bar-container" id="loading-progress-container">
+          <div class="progress-bar-fill" id="loading-progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- ── APP SCRIPT LOGIC ── -->
-  <script>
-    // ── GLOBAL APPLICATION STATE ──
-    let fileHandle = null;
-    let dbState = null;         // Parsed blog.json
-    let currentArticleId = null;// Active post ID being edited
-    let activeParagraphs = [];  // Array of { id, en, de } for current article
+  <!-- Publish Confirmation Modal -->
+  <div id="publish-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card modal-prompt">
+      <div class="modal-header">
+        <h3><i data-lucide="globe" style="color: var(--success);"></i> Publish to Live Site</h3>
+        <button class="modal-close" id="btn-publish-close"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <p>This will pre-render all static blog pages and push all local modifications directly to the live server at <strong>pauseandmove.ch</strong>.</p>
+        
+        <div class="form-group" style="margin-top: 16px;">
+          <label for="publish-version">Version Tag</label>
+          <input type="text" id="publish-version" class="form-control" placeholder="e.g. 1.12">
+        </div>
+        
+        <div class="form-group" style="margin-top: 12px;">
+          <label for="publish-comments">Release Notes / Comments</label>
+          <textarea id="publish-comments" class="form-control" rows="3" placeholder="Describe what changed in this version..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-publish-cancel" class="btn btn-secondary">Cancel</button>
+        <button id="btn-publish-confirm" class="btn btn-success">
+          <i data-lucide="send"></i> Confirm & Publish
+        </button>
+      </div>
+    </div>
+  </div>
 
-    // Categories translation helper matching index.js
-    const CATEGORIES_EN = {
-      "health": "Health",
-      "healthy_living": "Healthy Living",
-      "lifestyle": "Lifestyle",
-      "nutrition": "Nutrition",
-      "movement": "Movement",
-      "treatment_methods": "Treatment methods",
-      "oriental_medicine": "Oriental Medicine"
-    };
-
-    // ── DOM ELEMENTS ──
-    const elBtnLoadFile = document.getElementById('btn-load-file');
-    const elBtnEmptyLoad = document.getElementById('btn-empty-load');
-    const elBtnSaveFile = document.getElementById('btn-save-file');
-    const elBtnCreatePost = document.getElementById('btn-create-post');
-    const elSearchInput = document.getElementById('search-input');
-    const elCatFilter = document.getElementById('cat-filter');
-    const elPostsList = document.getElementById('posts-list');
-    
-    const elWorkspace = document.getElementById('workspace');
-    const elEmptyState = document.getElementById('empty-state');
-    const elEditorPanel = document.getElementById('editor-panel');
-    
-    // Form Inputs
-    const elPostType = document.getElementById('post-type');
-    const elPostCategory = document.getElementById('post-category');
-    const elPostSlug = document.getElementById('post-slug');
-    const elPostDate = document.getElementById('post-date');
-    const elPostReadtime = document.getElementById('post-readtime');
-    const elPostAuthor = document.getElementById('post-author');
-    const elPostCover = document.getElementById('post-cover');
-    const elPostVideoUrl = document.getElementById('post-video-url');
-    const elVideoUrlContainer = document.getElementById('video-url-container');
-    const elBtnGenSlug = document.getElementById('btn-gen-slug');
-
-    const elEnTitle = document.getElementById('en-title');
-    const elEnAbstract = document.getElementById('en-abstract');
-    const elEnKeywords = document.getElementById('en-keywords');
-    const elEnParagraphsContainer = document.getElementById('en-paragraphs-container');
-    const elEnTranscriptTextarea = document.getElementById('en-transcript-textarea');
-
-    const elDeTitle = document.getElementById('de-title');
-    const elDeAbstract = document.getElementById('de-abstract');
-    const elDeKeywords = document.getElementById('de-keywords');
-    const elDeParagraphsContainer = document.getElementById('de-paragraphs-container');
-    const elDeTranscriptTextarea = document.getElementById('de-transcript-textarea');
-
-    const elEnBodyLabel = document.getElementById('en-body-label');
-    const elDeBodyLabel = document.getElementById('de-body-label');
-    const elEnAddBlockFooter = document.getElementById('en-add-block-footer');
-    
-    // Bottom Bar Buttons
-    const elBtnSettingsModal = document.getElementById('btn-settings-modal');
-    const elBtnAiTranslate = document.getElementById('btn-ai-translate');
-    const elBtnAiSeo = document.getElementById('btn-ai-seo');
-    const elAiRewritePrompt = document.getElementById('ai-rewrite-prompt');
-    const elBtnAiRewrite = document.getElementById('btn-ai-rewrite');
-    const elAiStatusDot = document.getElementById('ai-status-dot');
-    const elAiStatusText = document.getElementById('ai-status-text');
-
-    // Settings Modal Inputs
-    const elSettingsModalOverlay = document.getElementById('settings-modal-overlay');
-    const elSettingsGeminiKey = document.getElementById('settings-gemini-key');
-    const elSettingsGeminiModel = document.getElementById('settings-gemini-model');
-    const elSettingsOpenaiKey = document.getElementById('settings-openai-key');
-    const elSettingsOpenaiModel = document.getElementById('settings-openai-model');
-    const elBtnSaveSettings = document.getElementById('btn-save-settings');
-
-    // ── INITIALIZATION ──
-    window.addEventListener('DOMContentLoaded', () => {
-      // Setup API status checks
-      checkApiStatus();
-      populateMetadataCategories();
-      
-      // Event listeners
-      elBtnLoadFile.addEventListener('click', loadFile);
-      elBtnEmptyLoad.addEventListener('click', loadFile);
-      elBtnSaveFile.addEventListener('click', saveFile);
-      elBtnCreatePost.addEventListener('click', createNewPost);
-      elBtnGenSlug.addEventListener('click', generateSlugFromTitle);
-      elBtnSettingsModal.addEventListener('click', () => openModal('settings-modal-overlay'));
-      elBtnSaveSettings.addEventListener('click', saveApiSettings);
-      
-      elSearchInput.addEventListener('input', renderPostsList);
-      elCatFilter.addEventListener('change', renderPostsList);
-      
-      elPostType.addEventListener('change', handlePostTypeChange);
-      
-      // Auto-save form inputs to local javascript memory cache on input change
-      const syncInputs = [
-        elPostType, elPostCategory, elPostSlug, elPostDate, elPostReadtime, elPostAuthor, elPostCover, elPostVideoUrl,
-        elEnTitle, elEnAbstract, elEnKeywords, elEnTranscriptTextarea,
-        elDeTitle, elDeAbstract, elDeKeywords, elDeTranscriptTextarea
-      ];
-      syncInputs.forEach(input => input.addEventListener('input', syncCurrentStateToDbState));
-
-      // Abstract counters
-      elEnAbstract.addEventListener('input', () => updateCharCounter(elEnAbstract, 'en-abstract-counter'));
-      elDeAbstract.addEventListener('input', () => updateCharCounter(elDeAbstract, 'de-abstract-counter'));
-
-      // AI Button listeners
-      elBtnAiTranslate.addEventListener('click', triggerAiTranslation);
-      elBtnAiSeo.addEventListener('click', triggerAiSeoAutomation);
-      elBtnAiRewrite.addEventListener('click', triggerAiRewrite);
-      elAiRewritePrompt.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') triggerAiRewrite();
-      });
-
-      // Auto-load blog.json on startup
-      autoloadBlogJson();
-    });
-
-    // Populate Category selectors
-    function populateMetadataCategories() {
-      elPostCategory.innerHTML = '';
-      elCatFilter.innerHTML = '<option value="all">All Categories</option>';
-      Object.keys(CATEGORIES_EN).forEach(key => {
-        // Add to editor meta selector
-        const opt = document.createElement('option');
-        opt.value = key;
-        opt.textContent = CATEGORIES_EN[key];
-        elPostCategory.appendChild(opt);
-
-        // Add to sidebar filter
-        const optFilter = document.createElement('option');
-        optFilter.value = key;
-        optFilter.textContent = CATEGORIES_EN[key];
-        elCatFilter.appendChild(optFilter);
-      });
-    }
-
-    function updateCharCounter(textarea, counterId) {
-      const counter = document.getElementById(counterId);
-      const count = textarea.value.length;
-      counter.textContent = `${count} / 160 chars`;
-      if (count > 160) {
-        counter.style.color = 'var(--red-danger)';
-      } else {
-        counter.style.color = 'var(--text-muted)';
-      }
-    }
-
-    // ── TOAST NOTIFICATIONS ──
-    function showToast(message, type = 'success') {
-      const container = document.getElementById('toast-container');
-      const toast = document.createElement('div');
-      toast.className = `toast toast-${type}`;
-      toast.innerHTML = `
-        <span>${message}</span>
-        <span class="toast-close">&times;</span>
-      `;
-      container.appendChild(toast);
-      
-      // Trigger animations
-      setTimeout(() => toast.classList.add('show'), 50);
-      
-      const removeToast = () => {
-        toast.classList.remove('show');
-        setTimeout(() => toast.remove(), 300);
-      };
-      
-      // Auto-remove after 4 seconds
-      const timeoutId = setTimeout(removeToast, 4000);
-      
-      toast.querySelector('.toast-close').addEventListener('click', () => {
-        clearTimeout(timeoutId);
-        removeToast();
-      });
-    }
-
-    // ── MODALS CONTROL ──
-    function openModal(id) {
-      const overlay = document.getElementById(id);
-      overlay.classList.add('active');
-      
-      // Load saved settings
-      if (id === 'settings-modal-overlay') {
-        const provider = localStorage.getItem('ai_provider') || 'gemini';
-        selectApiProvider(provider);
-        elSettingsGeminiKey.value = localStorage.getItem('gemini_key') || '';
-        elSettingsGeminiModel.value = localStorage.getItem('gemini_model') || 'gemini-1.5-flash';
-        elSettingsOpenaiKey.value = localStorage.getItem('openai_key') || '';
-        elSettingsOpenaiModel.value = localStorage.getItem('openai_model') || 'gpt-4o-mini';
-      }
-    }
-
-    function closeModal(id) {
-      document.getElementById(id).classList.remove('active');
-    }
-
-    function selectApiProvider(provider) {
-      document.querySelectorAll('.api-tab').forEach(tab => {
-        if (tab.dataset.provider === provider) {
-          tab.classList.add('active');
-        } else {
-          tab.classList.remove('active');
-        }
-      });
-      if (provider === 'gemini') {
-        document.getElementById('gemini-settings-group').style.display = 'block';
-        document.getElementById('openai-settings-group').style.display = 'none';
-      } else {
-        document.getElementById('gemini-settings-group').style.display = 'none';
-        document.getElementById('openai-settings-group').style.display = 'block';
-      }
-    }
-
-    function saveApiSettings() {
-      const activeTab = document.querySelector('.api-tab.active');
-      const provider = activeTab.dataset.provider;
-      
-      localStorage.setItem('ai_provider', provider);
-      localStorage.setItem('gemini_key', elSettingsGeminiKey.value.trim());
-      localStorage.setItem('gemini_model', elSettingsGeminiModel.value);
-      localStorage.setItem('openai_key', elSettingsOpenaiKey.value.trim());
-      localStorage.setItem('openai_model', elSettingsOpenaiModel.value);
-      
-      closeModal('settings-modal-overlay');
-      showToast('API Configuration saved successfully');
-      checkApiStatus();
-    }
-
-    function checkApiStatus() {
-      const provider = localStorage.getItem('ai_provider') || 'gemini';
-      const geminiKey = localStorage.getItem('gemini_key');
-      const openaiKey = localStorage.getItem('openai_key');
-      
-      let isConfigured = false;
-      if (provider === 'gemini' && geminiKey) isConfigured = true;
-      if (provider === 'openai' && openaiKey) isConfigured = true;
-      
-      if (isConfigured) {
-        elAiStatusDot.className = 'ai-status-dot active';
-        elAiStatusText.textContent = `API Ready (${provider === 'gemini' ? 'Gemini' : 'OpenAI'})`;
-        elBtnAiTranslate.disabled = false;
-        elBtnAiSeo.disabled = false;
-        elAiRewritePrompt.disabled = false;
-        elBtnAiRewrite.disabled = false;
-      } else {
-        elAiStatusDot.className = 'ai-status-dot';
-        elAiStatusText.textContent = 'API Offline (No Key)';
-        elBtnAiTranslate.disabled = true;
-        elBtnAiSeo.disabled = true;
-        elAiRewritePrompt.disabled = true;
-        elBtnAiRewrite.disabled = true;
-      }
-    }
-
-    // Auto-load blog.json on startup
-    async function autoloadBlogJson() {
-      try {
-        const response = await fetch('blog.json?cb=' + Date.now());
-        if (!response.ok) {
-          throw new Error("Local HTTP file not available.");
-        }
-        const data = await response.json();
-        if (data.en && data.de && data.en.articles && data.de.articles) {
-          dbState = data;
-          elBtnCreatePost.disabled = false;
-          elBtnSaveFile.disabled = false;
-          elEmptyState.style.display = 'none';
+  <!-- AI Cover Image Assistant Modal (Unified Import & Resizer) -->
+  <div id="image-resize-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card modal-image-resize">
+      <div class="modal-header">
+        <h3><i data-lucide="image" class="ai-glow-icon" style="color: var(--primary-hover);"></i> Cover Image Assistant</h3>
+        <button class="modal-close" id="btn-resize-close"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <!-- View 1: Import Dashboard -->
+        <div id="resize-import-view" class="resize-import-view">
+          <div class="import-drop-zone" id="resize-drop-zone">
+            <i data-lucide="upload-cloud" class="import-icon"></i>
+            <span class="import-title">Drag & Drop Cover Image Here</span>
+            <span class="import-subtitle">Supports PNG, JPG, WebP, or pasted screenshots</span>
+            <button class="btn btn-secondary btn-choose-file" type="button" onclick="document.getElementById('resize-file-input').click()">
+              <i data-lucide="file-image"></i> Choose File...
+            </button>
+            <input type="file" id="resize-file-input" accept="image/*" style="display: none;">
+          </div>
           
-          // Populate categories drop-down & lists
-          populateMetadataCategories();
-          renderPostsList();
-          showToast("Autoloaded blog.json from server. Select a post to edit.", "success");
-        }
-      } catch (err) {
-        console.log("Auto-load of blog.json failed (expected if run directly from file system):", err);
-      }
-    }
-
-    // ── FILE I/O OPERATIONS (FILE SYSTEM ACCESS API) ──
-    async function loadFile() {
-      try {
-        const [handle] = await window.showOpenFilePicker({
-          types: [{
-            description: 'JSON Database (blog.json)',
-            accept: { 'application/json': ['.json'] }
-          }],
-          excludeAcceptAllOption: true,
-          multiple: false
-        });
-        
-        fileHandle = handle;
-        const file = await fileHandle.getFile();
-        const text = await file.text();
-        
-        // Parse and validate database
-        dbState = JSON.parse(text);
-        if (!dbState.en || !dbState.de || !dbState.en.articles || !dbState.de.articles) {
-          throw new Error("Invalid schema! Missing root language keys or articles list.");
-        }
-        
-        showToast(`Loaded ${file.name} successfully.`);
-        
-        // Enable Controls
-        elBtnCreatePost.disabled = false;
-        elBtnSaveFile.disabled = false;
-        elEmptyState.style.display = 'none';
-        
-        renderPostsList();
-      } catch (err) {
-        if (err.name !== 'AbortError') {
-          console.error(err);
-          showToast(`Error: ${err.message}`, 'danger');
-        }
-      }
-    }
-
-    async function saveFile() {
-      if (!dbState) return;
-      
-      // Attempt to save directly via HTTP POST if running on a web server (e.g. localhost preview)
-      if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
-        try {
-          showToast("Saving database to server...", "info");
-          const response = await fetch('blog.json', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(dbState, null, 2)
-          });
-          if (response.ok) {
-            showToast("Database saved successfully back to blog.json via server", "success");
-            return;
-          } else {
-            console.warn("Server save failed. Falling back to local file picker save.");
-          }
-        } catch (err) {
-          console.warn("Server save error. Falling back to local file picker save.", err);
-        }
-      }
-
-      // If we don't have a file handle yet (e.g. we auto-loaded via HTTP fetch),
-      // we must ask the user to authorize saving by selecting the local file.
-      if (!fileHandle) {
-        try {
-          showToast("Please select your local blog.json to authorize write permissions", "info");
-          const [handle] = await window.showOpenFilePicker({
-            types: [{
-              description: 'JSON Database (blog.json)',
-              accept: { 'application/json': ['.json'] }
-            }],
-            excludeAcceptAllOption: true,
-            multiple: false
-          });
-          fileHandle = handle;
-        } catch (err) {
-          if (err.name === 'AbortError') return;
-          showToast("Save aborted: No write target selected.", "danger");
-          return;
-        }
-      }
-
-      try {
-        // Build saving state
-        const writable = await fileHandle.createWritable();
-        await writable.write(JSON.stringify(dbState, null, 2));
-        await writable.close();
-        showToast("Database saved successfully back to blog.json", "success");
-      } catch (err) {
-        console.error(err);
-        showToast(`Failed to save file: ${err.message}`, "danger");
-      }
-    }
-
-    // ── POST RENDER & FILTER LIST ──
-    function renderPostsList() {
-      if (!dbState) return;
-      
-      const searchVal = elSearchInput.value.toLowerCase();
-      const catVal = elCatFilter.value;
-      
-      elPostsList.innerHTML = '';
-      
-      // Pull articles list (using English catalog as reference)
-      const articles = dbState.en.articles;
-      
-      articles.forEach(art => {
-        // Fallback checks
-        const matchesSearch = art.title.toLowerCase().includes(searchVal) || 
-                              art.abstract.toLowerCase().includes(searchVal) ||
-                              art.id.toLowerCase().includes(searchVal);
-        const matchesCategory = catVal === 'all' || art.categoryId === catVal;
-        
-        if (matchesSearch && matchesCategory) {
-          // Identify German counterpart
-          const deArt = dbState.de.articles.find(x => x.id === art.id) || {};
+          <div class="import-input-divider">
+            <span>or</span>
+          </div>
           
-          const isVideo = art.type === 'video' || art.videoUrl;
-          const badgeType = isVideo ? 'video' : 'article';
-          
-          const div = document.createElement('div');
-          div.className = `post-item ${art.id === currentArticleId ? 'active' : ''}`;
-          div.dataset.id = art.id;
-          div.innerHTML = `
-            <div class="post-item-meta">
-              <span class="badge-type badge-${badgeType}">${badgeType}</span>
-              <span class="post-item-date">${art.date || ''}</span>
+          <div class="form-group">
+            <label for="resize-path-input">Enter file path or web URL</label>
+            <div class="import-path-group">
+              <input type="text" id="resize-path-input" class="form-control" placeholder="C:\Users\Name\Pictures\cover.jpg or https://example.com/image.png">
+              <button id="btn-resize-path-load" class="btn btn-primary"><i data-lucide="arrow-right"></i> Load</button>
             </div>
-            <div class="post-item-title">${art.title || 'Untitled Post'}</div>
-            <div class="post-item-cat">${CATEGORIES_EN[art.categoryId] || art.categoryId || ''}</div>
-          `;
+          </div>
           
-          div.addEventListener('click', () => selectPost(art.id));
-          elPostsList.appendChild(div);
-        }
-      });
-    }
-
-    // ── EDIT POST CONTROLLER ──
-    function selectPost(id) {
-      currentArticleId = id;
-      document.querySelectorAll('.post-item').forEach(el => {
-        el.classList.toggle('active', el.dataset.id === id);
-      });
-
-      const enArt = dbState.en.articles.find(x => x.id === id);
-      const deArt = dbState.de.articles.find(x => x.id === id);
-      
-      if (!enArt) return;
-
-      // Enable Form Panel
-      elEditorPanel.classList.add('active');
-
-      // Populate Inputs
-      elPostType.value = (enArt.type === 'video' || enArt.videoUrl) ? 'video' : 'article';
-      elPostCategory.value = enArt.categoryId || 'health';
-      elPostSlug.value = enArt.id || '';
-      elPostDate.value = enArt.date || '';
-      elPostReadtime.value = enArt.readTime || '';
-      elPostAuthor.value = enArt.author || 'Michael Guralnik';
-      elPostCover.value = enArt.image || '';
-      elPostVideoUrl.value = enArt.videoUrl || '';
-
-      elEnTitle.value = enArt.title || '';
-      elEnAbstract.value = enArt.abstract || '';
-      elEnKeywords.value = (enArt.keywords || []).join(', ');
-
-      elDeTitle.value = deArt ? (deArt.title || '') : '';
-      elDeAbstract.value = deArt ? (deArt.abstract || '') : '';
-      elDeKeywords.value = deArt ? ((deArt.keywords || []).join(', ')) : '';
-
-      // Update counters
-      updateCharCounter(elEnAbstract, 'en-abstract-counter');
-      updateCharCounter(elDeAbstract, 'de-abstract-counter');
-
-      handlePostTypeChange();
-
-      // Parse Paragraph content list
-      if (elPostType.value === 'article') {
-        const enParas = enArt.content || [];
-        const deParas = deArt ? (deArt.content || []) : [];
-        
-        activeParagraphs = [];
-        const maxLen = Math.max(enParas.length, deParas.length, 1); // always at least 1 paragraph block
-        
-        for (let i = 0; i < maxLen; i++) {
-          activeParagraphs.push({
-            id: generateUniqueId(),
-            en: enParas[i] || '',
-            de: deParas[i] || ''
-          });
-        }
-        renderParagraphs();
-      } else {
-        // Video transcripts
-        elEnTranscriptTextarea.value = enArt.transcript || '';
-        elDeTranscriptTextarea.value = deArt ? (deArt.transcript || '') : '';
-      }
-    }
-
-    function handlePostTypeChange() {
-      const type = elPostType.value;
-      if (type === 'video') {
-        elVideoUrlContainer.style.display = 'block';
-        elEnParagraphsContainer.style.display = 'none';
-        elDeParagraphsContainer.style.display = 'none';
-        elEnTranscriptTextarea.style.display = 'block';
-        elDeTranscriptTextarea.style.display = 'block';
-        
-        elEnBodyLabel.textContent = 'Video Transcript / Notes';
-        elDeBodyLabel.textContent = 'Videotranskript / Notizen';
-        elEnAddBlockFooter.style.display = 'none';
-      } else {
-        elVideoUrlContainer.style.display = 'none';
-        elEnParagraphsContainer.style.display = 'block';
-        elDeParagraphsContainer.style.display = 'block';
-        elEnTranscriptTextarea.style.display = 'none';
-        elDeTranscriptTextarea.style.display = 'none';
-        
-        elEnBodyLabel.textContent = 'Content Paragraphs';
-        elDeBodyLabel.textContent = 'Content Paragraphs (DE)';
-        elEnAddBlockFooter.style.display = 'flex';
-        renderParagraphs();
-      }
-    }
-
-    function generateSlugFromTitle() {
-      const title = elEnTitle.value;
-      if (!title) return;
-      
-      const slug = title
-        .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, '') // remove special chars
-        .replace(/\s+/g, '-')          // replace spaces with hyphens
-        .replace(/-+/g, '-')           // collapse double hyphens
-        .trim();
-        
-      elPostSlug.value = slug;
-      syncCurrentStateToDbState();
-    }
-
-    function generateUniqueId() {
-      return 'p_' + Math.random().toString(36).substr(2, 9);
-    }
-
-    // ── PARAGRAPH BLOCKS RENDERER ──
-    function renderParagraphs() {
-      if (elPostType.value !== 'article') return;
-      
-      elEnParagraphsContainer.innerHTML = '';
-      elDeParagraphsContainer.innerHTML = '';
-
-      activeParagraphs.forEach((p, idx) => {
-        // EN paragraph row
-        const rowEn = document.createElement('div');
-        rowEn.className = 'paragraph-block-row';
-        rowEn.innerHTML = `
-          <div class="paragraph-controls">
-            <span class="paragraph-num">P${idx+1}</span>
-            <button class="paragraph-nav-btn" onclick="moveParagraph(${idx}, -1)" ${idx === 0 ? 'disabled' : ''}>▲</button>
-            <button class="paragraph-nav-btn" onclick="moveParagraph(${idx}, 1)" ${idx === activeParagraphs.length - 1 ? 'disabled' : ''}>▼</button>
-            <button class="paragraph-nav-btn paragraph-del-btn" onclick="deleteParagraph(${idx})">&times;</button>
+          <div class="import-tip">
+            <i data-lucide="info" style="width:14px; height:14px; color: var(--text-muted);"></i>
+            <span>Tip: You can paste an image directly from your clipboard anywhere in this window.</span>
           </div>
-          <div class="paragraph-text-wrapper">
-            <textarea class="paragraph-textarea" oninput="updateParagraphText(${idx}, 'en', this.value)" placeholder="English paragraph content...">${p.en}</textarea>
+        </div>
+
+        <!-- View 2: Resizing Editor -->
+        <div id="resize-editor-view" class="image-resize-layout" style="display: none;">
+          <!-- Left Panel: Chatbot Dialogue -->
+          <div class="resize-chat-panel">
+            <div class="chat-header-info">
+              <span>Image Resizer Agent</span>
+              <span class="agent-status-badge"><span class="status-dot"></span>Online</span>
+            </div>
+            <div id="resize-chat-history" class="resize-chat-history">
+              <!-- Dynamically populated with chat bubbles -->
+            </div>
+            
+            <!-- Quick Action Chips -->
+            <div class="chat-presets" id="chat-presets">
+              <button class="preset-chip" onclick="triggerResizePreset('crop')">Crop to 3:2</button>
+              <button class="preset-chip" onclick="triggerResizePreset('blur')">Add Blur Padding</button>
+              <button class="preset-chip" onclick="triggerResizePreset('solid')">Add Solid Padding</button>
+              <button class="preset-chip" onclick="triggerResizePreset('outpaint')">Deep AI Outpaint</button>
+            </div>
+            
+            <div class="chat-input-group">
+              <input type="text" id="resize-chat-input" class="form-control" placeholder="Ask the AI (e.g. 'crop right', 'make background white')...">
+              <button id="btn-resize-send" class="btn btn-primary"><i data-lucide="send"></i></button>
+            </div>
           </div>
-        `;
-        elEnParagraphsContainer.appendChild(rowEn);
-
-        // DE paragraph row
-        const rowDe = document.createElement('div');
-        rowDe.className = 'paragraph-block-row';
-        rowDe.innerHTML = `
-          <div class="paragraph-controls" style="visibility: hidden;">
-            <span class="paragraph-num">P${idx+1}</span>
+          
+          <!-- Right Panel: Canvas Preview & Crop Box -->
+          <div class="resize-canvas-panel">
+            <div class="canvas-header-meta">
+              <span id="canvas-size-info">Original: 0x0 (0:0) -> Target: 3:2</span>
+            </div>
+            <div class="resize-canvas-container" id="resize-canvas-container">
+              <canvas id="resize-canvas"></canvas>
+            </div>
+            <div class="canvas-tip-text">
+              <i data-lucide="info" style="width:12px;height:12px;margin-right:4px;"></i> Drag the crop box or use chat to adjust crop/padding.
+            </div>
           </div>
-          <div class="paragraph-text-wrapper">
-            <textarea class="paragraph-textarea" oninput="updateParagraphText(${idx}, 'de', this.value)" placeholder="Deutscher Absatzinhalt...">${p.de}</textarea>
-          </div>
-        `;
-        elDeParagraphsContainer.appendChild(rowDe);
-
-        // Add inline dividers (insert helper) between paragraphs, but not after the last one
-        if (idx < activeParagraphs.length - 1) {
-          // EN Divider
-          const divEn = document.createElement('div');
-          divEn.className = 'paragraph-insert-divider';
-          divEn.innerHTML = `<button class="paragraph-insert-btn" onclick="insertParagraph(${idx + 1})">+ Insert Paragraph</button>`;
-          elEnParagraphsContainer.appendChild(divEn);
-
-          // DE Spacer Divider
-          const divDe = document.createElement('div');
-          divDe.className = 'paragraph-insert-divider';
-          divDe.style.visibility = 'hidden';
-          elDeParagraphsContainer.appendChild(divDe);
-        }
-      });
-    }
-
-    function updateParagraphText(index, lang, text) {
-      activeParagraphs[index][lang] = text;
-      syncCurrentStateToDbState();
-    }
-
-    function addParagraphAtEnd() {
-      activeParagraphs.push({ id: generateUniqueId(), en: '', de: '' });
-      renderParagraphs();
-      syncCurrentStateToDbState();
-    }
-
-    function insertParagraph(index) {
-      activeParagraphs.splice(index, 0, { id: generateUniqueId(), en: '', de: '' });
-      renderParagraphs();
-      syncCurrentStateToDbState();
-    }
-
-    function deleteParagraph(index) {
-      if (activeParagraphs.length <= 1) {
-        showToast("You must keep at least one paragraph", "danger");
-        return;
-      }
-      activeParagraphs.splice(index, 1);
-      renderParagraphs();
-      syncCurrentStateToDbState();
-    }
-
-    function moveParagraph(index, direction) {
-      const targetIdx = index + direction;
-      if (targetIdx < 0 || targetIdx >= activeParagraphs.length) return;
-      
-      const temp = activeParagraphs[index];
-      activeParagraphs[index] = activeParagraphs[targetIdx];
-      activeParagraphs[targetIdx] = temp;
-      
-      renderParagraphs();
-      syncCurrentStateToDbState();
-    }
-
-    // ── DATABASE SYNC ──
-    function syncCurrentStateToDbState() {
-      if (!dbState || !currentArticleId) return;
-
-      const oldId = currentArticleId;
-      const newId = elPostSlug.value.trim() || oldId;
-
-      // Update IDs in both lists if slug changed
-      let enIndex = dbState.en.articles.findIndex(x => x.id === oldId);
-      let deIndex = dbState.de.articles.findIndex(x => x.id === oldId);
-
-      if (enIndex === -1) return;
-
-      // If ID changed, verify uniqueness
-      if (oldId !== newId) {
-        const exists = dbState.en.articles.some(x => x.id === newId && x !== dbState.en.articles[enIndex]);
-        if (exists) {
-          showToast("Warning: Slug ID already exists! Please use a unique ID.", "danger");
-          return;
-        }
-        currentArticleId = newId;
-      }
-
-      const isVideo = elPostType.value === 'video';
-
-      // Build English article object
-      const enArticle = {
-        id: newId,
-        categoryId: elPostCategory.value,
-        title: elEnTitle.value.trim(),
-        date: elPostDate.value.trim(),
-        readTime: elPostReadtime.value.trim(),
-        author: elPostAuthor.value.trim(),
-        abstract: elEnAbstract.value.trim(),
-        image: elPostCover.value.trim(),
-        keywords: elEnKeywords.value.split(',').map(x => x.trim()).filter(Boolean)
-      };
-
-      if (isVideo) {
-        enArticle.type = 'video';
-        enArticle.videoUrl = elPostVideoUrl.value.trim();
-        enArticle.content = [];
-        enArticle.transcript = elEnTranscriptTextarea.value;
-      } else {
-        enArticle.content = activeParagraphs.map(p => p.en.trim()).filter(Boolean);
-      }
-
-      // Build German article object
-      const deArticle = {
-        id: newId,
-        categoryId: elPostCategory.value,
-        title: elDeTitle.value.trim(),
-        date: elPostDate.value.trim(),
-        readTime: elPostReadtime.value.trim(),
-        author: elPostAuthor.value.trim(),
-        abstract: elDeAbstract.value.trim(),
-        image: elPostCover.value.trim(),
-        keywords: elDeKeywords.value.split(',').map(x => x.trim()).filter(Boolean)
-      };
-
-      if (isVideo) {
-        deArticle.type = 'video';
-        deArticle.videoUrl = elPostVideoUrl.value.trim();
-        deArticle.content = [];
-        deArticle.transcript = elDeTranscriptTextarea.value;
-      } else {
-        deArticle.content = activeParagraphs.map(p => p.de.trim()).filter(Boolean);
-      }
-
-      // Overwrite entries in master state
-      dbState.en.articles[enIndex] = enArticle;
-      
-      if (deIndex !== -1) {
-        dbState.de.articles[deIndex] = deArticle;
-      } else {
-        dbState.de.articles.push(deArticle);
-      }
-
-      // Update sidebar
-      renderPostsList();
-    }
-
-    // ── CREATE NEW POST ──
-    function createNewPost() {
-      if (!dbState) return;
-
-      const newId = 'new-post-' + Date.now();
-      
-      const newEn = {
-        id: newId,
-        categoryId: 'health',
-        title: 'New Post Title',
-        date: formatCurrentMonthYear(),
-        readTime: '1 min',
-        author: 'Michael Guralnik',
-        abstract: 'New article summary...',
-        image: 'assets/hero.png',
-        keywords: ['wellness'],
-        content: ['First English paragraph.']
-      };
-
-      const newDe = {
-        id: newId,
-        categoryId: 'health',
-        title: 'Neuer Beitrag Titel',
-        date: formatCurrentMonthYear(),
-        readTime: '1 min',
-        author: 'Michael Guralnik',
-        abstract: 'Deutsche Zusammenfassung...',
-        image: 'assets/hero.png',
-        keywords: ['wellness'],
-        content: ['Erster deutscher Absatz.']
-      };
-
-      dbState.en.articles.unshift(newEn);
-      dbState.de.articles.unshift(newDe);
-
-      currentArticleId = newId;
-      renderPostsList();
-      selectPost(newId);
-      
-      showToast("Created a new post template.", "success");
-    }
-
-    function formatCurrentMonthYear() {
-      const date = new Date();
-      const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      return `${months[date.getMonth()]} ${date.getFullYear()}`;
-    }
-
-    // ── AI ENGINE INTEGRATIONS (GEMINI & OPENAI CALLS) ──
-    async function triggerAiTranslation() {
-      const provider = localStorage.getItem('ai_provider') || 'gemini';
-      const geminiKey = localStorage.getItem('gemini_key');
-      const openaiKey = localStorage.getItem('openai_key');
-      
-      const key = provider === 'gemini' ? geminiKey : openaiKey;
-      if (!key) {
-        showToast("AI Key missing! Please configure API Settings.", "danger");
-        return;
-      }
-
-      const isVideo = elPostType.value === 'video';
-      
-      // Collect English Content
-      const enTitle = elEnTitle.value.trim();
-      const enAbstract = elEnAbstract.value.trim();
-      const enKeywords = elEnKeywords.value.trim();
-      
-      let enBodyContent = "";
-      if (isVideo) {
-        enBodyContent = elEnTranscriptTextarea.value.trim();
-      } else {
-        enBodyContent = activeParagraphs.map((p, i) => `Paragraph ${i+1}: ${p.en}`).join('\n\n');
-      }
-
-      if (!enTitle) {
-        showToast("Please provide at least an English title to translate", "danger");
-        return;
-      }
-
-      // UI feedback loading
-      const originalText = elBtnAiTranslate.innerHTML;
-      elBtnAiTranslate.disabled = true;
-      elBtnAiTranslate.innerHTML = `<span class="spinner"></span> Translating...`;
-
-      try {
-        const systemPrompt = `You are a professional German copywriter and translator specializing in somatic therapies, bodywork (like Feldenkrais, massage, Shiatsu), and mindful wellness.
-Translate the provided English blog post fields into German.
-Tone: Warm, calm, somatic, professional, and natural (never read like robot-translated advertising fluff). Localize naturally for standard German.
-Do not use literal translations when a somatic or therapeutic concept is better described idiomatically. Keep formatting.
-Return the output strictly as a JSON object matching this schema, without enclosing it in markdown code blocks:
-{
-  "title": "Translated German Title",
-  "abstract": "Translated German Abstract / Meta Description (keep it under 160 characters)",
-  "keywords": ["tag1", "tag2", "tag3"],
-  "paragraphs": [
-    "Translated Paragraph 1",
-    "Translated Paragraph 2",
-    ...
-  ],
-  "transcript": "Translated HTML Transcript text (only populate if this is a video post)"
-}`;
-
-        const userPrompt = `Translate this English post content:
-Title: ${enTitle}
-Abstract: ${enAbstract}
-Keywords: ${enKeywords}
-IsVideo: ${isVideo}
-Content:
-${enBodyContent}`;
-
-        let jsonText = "";
-        if (provider === 'gemini') {
-          const model = localStorage.getItem('gemini_model') || 'gemini-1.5-flash';
-          jsonText = await callGeminiAPI(key, model, systemPrompt, userPrompt);
-        } else {
-          const model = localStorage.getItem('openai_model') || 'gpt-4o-mini';
-          jsonText = await callOpenaiAPI(key, model, systemPrompt, userPrompt);
-        }
-
-        // Clean markdown codes if the LLM returned it wrapped in ```json
-        jsonText = cleanJsonMarkup(jsonText);
-        const data = JSON.parse(jsonText);
-
-        // Populate German inputs
-        elDeTitle.value = data.title || "";
-        elDeAbstract.value = data.abstract || "";
-        if (data.keywords) {
-          elDeKeywords.value = data.keywords.join(", ");
-        }
-
-        if (isVideo) {
-          elDeTranscriptTextarea.value = data.transcript || "";
-        } else if (data.paragraphs) {
-          // Map to paragraph blocks
-          data.paragraphs.forEach((pText, i) => {
-            if (activeParagraphs[i]) {
-              activeParagraphs[i].de = pText;
-            } else {
-              activeParagraphs.push({
-                id: generateUniqueId(),
-                en: "",
-                de: pText
-              });
-            }
-          });
-          renderParagraphs();
-        }
-
-        updateCharCounter(elDeAbstract, 'de-abstract-counter');
-        syncCurrentStateToDbState();
-        showToast("German translation completed & loaded.", "success");
-
-      } catch (err) {
-        console.error(err);
-        showToast(`AI Error: ${err.message}`, "danger");
-      } finally {
-        elBtnAiTranslate.disabled = false;
-        elBtnAiTranslate.innerHTML = originalText;
-      }
-    }
-
-    async function triggerAiSeoAutomation() {
-      const provider = localStorage.getItem('ai_provider') || 'gemini';
-      const geminiKey = localStorage.getItem('gemini_key');
-      const openaiKey = localStorage.getItem('openai_key');
-      const key = provider === 'gemini' ? geminiKey : openaiKey;
-
-      if (!key) {
-        showToast("API Key missing! Configure Settings.", "danger");
-        return;
-      }
-
-      const enTitle = elEnTitle.value.trim();
-      const isVideo = elPostType.value === 'video';
-      let enBodyContent = "";
-      
-      if (isVideo) {
-        enBodyContent = elEnTranscriptTextarea.value.trim();
-      } else {
-        enBodyContent = activeParagraphs.map(p => p.en).join('\n\n');
-      }
-
-      if (!enBodyContent) {
-        showToast("Write your content first before generating SEO details", "danger");
-        return;
-      }
-
-      const originalText = elBtnAiSeo.innerHTML;
-      elBtnAiSeo.disabled = true;
-      elBtnAiSeo.innerHTML = `<span class="spinner"></span> Optimizing...`;
-
-      try {
-        const systemPrompt = `You are an SEO specialist for a bodywork and holistic health brand.
-Analyze the blog post details and generate:
-1. An abstract (meta description) summarizing the post in under 160 characters. Make it highly engaging.
-2. A list of 5 to 8 keywords/tags relevant to somatic wellness, physiotherapy, massage, or health seekers in Basel.
-Return your response strictly as a JSON object, without enclosing it in markdown blocks:
-{
-  "abstract": "SEO summary...",
-  "keywords": ["tag1", "tag2", ...]
-}`;
-
-        const userPrompt = `Title: ${enTitle}\nContent:\n${enBodyContent}`;
-        let jsonText = "";
-        
-        if (provider === 'gemini') {
-          const model = localStorage.getItem('gemini_model') || 'gemini-1.5-flash';
-          jsonText = await callGeminiAPI(key, model, systemPrompt, userPrompt);
-        } else {
-          const model = localStorage.getItem('openai_model') || 'gpt-4o-mini';
-          jsonText = await callOpenaiAPI(key, model, systemPrompt, userPrompt);
-        }
-
-        jsonText = cleanJsonMarkup(jsonText);
-        const data = JSON.parse(jsonText);
-
-        if (data.abstract) elEnAbstract.value = data.abstract;
-        if (data.keywords) elEnKeywords.value = data.keywords.join(", ");
-
-        updateCharCounter(elEnAbstract, 'en-abstract-counter');
-        syncCurrentStateToDbState();
-        showToast("SEO Keywords & abstract updated.", "success");
-
-      } catch (err) {
-        console.error(err);
-        showToast(`SEO AI Error: ${err.message}`, "danger");
-      } finally {
-        elBtnAiSeo.disabled = false;
-        elBtnAiSeo.innerHTML = originalText;
-      }
-    }
-
-    async function triggerAiRewrite() {
-      const provider = localStorage.getItem('ai_provider') || 'gemini';
-      const geminiKey = localStorage.getItem('gemini_key');
-      const openaiKey = localStorage.getItem('openai_key');
-      const key = provider === 'gemini' ? geminiKey : openaiKey;
-      const instruction = elAiRewritePrompt.value.trim();
-
-      if (!key) {
-        showToast("API Key missing! Configure Settings.", "danger");
-        return;
-      }
-      if (!instruction) {
-        showToast("Please enter an instruction (e.g. 'Make it professional')", "danger");
-        return;
-      }
-
-      // Check which field is currently active
-      const activeEl = document.activeElement;
-      if (!activeEl || (activeEl.tagName !== 'TEXTAREA' && activeEl.tagName !== 'INPUT')) {
-        showToast("Click inside a textbox or paragraph field to apply AI co-writing.", "danger");
-        return;
-      }
-
-      const activeText = activeEl.value;
-      if (!activeText) {
-        showToast("Selected text field is empty.", "danger");
-        return;
-      }
-
-      const originalBtnHtml = elBtnAiRewrite.innerHTML;
-      elBtnAiRewrite.disabled = true;
-      elBtnAiRewrite.innerHTML = `<span class="spinner"></span>`;
-
-      try {
-        const systemPrompt = `You are an expert copywriter. Rewrite the provided text according to the user's specific instruction.
-User instruction: "${instruction}"
-Guidelines:
-- Keep tone warm, professional, somatic, and calm.
-- Do not add any introductory, meta explanation, or wrap it in quotes.
-- Return ONLY the raw rewritten text.`;
-
-        let resultText = "";
-        if (provider === 'gemini') {
-          const model = localStorage.getItem('gemini_model') || 'gemini-1.5-flash';
-          resultText = await callGeminiAPI(key, model, systemPrompt, activeText);
-        } else {
-          const model = localStorage.getItem('openai_model') || 'gpt-4o-mini';
-          resultText = await callOpenaiAPI(key, model, systemPrompt, activeText);
-        }
-
-        // Apply rewrite
-        activeEl.value = resultText.trim();
-        activeEl.dispatchEvent(new Event('input')); // Trigger database sync
-        showToast("Text rewritten successfully.", "success");
-        elAiRewritePrompt.value = ""; // clear instruction box
-
-      } catch (err) {
-        console.error(err);
-        showToast(`AI Assist error: ${err.message}`, "danger");
-      } finally {
-        elBtnAiRewrite.disabled = false;
-        elBtnAiRewrite.innerHTML = originalBtnHtml;
-      }
-    }
-
-    // ── HTTP API FETCH HELPERS ──
-    async function callGeminiAPI(apiKey, model, systemPrompt, userPrompt) {
-      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-      const payload = {
-        contents: [{
-          parts: [{ text: `${systemPrompt}\n\nUser Content:\n${userPrompt}` }]
-        }]
-      };
-      
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.error?.message || res.statusText);
-      }
-
-      const data = await res.json();
-      return data.candidates[0].content.parts[0].text;
-    }
-
-    async function callOpenaiAPI(apiKey, model, systemPrompt, userPrompt) {
-      const endpoint = 'https://api.openai.com/v1/chat/completions';
-      const payload = {
-        model: model,
-        messages: [
-          { role: 'system', content: systemPrompt },
-          { role: 'user', content: userPrompt }
-        ]
-      };
-
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`
-        },
-        body: JSON.stringify(payload)
-      });
-
-      if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.error?.message || res.statusText);
-      }
-
-      const data = await res.json();
-      return data.choices[0].message.content;
-    }
-
-    function cleanJsonMarkup(text) {
-      return text
-        .replace(/^```json\s*/i, "")
-        .replace(/```\s*$/, "")
-        .trim();
-    }
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-resize-back" class="btn btn-secondary" style="display: none;"><i data-lucide="arrow-left"></i> Back to Import</button>
+        <button id="btn-resize-cancel" class="btn btn-secondary">Cancel</button>
+        <button id="btn-resize-apply" class="btn btn-primary" style="display: none;">
+          <i data-lucide="check"></i> Apply & Save Cover
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast System -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
   </script>
+  <script src="admin.js"></script>
 </body>
 </html>

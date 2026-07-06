@@ -47,7 +47,7 @@
         "readTime": "4 min",
         "author": "Michael Guralnik",
         "abstract": "Relocation stress is real â€” and it shows up physically in ways most people don't expect. Let's look at what's actually happening when you move, and why your shoulders are up at your ears.",
-        "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-new-city-relocation.jpg",
         "keywords": [
           "relocation stress",
           "moving Basel",
@@ -72,7 +72,7 @@
         "readTime": "5 min",
         "author": "Michael Guralnik",
         "abstract": "The body is constantly whispering before it shouts. Learning to read the subtle changes in your posture can save you weeks of recovery.",
-        "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-structural-stiffness.jpg",
         "keywords": [
           "back pain prevention",
           "body awareness",
@@ -97,7 +97,7 @@
         "readTime": "6 min",
         "author": "Michael Guralnik",
         "abstract": "It's more than flexibility or strength. It's a quality of attention â€” and it can be learned through somatic awareness.",
-        "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-home-in-body.jpg",
         "keywords": [
           "body awareness",
           "connected movement",
@@ -122,7 +122,7 @@
         "readTime": "7 min",
         "author": "Michael Guralnik",
         "abstract": "How traditional eastern models of energy lines correspond to myofascial networks and nervous system pathways in modern manual therapy.",
-        "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-qi-meridians-wisdom.jpg",
         "keywords": [
           "Traditional Chinese Medicine",
           "meridian massage",
@@ -147,7 +147,7 @@
         "readTime": "5 min",
         "author": "Michael Guralnik",
         "abstract": "Deep tissue work releases metabolites and creates micro-changes in tissue. Here is how hydration and specific nutrients support fascia healing.",
-        "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-myofascial-nutrition.jpg",
         "keywords": [
           "fascia recovery",
           "post-massage nutrition",
@@ -172,7 +172,7 @@
         "readTime": "4 min",
         "author": "Michael Guralnik",
         "abstract": "A simple 5-minute daily breathing practice can regulate your autonomic nervous system and lower cortisol levels.",
-        "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-breathwork-ritual.jpg",
         "keywords": [
           "mindful breathing",
           "vagus nerve stimulation",
@@ -197,7 +197,7 @@
         "readTime": "6 min",
         "author": "Michael Guralnik",
         "abstract": "One uses oil and works on naked skin; the other is fully clothed pressure-point therapy. Discover which fits your current physical needs.",
-        "image": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-shiatsu-vs-classic.jpg",
         "keywords": [
           "Shiatsu vs massage",
           "acupressure therapy",
@@ -517,7 +517,7 @@
         "readTime": "4 Min.",
         "author": "Michael Guralnik",
         "abstract": "Umzugsstress ist real â€” und er zeigt sich kÃ¶rperlich auf Weisen, die die meisten Menschen nicht erwarten. Sehen wir uns an, was beim Umzug wirklich im KÃ¶rper passiert und warum Ihre Schultern so angespannt sind.",
-        "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-new-city-relocation.jpg",
         "keywords": [
           "Umzugsstress",
           "Umzug Basel",
@@ -542,7 +542,7 @@
         "readTime": "5 Min.",
         "author": "Michael Guralnik",
         "abstract": "Der KÃ¶rper flÃ¼stert, bevor er schreit. Wenn Sie lernen, die subtilen VerÃ¤nderungen in Ihrer Haltung zu lesen, kÃ¶nnen Sie sich wochenlange Regeneration sparen.",
-        "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-structural-stiffness.jpg",
         "keywords": [
           "RÃ¼ckenschmerzen PrÃ¤vention",
           "KÃ¶rperbewusstsein",
@@ -567,7 +567,7 @@
         "readTime": "6 Min.",
         "author": "Michael Guralnik",
         "abstract": "Es ist mehr als nur Beweglichkeit oder Kraft. Es ist eine QualitÃ¤t der Aufmerksamkeit â€” und diese lÃ¤sst sich durch somatisches Lernen schulen.",
-        "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-home-in-body.jpg",
         "keywords": [
           "KÃ¶rperwahrnehmung",
           "Bewegungstherapie",
@@ -592,7 +592,7 @@
         "readTime": "7 Min.",
         "author": "Michael Guralnik",
         "abstract": "Wie traditionelle Ã¶stliche Konzepte von Energiebahnen mit den myofaszialen Leitbahnen und Nervenbahnen der modernen manuellen Therapie Ã¼bereinstimmen.",
-        "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-qi-meridians-wisdom.jpg",
         "keywords": [
           "Traditionelle Chinesische Medizin",
           "Meridianmassage",
@@ -617,7 +617,7 @@
         "readTime": "5 Min.",
         "author": "Michael Guralnik",
         "abstract": "Tiefenwirksame KÃ¶rperarbeit setzt Stoffwechselprodukte frei und erzeugt MikroverÃ¤nderungen im Gewebe. So unterstÃ¼tzen FlÃ¼ssigkeit und gezielte NÃ¤hrstoffe die Heilung der Faszien.",
-        "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-myofascial-nutrition.jpg",
         "keywords": [
           "Faszienregeneration",
           "ErnÃ¤hrung nach Massage",
@@ -642,7 +642,7 @@
         "readTime": "4 Min.",
         "author": "Michael Guralnik",
         "abstract": "Eine einfache 5-minÃ¼tige tÃ¤gliche AtemÃ¼bung kann Ihr vegetatives Nervensystem regulieren und den Cortisolspiegel senken.",
-        "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-breathwork-ritual.jpg",
         "keywords": [
           "achtsames Atmen",
           "Vagusnerv-Stimulation",
@@ -667,7 +667,7 @@
         "readTime": "6 Min.",
         "author": "Michael Guralnik",
         "abstract": "Die eine Behandlung nutzt Ã–l auf der nackten Haut, die andere ist eine Druckpunkttherapie am bekleideten KÃ¶rper. Finden Sie heraus, was am besten zu Ihnen passt.",
-        "image": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-shiatsu-vs-classic.jpg",
         "keywords": [
           "Shiatsu vs. Massage",
           "Akupressur-Therapie",
