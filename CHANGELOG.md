@@ -4,6 +4,13 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.37] - 2026-07-07
+### Developer & Copy Updates
+- Synchronized latest copy modifications and codebase enhancements.
+
+### Reviewer Comments / Notes
+- Align modality scroll cards left with header caption on widescreen
+
 ## [3.36] - 2026-07-07
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.

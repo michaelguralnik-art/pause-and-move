@@ -286,7 +286,8 @@ ul{list-style:none}
 .strip-header h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,56px);font-weight:700;font-style:italic;color:var(--white);}
 .modalities-scroll{
   display:flex;gap:2px;
-  padding:0 40px 80px;
+  padding:0 max(40px, calc((100vw - var(--max)) / 2 + 40px)) 80px;
+  scroll-padding:0 max(40px, calc((100vw - var(--max)) / 2 + 40px));
   overflow-x:auto;scroll-snap-type:x mandatory;
   scrollbar-width:none;-ms-overflow-style:none;
   cursor:grab;
@@ -1094,7 +1095,7 @@ ul{list-style:none}
   .nav-hamburger{display:flex;}
   .hero-content,.about-hero-content,.services-hero-content,.modalities-hero-content,.blog-hero-content{padding:0 24px 56px;}
   .strip-header,.philosophy-section,.bio-layout,.mod-wrap,.services-section,.packages-section,.pillar-section,.blog-section,.contact-layout,.footer-grid,.footer-bottom{padding-left:24px;padding-right:24px;}
-  .modalities-scroll{padding-left:24px;padding-right:24px;}
+  .modalities-scroll{padding-left:24px;padding-right:24px;scroll-padding:0 24px;}
   .modality-card{flex:0 0 280px;height:400px;}
   .blog-grid{grid-template-columns:1fr;}
   .pillar-grid{grid-template-columns:1fr;}
