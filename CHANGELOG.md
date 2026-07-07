@@ -4,6 +4,13 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.38] - 2026-07-07
+### Developer & Copy Updates
+- Synchronized latest copy modifications and codebase enhancements.
+
+### Reviewer Comments / Notes
+- Restore index.js category filtering and draft post logic (fixed regression from logo update)
+
 ## [3.37] - 2026-07-07
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.
