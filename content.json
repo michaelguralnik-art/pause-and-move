@@ -71,7 +71,7 @@
                                          "modalities":  "Therapien",
                                          "services":  "Tarife"
                                      },
-                           "logo":  "Pause \u003cspan\u003e\u0026\u003c/span\u003e Move",
+                           "logo":  "\u003cimg src=\"assets/logo.png\" alt=\"Pause \u0026amp; Move\" class=\"logo-img\"\u003e",
                            "contact_cta":  "Termin buchen"
                        },
                "contact":  {
@@ -552,7 +552,7 @@
                                          "modalities":  "Modalities",
                                          "services":  "Services"
                                      },
-                           "logo":  "Pause \u003cspan\u003e\u0026\u003c/span\u003e Move",
+                           "logo":  "\u003cimg src=\"assets/logo.png\" alt=\"Pause \u0026amp; Move\" class=\"logo-img\"\u003e",
                            "contact_cta":  "Book a Session"
                        },
                "contact":  {

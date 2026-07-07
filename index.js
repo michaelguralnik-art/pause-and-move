@@ -250,7 +250,10 @@ function getNestedValue(obj, path) {
 function bindStaticContent(data) {
   document.querySelectorAll('[data-copy]').forEach(el => {
     const key = el.getAttribute('data-copy');
-    const value = getNestedValue(data, key);
+    let value = getNestedValue(data, key);
+    if (key === 'nav.logo') {
+      value = '<img src="assets/logo.png" alt="Pause &amp; Move" class="logo-img">';
+    }
     if (value) {
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
         el.placeholder = value;
@@ -620,7 +623,7 @@ function renderBlogContent(lang) {
   
   const blogData = siteBlogData[lang];
   const categories = blogData.categories;
-  const articles = blogData.articles.filter(a => a.published !== false);
+  const articles = blogData.articles;
   
   // 1. Render Category Menu
   if (categoryMenu) {
@@ -692,7 +695,7 @@ function renderBlogContent(lang) {
     
     if (gridContainer) {
       gridContainer.style.display = 'grid';
-      const filteredArticles = articles.filter(art => art.categoryId === currentCategory || (art.categoryIds && art.categoryIds.includes(currentCategory)));
+      const filteredArticles = articles.filter(art => art.categoryId === currentCategory);
       
       if (filteredArticles.length > 0) {
         gridContainer.innerHTML = filteredArticles.map((article, idx) => {
@@ -739,7 +742,7 @@ function selectCategory(catId) {
 function showArticle(articleId, pushToHistory = true) {
   if (!siteBlogData || !siteBlogData[currentLang]) return;
   const blogData = siteBlogData[currentLang];
-  const article = blogData.articles.find(a => a.id === articleId && a.published !== false);
+  const article = blogData.articles.find(a => a.id === articleId);
   if (!article) return;
   
   currentArticleId = articleId;
@@ -817,7 +820,7 @@ function showArticle(articleId, pushToHistory = true) {
     categoriesContainer.innerHTML = Object.keys(cats)
       .filter(k => k !== 'all')
       .map(catKey => {
-        const count = blogData.articles.filter(a => (a.categoryId === catKey || (a.categoryIds && a.categoryIds.includes(catKey))) && a.published !== false).length;
+        const count = blogData.articles.filter(a => a.categoryId === catKey).length;
         return `
           <li class="sidebar-category-item" onclick="selectCategoryAndBack('${catKey}')">
             <span>${cats[catKey]}</span>
@@ -830,9 +833,8 @@ function showArticle(articleId, pushToHistory = true) {
   // Populate Sidebar Recent Posts (3 latest, excluding current one if possible)
   const recentContainer = document.getElementById('sidebar-recent');
   if (recentContainer) {
-    const publishedArticles = blogData.articles.filter(a => a.published !== false);
-    const otherArticles = publishedArticles.filter(a => a.id !== articleId);
-    const recentList = otherArticles.length > 0 ? otherArticles.slice(0, 3) : publishedArticles.slice(0, 3);
+    const otherArticles = blogData.articles.filter(a => a.id !== articleId);
+    const recentList = otherArticles.length > 0 ? otherArticles.slice(0, 3) : blogData.articles.slice(0, 3);
     recentContainer.innerHTML = recentList.map(rec => {
       return `
         <a href="journal/${currentLang}/${rec.id}.html" onclick="showArticle('${rec.id}'); return false;" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
@@ -855,7 +857,7 @@ function showArticle(articleId, pushToHistory = true) {
 // ── Social sharing helpers ──
 function shareArticle(platform) {
   if (!siteBlogData || !siteBlogData[currentLang] || !currentArticleId) return;
-  const article = siteBlogData[currentLang].articles.find(a => a.id === currentArticleId && a.published !== false);
+  const article = siteBlogData[currentLang].articles.find(a => a.id === currentArticleId);
   if (!article) return;
   
   const shareUrl = window.location.href;

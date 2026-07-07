@@ -53,13 +53,15 @@
       margin-bottom: 56px;
     }
     .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
-      font-weight: 500;
-      color: var(--sage-dark);
-      letter-spacing: 0.01em;
+      display: flex;
+      align-items: center;
     }
-    .nav-logo span { font-style: italic; color: var(--sage-mid); }
+    .nav-logo .logo-img {
+      height: 34px;
+      width: auto;
+      display: block;
+      margin-left: -14px;
+    }
     .nav-links {
       display: flex;
       gap: 32px;
@@ -305,7 +307,7 @@
 
     <!-- NAV -->
     <nav class="nav">
-      <div class="nav-logo">Pause <span>&amp;</span> Move</div>
+      <div class="nav-logo"><img src="assets/logo.png" alt="Pause &amp; Move" class="logo-img"></div>
       <ul class="nav-links">
         <li><a href="#">Shiatsu</a></li>
         <li><a href="#" class="active">Classic Massage</a></li>

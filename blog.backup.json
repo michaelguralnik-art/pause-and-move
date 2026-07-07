@@ -17,6 +17,7 @@
         "title": "The Ease Behind the Effort",
         "date": "June 2026",
         "readTime": "5 min",
+        "author": "Michael Guralnik",
         "abstract": "Why moving well — in sport and in everyday life — depends as much on what you let go of as on what you put in.",
         "image": "assets/cover-shoulders-stress.jpg",
         "keywords": [
@@ -32,7 +33,6 @@
           "There's a bonus, too. Soft, relaxed muscle lets blood and nutrients flow through it freely, while tense muscle squeezes that flow down. So the better your muscles can release, the better they're nourished — and the quicker your body bounces back, whether from a workout or a long day on your feet.",
           "So if there's one thing to take away, it's this: moving well — in sport, or simply in life — isn't only about working harder. A surprising amount of it comes down to learning to let go. And that's something every one of us can get better at."
         ],
-        "author": "Michael Guralnik",
         "categoryIds": [
           "health",
           "healthy_living",
@@ -45,8 +45,9 @@
         "title": "Moving to a new city and what it does to your body",
         "date": "April 2025",
         "readTime": "4 min",
+        "author": "Michael Guralnik",
         "abstract": "Relocation stress is real â€” and it shows up physically in ways most people don't expect. Let's look at what's actually happening when you move, and why your shoulders are up at your ears.",
-        "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-new-city-relocation.jpg",
         "keywords": [
           "relocation stress",
           "moving Basel",
@@ -61,7 +62,6 @@
           "Moreover, the physical acts of packing, lifting heavy boxes, and sleeping on temporary mattresses create structural strain. Combined with emotional fatigue and the absence of your usual social support networks, this physical strain easily manifests as lower back pain, tension headaches, or digestive issues.",
           "To settle into a new city, you must first settle into your own body. Establishing a grounding routine is crucial. Explore local parks, set regular sleep schedules, and consider scheduling a manual bodywork session. Dedicated bodywork acts as a physical anchor, calming the overstimulated nervous system and helping you feel at home in your body first."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -70,8 +70,9 @@
         "title": "How to notice structural stiffness before it becomes pain",
         "date": "May 2025",
         "readTime": "5 min",
+        "author": "Michael Guralnik",
         "abstract": "The body is constantly whispering before it shouts. Learning to read the subtle changes in your posture can save you weeks of recovery.",
-        "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-structural-stiffness.jpg",
         "keywords": [
           "back pain prevention",
           "body awareness",
@@ -86,7 +87,6 @@
           "This stiffness is caused by the dehydration and thickening of the fascia â€” the web of connective tissue that wraps around all your muscles and organs. When you sit for long hours or repeat the same movements, the fascia loses its elasticity and begins to stick together, binding muscles and restricting joint movement.",
           "By learning to listen to these subtle whispers of stiffness, you can intervene early. Dynamic stretching, staying well-hydated, and receiving targeted bodywork treatments can break up fascial adhesions, restore fluid flow, and keep your structural system moving smoothly before pain ever sets in."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -95,8 +95,9 @@
         "title": "What does it mean to feel at home in your body?",
         "date": "March 2025",
         "readTime": "6 min",
+        "author": "Michael Guralnik",
         "abstract": "It's more than flexibility or strength. It's a quality of attention â€” and it can be learned through somatic awareness.",
-        "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-home-in-body.jpg",
         "keywords": [
           "body awareness",
           "connected movement",
@@ -111,7 +112,6 @@
           "When we lack this connection, we experience a sense of somatic alienation. We feel clumsy, perpetually tense, or surprised by sudden physical pain. Somatic movement practices, such as the Feldenkrais method and Connected Movement, focus on rebuilding this connection. They do not force the body into rigid postures; instead, they guide you through small, curious movements to expand your sensory awareness.",
           "By cultivating this quality of attention, you start to reclaim your physical self. You learn how your ribs move as you breathe, how your weight shifts as you walk, and where you hold unnecessary effort. This sensory awareness is the true foundation of lasting wellness and physical freedom."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -120,8 +120,9 @@
         "title": "The ancient wisdom of Qi and meridians in modern life",
         "date": "February 2025",
         "readTime": "7 min",
+        "author": "Michael Guralnik",
         "abstract": "How traditional eastern models of energy lines correspond to myofascial networks and nervous system pathways in modern manual therapy.",
-        "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-qi-meridians-wisdom.jpg",
         "keywords": [
           "Traditional Chinese Medicine",
           "meridian massage",
@@ -136,7 +137,6 @@
           "In Shiatsu and Tuina, applying pressure along these meridians stimulates the autonomic nervous system, improves lymphatic flow, and hydrates the fascial pathways. Rather than working on isolated muscles, these modalities address the whole line of tension, matching the holistic view of Chinese medicine.",
           "Integrating Qigong or Shiatsu into your wellness routine helps maintain the smooth flow of energy and fluid through these myofascial networks. By bridging Eastern wisdom and Western science, we gain a deeper, more complete toolkit for resolving chronic tension and cultivating vital health."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -145,8 +145,9 @@
         "title": "Nutrition for myofascial recovery: What to eat after bodywork",
         "date": "January 2025",
         "readTime": "5 min",
+        "author": "Michael Guralnik",
         "abstract": "Deep tissue work releases metabolites and creates micro-changes in tissue. Here is how hydration and specific nutrients support fascia healing.",
-        "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-myofascial-nutrition.jpg",
         "keywords": [
           "fascia recovery",
           "post-massage nutrition",
@@ -161,7 +162,6 @@
           "In addition to water, your body needs specific nutrients to support collagen synthesis and repair. Vitamin C is a critical cofactor in collagen production â€” foods like bell peppers, citrus fruits, and leafy greens are excellent choices. Amino acids, particularly proline and glycine found in bone broth, fish, and legumes, provide the direct building blocks for connective tissue repair.",
           "Finally, focus on anti-inflammatory nutrition to manage post-treatment soreness. Healthy fats like omega-3s from walnuts or wild fish, along with spices like ginger and turmeric, help soothe the inflammatory response, allowing your myofascial system to heal stronger and more flexible."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -170,8 +170,9 @@
         "title": "Creating a daily ritual of mindful breathing and pause",
         "date": "December 2024",
         "readTime": "4 min",
+        "author": "Michael Guralnik",
         "abstract": "A simple 5-minute daily breathing practice can regulate your autonomic nervous system and lower cortisol levels.",
-        "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-breathwork-ritual.jpg",
         "keywords": [
           "mindful breathing",
           "vagus nerve stimulation",
@@ -186,7 +187,6 @@
           "Creating a daily breathing ritual does not require hours of meditation. Just five minutes a day can yield profound benefits. Find a comfortable seat, place one hand on your chest and one on your belly. Inhale through your nose for a count of four, letting your belly expand, and exhale slowly through your mouth for a count of six.",
           "This simple pause acts as a reset button for your mind and body. Over time, this practice builds somatic resilience, helping you navigate daily stressors with greater calm and preventing stress from accumulating as physical tension in your body."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -195,8 +195,9 @@
         "title": "Understanding the difference between Shiatsu and Classic Massage",
         "date": "June 2026",
         "readTime": "6 min",
+        "author": "Michael Guralnik",
         "abstract": "One uses oil and works on naked skin; the other is fully clothed pressure-point therapy. Discover which fits your current physical needs.",
-        "image": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-shiatsu-vs-classic.jpg",
         "keywords": [
           "Shiatsu vs massage",
           "acupressure therapy",
@@ -211,7 +212,6 @@
           "Shiatsu, on the other hand, is a traditional Japanese therapy rooted in Chinese Medicine. It is performed fully clothed on a futon mat on the floor, without any oils. Instead of kneading muscles, the practitioner uses fingers, thumbs, elbows, and palms to apply precise pressure along meridian lines. They also guide the client through gentle stretches and joint rotations to restore energy flow and balance the nervous system.",
           "Choosing between the two depends on your goals and preferences. If you prefer direct skin contact, rhythmic muscular work, and deep relaxation, Classic Massage is ideal. If you prefer to stay clothed, are interested in structural alignment and energy balance, and enjoy deep, static pressure and stretching, Shiatsu may be the perfect fit."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -253,11 +253,10 @@
         "categoryIds": [
           "health",
           "healthy_living",
-          "nutrition",
-          "movement"
+          "nutrition"
         ],
         "title": "Reflux and Heartburn Relief",
-        "date": "June 2026",
+        "date": "July 2026",
         "readTime": "5 min",
         "author": "Michael Guralnik",
         "abstract": "Reflux and heartburn explained for everyday life — the high-acid and low-acid pictures, the stress and vagus nerve connection, plus practical nutrition, supplement, and breathing tips for lasting relief.",
@@ -315,6 +314,156 @@
           "Reflux sits right at the meeting point of body and mind — diet, posture, and the state of your nervous system all converge in that one burning sensation. Small, consistent adjustments to how you eat, how you breathe, and how you carry stress can shift things meaningfully. Calming the system that governs digestion is exactly the kind of whole-person work — through breath, movement, and easing the grip of stress on the body — that sits at the heart of what we do.",
           "If reflux is a regular companion and you'd like to look at the stress and nervous-system side of it, you're welcome to get in touch."
         ],
+        "published": true
+      },
+      {
+        "id": "acupressure-for-orthopedic-problems",
+        "categoryId": "health",
+        "categoryIds": [
+          "health",
+          "treatment_techniques",
+          "oriental_medicine"
+        ],
+        "title": "Acupressure for Orthopedic Problems",
+        "date": "June 2026",
+        "readTime": "5 min",
+        "author": "Michael Guralnik",
+        "abstract": "How acupressure eases orthopedic and musculoskeletal pain — working with the meridians and the whole body to relieve tight muscles, restore movement, and address pain at its source.",
+        "image": "assets/cover-acupressure-for-orthopedic-problems.jpg",
+        "keywords": [
+          "acupressure",
+          "orthopedic pain",
+          "meridian therapy",
+          "musculoskeletal pain",
+          "Shiatsu",
+          "muscle tension",
+          "stress and pain",
+          "manual therapy"
+        ],
+        "content": [
+          "<h3>What counts as an orthopedic problem?</h3>",
+          "An orthopedic problem is anything affecting our limbs, joints, or muscles where we feel pain or find our movement restricted. It usually shows up as an issue in the musculoskeletal system — a stiff shoulder, an aching knee, a back that won't loosen — though it often reflects something originating elsewhere in the body.",
+          "<h3>How we approach these conditions</h3>",
+          "For musculoskeletal complaints we draw on a few complementary approaches: acupressure, movement lessons, and hands-on manual therapy. They overlap and support one another, and which we lean on depends on you and on what your body is asking for.",
+          "<h3>How acupressure helps</h3>",
+          "We don't yet have a complete, textbook explanation in Western scientific terms for why acupressure works as well as it does — but we do understand some of its effects. Applied to specific points, sustained pressure works directly on the muscles, on the nervous system, and through our hormonal system. Working gently with these points helps align and regulate how other systems function too.",
+          "Here are the main ways acupressure helps with orthopedic issues.",
+          "<h3>Meridian therapy</h3>",
+          "The meridians carry other, more subtle qualities, but they also run along lines that roughly follow the muscular and biomechanical structure of the body. By stimulating points along them, we can ease the unhelpful build-ups and deficiencies that gather along these lines — balancing tissue that's overcharged and tight against tissue that's weak or underused, to relieve pain or support a muscle that has wasted.",
+          "With steady thumb or finger pressure we can release taut muscles, wake up muscles that have gone quiet, and even gently fine-tune posture.",
+          "One surprising feature of meridian therapy: because some meridians are very long — a few run all the way from the head to the toes — we can often press a point far from where it hurts and still ease the pain. In Shiatsu, for instance, the intention is often to soften a tender spot indirectly first, by working systemic and meridian points, before approaching it directly.",
+          "<h3>Systemic treatment</h3>",
+          "Some of our local aches are really the local expression of something broader. Treating that wider pattern often clears not only the specific pain but a whole cluster of other complaints — some we'd never have guessed were connected.",
+          "A familiar example is pain that grows out of unresolved stress. Among many other things, stress leads the body to hold its muscles so tightly that they ache and can no longer lengthen the way they're meant to. We could simply work the tight muscle — but if we can ease the source of the tension, or the way the body habitually responds to it, the results tend to last, because we've resolved something deeper that might otherwise have resurfaced elsewhere, as a different problem.",
+          "Taking care of these systemic patterns also makes the local points more effective, by improving the flow through the meridians. In Shiatsu, a session often begins with exactly this kind of groundwork — a base treatment — and only turns to the local pain afterwards, if it hasn't already eased.",
+          "<h3>In short</h3>",
+          "Acupressure offers a gentle, hands-on way to work with orthopedic pain — meeting it both where it hurts and at its source. When a stiff or painful area has been with you for a while, it's often a sign that the body is asking for attention on more than one level.",
+          "If you'd like to explore an acupressure-based approach to a stubborn ache, you're welcome to get in touch."
+        ],
+        "published": true
+      },
+      {
+        "id": "about-meridians",
+        "categoryId": "health",
+        "categoryIds": [
+          "health",
+          "movement",
+          "treatment_techniques",
+          "oriental_medicine"
+        ],
+        "title": "About Meridians",
+        "date": "June 2026",
+        "readTime": "5 min",
+        "author": "Michael Guralnik",
+        "abstract": "A brief explanation of how meridians, a concept taken from Chinese medicine is used to improve our health",
+        "image": "assets/cover-about-meridians.jpg",
+        "keywords": [
+          "Meridians",
+          "TCM",
+          "Chinese Medicine",
+          "Shiatsu",
+          "Tuina",
+          "Qigong",
+          "Connected Movement"
+        ],
+        "content": [
+          "Giving a precise and conclusive explanation of how meridians function, if at all possible, will require a long trip around the entire corpus of Chinese Medicine literature. However, in the context of the work we do on the massage table, we can take an approach that is perhaps simplistic, yet intuitive, one that can be experienced rather than learned.",
+          "Chinese medicine recognizes specific functionalities in our body, and loosely attributes them to organs such as the lung, the heart, the stomach etc. However, unlike our western concept of these functions, their Chinese counterparts also maintain specific mental capabilities: the lungs, for instance, deal with our capacity to put borders between us and our environment, the spleen, which is responsible for digestion, is also responsible for data processing etc.",
+          "One can say that these functions (breathing, digesting, regulating etc.) maintain their own intelligences that are a part of our identity, but still maintain their own identity and independence yet they tightly interact with each other.",
+          "In order for these functionalities to respond to our everyday life situations, these entities require the capacity to sense and connect both to the outer world and to each other.",
+          "This concept is not that alien to Western medicine: we talk about hormones and nerves providing feedback and control to the different systems in our body.",
+          "The key to good health, according to the Chinese way of thinking is to make sure by proper communication between these organs a balance that will allow the organs to function at their best and to support each other wherever necessary.",
+          "To do so, according to Chinese medicine, these systems maintain channels, or meridians as we frequently call them, that are kind of antennae for our inner organs. Though some of these routes are internal, and therefore not accessible to us, there are also sensitive areas on the skin of our body that communicate with our internal organs.",
+          "By stimulating these antennae (needling, pressure, heat or simply by exercising them) we can communicate with our internal organs and affect the way they function.<br>",
+          "To do so, in Pause and Move we offer our clients a variety of modalities, each approaching the task slightly differently: Shiatsu and Tuina are manual therapy techniques designed for that purpose, Qigong and Connected Movement open communication channels through movement. Sometimes even simple conversation is enough to open these routes.",
+          "This correlation between the surface of our body and the inner functionality of the body is a two way stream: we can learn about the condition of our internal organs by observing the surface of our body, and we can affect the internal organs by stimulating these areas.",
+          "Using the modalities we practice in Pause and Move, we learn to listen to these meridians as well as to stimulate them&nbsp; in order to improve their function as a channel to transfer information to and from our internal organs and emotions to our limbs and surface area."
+        ],
+        "published": true
+      },
+      {
+        "id": "whats-the-difference-between-massage-and-oriental-bodywork",
+        "categoryId": "treatment_techniques",
+        "categoryIds": [
+          "treatment_techniques",
+          "oriental_medicine"
+        ],
+        "title": "What's the Difference Between Massage and Oriental Bodywork",
+        "date": "July 2026",
+        "readTime": "5 min",
+        "author": "Michael Guralnik",
+        "abstract": "Oriental bodywork modalities such as Tuina or Shiatsu have a very different outlook than western massage. This article pinpoints the major differences.",
+        "image": "assets/cover-whats-the-difference-between-massage-and-oriental-bodywork.jpg",
+        "keywords": [
+          "Massage",
+          "Tuina",
+          "Shiatsu",
+          "TCM",
+          "Myofascial"
+        ],
+        "content": [
+          "Shiatsu and Tuina are perhaps the most well recognized body works systems introduced to the west. And in many ways they are radically different than massage therapy.",
+          "Western Body work systems were developed out of a western medical tradition which analyzes movement and function of the body from a bio-mechanical standpoint. It studies the human body like if our body was a machine. The main science applied using this concept is physics: forces, vectors, torque etc.",
+          "Early massage therapy methods were based solely on the idea that by affecting the moving parts in the system (muscles and ligaments) they will resolve underlying problems that have to do with posture, movement and mechanical damages (such as injuries) through muscles.",
+          "With time this view was broadened to take into consideration other systems, like the nerves and to an extent even the hormonal system. However, the focus remains on the muscular system.",
+          "The Eastern traditions, on the other hand were developed way before modern anatomy and physiology were introduced in the East, and are following the eastern medicine approach, which is focused on the internal organs as the prime interest of the therapist.",
+          "A manual therapist, like an acupuncturist is seeking ways to affect the internal organs by finding areas on the surface of the body that will affect the organs lying deep inside, at times in places so far away from each other that we may wonder how did they even come up with these connections.",
+          "A traditional Tuina or Shiatsu therapist will try and affect an internal organ such as the lung, the stomach or the kidney by affecting superficial tissue that has an affinity with this underlying organ.",
+          "This does not mean that oriental body workers are not familiar with body mechanics. On the contrary. Many of these systems were developed side by side with martial arts that studied movement and the relationships between different body parts in a very precise and intimate manner.",
+          "However, the broader picture an oriental body worker is seeking incorporates a bigger picture. It looks for a connection between an injury site and the entire person that is injured."
+        ],
+        "published": true
+      },
+      {
+        "id": "massage-oils-and-other-lubricats",
+        "categoryId": "treatment_techniques",
+        "categoryIds": [
+          "treatment_techniques"
+        ],
+        "title": "Massage Oils and Other Lubricats",
+        "date": "July 2026",
+        "readTime": "5 min",
+        "author": "Michael Guralnik",
+        "abstract": "Oil, lotion, or gel? A massage therapist explains the differences between massage lubricants and how the right choice shapes your treatment.",
+        "image": "assets/cover-massage-oils-and-other-lubricats.jpg",
+        "keywords": [
+          "massage oil",
+          "massage lotion",
+          "massage gel",
+          "massage lubricant",
+          "glide",
+          "essential oils",
+          "arnica",
+          "Tiger Balm"
+        ],
+        "content": [
+          "Massage lubricants serve much the same purpose as oil in machinery: they reduce friction — in this case, between the therapist's hand and the client's skin. With a lubricant, I can apply firm vertical pressure while my hand, palm, or elbow glides smoothly over the skin. Without one, that same pressure would drag at the skin and quickly become irritating.",
+          "Massage therapists have three types of lubricant to choose from: oil, lotion, and gel.",
+          "Oil absorbs into the skin the least, which means it stays useful for the entire session. That's also why therapists tend to use it sparingly — too much, and the client leaves feeling oily.",
+          "Lotion, being an emulsion, absorbs the best of the three, which makes it a good choice for dry skin. The trade-off is that it disappears quickly and turns sticky if not reapplied often. It's also the least smooth of the three.",
+          "Gel is the modern addition to the family. Like lotion, it's an emulsion, but with a much higher oil content. It glides slightly less smoothly than pure oil, yet still gives a pleasant slip — without lotion's constant need for reapplication.",
+          "Personally, I choose between the three case by case, depending on the purpose of the session and the client's preference. One clear reason to reach for oil: when adding essential oils or therapeutic substances such as arnica, CBD, or Eastern liniments like Po Sum On, Tiger Balm, or Dit Da Jow — these blend into oil far better than into the other two."
+        ],
         "published": false
       }
     ]
@@ -337,6 +486,7 @@
         "title": "Die Leichtigkeit hinter der Anstrengung",
         "date": "Juni 2026",
         "readTime": "5 Min.",
+        "author": "Michael Guralnik",
         "abstract": "Wir halten emotionale und kÃ¶rperliche Anspannung in Mustern fest, die weit Ã¼ber das Physische hinausgehen. Zu verstehen, wo Ihre Spannung sitzt â€” und warum â€” ist der erste Schritt, sie dauerhaft loszulassen.",
         "image": "assets/cover-shoulders-stress.jpg",
         "keywords": [
@@ -353,7 +503,6 @@
           "Und es gibt noch einen schönen Nebeneffekt. Weiches, entspanntes Muskelgewebe lässt Blut und Nährstoffe frei hindurchströmen, während verspanntes Gewebe diesen Fluss drosselt. Je besser unsere Muskeln also loslassen können, desto besser werden sie versorgt — und desto schneller erholt sich unser Körper, ob nach einem Training oder nach einem langen Tag auf den Beinen.",
           "Wenn es also eines mitzunehmen gibt, dann dies: Sich gut zu bewegen — im Sport oder einfach im Leben — hat nicht nur mit härterem Arbeiten zu tun. Überraschend viel davon liegt darin, das Loslassen zu lernen. Und darin kann jede und jeder von uns besser werden."
         ],
-        "author": "Michael Guralnik",
         "categoryIds": [
           "health",
           "healthy_living",
@@ -366,8 +515,9 @@
         "title": "Umzug in eine neue Stadt und was er mit Ihrem KÃ¶rper macht",
         "date": "April 2025",
         "readTime": "4 Min.",
+        "author": "Michael Guralnik",
         "abstract": "Umzugsstress ist real â€” und er zeigt sich kÃ¶rperlich auf Weisen, die die meisten Menschen nicht erwarten. Sehen wir uns an, was beim Umzug wirklich im KÃ¶rper passiert und warum Ihre Schultern so angespannt sind.",
-        "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-new-city-relocation.jpg",
         "keywords": [
           "Umzugsstress",
           "Umzug Basel",
@@ -382,7 +532,6 @@
           "Zudem belasten das Kistenpacken, das Tragen schwerer Lasten und das Schlafen auf provisorischen Matratzen den Bewegungsapparat. Zusammen mit emotionaler ErschÃ¶pfung und dem Fehlen Ihres gewohnten sozialen Umfelds Ã¤uÃŸert sich diese Belastung schnell in RÃ¼ckenschmerzen, Spannungskopfschmerzen oder Verdauungsproblemen.",
           "Um in einer neuen Stadt anzukommen, mÃ¼ssen Sie zuerst in Ihrem eigenen KÃ¶rper ankommen. Eine erdende Routine ist dabei entscheidend. Erkunden Sie lokale Parks, achten Sie auf regelmÃ¤ÃŸige Schlafenszeiten und gÃ¶nnen Sie sich eine manuelle KÃ¶rpertherapie. Gezielte KÃ¶rperarbeit wirkt wie ein physischer Anker, der das Ã¼berreizte Nervensystem beruhigt und Ihnen hilft, sich zuerst im eigenen KÃ¶rper zu Hause zu fÃ¼hlen."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -391,8 +540,9 @@
         "title": "Wie Sie strukturelle Steifheit bemerken, bevor sie zu Schmerzen wird",
         "date": "Mai 2025",
         "readTime": "5 Min.",
+        "author": "Michael Guralnik",
         "abstract": "Der KÃ¶rper flÃ¼stert, bevor er schreit. Wenn Sie lernen, die subtilen VerÃ¤nderungen in Ihrer Haltung zu lesen, kÃ¶nnen Sie sich wochenlange Regeneration sparen.",
-        "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-structural-stiffness.jpg",
         "keywords": [
           "RÃ¼ckenschmerzen PrÃ¤vention",
           "KÃ¶rperbewusstsein",
@@ -407,7 +557,6 @@
           "Diese Steifheit wird durch das Verkleben und Verdicken der Faszien verursacht â€” dem Bindegewebsnetz, das all unsere Muskeln und Organe umhÃ¼llt. Bei langem Sitzen oder einseitigen Bewegungen verlieren die Faszien ihre ElastizitÃ¤t, verkleben und schrÃ¤nken die GleitfÃ¤higkeit der Muskeln und Gelenke ein.",
           "Indem Sie lernen, auf dieses leise FlÃ¼stern der Steifheit zu hÃ¶ren, kÃ¶nnen Sie frÃ¼hzeitig gegensteuern. Dynamisches Dehnen, ausreichende FlÃ¼ssigkeitszufuhr und gezielte KÃ¶rpertherapie lÃ¶sen Faszienverklebungen, regen den FlÃ¼ssigkeitsfluss an und halten Ihren Bewegungsapparat geschmeidig, noch bevor Schmerzen entstehen."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -416,8 +565,9 @@
         "title": "Was bedeutet es, sich in seinem KÃ¶rper zu Hause zu fÃ¼hlen?",
         "date": "MÃ¤rz 2025",
         "readTime": "6 Min.",
+        "author": "Michael Guralnik",
         "abstract": "Es ist mehr als nur Beweglichkeit oder Kraft. Es ist eine QualitÃ¤t der Aufmerksamkeit â€” und diese lÃ¤sst sich durch somatisches Lernen schulen.",
-        "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-home-in-body.jpg",
         "keywords": [
           "KÃ¶rperwahrnehmung",
           "Bewegungstherapie",
@@ -432,7 +582,6 @@
           "Wenn diese Verbindung fehlt, fÃ¼hlen wir uns oft ungeschickt, dauerhaft angespannt oder werden von plÃ¶tzlichen Schmerzen Ã¼berrascht. Somatische Bewegungspraktiken wie die Feldenkrais-Methode und Connected Movement setzen genau hier an. Sie zwingen den KÃ¶rper nicht in starre Posen, sondern leiten zu kleinen, spielerischen Bewegungen an, um die sensorische Wahrnehmung zu erweitern.",
           "Durch diese Schulung der Aufmerksamkeit holen Sie sich Ihr kÃ¶rperliches Selbst zurÃ¼ck. Sie lernen, wie sich Ihre Rippen beim Atmen bewegen, wie sich Ihr Gewicht beim Gehen verlagert und wo Sie unnÃ¶tig Kraft aufwenden. Diese Wahrnehmung ist das wahre Fundament fÃ¼r nachhaltiges Wohlbefinden und kÃ¶rperliche Freiheit."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -441,8 +590,9 @@
         "title": "Die alte Weisheit von Qi und Meridianen im modernen Leben",
         "date": "Februar 2025",
         "readTime": "7 Min.",
+        "author": "Michael Guralnik",
         "abstract": "Wie traditionelle Ã¶stliche Konzepte von Energiebahnen mit den myofaszialen Leitbahnen und Nervenbahnen der modernen manuellen Therapie Ã¼bereinstimmen.",
-        "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-qi-meridians-wisdom.jpg",
         "keywords": [
           "Traditionelle Chinesische Medizin",
           "Meridianmassage",
@@ -457,7 +607,6 @@
           "Im Shiatsu und Tuina regt der Druck entlang dieser Meridiane das vegetative Nervensystem an, verbessert den Lymphfluss und rehydriert die Faszienbahnen. Statt isolierte Muskeln zu behandeln, sprechen diese Methoden ganze Spannungslinien an, was dem ganzheitlichen Ansatz der TCM entspricht.",
           "Die Integration von Qigong oder Shiatsu in den Alltag hilft, den freien Fluss von Energie und FlÃ¼ssigkeit in diesen myofaszialen Netzen zu erhalten. Indem wir Ã¶stliche Weisheit und westliche Wissenschaft verbinden, erhalten wir ein tieferes VerstÃ¤ndnis und wirksamere Werkzeuge fÃ¼r unsere Gesundheit."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -466,8 +615,9 @@
         "title": "ErnÃ¤hrung fÃ¼r die myofasziale Regeneration: Was man nach der KÃ¶rperarbeit essen sollte",
         "date": "Januar 2025",
         "readTime": "5 Min.",
+        "author": "Michael Guralnik",
         "abstract": "Tiefenwirksame KÃ¶rperarbeit setzt Stoffwechselprodukte frei und erzeugt MikroverÃ¤nderungen im Gewebe. So unterstÃ¼tzen FlÃ¼ssigkeit und gezielte NÃ¤hrstoffe die Heilung der Faszien.",
-        "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-myofascial-nutrition.jpg",
         "keywords": [
           "Faszienregeneration",
           "ErnÃ¤hrung nach Massage",
@@ -482,7 +632,6 @@
           "ZusÃ¤tzlich benÃ¶tigt Ihr KÃ¶rper bestimmte NÃ¤hrstoffe fÃ¼r die Kollagensynthese. Vitamin C ist hierfÃ¼r ein essenzieller Kofaktor â€” Paprika, ZitrusfrÃ¼chte und grÃ¼nes BlattgemÃ¼se sind ideal. AminosÃ¤uren wie Prolin und Glycin, die in KnochenbrÃ¼he, Fisch und HÃ¼lsenfrÃ¼chten vorkommen, liefern die direkten Bausteine fÃ¼r die Reparatur des Bindegewebes.",
           "Setzen Sie schlieÃŸlich auf entzÃ¼ndungshemmende Nahrungsmittel, um eventuellen Muskelkater nach der Behandlung abzumildern. Gesunde Fette (Omega-3-FettsÃ¤uren aus WalnÃ¼ssen oder Wildfisch) sowie GewÃ¼rze wie Ingwer und Kurkuma regulieren die EntzÃ¼ndungsreaktion und helfen dem myofaszialen System, elastischer und stÃ¤rker zu heilen."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -491,8 +640,9 @@
         "title": "Ein tÃ¤gliches Ritual des achtsamen Atmens und Innehaltens schaffen",
         "date": "Dezember 2024",
         "readTime": "4 Min.",
+        "author": "Michael Guralnik",
         "abstract": "Eine einfache 5-minÃ¼tige tÃ¤gliche AtemÃ¼bung kann Ihr vegetatives Nervensystem regulieren und den Cortisolspiegel senken.",
-        "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-breathwork-ritual.jpg",
         "keywords": [
           "achtsames Atmen",
           "Vagusnerv-Stimulation",
@@ -507,7 +657,6 @@
           "FÃ¼r ein tÃ¤gliches Atemritual mÃ¼ssen Sie nicht stundenlang meditieren. Schon fÃ¼nf Minuten am Tag haben eine spÃ¼rbare Wirkung. Setzen Sie sich aufrecht hin, legen Sie eine Hand auf die Brust und die andere auf den Bauch. Atmen Sie vier Sekunden lang durch die Nase ein, sodass sich der Bauch hebt, und atmen Sie sechs Sekunden lang langsam durch den Mund aus.",
           "Dieses bewusste Innehalten wirkt wie ein Reset-Knopf fÃ¼r KÃ¶rper und Geist. RegelmÃ¤ÃŸig geÃ¼bt, stÃ¤rkt es Ihre somatische Widerstandskraft, hilft Ihnen, gelassener auf Alltagsstressoren zu reagieren, und verhindert, dass sich Stress als chronische Anspannung im KÃ¶rper festsetzt."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -516,8 +665,9 @@
         "title": "Den Unterschied zwischen Shiatsu und klassischer Massage verstehen",
         "date": "Juni 2026",
         "readTime": "6 Min.",
+        "author": "Michael Guralnik",
         "abstract": "Die eine Behandlung nutzt Ã–l auf der nackten Haut, die andere ist eine Druckpunkttherapie am bekleideten KÃ¶rper. Finden Sie heraus, was am besten zu Ihnen passt.",
-        "image": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=900&q=80&auto=format&fit=crop",
+        "image": "assets/cover-shiatsu-vs-classic.jpg",
         "keywords": [
           "Shiatsu vs. Massage",
           "Akupressur-Therapie",
@@ -532,7 +682,6 @@
           "Shiatsu hingegen ist eine traditionelle japanische Therapie, die auf der Chinesischen Medizin basiert. Sie wird ohne Ã–l und am bekleideten KÃ¶rper auf einer Futonmatte am Boden praktiziert. Statt Muskeln zu kneten, Ã¼bt der Therapeut mit Fingern, Daumen, Ellbogen und HandflÃ¤chen tiefen, konstanten Druck auf Akupunkturpunkte und Meridiane aus. ErgÃ¤nzt wird dies durch Dehnungen und Gelenkmobilisationen.",
           "Die Wahl hÃ¤ngt ganz von Ihren BedÃ¼rfnissen ab: Wenn Sie direkten Hautkontakt, flieÃŸende Knetbewegungen und tiefe Entspannung suchen, ist die Klassische Massage ideal. Wenn Sie bekleidet bleiben mÃ¶chten, eine tiefere Ausrichtung von KÃ¶rper und Nervensystem suchen und statischen Druck sowie Dehnungen schÃ¤tzen, ist Shiatsu die perfekte Wahl."
         ],
-        "author": "Michael Guralnik",
         "published": false
       },
       {
@@ -574,11 +723,10 @@
         "categoryIds": [
           "health",
           "healthy_living",
-          "nutrition",
-          "movement"
+          "nutrition"
         ],
         "title": "Linderung von Reflux und Sodbrennen",
-        "date": "Juni 2026",
+        "date": "Juli 2026",
         "readTime": "5 Min.",
         "author": "Michael Guralnik",
         "abstract": "Reflux und Sodbrennen für den Alltag erklärt – die Bilder mit hohem und niedrigem Säuregehalt, der Stress- und Vagusnerv-Verbindung sowie praktische Ernährungs-, Nahrungsergänzungsmittel- und Atemtipps für dauerhafte Linderung.",
@@ -635,6 +783,156 @@
           "<h3>Das größerer Ganze</h3>",
           "Reflux sitzt direkt am Treffpunkt von Körper und Geist — Ernährung, Haltung und der Zustand Ihres Nervensystems laufen in diesem einen brennenden Gefühl zusammen. Kleine, konsistente Anpassungen an die Art und Weise, wie Sie essen, wie Sie atmen und wie Sie Stress tragen, können die Dinge sinnvoll verändern. Die Beruhigung des Systems, das die Verdauung steuert, ist genau die Art von Ganzkörperarbeit — durch Atem, Bewegung und die Lockerung des Stresses auf den Körper —, die im Mittelpunkt dessen steht, was wir tun.",
           "Wenn Reflux ein regelmäßiger Begleiter ist und Sie sich die Stress- und Nervensystemseite ansehen möchten, können Sie sich gerne mit uns in Verbindung setzen."
+        ],
+        "published": true
+      },
+      {
+        "id": "acupressure-for-orthopedic-problems",
+        "categoryId": "health",
+        "categoryIds": [
+          "health",
+          "treatment_techniques",
+          "oriental_medicine"
+        ],
+        "title": "Akupressur bei orthopädischen Problemen",
+        "date": "Juni 2026",
+        "readTime": "5 Min.",
+        "author": "Michael Guralnik",
+        "abstract": "Wie Akupressur orthopädische und muskuloskelettale Schmerzen lindert – indem sie mit den Meridianen und dem gesamten Körper arbeitet, um verspannte Muskeln zu lösen, die Bewegung wiederherzustellen und den Schmerz an seiner Quelle zu bekämpfen.",
+        "image": "assets/cover-acupressure-for-orthopedic-problems.jpg",
+        "keywords": [
+          "Akupressur",
+          "orthopädische Schmerzen",
+          "Meridiantherapie",
+          "Schmerzen des Bewegungsapparates",
+          "Shiatsu",
+          "Muskelverspannungen",
+          "Stress und Schmerzen",
+          "manuelle Therapie"
+        ],
+        "content": [
+          "<h3>Was gilt als orthopädisches Problem?</h3>",
+          "Ein orthopädisches Problem ist alles, was unsere Gliedmaßen, Gelenke oder Muskeln betrifft, bei denen wir Schmerzen verspüren oder unsere Bewegung eingeschränkt ist. Es zeigt sich meist als Problem im Bewegungsapparat – eine steife Schulter, ein schmerzendes Knie, ein Rücken, der sich nicht lockern lässt –, obwohl es oft auf etwas zurückzuführen ist, das anderswo im Körper entsteht.",
+          "<h3>Wie wir diese Beschwerden angehen</h3>",
+          "Bei Muskel- und Skelettbeschwerden greifen wir auf verschiedene, sich ergänzende Ansätze zurück: Akupressur, Bewegungsstunden und manuelle Körpertherapie. Sie überschneiden sich und unterstützen sich gegenseitig. Welchen wir bevorzugen, hängt von Ihnen und den Bedürfnissen Ihres Körpers ab.",
+          "<h3>Wie Akupressur hilft</h3>",
+          "Wir haben zwar noch keine vollständige, wissenschaftliche Erklärung für die genaue Wirkungsweise von Akupressur, aber wir verstehen einige ihrer Effekte. Auf bestimmte Punkte ausgeübter, anhaltender Druck wirkt direkt auf die Muskeln, das Nervensystem und unser hormonelles System. Die sanfte Arbeit mit diesen Punkten hilft auch dabei, die Funktion anderer Körpersysteme zu regulieren und auszubalancieren.",
+          "Hier sind die wichtigsten Wege, wie Akupressur bei orthopädischen Problemen hilft.",
+          "<h3>Meridiantherapie</h3>",
+          "Die Meridiane transportieren feine energetische Qualitäten, verlaufen aber auch entlang von Linien, die grob der muskulären und biomechanischen Struktur des Körpers entsprechen. Durch die Stimulation von Punkten entlang dieser Bahnen können wir unregelmäßige Anspannungen und Schwachstellen ausgleichen – indem wir überlastetes und festes Gewebe entlasten und schwaches Gewebe aktivieren, um Schmerzen zu lindern oder geschwächte Muskeln zu unterstützen.",
+          "Mit gleichmäßigem Daumen- oder Fingerdruck können wir verspannte Muskeln lösen, inaktiviertes Muskelgewebe stimulieren und sogar die Haltung sanft regulieren.",
+          "Ein überraschender Aspekt der Meridiantherapie: Da einige Meridiane sehr lang sind – manche verlaufen vom Kopf bis zu den Zehen –, können wir oft einen Punkt behandeln, der weit von der schmerzenden Stelle entfernt liegt, und dennoch Linderung erzielen. Im Shiatsu versuchen wir beispielsweise häufig, eine empfindliche Stelle zuerst indirekt über System- und Meridianpunkte zu entspannen, bevor wir direkt an ihr arbeiten.",
+          "<h3>Systemische Behandlung</h3>",
+          "Manche unserer lokalen Schmerzen sind eigentlich nur der Ausdruck eines umfassenderen Musters. Die Behandlung dieses Musters lindert oft nicht nur den spezifischen Schmerz, sondern eine ganze Reihe anderer Beschwerden, von denen wir nie geahnt hätten, dass sie zusammenhängen.",
+          "Ein bekanntes Beispiel sind Schmerzen, die durch ungelösten Stress entstehen. Stress führt unter anderem dazu, dass der Körper seine Muskeln so anspannt, dass sie schmerzen und sich nicht mehr richtig dehnen lassen. Wir könnten einfach nur den verspannten Muskel behandeln – aber wenn wir die Ursache der Anspannung oder die gewohnte Reaktion des Körpers darauf lindern können, ist das Ergebnis nachhaltiger, weil wir ein tiefer liegendes Problem gelöst haben, das sonst an anderer Stelle wieder aufgetaucht wäre.",
+          "Die Behandlung dieser systemischen Muster erhöht auch die Wirksamkeit der lokalen Punkte, da der Fluss durch die Meridiane verbessert wird. Im Shiatsu beginnt eine Behandlung oft genau mit dieser Art von Basisbehandlung (Kenshin) und wendet sich erst danach dem lokalen Schmerz zu, falls dieser sich nicht bereits gelöst hat.",
+          "<h3>Kurz gesagt</h3>",
+          "Akupressur bietet eine sanfte, manuelle Möglichkeit, an orthopädischen Schmerzen zu arbeiten – sowohl direkt am Schmerzpunkt als auch an der Ursache. Wenn Sie schon länger unter einer steifen oder schmerzhaften Stelle leiden, ist dies oft ein Zeichen dafür, dass der Körper Aufmerksamkeit auf mehr als einer Ebene benötigt.",
+          "Wenn Sie die Behandlung einer hartnäckigen Verspannung mittels Akupressur ausprobieren möchten, können Sie sich gerne an mich wenden."
+        ],
+        "published": true
+      },
+      {
+        "id": "about-meridians",
+        "categoryId": "health",
+        "categoryIds": [
+          "health",
+          "movement",
+          "treatment_techniques",
+          "oriental_medicine"
+        ],
+        "title": "About Meridians (DE)",
+        "date": "Juni 2026",
+        "readTime": "5 Min.",
+        "author": "Michael Guralnik",
+        "abstract": "Eine kurze Erklärung, wie Meridiane, ein Konzept aus der chinesischen Medizin, verwendet werden, um unsere Gesundheit zu verbessern",
+        "image": "assets/cover-about-meridians.jpg",
+        "keywords": [
+          "Meridiane",
+          "TCM",
+          "Chinesische Medizin",
+          "Shiatsu",
+          "Tuina",
+          "Qigong",
+          "Connected Movement"
+        ],
+        "content": [
+          "Eine präzise und schlüssige Erklärung, wie Meridiane funktionieren, wenn überhaupt möglich, erfordert eine lange Reise durch das gesamte Korpus der chinesischen Medizinliteratur. Im Zusammenhang mit der Arbeit, die wir am Massagetisch leisten, können wir jedoch einen vielleicht vereinfachten, aber intuitiven Ansatz verfolgen, der eher erlebt als gelernt werden kann.",
+          "Die chinesische Medizin erkennt spezifische Funktionalitäten in unserem Körper und ordnet sie lose Organen wie der Lunge, dem Herzen, dem Magen usw. zu. Im Gegensatz zu unserem westlichen Konzept dieser Funktionen verfügen ihre chinesischen Kollegen jedoch auch über spezifische geistige Fähigkeiten: Die Lunge zum Beispiel befasst sich mit unserer Fähigkeit, Grenzen zwischen uns und unserer Umwelt zu setzen, die Milz, die für die Verdauung verantwortlich ist, ist auch für die Datenverarbeitung verantwortlich usw.",
+          "Man kann sagen, dass diese Funktionen (Atmen, Verdauen, Regulieren usw.) ihre eigenen Intelligenzen aufrechterhalten, die Teil unserer Identität sind, aber dennoch ihre eigene Identität und Unabhängigkeit bewahren und dennoch eng miteinander interagieren.",
+          "Damit diese Funktionalitäten auf unsere Alltagssituationen reagieren können, benötigen diese Entitäten die Fähigkeit, sowohl die Außenwelt als auch miteinander zu spüren und zu verbinden.",
+          "Dieses Konzept ist der westlichen Medizin nicht so fremd: Wir sprechen über Hormone und Nerven, die den verschiedenen Systemen in unserem Körper Feedback und Kontrolle geben.",
+          "Der Schlüssel zu einer guten Gesundheit besteht nach chinesischer Denkweise darin, durch eine ordnungsgemäße Kommunikation zwischen diesen Organen ein Gleichgewicht zu gewährleisten, das es den Organen ermöglicht, bestmöglich zu funktionieren und sich gegenseitig zu unterstützen, wo immer dies erforderlich ist.",
+          "Um dies zu tun, pflegen diese Systeme nach der chinesischen Medizin Kanäle oder Meridiane, wie wir sie häufig nennen, die eine Art Antenne für unsere inneren Organe sind. Obwohl einige dieser Routen intern sind und daher für uns nicht zugänglich sind, gibt es auch empfindliche Bereiche auf der Haut unseres Körpers, die mit unseren inneren Organen kommunizieren.",
+          "Durch die Stimulation dieser Antennen (Nadeln, Druck, Hitze oder einfach durch Ausübung) können wir mit unseren inneren Organen kommunizieren und ihre Funktionsweise beeinflussen.<br>",
+          "Dazu bieten wir unseren Kunden in Pause and Move eine Vielzahl von Modalitäten, die sich der Aufgabe jeweils etwas anders nähern: Shiatsu und Tuina sind zu diesem Zweck entwickelte manuelle Therapietechniken, Qigong und Connected Movement öffnen Kommunikationskanäle durch Bewegung. Manchmal reicht schon ein einfaches Gespräch, um diese Routen zu öffnen.",
+          "Diese Korrelation zwischen der Oberfläche unseres Körpers und der inneren Funktionalität des Körpers ist ein Gegenstrom: Wir können über den Zustand unserer inneren Organe lernen, indem wir die Oberfläche unseres Körpers beobachten, und wir können die inneren Organe beeinflussen, indem wir diese Bereiche stimulieren.",
+          "Mit den Modalitäten, die wir in Pause und Bewegung üben, lernen wir, auf diese Meridiane zu hören und sie zu stimulieren, um ihre Funktion als Kanal zur Übertragung von Informationen zu und von unseren inneren Organen und Emotionen zu unseren Gliedmaßen und unserer Oberfläche zu verbessern."
+        ],
+        "published": true
+      },
+      {
+        "id": "whats-the-difference-between-massage-and-oriental-bodywork",
+        "categoryId": "treatment_techniques",
+        "categoryIds": [
+          "treatment_techniques",
+          "oriental_medicine"
+        ],
+        "title": "Was ist der Unterschied zwischen Massage und orientalischer Körperarbeit?",
+        "date": "Juli 2026",
+        "readTime": "5 Min.",
+        "author": "Michael Guralnik",
+        "abstract": "Orientalische Körpermodalitäten wie Tuina oder Shiatsu haben eine ganz andere Einstellung als westliche Massagen. Dieser Artikel zeigt die wichtigsten Unterschiede auf.",
+        "image": "assets/cover-whats-the-difference-between-massage-and-oriental-bodywork.jpg",
+        "keywords": [
+          "Massage",
+          "Tuina",
+          "Shiatsu",
+          "TCM",
+          "Myofaszial"
+        ],
+        "content": [
+          "Shiatsu und Tuina sind vielleicht die bekanntesten Körpersysteme, die im Westen eingeführt wurden. Und in vielerlei Hinsicht unterscheiden sie sich radikal von der Massagetherapie.",
+          "Western Body Arbeitssysteme wurden aus einer westlichen medizinischen Tradition entwickelt, die Bewegung und Funktion des Körpers aus biomechanischer Sicht analysiert. Es untersucht den menschlichen Körper, als wäre unser Körper eine Maschine. Die Hauptwissenschaft, die mit diesem Konzept angewendet wird, ist die Physik: Kräfte, Vektoren, Drehmomente usw.",
+          "Frühe Massagetherapiemethoden basierten ausschließlich auf der Idee, dass sie durch die Beeinflussung der beweglichen Teile im System (Muskeln und Bänder) die zugrunde liegenden Probleme lösen, die mit Körperhaltung, Bewegung und mechanischen Schäden (wie Verletzungen) durch Muskeln zu tun haben.",
+          "Mit der Zeit wurde diese Sicht erweitert, um andere Systeme, wie die Nerven und in gewissem Maße sogar das Hormonsystem, zu berücksichtigen. Der Fokus bleibt jedoch auf der Muskulatur.",
+          "Die östlichen Traditionen hingegen wurden weit vor der Einführung der modernen Anatomie und Physiologie im Osten entwickelt und folgen dem östlichen Medizinansatz, der sich auf die inneren Organe als Hauptinteresse des Therapeuten konzentriert.",
+          "Ein manueller Therapeut, wie ein Akupunkteur, sucht nach Möglichkeiten, die inneren Organe zu beeinflussen, indem er Bereiche auf der Körperoberfläche findet, die die tief im Inneren liegenden Organe beeinflussen, manchmal an Orten, die so weit voneinander entfernt sind, dass wir uns fragen können, wie sie überhaupt auf diese Verbindungen gekommen sind.",
+          "Ein traditioneller Tuina- oder Shiatsu-Therapeut wird versuchen, ein inneres Organ wie die Lunge, den Magen oder die Niere zu beeinflussen, indem er oberflächliches Gewebe beeinflusst, das eine Affinität zu diesem zugrunde liegenden Organ hat.",
+          "Dies bedeutet nicht, dass orientalische Körperarbeiter nicht mit der Körpermechanik vertraut sind. Im Gegenteil. Viele dieser Systeme wurden Seite an Seite mit Kampfkünsten entwickelt, die Bewegung und die Beziehungen zwischen verschiedenen Körperteilen auf sehr präzise und intime Weise untersuchten.",
+          "Das breitere Bild, das ein orientalischer Körperarbeiter sucht, beinhaltet jedoch ein größeres Bild. Es sucht nach einer Verbindung zwischen einer Verletzungsstelle und der gesamten verletzten Person."
+        ],
+        "published": true
+      },
+      {
+        "id": "massage-oils-and-other-lubricats",
+        "categoryId": "treatment_techniques",
+        "categoryIds": [
+          "treatment_techniques"
+        ],
+        "title": "Massageöle und andere Schmierstoffe",
+        "date": "Juli 2026",
+        "readTime": "5 Min.",
+        "author": "Michael Guralnik",
+        "abstract": "Öl, Lotion oder Gel? Ein Massagetherapeut erklärt die Unterschiede zwischen Massagemedien und wie die richtige Wahl Ihre Behandlung prägt.",
+        "image": "assets/cover-massage-oils-and-other-lubricats.jpg",
+        "keywords": [
+          "Massageöl",
+          "Massagelotion",
+          "Massagegel",
+          "Massagemedium",
+          "Gleitfähigkeit",
+          "ätherische Öle",
+          "Arnika",
+          "Tiger Balm"
+        ],
+        "content": [
+          "Massageschmierstoffe dienen dem gleichen Zweck wie Öl in Maschinen: Sie reduzieren die Reibung — in diesem Fall zwischen der Hand des Therapeuten und der Haut des Klienten. Mit einem Gleitmittel kann ich einen festen vertikalen Druck ausüben, während meine Hand, meine Handfläche oder mein Ellbogen sanft über die Haut gleiten. Ohne einen würde der gleiche Druck an der Haut schleifen und schnell irritierend werden.",
+          "Massagetherapeuten haben drei Arten von Gleitmitteln zur Auswahl: Öl, Lotion und Gel.",
+          "Öl zieht am wenigsten in die Haut ein, was bedeutet, dass es für die gesamte Sitzung nützlich bleibt. Das ist auch der Grund, warum Therapeuten dazu neigen, es sparsam zu verwenden — zu viel, und der Klient fühlt sich fettig.",
+          "Lotion ist eine Emulsion, die das Beste aus den dreien aufnimmt, was sie zu einer guten Wahl für trockene Haut macht. Der Nachteil ist, dass es schnell verschwindet und klebrig wird, wenn es nicht oft erneut aufgetragen wird. Es ist auch das am wenigsten glatte von den dreien.",
+          "Gel ist die moderne Ergänzung der Familie. Wie Lotion ist es eine Emulsion, aber mit einem viel höheren Ölgehalt. Es gleitet etwas weniger glatt als reines Öl und gibt dennoch einen angenehmen Schlupf — ohne dass die Lotion ständig neu aufgetragen werden muss.",
+          "Persönlich wähle ich von Fall zu Fall zwischen den drei, abhängig vom Zweck der Sitzung und der Präferenz des Kunden. Ein klarer Grund, nach Öl zu greifen: Wenn man ätherische Öle oder therapeutische Substanzen wie Arnika, CBD oder östliche Einschlüsse wie Po Sum On, Tiger Balm oder Dit Da Jow hinzufügt, mischen sich diese viel besser in Öl als in die anderen beiden."
         ],
         "published": false
       }

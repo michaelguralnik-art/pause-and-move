@@ -39,7 +39,7 @@
 "nav.links.about","About","Praxis"
 "nav.links.modalities","Modalities","Therapien"
 "nav.links.services","Services","Tarife"
-"nav.logo","Pause <span>&</span> Move","Pause <span>&</span> Move"
+"nav.logo","<img src=""assets/logo.png"" alt=""Pause &amp; Move"" class=""logo-img"">","<img src=""assets/logo.png"" alt=""Pause &amp; Move"" class=""logo-img"">"
 "nav.contact_cta","Book a Session","Termin buchen"
 "contact.form.description","Questions, booking requests, or just curious about which therapy is right for you — drop us a line. You'll be in touch with Michael Guralnik.","Fragen, Buchungsanfragen oder einfach nur neugierig, welche Therapie die richtige für Sie ist — schreiben Sie uns. Sie treten mit Michael Guralnik in Kontakt."
 "contact.form.eyebrow","Get in touch","Kontakt"
