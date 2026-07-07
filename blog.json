@@ -15,7 +15,7 @@
         "id": "shoulders-stress",
         "categoryId": "health",
         "title": "The Ease Behind the Effort",
-        "date": "June 2026",
+        "date": "July 2026",
         "readTime": "5 min",
         "author": "Michael Guralnik",
         "abstract": "Why moving well — in sport and in everyday life — depends as much on what you let go of as on what you put in.",
@@ -36,8 +36,10 @@
         "categoryIds": [
           "health",
           "healthy_living",
+          "movement",
           "treatment_techniques"
-        ]
+        ],
+        "published": true
       },
       {
         "id": "new-city-relocation",
@@ -484,7 +486,7 @@
         "id": "shoulders-stress",
         "categoryId": "health",
         "title": "Die Leichtigkeit hinter der Anstrengung",
-        "date": "Juni 2026",
+        "date": "Juli 2026",
         "readTime": "5 Min.",
         "author": "Michael Guralnik",
         "abstract": "Wir halten emotionale und kÃ¶rperliche Anspannung in Mustern fest, die weit Ã¼ber das Physische hinausgehen. Zu verstehen, wo Ihre Spannung sitzt â€” und warum â€” ist der erste Schritt, sie dauerhaft loszulassen.",
@@ -506,8 +508,10 @@
         "categoryIds": [
           "health",
           "healthy_living",
+          "movement",
           "treatment_techniques"
-        ]
+        ],
+        "published": true
       },
       {
         "id": "new-city-relocation",
