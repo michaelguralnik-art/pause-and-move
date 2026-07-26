@@ -235,7 +235,7 @@
                                                    "checks_title":  "Ideal bei"
                                                },
                                                {
-                                                   "image":  "https://images.pexels.com/photos/5794027/pexels-photo-5794027.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=700\u0026h=900\u0026fit=crop",
+                                                   "image":  "assets/shiatsu.jpg",
                                                    "checks":  [
                                                                   "Nacken- \u0026 Rückenschmerzen",
                                                                   "Gelenksteifheit",
@@ -268,7 +268,7 @@
                                                    "checks_title":  "Ideal bei"
                                                },
                                                {
-                                                   "image":  "https://images.pexels.com/photos/5794024/pexels-photo-5794024.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=700\u0026h=900\u0026fit=crop",
+                                                   "image":  "assets/tuina.jpg",
                                                    "checks":  [
                                                                   "Chronische Schmerzen",
                                                                   "Gelenkprobleme",
@@ -716,7 +716,7 @@
                                                    "checks_title":  "Great for"
                                                },
                                                {
-                                                   "image":  "https://images.pexels.com/photos/5794027/pexels-photo-5794027.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=700\u0026h=900\u0026fit=crop",
+                                                   "image":  "assets/shiatsu.jpg",
                                                    "checks":  [
                                                                   "Neck \u0026 back pain",
                                                                   "Joint stiffness",
@@ -749,7 +749,7 @@
                                                    "checks_title":  "Great for"
                                                },
                                                {
-                                                   "image":  "https://images.pexels.com/photos/5794024/pexels-photo-5794024.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=700\u0026h=900\u0026fit=crop",
+                                                   "image":  "assets/tuina.jpg",
                                                    "checks":  [
                                                                   "Chronic pain",
                                                                   "Joint problems",

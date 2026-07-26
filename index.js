@@ -271,7 +271,7 @@ function renderHomeModalities(data) {
   if (!container || !data.modalities || !data.modalities.list) return;
   
   container.innerHTML = data.modalities.list.map((mod, idx) => `
-    <div class="modality-card reveal delay-${(idx % 4) + 1}" onclick="showSection('modalities');showMod('${mod.id}')">
+    <div class="modality-card modality-card-${mod.id} reveal delay-${(idx % 4) + 1}" onclick="showSection('modalities');showMod('${mod.id}')">
       <div class="modality-card-img">
         <img src="${mod.image}" alt="${mod.title}"/>
       </div>

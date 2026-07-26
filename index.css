@@ -534,6 +534,18 @@ ul{list-style:none}
   position:relative;
 }
 .mod-image-banner img{width:100%;height:100%;object-fit:cover;object-position:center 35%;transition:transform 0.6s ease;}
+#modalities-qigong .mod-image-banner img,
+#modalities-connected .mod-image-banner img,
+.modality-card-qigong .modality-card-img img,
+.modality-card-connected .modality-card-img img {
+  object-fit: contain;
+}
+#modalities-qigong .mod-image-banner img,
+.modality-card-qigong .modality-card-img img,
+#modalities-connected .mod-image-banner img,
+.modality-card-connected .modality-card-img img {
+  object-position: left center;
+}
 .mod-image-banner:hover img{transform:scale(1.03);}
 .mod-image-banner::after{
   content:'';position:absolute;inset:0;
