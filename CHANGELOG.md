@@ -4,6 +4,15 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.43] - 2026-07-30
+### Developer & Copy Updates
+- Synchronized latest copy modifications and codebase enhancements.
+
+### Reviewer Comments / Notes
+- Add insurance recognition line to classic massage modality card
+
+
+
 ## [3.42] - 2026-07-30
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.
