@@ -231,6 +231,11 @@
                                                                 ],
                                                    "details":  "Eine Sitzung deckt in der Regel den ganzen Körper ab — Rücken, Schultern, Beine, Arme —, wobei **Druck und Fokus ganz auf Sie abgestimmt** werden. Bevorzugen Sie festen Druck? Sanftere Berührungen? Brauchen Sie besondere Aufmerksamkeit für den unteren Rücken? Sprechen Sie es einfach an.\u003c/p\u003e\u003cp\u003eDie klassische Massage eignet sich hervorragend als **einzelne Auszeit** oder als sanfter Einstieg, wenn Sie neu in der Massage-Therapie sind. Sie lässt sich auch wunderbar mit gezielter Arbeit wie Tuina kombinieren.",
                                                    "desc":  "Die klassische Massage wird mit Öl direkt auf der Haut durchgeführt, mit sanften, rhythmischen Griffen, die die Muskeln erwärmen und Sie in eine tiefe Entspannung führen. Wunderbar unkompliziert — und wirkt jedes Mal.",
+                                                   "callout":  {
+                                                                   "title":  "Krankenkasse",
+                                                                   "description":  "Klassische Massage ist beim EMR unter Methode 102 anerkannt, ZSR-Nr. C657965. Die meisten Schweizer Zusatzversicherungen erstatten einen Teil der Behandlungskosten — die Grundversicherung übernimmt komplementärtherapeutische Behandlungen grundsätzlich nicht.\u003cbr\u003e\u003cbr\u003eWie viel zurückkommt und bis zu welchem Jahresbetrag, hängt von deiner Police ab. Ein kurzer Anruf bei deiner Kasse mit den obigen Nummern schafft Klarheit. Nach der Behandlung erhältst du eine Quittung mit allen nötigen Angaben.\u003cbr\u003e\u003cbr\u003eDas gilt für die klassische Massage. Shiatsu, Tuina, Connected Movement und Qigong sind von meiner aktuellen Registrierung nicht erfasst — wenn dir die Rückerstattung wichtig ist, sag mir das bei der Buchung, dann arbeiten wir mit Massage.",
+                                                                   "icon":  "✦"
+                                                               },
                                                    "title":  "Einfach, wirksam, tief entspannend",
                                                    "checks_title":  "Ideal bei"
                                                },
@@ -306,7 +311,7 @@
                                                    "checks_title":  "Ideal bei"
                                                },
                                                {
-                                                   "image":  "assets/connected.jpg",
+                                                   "image":  "assets/connected_new.jpg",
                                                    "checks":  [
                                                                   "Bessere Haltung",
                                                                   "Verbesserte Koordination",
@@ -339,7 +344,7 @@
                                                    "checks_title":  "Was es für Sie tun kann"
                                                },
                                                {
-                                                   "image":  "assets/qigong.jpg",
+                                                   "image":  "assets/qigong_new.jpg",
                                                    "checks":  [
                                                                   "Stress \u0026 Ängste",
                                                                   "Erschöpfung \u0026 Energiemangel",
@@ -466,7 +471,7 @@
                                                               }
                                                           ],
                                                "desc":  "Statt eine bestimmte Technik zu buchen, bringen Sie mit, was Sie gerade beschäftigt — und die Behandlung wird genau darauf abgestimmt. Shiatsu, klassische Massage, Connected Movement, Tuina — was Ihnen an diesem Tag am besten tut. Jede Reise beginnt irgendwo. Eine Einzelsitzung ist in sich vollständig — und manchmal der Beginn von etwas Längerem.",
-                                               "note":  "\u003cstrong\u003eNach jeder Sitzung\u003c/strong\u003e erhalten Sie eine kurze persönliche Notiz darüber, woran gearbeitet wurde und worauf Sie in den folgenden Tagen achten können. Kein Bericht — nur ein Faden, um mit der Arbeit in Verbindung zu bleiben."
+                                               "note":  "\u003cstrong\u003eKrankenkasse\u003c/strong\u003e\u003cbr\u003e\u003cbr\u003eKlassische Massage ist beim EMR unter Methode 102 anerkannt, ZSR-Nr. C657965. Die meisten Schweizer Zusatzversicherungen erstatten einen Teil der Behandlungskosten — die Grundversicherung übernimmt komplementärtherapeutische Behandlungen grundsätzlich nicht.\u003cbr\u003e\u003cbr\u003eWie viel zurückkommt und bis zu welchem Jahresbetrag, hängt von deiner Police ab. Ein kurzer Anruf bei deiner Kasse mit den obigen Nummern schafft Klarheit. Nach der Behandlung erhältst du eine Quittung mit allen nötigen Angaben.\u003cbr\u003e\u003cbr\u003eDas gilt für die klassische Massage. Shiatsu, Tuina, Connected Movement und Qigong sind von meiner aktuellen Registrierung nicht erfasst — wenn dir die Rückerstattung wichtig ist, sag mir das bei der Buchung, dann arbeiten wir mit Massage."
                                            },
                                 "intro":  {
                                               "eyebrow":  "Preise \u0026 Tarife",
@@ -712,6 +717,11 @@
                                                                 ],
                                                    "details":  "A session typically covers the whole body — back, shoulders, legs, arms — with the \u003cstrong\u003epressure and focus adjusted entirely to you\u003c/strong\u003e. Prefer something firm? Lighter touch? Need extra attention on your lower back? Just say so.\u003c/p\u003e\u003cp\u003eClassic massage works beautifully as a \u003cstrong\u003estandalone treat\u003c/strong\u003e or as a gentle introduction if you\u0027re new to massage therapy. It also pairs wonderfully with more targeted work like Tuina.",
                                                    "desc":  "Classic massage is performed directly on the skin using oil, with smooth rhythmic strokes that warm the muscles and guide you into deep relaxation. It\u0027s wonderfully straightforward — and works every time.",
+                                                   "callout":  {
+                                                                   "title":  "Insurance",
+                                                                   "description":  "Classic massage sessions are recognized under EMR method 102 (Klassische Massage), ZSR no. C657965. Most Swiss supplementary insurance plans (Zusatzversicherung) reimburse part of the cost — basic insurance (Grundversicherung) doesn\u0027t cover complementary therapy at all.\u003cbr\u003e\u003cbr\u003eHow much comes back, and up to what annual limit, depends on your individual policy. A two-minute call to your insurer with the numbers above will tell you exactly. After the session you\u0027ll get a receipt with everything they need.\u003cbr\u003e\u003cbr\u003eThis applies to classic massage specifically. Shiatsu, Tuina, Connected Movement and Qigong aren\u0027t covered by my current registration — if reimbursement matters to you, let me know when you book and we\u0027ll work with massage.",
+                                                                   "icon":  "✦"
+                                                               },
                                                    "title":  "Simple, effective, deeply relaxing",
                                                    "checks_title":  "Great for"
                                                },
@@ -787,7 +797,7 @@
                                                    "checks_title":  "Great for"
                                                },
                                                {
-                                                   "image":  "assets/connected.jpg",
+                                                   "image":  "assets/connected_new.jpg",
                                                    "checks":  [
                                                                   "Better posture",
                                                                   "Improved coordination",
@@ -820,7 +830,7 @@
                                                    "checks_title":  "What it can do for you"
                                                },
                                                {
-                                                   "image":  "assets/qigong.jpg",
+                                                   "image":  "assets/qigong_new.jpg",
                                                    "checks":  [
                                                                   "Stress \u0026 anxiety",
                                                                   "Fatigue \u0026 low energy",
@@ -947,7 +957,7 @@
                                                               }
                                                           ],
                                                "desc":  "Rather than booking a specific technique, you bring what\u0027s going on — and the session is built around that. Shiatsu, classic massage, connected movement, Tuina — whatever serves you best that day. Every journey starts somewhere. A single session is complete in itself — and sometimes it\u0027s also where something longer begins.",
-                                               "note":  "\u003cstrong\u003eAfter every session\u003c/strong\u003e, you\u0027ll receive a short personal note on what was worked on and what to notice in the days that follow. Not a report — just a thread to stay connected to the work between visits."
+                                               "note":  "\u003cstrong\u003eInsurance\u003c/strong\u003e\u003cbr\u003e\u003cbr\u003eClassic massage sessions are recognized under EMR method 102 (Klassische Massage), ZSR no. C657965. Most Swiss supplementary insurance plans (Zusatzversicherung) reimburse part of the cost — basic insurance (Grundversicherung) doesn\u0027t cover complementary therapy at all.\u003cbr\u003e\u003cbr\u003eHow much comes back, and up to what annual limit, depends on your individual policy. A two-minute call to your insurer with the numbers above will tell you exactly. After the session you\u0027ll get a receipt with everything they need.\u003cbr\u003e\u003cbr\u003eThis applies to classic massage specifically. Shiatsu, Tuina, Connected Movement and Qigong aren\u0027t covered by my current registration — if reimbursement matters to you, let me know when you book and we\u0027ll work with massage."
                                            },
                                 "intro":  {
                                               "eyebrow":  "Services \u0026 Pricing",

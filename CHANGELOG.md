@@ -4,6 +4,15 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.42] - 2026-07-30
+### Developer & Copy Updates
+- Synchronized latest copy modifications and codebase enhancements.
+
+### Reviewer Comments / Notes
+- Update insurance text in English and German for classic massage
+
+
+
 ## [3.41] - 2026-07-26
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.
