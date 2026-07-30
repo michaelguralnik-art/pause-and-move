@@ -70,6 +70,7 @@
       <li><a href="#" onclick="showSection('services');return false;" data-copy="nav.links.services">Services</a></li>
       <li><a href="#" onclick="showSection('modalities');return false;" data-copy="nav.links.modalities">Modalities</a></li>
       <li><a href="#" onclick="clickJournalLink();return false;" data-copy="nav.links.blog">Journal</a></li>
+      <li><a href="#" onclick="showSection('faq');return false;" data-copy="nav.links.faq">FAQ</a></li>
       <li><a href="#" onclick="showSection('contact');return false;" data-copy="nav.links.contact">Contact</a></li>
     </ul>
     <div style="display:flex; align-items:center; gap:20px;">
@@ -89,6 +90,7 @@
   <a href="#" onclick="showSection('services');closeDrawer();return false;" data-copy="nav.links.services">Services</a>
   <a href="#" onclick="showSection('modalities');closeDrawer();return false;" data-copy="nav.links.modalities">Modalities</a>
   <a href="#" onclick="clickJournalLink();closeDrawer();return false;" data-copy="nav.links.blog">Journal</a>
+  <a href="#" onclick="showSection('faq');closeDrawer();return false;" data-copy="nav.links.faq">FAQ</a>
   <a href="#" onclick="showSection('contact');closeDrawer();return false;" data-copy="nav.links.contact">Contact</a>
   <a href="#" onclick="closeDrawer();toggleLanguage();return false;" class="nav-lang-toggle" style="border-bottom:1px solid var(--border); padding:12px 0;">DE</a>
   <a href="#" class="drawer-cta" onclick="closeDrawer();openModal();return false;" data-copy="nav.contact_cta">Book a Session</a>
@@ -480,6 +482,24 @@
   </div>
 </section>
 
+<!-- ⑤ FAQ -->
+<section id="faq" class="section">
+  <div class="faq-hero">
+    <div class="faq-hero-content">
+      <p class="eyebrow" style="margin-bottom:16px" data-copy="faq.eyebrow">Got questions?</p>
+      <h1 class="display-xl" data-copy="faq.hero_title">Frequently<br>Asked <em>Questions.</em></h1>
+    </div>
+  </div>
+
+  <div class="faq-section">
+    <div class="faq-container">
+      <div class="faq-grid" id="faq-list">
+        <!-- Rendered dynamically from translations/JSON -->
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ⑥ CONTACT -->
 <section id="contact" class="section">
 
@@ -571,7 +591,7 @@
         <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </div>
     </div>
-    <div class="footer-col"><h4 data-copy="footer.cols.navigate">Navigate</h4><ul><li><a href="#" onclick="showSection('home');return false;">Home</a></li><li><a href="#" onclick="showSection('about');return false;">About</a></li><li><a href="#" onclick="showSection('services');return false;">Services</a></li><li><a href="#" onclick="showSection('modalities');return false;">Modalities</a></li><li><a href="#" onclick="clickJournalLink();return false;">Journal</a></li><li><a href="#" onclick="showSection('contact');return false;">Contact</a></li></ul></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.navigate">Navigate</h4><ul><li><a href="#" onclick="showSection('home');return false;">Home</a></li><li><a href="#" onclick="showSection('about');return false;">About</a></li><li><a href="#" onclick="showSection('services');return false;">Services</a></li><li><a href="#" onclick="showSection('modalities');return false;">Modalities</a></li><li><a href="#" onclick="clickJournalLink();return false;">Journal</a></li><li><a href="#" onclick="showSection('faq');return false;" data-copy="nav.links.faq">FAQ</a></li><li><a href="#" onclick="showSection('contact');return false;">Contact</a></li></ul></div>
     <div class="footer-col"><h4 data-copy="footer.cols.therapies">Therapies</h4><ul><li><a href="#" onclick="showSection('modalities');showMod('classic');return false;">Classic Massage</a></li><li><a href="#" onclick="showSection('modalities');showMod('shiatsu');return false;">Shiatsu</a></li><li><a href="#" onclick="showSection('modalities');showMod('connected');return false;">Connected Movement</a></li><li><a href="#" onclick="showSection('modalities');showMod('tuina');return false;">Tuina</a></li><li><a href="#" onclick="showSection('modalities');showMod('qigong');return false;">Qigong</a></li></ul></div>
     <div class="footer-col"><h4 data-copy="footer.cols.contact">Contact</h4><ul><li><a href="#" onclick="showSection('contact');return false;" data-copy="contact.info.pin">Inside Physiopunkt Basel</a></li><li><a href="#">Meret Oppenheim-Strasse 6, Basel</a></li><li><a href="mailto:hello@pauseandmove.ch">hello@pauseandmove.ch</a></li><li><a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color:var(--gold); font-weight:500;" data-copy="contact.info.whatsapp_footer">WhatsApp Business (Preferred)</a></li><li><a href="tel:+41772776050" data-copy="contact.info.phone">+41 77 277 60 50</a></li></ul><div style="margin-top:20px"><button class="btn-gold" onclick="openModal()" style="font-size:10px;padding:11px 20px;" data-copy="nav.contact_cta">Book a session</button></div></div>
   </div>

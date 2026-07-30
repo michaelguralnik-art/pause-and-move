@@ -13,6 +13,32 @@
                                         },
                               "bottom":  "© 2025 Pause \u0026 Move, Basel. Alle Rechte vorbehalten."
                           },
+               "faq":  {
+                           "eyebrow":  "Fragen?",
+                           "items":  [
+                                         {
+                                             "a":  "Wenn du eine Zusatzversicherung für Komplementärmedizin hast, übernimmt sie in der Regel einen Teil der klassischen Massage. Die Grundversicherung übernimmt komplementärtherapeutische Behandlungen grundsätzlich nicht — das ist gesetzlich so geregelt und keine Frage der einzelnen Police. Unterschiedlich sind Erstattungssatz und Jahreshöchstbetrag.",
+                                             "q":  "Übernimmt meine Krankenkasse die Behandlung?"
+                                         },
+                                         {
+                                             "a":  "EMR-Methode 102 (Klassische Massage) und ZSR-Nr. C657965. Damit kann sie dir die Kostenübernahme vor der Buchung bestätigen.",
+                                             "q":  "Welche Angaben braucht meine Krankenkasse?"
+                                         },
+                                         {
+                                             "a":  "Nichts Kompliziertes. Du erhältst eine Quittung mit meinem Namen und meiner Adresse, der Methode, dem Datum, der Dauer, den Kosten und meiner ZSR-Nummer. Diese reichst du bei deiner Kasse ein und erhältst den Betrag zurück — ich rechne nicht direkt mit der Kasse ab.",
+                                             "q":  "Was muss ich nach der Behandlung tun?"
+                                         },
+                                         {
+                                             "a":  "Nein. Für komplementärtherapeutische Behandlungen über die Zusatzversicherung ist keine Verordnung nötig.",
+                                             "q":  "Brauche ich eine ärztliche Verordnung?"
+                                         },
+                                         {
+                                             "a":  "Das solltest du für dich entscheiden, nicht mir zuliebe. Wenn du weisst, dass du komplementärtherapeutische Angebote regelmässig nutzen wirst, rechnet es sich meist; wenn du unsicher bist, ist der Monatsbeitrag für die meisten klein genug, um es ein Jahr zu versuchen. Jede Schweizer Krankenkasse berät dich dazu.",
+                                             "q":  "Ich bin neu in der Schweiz und habe keine Zusatzversicherung. Lohnt sich das?"
+                                         }
+                                     ],
+                           "hero_title":  "Häufig gestellte\u003cbr\u003e\u003cem\u003eFragen.\u003c/em\u003e"
+                       },
                "metadata":  {
                                 "description":  "Erstklassige Massagetherapie und Körperarbeit im Herzen von Basel (Shiatsu, Tuina, Klassische Massage, Connected Movement). Anerkannt von Schweizer Krankenkassen (ASCA/EGK).",
                                 "title":  "Pause \u0026 Move — Professionelle Massage \u0026 Körpertherapie in Basel"
@@ -65,6 +91,7 @@
                            "cta":  "Jetzt buchen",
                            "links":  {
                                          "contact":  "Kontakt",
+                                         "faq":  "FAQ",
                                          "home":  "Home",
                                          "blog":  "Journal",
                                          "about":  "Praxis",
@@ -500,6 +527,32 @@
                                         },
                               "bottom":  "© 2025 Pause \u0026 Move, Basel. All rights reserved."
                           },
+               "faq":  {
+                           "eyebrow":  "Got questions?",
+                           "items":  [
+                                         {
+                                             "a":  "If you have supplementary insurance for complementary medicine (Zusatzversicherung), it will usually cover part of a classic massage session. Basic insurance (Grundversicherung) doesn\u0027t cover complementary therapy at all — that\u0027s national rule, not a detail of your plan. What varies between plans is the percentage and the annual ceiling.",
+                                             "q":  "Will my insurance pay for this?"
+                                         },
+                                         {
+                                             "a":  "EMR method 102 (Klassische Massage) and ZSR no. C657965. That\u0027s enough for them to confirm coverage before you book.",
+                                             "q":  "What do I give my insurer?"
+                                         },
+                                         {
+                                             "a":  "Nothing complicated. You\u0027ll get a receipt listing my name and address, the method, the date, the duration, the cost and my ZSR number. You send it to your insurer and they reimburse you — I don\u0027t bill them directly.",
+                                             "q":  "What do I do after the session?"
+                                         },
+                                         {
+                                             "a":  "No. Complementary therapy under supplementary insurance doesn\u0027t require one.",
+                                             "q":  "Do I need a doctor\u0027s referral?"
+                                         },
+                                         {
+                                             "a":  "That\u0027s a decision to make on its own terms rather than for my sake. If you already know you\u0027ll use complementary therapy regularly it usually pays for itself; if you\u0027re unsure, the monthly amount is small enough that most people try it for a year. Any Swiss insurer will walk you through it.",
+                                             "q":  "I\u0027m new to Switzerland and don\u0027t have supplementary insurance. Is it worth it?"
+                                         }
+                                     ],
+                           "hero_title":  "Frequently\u003cbr\u003eAsked \u003cem\u003eQuestions.\u003c/em\u003e"
+                       },
                "metadata":  {
                                 "description":  "Premium massage therapy and manual bodywork in the heart of Basel (Shiatsu, Tuina, Classic Massage, Connected Movement). Recognized by Swiss supplementary insurances (ASCA/EGK).",
                                 "title":  "Pause \u0026 Move — Professional Massage \u0026 Bodywork in Basel"
@@ -552,6 +605,7 @@
                            "cta":  "Book Now",
                            "links":  {
                                          "contact":  "Contact",
+                                         "faq":  "FAQ",
                                          "home":  "Home",
                                          "blog":  "Journal",
                                          "about":  "About",

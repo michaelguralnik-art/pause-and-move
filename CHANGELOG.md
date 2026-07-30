@@ -4,6 +4,15 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.46] - 2026-07-30
+### Developer & Copy Updates
+- Synchronized latest copy modifications and codebase enhancements.
+
+### Reviewer Comments / Notes
+- Add new FAQ section to navigation and main page
+
+
+
 ## [3.45] - 2026-07-30
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.

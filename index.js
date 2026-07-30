@@ -181,6 +181,7 @@ function renderLanguage(lang) {
   renderAboutContent(langData);
   renderServicesContent(langData);
   renderModalitiesContent(langData);
+  renderFaqContent(langData);
   
   // Render blog content
   renderBlogContent(lang);
@@ -506,6 +507,37 @@ function renderModalitiesContent(data) {
     </div>
   `).join('');
 }
+
+function renderFaqContent(data) {
+  const container = document.getElementById('faq-list');
+  if (!container || !data.faq || !data.faq.items) return;
+
+  container.innerHTML = data.faq.items.map((item, idx) => `
+    <div class="faq-item reveal delay-${(idx % 4) + 1}">
+      <button class="faq-question" onclick="toggleFaq(${idx})">
+        <h3>${item.q}</h3>
+        <div class="faq-toggle-icon"></div>
+      </button>
+      <div class="faq-answer">
+        <p>${item.a}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
+window.toggleFaq = function(idx) {
+  const items = document.querySelectorAll('.faq-item');
+  if (items[idx]) {
+    const isActive = items[idx].classList.contains('active');
+    
+    // Close other items for accordion effect
+    items.forEach(item => item.classList.remove('active'));
+    
+    if (!isActive) {
+      items[idx].classList.add('active');
+    }
+  }
+};
 
 // ── Form submission handling (FormSubmit.co via AJAX) ──
 function submitBookingForm(event) {
