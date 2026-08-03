@@ -4,7 +4,13 @@
     <loc>https://pauseandmove.ch/</loc>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/de/</loc>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/" />
   </url>
   <url>
     <loc>https://pauseandmove.ch/pause-and-move-classic-massage.html</loc>
@@ -83,15 +89,15 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/whats-the-difference-between-massage-and-oriental-bodywork.html" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/en/massage-oils-and-other-lubricats.html</loc>
+    <loc>https://pauseandmove.ch/journal/en/massage-oils-and-other-lubricants.html</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/massage-oils-and-other-lubricats.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/massage-oils-and-other-lubricats.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/massage-oils-and-other-lubricants.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/massage-oils-and-other-lubricants.html" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/de/massage-oils-and-other-lubricats.html</loc>
+    <loc>https://pauseandmove.ch/journal/de/massage-oils-and-other-lubricants.html</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/massage-oils-and-other-lubricats.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/massage-oils-and-other-lubricats.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/massage-oils-and-other-lubricants.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/massage-oils-and-other-lubricants.html" />
   </url>
 </urlset>

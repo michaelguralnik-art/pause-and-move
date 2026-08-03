@@ -88,6 +88,43 @@ foreach ($lang in $languages) {
     # 1. Translate the base layout (Nav, Drawer, Modals, Footer)
     $translatedLayout = Translate-HtmlString $templateHtml $langContent
     
+    # 1b. If German pass, also generate the pre-rendered German homepage (de/index.html)
+    if ($lang -eq "de") {
+        Write-Host "  Generating German homepage: de/index.html" -ForegroundColor Yellow
+        $deHtml = $translatedLayout
+        
+        # Adjust language code, canonical tag, OpenGraph URL, and alternate URLs
+        $deHtml = $deHtml -replace '<html lang="en">', '<html lang="de">'
+        $deHtml = $deHtml -replace '<link rel="canonical" href="https://pauseandmove.ch/" />', '<link rel="canonical" href="https://pauseandmove.ch/de/" />'
+        $deHtml = $deHtml -replace '<meta property="og:url" content="https://pauseandmove.ch/" />', '<meta property="og:url" content="https://pauseandmove.ch/de/" />'
+        $deHtml = $deHtml -replace '<button class="nav-lang-toggle" onclick="toggleLanguage\(\)">DE</button>', '<button class="nav-lang-toggle" onclick="toggleLanguage()">EN</button>'
+        $deHtml = $deHtml -replace 'class="nav-lang-toggle"([^>]*>)DE(</a>)', 'class="nav-lang-toggle"$1EN$2'
+        
+        # Adjust relative asset paths for 1 directory level deep
+        $deHtml = $deHtml -replace 'href="index.css', 'href="../index.css'
+        $deHtml = $deHtml -replace 'href="favicon.png', 'href="../favicon.png'
+        $deHtml = $deHtml -replace 'href="favicon.ico', 'href="../favicon.ico'
+        $deHtml = $deHtml -replace 'src="assets/', 'src="../assets/'
+        $deHtml = $deHtml -replace 'src="about-hero.jpg"', 'src="../about-hero.jpg"'
+        $deHtml = $deHtml -replace 'src="services-hero.jpg"', 'src="../services-hero.jpg"'
+        $deHtml = $deHtml -replace 'src="modalities-hero.jpg"', 'src="../modalities-hero.jpg"'
+        $deHtml = $deHtml -replace 'src="journal-hero.jpg"', 'src="../journal-hero.jpg"'
+        $deHtml = $deHtml -replace 'src="michael-guralnik.jpg"', 'src="../michael-guralnik.jpg"'
+        $deHtml = $deHtml -replace 'src="portrait.jpg"', 'src="../portrait.jpg"'
+        $deHtml = $deHtml -replace 'src="wave.jpg"', 'src="../wave.jpg"'
+        $deHtml = $deHtml -replace 'src="classic-massage.png"', 'src="../classic-massage.png"'
+        $deHtml = $deHtml -replace 'src="shiatsu.png"', 'src="../shiatsu.png"'
+        $deHtml = $deHtml -replace 'src="tuina.png"', 'src="../tuina.png"'
+        $deHtml = $deHtml -replace 'src="connected-movement.png"', 'src="../connected-movement.png"'
+        $deHtml = $deHtml -replace 'src="index.js"', 'src="../index.js"'
+        
+        # Write to de/index.html
+        $deDir = Join-Path $rootDir "de"
+        if (-not (Test-Path $deDir)) { New-Item -ItemType Directory -Path $deDir | Out-Null }
+        $deOutputPath = Join-Path $deDir "index.html"
+        [System.IO.File]::WriteAllText($deOutputPath, $deHtml, [System.Text.Encoding]::UTF8)
+    }
+    
     # Pre-render each article
     foreach ($article in $articles) {
         Write-Host "  Pre-rendering: $($article.title) ($($article.id))" -ForegroundColor DarkCyan
@@ -271,17 +308,21 @@ $sidebarRecentHtml              </div>
   <!-- OpenGraph Metadata for Rich Sharing Previews -->
   <meta property="og:title" content="$seoTitle" />
   <meta property="og:description" content="$seoDesc" />
-  <meta property="og:image" content="$($article.image)" />
+  <meta property="og:image" content="https://pauseandmove.ch/$($article.image)" />
   <meta property="og:url" content="$articleUrl" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Pause & Move Basel" />
   <meta name="twitter:card" content="summary_large_image" />
 "@
         
-        # Replace template titles, descriptions and keywords
+        # Replace template titles, descriptions, keywords and other SEO tags
         $pageHtml = $pageHtml -replace '(?s)<title>.*?</title>', ""
         $pageHtml = $pageHtml -replace '<meta name="description"[^>]*>', ""
         $pageHtml = $pageHtml -replace '<meta name="keywords"[^>]*>', ""
+        $pageHtml = $pageHtml -replace '<link rel="canonical"[^>]*>', ""
+        $pageHtml = $pageHtml -replace '<link rel="alternate"[^>]*>', ""
+        $pageHtml = $pageHtml -replace '<meta property="og:[^>]*>', ""
+        $pageHtml = $pageHtml -replace '<meta name="twitter:[^>]*>', ""
         
         # Inject our comprehensive SEO head tags right after <head>
         $pageHtml = $pageHtml -replace '<head>', "<head>`n$seoHeadTags"
@@ -424,7 +465,13 @@ $sitemapXml = @"
     <loc>https://pauseandmove.ch/</loc>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/de/</loc>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/" />
   </url>
   <url>
     <loc>https://pauseandmove.ch/pause-and-move-classic-massage.html</loc>

@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pause & Move — Business Card Designer</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <!-- QRCode.js Library (Local Fallback) -->
+  <script src="qrcode.min.js"></script>
+
+  <style>
+    /* ── BRAND THEME COLORS (Matches Pause & Move Site) ── */
+    :root {
+      --black: #0C0C0C;
+      --near-black: #111111;
+      --card-bg: #161410;
+      --white: #F0EDE8;
+      --gold: #C9A96E;
+      --gold-light: #E2C99A;
+      --muted: #6B6560;
+      --border: rgba(240, 237, 232, 0.08);
+      --r-md: 8px;
+      --r-lg: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--near-black);
+    }
+
+    .brand-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 700;
+    }
+
+    .brand-logo span {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .header-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 6px 12px;
+      border-radius: 2px;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .app-container {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 450px;
+      min-height: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .app-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── PREVIEW REGION ── */
+    .preview-pane {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      gap: 30px;
+      background: radial-gradient(circle at center, #1C1915 0%, #0C0C0C 100%);
+      overflow-y: auto;
+    }
+
+    /* ── 3D FLIP CONTAINER ── */
+    .card-scene {
+      width: 480px;
+      height: 310px;
+      perspective: 1200px;
+      cursor: pointer;
+    }
+
+    .card-3d {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-3d.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 
+                  0 0 0 1px var(--border);
+      overflow: hidden;
+      background-color: #0C0C0C;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-face-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Make SVGs scale nicely in the container */
+    .card-face svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .flip-hint {
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(240, 237, 232, 0.03);
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      transition: color 0.2s, background-color 0.2s;
+    }
+    .card-scene:hover + .flip-hint {
+      color: var(--gold-light);
+      background: rgba(240, 237, 232, 0.06);
+    }
+
+    /* ── CONTROLS SIDEBAR ── */
+    .control-pane {
+      background-color: var(--near-black);
+      border-left: 1px solid var(--border);
+      padding: 30px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 15px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* ── TOGGLE BUTTONS ── */
+    .toggle-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: rgba(240, 237, 232, 0.03);
+      padding: 4px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .toggle-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      padding: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .toggle-btn.active {
+      background-color: var(--gold);
+      color: var(--black);
+    }
+
+    /* ── TEXT INPUTS ── */
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-field label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .form-field input {
+      width: 100%;
+      padding: 10px 14px;
+      background-color: rgba(240, 237, 232, 0.04);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: inherit;
+      color: var(--white);
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .form-field input:focus {
+      border-color: var(--gold);
+      background-color: rgba(240, 237, 232, 0.08);
+    }
+
+    /* ── DOWNLOAD BUTTONS ── */
+    .btn-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .primary-btn {
+      background-color: var(--gold);
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .primary-btn:hover {
+      background-color: var(--gold-light);
+    }
+
+    .primary-btn:active {
+      transform: scale(0.98);
+    }
+
+    .secondary-btn {
+      background-color: transparent;
+      border: 1px solid var(--border);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .secondary-btn:hover {
+      border-color: var(--gold);
+      background-color: rgba(240, 237, 232, 0.02);
+    }
+
+    /* ── PRINT SETTINGS / GUIDES ── */
+    .checkbox-field {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      user-select: none;
+      font-size: 13px;
+    }
+
+    .checkbox-field input {
+      accent-color: var(--gold);
+      width: 16px;
+      height: 16px;
+    }
+
+    .info-box {
+      background: rgba(201, 169, 110, 0.05);
+      border-left: 3px solid var(--gold);
+      padding: 15px;
+      border-radius: 0 4px 4px 0;
+      font-size: 12px;
+      line-height: 1.6;
+      color: rgba(240, 237, 232, 0.8);
+    }
+
+    .info-box strong {
+      color: var(--gold-light);
+    }
+
+    /* Print guidelines explanation list */
+    .info-box ul {
+      margin-top: 8px;
+      margin-left: 16px;
+      list-style-type: disc;
+    }
+
+    /* Subtle background texture for mockups */
+    .noise-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.015;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand-logo">Pause <span>&</span> Move</div>
+    <div class="header-tag">Business Card Designer</div>
+  </header>
+
+  <div class="app-container">
+    
+    <!-- Left Pane: Interactive 3D Mockup -->
+    <div class="preview-pane">
+      
+      <div class="card-scene" id="cardScene" onclick="flipCard()">
+        <div class="card-3d" id="card3d">
+          
+          <!-- Front Face -->
+          <div class="card-face card-face-front">
+            <div class="noise-bg"></div>
+            <!-- Front SVG Container -->
+            <div id="frontSvgContainer" style="width: 100%; height: 100%;"></div>
+          </div>
+          
+          <!-- Back Face -->
+          <div class="card-face card-face-back">
+            <div class="noise-bg"></div>
+            <!-- Back SVG Container -->
+            <div id="backSvgContainer" style="width: 100%; height: 100%;"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="flip-hint">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+        </svg>
+        <span>Click the card to flip between Front and Back</span>
+      </div>
+
+    </div>
+
+    <!-- Right Pane: Customization Panel -->
+    <div class="control-pane">
+      
+      <!-- CONCEPT TOGGLE -->
+      <div class="control-group">
+        <h3 class="section-title">Design Concept</h3>
+        <div class="toggle-container">
+          <button class="toggle-btn active" id="btnConcept1" onclick="switchConcept(1)">Concept 1</button>
+          <button class="toggle-btn" id="btnConcept2" onclick="switchConcept(2)">Concept 2</button>
+        </div>
+        
+        <div class="info-box" id="conceptDesc">
+          <!-- Dynamically populated description -->
+        </div>
+      </div>
+
+      <!-- PRINT LAYOUT GUIDE -->
+      <div class="control-group">
+        <h3 class="section-title">Print Layout Settings</h3>
+        <label class="checkbox-field">
+          <input type="checkbox" id="chkBleed" onchange="updateCards()">
+          <span>Include 3mm Print Bleed Margin</span>
+        </label>
+        <label class="checkbox-field">
+          <input type="checkbox" id="chkGuides" onchange="updateCards()" checked>
+          <span>Show Safety & Trim Guidelines</span>
+        </label>
+        <div class="info-box" style="font-size: 11px; padding: 10px 15px;">
+          <strong>Bleed Toggle Information:</strong>
+          <ul>
+            <li><strong>Checked:</strong> Outputs a 91x61mm canvas suitable for commercial printing. Trim line (red) indicates where the card will be cut. Safe line (green) indicates standard margins.</li>
+            <li><strong>Unchecked:</strong> Outputs exactly 85x55mm, matching the exact cut dimension.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EDITABLE CARD DATA -->
+      <div class="control-group">
+        <h3 class="section-title">Card Details</h3>
+        
+        <div class="form-field">
+          <label for="inputName">Full Name</label>
+          <input type="text" id="inputName" value="Michael Guralnik" oninput="updateCards()">
+        </div>
+
+        <div class="form-field" id="titleDeField">
+          <label for="inputTitleDE">Title (German)</label>
+          <input type="text" id="inputTitleDE" value="Massage-Therapeut &amp; Körperarbeit" oninput="updateCards()">
+        </div>
+
+        <div class="form-field" id="titleEnField">
+          <label for="inputTitleEN">Title (English)</label>
+          <input type="text" id="inputTitleEN" value="Massage Therapist &amp; Bodywork" oninput="updateCards()">
+        </div>
+
+        <div class="form-field">
+          <label for="inputPhone">Phone Number</label>
+          <input type="text" id="inputPhone" value="+41 77 277 60 50" oninput="updateCards()">
+        </div>
+
+        <div class="form-field">
+          <label for="inputEmail">Email Address</label>
+          <input type="text" id="inputEmail" value="hello@pauseandmove.ch" oninput="updateCards()">
+        </div>
+
+        <div class="form-field">
+          <label for="inputAddress">Address / Location</label>
+          <input type="text" id="inputAddress" value="Meret Oppenheim-Strasse 6, 4053 Basel" oninput="updateCards()">
+        </div>
+
+        <div class="form-field">
+          <label for="inputAddressDetail">Location Detail</label>
+          <input type="text" id="inputAddressDetail" value="Inside Physiopunkt Basel" oninput="updateCards()">
+        </div>
+
+        <div class="form-field">
+          <label for="inputWebsite">Website URL</label>
+          <input type="text" id="inputWebsite" value="pauseandmove.ch" oninput="updateCards()">
+        </div>
+      </div>
+
+      <!-- EXPORT ACTIONS -->
+      <div class="control-group" style="margin-top: 10px;">
+        <h3 class="section-title">Export Options</h3>
+        <div class="btn-stack">
+          <button class="primary-btn" onclick="exportSvg('front')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download SVG (Front Side)
+          </button>
+          <button class="secondary-btn" onclick="exportSvg('back')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download SVG (Back Side)
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    let currentConcept = 1;
+
+    // Standard Business Card dimensions in mm
+    const CARD_W = 85;
+    const CARD_H = 55;
+    const BLEED_VAL = 3; // 3mm bleed on each side
+
+    // Concept Descriptions
+    const descriptions = {
+      1: "<strong>Concept 1: The Bilingual Flip</strong><br>Features the German translation on the Front side and the English version on the Back side. Perfect for hand-delivering to both locals and expats. Flip the card to present the preferred language. Back side includes the QR code.",
+      2: "<strong>Concept 2: The Unified Community</strong><br>Features a unified, highly aesthetic front side with logo and a bilingual tagline welcoming both Swiss & expats. The back side contains all contact details and a prominent QR code."
+    };
+
+    function switchConcept(conceptNum) {
+      currentConcept = conceptNum;
+      
+      // Update UI active buttons
+      document.getElementById('btnConcept1').classList.toggle('active', conceptNum === 1);
+      document.getElementById('btnConcept2').classList.toggle('active', conceptNum === 2);
+      
+      // Update description text
+      document.getElementById('conceptDesc').innerHTML = descriptions[conceptNum];
+
+      // Reset card flip to front when changing concepts
+      document.getElementById('card3d').classList.remove('is-flipped');
+
+      updateCards();
+    }
+
+    function flipCard() {
+      document.getElementById('card3d').classList.toggle('is-flipped');
+    }
+
+    // Helper: Generate dynamic SVG QR code using qrcode.js
+    function generateQrSvgPath(url, callback) {
+      QRCode.toString(url, {
+        type: 'svg',
+        margin: 0,
+        errorCorrectionLevel: 'M'
+      }, function (err, svgString) {
+        if (err) {
+          console.error(err);
+          callback({ viewBox: '0 0 25 25', pathHtml: '' });
+          return;
+        }
+        
+        // Parse the SVG string and extract the paths
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(svgString, 'image/svg+xml');
+        const svgEl = doc.querySelector('svg');
+        const viewBox = svgEl.getAttribute('viewBox') || '0 0 25 25';
+        const paths = doc.querySelectorAll('path');
+        
+        let pathHtml = '';
+        paths.forEach(p => {
+          const fill = p.getAttribute('fill') || '#000000';
+          // Skip white background paths to keep it transparent
+          if (fill.toLowerCase() !== '#ffffff' && fill.toLowerCase() !== '#fff') {
+            const d = p.getAttribute('d');
+            pathHtml += `<path d="${d}" fill="var(--gold-qr, #C9A96E)" />`;
+          }
+        });
+        
+        callback({ viewBox, pathHtml });
+      });
+    }
+
+    // Core Drawing Function
+    function updateCards() {
+      const name = document.getElementById('inputName').value;
+      const titleDE = document.getElementById('inputTitleDE').value;
+      const titleEN = document.getElementById('inputTitleEN').value;
+      const phone = document.getElementById('inputPhone').value;
+      const email = document.getElementById('inputEmail').value;
+      const address = document.getElementById('inputAddress').value;
+      const addressDetail = document.getElementById('inputAddressDetail').value;
+      const website = document.getElementById('inputWebsite').value;
+
+      const includeBleed = document.getElementById('chkBleed').checked;
+      const showGuides = document.getElementById('chkGuides').checked;
+
+      // Adjust dimensions based on bleed setting
+      const w = includeBleed ? CARD_W + 2 * BLEED_VAL : CARD_W;
+      const h = includeBleed ? CARD_H + 2 * BLEED_VAL : CARD_H;
+      const xOffset = includeBleed ? BLEED_VAL : 0;
+      const yOffset = includeBleed ? BLEED_VAL : 0;
+
+      // Generate website URL for QR code (add https if missing)
+      const qrUrl = website.startsWith('http') ? website : `https://${website}`;
+
+      generateQrSvgPath(qrUrl, function(qrObj) {
+        // Draw both cards
+        const frontSvg = getFrontSvgMarkup({
+          name, titleDE, titleEN, phone, email, address, addressDetail, website,
+          w, h, xOffset, yOffset, includeBleed, showGuides,
+          qrPathMarkup: qrObj.pathHtml, qrViewBox: qrObj.viewBox
+        });
+
+        const backSvg = getBackSvgMarkup({
+          name, titleDE, titleEN, phone, email, address, addressDetail, website,
+          w, h, xOffset, yOffset, includeBleed, showGuides,
+          qrPathMarkup: qrObj.pathHtml, qrViewBox: qrObj.viewBox
+        });
+
+        document.getElementById('frontSvgContainer').innerHTML = frontSvg;
+        document.getElementById('backSvgContainer').innerHTML = backSvg;
+      });
+    }
+
+    // SVG Header definitions, styles, and bleed markers helper
+    function getSvgFrame(w, h, includeBleed, showGuides) {
+      // Guide Line Style
+      const trimStyle = showGuides && includeBleed ? 'display: block;' : 'display: none;';
+      const safeStyle = showGuides ? 'display: block;' : 'display: none;';
+
+      const bleedBox = includeBleed ? `viewBox="-3 -3 ${w} ${h}"` : `viewBox="0 0 ${w} ${h}"`;
+      
+      const frameStart = `
+        <svg xmlns="http://www.w3.org/2000/svg" ${bleedBox} width="${w}mm" height="${h}mm">
+          <defs>
+            <style>
+              @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap');
+              
+              .bg-fill { fill: #0C0C0C; }
+              .color-gold { fill: #C9A96E; }
+              .color-white { fill: #F0EDE8; }
+              .color-muted { fill: #6B6560; }
+              
+              /* Fonts styles */
+              .font-serif {
+                font-family: 'Playfair Display', Georgia, serif;
+              }
+              .font-sans {
+                font-family: 'DM Sans', Arial, sans-serif;
+              }
+              
+              /* Brand Specifics */
+              .logo-text {
+                font-family: 'Playfair Display', Georgia, serif;
+                font-weight: 700;
+                font-style: italic;
+                font-size: 6px;
+                fill: #F0EDE8;
+                letter-spacing: 0.02em;
+              }
+              
+              .logo-ampersand {
+                fill: #C9A96E;
+                font-style: normal;
+              }
+
+              .eyebrow {
+                font-family: 'DM Sans', Arial, sans-serif;
+                font-size: 2px;
+                font-weight: 700;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                fill: #C9A96E;
+              }
+              
+              .tagline-serif {
+                font-family: 'Playfair Display', Georgia, serif;
+                font-style: italic;
+                font-size: 2.8px;
+                fill: #F0EDE8;
+                line-height: 1.4;
+              }
+              
+              .card-name {
+                font-family: 'DM Sans', Arial, sans-serif;
+                font-weight: 700;
+                font-size: 2.8px;
+                fill: #F0EDE8;
+                letter-spacing: 0.02em;
+              }
+              
+              .card-title {
+                font-family: 'DM Sans', Arial, sans-serif;
+                font-weight: 500;
+                font-size: 1.8px;
+                fill: #C9A96E;
+                letter-spacing: 0.05em;
+              }
+              
+              .contact-label {
+                font-family: 'DM Sans', Arial, sans-serif;
+                font-weight: 700;
+                font-size: 1.2px;
+                fill: #6B6560;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+              }
+              
+              .contact-val {
+                font-family: 'DM Sans', Arial, sans-serif;
+                font-size: 1.8px;
+                fill: #F0EDE8;
+              }
+              
+              .web-highlight {
+                font-family: 'DM Sans', Arial, sans-serif;
+                font-size: 2.8px;
+                font-weight: 700;
+                fill: #C9A96E;
+                letter-spacing: 0.05em;
+              }
+
+              .divider-line {
+                stroke: rgba(240, 237, 232, 0.08);
+                stroke-width: 0.25;
+              }
+              
+              /* Bleed & Trim Guidelines (Only visible in designer, ignored by cutters if outputted cleanly) */
+              .trim-border {
+                fill: none;
+                stroke: #ff3b30;
+                stroke-width: 0.25;
+                stroke-dasharray: 1, 1;
+                pointer-events: none;
+              }
+              
+              .safe-border {
+                fill: none;
+                stroke: #34c759;
+                stroke-width: 0.25;
+                stroke-dasharray: 1, 1;
+                pointer-events: none;
+              }
+            </style>
+          </defs>
+      `;
+
+      const backgroundRect = includeBleed 
+        ? `<rect x="-3" y="-3" width="${w}" height="${h}" class="bg-fill" />`
+        : `<rect x="0" y="0" width="${w}" height="${h}" class="bg-fill" />`;
+
+      const trimLine = `<rect x="0" y="0" width="85" height="55" class="trim-border" style="${trimStyle}" />`;
+      const safeLine = `<rect x="3" y="3" width="79" height="49" class="safe-border" style="${safeStyle}" />`;
+
+      return { frameStart, backgroundRect, trimLine, safeLine };
+    }
+
+    // Concept 1 & 2 Front Markup
+    function getFrontSvgMarkup(data) {
+      const { frameStart, backgroundRect, trimLine, safeLine } = getSvgFrame(data.w, data.h, data.includeBleed, data.showGuides);
+      const x = data.xOffset;
+      const y = data.yOffset;
+
+      let content = '';
+
+      if (currentConcept === 1) {
+        // Concept 1: Side A (German Front)
+        content = `
+          <!-- Center Logo -->
+          <g transform="translate(${x + 42.5}, ${y + 16})" text-anchor="middle">
+            <text class="logo-text">Pause <tspan class="logo-ampersand">&amp;</tspan> Move</text>
+            <text y="5" class="eyebrow">Massage &amp; Körperarbeit</text>
+          </g>
+
+          <line x1="${x + 20}" y1="${y + 25}" x2="${x + 65}" y2="${y + 25}" class="divider-line" />
+
+          <!-- Tagline -->
+          <text x="${x + 42.5}" y="${y + 31}" text-anchor="middle" class="tagline-serif">Ein Ort zum Innehalten und echtem Bewegen.</text>
+          
+          <!-- Contact Minimal Info -->
+          <g transform="translate(${x + 42.5}, ${y + 38})" text-anchor="middle">
+            <text class="contact-val" style="font-size: 1.8px;">${data.name} · ${data.phone}</text>
+            <text y="3.5" class="contact-val" style="font-size: 1.5px; fill: #6B6560;">${data.addressDetail} · ${data.address}</text>
+          </g>
+
+          <!-- Website highlight -->
+          <text x="${x + 42.5}" y="${y + 49}" text-anchor="middle" class="web-highlight">${data.website}</text>
+        `;
+      } else {
+        // Concept 2: Unified Front (Minimalist, Dual Tagline)
+        content = `
+          <!-- Center Logo -->
+          <g transform="translate(${x + 42.5}, ${y + 20})" text-anchor="middle">
+            <text class="logo-text" style="font-size: 7.5px;">Pause <tspan class="logo-ampersand">&amp;</tspan> Move</text>
+            <text y="6.5" class="eyebrow" style="font-size: 2.2px; letter-spacing: 0.16em;">Massage &amp; Körperarbeit · Basel</text>
+          </g>
+
+          <line x1="${x + 30}" y1="${y + 31}" x2="${x + 55}" y2="${y + 31}" class="divider-line" />
+
+          <!-- Bilingual Local & Expat Welcome -->
+          <g transform="translate(${x + 42.5}, ${y + 37})" text-anchor="middle">
+            <text class="tagline-serif" style="font-size: 2.6px;">Welcoming Basel's local &amp; international community</text>
+            <text y="4" class="contact-label" style="font-size: 1.4px; fill: #6B6560;">Für die Basler &amp; Expat Community</text>
+          </g>
+
+          <!-- Website highlight -->
+          <text x="${x + 42.5}" y="${y + 49}" text-anchor="middle" class="web-highlight" style="letter-spacing: 0.08em;">${data.website}</text>
+        `;
+      }
+
+      return `${frameStart}${backgroundRect}${content}${trimLine}${safeLine}</svg>`;
+    }
+
+    // Concept 1 & 2 Back Markup
+    function getBackSvgMarkup(data) {
+      const { frameStart, backgroundRect, trimLine, safeLine } = getSvgFrame(data.w, data.h, data.includeBleed, data.showGuides);
+      const x = data.xOffset;
+      const y = data.yOffset;
+
+      let content = '';
+
+      if (currentConcept === 1) {
+        // Concept 1: Side B (English Back)
+        content = `
+          <!-- Top Left Logo -->
+          <g transform="translate(${x + 10}, ${y + 11})">
+            <text class="logo-text" style="font-size: 4.5px;">Pause <tspan class="logo-ampersand">&amp;</tspan> Move</text>
+            <text y="4.5" class="eyebrow" style="font-size: 1.4px; letter-spacing: 0.12em;">Massage &amp; Bodywork</text>
+          </g>
+
+          <!-- Tagline Left -->
+          <text x="${x + 10}" y="${y + 22}" class="tagline-serif" style="font-size: 2.6px;">A place to pause, and truly move.</text>
+
+          <!-- Divider -->
+          <line x1="${x + 10}" y1="${y + 26}" x2="${x + 48}" y2="${y + 26}" class="divider-line" />
+
+          <!-- Left Info Column -->
+          <g transform="translate(${x + 10}, ${y + 31})">
+            <text class="card-name">${data.name}</text>
+            <text y="3" class="card-title">${data.titleEN}</text>
+            
+            <text y="8" class="contact-val" style="font-size: 1.6px;">${data.phone}</text>
+            <text y="11.5" class="contact-val" style="font-size: 1.6px;">${data.email}</text>
+            <text y="15" class="contact-val" style="font-size: 1.4px; fill: #6B6560;">${data.addressDetail}</text>
+            <text y="18" class="contact-val" style="font-size: 1.4px; fill: #6B6560;">${data.address}</text>
+          </g>
+
+          <!-- Right Column: QR Code Container -->
+          <g transform="translate(${x + 55}, ${y + 12})">
+            <!-- QR code background card -->
+            <rect width="20" height="20" rx="1.5" fill="#161410" stroke="rgba(240, 237, 232, 0.04)" stroke-width="0.5" />
+            
+            <!-- Dynamic QR Code Path Insert -->
+            <g id="qrCodePathBack" transform="scale(0.8) translate(2.5, 2.5)">
+              <svg width="20" height="20" viewBox="${data.qrViewBox}" style="--gold-qr: var(--gold)">
+                ${data.qrPathMarkup}
+              </svg>
+            </g>
+          </g>
+
+          <!-- Scan to website prompt -->
+          <g transform="translate(${x + 65}, ${y + 36})" text-anchor="middle">
+            <text class="web-highlight" style="font-size: 2px;">${data.website}</text>
+            <text y="3" class="contact-label" style="font-size: 1px;">Scan to visit website</text>
+          </g>
+        `;
+      } else {
+        // Concept 2: Unified Back
+        content = `
+          <!-- Top Left Logo -->
+          <g transform="translate(${x + 10}, ${y + 10})">
+            <text class="logo-text" style="font-size: 4px;">Pause <tspan class="logo-ampersand">&amp;</tspan> Move</text>
+            <text y="3.5" class="eyebrow" style="font-size: 1.2px; letter-spacing: 0.1em;">Basel</text>
+          </g>
+
+          <!-- Left Info Column -->
+          <g transform="translate(${x + 10}, ${y + 19})">
+            <text class="card-name">${data.name}</text>
+            
+            <!-- Dual language titles -->
+            <text y="3" class="card-title" style="font-size: 1.5px;">${data.titleDE}</text>
+            <text y="5.5" class="card-title" style="font-size: 1.5px; fill: #6B6560;">${data.titleEN}</text>
+            
+            <!-- Separator -->
+            <line x1="0" y1="8.5" x2="38" y2="8.5" class="divider-line" />
+            
+            <!-- Contact info list -->
+            <text y="12" class="contact-label">Phone</text>
+            <text x="9" y="12" class="contact-val">${data.phone}</text>
+
+            <text y="16" class="contact-label">Email</text>
+            <text x="9" y="16" class="contact-val" style="font-size: 1.7px;">${data.email}</text>
+
+            <text y="20.5" class="contact-label">Web</text>
+            <text x="9" y="20.5" class="contact-val" style="font-weight: 700; fill: #C9A96E; font-size: 1.8px;">${data.website}</text>
+
+            <text y="25" class="contact-label">Location</text>
+            <text x="9" y="25" class="contact-val" style="font-size: 1.4px;">${data.addressDetail}</text>
+            <text x="9" y="28.5" class="contact-val" style="font-size: 1.4px; fill: #6B6560;">${data.address}</text>
+          </g>
+
+          <!-- Right Column: QR Code Container -->
+          <g transform="translate(${x + 55}, ${y + 12})">
+            <rect width="20" height="20" rx="1.5" fill="#161410" stroke="rgba(240, 237, 232, 0.04)" stroke-width="0.5" />
+            
+            <g transform="scale(0.8) translate(2.5, 2.5)">
+              <svg width="20" height="20" viewBox="${data.qrViewBox}" style="--gold-qr: var(--gold)">
+                ${data.qrPathMarkup}
+              </svg>
+            </g>
+          </g>
+
+          <!-- Dual Language Prompt under QR code -->
+          <g transform="translate(${x + 65}, ${y + 36})" text-anchor="middle">
+            <text class="web-highlight" style="font-size: 2px;">${data.website}</text>
+            <text y="3" class="contact-label" style="font-size: 1px;">Visit Site / Webseite besuchen</text>
+            <text y="5" class="contact-label" style="font-size: 0.8px; fill: #6B6560;">Scan for info &amp; booking</text>
+          </g>
+        `;
+      }
+
+      return `${frameStart}${backgroundRect}${content}${trimLine}${safeLine}</svg>`;
+    }
+
+    // Function to trigger SVG file download
+    function exportSvg(side) {
+      const containerId = side === 'front' ? 'frontSvgContainer' : 'backSvgContainer';
+      const container = document.getElementById(containerId);
+      if (!container) return;
+
+      // Extract the SVG content
+      const svgEl = container.querySelector('svg');
+      if (!svgEl) return;
+
+      // Clean up helper guides if they are visible
+      const clonedSvg = svgEl.cloneNode(true);
+      const trimBorder = clonedSvg.querySelector('.trim-border');
+      const safeBorder = clonedSvg.querySelector('.safe-border');
+      if (trimBorder) trimBorder.remove();
+      if (safeBorder) safeBorder.remove();
+
+      // Serialize SVG
+      const serializer = new XMLSerializer();
+      let source = serializer.serializeToString(clonedSvg);
+
+      // Add name space if it's missing
+      if(!source.match(/^<svg[^>]+xmlns="http:\/\/www\.w3\.org\/2000\/svg"/)){
+        source = source.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"');
+      }
+      
+      // Add XML declaration
+      source = '<?xml version="1.0" standalone="no"?>\r\n' + source;
+
+      // Create blob and download link
+      const url = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(source);
+      const downloadLink = document.createElement("a");
+      downloadLink.href = url;
+      
+      const fileName = `pause_and_move_card_${side}_concept${currentConcept}.svg`;
+      downloadLink.download = fileName;
+      
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    }
+
+    // Initialize Card Preview on Load
+    window.addEventListener('load', () => {
+      switchConcept(1);
+    });
+  </script>
+</body>
+</html>

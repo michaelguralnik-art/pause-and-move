@@ -108,11 +108,34 @@ document.querySelectorAll('.nav-links a')[0].classList.add('active');
 // ── Multilingual State & Fetching ──
 let siteData = null;
 let siteBlogData = null;
-let currentLang = localStorage.getItem('lang') || 'en';
-let currentCategory = 'all';
 
-const contentFetchUrl = window.location.protocol === 'file:' ? 'content.json' : 'content.json?cb=' + new Date().getTime();
-const blogFetchUrl = window.location.protocol === 'file:' ? 'blog.json' : 'blog.json?cb=' + new Date().getTime();
+let currentLang = localStorage.getItem('lang') || 'en';
+const isGermanPage = document.documentElement.lang === 'de' || window.location.pathname.includes('/de/');
+if (isGermanPage) {
+  currentLang = 'de';
+  localStorage.setItem('lang', 'de');
+}
+
+let currentCategory = 'all';
+const relativeRoot = window.location.pathname.includes('/de/') ? '../' : '';
+
+const isFileProtocol = window.location.protocol === 'file:';
+let rootPath = '';
+if (isFileProtocol) {
+  const path = window.location.pathname;
+  if (path.includes('/journal/') || path.includes('\\journal\\')) {
+    rootPath = '../../';
+  } else if (path.includes('/de/') || path.includes('\\de\\')) {
+    rootPath = '../';
+  } else {
+    rootPath = './';
+  }
+} else {
+  rootPath = '/';
+}
+
+const contentFetchUrl = rootPath + 'content.json' + (isFileProtocol ? '' : '?cb=' + new Date().getTime());
+const blogFetchUrl = rootPath + 'blog.json' + (isFileProtocol ? '' : '?cb=' + new Date().getTime());
 
 Promise.all([
   fetch(contentFetchUrl).then(response => response.json()),
@@ -225,6 +248,21 @@ window.addEventListener('popstate', (event) => {
 function toggleLanguage() {
   currentLang = currentLang === 'en' ? 'de' : 'en';
   localStorage.setItem('lang', currentLang);
+  
+  // Check if we are on one of the homepages (root / index.html or /de/index.html)
+  const pathname = window.location.pathname;
+  const isHomepage = pathname === '/' || pathname.endsWith('/index.html') || pathname.endsWith('/de/') || pathname.endsWith('/de/index.html');
+  if (isHomepage) {
+    const hash = window.location.hash || '';
+    if (currentLang === 'de') {
+      const root = pathname.includes('/de/') ? '' : 'de/';
+      window.location.href = root + 'index.html' + hash;
+    } else {
+      const root = pathname.includes('/de/') ? '../' : '';
+      window.location.href = root + 'index.html' + hash;
+    }
+    return;
+  }
   
   // Opacity fade transition
   document.body.style.opacity = 0;
@@ -673,18 +711,18 @@ function renderBlogContent(lang) {
       featuredContainer.style.display = 'grid';
       const featuredArticle = articles[0];
       featuredContainer.innerHTML = `
-        <a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" class="blog-featured-img" style="display:block;">
+        <a href="${relativeRoot}journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" class="blog-featured-img" style="display:block;">
           <img src="${featuredArticle.image}" alt="${featuredArticle.title}" loading="lazy"/>
         </a>
         <div class="blog-featured-body">
           <span class="blog-featured-label">${lang === 'en' ? 'Featured Post' : 'Hervorgehobener Beitrag'}</span>
-          <h2 style="font-style:italic;"><a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" style="color: inherit; text-decoration: none;">${featuredArticle.title}</a></h2>
+          <h2 style="font-style:italic;"><a href="${relativeRoot}journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" style="color: inherit; text-decoration: none;">${featuredArticle.title}</a></h2>
           <p>${featuredArticle.abstract}</p>
           <div class="blog-featured-meta" style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--muted); margin-bottom: 24px;">
             <span>${lang === 'en' ? 'By' : 'Von'} ${featuredArticle.author || 'Michael Guralnik'} &middot; ${featuredArticle.date}</span>
             <span style="font-weight: 600; text-transform: uppercase; color: var(--gold); letter-spacing: 0.08em; font-size: 11px;">${featuredArticle.readTime}</span>
           </div>
-          <a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" class="btn-text" style="text-decoration: none;">
+          <a href="${relativeRoot}journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" class="btn-text" style="text-decoration: none;">
             ${lang === 'en' ? 'Read article' : 'Artikel lesen'} &rarr;
           </a>
         </div>
@@ -698,7 +736,7 @@ function renderBlogContent(lang) {
         gridContainer.innerHTML = gridArticles.map((article, idx) => {
           const categoryName = categories[article.categoryId] || article.categoryId;
           return `
-            <a href="journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
+            <a href="${relativeRoot}journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
               <div class="blog-thumb">
                 <img src="${article.image}" alt="${article.title}" loading="lazy"/>
               </div>
@@ -733,7 +771,7 @@ function renderBlogContent(lang) {
         gridContainer.innerHTML = filteredArticles.map((article, idx) => {
           const categoryName = categories[article.categoryId] || article.categoryId;
           return `
-            <a href="journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
+            <a href="${relativeRoot}journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
               <div class="blog-thumb">
                 <img src="${article.image}" alt="${article.title}" loading="lazy"/>
               </div>
@@ -870,7 +908,7 @@ function showArticle(articleId, pushToHistory = true) {
     const recentList = otherArticles.length > 0 ? otherArticles.slice(0, 3) : publishedArticles.slice(0, 3);
     recentContainer.innerHTML = recentList.map(rec => {
       return `
-        <a href="journal/${currentLang}/${rec.id}.html" onclick="showArticle('${rec.id}'); return false;" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
+        <a href="${relativeRoot}journal/${currentLang}/${rec.id}.html" onclick="showArticle('${rec.id}'); return false;" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
           <div class="sidebar-recent-thumb">
             <img src="${rec.image}" alt="${rec.title}" loading="lazy"/>
           </div>

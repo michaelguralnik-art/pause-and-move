@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="de">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,7 +7,7 @@
 <meta name="description" content="Premium massage therapy and manual bodywork in the heart of Basel (Shiatsu, Tuina, Classic Massage, Connected Movement). Recognized by Swiss supplementary insurances (ASCA/EGK)." />
 <meta name="keywords" content="Michael Guralnik, Massage Basel, Shiatsu Basel, Tuina Basel, Bodywork Basel, manual therapy Basel, expat wellness Basel, Physiopunkt Basel, ASCA, EGK" />
 <meta name="author" content="Michael Guralnik" />
-<link rel="canonical" href="https://pauseandmove.ch/" />
+<link rel="canonical" href="https://pauseandmove.ch/de/" />
 <link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
 <link rel="alternate" hreflang="de" href="https://pauseandmove.ch/" />
 <link rel="alternate" hreflang="x-default" href="https://pauseandmove.ch/" />
@@ -16,7 +16,7 @@
 <meta property="og:title" content="Pause & Move — Professional Massage & Bodywork in Basel" />
 <meta property="og:description" content="Premium massage therapy and manual bodywork in the heart of Basel (Shiatsu, Tuina, Classic Massage, Connected Movement). Recognized by Swiss supplementary insurances (ASCA/EGK)." />
 <meta property="og:image" content="https://pauseandmove.ch/assets/wellness_band.png" />
-<meta property="og:url" content="https://pauseandmove.ch/" />
+<meta property="og:url" content="https://pauseandmove.ch/de/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Pause & Move Basel" />
 
@@ -73,27 +73,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="index.css?v=1.4"/>
-<link rel="icon" type="image/png" href="favicon.png?v=3"/>
+<link rel="stylesheet" href="../index.css?v=1.4"/>
+<link rel="icon" type="image/png" href="../favicon.png?v=3"/>
 </head>
 <body>
 
 <!-- NAV -->
 <nav class="nav" id="main-nav">
   <div class="nav-inner">
-    <div class="nav-logo" onclick="showSection('home')" role="link" tabindex="0" data-copy="nav.logo"><img src="assets/logo.png" alt="Pause &amp; Move" class="logo-img"></div>
+    <div class="nav-logo" onclick="showSection('home')" role="link" tabindex="0" data-copy="nav.logo"><img src="../assets/logo.png" alt="Pause &amp; Move" class="logo-img"></div>
     <ul class="nav-links">
       <li><a href="#" onclick="showSection('home');return false;" data-copy="nav.links.home">Home</a></li>
-      <li><a href="#" onclick="showSection('about');return false;" data-copy="nav.links.about">About</a></li>
-      <li><a href="#" onclick="showSection('services');return false;" data-copy="nav.links.services">Services</a></li>
-      <li><a href="#" onclick="showSection('modalities');return false;" data-copy="nav.links.modalities">Modalities</a></li>
+      <li><a href="#" onclick="showSection('about');return false;" data-copy="nav.links.about">Praxis</a></li>
+      <li><a href="#" onclick="showSection('services');return false;" data-copy="nav.links.services">Tarife</a></li>
+      <li><a href="#" onclick="showSection('modalities');return false;" data-copy="nav.links.modalities">Therapien</a></li>
       <li><a href="#" onclick="clickJournalLink();return false;" data-copy="nav.links.blog">Journal</a></li>
       <li><a href="#" onclick="showSection('faq');return false;" data-copy="nav.links.faq">FAQ</a></li>
-      <li><a href="#" onclick="showSection('contact');return false;" data-copy="nav.links.contact">Contact</a></li>
+      <li><a href="#" onclick="showSection('contact');return false;" data-copy="nav.links.contact">Kontakt</a></li>
     </ul>
     <div style="display:flex; align-items:center; gap:20px;">
-      <button class="nav-lang-toggle" onclick="toggleLanguage()">DE</button>
-      <button class="nav-cta" onclick="openModal()" data-copy="nav.cta">Book Now</button>
+      <button class="nav-lang-toggle" onclick="toggleLanguage()">EN</button>
+      <button class="nav-cta" onclick="openModal()" data-copy="nav.cta">Jetzt buchen</button>
     </div>
     <button class="nav-hamburger" onclick="toggleDrawer()" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -104,49 +104,49 @@
 <!-- MOBILE DRAWER -->
 <div class="nav-drawer" id="nav-drawer">
   <a href="#" onclick="showSection('home');closeDrawer();return false;" data-copy="nav.links.home">Home</a>
-  <a href="#" onclick="showSection('about');closeDrawer();return false;" data-copy="nav.links.about">About</a>
-  <a href="#" onclick="showSection('services');closeDrawer();return false;" data-copy="nav.links.services">Services</a>
-  <a href="#" onclick="showSection('modalities');closeDrawer();return false;" data-copy="nav.links.modalities">Modalities</a>
+  <a href="#" onclick="showSection('about');closeDrawer();return false;" data-copy="nav.links.about">Praxis</a>
+  <a href="#" onclick="showSection('services');closeDrawer();return false;" data-copy="nav.links.services">Tarife</a>
+  <a href="#" onclick="showSection('modalities');closeDrawer();return false;" data-copy="nav.links.modalities">Therapien</a>
   <a href="#" onclick="clickJournalLink();closeDrawer();return false;" data-copy="nav.links.blog">Journal</a>
   <a href="#" onclick="showSection('faq');closeDrawer();return false;" data-copy="nav.links.faq">FAQ</a>
-  <a href="#" onclick="showSection('contact');closeDrawer();return false;" data-copy="nav.links.contact">Contact</a>
-  <a href="#" onclick="closeDrawer();toggleLanguage();return false;" class="nav-lang-toggle" style="border-bottom:1px solid var(--border); padding:12px 0;">DE</a>
-  <a href="#" class="drawer-cta" onclick="closeDrawer();openModal();return false;" data-copy="nav.contact_cta">Book a Session</a>
+  <a href="#" onclick="showSection('contact');closeDrawer();return false;" data-copy="nav.links.contact">Kontakt</a>
+  <a href="#" onclick="closeDrawer();toggleLanguage();return false;" class="nav-lang-toggle" style="border-bottom:1px solid var(--border); padding:12px 0;">EN</a>
+  <a href="#" class="drawer-cta" onclick="closeDrawer();openModal();return false;" data-copy="nav.contact_cta">Termin buchen</a>
 </div>
 
 <!-- FLOAT BOOK -->
-<button class="float-book" onclick="openModal()" data-copy="nav.contact_cta">Book a Session</button>
+<button class="float-book" onclick="openModal()" data-copy="nav.contact_cta">Termin buchen</button>
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
-    <p class="modal-eyebrow" data-copy="booking.modal.eyebrow">Reserve Your Session</p>
-    <h2 data-copy="booking.modal.title">Book Now</h2>
-    <p class="modal-sub" data-copy="booking.modal.sub" data-html="true">We'll confirm your appointment within 24 hours. Or, book directly via <a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline; font-weight: 500;">WhatsApp Business (Preferred)</a></p>
+    <p class="modal-eyebrow" data-copy="booking.modal.eyebrow">Reservieren Sie Ihre Behandlung</p>
+    <h2 data-copy="booking.modal.title">Jetzt buchen</h2>
+    <p class="modal-sub" data-copy="booking.modal.sub" data-html="true">Wir bestätigen Ihren Termin innerhalb von 24 Stunden. Oder buchen Sie direkt über <a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline; font-weight: 500;">WhatsApp Business (Bevorzugt)</a></p>
     <form id="booking-form" onsubmit="submitBookingForm(event); return false;">
       <div class="modal-row">
-        <div class="modal-field"><label data-copy="booking.modal.first_name">First name</label><input type="text" id="bm-first-name" placeholder="" required/></div>
-        <div class="modal-field"><label data-copy="booking.modal.last_name">Last name</label><input type="text" id="bm-last-name" placeholder="" required/></div>
+        <div class="modal-field"><label data-copy="booking.modal.first_name">Vorname</label><input type="text" id="bm-first-name" placeholder="" required/></div>
+        <div class="modal-field"><label data-copy="booking.modal.last_name">Nachname</label><input type="text" id="bm-last-name" placeholder="" required/></div>
       </div>
-      <div class="modal-field"><label data-copy="booking.modal.email">Email</label><input type="email" id="bm-email" placeholder="" required/></div>
+      <div class="modal-field"><label data-copy="booking.modal.email">E-Mail</label><input type="email" id="bm-email" placeholder="" required/></div>
       <div class="modal-field">
-        <label data-copy="booking.modal.therapy">Therapy</label>
+        <label data-copy="booking.modal.therapy">Therapiemethode</label>
         <select id="bm-therapy" required>
-          <option value="" data-copy="booking.modal.please_choose">— Please choose —</option>
-          <option data-copy="booking.modal.therapy_options.0">Single session — 60 min (CHF 120)</option>
-          <option data-copy="booking.modal.therapy_options.1">Single session — 90 min (CHF 160)</option>
-          <option data-copy="booking.modal.therapy_options.2">Pause package — 4 sessions</option>
-          <option data-copy="booking.modal.therapy_options.3">Pause package — 8 sessions</option>
-          <option data-copy="booking.modal.therapy_options.4">Move package — 4 sessions</option>
-          <option data-copy="booking.modal.therapy_options.5">Move package — 8 sessions</option>
-          <option data-copy="booking.modal.therapy_options.6">Move — The Long Game (first session)</option>
-          <option data-copy="booking.modal.therapy_options.7">Qigong session</option>
-          <option data-copy="booking.modal.therapy_options.8">Not sure — help me choose</option>
+          <option value="" data-copy="booking.modal.please_choose">— Bitte wählen —</option>
+          <option data-copy="booking.modal.therapy_options.0">Einzelsitzung — 60 Min. (CHF 120)</option>
+          <option data-copy="booking.modal.therapy_options.1">Einzelsitzung — 90 Min. (CHF 160)</option>
+          <option data-copy="booking.modal.therapy_options.2">Pause-Paket — 4 Behandlungen</option>
+          <option data-copy="booking.modal.therapy_options.3">Pause-Paket — 8 Behandlungen</option>
+          <option data-copy="booking.modal.therapy_options.4">Move-Paket — 4 Behandlungen</option>
+          <option data-copy="booking.modal.therapy_options.5">Move-Paket — 8 Behandlungen</option>
+          <option data-copy="booking.modal.therapy_options.6">Move — The Long Game (Erstkonsultation)</option>
+          <option data-copy="booking.modal.therapy_options.7">Qigong-Einzelsitzung</option>
+          <option data-copy="booking.modal.therapy_options.8">Noch unsicher — bitte um Beratung</option>
         </select>
       </div>
-      <div class="modal-field"><label data-copy="booking.modal.notes">Notes</label><textarea id="bm-notes" data-copy="booking.modal.notes_placeholder" placeholder="Injuries, preferences, questions…"></textarea></div>
-      <button type="submit" class="modal-submit" id="bm-submit" data-copy="booking.modal.submit">Send Request</button>
+      <div class="modal-field"><label data-copy="booking.modal.notes">Anmerkungen</label><textarea id="bm-notes" data-copy="booking.modal.notes_placeholder" placeholder="Verletzungen, Vorlieben, Fragen…"></textarea></div>
+      <button type="submit" class="modal-submit" id="bm-submit" data-copy="booking.modal.submit">Terminanfrage senden</button>
     </form>
   </div>
 </div>
@@ -166,15 +166,12 @@
       />
     </div>
     <div class="hero-content">
-      <p class="hero-eyebrow" data-copy="home.hero.eyebrow">Massage & Bodywork · Basel</p>
-      <h1 class="hero-headline" data-copy="home.hero.title">
-        A place to <em>pause,</em><br>
-        and truly <span class="outline">move.</span>
-      </h1>
-      <p class="hero-sub" data-copy="home.hero.sub">Professional massage and bodywork for body, mind and spirit — in the heart of Basel, for the international community that calls it home.</p>
+      <p class="hero-eyebrow" data-copy="home.hero.eyebrow">Massage & Körperarbeit · Basel</p>
+      <h1 class="hero-headline" data-copy="home.hero.title">Ein Ort zum <em>Innehalten</em><br>und echtem <span class="outline">Bewegen.</span></h1>
+      <p class="hero-sub" data-copy="home.hero.sub">Professionelle Massage und Körperarbeit für Körper, Geist und Seele — im Herzen von Basel, für die internationale Community, die hier ihr Zuhause gefunden hat.</p>
       <div class="hero-actions">
-        <button class="btn-gold" onclick="openModal()" data-copy="nav.contact_cta">Book a session</button>
-        <button class="btn-outline" onclick="showSection('modalities')" data-copy="home.hero.explore_cta">Explore therapies</button>
+        <button class="btn-gold" onclick="openModal()" data-copy="nav.contact_cta">Termin buchen</button>
+        <button class="btn-outline" onclick="showSection('modalities')" data-copy="home.hero.explore_cta">Therapien entdecken</button>
       </div>
     </div>
     <div class="hero-scroll">
@@ -187,10 +184,10 @@
   <div class="modalities-strip-section">
     <div class="strip-header reveal">
       <div>
-        <p class="eyebrow" style="margin-bottom:12px" data-copy="home.modalities_strip.eyebrow">Our modalities</p>
-        <h2 class="display-lg" style="color:var(--white)" data-copy="home.modalities_strip.title">Five paths to <em>feeling well</em></h2>
+        <p class="eyebrow" style="margin-bottom:12px" data-copy="home.modalities_strip.eyebrow">Unsere Methoden</p>
+        <h2 class="display-lg" style="color:var(--white)" data-copy="home.modalities_strip.title">Fünf Wege zum <em>Wohlbefinden</em></h2>
       </div>
-      <button class="btn-text" onclick="showSection('modalities')" data-copy="home.modalities_strip.cta">View all therapies</button>
+      <button class="btn-text" onclick="showSection('modalities')" data-copy="home.modalities_strip.cta">Alle Therapien ansehen</button>
     </div>
     <div class="modalities-scroll" id="mod-scroll">
       <!-- Generated dynamically in index.js -->
@@ -201,32 +198,32 @@
   <div class="philosophy-section">
     <div class="philosophy-left reveal-left">
       <div class="philosophy-quote-mark">"</div>
-      <blockquote data-copy="home.philosophy.quote">"A good treatment is one that makes the client stronger — and strength is achieved through experience and awareness."</blockquote>
-      <cite data-copy="home.philosophy.cite">— The Pause & Move approach</cite>
+      <blockquote data-copy="home.philosophy.quote">Eine gute Behandlung stärkt den Klienten — und Stärke entsteht durch Erfahrung und Bewusstsein.</blockquote>
+      <cite data-copy="home.philosophy.cite">— Der Pause & Move Ansatz</cite>
     </div>
     <div class="philosophy-right reveal-right">
-      <p data-copy="home.philosophy.body1">Besides relieving you of what brought you here, the goal is to give you something that will make you <strong>need these sessions less in the future</strong> — not more. That means giving you experience, not just a service.</p>
-      <p data-copy="home.philosophy.body2">There are many ways to get healthier, stronger and happier — from the food we eat to our daily habits to how we treat others. <strong>What happens in the session ripples outward.</strong> When the experience is positive, those changes tend to cascade into the rest of life.</p>
+      <p data-copy="home.philosophy.body1">Über die Linderung dessen hinaus, was Sie hierher geführt hat, ist es das Ziel, Ihnen etwas mitzugeben, das Sie diese Sitzungen in Zukunft <strong>seltener brauchen lässt</strong> — nicht öfter. Das bedeutet: echte Erfahrung vermitteln, nicht nur eine Dienstleistung erbringen.</p>
+      <p data-copy="home.philosophy.body2">Es gibt viele Wege, gesünder, stärker und zufriedener zu werden — von der Ernährung über alltägliche Gewohnheiten bis hin zum Umgang mit Mitmenschen. <strong>Was in einer Sitzung geschieht, strahlt nach aussen aus.</strong> Ist die Erfahrung positiv, setzt sich diese kleinen Veränderungen oft im ganzen Leben fort.</p>
       <div class="pillars">
         <div class="pillar">
           <span class="pillar-num">I</span>
           <div class="pillar-text">
-            <h4 data-copy="home.philosophy.pillars.0.title">Experience over service</h4>
-            <p data-copy="home.philosophy.pillars.0.desc">The aim is to pass on knowledge, build awareness, and leave you with something tangible beyond the hour.</p>
+            <h4 data-copy="home.philosophy.pillars.0.title">Erfahrung vor Dienstleistung</h4>
+            <p data-copy="home.philosophy.pillars.0.desc">Das Ziel ist, Wissen weiterzugeben, Achtsamkeit aufzubauen und Ihnen etwas Greifbares mitzugeben, das weit über die Behandlungsstunde hinaus bleibt.</p>
           </div>
         </div>
         <div class="pillar">
           <span class="pillar-num">II</span>
           <div class="pillar-text">
-            <h4 data-copy="home.philosophy.pillars.1.title">Honesty about limits</h4>
-            <p data-copy="home.philosophy.pillars.1.desc">Where this practice isn't the right fit, you'll be referred to someone whose system is better equipped for the job.</p>
+            <h4 data-copy="home.philosophy.pillars.1.title">Ehrlichkeit über Grenzen</h4>
+            <p data-copy="home.philosophy.pillars.1.desc">Sollte diese Praxis nicht die richtige für Sie sein, empfehle ich Sie offen an jemanden weiter, der besser helfen kann.</p>
           </div>
         </div>
         <div class="pillar">
           <span class="pillar-num">III</span>
           <div class="pillar-text">
-            <h4 data-copy="home.philosophy.pillars.2.title">The whole person</h4>
-            <p data-copy="home.philosophy.pillars.2.desc">Body, mind, spirit. Not as a slogan — as a genuine framework for how every session is approached.</p>
+            <h4 data-copy="home.philosophy.pillars.2.title">Der ganze Mensch</h4>
+            <p data-copy="home.philosophy.pillars.2.desc">Körper, Geist und Seele. Kein Slogan, sondern ein echtes Fundament dafür, wie jede einzelne Behandung gestaltet wird.</p>
           </div>
         </div>
       </div>
@@ -240,22 +237,22 @@
   <!-- FULL-BLEED BAND -->
   <div class="photo-band reveal">
     <img
-      src="assets/wellness_band.png"
+      src="../assets/wellness_band.png"
       alt="Wellness and healthy living"
     />
     <div class="photo-band-overlay">
       <div class="photo-band-text">
-        <h2 data-copy="home.band.title">Welcoming Basel's<br><em>international community</em></h2>
-        <p data-copy="home.band.sub">A practice that knows what it's like to be new somewhere — and wants to help you feel at home in your body first.</p>
-        <button class="btn-gold" onclick="openModal()" data-copy="nav.contact_cta">Book your first session</button>
+        <h2 data-copy="home.band.title">Willkommen in Basels<br><em>internationaler Community</em></h2>
+        <p data-copy="home.band.sub">Eine Praxis, die weiss, wie es ist, neu an einem Ort zu sein — und Ihnen helfen möchte, sich zuerst im eigenen Körper zu Hause zu fühlen.</p>
+        <button class="btn-gold" onclick="openModal()" data-copy="nav.contact_cta">Termin buchen</button>
       </div>
     </div>
   </div>
 
   <!-- TESTIMONIAL -->
   <div class="testimonial-section reveal">
-    <blockquote data-copy="home.testimonial.quote">I moved to Basel two years ago and finding Pause & Move was the best thing I did for myself. I finally feel at home — in my body and in this city.</blockquote>
-    <cite data-copy="home.testimonial.cite">Sarah K., expat from London</cite>
+    <blockquote data-copy="home.testimonial.quote">Ich bin vor zwei Jahren nach Basel gezogen und Pause & Move zu finden, war das Beste, was ich für mich tun konnte. Ich fühle mich endlich angekommen — in meinem Körper und in dieser Stadt.</blockquote>
+    <cite data-copy="home.testimonial.cite">Sarah K., Expat aus London</cite>
   </div>
 
 </section>
@@ -265,19 +262,19 @@
 
   <div class="about-hero">
     <div class="about-hero-img">
-      <img src="about-hero.jpg" alt="Stacked zen stones and a yellow flower"/>
+      <img src="../about-hero.jpg" alt="Stacked zen stones and a yellow flower"/>
     </div>
     <div class="about-hero-content">
-      <p class="eyebrow" style="margin-bottom:16px" data-copy="about.eyebrow">About Pause & Move</p>
-      <h2 class="display-xl" data-copy="about.hero_title" data-html="true">The body, the mind,<br>the <em>whole person.</em></h2>
+      <p class="eyebrow" style="margin-bottom:16px" data-copy="about.eyebrow">Über Pause & Move</p>
+      <h2 class="display-xl" data-copy="about.hero_title" data-html="true">Der Körper, der Geist,<br>der <em>ganze Mensch.</em></h2>
       <p class="body-lg" style="max-width:480px;margin-top:16px" data-copy="about.hero_description">A practice built on genuine curiosity about how we move, how we feel, and how we can help each other get better.</p>
     </div>
   </div>
 
   <div style="max-width:var(--max);margin:0 auto;padding:0 40px;">
     <div class="sub-nav" role="tablist">
-      <button class="sub-nav-btn active" role="tab" onclick="showSub('about','bio',this)" data-copy="about.sub_nav.bio">Biography</button>
-      <button class="sub-nav-btn" role="tab" onclick="showSub('about','philosophy',this)" data-copy="about.sub_nav.pillars">Philosophy</button>
+      <button class="sub-nav-btn active" role="tab" onclick="showSub('about','bio',this)" data-copy="about.sub_nav.bio">Biografie</button>
+      <button class="sub-nav-btn" role="tab" onclick="showSub('about','philosophy',this)" data-copy="about.sub_nav.pillars">Philosophie</button>
     </div>
   </div>
 
@@ -285,18 +282,18 @@
   <div id="about-bio" class="sub-pane active">
     <div class="bio-layout">
       <div class="bio-photo-wrap reveal-left">
-        <img src="michael-guralnik.jpg" alt="Michael Guralnik"/>
+        <img src="../michael-guralnik.jpg" alt="Michael Guralnik"/>
       </div>
       <div class="bio-text reveal-right">
-        <p class="eyebrow" data-copy="about.bio.eyebrow">Your therapist</p>
-        <h2 class="display-md" data-copy="about.bio.title">Balancing tradition &amp; modern practice</h2>
+        <p class="eyebrow" data-copy="about.bio.eyebrow">Ihr Therapeut</p>
+        <h2 class="display-md" data-copy="about.bio.title">Tradition und<br><em>moderne Praxis</em> im Einklang</h2>
         <div id="about-bio-paragraphs">
           <!-- Rendered dynamically from about.bio.paragraphs in index.js -->
         </div>
         <div class="bio-tags" id="about-bio-tags">
           <!-- Rendered dynamically from about.bio.tags in index.js -->
         </div>
-        <div style="margin-top:36px"><button class="btn-gold" onclick="openModal()" data-copy="nav.contact_cta">Book a session</button></div>
+        <div style="margin-top:36px"><button class="btn-gold" onclick="openModal()" data-copy="nav.contact_cta">Termin buchen</button></div>
       </div>
     </div>
   </div>
@@ -304,18 +301,18 @@
   <!-- PHILOSOPHY -->
   <div id="about-philosophy" class="sub-pane">
     <div class="pillar-section">
-      <p class="eyebrow" style="margin-bottom:12px" data-copy="about.pillars.title">The philosophy</p>
+      <p class="eyebrow" style="margin-bottom:12px" data-copy="about.pillars.title">Die Philosophie</p>
       <h2 class="display-md" style="margin-bottom:40px">Experience, not just <em>a service.</em></h2>
-      <p class="body-md reveal" style="max-width:680px;margin-bottom:56px" data-copy="about.philosophy.description">Besides relieving people of the problem that originally brought them into the clinic, the goal is to give them something that will make them need these services less in the future. A good treatment is one that makes the client stronger — and strength is achieved through experience and awareness.</p>
+      <p class="body-md reveal" style="max-width:680px;margin-bottom:56px" data-copy="about.philosophy.description">Neben der Linderung der Beschwerden, die Sie in die Praxis geführt haben, ist es das Ziel, Ihnen etwas mitzugeben, das Sie diese Sitzungen in Zukunft seltener brauchen lässt. Eine gute Behandlung stärkt den Klienten — und Stärke entsteht durch Erfahrung und Bewusstsein.</p>
       <div class="pillar-grid reveal" id="about-pillars">
         <!-- Rendered dynamically from about.pillars.items in index.js -->
       </div>
       <div class="big-quote reveal">
-        <blockquote data-copy="about.quote_section.quote">"Taking care of oneself takes part in all avenues of life. What happens in the clinic is just one thread — but when it's a good one, it weaves into everything else."</blockquote>
-        <cite data-copy="about.quote_section.cite">— Pause &amp; Move</cite>
+        <blockquote data-copy="about.quote_section.quote">Selbstfürsorge findet in allen Lebensbereichen statt. Was in der Praxis geschieht, ist nur ein roter Faden — aber wenn es ein guter ist, webt er sich in alles andere ein.</blockquote>
+        <cite data-copy="about.quote_section.cite">Pause & Move</cite>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:80px;">
-        <button class="btn-gold" onclick="openModal()" data-copy="nav.contact_cta">Book a session</button>
+        <button class="btn-gold" onclick="openModal()" data-copy="nav.contact_cta">Termin buchen</button>
         <button class="btn-outline" onclick="showSection('modalities')">Explore modalities</button>
       </div>
     </div>
@@ -328,12 +325,12 @@
 
   <div class="services-hero">
     <div class="services-hero-img">
-      <img src="services-hero.jpg" alt="Massage therapy hands working on a shoulder"/>
+      <img src="../services-hero.jpg" alt="Massage therapy hands working on a shoulder"/>
     </div>
     <div class="services-hero-content">
-      <p class="eyebrow" style="margin-bottom:16px" data-copy="services.intro.eyebrow">Pricing</p>
-      <h2 class="display-xl" data-copy="services.hero_title" data-html="true">Services & Rates</h2>
-      <p class="body-lg" style="max-width:480px;margin-top:16px" data-copy="services.intro.title">Clear, simple rates for your well-being</p>
+      <p class="eyebrow" style="margin-bottom:16px" data-copy="services.intro.eyebrow">Preise & Tarife</p>
+      <h2 class="display-xl" data-copy="services.hero_title" data-html="true">Eine Investition, um sich<br>wieder <em>ganz zu spüren.</em></h2>
+      <p class="body-lg" style="max-width:480px;margin-top:16px" data-copy="services.intro.title">Jede Behandlung wird individuell auf Sie abgestimmt. Wählen Sie Ihre Therapie und Dauer — und lassen Sie den Rest geschehen.</p>
     </div>
   </div>
 
@@ -341,9 +338,9 @@
   <div class="services-section">
     <div class="single-session-block">
       <div class="single-session-text">
-        <p class="eyebrow" style="margin-bottom:14px" data-copy="services.single.title">Single Session</p>
+        <p class="eyebrow" style="margin-bottom:14px" data-copy="services.single.title">Einzelsitzung</p>
         <h2 class="display-md">Every session is <em>different,</em><br>because you are.</h2>
-        <p class="body-md" style="margin-top:20px;max-width:480px" data-copy="services.single.desc">Rather than booking a specific technique, you bring what's going on — and the session is built around that. Shiatsu, classic massage, connected movement, Tuina — whatever serves you best that day. Every journey starts somewhere. A single session is complete in itself — and sometimes it's also where something longer begins.</p>
+        <p class="body-md" style="margin-top:20px;max-width:480px" data-copy="services.single.desc">Statt eine bestimmte Technik zu buchen, bringen Sie mit, was Sie gerade beschäftigt — und die Behandlung wird genau darauf abgestimmt. Shiatsu, klassische Massage, Connected Movement, Tuina — was Ihnen an diesem Tag am besten tut. Jede Reise beginnt irgendwo. Eine Einzelsitzung ist in sich vollständig — und manchmal der Beginn von etwas Längerem.</p>
         <div class="single-session-prices">
           <div class="single-price-item">
             <span class="single-price-dur">60 min</span>
@@ -355,11 +352,11 @@
             <span class="single-price-amt">CHF 160</span>
           </div>
         </div>
-        <button class="btn-gold" style="margin-top:32px" onclick="openModal()" data-copy="nav.contact_cta">Book a session</button>
+        <button class="btn-gold" style="margin-top:32px" onclick="openModal()" data-copy="nav.contact_cta">Termin buchen</button>
       </div>
       <div class="single-session-note">
         <div class="note-icon">✦</div>
-        <p data-copy="services.single.note"><strong>Insurance</strong><br><br>Classic massage sessions are recognized under EMR method 102 (Klassische Massage), ZSR no. C657965. Most Swiss supplementary insurance plans (Zusatzversicherung) reimburse part of the cost — basic insurance (Grundversicherung) doesn't cover complementary therapy at all.<br><br>How much comes back, and up to what annual limit, depends on your individual policy. A two-minute call to your insurer with the numbers above will tell you exactly. After the session you'll get a receipt with everything they need.<br><br>This applies to classic massage specifically. Shiatsu, Tuina, Connected Movement and Qigong aren't covered by my current registration — if reimbursement matters to you, let me know when you book and we'll work with massage.</p>
+        <p data-copy="services.single.note"><strong>Krankenkasse</strong><br><br>Klassische Massage ist beim EMR unter Methode 102 anerkannt, ZSR-Nr. C657965. Die meisten Schweizer Zusatzversicherungen erstatten einen Teil der Behandlungskosten — die Grundversicherung übernimmt komplementärtherapeutische Behandlungen grundsätzlich nicht.<br><br>Wie viel zurückkommt und bis zu welchem Jahresbetrag, hängt von deiner Police ab. Ein kurzer Anruf bei deiner Kasse mit den obigen Nummern schafft Klarheit. Nach der Behandlung erhältst du eine Quittung mit allen nötigen Angaben.<br><br>Das gilt für die klassische Massage. Shiatsu, Tuina, Connected Movement und Qigong sind von meiner aktuellen Registrierung nicht erfasst — wenn dir die Rückerstattung wichtig ist, sag mir das bei der Buchung, dann arbeiten wir mit Massage.</p>
       </div>
     </div>
   </div>
@@ -381,12 +378,12 @@
 
   <div class="modalities-hero">
     <div class="modalities-hero-img">
-      <img src="modalities-hero.jpg" alt="Relaxed face with soft golden light rays"/>
+      <img src="../modalities-hero.jpg" alt="Relaxed face with soft golden light rays"/>
     </div>
     <div class="modalities-hero-content">
-      <p class="eyebrow" style="margin-bottom:16px" data-copy="modalities.intro.eyebrow">Our modalities</p>
-      <h2 class="display-xl" data-copy="modalities.hero_title">Therapies & Modalities</h2>
-      <p class="body-lg" style="max-width:520px;margin-top:16px" data-copy="modalities.intro.title">A holistic toolset for physical alignment</p>
+      <p class="eyebrow" style="margin-bottom:16px" data-copy="modalities.intro.eyebrow">Unsere Arbeitsweise</p>
+      <h2 class="display-xl" data-copy="modalities.hero_title">Therapien & Methoden</h2>
+      <p class="body-lg" style="max-width:520px;margin-top:16px" data-copy="modalities.intro.title">Ein ganzheitliches System für körperliche Balance</p>
     </div>
   </div>
 
@@ -412,7 +409,7 @@
 
   <div class="blog-hero">
     <div class="blog-hero-img">
-      <img src="journal-hero.jpg" alt="Model of human spine and pelvis"/>
+      <img src="../journal-hero.jpg" alt="Model of human spine and pelvis"/>
     </div>
     <div class="blog-hero-content">
       <p class="eyebrow" style="margin-bottom:16px">The Journal</p>
@@ -504,8 +501,8 @@
 <section id="faq" class="section">
   <div class="faq-hero">
     <div class="faq-hero-content">
-      <p class="eyebrow" style="margin-bottom:16px" data-copy="faq.eyebrow">Got questions?</p>
-      <h2 class="display-xl" data-copy="faq.hero_title">Frequently<br>Asked <em>Questions.</em></h2>
+      <p class="eyebrow" style="margin-bottom:16px" data-copy="faq.eyebrow">Fragen?</p>
+      <h2 class="display-xl" data-copy="faq.hero_title">Häufig gestellte<br><em>Fragen.</em></h2>
     </div>
   </div>
 
@@ -522,23 +519,23 @@
 <section id="contact" class="section">
 
   <div style="max-width:var(--max);margin:0 auto;padding:48px 40px 0;">
-    <p class="eyebrow" style="margin-bottom:16px" data-copy="contact.form.eyebrow">Get in touch</p>
-    <h2 class="display-xl reveal" data-copy="contact.form.title">We'd love to<br><em>hear from you.</em></h2>
-    <p class="body-lg reveal" style="max-width:400px;margin-top:16px" data-copy="contact.form.description">Questions, booking requests, or just curious about which therapy is right for you — drop us a line.</p>
+    <p class="eyebrow" style="margin-bottom:16px" data-copy="contact.form.eyebrow">Kontakt</p>
+    <h2 class="display-xl reveal" data-copy="contact.form.title">Nachricht senden</h2>
+    <p class="body-lg reveal" style="max-width:400px;margin-top:16px" data-copy="contact.form.description">Fragen, Buchungsanfragen oder einfach nur neugierig, welche Therapie die richtige für Sie ist — schreiben Sie uns. Sie treten mit Michael Guralnik in Kontakt.</p>
   </div>
 
   <div class="contact-layout">
     <form class="contact-form reveal-left" id="contact-form" onsubmit="submitContactForm(event); return false;">
-      <p class="eyebrow" style="margin-bottom:14px" data-copy="contact.form.eyebrow">Send a message</p>
+      <p class="eyebrow" style="margin-bottom:14px" data-copy="contact.form.eyebrow">Kontakt</p>
       <h2>Get in touch</h2>
       <p>We reply within one working day.</p>
       <div class="cf-row">
-        <div class="cf-field"><label data-copy="contact.form.fields.first_name">First name</label><input type="text" id="cf-first-name" placeholder="" required/></div>
-        <div class="cf-field"><label data-copy="contact.form.fields.last_name">Last name</label><input type="text" id="cf-last-name" placeholder="" required/></div>
+        <div class="cf-field"><label data-copy="contact.form.fields.first_name">Vorname</label><input type="text" id="cf-first-name" placeholder="" required/></div>
+        <div class="cf-field"><label data-copy="contact.form.fields.last_name">Nachname</label><input type="text" id="cf-last-name" placeholder="" required/></div>
       </div>
-      <div class="cf-field"><label data-copy="contact.form.fields.email">Email</label><input type="email" id="cf-email" placeholder="" required/></div>
+      <div class="cf-field"><label data-copy="contact.form.fields.email">E-Mail</label><input type="email" id="cf-email" placeholder="" required/></div>
       <div class="cf-field">
-        <label data-copy="contact.form.fields.interest">I'm interested in</label>
+        <label data-copy="contact.form.fields.interest">Ich interessiere mich für</label>
         <select id="cf-interest" required>
           <option value="">— Choose a therapy —</option>
           <option>Classic Massage</option>
@@ -549,8 +546,8 @@
           <option>Not sure yet</option>
         </select>
       </div>
-      <div class="cf-field"><label data-copy="contact.form.fields.message">Message</label><textarea id="cf-message" placeholder="Tell us a little about what you're looking for…" required></textarea></div>
-      <button type="submit" class="cf-submit" id="cf-submit" data-copy="contact.form.submit">Send message</button>
+      <div class="cf-field"><label data-copy="contact.form.fields.message">Nachricht</label><textarea id="cf-message" placeholder="Tell us a little about what you're looking for…" required></textarea></div>
+      <button type="submit" class="cf-submit" id="cf-submit" data-copy="contact.form.submit">Nachricht senden</button>
     </form>
     <div class="contact-info reveal-right">
       <div class="contact-map" style="padding:0;overflow:hidden;">
@@ -560,20 +557,15 @@
           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           title="Pause & Move location — inside Physiopunkt Basel">
         </iframe>
-        <div class="contact-map-pin" data-copy="contact.info.pin">📍 Inside Physiopunkt Basel</div>
+        <div class="contact-map-pin" data-copy="contact.info.pin">In den Räumen von Physiopunkt Basel</div>
       </div>
       <div class="contact-info-block">
-        <h3 data-copy="contact.info.title">Find us</h3>
-        <div class="contact-row"><span class="contact-row-icon">📍</span><p data-copy="contact.info.address"><strong>Pause & Move</strong><br>Inside Physiopunkt Basel<br>Meret Oppenheim-Strasse 6<br>4053 Basel, Switzerland</p></div>
+        <h3 data-copy="contact.info.title">Kontakt & Standort</h3>
+        <div class="contact-row"><span class="contact-row-icon">📍</span><p data-copy="contact.info.address"><strong>Pause & Move</strong><br>Bei Physiopunkt Basel<br>Meret Oppenheim-Strasse 6<br>4053 Basel, Schweiz</p></div>
         <div class="contact-row"><span class="contact-row-icon">✉️</span><p><a href="mailto:hello@pauseandmove.ch" style="color:var(--gold)">hello@pauseandmove.ch</a></p></div>
         <div class="contact-row">
           <span class="contact-row-icon">💬</span>
-          <p id="contact-whatsapp" data-copy="contact.info.whatsapp_html" data-html="true">
-            <a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color:var(--gold); font-weight:600;">
-              WhatsApp Business
-              <span style="font-size: 10px; background: rgba(201,169,110,0.15); color: var(--gold); padding: 2px 6px; border-radius: 2px; margin-left: 8px;">Preferred</span>
-            </a>
-          </p>
+          <p id="contact-whatsapp" data-copy="contact.info.whatsapp_html" data-html="true"><a href="https://wa.me/41772776050" target="_blank" rel="noopener=" style="color:var(--gold); font-weight:600;">WhatsApp Business <span style="font-size: 10px; background: rgba(201,169,110,0.15); color: var(--gold); padding: 2px 6px; border-radius: 2px; margin-left: 8px;">Bevorzugt</span></a></p>
         </div>
         <div class="contact-row">
           <span class="contact-row-icon">📞</span>
@@ -582,7 +574,7 @@
         <div class="contact-row">
           <span class="contact-row-icon">🕐</span>
           <div>
-            <p style="margin-bottom:8px"><strong data-copy="contact.info.hours_title">Opening hours</strong></p>
+            <p style="margin-bottom:8px"><strong data-copy="contact.info.hours_title">Öffnungszeiten</strong></p>
             <div class="hours-grid">
               <span class="day">Mon – Fri</span><span class="hrs">Evenings</span>
               <span class="day">Saturday</span><span class="hrs">Available</span>
@@ -602,23 +594,23 @@
 <footer class="footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="footer-logo" data-copy="nav.logo"><img src="assets/logo.png" alt="Pause &amp; Move" class="logo-img"></div>
-      <p data-copy="footer.brand_desc" data-html="true">Massage and bodywork in Basel for people who want to feel genuinely well — in body, mind, and spirit.</p>
+      <div class="footer-logo" data-copy="nav.logo"><img src="../assets/logo.png" alt="Pause &amp; Move" class="logo-img"></div>
+      <p data-copy="footer.brand_desc" data-html="true">Massage und Körperarbeit in Basel für Menschen, die sich in Körper, Geist und Seele rundum wohlfühlen möchten.<br><strong style="color:var(--white);">Pause & Move ist die Praxis von Michael Guralnik, Massage-Therapeut in Basel.</strong><br><br>EMR-Methode 102 (Klassische Massage) · ZSR-Nr. C657965</p>
       <div class="footer-social">
         <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
         <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </div>
     </div>
-    <div class="footer-col"><h4 data-copy="footer.cols.navigate">Navigate</h4><ul><li><a href="#" onclick="showSection('home');return false;">Home</a></li><li><a href="#" onclick="showSection('about');return false;">About</a></li><li><a href="#" onclick="showSection('services');return false;">Services</a></li><li><a href="#" onclick="showSection('modalities');return false;">Modalities</a></li><li><a href="#" onclick="clickJournalLink();return false;">Journal</a></li><li><a href="#" onclick="showSection('faq');return false;" data-copy="nav.links.faq">FAQ</a></li><li><a href="#" onclick="showSection('contact');return false;">Contact</a></li></ul></div>
-    <div class="footer-col"><h4 data-copy="footer.cols.therapies">Therapies</h4><ul><li><a href="#" onclick="showSection('modalities');showMod('classic');return false;">Classic Massage</a></li><li><a href="#" onclick="showSection('modalities');showMod('shiatsu');return false;">Shiatsu</a></li><li><a href="#" onclick="showSection('modalities');showMod('connected');return false;">Connected Movement</a></li><li><a href="#" onclick="showSection('modalities');showMod('tuina');return false;">Tuina</a></li><li><a href="#" onclick="showSection('modalities');showMod('qigong');return false;">Qigong</a></li></ul></div>
-    <div class="footer-col"><h4 data-copy="footer.cols.contact">Contact</h4><ul><li><a href="#" onclick="showSection('contact');return false;" data-copy="contact.info.pin">Inside Physiopunkt Basel</a></li><li><a href="#">Meret Oppenheim-Strasse 6, Basel</a></li><li><a href="mailto:hello@pauseandmove.ch">hello@pauseandmove.ch</a></li><li><a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color:var(--gold); font-weight:500;" data-copy="contact.info.whatsapp_footer">WhatsApp Business (Preferred)</a></li><li><a href="tel:+41772776050" data-copy="contact.info.phone">+41 77 277 60 50</a></li></ul><div style="margin-top:20px"><button class="btn-gold" onclick="openModal()" style="font-size:10px;padding:11px 20px;" data-copy="nav.contact_cta">Book a session</button></div></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.navigate">Navigation</h4><ul><li><a href="#" onclick="showSection('home');return false;">Home</a></li><li><a href="#" onclick="showSection('about');return false;">About</a></li><li><a href="#" onclick="showSection('services');return false;">Services</a></li><li><a href="#" onclick="showSection('modalities');return false;">Modalities</a></li><li><a href="#" onclick="clickJournalLink();return false;">Journal</a></li><li><a href="#" onclick="showSection('faq');return false;" data-copy="nav.links.faq">FAQ</a></li><li><a href="#" onclick="showSection('contact');return false;">Contact</a></li></ul></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.therapies">Therapien</h4><ul><li><a href="#" onclick="showSection('modalities');showMod('classic');return false;">Classic Massage</a></li><li><a href="#" onclick="showSection('modalities');showMod('shiatsu');return false;">Shiatsu</a></li><li><a href="#" onclick="showSection('modalities');showMod('connected');return false;">Connected Movement</a></li><li><a href="#" onclick="showSection('modalities');showMod('tuina');return false;">Tuina</a></li><li><a href="#" onclick="showSection('modalities');showMod('qigong');return false;">Qigong</a></li></ul></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.contact">Kontakt</h4><ul><li><a href="#" onclick="showSection('contact');return false;" data-copy="contact.info.pin">In den Räumen von Physiopunkt Basel</a></li><li><a href="#">Meret Oppenheim-Strasse 6, Basel</a></li><li><a href="mailto:hello@pauseandmove.ch">hello@pauseandmove.ch</a></li><li><a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color:var(--gold); font-weight:500;" data-copy="contact.info.whatsapp_footer">WhatsApp Business (Bevorzugt)</a></li><li><a href="tel:+41772776050" data-copy="contact.info.phone">+41 77 277 60 50</a></li></ul><div style="margin-top:20px"><button class="btn-gold" onclick="openModal()" style="font-size:10px;padding:11px 20px;" data-copy="nav.contact_cta">Termin buchen</button></div></div>
   </div>
   <div class="footer-bottom">
-    <p data-copy="footer.bottom">© 2025 Pause & Move, Basel. All rights reserved.</p>
-    <div class="footer-legal"><a href="#" data-copy="footer.legal.privacy">Privacy</a><a href="#" data-copy="footer.legal.terms">Terms</a></div>
+    <p data-copy="footer.bottom">© 2025 Pause & Move, Basel. Alle Rechte vorbehalten.</p>
+    <div class="footer-legal"><a href="#" data-copy="footer.legal.privacy">Datenschutz</a><a href="#" data-copy="footer.legal.terms">AGB</a></div>
   </div>
 </footer>
 
-<script src="index.js"></script>
+<script src="../index.js"></script>
 </body>
 </html>

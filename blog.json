@@ -1,4 +1,4 @@
-﻿{
+{
   "en": {
     "categories": {
       "all": "All",
@@ -437,17 +437,17 @@
         "published": true
       },
       {
-        "id": "massage-oils-and-other-lubricats",
+        "id": "massage-oils-and-other-lubricants",
         "categoryId": "treatment_techniques",
         "categoryIds": [
           "treatment_techniques"
         ],
-        "title": "Massage Oils and Other Lubricats",
+        "title": "Massage Oils and Other Lubricants",
         "date": "July 2026",
         "readTime": "5 min",
         "author": "Michael Guralnik",
         "abstract": "Oil, lotion, or gel? A massage therapist explains the differences between massage lubricants and how the right choice shapes your treatment.",
-        "image": "assets/cover-massage-oils-and-other-lubricats.jpg",
+        "image": "assets/cover-massage-oils-and-other-lubricants.jpg",
         "keywords": [
           "massage oil",
           "massage lotion",
@@ -909,7 +909,7 @@
         "published": true
       },
       {
-        "id": "massage-oils-and-other-lubricats",
+        "id": "massage-oils-and-other-lubricants",
         "categoryId": "treatment_techniques",
         "categoryIds": [
           "treatment_techniques"
@@ -919,7 +919,7 @@
         "readTime": "5 Min.",
         "author": "Michael Guralnik",
         "abstract": "Öl, Lotion oder Gel? Ein Massagetherapeut erklärt die Unterschiede zwischen Massagemedien und wie die richtige Wahl Ihre Behandlung prägt.",
-        "image": "assets/cover-massage-oils-and-other-lubricats.jpg",
+        "image": "assets/cover-massage-oils-and-other-lubricants.jpg",
         "keywords": [
           "Massageöl",
           "Massagelotion",
