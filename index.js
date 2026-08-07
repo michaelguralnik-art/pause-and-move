@@ -43,7 +43,16 @@ function showSection(id, pushToHistory = true) {
 }
 
 // ── Sub-pane navigation ──
-function showSub(section, pane, btn) {
+function findSubNavBtn(section, pane) {
+  const container = document.getElementById(section);
+  if (!container) return null;
+  return Array.from(container.querySelectorAll('.sub-nav-btn')).find(b => {
+    const oc = b.getAttribute('onclick') || '';
+    return oc.includes("'" + pane + "'") || oc.includes('"' + pane + '"');
+  });
+}
+
+function showSub(section, pane, btn, updateHistory = true) {
   document.querySelectorAll('#'+section+' .sub-pane').forEach(p=>p.classList.remove('active'));
   const el = document.getElementById(section+'-'+pane);
   if (el) {
@@ -55,13 +64,20 @@ function showSub(section, pane, btn) {
     }, 50);
   }
   if (btn) {
-    btn.closest('.sub-nav').querySelectorAll('.sub-nav-btn').forEach(b=>b.classList.remove('active'));
+    const nav = btn.closest('.sub-nav');
+    if (nav) {
+      nav.querySelectorAll('.sub-nav-btn').forEach(b=>b.classList.remove('active'));
+    }
     btn.classList.add('active');
   }
+  
+  if (updateHistory) {
+    history.replaceState({ sectionId: section, paneId: pane }, "", "#" + section + "-" + pane);
+  }
 }
-function showMod(pane) {
-  const btn = document.querySelector('#modalities .sub-nav-btn[onclick*="\''+pane+'\'"]');
-  showSub('modalities', pane, btn);
+function showMod(pane, updateHistory = true) {
+  const btn = findSubNavBtn('modalities', pane);
+  showSub('modalities', pane, btn, updateHistory);
 }
 
 // ── Reveal on scroll ──
@@ -108,34 +124,11 @@ document.querySelectorAll('.nav-links a')[0].classList.add('active');
 // ── Multilingual State & Fetching ──
 let siteData = null;
 let siteBlogData = null;
-
 let currentLang = localStorage.getItem('lang') || 'en';
-const isGermanPage = document.documentElement.lang === 'de' || window.location.pathname.includes('/de/');
-if (isGermanPage) {
-  currentLang = 'de';
-  localStorage.setItem('lang', 'de');
-}
-
 let currentCategory = 'all';
-const relativeRoot = window.location.pathname.includes('/de/') ? '../' : '';
 
-const isFileProtocol = window.location.protocol === 'file:';
-let rootPath = '';
-if (isFileProtocol) {
-  const path = window.location.pathname;
-  if (path.includes('/journal/') || path.includes('\\journal\\')) {
-    rootPath = '../../';
-  } else if (path.includes('/de/') || path.includes('\\de\\')) {
-    rootPath = '../';
-  } else {
-    rootPath = './';
-  }
-} else {
-  rootPath = '/';
-}
-
-const contentFetchUrl = rootPath + 'content.json' + (isFileProtocol ? '' : '?cb=' + new Date().getTime());
-const blogFetchUrl = rootPath + 'blog.json' + (isFileProtocol ? '' : '?cb=' + new Date().getTime());
+const contentFetchUrl = window.location.protocol === 'file:' ? 'content.json' : 'content.json?cb=' + new Date().getTime();
+const blogFetchUrl = window.location.protocol === 'file:' ? 'blog.json' : 'blog.json?cb=' + new Date().getTime();
 
 Promise.all([
   fetch(contentFetchUrl).then(response => response.json()),
@@ -156,6 +149,19 @@ Promise.all([
       const catId = hash.replace('blog-', '');
       currentCategory = catId;
       showSection('blog', false);
+    } else if (hash.includes('-')) {
+      const parts = hash.split('-');
+      const section = parts[0];
+      const pane = parts.slice(1).join('-');
+      const secEl = document.getElementById(section);
+      const paneEl = document.getElementById(section + '-' + pane);
+      if (secEl && paneEl) {
+        showSection(section, false);
+        const btn = findSubNavBtn(section, pane);
+        showSub(section, pane, btn, false);
+      } else {
+        showSection(hash, false);
+      }
     } else {
       showSection(hash, false);
     }
@@ -163,15 +169,27 @@ Promise.all([
     // Push initial state so popstate behaves correctly
     let initSection = hash;
     let initArticle = null;
+    let initPane = null;
     if (hash.startsWith('article-')) {
       initSection = 'article-detail';
       initArticle = hash.replace('article-', '');
     } else if (hash.startsWith('blog-')) {
       initSection = 'blog';
+    } else if (hash.includes('-')) {
+      const parts = hash.split('-');
+      const section = parts[0];
+      const pane = parts.slice(1).join('-');
+      const secEl = document.getElementById(section);
+      const paneEl = document.getElementById(section + '-' + pane);
+      if (secEl && paneEl) {
+        initSection = section;
+        initPane = pane;
+      }
     }
     history.replaceState({ 
       sectionId: initSection, 
-      articleId: initArticle 
+      articleId: initArticle,
+      paneId: initPane
     }, "", window.location.hash || "#home");
   })
   .catch(err => console.error("Error loading content or blog JSON:", err));
@@ -216,7 +234,7 @@ function renderLanguage(lang) {
 // ── popstate event listener for browser navigation ──
 window.addEventListener('popstate', (event) => {
   if (event.state) {
-    const { sectionId, articleId } = event.state;
+    const { sectionId, articleId, paneId } = event.state;
     if (sectionId === 'article-detail' && articleId) {
       showArticle(articleId, false);
     } else if (sectionId === 'blog') {
@@ -227,6 +245,10 @@ window.addEventListener('popstate', (event) => {
         currentCategory = 'all';
       }
       showSection('blog', false);
+    } else if (paneId) {
+      showSection(sectionId, false);
+      const btn = findSubNavBtn(sectionId, paneId);
+      showSub(sectionId, paneId, btn, false);
     } else {
       showSection(sectionId, false);
     }
@@ -239,6 +261,19 @@ window.addEventListener('popstate', (event) => {
       const catId = hash.replace('blog-', '');
       currentCategory = catId;
       showSection('blog', false);
+    } else if (hash.includes('-')) {
+      const parts = hash.split('-');
+      const section = parts[0];
+      const pane = parts.slice(1).join('-');
+      const secEl = document.getElementById(section);
+      const paneEl = document.getElementById(section + '-' + pane);
+      if (secEl && paneEl) {
+        showSection(section, false);
+        const btn = findSubNavBtn(section, pane);
+        showSub(section, pane, btn, false);
+      } else {
+        showSection(hash, false);
+      }
     } else {
       showSection(hash, false);
     }
@@ -248,21 +283,6 @@ window.addEventListener('popstate', (event) => {
 function toggleLanguage() {
   currentLang = currentLang === 'en' ? 'de' : 'en';
   localStorage.setItem('lang', currentLang);
-  
-  // Check if we are on one of the homepages (root / index.html or /de/index.html)
-  const pathname = window.location.pathname;
-  const isHomepage = pathname === '/' || pathname.endsWith('/index.html') || pathname.endsWith('/de/') || pathname.endsWith('/de/index.html');
-  if (isHomepage) {
-    const hash = window.location.hash || '';
-    if (currentLang === 'de') {
-      const root = pathname.includes('/de/') ? '' : 'de/';
-      window.location.href = root + 'index.html' + hash;
-    } else {
-      const root = pathname.includes('/de/') ? '../' : '';
-      window.location.href = root + 'index.html' + hash;
-    }
-    return;
-  }
   
   // Opacity fade transition
   document.body.style.opacity = 0;
@@ -711,18 +731,18 @@ function renderBlogContent(lang) {
       featuredContainer.style.display = 'grid';
       const featuredArticle = articles[0];
       featuredContainer.innerHTML = `
-        <a href="${relativeRoot}journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" class="blog-featured-img" style="display:block;">
+        <a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" class="blog-featured-img" style="display:block;">
           <img src="${featuredArticle.image}" alt="${featuredArticle.title}" loading="lazy"/>
         </a>
         <div class="blog-featured-body">
           <span class="blog-featured-label">${lang === 'en' ? 'Featured Post' : 'Hervorgehobener Beitrag'}</span>
-          <h2 style="font-style:italic;"><a href="${relativeRoot}journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" style="color: inherit; text-decoration: none;">${featuredArticle.title}</a></h2>
+          <h2 style="font-style:italic;"><a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" style="color: inherit; text-decoration: none;">${featuredArticle.title}</a></h2>
           <p>${featuredArticle.abstract}</p>
           <div class="blog-featured-meta" style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--muted); margin-bottom: 24px;">
             <span>${lang === 'en' ? 'By' : 'Von'} ${featuredArticle.author || 'Michael Guralnik'} &middot; ${featuredArticle.date}</span>
             <span style="font-weight: 600; text-transform: uppercase; color: var(--gold); letter-spacing: 0.08em; font-size: 11px;">${featuredArticle.readTime}</span>
           </div>
-          <a href="${relativeRoot}journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" class="btn-text" style="text-decoration: none;">
+          <a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" class="btn-text" style="text-decoration: none;">
             ${lang === 'en' ? 'Read article' : 'Artikel lesen'} &rarr;
           </a>
         </div>
@@ -736,7 +756,7 @@ function renderBlogContent(lang) {
         gridContainer.innerHTML = gridArticles.map((article, idx) => {
           const categoryName = categories[article.categoryId] || article.categoryId;
           return `
-            <a href="${relativeRoot}journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
+            <a href="journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
               <div class="blog-thumb">
                 <img src="${article.image}" alt="${article.title}" loading="lazy"/>
               </div>
@@ -771,7 +791,7 @@ function renderBlogContent(lang) {
         gridContainer.innerHTML = filteredArticles.map((article, idx) => {
           const categoryName = categories[article.categoryId] || article.categoryId;
           return `
-            <a href="${relativeRoot}journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
+            <a href="journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
               <div class="blog-thumb">
                 <img src="${article.image}" alt="${article.title}" loading="lazy"/>
               </div>
@@ -908,7 +928,7 @@ function showArticle(articleId, pushToHistory = true) {
     const recentList = otherArticles.length > 0 ? otherArticles.slice(0, 3) : publishedArticles.slice(0, 3);
     recentContainer.innerHTML = recentList.map(rec => {
       return `
-        <a href="${relativeRoot}journal/${currentLang}/${rec.id}.html" onclick="showArticle('${rec.id}'); return false;" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
+        <a href="journal/${currentLang}/${rec.id}.html" onclick="showArticle('${rec.id}'); return false;" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
           <div class="sidebar-recent-thumb">
             <img src="${rec.image}" alt="${rec.title}" loading="lazy"/>
           </div>
