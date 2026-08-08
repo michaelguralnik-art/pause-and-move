@@ -703,6 +703,31 @@ function submitContactForm(event) {
   });
 }
 
+// Helper to parse dates like "June 2026" or "Juni 2026" for sorting
+function parseBlogDate(dateStr) {
+  if (!dateStr) return new Date(0);
+  const parts = dateStr.trim().split(/\s+/);
+  if (parts.length < 2) return new Date(0);
+  const monthStr = parts[0].toLowerCase();
+  const year = parseInt(parts[1], 10);
+  const monthMap = {
+    'january': 0, 'januar': 0,
+    'february': 1, 'februar': 1,
+    'march': 2, 'märz': 2, 'mã¤rz': 2, 'maerz': 2,
+    'april': 3,
+    'may': 4, 'mai': 4,
+    'june': 5, 'juni': 5,
+    'july': 6, 'juli': 6,
+    'august': 7,
+    'september': 8,
+    'october': 9, 'oktober': 9,
+    'november': 10,
+    'december': 11, 'dezember': 11
+  };
+  const month = monthMap[monthStr] !== undefined ? monthMap[monthStr] : 0;
+  return new Date(year, month, 1);
+}
+
 // ── Blog Rendering & Filtering ──
 function renderBlogContent(lang) {
   const categoryMenu = document.getElementById('blog-category-menu');
@@ -713,7 +738,10 @@ function renderBlogContent(lang) {
   
   const blogData = siteBlogData[lang];
   const categories = blogData.categories;
-  const articles = blogData.articles.filter(a => a.published !== false);
+  const articles = [...blogData.articles]
+    .filter(a => a.published !== false)
+    .sort((a, b) => parseBlogDate(b.date) - parseBlogDate(a.date));
+  console.log("Articles sorted for " + lang, articles.map(a => a.id + ' (' + a.date + ')'));
   
   // 1. Render Category Menu
   if (categoryMenu) {
@@ -923,7 +951,9 @@ function showArticle(articleId, pushToHistory = true) {
   // Populate Sidebar Recent Posts (3 latest, excluding current one if possible)
   const recentContainer = document.getElementById('sidebar-recent');
   if (recentContainer) {
-    const publishedArticles = blogData.articles.filter(a => a.published !== false);
+    const publishedArticles = [...blogData.articles]
+      .filter(a => a.published !== false)
+      .sort((a, b) => parseBlogDate(b.date) - parseBlogDate(a.date));
     const otherArticles = publishedArticles.filter(a => a.id !== articleId);
     const recentList = otherArticles.length > 0 ? otherArticles.slice(0, 3) : publishedArticles.slice(0, 3);
     recentContainer.innerHTML = recentList.map(rec => {

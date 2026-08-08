@@ -72,6 +72,48 @@ function Translate-HtmlString($html, $langData) {
     return $regex.Replace($html, $callback)
 }
 
+# Helper: Parse date strings (e.g. "June 2026" or "Juni 2026") into DateTime objects for sorting
+function Get-ArticleDate($dateStr) {
+    if ([string]::IsNullOrEmpty($dateStr)) {
+        return [DateTime]::MinValue
+    }
+    
+    $parts = $dateStr.Trim() -split '\s+'
+    if ($parts.Count -lt 2) {
+        return [DateTime]::MinValue
+    }
+    
+    $monthStr = $parts[0].ToLower()
+    $year = [int]$parts[1]
+    
+    # Month map for EN and DE
+    $monthMap = @{
+        "january" = 1; "januar" = 1
+        "february" = 2; "februar" = 2
+        "march" = 3; "mã¤rz" = 3; "mãrz" = 3; "märz" = 3; "maerz" = 3
+        "april" = 4
+        "may" = 5; "mai" = 5
+        "june" = 6; "juni" = 6
+        "july" = 7; "juli" = 7
+        "august" = 8
+        "september" = 9
+        "october" = 10; "oktober" = 10
+        "november" = 11
+        "december" = 12; "dezember" = 12
+    }
+    
+    $month = 1
+    if ($monthMap.ContainsKey($monthStr)) {
+        $month = $monthMap[$monthStr]
+    }
+    
+    try {
+        return [DateTime]::new($year, $month, 1)
+    } catch {
+        return [DateTime]::MinValue
+    }
+}
+
 # Set up output directories
 $enDir = Join-Path $journalDir "en"
 $deDir = Join-Path $journalDir "de"
@@ -91,6 +133,7 @@ foreach ($lang in $languages) {
     if (-not $IncludeDrafts) {
         $articles = $articles | Where-Object { $null -eq $_.published -or $_.published -ne $false }
     }
+    $articles = $articles | Sort-Object { Get-ArticleDate $_.date } -Descending
     $categories = $langBlog.categories
     
     # 1. Translate the base layout (Nav, Drawer, Modals, Footer)

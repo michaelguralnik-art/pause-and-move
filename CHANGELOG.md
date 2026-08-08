@@ -4,6 +4,14 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.50] - 2026-08-08
+### Developer & Copy Updates
+- Synchronized latest copy modifications and codebase enhancements.
+
+### Reviewer Comments / Notes
+- Sort articles in the journal section by date descending (latest first)
+
+
 ## [3.49] - 2026-08-08
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.
