@@ -28,6 +28,9 @@
         <i data-lucide="redo-2"></i>
       </button>
       <div class="divider"></div>
+      <button id="btn-preview" class="btn btn-secondary" title="Preview Blogpost">
+        <i data-lucide="eye"></i> Preview
+      </button>
       <button id="btn-save" class="btn btn-primary">
         <i data-lucide="save"></i> Save Changes
       </button>
@@ -202,6 +205,7 @@
                   <button class="toolbar-btn" data-cmd="bold" title="Bold (Ctrl+B)"><i data-lucide="bold"></i></button>
                   <button class="toolbar-btn" data-cmd="italic" title="Italic (Ctrl+I)"><i data-lucide="italic"></i></button>
                   <button class="toolbar-btn" data-cmd="underline" title="Underline (Ctrl+U)"><i data-lucide="underline"></i></button>
+                  <button class="toolbar-btn" data-cmd="createLink" title="Insert Link (Ctrl+K)"><i data-lucide="link"></i></button>
                   <div class="toolbar-divider"></div>
                   <button class="toolbar-btn" data-cmd="h2" title="Heading 2"><i data-lucide="heading-2"></i></button>
                   <button class="toolbar-btn" data-cmd="h3" title="Heading 3"><i data-lucide="heading-3"></i></button>
@@ -234,6 +238,7 @@
                   <button class="toolbar-btn" data-cmd="bold" title="Bold (Ctrl+B)"><i data-lucide="bold"></i></button>
                   <button class="toolbar-btn" data-cmd="italic" title="Italic (Ctrl+I)"><i data-lucide="italic"></i></button>
                   <button class="toolbar-btn" data-cmd="underline" title="Underline (Ctrl+U)"><i data-lucide="underline"></i></button>
+                  <button class="toolbar-btn" data-cmd="createLink" title="Insert Link (Ctrl+K)"><i data-lucide="link"></i></button>
                   <div class="toolbar-divider"></div>
                   <button class="toolbar-btn" data-cmd="h2" title="Heading 2"><i data-lucide="heading-2"></i></button>
                   <button class="toolbar-btn" data-cmd="h3" title="Heading 3"><i data-lucide="heading-3"></i></button>
@@ -342,6 +347,32 @@
         <div class="progress-bar-container" id="loading-progress-container">
           <div class="progress-bar-fill" id="loading-progress-bar"></div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Preview Language Confirmation Modal -->
+  <div id="preview-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card modal-prompt" style="max-width: 480px; width: 90%;">
+      <div class="modal-header">
+        <h3><i data-lucide="eye" style="color: var(--primary-hover);"></i> Preview Journal Post</h3>
+        <button class="modal-close" id="btn-preview-close"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom: 16px; color: var(--text-muted); font-size: 14px;">Select which language version of the article you want to preview. The editor will automatically save your draft and pre-render the pages first.</p>
+        <div class="preview-actions-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <button id="btn-preview-en" class="btn btn-secondary" style="flex-direction: column; padding: 24px 16px; height: auto; gap: 12px; border-color: rgba(79, 70, 229, 0.3);">
+            <span class="lang-tag lang-en" style="font-size: 14px; padding: 4px 10px; margin-right: 0;">EN</span>
+            <span style="font-weight: 600;">English Preview</span>
+          </button>
+          <button id="btn-preview-de" class="btn btn-secondary" style="flex-direction: column; padding: 24px 16px; height: auto; gap: 12px; border-color: rgba(16, 185, 129, 0.3);">
+            <span class="lang-tag lang-de" style="font-size: 14px; padding: 4px 10px; margin-right: 0; background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">DE</span>
+            <span style="font-weight: 600;">German Preview</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-preview-cancel" class="btn btn-secondary">Cancel</button>
       </div>
     </div>
   </div>

@@ -1,6 +1,11 @@
 # generate_blog.ps1
 # Automates the pre-rendering of blog posts for Pause & Move website (Bilingual & SEO optimized)
 
+[CmdletBinding()]
+param (
+    [switch]$IncludeDrafts
+)
+
 $rootDir = $PSScriptRoot
 $blogJsonPath = Join-Path $rootDir "blog.json"
 $contentJsonPath = Join-Path $rootDir "content.json"
@@ -82,7 +87,10 @@ foreach ($lang in $languages) {
     $langBlog = $blogData.$lang
     $langContent = $contentData.$lang
     
-    $articles = $langBlog.articles | Where-Object { $null -eq $_.published -or $_.published -ne $false }
+    $articles = $langBlog.articles
+    if (-not $IncludeDrafts) {
+        $articles = $articles | Where-Object { $null -eq $_.published -or $_.published -ne $false }
+    }
     $categories = $langBlog.categories
     
     # 1. Translate the base layout (Nav, Drawer, Modals, Footer)
@@ -116,7 +124,7 @@ foreach ($lang in $languages) {
         $deHtml = $deHtml -replace 'src="shiatsu.png"', 'src="../shiatsu.png"'
         $deHtml = $deHtml -replace 'src="tuina.png"', 'src="../tuina.png"'
         $deHtml = $deHtml -replace 'src="connected-movement.png"', 'src="../connected-movement.png"'
-        $deHtml = $deHtml -replace 'src="index.js"', 'src="../index.js"'
+        $deHtml = $deHtml -replace 'src="index.js(\?[^"]*)?"', 'src="../index.js$1"'
         
         # Write to de/index.html
         $deDir = Join-Path $rootDir "de"
@@ -269,7 +277,7 @@ $sidebarRecentHtml              </div>
         $pageHtml = $pageHtml -replace '(?s)<main class="page-body">.*?</main>', "<main class=`"page-body`">`n$articleDetailHtml`n</main>"
         
         # 2. Adjust relative asset URLs (move up 2 directory levels since file is in /journal/en/ or /journal/de/)
-        $pageHtml = $pageHtml -replace 'href="index.css"', 'href="../../index.css"'
+        $pageHtml = $pageHtml -replace 'href="index.css(\?[^"]*)?"', 'href="../../index.css$1"'
         $pageHtml = $pageHtml -replace 'href="favicon.png\?v=3"', 'href="../../favicon.png?v=3"'
         $pageHtml = $pageHtml -replace 'href="favicon.ico"', 'href="../../favicon.ico"'
         $pageHtml = $pageHtml -replace 'src="assets/', 'src="../../assets/'
@@ -445,7 +453,7 @@ $sidebarRecentHtml              </div>
 </script>
 "@
         
-        $pageHtml = $pageHtml -replace '<script src="index.js"></script>', $inlineScripts
+        $pageHtml = $pageHtml -replace '<script src="index.js(\?[^"]*)?"></script>', $inlineScripts
         
         # Write pre-rendered file to disk (forcing UTF-8 encoding)
         $outPath = if ($lang -eq "en") { Join-Path $enDir "$($article.id).html" } else { Join-Path $deDir "$($article.id).html" }
@@ -480,7 +488,11 @@ $sitemapXml = @"
 "@
 
 # Loop over articles
-foreach ($article in ($blogData.en.articles | Where-Object { $null -eq $_.published -or $_.published -ne $false })) {
+$sitemapArticles = $blogData.en.articles
+if (-not $IncludeDrafts) {
+    $sitemapArticles = $sitemapArticles | Where-Object { $null -eq $_.published -or $_.published -ne $false }
+}
+foreach ($article in $sitemapArticles) {
     $articleId = $article.id
     $enUrl = "https://pauseandmove.ch/journal/en/$articleId.html"
     $deUrl = "https://pauseandmove.ch/journal/de/$articleId.html"

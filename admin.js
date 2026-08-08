@@ -59,6 +59,12 @@ const elBtnPublish = document.getElementById('btn-publish');
 const elBtnReloadImage = document.getElementById('btn-reload-image');
 const elBtnImageAi = document.getElementById('btn-image-ai');
 const elBtnNewArticle = document.getElementById('btn-new-article');
+const elBtnPreview = document.getElementById('btn-preview');
+const elPreviewModal = document.getElementById('preview-modal');
+const elBtnPreviewClose = document.getElementById('btn-preview-close');
+const elBtnPreviewCancel = document.getElementById('btn-preview-cancel');
+const elBtnPreviewEn = document.getElementById('btn-preview-en');
+const elBtnPreviewDe = document.getElementById('btn-preview-de');
 
 // AI Assist Modal Pointers
 const elAiModal = document.getElementById('ai-modal');
@@ -540,6 +546,11 @@ function executeFormat(cmd) {
     document.execCommand('insertHTML', false, '&nbsp;&nbsp;&nbsp;&nbsp;');
   } else if (cmd === 'h2' || cmd === 'h3') {
     document.execCommand('formatBlock', false, cmd);
+  } else if (cmd === 'createLink') {
+    const url = prompt('Enter the link URL (e.g. https://example.com):');
+    if (url) {
+      document.execCommand('createLink', false, url);
+    }
   } else {
     document.execCommand(cmd, false, null);
   }
@@ -701,6 +712,32 @@ function updateArticleStatusUI(isPublished) {
   initIcons();
 }
 
+// Helper to translate HTML string while preserving tags (e.g. <a>, <u>, etc.) from translation corruption
+async function translateHtmlPreservingTags(text) {
+  if (!text || !text.trim()) return '';
+  const tagRegex = /<[^>]+>/g;
+  const tags = [];
+  
+  let placeholderIndex = 0;
+  const placeholderText = text.replace(tagRegex, (match) => {
+    tags.push(match);
+    const placeholder = `{${placeholderIndex}}`;
+    placeholderIndex++;
+    return placeholder;
+  });
+  
+  let translatedText = await translateText(placeholderText);
+  
+  // Clean up potential spaces injected inside placeholders by translation engines
+  translatedText = translatedText.replace(/\{\s*(\d+)\s*\}/g, '{$1}');
+  
+  for (let i = 0; i < tags.length; i++) {
+    translatedText = translatedText.replaceAll(`{${i}}`, tags[i]);
+  }
+  
+  return translatedText;
+}
+
 // Execute auto translation of English editor content to German via MyMemory
 async function executeTranslation() {
   const enSerialized = serializeContent(bodyTextEn);
@@ -750,15 +787,15 @@ async function executeTranslation() {
           } else if (tagName === 'ul' || tagName === 'ol') {
             const lis = originalNode.querySelectorAll('li');
             for (let li of lis) {
-              li.innerHTML = await translateText(li.innerHTML);
+              li.innerHTML = await translateHtmlPreservingTags(li.innerHTML);
             }
             transText = originalNode.outerHTML;
           }
         } else {
-          transText = await translateText(p);
+          transText = await translateHtmlPreservingTags(p);
         }
       } else {
-        transText = await translateText(p);
+        transText = await translateHtmlPreservingTags(p);
       }
       
       translated.push(transText);
@@ -853,6 +890,67 @@ async function saveAllChanges() {
     elBtnSave.disabled = false;
     elBtnSave.innerHTML = '<i data-lucide="save"></i> Save Changes';
     initIcons();
+  }
+}
+
+// Save draft and run pre-renderer, then open in new tab
+async function triggerPreview(lang) {
+  if (!currentArticleId) return;
+  
+  elPreviewModal.classList.remove('open');
+  
+  // Sync the latest editor content to model before saving
+  const artEn = blogData.en.articles.find(a => a.id === currentArticleId);
+  if (artEn) {
+    artEn.content = serializeContent(bodyTextEn);
+  }
+  const artDe = blogData.de.articles.find(a => a.id === currentArticleId);
+  if (artDe) {
+    artDe.content = serializeContent(bodyTextDe);
+  }
+  
+  // Show loading overlay
+  elLoadingModalMessage.textContent = 'Saving changes & generating preview...';
+  elLoadingProgressContainer.style.display = 'none'; // hide progress bar for quick preview generation
+  elLoadingModal.classList.add('open');
+  
+  try {
+    // 1. Save draft to local server blog.json
+    const saveResponse = await fetch('/api/save-blog', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(blogData, null, 2)
+    });
+    
+    if (!saveResponse.ok) {
+      const errRes = await saveResponse.json();
+      throw new Error(errRes.message || 'Failed to save changes before preview');
+    }
+    
+    // 2. Call preview generation API on local server
+    const previewResponse = await fetch('/api/preview', {
+      method: 'POST'
+    });
+    
+    if (!previewResponse.ok) {
+      const errRes = await previewResponse.json();
+      throw new Error(errRes.message || 'Failed to pre-render blog posts');
+    }
+    
+    // 3. Open preview page in a new window/tab
+    const previewUrl = lang === 'en'
+      ? `http://localhost:8080/journal/en/${currentArticleId}.html`
+      : `http://localhost:8080/de/${currentArticleId}.html`;
+    window.open(previewUrl, '_blank');
+    
+    showToast('Preview loaded in new tab!', 'success');
+  } catch (err) {
+    showToast(`Preview failed: ${err.message}`, 'error');
+  } finally {
+    // Close loading overlay
+    elLoadingModal.classList.remove('open');
   }
 }
 
@@ -2033,16 +2131,22 @@ function bindEvents() {
     }
   });
   
-  // Keypress Tab Interceptors for editors
-  const handleTabKey = (e) => {
+  // Keypress Tab Interceptors & Ctrl+K Shortcuts for editors
+  const handleEditorKeydown = (e) => {
     if (e.key === 'Tab') {
       e.preventDefault();
       executeFormat('tab');
     }
+    if (e.ctrlKey && e.key === 'k') {
+      e.preventDefault();
+      executeFormat('createLink');
+      // trigger input event to serialize and save changes
+      e.currentTarget.dispatchEvent(new Event('input'));
+    }
   };
   
-  bodyTextEn.addEventListener('keydown', handleTabKey);
-  bodyTextDe.addEventListener('keydown', handleTabKey);
+  bodyTextEn.addEventListener('keydown', handleEditorKeydown);
+  bodyTextDe.addEventListener('keydown', handleEditorKeydown);
 
   const handleEditorPaste = (e) => {
     const items = (e.clipboardData || e.originalEvent?.clipboardData)?.items;
@@ -2156,6 +2260,29 @@ function bindEvents() {
   elBtnPublishClose.addEventListener('click', () => elPublishModal.classList.remove('open'));
   elBtnPublishCancel.addEventListener('click', () => elPublishModal.classList.remove('open'));
   elBtnPublishConfirm.addEventListener('click', executePublish);
+
+  // Preview CMS
+  if (elBtnPreview) {
+    elBtnPreview.addEventListener('click', () => {
+      if (!currentArticleId) {
+        showToast('Please select or create an article first.', 'error');
+        return;
+      }
+      elPreviewModal.classList.add('open');
+    });
+  }
+  if (elBtnPreviewClose) {
+    elBtnPreviewClose.addEventListener('click', () => elPreviewModal.classList.remove('open'));
+  }
+  if (elBtnPreviewCancel) {
+    elBtnPreviewCancel.addEventListener('click', () => elPreviewModal.classList.remove('open'));
+  }
+  if (elBtnPreviewEn) {
+    elBtnPreviewEn.addEventListener('click', () => triggerPreview('en'));
+  }
+  if (elBtnPreviewDe) {
+    elBtnPreviewDe.addEventListener('click', () => triggerPreview('de'));
+  }
   
   // Translate Button
   btnTranslate.addEventListener('click', executeTranslation);

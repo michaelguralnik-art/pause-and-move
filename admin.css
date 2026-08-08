@@ -639,6 +639,10 @@ textarea.form-control {
 .body-textarea u {
   text-decoration: underline;
 }
+.body-textarea a {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
 .body-textarea h2, .body-textarea h3 {
   color: #fff;
   margin: 24px 0 12px;
