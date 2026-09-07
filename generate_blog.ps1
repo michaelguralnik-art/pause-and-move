@@ -1,11 +1,6 @@
 # generate_blog.ps1
 # Automates the pre-rendering of blog posts for Pause & Move website (Bilingual & SEO optimized)
 
-[CmdletBinding()]
-param (
-    [switch]$IncludeDrafts
-)
-
 $rootDir = $PSScriptRoot
 $blogJsonPath = Join-Path $rootDir "blog.json"
 $contentJsonPath = Join-Path $rootDir "content.json"
@@ -129,52 +124,11 @@ foreach ($lang in $languages) {
     $langBlog = $blogData.$lang
     $langContent = $contentData.$lang
     
-    $articles = $langBlog.articles
-    if (-not $IncludeDrafts) {
-        $articles = $articles | Where-Object { $null -eq $_.published -or $_.published -ne $false }
-    }
-    $articles = $articles | Sort-Object { Get-ArticleDate $_.date } -Descending
+    $articles = $langBlog.articles | Where-Object { $null -eq $_.published -or $_.published -ne $false } | Sort-Object { Get-ArticleDate $_.date } -Descending
     $categories = $langBlog.categories
     
     # 1. Translate the base layout (Nav, Drawer, Modals, Footer)
     $translatedLayout = Translate-HtmlString $templateHtml $langContent
-    
-    # 1b. If German pass, also generate the pre-rendered German homepage (de/index.html)
-    if ($lang -eq "de") {
-        Write-Host "  Generating German homepage: de/index.html" -ForegroundColor Yellow
-        $deHtml = $translatedLayout
-        
-        # Adjust language code, canonical tag, OpenGraph URL, and alternate URLs
-        $deHtml = $deHtml -replace '<html lang="en">', '<html lang="de">'
-        $deHtml = $deHtml -replace '<link rel="canonical" href="https://pauseandmove.ch/" />', '<link rel="canonical" href="https://pauseandmove.ch/de/" />'
-        $deHtml = $deHtml -replace '<meta property="og:url" content="https://pauseandmove.ch/" />', '<meta property="og:url" content="https://pauseandmove.ch/de/" />'
-        $deHtml = $deHtml -replace '<button class="nav-lang-toggle" onclick="toggleLanguage\(\)">DE</button>', '<button class="nav-lang-toggle" onclick="toggleLanguage()">EN</button>'
-        $deHtml = $deHtml -replace 'class="nav-lang-toggle"([^>]*>)DE(</a>)', 'class="nav-lang-toggle"$1EN$2'
-        
-        # Adjust relative asset paths for 1 directory level deep
-        $deHtml = $deHtml -replace 'href="index.css', 'href="../index.css'
-        $deHtml = $deHtml -replace 'href="favicon.png', 'href="../favicon.png'
-        $deHtml = $deHtml -replace 'href="favicon.ico', 'href="../favicon.ico'
-        $deHtml = $deHtml -replace 'src="assets/', 'src="../assets/'
-        $deHtml = $deHtml -replace 'src="about-hero.jpg"', 'src="../about-hero.jpg"'
-        $deHtml = $deHtml -replace 'src="services-hero.jpg"', 'src="../services-hero.jpg"'
-        $deHtml = $deHtml -replace 'src="modalities-hero.jpg"', 'src="../modalities-hero.jpg"'
-        $deHtml = $deHtml -replace 'src="journal-hero.jpg"', 'src="../journal-hero.jpg"'
-        $deHtml = $deHtml -replace 'src="michael-guralnik.jpg"', 'src="../michael-guralnik.jpg"'
-        $deHtml = $deHtml -replace 'src="portrait.jpg"', 'src="../portrait.jpg"'
-        $deHtml = $deHtml -replace 'src="wave.jpg"', 'src="../wave.jpg"'
-        $deHtml = $deHtml -replace 'src="classic-massage.png"', 'src="../classic-massage.png"'
-        $deHtml = $deHtml -replace 'src="shiatsu.png"', 'src="../shiatsu.png"'
-        $deHtml = $deHtml -replace 'src="tuina.png"', 'src="../tuina.png"'
-        $deHtml = $deHtml -replace 'src="connected-movement.png"', 'src="../connected-movement.png"'
-        $deHtml = $deHtml -replace 'src="index.js(\?[^"]*)?"', 'src="../index.js$1"'
-        
-        # Write to de/index.html
-        $deDir = Join-Path $rootDir "de"
-        if (-not (Test-Path $deDir)) { New-Item -ItemType Directory -Path $deDir | Out-Null }
-        $deOutputPath = Join-Path $deDir "index.html"
-        [System.IO.File]::WriteAllText($deOutputPath, $deHtml, [System.Text.Encoding]::UTF8)
-    }
     
     # Pre-render each article
     foreach ($article in $articles) {
@@ -320,7 +274,7 @@ $sidebarRecentHtml              </div>
         $pageHtml = $pageHtml -replace '(?s)<main class="page-body">.*?</main>', "<main class=`"page-body`">`n$articleDetailHtml`n</main>"
         
         # 2. Adjust relative asset URLs (move up 2 directory levels since file is in /journal/en/ or /journal/de/)
-        $pageHtml = $pageHtml -replace 'href="index.css(\?[^"]*)?"', 'href="../../index.css$1"'
+        $pageHtml = $pageHtml -replace 'href="index\.css[^"]*"', 'href="../../index.css?v=2.0"'
         $pageHtml = $pageHtml -replace 'href="favicon.png\?v=3"', 'href="../../favicon.png?v=3"'
         $pageHtml = $pageHtml -replace 'href="favicon.ico"', 'href="../../favicon.ico"'
         $pageHtml = $pageHtml -replace 'src="assets/', 'src="../../assets/'
@@ -359,26 +313,28 @@ $sidebarRecentHtml              </div>
   <!-- OpenGraph Metadata for Rich Sharing Previews -->
   <meta property="og:title" content="$seoTitle" />
   <meta property="og:description" content="$seoDesc" />
-  <meta property="og:image" content="https://pauseandmove.ch/$($article.image)" />
+  <meta property="og:image" content="$($article.image)" />
   <meta property="og:url" content="$articleUrl" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Pause & Move Basel" />
   <meta name="twitter:card" content="summary_large_image" />
 "@
         
-        # Replace template titles, descriptions, keywords and other SEO tags
+        # Replace template titles, descriptions and keywords
         $pageHtml = $pageHtml -replace '(?s)<title>.*?</title>', ""
         $pageHtml = $pageHtml -replace '<meta name="description"[^>]*>', ""
         $pageHtml = $pageHtml -replace '<meta name="keywords"[^>]*>', ""
-        $pageHtml = $pageHtml -replace '<link rel="canonical"[^>]*>', ""
-        $pageHtml = $pageHtml -replace '<link rel="alternate"[^>]*>', ""
-        $pageHtml = $pageHtml -replace '<meta property="og:[^>]*>', ""
-        $pageHtml = $pageHtml -replace '<meta name="twitter:[^>]*>', ""
         
         # Inject our comprehensive SEO head tags right after <head>
         $pageHtml = $pageHtml -replace '<head>', "<head>`n$seoHeadTags"
         
-        # 6. Replace client-side routing script index.js with static interactive scripts
+        # 6. Adjust OneDoc widget language for German articles
+        if ($lang -eq "de") {
+            $pageHtml = $pageHtml -replace 'data-src="https://www.onedoc.ch/en/widget/', 'data-src="https://www.onedoc.ch/de/widget/'
+        }
+        
+        # 7. Replace client-side routing script index.js with static interactive scripts
+        $onedocWidgetUrl = if ($lang -eq "de") { "https://www.onedoc.ch/de/widget/ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30" } else { "https://www.onedoc.ch/en/widget/ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30" }
         $inlineScripts = @"
 <script>
   // Mobile drawer toggles
@@ -386,9 +342,28 @@ $sidebarRecentHtml              </div>
   function closeDrawer() { document.getElementById('nav-drawer').classList.remove('open'); }
   
   // Booking modal toggles
-  function openModal() { document.getElementById('modal-overlay').classList.add('open'); document.body.style.overflow='hidden'; }
-  function closeModal() { document.getElementById('modal-overlay').classList.remove('open'); document.body.style.overflow=''; }
-  document.getElementById('modal-overlay').addEventListener('click', function(e){ if(e.target===this) closeModal(); });
+  function openModal() {
+    var overlay = document.getElementById('modal-overlay');
+    if (!overlay) return;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    var iframe = overlay.querySelector('iframe.od-widget');
+    if (iframe) {
+      var desiredSrc = "$onedocWidgetUrl";
+      if (!iframe.src || iframe.src === 'about:blank' || iframe.src === window.location.href) {
+        iframe.src = desiredSrc;
+      }
+    }
+  }
+  function closeModal() {
+    var overlay = document.getElementById('modal-overlay');
+    if (overlay) overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  var overlayEl = document.getElementById('modal-overlay');
+  if (overlayEl) {
+    overlayEl.addEventListener('click', function(e){ if(e.target===this) closeModal(); });
+  }
   document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeModal(); closeDrawer(); } });
   
   // Social sharing helpers
@@ -452,51 +427,13 @@ $sidebarRecentHtml              </div>
   }
   
   function submitBookingForm(event) {
-    event.preventDefault();
-    const submitBtn = document.getElementById('bm-submit');
-    const originalText = submitBtn.textContent;
-    const firstName = document.getElementById('bm-first-name').value.trim();
-    const lastName = document.getElementById('bm-last-name').value.trim();
-    const email = document.getElementById('bm-email').value.trim();
-    const therapy = document.getElementById('bm-therapy').value;
-    const notes = document.getElementById('bm-notes').value.trim();
-    const clientName = firstName + " " + lastName;
-    const lang = document.documentElement.lang;
-    submitBtn.disabled = true;
-    submitBtn.textContent = lang === 'en' ? 'Sending...' : 'Senden...';
-    fetch("https://formsubmit.co/ajax/hello@pauseandmove.ch", {
-      method: "POST",
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        _subject: "Booking Request " + clientName,
-        "Name": clientName,
-        "Email": email,
-        "Therapy": therapy,
-        "Notes": notes,
-        _captcha: "false"
-      })
-    })
-    .then(response => {
-      if (response.ok) {
-        submitBtn.textContent = lang === 'en' ? 'Sent successfully!' : 'Erfolgreich gesendet!';
-        document.getElementById('booking-form').reset();
-        setTimeout(() => {
-          closeModal();
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
-        }, 1500);
-      } else { throw new Error(); }
-    })
-    .catch(() => {
-      submitBtn.textContent = lang === 'en' ? 'Error. Try again.' : 'Fehler. Erneut versuchen.';
-      submitBtn.disabled = false;
-      setTimeout(() => { submitBtn.textContent = originalText; }, 3000);
-    });
+    if (event) event.preventDefault();
+    closeModal();
   }
 </script>
 "@
         
-        $pageHtml = $pageHtml -replace '<script src="index.js(\?[^"]*)?"></script>', $inlineScripts
+        $pageHtml = $pageHtml -replace '<script src="index\.js[^"]*"></script>', $inlineScripts
         
         # Write pre-rendered file to disk (forcing UTF-8 encoding)
         $outPath = if ($lang -eq "en") { Join-Path $enDir "$($article.id).html" } else { Join-Path $deDir "$($article.id).html" }
@@ -516,13 +453,7 @@ $sitemapXml = @"
     <loc>https://pauseandmove.ch/</loc>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/" />
-  </url>
-  <url>
-    <loc>https://pauseandmove.ch/de/</loc>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/" />
   </url>
   <url>
     <loc>https://pauseandmove.ch/pause-and-move-classic-massage.html</loc>
@@ -531,11 +462,7 @@ $sitemapXml = @"
 "@
 
 # Loop over articles
-$sitemapArticles = $blogData.en.articles
-if (-not $IncludeDrafts) {
-    $sitemapArticles = $sitemapArticles | Where-Object { $null -eq $_.published -or $_.published -ne $false }
-}
-foreach ($article in $sitemapArticles) {
+foreach ($article in ($blogData.en.articles | Where-Object { $null -eq $_.published -or $_.published -ne $false })) {
     $articleId = $article.id
     $enUrl = "https://pauseandmove.ch/journal/en/$articleId.html"
     $deUrl = "https://pauseandmove.ch/journal/de/$articleId.html"

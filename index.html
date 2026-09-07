@@ -55,7 +55,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="index.css?v=1.4"/>
+<link rel="stylesheet" href="index.css?v=2.0"/>
 <link rel="icon" type="image/png" href="favicon.png?v=3"/>
 </head>
 <body>
@@ -101,37 +101,19 @@
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <p class="modal-eyebrow" data-copy="booking.modal.eyebrow">Reserve Your Session</p>
-    <h2 data-copy="booking.modal.title">Book Now</h2>
-    <p class="modal-sub" data-copy="booking.modal.sub" data-html="true">We'll confirm your appointment within 24 hours. Or, book directly via <a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline; font-weight: 500;">WhatsApp Business (Preferred)</a></p>
-    <form id="booking-form" onsubmit="submitBookingForm(event); return false;">
-      <div class="modal-row">
-        <div class="modal-field"><label data-copy="booking.modal.first_name">First name</label><input type="text" id="bm-first-name" placeholder="" required/></div>
-        <div class="modal-field"><label data-copy="booking.modal.last_name">Last name</label><input type="text" id="bm-last-name" placeholder="" required/></div>
-      </div>
-      <div class="modal-field"><label data-copy="booking.modal.email">Email</label><input type="email" id="bm-email" placeholder="" required/></div>
-      <div class="modal-field">
-        <label data-copy="booking.modal.therapy">Therapy</label>
-        <select id="bm-therapy" required>
-          <option value="" data-copy="booking.modal.please_choose">— Please choose —</option>
-          <option data-copy="booking.modal.therapy_options.0">Single session — 60 min (CHF 120)</option>
-          <option data-copy="booking.modal.therapy_options.1">Single session — 90 min (CHF 160)</option>
-          <option data-copy="booking.modal.therapy_options.2">Pause package — 4 sessions</option>
-          <option data-copy="booking.modal.therapy_options.3">Pause package — 8 sessions</option>
-          <option data-copy="booking.modal.therapy_options.4">Move package — 4 sessions</option>
-          <option data-copy="booking.modal.therapy_options.5">Move package — 8 sessions</option>
-          <option data-copy="booking.modal.therapy_options.6">Move — The Long Game (first session)</option>
-          <option data-copy="booking.modal.therapy_options.7">Qigong session</option>
-          <option data-copy="booking.modal.therapy_options.8">Not sure — help me choose</option>
-        </select>
-      </div>
-      <div class="modal-field"><label data-copy="booking.modal.notes">Notes</label><textarea id="bm-notes" data-copy="booking.modal.notes_placeholder" placeholder="Injuries, preferences, questions…"></textarea></div>
-      <button type="submit" class="modal-submit" id="bm-submit" data-copy="booking.modal.submit">Send Request</button>
-    </form>
+  <div class="modal modal-onedoc">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <div class="modal-header">
+      <p class="modal-eyebrow" data-copy="booking.modal.eyebrow">Online Booking</p>
+      <h2 data-copy="booking.modal.title">Book Now</h2>
+      <p class="modal-sub" data-copy="booking.modal.sub" data-html="true">Book your appointment online via OneDoc below. Or, book directly via <a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline; font-weight: 500;">WhatsApp Business (Preferred)</a></p>
+    </div>
+    <div class="modal-onedoc-frame-wrap">
+      <iframe class="od-widget" id="od-widget-ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30" src="about:blank" data-src="https://www.onedoc.ch/en/widget/ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30" frameborder="0" style="width:100%;max-width:1024px;height:400px"></iframe>
+    </div>
   </div>
 </div>
+<script>var widgetConfigs=widgetConfigs||{};widgetConfigs["ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"]={},widgetConfigs["ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"].measurementIds=[],widgetConfigs["ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"].hasGoogleTagTracking=!1,widgetConfigs["ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"].hasFusedeck=!1,window.addEventListener("message",(function(e){var t=e.data["od-widget-id"],i=e.data["od-widget-height"],d=e.data["od-widget-ios"];if(t&&t in widgetConfigs&&"ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"===t){var a=document.getElementById("od-widget-"+t);i&&(a.style.height=i+"px"),!0===d&&(a.style.width="100px",a.style["min-width"]="100%",a.scrolling="no");var g=e.data["od-tracking-configs"];void 0!==g&&(widgetConfigs[t].measurementIds=g);var o=e.data["od-has-google-tag-manager"];void 0!==o&&(widgetConfigs[t].hasGoogleTagTracking=o);var f=e.data["od-has-fusedeck"];void 0!==f&&(widgetConfigs[t].hasFusedeck=f);var n=e.data.GA4;if(widgetConfigs[t].hasGoogleTagTracking&&window.dataLayer&&n){var s=Object.keys(n.properties),r={event:n.name};s.forEach((function(e){r[e]=n.properties[e]})),dataLayer.push(r)}if(widgetConfigs[t].hasFusedeck&&window.fdData&&n){var s=Object.keys(n.properties),r={event:n.name};s.forEach((function(e){r[e]=n.properties[e]})),fdData.push(r)}if(n&&void 0!==window.gtag)for(var w=0;w<widgetConfigs[t].measurementIds.length;w++){var f=widgetConfigs[t].measurementIds[w],c=(s=Object.keys(n.properties),{send_to:f});s.forEach((function(e){c[e]=n.properties[e]})),gtag("event",n.name,c)}}})),window.addEventListener("load",(function(e){for(var t=document.querySelectorAll("iframe.od-widget"),i=0;i<t.length;i++){var d=t[i];d.dataset&&d.dataset.src&&(d.src=d.dataset.src)}}));</script>
 
 <!-- ═══ PAGE BODY ═══ -->
 <main class="page-body">
@@ -601,7 +583,7 @@
   </div>
 </footer>
 
-<script src="index.js?v=1.3"></script>
+<script src="index.js?v=2.0"></script>
 </body>
 </html>
 

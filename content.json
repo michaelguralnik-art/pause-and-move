@@ -163,7 +163,7 @@
                                                                      "Qigong-Einzelsitzung",
                                                                      "Noch unsicher — bitte um Beratung"
                                                                  ],
-                                             "eyebrow":  "Reservieren Sie Ihre Behandlung",
+                                             "eyebrow":  "Online-Terminbuchung",
                                              "notes":  "Anmerkungen",
                                              "submit":  "Terminanfrage senden",
                                              "first_name":  "Vorname",
@@ -171,7 +171,7 @@
                                              "please_choose":  "— Bitte wählen —",
                                              "title":  "Jetzt buchen",
                                              "last_name":  "Nachname",
-                                             "sub":  "Wir bestätigen Ihren Termin innerhalb von 24 Stunden. Oder buchen Sie direkt über \u003ca href=\"https://wa.me/41772776050\" target=\"_blank\" rel=\"noopener\" style=\"color: var(--gold); text-decoration: underline; font-weight: 500;\"\u003eWhatsApp Business (Bevorzugt)\u003c/a\u003e"
+                                             "sub":  "Buchen Sie Ihren Termin direkt online über OneDoc. Oder buchen Sie über \u003ca href=\"https://wa.me/41772776050\" target=\"_blank\" rel=\"noopener\" style=\"color: var(--gold); text-decoration: underline; font-weight: 500;\"\u003eWhatsApp Business (Bevorzugt)\u003c/a\u003e"
                                          }
                            },
                "about":  {
@@ -677,7 +677,7 @@
                                                                      "Qigong session",
                                                                      "Not sure — help me choose"
                                                                  ],
-                                             "eyebrow":  "Reserve Your Session",
+                                             "eyebrow":  "Online Booking",
                                              "notes":  "Notes",
                                              "submit":  "Send Request",
                                              "first_name":  "First name",
@@ -685,7 +685,7 @@
                                              "please_choose":  "— Please choose —",
                                              "title":  "Book Now",
                                              "last_name":  "Last name",
-                                             "sub":  "We\u0027ll confirm your appointment within 24 hours. Or, book directly via \u003ca href=\"https://wa.me/41772776050\" target=\"_blank\" rel=\"noopener\" style=\"color: var(--gold); text-decoration: underline; font-weight: 500;\"\u003eWhatsApp Business (Preferred)\u003c/a\u003e"
+                                             "sub":  "Book your appointment online via OneDoc below. Or, book directly via \u003ca href=\"https://wa.me/41772776050\" target=\"_blank\" rel=\"noopener\" style=\"color: var(--gold); text-decoration: underline; font-weight: 500;\"\u003eWhatsApp Business (Preferred)\u003c/a\u003e"
                                          }
                            },
                "about":  {

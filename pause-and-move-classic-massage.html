@@ -338,6 +338,41 @@
       .cta-block h2 { font-size: 30px; }
       .detail-block { padding: 28px 24px; }
     }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 300;
+      background: rgba(44, 58, 42, 0.6); backdrop-filter: blur(8px);
+      align-items: center; justify-content: center; padding: 24px;
+      overflow-y: auto;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 40px 36px;
+      max-width: 960px; width: 100%; max-height: 92vh; overflow-y: auto; position: relative;
+      box-sizing: border-box; box-shadow: 0 20px 60px rgba(44, 58, 42, 0.2);
+    }
+    .modal-close {
+      position: absolute; top: 20px; right: 20px;
+      background: rgba(44, 58, 42, 0.08); border: none;
+      width: 36px; height: 36px; border-radius: 50%;
+      font-size: 16px; color: var(--text-primary); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s; z-index: 10;
+    }
+    .modal-close:hover { background: rgba(44, 58, 42, 0.16); }
+    .modal-eyebrow { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 8px; font-weight: 500; }
+    .modal h2 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; color: var(--sage-dark); margin-bottom: 6px; }
+    .modal-sub { font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6; }
+    .modal-onedoc-frame-wrap {
+      width: 100%; border-radius: var(--radius-sm); overflow: hidden; background: #ffffff; min-height: 400px;
+    }
+    .od-widget { width: 100%; border: none; display: block; background: #ffffff; }
+    @media (max-width: 768px) {
+      .modal { padding: 24px 16px; max-height: 94vh; }
+      .modal-overlay { padding: 10px; }
+    }
   </style>
 </head>
 <body>
@@ -353,7 +388,7 @@
         <li><a href="#">Tuina</a></li>
         <li><a href="#">About</a></li>
       </ul>
-      <a href="#" class="nav-cta">Book a session</a>
+      <a href="#" class="nav-cta" onclick="openModal();return false;">Book a session</a>
     </nav>
 
     <!-- HERO -->
@@ -474,9 +509,44 @@
         <h2>You deserve a proper break</h2>
         <p>Book your classic massage in Basel — and give yourself an hour just for you.</p>
       </div>
-      <a href="#" class="cta-btn">Book a session ↗</a>
+      <a href="#" class="cta-btn" onclick="openModal();return false;">Book a session ↗</a>
     </div>
 
   </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal modal-onedoc">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+      <div class="modal-header">
+        <p class="modal-eyebrow">Online Booking</p>
+        <h2>Book Now</h2>
+        <p class="modal-sub">Book your appointment online via OneDoc below. Or, book directly via <a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color: var(--terracotta); text-decoration: underline; font-weight: 500;">WhatsApp Business (Preferred)</a></p>
+      </div>
+      <div class="modal-onedoc-frame-wrap">
+        <iframe class="od-widget" id="od-widget-ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30" src="about:blank" data-src="https://www.onedoc.ch/en/widget/ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30" frameborder="0" style="width:100%;max-width:1024px;height:400px"></iframe>
+      </div>
+    </div>
+  </div>
+  <script>var widgetConfigs=widgetConfigs||{};widgetConfigs["ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"]={},widgetConfigs["ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"].measurementIds=[],widgetConfigs["ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"].hasGoogleTagTracking=!1,widgetConfigs["ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"].hasFusedeck=!1,window.addEventListener("message",(function(e){var t=e.data["od-widget-id"],i=e.data["od-widget-height"],d=e.data["od-widget-ios"];if(t&&t in widgetConfigs&&"ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"===t){var a=document.getElementById("od-widget-"+t);i&&(a.style.height=i+"px"),!0===d&&(a.style.width="100px",a.style["min-width"]="100%",a.scrolling="no");var g=e.data["od-tracking-configs"];void 0!==g&&(widgetConfigs[t].measurementIds=g);var o=e.data["od-has-google-tag-manager"];void 0!==o&&(widgetConfigs[t].hasGoogleTagTracking=o);var f=e.data["od-has-fusedeck"];void 0!==f&&(widgetConfigs[t].hasFusedeck=f);var n=e.data.GA4;if(widgetConfigs[t].hasGoogleTagTracking&&window.dataLayer&&n){var s=Object.keys(n.properties),r={event:n.name};s.forEach((function(e){r[e]=n.properties[e]})),dataLayer.push(r)}if(widgetConfigs[t].hasFusedeck&&window.fdData&&n){var s=Object.keys(n.properties),r={event:n.name};s.forEach((function(e){r[e]=n.properties[e]})),fdData.push(r)}if(n&&void 0!==window.gtag)for(var w=0;w<widgetConfigs[t].measurementIds.length;w++){var f=widgetConfigs[t].measurementIds[w],c=(s=Object.keys(n.properties),{send_to:f});s.forEach((function(e){c[e]=n.properties[e]})),gtag("event",n.name,c)}}})),window.addEventListener("load",(function(e){for(var t=document.querySelectorAll("iframe.od-widget"),i=0;i<t.length;i++){var d=t[i];d.dataset&&d.dataset.src&&(d.src=d.dataset.src)}}));</script>
+  <script>
+    function openModal() {
+      var overlay = document.getElementById('modal-overlay');
+      if (!overlay) return;
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      var iframe = overlay.querySelector('iframe.od-widget');
+      if (iframe && (!iframe.src || iframe.src === 'about:blank' || iframe.src === window.location.href)) {
+        iframe.src = iframe.dataset.src;
+      }
+    }
+    function closeModal() {
+      var overlay = document.getElementById('modal-overlay');
+      if (overlay) overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('modal-overlay').addEventListener('click', function(e){ if(e.target===this) closeModal(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+  </script>
 </body>
 </html>

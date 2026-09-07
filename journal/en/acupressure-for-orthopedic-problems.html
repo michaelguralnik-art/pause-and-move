@@ -12,7 +12,7 @@
   <!-- OpenGraph Metadata for Rich Sharing Previews -->
   <meta property="og:title" content="Acupressure for Orthopedic Problems - Pause & Move Journal" />
   <meta property="og:description" content="How acupressure eases orthopedic and musculoskeletal pain — working with the meridians and the whole body to relieve tight muscles, restore movement, and address pain at its source." />
-  <meta property="og:image" content="https://pauseandmove.ch/assets/cover-acupressure-for-orthopedic-problems.jpg" />
+  <meta property="og:image" content="assets/cover-acupressure-for-orthopedic-problems.jpg" />
   <meta property="og:url" content="https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems.html" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Pause & Move Basel" />
@@ -71,7 +71,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="../../index.css?v=1.4"/>
+<link rel="stylesheet" href="../../index.css?v=2.0"/>
 <link rel="icon" type="image/png" href="../../favicon.png?v=3"/>
 </head>
 <body>
@@ -117,37 +117,19 @@
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <p class="modal-eyebrow" data-copy="booking.modal.eyebrow">Reserve Your Session</p>
-    <h2 data-copy="booking.modal.title">Book Now</h2>
-    <p class="modal-sub" data-copy="booking.modal.sub" data-html="true">We'll confirm your appointment within 24 hours. Or, book directly via <a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline; font-weight: 500;">WhatsApp Business (Preferred)</a></p>
-    <form id="booking-form" onsubmit="submitBookingForm(event); return false;">
-      <div class="modal-row">
-        <div class="modal-field"><label data-copy="booking.modal.first_name">First name</label><input type="text" id="bm-first-name" placeholder="" required/></div>
-        <div class="modal-field"><label data-copy="booking.modal.last_name">Last name</label><input type="text" id="bm-last-name" placeholder="" required/></div>
-      </div>
-      <div class="modal-field"><label data-copy="booking.modal.email">Email</label><input type="email" id="bm-email" placeholder="" required/></div>
-      <div class="modal-field">
-        <label data-copy="booking.modal.therapy">Therapy</label>
-        <select id="bm-therapy" required>
-          <option value="" data-copy="booking.modal.please_choose">— Please choose —</option>
-          <option data-copy="booking.modal.therapy_options.0">Single session — 60 min (CHF 120)</option>
-          <option data-copy="booking.modal.therapy_options.1">Single session — 90 min (CHF 160)</option>
-          <option data-copy="booking.modal.therapy_options.2">Pause package — 4 sessions</option>
-          <option data-copy="booking.modal.therapy_options.3">Pause package — 8 sessions</option>
-          <option data-copy="booking.modal.therapy_options.4">Move package — 4 sessions</option>
-          <option data-copy="booking.modal.therapy_options.5">Move package — 8 sessions</option>
-          <option data-copy="booking.modal.therapy_options.6">Move — The Long Game (first session)</option>
-          <option data-copy="booking.modal.therapy_options.7">Qigong session</option>
-          <option data-copy="booking.modal.therapy_options.8">Not sure — help me choose</option>
-        </select>
-      </div>
-      <div class="modal-field"><label data-copy="booking.modal.notes">Notes</label><textarea id="bm-notes" data-copy="booking.modal.notes_placeholder" placeholder="Injuries, preferences, questions…"></textarea></div>
-      <button type="submit" class="modal-submit" id="bm-submit" data-copy="booking.modal.submit">Send Request</button>
-    </form>
+  <div class="modal modal-onedoc">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <div class="modal-header">
+      <p class="modal-eyebrow" data-copy="booking.modal.eyebrow">Online Booking</p>
+      <h2 data-copy="booking.modal.title">Book Now</h2>
+      <p class="modal-sub" data-copy="booking.modal.sub" data-html="true">Book your appointment online via OneDoc below. Or, book directly via <a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline; font-weight: 500;">WhatsApp Business (Preferred)</a></p>
+    </div>
+    <div class="modal-onedoc-frame-wrap">
+      <iframe class="od-widget" id="od-widget-ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30" src="about:blank" data-src="https://www.onedoc.ch/en/widget/ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30" frameborder="0" style="width:100%;max-width:1024px;height:400px"></iframe>
+    </div>
   </div>
 </div>
+<script>var widgetConfigs=widgetConfigs||{};widgetConfigs["ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"]={},widgetConfigs["ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"].measurementIds=[],widgetConfigs["ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"].hasGoogleTagTracking=!1,widgetConfigs["ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"].hasFusedeck=!1,window.addEventListener("message",(function(e){var t=e.data["od-widget-id"],i=e.data["od-widget-height"],d=e.data["od-widget-ios"];if(t&&t in widgetConfigs&&"ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30"===t){var a=document.getElementById("od-widget-"+t);i&&(a.style.height=i+"px"),!0===d&&(a.style.width="100px",a.style["min-width"]="100%",a.scrolling="no");var g=e.data["od-tracking-configs"];void 0!==g&&(widgetConfigs[t].measurementIds=g);var o=e.data["od-has-google-tag-manager"];void 0!==o&&(widgetConfigs[t].hasGoogleTagTracking=o);var f=e.data["od-has-fusedeck"];void 0!==f&&(widgetConfigs[t].hasFusedeck=f);var n=e.data.GA4;if(widgetConfigs[t].hasGoogleTagTracking&&window.dataLayer&&n){var s=Object.keys(n.properties),r={event:n.name};s.forEach((function(e){r[e]=n.properties[e]})),dataLayer.push(r)}if(widgetConfigs[t].hasFusedeck&&window.fdData&&n){var s=Object.keys(n.properties),r={event:n.name};s.forEach((function(e){r[e]=n.properties[e]})),fdData.push(r)}if(n&&void 0!==window.gtag)for(var w=0;w<widgetConfigs[t].measurementIds.length;w++){var f=widgetConfigs[t].measurementIds[w],c=(s=Object.keys(n.properties),{send_to:f});s.forEach((function(e){c[e]=n.properties[e]})),gtag("event",n.name,c)}}})),window.addEventListener("load",(function(e){for(var t=document.querySelectorAll("iframe.od-widget"),i=0;i<t.length;i++){var d=t[i];d.dataset&&d.dataset.src&&(d.src=d.dataset.src)}}));</script>
 
 <!-- ═══ PAGE BODY ═══ -->
 <main class="page-body">
@@ -231,11 +213,11 @@
           </li>
           <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-movement'">
             <span>Movement</span>
-            <span class="sidebar-category-count">3</span>
+            <span class="sidebar-category-count"></span>
           </li>
           <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-treatment_techniques'">
             <span>treatment techniques</span>
-            <span class="sidebar-category-count">6</span>
+            <span class="sidebar-category-count">5</span>
           </li>
           <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-oriental_medicine'">
             <span>oriental medicine</span>
@@ -243,7 +225,7 @@
           </li>
           <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-new_in_clinic'">
             <span>new in the clinic</span>
-            <span class="sidebar-category-count"></span>
+            <span class="sidebar-category-count">0</span>
           </li>
               </ul>
             </div>
@@ -252,13 +234,13 @@
             <div class="sidebar-widget">
               <h3 id="sidebar-recent-title">Recent Posts</h3>
               <div class="sidebar-recent-list" id="sidebar-recent">
-          <a href="connected-movement-seminar-september-26th.html" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
+          <a href="reflux-and-heartburn-relief.html" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
             <div class="sidebar-recent-thumb">
-              <img src="../../assets/cover-connected-movement-seminar-september-26th.jpg" alt="Connected Movement Seminar, September 26th" loading="lazy" />
+              <img src="../../assets/cover-reflux-and-heartburn-relief.jpg" alt="Reflux and Heartburn Relief" loading="lazy" />
             </div>
             <div class="sidebar-recent-info">
-              <h4>Connected Movement Seminar, September 26th</h4>
-              <span class="sidebar-recent-date">August 2026</span>
+              <h4>Reflux and Heartburn Relief</h4>
+              <span class="sidebar-recent-date">July 2026</span>
             </div>
           </a>
           <a href="whats-the-difference-between-massage-and-oriental-bodywork.html" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
@@ -270,12 +252,12 @@
               <span class="sidebar-recent-date">July 2026</span>
             </div>
           </a>
-          <a href="massage-oils-and-other-lubricants.html" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
+          <a href="massage-oils-and-other-lubricats.html" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
             <div class="sidebar-recent-thumb">
-              <img src="../../assets/cover-massage-oils-and-other-lubricants.jpg" alt="Massage Oils and Other Lubricants" loading="lazy" />
+              <img src="../../assets/cover-massage-oils-and-other-lubricats.jpg" alt="Massage Oils and Other Lubricats" loading="lazy" />
             </div>
             <div class="sidebar-recent-info">
-              <h4>Massage Oils and Other Lubricants</h4>
+              <h4>Massage Oils and Other Lubricats</h4>
               <span class="sidebar-recent-date">July 2026</span>
             </div>
           </a>
@@ -314,9 +296,28 @@
   function closeDrawer() { document.getElementById('nav-drawer').classList.remove('open'); }
   
   // Booking modal toggles
-  function openModal() { document.getElementById('modal-overlay').classList.add('open'); document.body.style.overflow='hidden'; }
-  function closeModal() { document.getElementById('modal-overlay').classList.remove('open'); document.body.style.overflow=''; }
-  document.getElementById('modal-overlay').addEventListener('click', function(e){ if(e.target===this) closeModal(); });
+  function openModal() {
+    var overlay = document.getElementById('modal-overlay');
+    if (!overlay) return;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    var iframe = overlay.querySelector('iframe.od-widget');
+    if (iframe) {
+      var desiredSrc = "https://www.onedoc.ch/en/widget/ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30";
+      if (!iframe.src || iframe.src === 'about:blank' || iframe.src === window.location.href) {
+        iframe.src = desiredSrc;
+      }
+    }
+  }
+  function closeModal() {
+    var overlay = document.getElementById('modal-overlay');
+    if (overlay) overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  var overlayEl = document.getElementById('modal-overlay');
+  if (overlayEl) {
+    overlayEl.addEventListener('click', function(e){ if(e.target===this) closeModal(); });
+  }
   document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeModal(); closeDrawer(); } });
   
   // Social sharing helpers
@@ -380,46 +381,8 @@
   }
   
   function submitBookingForm(event) {
-    event.preventDefault();
-    const submitBtn = document.getElementById('bm-submit');
-    const originalText = submitBtn.textContent;
-    const firstName = document.getElementById('bm-first-name').value.trim();
-    const lastName = document.getElementById('bm-last-name').value.trim();
-    const email = document.getElementById('bm-email').value.trim();
-    const therapy = document.getElementById('bm-therapy').value;
-    const notes = document.getElementById('bm-notes').value.trim();
-    const clientName = firstName + " " + lastName;
-    const lang = document.documentElement.lang;
-    submitBtn.disabled = true;
-    submitBtn.textContent = lang === 'en' ? 'Sending...' : 'Senden...';
-    fetch("https://formsubmit.co/ajax/hello@pauseandmove.ch", {
-      method: "POST",
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        _subject: "Booking Request " + clientName,
-        "Name": clientName,
-        "Email": email,
-        "Therapy": therapy,
-        "Notes": notes,
-        _captcha: "false"
-      })
-    })
-    .then(response => {
-      if (response.ok) {
-        submitBtn.textContent = lang === 'en' ? 'Sent successfully!' : 'Erfolgreich gesendet!';
-        document.getElementById('booking-form').reset();
-        setTimeout(() => {
-          closeModal();
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
-        }, 1500);
-      } else { throw new Error(); }
-    })
-    .catch(() => {
-      submitBtn.textContent = lang === 'en' ? 'Error. Try again.' : 'Fehler. Erneut versuchen.';
-      submitBtn.disabled = false;
-      setTimeout(() => { submitBtn.textContent = originalText; }, 3000);
-    });
+    if (event) event.preventDefault();
+    closeModal();
   }
 </script>
 </body>

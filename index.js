@@ -99,8 +99,28 @@ window.addEventListener('scroll', ()=>{
 }, {passive:true});
 
 // ── Modal ──
-function openModal() { document.getElementById('modal-overlay').classList.add('open'); document.body.style.overflow='hidden'; }
-function closeModal() { document.getElementById('modal-overlay').classList.remove('open'); document.body.style.overflow=''; }
+function openModal() {
+  const overlay = document.getElementById('modal-overlay');
+  if (!overlay) return;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  const iframe = overlay.querySelector('iframe.od-widget');
+  if (iframe) {
+    const lang = (typeof currentLang !== 'undefined' && currentLang) ? currentLang : 'en';
+    const desiredSrc = `https://www.onedoc.ch/${lang}/widget/ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30`;
+    if (!iframe.src || iframe.src === 'about:blank' || iframe.src === window.location.href) {
+      iframe.src = desiredSrc;
+    } else if (!iframe.src.includes(`/${lang}/widget/`)) {
+      iframe.src = desiredSrc;
+    }
+  }
+}
+function closeModal() {
+  const overlay = document.getElementById('modal-overlay');
+  if (overlay) overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
 document.getElementById('modal-overlay').addEventListener('click', function(e){ if(e.target===this) closeModal(); });
 document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeModal(); closeDrawer(); } });
 
@@ -226,6 +246,18 @@ function renderLanguage(lang) {
   
   // Render blog content
   renderBlogContent(lang);
+
+  // Update OneDoc widget language if iframe exists
+  const onedocIframe = document.querySelector('iframe.od-widget');
+  if (onedocIframe) {
+    const langSrc = `https://www.onedoc.ch/${lang}/widget/ac82c9936ce134b4d7a318a8eba07dc0eeff662478ef3eb0077fbb97c2efde30`;
+    onedocIframe.dataset.src = langSrc;
+    if (onedocIframe.src && onedocIframe.src !== 'about:blank' && !onedocIframe.src.endsWith('/about:blank')) {
+      if (!onedocIframe.src.includes(`/${lang}/widget/`)) {
+        onedocIframe.src = langSrc;
+      }
+    }
+  }
   
   // Re-run scroll animations on the newly loaded elements
   observeReveals();
@@ -597,58 +629,10 @@ window.toggleFaq = function(idx) {
   }
 };
 
-// ── Form submission handling (FormSubmit.co via AJAX) ──
+// ── Legacy Form submission stub (Booking is handled directly by OneDoc widget) ──
 function submitBookingForm(event) {
-  event.preventDefault();
-  const submitBtn = document.getElementById('bm-submit');
-  const originalText = submitBtn.textContent;
-  
-  const firstName = document.getElementById('bm-first-name').value.trim();
-  const lastName = document.getElementById('bm-last-name').value.trim();
-  const email = document.getElementById('bm-email').value.trim();
-  const therapy = document.getElementById('bm-therapy').value;
-  const notes = document.getElementById('bm-notes').value.trim();
-  
-  const clientName = firstName + " " + lastName;
-  submitBtn.disabled = true;
-  submitBtn.textContent = currentLang === 'en' ? 'Sending...' : 'Senden...';
-
-  fetch("https://formsubmit.co/ajax/hello@pauseandmove.ch", {
-    method: "POST",
-    headers: { 
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    },
-    body: JSON.stringify({
-      _subject: "Booking Request " + clientName,
-      "Name": clientName,
-      "Email": email,
-      "Therapy": therapy,
-      "Notes": notes,
-      _captcha: "false"
-    })
-  })
-  .then(response => {
-    if (response.ok) {
-      submitBtn.textContent = currentLang === 'en' ? 'Sent successfully!' : 'Erfolgreich gesendet!';
-      document.getElementById('booking-form').reset();
-      setTimeout(() => {
-        closeModal();
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-      }, 1500);
-    } else {
-      throw new Error("Form submission failed");
-    }
-  })
-  .catch(err => {
-    console.error(err);
-    submitBtn.textContent = currentLang === 'en' ? 'Error. Try again.' : 'Fehler. Erneut versuchen.';
-    submitBtn.disabled = false;
-    setTimeout(() => {
-      submitBtn.textContent = originalText;
-    }, 3000);
-  });
+  if (event) event.preventDefault();
+  closeModal();
 }
 
 function submitContactForm(event) {

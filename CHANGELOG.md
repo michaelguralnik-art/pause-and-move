@@ -4,6 +4,18 @@ This log documents all stable versions of the website.
 
 ---
 
+## [2.0] - 2026-09-07
+### Developer & Copy Updates
+- Integrated OneDoc online booking widget frame throughout the website.
+- Updated all "Book Now" and "Book a session" buttons (Navbar, Mobile Drawer, Floating button, Hero, About, Services, Modalities, and Footer) to open the OneDoc appointment booking frame.
+- Expanded modal overlay with responsive styling for OneDoc calendar presentation across desktop and mobile viewports.
+- Added dynamic English and German localization for OneDoc widget.
+- Set site and asset versions to 2.0.
+
+### Reviewer Comments / Notes
+- Replaced custom booking form with OneDoc appointment widget frame.
+
+
 ## [3.50] - 2026-08-08
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.
