@@ -140,7 +140,9 @@ foreach ($lang in $languages) {
             $shareCopy = "Copy Link"
             $subTitle = "Subscribe to our newsletter"
             $subDesc = "Get gentle reflections, wellness insights, and breathing practices straight to your inbox."
+            $subNamePlaceholder = "Your name"
             $subPlaceholder = "Your email address"
+            $subPhonePlaceholder = "Phone / SMS (optional)"
             $subSubmit = "Subscribe"
             $sidebarCategoriesTitle = "Categories"
             $sidebarRecentTitle = "Recent Posts"
@@ -152,12 +154,14 @@ foreach ($lang in $languages) {
             $shareTitle = "Diesen Artikel teilen:"
             $shareCopy = "Link kopieren"
             $subTitle = "Newsletter abonnieren"
-            $subDesc = "Erhalten Sie wertvolle Einblicke in Gesundheit, Wohlbefinden und Atemübungen direkt in Ihr Postfach."
+            $subDesc = "Erhalten Sie wertvolle Einblicke in Gesundheit, Wohlbefinden und Atem&uuml;bungen direkt in Ihr Postfach."
+            $subNamePlaceholder = "Ihr Name"
             $subPlaceholder = "Ihre E-Mail-Adresse"
+            $subPhonePlaceholder = "Telefon / SMS (optional)"
             $subSubmit = "Abonnieren"
             $sidebarCategoriesTitle = "Kategorien"
-            $sidebarRecentTitle = "Neueste Beiträge"
-            $backBtnText = "&larr; Zurück zum Journal"
+            $sidebarRecentTitle = "Neueste Beitr&auml;ge"
+            $backBtnText = "&larr; Zur&uuml;ck zum Journal"
             $readTimeSuffix = "Lesezeit"
             $categoryName = $categories.$($article.categoryId)
             if ($null -eq $categoryName) { $categoryName = $article.categoryId }
@@ -240,7 +244,10 @@ $paragraphsHtml            </div>
               <h3 id="sub-title-text">$subTitle</h3>
               <p id="sub-desc-text">$subDesc</p>
               <form class="article-subscribe-form" onsubmit="submitSubscribeForm(event); return false;">
+                <input type="text" id="sub-name" placeholder="$subNamePlaceholder" />
                 <input type="email" id="sub-email" placeholder="$subPlaceholder" required />
+                <input type="tel" id="sub-phone" placeholder="$subPhonePlaceholder" />
+                <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" tabindex="-1" autocomplete="off" />
                 <button type="submit" class="btn-gold" id="sub-submit-btn">$subSubmit</button>
               </form>
               <p class="sub-success-msg" id="sub-success-msg" style="display:none; color: var(--gold); margin-top: 16px; font-weight: 500;"></p>
@@ -405,7 +412,9 @@ $sidebarRecentHtml              </div>
   // Form submissions (Dynamic AJAX endpoints)
   function submitSubscribeForm(event) {
     event.preventDefault();
+    const nameInput = document.getElementById('sub-name');
     const emailInput = document.getElementById('sub-email');
+    const phoneInput = document.getElementById('sub-phone');
     const submitBtn = document.getElementById('sub-submit-btn');
     const successMsg = document.getElementById('sub-success-msg');
     if (!emailInput || !submitBtn || !successMsg) return;
@@ -413,17 +422,65 @@ $sidebarRecentHtml              </div>
     if (!email) return;
     submitBtn.disabled = true;
     const originalText = submitBtn.textContent;
-    const lang = document.documentElement.lang;
+    const lang = document.documentElement.lang || 'en';
     submitBtn.textContent = lang === 'en' ? 'Subscribing...' : 'Abonnieren...';
-    setTimeout(() => {
+    
+    const formData = new FormData();
+    formData.append('EMAIL', email);
+    formData.append('email_address_check', '');
+    formData.append('locale', lang);
+    
+    if (nameInput && nameInput.value.trim()) {
+      const fullName = nameInput.value.trim();
+      formData.append('LASTNAME', fullName);
+      const nameParts = fullName.split(/\s+/);
+      if (nameParts.length > 1) {
+        formData.append('FIRSTNAME', nameParts[0]);
+      } else {
+        formData.append('FIRSTNAME', fullName);
+      }
+    }
+
+    if (phoneInput && phoneInput.value.trim()) {
+      let rawPhone = phoneInput.value.trim().replace(/[\s\-\(\)\.]/g, '');
+      if (rawPhone.startsWith('+')) {
+        rawPhone = rawPhone.substring(1);
+      } else if (rawPhone.startsWith('00')) {
+        rawPhone = rawPhone.substring(2);
+      } else if (rawPhone.startsWith('0')) {
+        rawPhone = '41' + rawPhone.substring(1);
+      }
+      formData.append('SMS', rawPhone);
+      formData.append('SMS__COUNTRY_CODE', '+41');
+    }
+
+    fetch('https://ea0ee002.sibforms.com/serve/MUIFAHJandeaKxhFoJs2weLG--8wPH11W86bv-eXXsv4mJC_3nbpxCqDRFjKT0jagjcUwGv3KM0gl9a5ifXl0jgDOSjwRM02NUQVVm77kynF4gbhBVVyB0c8rc1VZAsAgUUfMET1lDTF0DLIaGAADKopqloNnFHu7bfR3g1CdsVz6w_matjJ7-y7WtHBKOO1umwigntEW-5-2VNgbA==', {
+      method: 'POST',
+      body: formData,
+      mode: 'cors'
+    })
+    .then(response => {
       submitBtn.disabled = false;
       submitBtn.textContent = originalText;
+      if (nameInput) nameInput.value = '';
       emailInput.value = '';
+      if (phoneInput) phoneInput.value = '';
       successMsg.style.display = 'block';
+      successMsg.style.color = 'var(--gold)';
       successMsg.textContent = lang === 'en'
         ? 'Thank you! You have successfully subscribed to our newsletter.'
         : 'Vielen Dank! Sie haben unseren Newsletter erfolgreich abonniert.';
-    }, 1000);
+    })
+    .catch(err => {
+      console.error('Brevo subscription error:', err);
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+      successMsg.style.display = 'block';
+      successMsg.style.color = '#ff6b6b';
+      successMsg.textContent = lang === 'en'
+        ? 'Something went wrong. Please try again.'
+        : 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.';
+    });
   }
   
   function submitBookingForm(event) {

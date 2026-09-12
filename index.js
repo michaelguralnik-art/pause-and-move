@@ -828,6 +828,23 @@ function renderBlogContent(lang) {
       }
     }
   }
+
+  // Update newsletter subscribe block on blog overview page
+  const blogSubTitle = document.getElementById('blog-sub-title-text');
+  const blogSubDesc = document.getElementById('blog-sub-desc-text');
+  const blogSubName = document.getElementById('blog-sub-name');
+  const blogSubEmail = document.getElementById('blog-sub-email');
+  const blogSubPhone = document.getElementById('blog-sub-phone');
+  const blogSubBtn = document.getElementById('blog-sub-submit-btn');
+
+  if (blogSubTitle) blogSubTitle.textContent = lang === 'en' ? 'Subscribe to our newsletter' : 'Newsletter abonnieren';
+  if (blogSubDesc) blogSubDesc.textContent = lang === 'en' 
+    ? 'Get gentle reflections, wellness insights, and breathing practices straight to your inbox.' 
+    : 'Erhalten Sie wertvolle Einblicke in Gesundheit, Wohlbefinden und Atemübungen direkt in Ihr Postfach.';
+  if (blogSubName) blogSubName.placeholder = lang === 'en' ? 'Your name' : 'Ihr Name';
+  if (blogSubEmail) blogSubEmail.placeholder = lang === 'en' ? 'Your email address' : 'Ihre E-Mail-Adresse';
+  if (blogSubPhone) blogSubPhone.placeholder = lang === 'en' ? 'Phone / SMS (optional)' : 'Telefon / SMS (optional)';
+  if (blogSubBtn) blogSubBtn.textContent = lang === 'en' ? 'Subscribe' : 'Abonnieren';
 }
 
 function selectCategory(catId) {
@@ -890,7 +907,9 @@ function showArticle(articleId, pushToHistory = true) {
   const shareCopyBtn = document.getElementById('share-copy-btn');
   const subTitleText = document.getElementById('sub-title-text');
   const subDescText = document.getElementById('sub-desc-text');
+  const subName = document.getElementById('sub-name');
   const subEmail = document.getElementById('sub-email');
+  const subPhone = document.getElementById('sub-phone');
   const subSubmitBtn = document.getElementById('sub-submit-btn');
   const sidebarCategoriesTitle = document.getElementById('sidebar-categories-title');
   const sidebarRecentTitle = document.getElementById('sidebar-recent-title');
@@ -901,7 +920,9 @@ function showArticle(articleId, pushToHistory = true) {
   if (subDescText) subDescText.textContent = currentLang === 'en' 
     ? 'Get gentle reflections, wellness insights, and breathing practices straight to your inbox.' 
     : 'Erhalten Sie wertvolle Einblicke in Gesundheit, Wohlbefinden und Atemübungen direkt in Ihr Postfach.';
+  if (subName) subName.placeholder = currentLang === 'en' ? 'Your name' : 'Ihr Name';
   if (subEmail) subEmail.placeholder = currentLang === 'en' ? 'Your email address' : 'Ihre E-Mail-Adresse';
+  if (subPhone) subPhone.placeholder = currentLang === 'en' ? 'Phone / SMS (optional)' : 'Telefon / SMS (optional)';
   if (subSubmitBtn) subSubmitBtn.textContent = currentLang === 'en' ? 'Subscribe' : 'Abonnieren';
   if (sidebarCategoriesTitle) sidebarCategoriesTitle.textContent = currentLang === 'en' ? 'Categories' : 'Kategorien';
   if (sidebarRecentTitle) sidebarRecentTitle.textContent = currentLang === 'en' ? 'Recent Posts' : 'Neueste Beiträge';
@@ -1010,9 +1031,12 @@ function copyArticleLink() {
 // ── Newsletter subscription handler ──
 function submitSubscribeForm(event) {
   event.preventDefault();
-  const emailInput = document.getElementById('sub-email');
-  const submitBtn = document.getElementById('sub-submit-btn');
-  const successMsg = document.getElementById('sub-success-msg');
+  const form = event.target || event.currentTarget;
+  const nameInput = form.querySelector('input[id*="name"], input[type="text"]:not([name="email_address_check"])');
+  const emailInput = form.querySelector('input[type="email"]');
+  const phoneInput = form.querySelector('input[type="tel"]');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const successMsg = (form.parentElement && form.parentElement.querySelector('.sub-success-msg')) || document.getElementById('sub-success-msg');
   
   if (!emailInput || !submitBtn || !successMsg) return;
   
@@ -1023,20 +1047,65 @@ function submitSubscribeForm(event) {
   const originalText = submitBtn.textContent;
   submitBtn.textContent = currentLang === 'en' ? 'Subscribing...' : 'Abonnieren...';
   
-  // Simulate API response time (1 second)
-  setTimeout(() => {
+  const formData = new FormData();
+  formData.append('EMAIL', email);
+  formData.append('email_address_check', '');
+  formData.append('locale', currentLang || 'en');
+  
+  if (nameInput && nameInput.value.trim()) {
+    const fullName = nameInput.value.trim();
+    formData.append('LASTNAME', fullName);
+    const nameParts = fullName.split(/\s+/);
+    if (nameParts.length > 1) {
+      formData.append('FIRSTNAME', nameParts[0]);
+    } else {
+      formData.append('FIRSTNAME', fullName);
+    }
+  }
+  
+  if (phoneInput && phoneInput.value.trim()) {
+    let rawPhone = phoneInput.value.trim().replace(/[\s\-\(\)\.]/g, '');
+    if (rawPhone.startsWith('+')) {
+      rawPhone = rawPhone.substring(1);
+    } else if (rawPhone.startsWith('00')) {
+      rawPhone = rawPhone.substring(2);
+    } else if (rawPhone.startsWith('0')) {
+      // Default to Swiss country code 41 for standard local mobile numbers like 079...
+      rawPhone = '41' + rawPhone.substring(1);
+    }
+    formData.append('SMS', rawPhone);
+    formData.append('SMS__COUNTRY_CODE', '+41');
+  }
+
+  fetch('https://ea0ee002.sibforms.com/serve/MUIFAHJandeaKxhFoJs2weLG--8wPH11W86bv-eXXsv4mJC_3nbpxCqDRFjKT0jagjcUwGv3KM0gl9a5ifXl0jgDOSjwRM02NUQVVm77kynF4gbhBVVyB0c8rc1VZAsAgUUfMET1lDTF0DLIaGAADKopqloNnFHu7bfR3g1CdsVz6w_matjJ7-y7WtHBKOO1umwigntEW-5-2VNgbA==', {
+    method: 'POST',
+    body: formData,
+    mode: 'cors'
+  })
+  .then(response => {
     submitBtn.disabled = false;
     submitBtn.textContent = originalText;
-    
-    // Clear input
+    if (nameInput) nameInput.value = '';
     emailInput.value = '';
+    if (phoneInput) phoneInput.value = '';
     
-    // Show success message
     successMsg.style.display = 'block';
+    successMsg.style.color = 'var(--gold)';
     successMsg.textContent = currentLang === 'en'
       ? 'Thank you! You have successfully subscribed to our newsletter.'
       : 'Vielen Dank! Sie haben unseren Newsletter erfolgreich abonniert.';
-  }, 1000);
+  })
+  .catch(err => {
+    console.error('Brevo subscription error:', err);
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+    
+    successMsg.style.display = 'block';
+    successMsg.style.color = '#ff6b6b';
+    successMsg.textContent = currentLang === 'en'
+      ? 'Something went wrong. Please try again.'
+      : 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.';
+  });
 }
 
 // ── Sidebar Category Navigation helper ──

@@ -4,6 +4,18 @@ This log documents all stable versions of the website.
 
 ---
 
+## [2.1] - 2026-09-12
+### Developer & Copy Updates
+- Integrated Brevo (Sendinblue) newsletter subscription with seamless AJAX endpoint handling.
+- Added Name field at the top of the newsletter subscription form, mapped to Brevo's LASTNAME and FIRSTNAME contact attributes.
+- Added optional Phone / SMS field to newsletter subscription form alongside email input.
+- Added responsive layout and multilingual support (EN/DE) for the name field, phone field, and subscribe feedback.
+- Updated blog generator (`generate_blog.ps1`) and pre-rendered all static journal articles with Brevo integration, name field, and phone input.
+
+### Reviewer Comments / Notes
+- Connected Journal Subscribe button to Brevo with name and optional phone/SMS input.
+
+
 ## [2.0] - 2026-09-07
 ### Developer & Copy Updates
 - Integrated OneDoc online booking widget frame throughout the website.

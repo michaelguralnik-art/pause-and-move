@@ -55,7 +55,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="index.css?v=2.0"/>
+<link rel="stylesheet" href="index.css?v=2.1"/>
 <link rel="icon" type="image/png" href="favicon.png?v=3"/>
 </head>
 <body>
@@ -394,6 +394,20 @@
 
     <!-- Grid Articles Container -->
     <div class="blog-grid" id="blog-grid"></div>
+
+    <!-- Newsletter Subscribe Block in Journal Section -->
+    <div class="article-subscribe-block" style="margin-top: 64px;">
+      <h3 id="blog-sub-title-text">Subscribe to our newsletter</h3>
+      <p id="blog-sub-desc-text">Get gentle reflections, wellness insights, and breathing practices straight to your inbox.</p>
+      <form class="article-subscribe-form" onsubmit="submitSubscribeForm(event); return false;">
+        <input type="text" id="blog-sub-name" placeholder="Your name" />
+        <input type="email" id="blog-sub-email" placeholder="Your email address" required />
+        <input type="tel" id="blog-sub-phone" placeholder="Phone / SMS (optional)" />
+        <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" tabindex="-1" autocomplete="off" />
+        <button type="submit" class="btn-gold" id="blog-sub-submit-btn">Subscribe</button>
+      </form>
+      <p class="sub-success-msg" id="blog-sub-success-msg" style="display:none; color: var(--gold); margin-top: 16px; font-weight: 500;"></p>
+    </div>
   </div>
 
 </section>
@@ -436,7 +450,10 @@
           <h3 id="sub-title-text">Subscribe to our newsletter</h3>
           <p id="sub-desc-text">Get gentle reflections, wellness insights, and breathing practices straight to your inbox.</p>
           <form class="article-subscribe-form" onsubmit="submitSubscribeForm(event); return false;">
+            <input type="text" id="sub-name" placeholder="Your name" />
             <input type="email" id="sub-email" placeholder="Your email address" required />
+            <input type="tel" id="sub-phone" placeholder="Phone / SMS (optional)" />
+            <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" tabindex="-1" autocomplete="off" />
             <button type="submit" class="btn-gold" id="sub-submit-btn">Subscribe</button>
           </form>
           <p class="sub-success-msg" id="sub-success-msg" style="display:none; color: var(--gold); margin-top: 16px; font-weight: 500;"></p>
@@ -583,7 +600,7 @@
   </div>
 </footer>
 
-<script src="index.js?v=2.0"></script>
+<script src="index.js?v=2.1"></script>
 </body>
 </html>
 
