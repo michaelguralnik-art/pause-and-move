@@ -4,6 +4,25 @@ This log documents all stable versions of the website.
 
 ---
 
+## [2.2] - 2026-09-28
+### Developer & Copy Updates
+- Comprehensive Technical & On-Page SEO Optimization for pauseandmove.ch.
+- Updated `generate_blog.ps1` to produce Cloudflare Pages extensionless clean URLs across all canonical, alternate hreflang, and OpenGraph link tags.
+- Configured absolute OpenGraph image URLs (`https://pauseandmove.ch/...`) across all pre-rendered journal articles.
+- Corrected article typo `massage-oils-and-other-lubricats` to `massage-oils-and-other-lubricants` across `blog.json`, `index.js`, and `generate_blog.ps1`, generating backwards-compatible redirect stubs.
+- Updated `sitemap.xml` generation to include German homepage (`/de/`), clean classic massage URL, bidirectional hreflang alternates (`en`, `de`, `x-default`), and dynamic inclusion of all published articles including Connected Movement Seminar.
+- Enhanced `index.html` (EN) and `de/index.html` (DE) with canonical, hreflang, OpenGraph, and Twitter card metadata.
+- Localized German homepage metadata with German title, meta description, and social preview tags.
+- Cleaned heading structure across `index.html` and `de/index.html` by ensuring a single `<h1>` per page and semantically demoting section headers to `<h2>`.
+- Made navigation menu and mobile drawer links crawlable with proper anchor href targets.
+- Added `loading="lazy"` to below-the-fold hero and band images.
+- Added full meta description, OpenGraph metadata, and keyword-optimized `<h1>` to `pause-and-move-classic-massage.html`.
+- Updated `start_preview.ps1` local preview server to transparently support extensionless URLs.
+
+### Reviewer Comments / Notes
+- Comprehensive technical SEO overhaul, sitemap rebuild, and clean URL standardization.
+
+
 ## [2.1] - 2026-09-12
 ### Developer & Copy Updates
 - Integrated Brevo (Sendinblue) newsletter subscription with seamless AJAX endpoint handling.

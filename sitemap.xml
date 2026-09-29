@@ -4,94 +4,114 @@
     <loc>https://pauseandmove.ch/</loc>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pauseandmove.ch/" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/pause-and-move-classic-massage.html</loc>
+    <loc>https://pauseandmove.ch/de/</loc>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pauseandmove.ch/" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/pause-and-move-classic-massage</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/en/shoulders-stress.html</loc>
+    <loc>https://pauseandmove.ch/journal/en/shoulders-stress</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/shoulders-stress.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/shoulders-stress.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/shoulders-stress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/shoulders-stress" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/de/shoulders-stress.html</loc>
+    <loc>https://pauseandmove.ch/journal/de/shoulders-stress</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/shoulders-stress.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/shoulders-stress.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/shoulders-stress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/shoulders-stress" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/en/what-does-my-sugar-intake-have-to-do-with-my-pain.html</loc>
+    <loc>https://pauseandmove.ch/journal/en/what-does-my-sugar-intake-have-to-do-with-my-pain</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/what-does-my-sugar-intake-have-to-do-with-my-pain.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/what-does-my-sugar-intake-have-to-do-with-my-pain.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/what-does-my-sugar-intake-have-to-do-with-my-pain" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/what-does-my-sugar-intake-have-to-do-with-my-pain" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/de/what-does-my-sugar-intake-have-to-do-with-my-pain.html</loc>
+    <loc>https://pauseandmove.ch/journal/de/what-does-my-sugar-intake-have-to-do-with-my-pain</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/what-does-my-sugar-intake-have-to-do-with-my-pain.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/what-does-my-sugar-intake-have-to-do-with-my-pain.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/what-does-my-sugar-intake-have-to-do-with-my-pain" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/what-does-my-sugar-intake-have-to-do-with-my-pain" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/en/reflux-and-heartburn-relief.html</loc>
+    <loc>https://pauseandmove.ch/journal/en/reflux-and-heartburn-relief</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/reflux-and-heartburn-relief.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/reflux-and-heartburn-relief.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/reflux-and-heartburn-relief" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/reflux-and-heartburn-relief" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/de/reflux-and-heartburn-relief.html</loc>
+    <loc>https://pauseandmove.ch/journal/de/reflux-and-heartburn-relief</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/reflux-and-heartburn-relief.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/reflux-and-heartburn-relief.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/reflux-and-heartburn-relief" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/reflux-and-heartburn-relief" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems.html</loc>
+    <loc>https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/acupressure-for-orthopedic-problems.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/acupressure-for-orthopedic-problems" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/de/acupressure-for-orthopedic-problems.html</loc>
+    <loc>https://pauseandmove.ch/journal/de/acupressure-for-orthopedic-problems</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/acupressure-for-orthopedic-problems.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/acupressure-for-orthopedic-problems" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/en/about-meridians.html</loc>
+    <loc>https://pauseandmove.ch/journal/en/about-meridians</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/about-meridians.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/about-meridians.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/about-meridians" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/about-meridians" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/de/about-meridians.html</loc>
+    <loc>https://pauseandmove.ch/journal/de/about-meridians</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/about-meridians.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/about-meridians.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/about-meridians" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/about-meridians" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/en/whats-the-difference-between-massage-and-oriental-bodywork.html</loc>
+    <loc>https://pauseandmove.ch/journal/en/whats-the-difference-between-massage-and-oriental-bodywork</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/whats-the-difference-between-massage-and-oriental-bodywork.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/whats-the-difference-between-massage-and-oriental-bodywork.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/whats-the-difference-between-massage-and-oriental-bodywork" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/whats-the-difference-between-massage-and-oriental-bodywork" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/de/whats-the-difference-between-massage-and-oriental-bodywork.html</loc>
+    <loc>https://pauseandmove.ch/journal/de/whats-the-difference-between-massage-and-oriental-bodywork</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/whats-the-difference-between-massage-and-oriental-bodywork.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/whats-the-difference-between-massage-and-oriental-bodywork.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/whats-the-difference-between-massage-and-oriental-bodywork" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/whats-the-difference-between-massage-and-oriental-bodywork" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/en/massage-oils-and-other-lubricats.html</loc>
+    <loc>https://pauseandmove.ch/journal/en/massage-oils-and-other-lubricants</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/massage-oils-and-other-lubricats.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/massage-oils-and-other-lubricats.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/massage-oils-and-other-lubricants" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/massage-oils-and-other-lubricants" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/journal/de/massage-oils-and-other-lubricats.html</loc>
+    <loc>https://pauseandmove.ch/journal/de/massage-oils-and-other-lubricants</loc>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/massage-oils-and-other-lubricats.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/massage-oils-and-other-lubricats.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/massage-oils-and-other-lubricants" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/massage-oils-and-other-lubricants" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/en/connected-movement-seminar-september-26th</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/connected-movement-seminar-september-26th" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/connected-movement-seminar-september-26th" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/journal/de/connected-movement-seminar-september-26th</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/connected-movement-seminar-september-26th" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/connected-movement-seminar-september-26th" />
   </url>
 </urlset>

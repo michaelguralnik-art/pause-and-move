@@ -5,15 +5,15 @@
   <meta name="description" content="How acupressure eases orthopedic and musculoskeletal pain — working with the meridians and the whole body to relieve tight muscles, restore movement, and address pain at its source." />
   <meta name="keywords" content="acupressure, orthopedic pain, meridian therapy, musculoskeletal pain, Shiatsu, muscle tension, stress and pain, manual therapy" />
   <meta name="author" content="Michael Guralnik" />
-  <link rel="canonical" href="https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems.html" />
-  <link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems.html" />
-  <link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/acupressure-for-orthopedic-problems.html" />
+  <link rel="canonical" href="https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems" />
+  <link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems" />
+  <link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/acupressure-for-orthopedic-problems" />
   
   <!-- OpenGraph Metadata for Rich Sharing Previews -->
   <meta property="og:title" content="Acupressure for Orthopedic Problems - Pause & Move Journal" />
   <meta property="og:description" content="How acupressure eases orthopedic and musculoskeletal pain — working with the meridians and the whole body to relieve tight muscles, restore movement, and address pain at its source." />
-  <meta property="og:image" content="assets/cover-acupressure-for-orthopedic-problems.jpg" />
-  <meta property="og:url" content="https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems.html" />
+  <meta property="og:image" content="https://pauseandmove.ch/assets/cover-acupressure-for-orthopedic-problems.jpg" />
+  <meta property="og:url" content="https://pauseandmove.ch/journal/en/acupressure-for-orthopedic-problems" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Pause & Move Basel" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -22,7 +22,25 @@
 
 
 
+
+
+
+
 <meta name="author" content="Michael Guralnik" />
+
+<!-- OpenGraph Metadata -->
+
+
+
+
+
+
+
+<!-- Twitter Card Metadata -->
+
+
+
+
 
 <!-- Structured Data for Local SEO (Google Schema) -->
 <script type="application/ld+json">
@@ -81,16 +99,16 @@
   <div class="nav-inner">
     <div class="nav-logo" onclick="window.location.href='../../index.html#home'" role="link" tabindex="0" data-copy="nav.logo"><img src="../../assets/logo.png" alt="Pause &amp; Move" class="logo-img"></div>
     <ul class="nav-links">
-      <li><a href="../../index.html#home" data-copy="nav.links.home">Home</a></li>
-      <li><a href="../../index.html#about" data-copy="nav.links.about">About</a></li>
-      <li><a href="../../index.html#services" data-copy="nav.links.services">Services</a></li>
-      <li><a href="../../index.html#modalities" data-copy="nav.links.modalities">Modalities</a></li>
-      <li><a href="../../index.html#blog" data-copy="nav.links.blog">Journal</a></li>
-      <li><a href="#" onclick="showSection('faq');return false;" data-copy="nav.links.faq">FAQ</a></li>
-      <li><a href="../../index.html#contact" data-copy="nav.links.contact">Contact</a></li>
+      <li><a href="#home" onclick="showSection('home');return false;" data-copy="nav.links.home">Home</a></li>
+      <li><a href="#about" onclick="showSection('about');return false;" data-copy="nav.links.about">About</a></li>
+      <li><a href="#services" onclick="showSection('services');return false;" data-copy="nav.links.services">Services</a></li>
+      <li><a href="#modalities" onclick="showSection('modalities');return false;" data-copy="nav.links.modalities">Modalities</a></li>
+      <li><a href="#blog" onclick="clickJournalLink();return false;" data-copy="nav.links.blog">Journal</a></li>
+      <li><a href="#faq" onclick="showSection('faq');return false;" data-copy="nav.links.faq">FAQ</a></li>
+      <li><a href="#contact" onclick="showSection('contact');return false;" data-copy="nav.links.contact">Contact</a></li>
     </ul>
     <div style="display:flex; align-items:center; gap:20px;">
-      <a class="nav-lang-toggle" href="../de/acupressure-for-orthopedic-problems.html" style="text-decoration:none; display:flex; align-items:center;">DE</a>
+      <a class="nav-lang-toggle" href="../de/acupressure-for-orthopedic-problems" style="text-decoration:none; display:flex; align-items:center;">DE</a>
       <button class="nav-cta" onclick="openModal()" data-copy="nav.cta">Book Now</button>
     </div>
     <button class="nav-hamburger" onclick="toggleDrawer()" aria-label="Menu">
@@ -101,13 +119,13 @@
 
 <!-- MOBILE DRAWER -->
 <div class="nav-drawer" id="nav-drawer">
-  <a href="#" onclick="showSection('home');closeDrawer();return false;" data-copy="nav.links.home">Home</a>
-  <a href="#" onclick="showSection('about');closeDrawer();return false;" data-copy="nav.links.about">About</a>
-  <a href="#" onclick="showSection('services');closeDrawer();return false;" data-copy="nav.links.services">Services</a>
-  <a href="#" onclick="showSection('modalities');closeDrawer();return false;" data-copy="nav.links.modalities">Modalities</a>
-  <a href="#" onclick="clickJournalLink();closeDrawer();return false;" data-copy="nav.links.blog">Journal</a>
-  <a href="#" onclick="showSection('faq');closeDrawer();return false;" data-copy="nav.links.faq">FAQ</a>
-  <a href="#" onclick="showSection('contact');closeDrawer();return false;" data-copy="nav.links.contact">Contact</a>
+  <a href="#home" onclick="showSection('home');closeDrawer();return false;" data-copy="nav.links.home">Home</a>
+  <a href="#about" onclick="showSection('about');closeDrawer();return false;" data-copy="nav.links.about">About</a>
+  <a href="#services" onclick="showSection('services');closeDrawer();return false;" data-copy="nav.links.services">Services</a>
+  <a href="#modalities" onclick="showSection('modalities');closeDrawer();return false;" data-copy="nav.links.modalities">Modalities</a>
+  <a href="#blog" onclick="clickJournalLink();closeDrawer();return false;" data-copy="nav.links.blog">Journal</a>
+  <a href="#faq" onclick="showSection('faq');closeDrawer();return false;" data-copy="nav.links.faq">FAQ</a>
+  <a href="#contact" onclick="showSection('contact');closeDrawer();return false;" data-copy="nav.links.contact">Contact</a>
   <a href="#" onclick="closeDrawer();toggleLanguage();return false;" class="nav-lang-toggle" style="border-bottom:1px solid var(--border); padding:12px 0;">DE</a>
   <a href="#" class="drawer-cta" onclick="closeDrawer();openModal();return false;" data-copy="nav.contact_cta">Book a Session</a>
 </div>
@@ -216,11 +234,11 @@
           </li>
           <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-movement'">
             <span>Movement</span>
-            <span class="sidebar-category-count"></span>
+            <span class="sidebar-category-count">3</span>
           </li>
           <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-treatment_techniques'">
             <span>treatment techniques</span>
-            <span class="sidebar-category-count">5</span>
+            <span class="sidebar-category-count">6</span>
           </li>
           <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-oriental_medicine'">
             <span>oriental medicine</span>
@@ -228,7 +246,7 @@
           </li>
           <li class="sidebar-category-item" onclick="window.location.href='../../index.html#blog-new_in_clinic'">
             <span>new in the clinic</span>
-            <span class="sidebar-category-count">0</span>
+            <span class="sidebar-category-count"></span>
           </li>
               </ul>
             </div>
@@ -237,16 +255,16 @@
             <div class="sidebar-widget">
               <h3 id="sidebar-recent-title">Recent Posts</h3>
               <div class="sidebar-recent-list" id="sidebar-recent">
-          <a href="reflux-and-heartburn-relief.html" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
+          <a href="connected-movement-seminar-september-26th" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
             <div class="sidebar-recent-thumb">
-              <img src="../../assets/cover-reflux-and-heartburn-relief.jpg" alt="Reflux and Heartburn Relief" loading="lazy" />
+              <img src="../../assets/cover-connected-movement-seminar-september-26th.jpg" alt="Connected Movement Seminar, September 26th" loading="lazy" />
             </div>
             <div class="sidebar-recent-info">
-              <h4>Reflux and Heartburn Relief</h4>
-              <span class="sidebar-recent-date">July 2026</span>
+              <h4>Connected Movement Seminar, September 26th</h4>
+              <span class="sidebar-recent-date">August 2026</span>
             </div>
           </a>
-          <a href="whats-the-difference-between-massage-and-oriental-bodywork.html" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
+          <a href="whats-the-difference-between-massage-and-oriental-bodywork" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
             <div class="sidebar-recent-thumb">
               <img src="../../assets/cover-whats-the-difference-between-massage-and-oriental-bodywork.jpg" alt="What's the Difference Between Massage and Oriental Bodywork" loading="lazy" />
             </div>
@@ -255,12 +273,12 @@
               <span class="sidebar-recent-date">July 2026</span>
             </div>
           </a>
-          <a href="massage-oils-and-other-lubricats.html" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
+          <a href="massage-oils-and-other-lubricants" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
             <div class="sidebar-recent-thumb">
-              <img src="../../assets/cover-massage-oils-and-other-lubricats.jpg" alt="Massage Oils and Other Lubricats" loading="lazy" />
+              <img src="../../assets/cover-massage-oils-and-other-lubricants.jpg" alt="Massage Oils and Other Lubricants" loading="lazy" />
             </div>
             <div class="sidebar-recent-info">
-              <h4>Massage Oils and Other Lubricats</h4>
+              <h4>Massage Oils and Other Lubricants</h4>
               <span class="sidebar-recent-date">July 2026</span>
             </div>
           </a>

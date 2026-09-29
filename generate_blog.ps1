@@ -189,7 +189,7 @@ foreach ($lang in $languages) {
         $sidebarRecentHtml = ""
         for ($i = 0; $i -lt $recentLimit; $i++) {
             $rec = $recentArticles[$i]
-            $sidebarRecentHtml += "          <a href=`"$($rec.id).html`" class=`"sidebar-recent-item`" style=`"text-decoration: none; color: inherit; display: flex;`">`n"
+            $sidebarRecentHtml += "          <a href=`"$($rec.id)`" class=`"sidebar-recent-item`" style=`"text-decoration: none; color: inherit; display: flex;`">`n"
             $sidebarRecentHtml += "            <div class=`"sidebar-recent-thumb`">`n"
             $sidebarRecentHtml += "              <img src=`"$($rec.image)`" alt=`"$($rec.title)`" loading=`"lazy`" />`n"
             $sidebarRecentHtml += "            </div>`n"
@@ -299,14 +299,15 @@ $sidebarRecentHtml              </div>
         
         # 4. Replace language toggles: DE / EN point to each other's static article version directly
         $otherLang = if ($lang -eq "en") { "de" } else { "en" }
-        $pageHtml = $pageHtml -replace '<button class="nav-lang-toggle" onclick="toggleLanguage\(\)">[A-Z]{2}</button>', "<a class=`"nav-lang-toggle`" href=`"../$otherLang/$($article.id).html`" style=`"text-decoration:none; display:flex; align-items:center;`">$($otherLang.ToUpper())</a>"
+        $pageHtml = $pageHtml -replace '<button class="nav-lang-toggle" onclick="toggleLanguage\(\)">[A-Z]{2}</button>', "<a class=`"nav-lang-toggle`" href=`"../$otherLang/$($article.id)`" style=`"text-decoration:none; display:flex; align-items:center;`">$($otherLang.ToUpper())</a>"
         
         # 5. Inject SEO Head elements (title, meta description, keywords, OpenGraph, hreflang)
         $seoTitle = "$($article.title) - Pause & Move Journal"
         $seoDesc = $article.abstract
         $seoKeywords = ($article.keywords -join ", ")
-        $articleUrl = "https://pauseandmove.ch/journal/$lang/$($article.id).html"
-        $altArticleUrl = "https://pauseandmove.ch/journal/$otherLang/$($article.id).html"
+        $articleUrl = "https://pauseandmove.ch/journal/$lang/$($article.id)"
+        $altArticleUrl = "https://pauseandmove.ch/journal/$otherLang/$($article.id)"
+        $ogImageUrl = if ($article.image -match '^https?://') { $article.image } else { "https://pauseandmove.ch/" + $article.image.TrimStart('/') }
         
         $seoHeadTags = @"
   <title>$seoTitle</title>
@@ -320,23 +321,28 @@ $sidebarRecentHtml              </div>
   <!-- OpenGraph Metadata for Rich Sharing Previews -->
   <meta property="og:title" content="$seoTitle" />
   <meta property="og:description" content="$seoDesc" />
-  <meta property="og:image" content="$($article.image)" />
+  <meta property="og:image" content="$ogImageUrl" />
   <meta property="og:url" content="$articleUrl" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Pause & Move Basel" />
   <meta name="twitter:card" content="summary_large_image" />
 "@
         
-        # Replace template titles, descriptions and keywords
+        # Replace template titles, descriptions, keywords, canonical, alternate links, and OpenGraph/Twitter tags
         $pageHtml = $pageHtml -replace '(?s)<title>.*?</title>', ""
         $pageHtml = $pageHtml -replace '<meta name="description"[^>]*>', ""
         $pageHtml = $pageHtml -replace '<meta name="keywords"[^>]*>', ""
+        $pageHtml = $pageHtml -replace '<link rel="canonical"[^>]*>', ""
+        $pageHtml = $pageHtml -replace '<link rel="alternate"[^>]*>', ""
+        $pageHtml = $pageHtml -replace '<meta property="og:[^"]*"[^>]*>', ""
+        $pageHtml = $pageHtml -replace '<meta name="twitter:[^"]*"[^>]*>', ""
         
         # Inject our comprehensive SEO head tags right after <head>
         $pageHtml = $pageHtml -replace '<head>', "<head>`n$seoHeadTags"
         
-        # 6. Adjust OneDoc widget language for German articles
+        # 6. Adjust language attributes and OneDoc widget for German articles
         if ($lang -eq "de") {
+            $pageHtml = $pageHtml -replace '<html lang="en">', '<html lang="de">'
             $pageHtml = $pageHtml -replace 'data-src="https://www.onedoc.ch/en/widget/', 'data-src="https://www.onedoc.ch/de/widget/'
         }
         
@@ -495,6 +501,27 @@ $sidebarRecentHtml              </div>
         # Write pre-rendered file to disk (forcing UTF-8 encoding)
         $outPath = if ($lang -eq "en") { Join-Path $enDir "$($article.id).html" } else { Join-Path $deDir "$($article.id).html" }
         [System.IO.File]::WriteAllText($outPath, $pageHtml, [System.Text.Encoding]::UTF8)
+
+        # Legacy redirect for fixed typo URL
+        if ($article.id -eq "massage-oils-and-other-lubricants") {
+            $legacyOutPath = if ($lang -eq "en") { Join-Path $enDir "massage-oils-and-other-lubricats.html" } else { Join-Path $deDir "massage-oils-and-other-lubricats.html" }
+            $cleanTargetUrl = "https://pauseandmove.ch/journal/$lang/massage-oils-and-other-lubricants"
+            $legacyHtml = @"
+<!DOCTYPE html>
+<html lang="$lang">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="refresh" content="0; url=$cleanTargetUrl" />
+  <link rel="canonical" href="$cleanTargetUrl" />
+  <title>Redirecting...</title>
+</head>
+<body>
+  <p>Redirecting to <a href="$cleanTargetUrl">$cleanTargetUrl</a>...</p>
+</body>
+</html>
+"@
+            [System.IO.File]::WriteAllText($legacyOutPath, $legacyHtml, [System.Text.Encoding]::UTF8)
+        }
     }
 }
 
@@ -510,10 +537,18 @@ $sitemapXml = @"
     <loc>https://pauseandmove.ch/</loc>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pauseandmove.ch/" />
   </url>
   <url>
-    <loc>https://pauseandmove.ch/pause-and-move-classic-massage.html</loc>
+    <loc>https://pauseandmove.ch/de/</loc>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pauseandmove.ch/" />
+  </url>
+  <url>
+    <loc>https://pauseandmove.ch/pause-and-move-classic-massage</loc>
     <priority>0.8</priority>
   </url>
 "@
@@ -521,8 +556,11 @@ $sitemapXml = @"
 # Loop over articles
 foreach ($article in ($blogData.en.articles | Where-Object { $null -eq $_.published -or $_.published -ne $false })) {
     $articleId = $article.id
-    $enUrl = "https://pauseandmove.ch/journal/en/$articleId.html"
-    $deUrl = "https://pauseandmove.ch/journal/de/$articleId.html"
+    if ($articleId -eq "massage-oils-and-other-lubricats") {
+        $articleId = "massage-oils-and-other-lubricants"
+    }
+    $enUrl = "https://pauseandmove.ch/journal/en/$articleId"
+    $deUrl = "https://pauseandmove.ch/journal/de/$articleId"
     
     $sitemapXml += "`n  <url>"
     $sitemapXml += "`n    <loc>$enUrl</loc>"

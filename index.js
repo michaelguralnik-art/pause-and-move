@@ -163,7 +163,8 @@ Promise.all([
     // Initial routing based on hash
     const hash = window.location.hash.replace('#', '') || 'home';
     if (hash.startsWith('article-')) {
-      const articleId = hash.replace('article-', '');
+      let articleId = hash.replace('article-', '');
+      if (articleId === 'massage-oils-and-other-lubricats') articleId = 'massage-oils-and-other-lubricants';
       showArticle(articleId, false);
     } else if (hash.startsWith('blog-')) {
       const catId = hash.replace('blog-', '');
@@ -743,18 +744,18 @@ function renderBlogContent(lang) {
       featuredContainer.style.display = 'grid';
       const featuredArticle = articles[0];
       featuredContainer.innerHTML = `
-        <a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" class="blog-featured-img" style="display:block;">
+        <a href="journal/${lang}/${featuredArticle.id}" onclick="showArticle('${featuredArticle.id}'); return false;" class="blog-featured-img" style="display:block;">
           <img src="${featuredArticle.image}" alt="${featuredArticle.title}" loading="lazy"/>
         </a>
         <div class="blog-featured-body">
           <span class="blog-featured-label">${lang === 'en' ? 'Featured Post' : 'Hervorgehobener Beitrag'}</span>
-          <h2 style="font-style:italic;"><a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" style="color: inherit; text-decoration: none;">${featuredArticle.title}</a></h2>
+          <h2 style="font-style:italic;"><a href="journal/${lang}/${featuredArticle.id}" onclick="showArticle('${featuredArticle.id}'); return false;" style="color: inherit; text-decoration: none;">${featuredArticle.title}</a></h2>
           <p>${featuredArticle.abstract}</p>
           <div class="blog-featured-meta" style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--muted); margin-bottom: 24px;">
             <span>${lang === 'en' ? 'By' : 'Von'} ${featuredArticle.author || 'Michael Guralnik'} &middot; ${featuredArticle.date}</span>
             <span style="font-weight: 600; text-transform: uppercase; color: var(--gold); letter-spacing: 0.08em; font-size: 11px;">${featuredArticle.readTime}</span>
           </div>
-          <a href="journal/${lang}/${featuredArticle.id}.html" onclick="showArticle('${featuredArticle.id}'); return false;" class="btn-text" style="text-decoration: none;">
+          <a href="journal/${lang}/${featuredArticle.id}" onclick="showArticle('${featuredArticle.id}'); return false;" class="btn-text" style="text-decoration: none;">
             ${lang === 'en' ? 'Read article' : 'Artikel lesen'} &rarr;
           </a>
         </div>
@@ -768,7 +769,7 @@ function renderBlogContent(lang) {
         gridContainer.innerHTML = gridArticles.map((article, idx) => {
           const categoryName = categories[article.categoryId] || article.categoryId;
           return `
-            <a href="journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
+            <a href="journal/${lang}/${article.id}" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
               <div class="blog-thumb">
                 <img src="${article.image}" alt="${article.title}" loading="lazy"/>
               </div>
@@ -803,7 +804,7 @@ function renderBlogContent(lang) {
         gridContainer.innerHTML = filteredArticles.map((article, idx) => {
           const categoryName = categories[article.categoryId] || article.categoryId;
           return `
-            <a href="journal/${lang}/${article.id}.html" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
+            <a href="journal/${lang}/${article.id}" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
               <div class="blog-thumb">
                 <img src="${article.image}" alt="${article.title}" loading="lazy"/>
               </div>
@@ -859,6 +860,7 @@ function selectCategory(catId) {
 }
 
 function showArticle(articleId, pushToHistory = true) {
+  if (articleId === 'massage-oils-and-other-lubricats') articleId = 'massage-oils-and-other-lubricants';
   if (!siteBlogData || !siteBlogData[currentLang]) return;
   const blogData = siteBlogData[currentLang];
   const article = blogData.articles.find(a => a.id === articleId && a.published !== false);
@@ -963,7 +965,7 @@ function showArticle(articleId, pushToHistory = true) {
     const recentList = otherArticles.length > 0 ? otherArticles.slice(0, 3) : publishedArticles.slice(0, 3);
     recentContainer.innerHTML = recentList.map(rec => {
       return `
-        <a href="journal/${currentLang}/${rec.id}.html" onclick="showArticle('${rec.id}'); return false;" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
+        <a href="journal/${currentLang}/${rec.id}" onclick="showArticle('${rec.id}'); return false;" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
           <div class="sidebar-recent-thumb">
             <img src="${rec.image}" alt="${rec.title}" loading="lazy"/>
           </div>
