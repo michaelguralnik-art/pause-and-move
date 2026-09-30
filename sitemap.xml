@@ -102,16 +102,4 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/massage-oils-and-other-lubricants" />
     <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/massage-oils-and-other-lubricants" />
   </url>
-  <url>
-    <loc>https://pauseandmove.ch/journal/en/connected-movement-seminar-september-26th</loc>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/connected-movement-seminar-september-26th" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/connected-movement-seminar-september-26th" />
-  </url>
-  <url>
-    <loc>https://pauseandmove.ch/journal/de/connected-movement-seminar-september-26th</loc>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/journal/en/connected-movement-seminar-september-26th" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/journal/de/connected-movement-seminar-september-26th" />
-  </url>
 </urlset>
