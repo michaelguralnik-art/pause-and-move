@@ -1,11 +1,16 @@
 # generate_blog.ps1
 # Automates the pre-rendering of blog posts for Pause & Move website (Bilingual & SEO optimized)
 
+param(
+    [switch]$IncludeDrafts
+)
+
 $rootDir = $PSScriptRoot
 $blogJsonPath = Join-Path $rootDir "blog.json"
 $contentJsonPath = Join-Path $rootDir "content.json"
 $indexHtmlPath = Join-Path $rootDir "index.html"
 $journalDir = Join-Path $rootDir "journal"
+$legacyDeDir = Join-Path $rootDir "de"
 
 # Verify files exist
 if (-not (Test-Path $blogJsonPath) -or -not (Test-Path $contentJsonPath) -or -not (Test-Path $indexHtmlPath)) {
@@ -124,7 +129,11 @@ foreach ($lang in $languages) {
     $langBlog = $blogData.$lang
     $langContent = $contentData.$lang
     
-    $articles = $langBlog.articles | Where-Object { $null -eq $_.published -or $_.published -ne $false } | Sort-Object { Get-ArticleDate $_.date } -Descending
+    $articles = if ($IncludeDrafts) {
+        $langBlog.articles | Sort-Object { Get-ArticleDate $_.date } -Descending
+    } else {
+        $langBlog.articles | Where-Object { $null -eq $_.published -or $_.published -ne $false } | Sort-Object { Get-ArticleDate $_.date } -Descending
+    }
     $categories = $langBlog.categories
     
     # 1. Translate the base layout (Nav, Drawer, Modals, Footer)
@@ -521,6 +530,34 @@ $sidebarRecentHtml              </div>
 </html>
 "@
             [System.IO.File]::WriteAllText($legacyOutPath, $legacyHtml, [System.Text.Encoding]::UTF8)
+        }
+    }
+}
+
+# Clean up orphaned journal HTML files if not in draft preview mode
+if (-not $IncludeDrafts) {
+    Write-Host "Cleaning up orphaned journal HTML files..." -ForegroundColor Cyan
+    $validIds = @($blogData.en.articles | Where-Object { $null -eq $_.published -or $_.published -ne $false } | ForEach-Object { $_.id })
+    if (Test-Path $enDir) {
+        Get-ChildItem -Path $enDir -Filter "*.html" | ForEach-Object {
+            if ($validIds -notcontains $_.BaseName) {
+                Write-Host "Removing orphaned file: $($_.FullName)" -ForegroundColor Yellow
+                Remove-Item $_.FullName -Force
+            }
+        }
+    }
+    if (Test-Path $deDir) {
+        Get-ChildItem -Path $deDir -Filter "*.html" | ForEach-Object {
+            if ($validIds -notcontains $_.BaseName) {
+                Write-Host "Removing orphaned file: $($_.FullName)" -ForegroundColor Yellow
+                Remove-Item $_.FullName -Force
+            }
+        }
+    }
+    if (Test-Path $legacyDeDir) {
+        Get-ChildItem -Path $legacyDeDir -Filter "*.html" | Where-Object { $_.BaseName -ne "index" } | ForEach-Object {
+            Write-Host "Removing obsolete legacy article file: $($_.FullName)" -ForegroundColor Yellow
+            Remove-Item $_.FullName -Force
         }
     }
 }

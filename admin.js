@@ -883,7 +883,16 @@ async function saveAllChanges() {
       throw new Error(errRes.message || 'Failed to overwrite blog.json');
     }
     
-    showToast('Changes saved successfully to blog.json! (Backup created)', 'success');
+    const result = await response.json();
+    if (result.unpublished && result.unpublished.length > 0) {
+      if (result.gitPushed !== false) {
+        showToast(`Article "${result.unpublished.join(', ')}" unpublished & removed from server version!`, 'success');
+      } else {
+        showToast(`Article unpublished locally, but server push error: ${result.message}`, 'warning');
+      }
+    } else {
+      showToast('Changes saved successfully to blog.json! (Backup created)', 'success');
+    }
   } catch (err) {
     showToast(`Error saving: ${err.message}`, 'error');
   } finally {
@@ -942,7 +951,7 @@ async function triggerPreview(lang) {
     // 3. Open preview page in a new window/tab
     const previewUrl = lang === 'en'
       ? `http://localhost:8080/journal/en/${currentArticleId}.html`
-      : `http://localhost:8080/de/${currentArticleId}.html`;
+      : `http://localhost:8080/journal/de/${currentArticleId}.html`;
     window.open(previewUrl, '_blank');
     
     showToast('Preview loaded in new tab!', 'success');
@@ -2322,7 +2331,7 @@ function bindEvents() {
       updateArticleStatusUI(nextPublishedState);
       renderSidebar();
       
-      showToast(nextPublishedState ? 'Article set to Published!' : 'Article set to Draft (Unpublished)!', 'success');
+      showToast(nextPublishedState ? 'Article set to Published! (Click Save Changes to apply)' : 'Article set to Draft (Unpublished)! Click Save Changes to remove from server.', 'info');
     });
   }
   
