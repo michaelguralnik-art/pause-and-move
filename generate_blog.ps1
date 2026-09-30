@@ -121,6 +121,17 @@ $deDir = Join-Path $journalDir "de"
 if (-not (Test-Path $journalDir)) { New-Item -ItemType Directory -Path $journalDir | Out-Null }
 if (-not (Test-Path $enDir)) { New-Item -ItemType Directory -Path $enDir | Out-Null }
 if (-not (Test-Path $deDir)) { New-Item -ItemType Directory -Path $deDir | Out-Null }
+$googleTag = @"
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N7FSQHJ84Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N7FSQHJ84Q');
+</script>
+"@
 
 $languages = @("en", "de")
 
@@ -409,12 +420,23 @@ $sidebarRecentHtml              </div>
         $pageHtml = $pageHtml -replace 'src="assets/', 'src="../../assets/'
         
         # 3. Replace dynamic nav-links that navigate inside SPA to point back to root index.html hashes
+        $pageHtml = $pageHtml -replace 'href="#home"[^>]*', 'href="../../index.html#home"'
+        $pageHtml = $pageHtml -replace 'href="#about"[^>]*', 'href="../../index.html#about"'
+        $pageHtml = $pageHtml -replace 'href="#services"[^>]*', 'href="../../index.html#services"'
+        $pageHtml = $pageHtml -replace 'href="#modalities"[^>]*', 'href="../../index.html#modalities"'
+        $pageHtml = $pageHtml -replace 'href="#blog"[^>]*', 'href="../../index.html#blog"'
+        $pageHtml = $pageHtml -replace 'href="#faq"[^>]*', 'href="../../index.html#faq"'
+        $pageHtml = $pageHtml -replace 'href="#contact"[^>]*', 'href="../../index.html#contact"'
         $pageHtml = $pageHtml -replace 'href="#" onclick="showSection\(''home''\);return false;"', 'href="../../index.html#home"'
         $pageHtml = $pageHtml -replace 'href="#" onclick="showSection\(''about''\);return false;"', 'href="../../index.html#about"'
         $pageHtml = $pageHtml -replace 'href="#" onclick="showSection\(''services''\);return false;"', 'href="../../index.html#services"'
         $pageHtml = $pageHtml -replace 'href="#" onclick="showSection\(''modalities''\);return false;"', 'href="../../index.html#modalities"'
         $pageHtml = $pageHtml -replace 'href="#" onclick="clickJournalLink\(\);return false;"', 'href="../../index.html#blog"'
+        $pageHtml = $pageHtml -replace 'href="#" onclick="showSection\(''faq''\);return false;"', 'href="../../index.html#faq"'
         $pageHtml = $pageHtml -replace 'href="#" onclick="showSection\(''contact''\);return false;"', 'href="../../index.html#contact"'
+        $pageHtml = $pageHtml -replace 'href="pause-and-move-classic-massage"', 'href="../../pause-and-move-classic-massage"'
+        $pageHtml = $pageHtml -replace 'href="\.\./pause-and-move-classic-massage"', 'href="../../pause-and-move-classic-massage"'
+        $pageHtml = $pageHtml -replace 'href="/pause-and-move-classic-massage"', 'href="../../pause-and-move-classic-massage"'
         
         $pageHtml = $pageHtml -replace 'onclick="showSection\(''home''\)"', 'onclick="window.location.href=''../../index.html#home''"'
         $pageHtml = $pageHtml -replace 'onclick="closeDrawer\(\);openModal\(\);return false;"', 'onclick="closeDrawer();openModal();return false;"'
@@ -459,8 +481,9 @@ $sidebarRecentHtml              </div>
         $pageHtml = $pageHtml -replace '<meta property="og:[^"]*"[^>]*>', ""
         $pageHtml = $pageHtml -replace '<meta name="twitter:[^"]*"[^>]*>', ""
         
-        # Inject our comprehensive SEO head tags right after <head>
-        $pageHtml = $pageHtml -replace '<head>', "<head>`n$seoHeadTags"
+        # Ensure Google tag is immediately after <head>, followed by SEO head tags
+        $pageHtml = $pageHtml -replace '(?s)<!-- Google tag \(gtag\.js\) -->.*?gtag\(''config'', ''G-N7FSQHJ84Q''\);\s*<\/script>\s*', ''
+        $pageHtml = $pageHtml -replace '<head>', "<head>`n$googleTag`n$seoHeadTags"
         
         # 6. Adjust language attributes and OneDoc widget for German articles
         if ($lang -eq "de") {
@@ -632,6 +655,7 @@ $sidebarRecentHtml              </div>
 <!DOCTYPE html>
 <html lang="$lang">
 <head>
+$googleTag
   <meta charset="UTF-8"/>
   <meta http-equiv="refresh" content="0; url=$cleanTargetUrl" />
   <link rel="canonical" href="$cleanTargetUrl" />
@@ -678,6 +702,7 @@ if (-not $IncludeDrafts) {
 # 7. Generate sitemap.xml at root
 Write-Host "Generating sitemap.xml at root..." -ForegroundColor Cyan
 $sitemapPath = Join-Path $rootDir "sitemap.xml"
+$today = Get-Date -Format "yyyy-MM-dd"
 
 # Start XML structure
 $sitemapXml = @"
@@ -685,6 +710,7 @@ $sitemapXml = @"
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pauseandmove.ch/</loc>
+    <lastmod>$today</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
     <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/" />
@@ -692,6 +718,7 @@ $sitemapXml = @"
   </url>
   <url>
     <loc>https://pauseandmove.ch/de/</loc>
+    <lastmod>$today</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
     <xhtml:link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/" />
@@ -699,7 +726,10 @@ $sitemapXml = @"
   </url>
   <url>
     <loc>https://pauseandmove.ch/pause-and-move-classic-massage</loc>
+    <lastmod>$today</lastmod>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pauseandmove.ch/pause-and-move-classic-massage" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pauseandmove.ch/pause-and-move-classic-massage" />
   </url>
 "@
 
@@ -714,16 +744,20 @@ foreach ($article in ($blogData.en.articles | Where-Object { $null -eq $_.publis
     
     $sitemapXml += "`n  <url>"
     $sitemapXml += "`n    <loc>$enUrl</loc>"
+    $sitemapXml += "`n    <lastmod>$today</lastmod>"
     $sitemapXml += "`n    <priority>0.6</priority>"
     $sitemapXml += "`n    <xhtml:link rel=`"alternate`" hreflang=`"en`" href=`"$enUrl`" />"
     $sitemapXml += "`n    <xhtml:link rel=`"alternate`" hreflang=`"de`" href=`"$deUrl`" />"
+    $sitemapXml += "`n    <xhtml:link rel=`"alternate`" hreflang=`"x-default`" href=`"$enUrl`" />"
     $sitemapXml += "`n  </url>"
     
     $sitemapXml += "`n  <url>"
     $sitemapXml += "`n    <loc>$deUrl</loc>"
+    $sitemapXml += "`n    <lastmod>$today</lastmod>"
     $sitemapXml += "`n    <priority>0.6</priority>"
     $sitemapXml += "`n    <xhtml:link rel=`"alternate`" hreflang=`"en`" href=`"$enUrl`" />"
     $sitemapXml += "`n    <xhtml:link rel=`"alternate`" hreflang=`"de`" href=`"$deUrl`" />"
+    $sitemapXml += "`n    <xhtml:link rel=`"alternate`" hreflang=`"x-default`" href=`"$enUrl`" />"
     $sitemapXml += "`n  </url>"
 }
 
@@ -731,6 +765,89 @@ $sitemapXml += "`n</urlset>"
 
 # Write sitemap.xml to disk
 [System.IO.File]::WriteAllText($sitemapPath, $sitemapXml, [System.Text.Encoding]::UTF8)
-Write-Host "sitemap.xml generated successfully!" -ForegroundColor Green
+Write-Host "sitemap.xml generated successfully with lastmod timestamps!" -ForegroundColor Green
+
+# 8. Pre-render blog cards into index.html and de/index.html for raw HTML crawler discovery
+Write-Host "Pre-rendering homepage blog sections for raw HTML crawler discovery..." -ForegroundColor Cyan
+
+function Update-HomepageBlogCards($filePath, $lang, $articles, $categories, $urlPrefix, $imgPrefix) {
+    if (-not (Test-Path $filePath)) { return }
+    $fileContent = [System.IO.File]::ReadAllText($filePath, [System.Text.Encoding]::UTF8)
+    
+    $published = $articles | Where-Object { $null -eq $_.published -or $_.published -ne $false }
+    $sorted = $published | Sort-Object { Get-ArticleDate $_.date } -Descending
+    if (-not $sorted -or $sorted.Count -eq 0) { return }
+    
+    $feat = $sorted[0]
+    $featCat = if ($categories.($feat.categoryId)) { $categories.($feat.categoryId) } else { $feat.categoryId }
+    $featLabel = if ($lang -eq "de") { "Hervorgehobener Beitrag" } else { "Featured Post" }
+    $readText = if ($lang -eq "de") { "Artikel lesen" } else { "Read article" }
+    $byText = if ($lang -eq "de") { "Von" } else { "By" }
+    $author = if ($feat.author) { $feat.author } else { "Michael Guralnik" }
+    $featImg = if ($feat.image.StartsWith("assets/")) { "$imgPrefix$($feat.image)" } else { $feat.image }
+    
+    $featHtml = @"
+<div class="blog-featured reveal" id="blog-featured" style="display:grid;">
+        <a href="${urlPrefix}$($feat.id)" onclick="showArticle('$($feat.id)'); return false;" class="blog-featured-img" style="display:block;">
+          <img src="$featImg" alt="$([System.Security.SecurityElement]::Escape($feat.title))" loading="lazy"/>
+        </a>
+        <div class="blog-featured-body">
+          <span class="blog-featured-label">$featLabel</span>
+          <h2 style="font-style:italic;"><a href="${urlPrefix}$($feat.id)" onclick="showArticle('$($feat.id)'); return false;" style="color: inherit; text-decoration: none;">$([System.Security.SecurityElement]::Escape($feat.title))</a></h2>
+          <p>$([System.Security.SecurityElement]::Escape($feat.abstract))</p>
+          <div class="blog-featured-meta" style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--muted); margin-bottom: 24px;">
+            <span>$byText $author &middot; $($feat.date)</span>
+            <span style="font-weight: 600; text-transform: uppercase; color: var(--gold); letter-spacing: 0.08em; font-size: 11px;">$($feat.readTime)</span>
+          </div>
+          <a href="${urlPrefix}$($feat.id)" onclick="showArticle('$($feat.id)'); return false;" class="btn-text" style="text-decoration: none;">
+            $readText &rarr;
+          </a>
+        </div>
+      </div>
+"@
+
+    $gridHtml = @"
+<div class="blog-grid" id="blog-grid" style="display:grid;">
+"@
+    $gridArts = if ($sorted.Count -gt 1) { $sorted[1..($sorted.Count - 1)] } else { @() }
+    $idx = 0
+    foreach ($art in $gridArts) {
+        $catName = if ($categories.($art.categoryId)) { $categories.($art.categoryId) } else { $art.categoryId }
+        $artAuthor = if ($art.author) { $art.author } else { "Michael Guralnik" }
+        $artImg = if ($art.image.StartsWith("assets/")) { "$imgPrefix$($art.image)" } else { $art.image }
+        $delayClass = "delay-" + (($idx % 3) + 1)
+        
+        $gridHtml += @"
+
+        <a href="${urlPrefix}$($art.id)" onclick="showArticle('$($art.id)'); return false;" class="blog-card reveal $delayClass" style="text-decoration: none; color: inherit; display: block;">
+          <div class="blog-thumb">
+            <img src="$artImg" alt="$([System.Security.SecurityElement]::Escape($art.title))" loading="lazy"/>
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-cat">$([System.Security.SecurityElement]::Escape($catName))</p>
+            <h3>$([System.Security.SecurityElement]::Escape($art.title))</h3>
+            <p>$([System.Security.SecurityElement]::Escape($art.abstract))</p>
+            <div class="blog-card-foot">
+              <span class="blog-date">$byText $artAuthor &middot; $($art.date)</span>
+              <span class="blog-read">$($art.readTime) &rarr;</span>
+            </div>
+          </div>
+        </a>
+"@
+        $idx++
+    }
+    $gridHtml += "`n      </div>"
+    
+    $replacement = "$featHtml`n`n    <!-- Grid Articles Container -->`n    $gridHtml"
+    $pattern = '(?s)<div class="blog-featured reveal" id="blog-featured">.*?<\/div>\s*<!-- Grid Articles Container -->\s*<div class="blog-grid" id="blog-grid">.*?<\/div>'
+    
+    $updated = [regex]::Replace($fileContent, $pattern, $replacement)
+    [System.IO.File]::WriteAllText($filePath, $updated, [System.Text.Encoding]::UTF8)
+    Write-Host "Updated blog cards in $filePath" -ForegroundColor Green
+}
+
+Update-HomepageBlogCards $indexHtmlPath "en" $blogData.en.articles $blogData.en.categories "journal/en/" ""
+$deIndexPath = Join-Path $rootDir "de\index.html"
+Update-HomepageBlogCards $deIndexPath "de" $blogData.de.articles $blogData.de.categories "../journal/de/" "../"
 
 Write-Host "Pre-rendering completed successfully!" -ForegroundColor Green

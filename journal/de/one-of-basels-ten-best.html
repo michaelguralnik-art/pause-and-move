@@ -1,6 +1,15 @@
 ﻿<!DOCTYPE html>
 <html lang="de">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N7FSQHJ84Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N7FSQHJ84Q');
+</script>
   <title>Pause & Move gehört zu den zehn Besten in Basel - Pause & Move Journal</title>
   <meta name="description" content="Pause & Move wurde für 10Best ausgewählt – eine Schweizer Plattform, die nur die zehn besten Anbieter pro Branche und Kanton auszeichnet. Basierend auf persönlicher Prüfung, nicht auf Werbebudgets." />
   <meta name="keywords" content="10Best Basel, 10Best Schweiz, Beste Massage Basel, Pause & Move Auszeichnung, Top 10 Massage Basel, Massage Empfehlung Basel" />
@@ -99,13 +108,13 @@
   <div class="nav-inner">
     <div class="nav-logo" onclick="window.location.href='../../index.html#home'" role="link" tabindex="0" data-copy="nav.logo"><img src="../../assets/logo.png" alt="Pause &amp; Move" class="logo-img"></div>
     <ul class="nav-links">
-      <li><a href="#home" onclick="showSection('home');return false;" data-copy="nav.links.home">Home</a></li>
-      <li><a href="#about" onclick="showSection('about');return false;" data-copy="nav.links.about">Praxis</a></li>
-      <li><a href="#services" onclick="showSection('services');return false;" data-copy="nav.links.services">Tarife</a></li>
-      <li><a href="#modalities" onclick="showSection('modalities');return false;" data-copy="nav.links.modalities">Therapien</a></li>
-      <li><a href="#blog" onclick="clickJournalLink();return false;" data-copy="nav.links.blog">Journal</a></li>
-      <li><a href="#faq" onclick="showSection('faq');return false;" data-copy="nav.links.faq">FAQ</a></li>
-      <li><a href="#contact" onclick="showSection('contact');return false;" data-copy="nav.links.contact">Kontakt</a></li>
+      <li><a href="../../index.html#home">Home</a></li>
+      <li><a href="../../index.html#about">Praxis</a></li>
+      <li><a href="../../index.html#services">Tarife</a></li>
+      <li><a href="../../index.html#modalities">Therapien</a></li>
+      <li><a href="../../index.html#blog">Journal</a></li>
+      <li><a href="../../index.html#faq">FAQ</a></li>
+      <li><a href="../../index.html#contact">Kontakt</a></li>
     </ul>
     <div style="display:flex; align-items:center; gap:20px;">
       <a class="nav-lang-toggle" href="../en/one-of-basels-ten-best" style="text-decoration:none; display:flex; align-items:center;">EN</a>
@@ -119,13 +128,13 @@
 
 <!-- MOBILE DRAWER -->
 <div class="nav-drawer" id="nav-drawer">
-  <a href="#home" onclick="showSection('home');closeDrawer();return false;" data-copy="nav.links.home">Home</a>
-  <a href="#about" onclick="showSection('about');closeDrawer();return false;" data-copy="nav.links.about">Praxis</a>
-  <a href="#services" onclick="showSection('services');closeDrawer();return false;" data-copy="nav.links.services">Tarife</a>
-  <a href="#modalities" onclick="showSection('modalities');closeDrawer();return false;" data-copy="nav.links.modalities">Therapien</a>
-  <a href="#blog" onclick="clickJournalLink();closeDrawer();return false;" data-copy="nav.links.blog">Journal</a>
-  <a href="#faq" onclick="showSection('faq');closeDrawer();return false;" data-copy="nav.links.faq">FAQ</a>
-  <a href="#contact" onclick="showSection('contact');closeDrawer();return false;" data-copy="nav.links.contact">Kontakt</a>
+  <a href="../../index.html#home">Home</a>
+  <a href="../../index.html#about">Praxis</a>
+  <a href="../../index.html#services">Tarife</a>
+  <a href="../../index.html#modalities">Therapien</a>
+  <a href="../../index.html#blog">Journal</a>
+  <a href="../../index.html#faq">FAQ</a>
+  <a href="../../index.html#contact">Kontakt</a>
   <a href="#" onclick="closeDrawer();toggleLanguage();return false;" class="nav-lang-toggle" style="border-bottom:1px solid var(--border); padding:12px 0;">DE</a>
   <a href="#" class="drawer-cta" onclick="closeDrawer();openModal();return false;" data-copy="nav.contact_cta">Termin buchen</a>
 </div>
@@ -237,9 +246,9 @@
         <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </div>
     </div>
-    <div class="footer-col"><h4 data-copy="footer.cols.navigate">Navigation</h4><ul><li><a href="../../index.html#home">Home</a></li><li><a href="../../index.html#about">About</a></li><li><a href="../../index.html#services">Services</a></li><li><a href="../../index.html#modalities">Modalities</a></li><li><a href="../../index.html#blog">Journal</a></li><li><a href="#" onclick="showSection('faq');return false;" data-copy="nav.links.faq">FAQ</a></li><li><a href="../../index.html#contact">Contact</a></li></ul></div>
-    <div class="footer-col"><h4 data-copy="footer.cols.therapies">Therapien</h4><ul><li><a href="#" onclick="showSection('modalities');showMod('classic');return false;">Classic Massage</a></li><li><a href="#" onclick="showSection('modalities');showMod('shiatsu');return false;">Shiatsu</a></li><li><a href="#" onclick="showSection('modalities');showMod('connected');return false;">Connected Movement</a></li><li><a href="#" onclick="showSection('modalities');showMod('tuina');return false;">Tuina</a></li><li><a href="#" onclick="showSection('modalities');showMod('qigong');return false;">Qigong</a></li></ul></div>
-    <div class="footer-col"><h4 data-copy="footer.cols.contact">Kontakt</h4><ul><li><a href="../../index.html#contact" data-copy="contact.info.pin">In den Räumen von Physiopunkt Basel</a></li><li><a href="#">Meret Oppenheim-Strasse 6, Basel</a></li><li><a href="mailto:hello@pauseandmove.ch">hello@pauseandmove.ch</a></li><li><a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color:var(--gold); font-weight:500;" data-copy="contact.info.whatsapp_footer">WhatsApp Business (Bevorzugt)</a></li><li><a href="tel:+41772776050" data-copy="contact.info.phone">+41 77 277 60 50</a></li></ul><div style="margin-top:20px"><button class="btn-gold" onclick="openModal()" style="font-size:10px;padding:11px 20px;" data-copy="nav.contact_cta">Termin buchen</button></div></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.navigate">Navigation</h4><ul><li><a href="../../index.html#home">Home</a></li><li><a href="../../index.html#about">About</a></li><li><a href="../../index.html#services">Services</a></li><li><a href="../../index.html#modalities">Modalities</a></li><li><a href="../../index.html#blog">Journal</a></li><li><a href="../../index.html#faq">FAQ</a></li><li><a href="../../index.html#contact">Contact</a></li></ul></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.therapies">Therapien</h4><ul><li><a href="../../pause-and-move-classic-massage">Classic Massage</a></li><li><a href="../../index.html#modalities">Shiatsu</a></li><li><a href="../../index.html#modalities">Connected Movement</a></li><li><a href="../../index.html#modalities">Tuina</a></li><li><a href="../../index.html#modalities">Qigong</a></li></ul></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.contact">Kontakt</h4><ul><li><a href="../../index.html#contact">In den Räumen von Physiopunkt Basel</a></li><li><a href="#">Meret Oppenheim-Strasse 6, Basel</a></li><li><a href="mailto:hello@pauseandmove.ch">hello@pauseandmove.ch</a></li><li><a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color:var(--gold); font-weight:500;" data-copy="contact.info.whatsapp_footer">WhatsApp Business (Bevorzugt)</a></li><li><a href="tel:+41772776050" data-copy="contact.info.phone">+41 77 277 60 50</a></li></ul><div style="margin-top:20px"><button class="btn-gold" onclick="openModal()" style="font-size:10px;padding:11px 20px;" data-copy="nav.contact_cta">Termin buchen</button></div></div>
   </div>
   <div class="footer-bottom">
     <p data-copy="footer.bottom">© 2025 Pause & Move, Basel. Alle Rechte vorbehalten.</p>

@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N7FSQHJ84Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N7FSQHJ84Q');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Classic Massage in Basel &mdash; Pause &amp; Move</title>
   <meta name="description" content="Klassische Massage &amp; manual bodywork in Basel by Michael Guralnik. EMR Method 102 recognized by Swiss supplementary health insurances (ASCA/EGK). Relieve tension and restore ease." />
   <link rel="canonical" href="https://pauseandmove.ch/pause-and-move-classic-massage" />
   <link rel="alternate" hreflang="en" href="https://pauseandmove.ch/pause-and-move-classic-massage" />
+  <link rel="alternate" hreflang="x-default" href="https://pauseandmove.ch/pause-and-move-classic-massage" />
 
   <!-- OpenGraph Metadata -->
   <meta property="og:site_name" content="Pause & Move Basel" />
@@ -21,6 +31,38 @@
   <meta name="twitter:title" content="Classic Massage in Basel &mdash; Pause &amp; Move" />
   <meta name="twitter:description" content="Recognized by Swiss supplementary insurances (EMR 102 / ASCA / EGK). Deep relaxation and targeted physical relief." />
   <meta name="twitter:image" content="https://pauseandmove.ch/assets/wellness_band.png" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "Pause & Move - Classic Massage Basel",
+    "image": "https://pauseandmove.ch/assets/wellness_band.png",
+    "priceRange": "$$",
+    "telephone": "+41 77 277 60 50",
+    "email": "hello@pauseandmove.ch",
+    "url": "https://pauseandmove.ch/pause-and-move-classic-massage",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Meret Oppenheim-Strasse 6",
+      "addressLocality": "Basel",
+      "postalCode": "4053",
+      "addressCountry": "CH"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 47.546994,
+      "longitude": 7.585526
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Michael Guralnik",
+      "jobTitle": "Massage Therapist & Bodyworker"
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
@@ -397,13 +439,14 @@
 
     <!-- NAV -->
     <nav class="nav">
-      <div class="nav-logo"><img src="assets/logo.png" alt="Pause &amp; Move" class="logo-img"></div>
+      <div class="nav-logo"><a href="/" aria-label="Pause & Move Home"><img src="assets/logo.png" alt="Pause &amp; Move" class="logo-img"></a></div>
       <ul class="nav-links">
-        <li><a href="#">Shiatsu</a></li>
-        <li><a href="#" class="active">Classic Massage</a></li>
-        <li><a href="#">Connected Movement</a></li>
-        <li><a href="#">Tuina</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="/#home">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#modalities">Modalities</a></li>
+        <li><a href="/pause-and-move-classic-massage" class="active">Classic Massage</a></li>
+        <li><a href="/#blog">Journal</a></li>
+        <li><a href="/#contact">Contact</a></li>
       </ul>
       <a href="#" class="nav-cta" onclick="openModal();return false;">Book a session</a>
     </nav>
@@ -528,6 +571,21 @@
       </div>
       <a href="#" class="cta-btn" onclick="openModal();return false;">Book a session ↗</a>
     </div>
+
+    <!-- FOOTER -->
+    <footer style="margin-top: 64px; padding-top: 36px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
+      <div>
+        <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 4px;"><strong>Pause &amp; Move</strong> &middot; Meret Oppenheim-Strasse 6, 4053 Basel</p>
+        <p style="font-size: 13px; color: var(--text-muted);">EMR Method 102 (Klassische Massage) &middot; ZSR no. C657965</p>
+      </div>
+      <div style="display: flex; gap: 20px; font-size: 13px; flex-wrap: wrap;">
+        <a href="/" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">Home</a>
+        <a href="/#about" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">About</a>
+        <a href="/#modalities" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">Modalities</a>
+        <a href="/#blog" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">Journal</a>
+        <a href="/#contact" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">Contact</a>
+      </div>
+    </footer>
 
   </div>
 
