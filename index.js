@@ -877,6 +877,22 @@ function showArticle(articleId, pushToHistory = true) {
     metaKeywords.setAttribute('content', article.keywords.join(', '));
   }
   
+  const standardContainer = document.getElementById('article-detail-standard');
+  const customContainer = document.getElementById('article-detail-custom');
+
+  if (article.layout === '10best' || article.id === 'one-of-basels-ten-best') {
+    if (standardContainer) standardContainer.style.display = 'none';
+    if (customContainer) {
+      customContainer.style.display = 'block';
+      updateTenBestLayout(currentLang);
+    }
+    showSection('article-detail', pushToHistory);
+    return;
+  }
+
+  if (customContainer) customContainer.style.display = 'none';
+  if (standardContainer) standardContainer.style.display = 'block';
+
   // Populate content
   const categoryName = blogData.categories[article.categoryId] || article.categoryId;
   
@@ -980,6 +996,81 @@ function showArticle(articleId, pushToHistory = true) {
   
   // Switch to section
   showSection('article-detail', pushToHistory);
+}
+
+function updateTenBestLayout(lang) {
+  const isDe = lang === 'de';
+  const backBtn = document.getElementById('tenbest-back-btn');
+  const eyebrow = document.getElementById('tenbest-eyebrow');
+  const title = document.getElementById('tenbest-title');
+  const byline = document.getElementById('tenbest-byline');
+  const sealEyebrow = document.getElementById('tenbest-seal-eyebrow');
+  const sealTitle = document.getElementById('tenbest-seal-title');
+  const sealDesc = document.getElementById('tenbest-seal-desc');
+  const sealLink = document.getElementById('tenbest-seal-link');
+  const lead = document.getElementById('tenbest-lead');
+  const h3_1 = document.getElementById('tenbest-h3-1');
+  const p1 = document.getElementById('tenbest-p1');
+  const quote = document.getElementById('tenbest-quote');
+  const p2 = document.getElementById('tenbest-p2');
+  const h3_2 = document.getElementById('tenbest-h3-2');
+  const p3 = document.getElementById('tenbest-p3');
+  const h3_3 = document.getElementById('tenbest-h3-3');
+  const p4 = document.getElementById('tenbest-p4');
+  const ctaBtn = document.getElementById('tenbest-cta-btn');
+  const sign = document.getElementById('tenbest-sign');
+  const shareLabel = document.getElementById('tenbest-share-label');
+  const copyBtn = document.getElementById('tenbest-copy-btn');
+  const subTitle = document.getElementById('tenbest-sub-title');
+  const subDesc = document.getElementById('tenbest-sub-desc');
+  const subName = document.getElementById('tenbest-sub-name');
+  const subEmail = document.getElementById('tenbest-sub-email');
+  const subPhone = document.getElementById('tenbest-sub-phone');
+  const subSubmitBtn = document.getElementById('tenbest-sub-submit-btn');
+  const floatBtn = document.getElementById('tenbest-float-btn');
+
+  if (backBtn) backBtn.innerHTML = isDe ? '&larr; Zurück zum Journal' : '&larr; Back to Journal';
+  if (eyebrow) eyebrow.textContent = isDe ? 'Neu in der Praxis' : 'News';
+  if (title) title.textContent = isDe ? 'Pause & Move gehört zu den zehn Besten in Basel' : "Pause & Move is one of Basel's Ten Best";
+  if (byline) byline.innerHTML = isDe ? 'Von Michael Guralnik &middot; September 2026 <b>3 MIN</b>' : 'By Michael Guralnik &middot; September 2026 <b>3 MIN</b>';
+  if (sealEyebrow) sealEyebrow.textContent = '10Best \u00B7 Basel';
+  if (sealTitle) sealTitle.textContent = isDe ? 'Ausgezeichnet als eine der zehn besten Praxen in Basel' : 'Selected as one of the ten best in Basel';
+  if (sealDesc) sealDesc.textContent = isDe ? 'Eine Anerkennung basierend auf persönlicher Prüfung, nicht auf Werbebudgets.' : 'A recognition based on personal vetting, not advertising budgets.';
+  if (sealLink) sealLink.innerHTML = isDe ? 'Unser Profil ansehen &rarr;' : 'View our profile &rarr;';
+  if (lead) lead.textContent = isDe 
+    ? 'Ich habe Neuigkeiten zu teilen und wollte, dass Sie es zuerst von mir erfahren. Pause & Move wurde für 10Best ausgewählt – eine Schweizer Plattform, die nur die zehn besten Anbieter pro Branche und Kanton listet. Ich fühle mich geehrt, einer der zehn in Basel zu sein.'
+    : "I have some news to share, and I wanted you to hear it from me first. Pause & Move has been selected for 10Best, a Swiss platform that lists only the ten best providers per industry and canton. I'm honoured to be one of the ten in Basel.";
+  if (h3_1) h3_1.innerHTML = isDe ? '<span class="n">I</span>Warum mir das wichtig ist' : '<span class="n">I</span>Why this matters to me';
+  if (p1) p1.textContent = isDe
+    ? 'Plätze auf 10Best kann man nicht kaufen. Die Auswahl treffen Menschen: ein Telefongespräch, ein persönliches Interview, ein strukturierter Fragebogen, unabhängige Recherchen zu Kundenfeedback und ein Abschlussgespräch mit ehrlicher Rückmeldung. Was zählt, sind Qualität, Werte und Menschlichkeit, nicht Grösse oder Umsatz.'
+    : "Places on 10Best can't be bought. The selection is made by people: a phone conversation, a personal interview, a structured questionnaire, independent research into client feedback, and a closing conversation with honest feedback. What counts is quality, values and humanity, not size or turnover.";
+  if (quote) quote.textContent = isDe
+    ? 'Eine gute Behandlung ist eine, die den Klienten stärkt — und Stärke entsteht durch Erfahrung und Bewusstsein.'
+    : 'A good treatment is one that makes the client stronger — and strength is achieved through experience and awareness.';
+  if (p2) p2.textContent = isDe
+    ? 'Das ist es, was mir am meisten bedeutet. Mir geht es nicht um die Zahl der Behandlungen, die ich gebe. Sondern darum, ob Sie die Praxis mit etwas Nachhaltigem verlassen.'
+    : "That's what means the most. What I care about isn't the number of sessions I give. It's whether you leave with something lasting.";
+  if (h3_2) h3_2.innerHTML = isDe ? '<span class="n">II</span>Danke' : '<span class="n">II</span>Thank you';
+  if (p3) p3.textContent = isDe
+    ? 'Diese Auszeichnung gehört allen, die mir ihren Körper, ihre Fragen und ihre Zeit anvertraut haben. Ob Sie einmal wegen einer Schulter kamen, die nicht lockerlassen wollte, oder mich seit Monaten regelmässig besuchen: Sie sind der Grund, warum diese Praxis das ist, was sie ist. Wenn Sie mir ein Feedback hinterlassen oder mich weiterempfohlen haben, danke ich Ihnen ganz besonders.'
+    : "This belongs to everyone who has trusted me with their body, their questions and their time. Whether you came once for a shoulder that wouldn't let go or have been coming for months, you're part of why this practice is what it is. If you've left feedback or recommended me to a friend, thank you especially.";
+  if (h3_3) h3_3.innerHTML = isDe ? '<span class="n">III</span>Was gleich bleibt' : '<span class="n">III</span>What stays the same';
+  if (p4) p4.textContent = isDe
+    ? 'An meiner Arbeitsweise ändert sich nichts. Jede Behandlung richtet sich weiterhin ganz nach dem, was Sie an diesem Tag mitbringen – sei es Klassische Massage, Shiatsu, Tuina, Connected Movement oder Qigong. Und wenn ich nicht das Richtige für Sie bin, sage ich Ihnen das nach wie vor ganz ehrlich.'
+    : "Nothing changes in how I work. Every session is still built around what you bring that day, whether that's classic massage, Shiatsu, Tuina, Connected Movement or Qigong. And if I'm not the right fit, I'll still tell you honestly.";
+  if (ctaBtn) ctaBtn.textContent = isDe ? 'Termin buchen' : 'Book a session';
+  if (sign) sign.textContent = isDe ? 'In Dankbarkeit, Michael' : 'With gratitude, Michael';
+  if (shareLabel) shareLabel.textContent = isDe ? 'Diesen Artikel teilen:' : 'Share this article:';
+  if (copyBtn) copyBtn.textContent = isDe ? 'Link kopieren' : 'Copy Link';
+  if (subTitle) subTitle.textContent = isDe ? 'Newsletter abonnieren' : 'Subscribe to our newsletter';
+  if (subDesc) subDesc.textContent = isDe
+    ? 'Erhalten Sie wertvolle Einblicke in Gesundheit, Wohlbefinden und Atemübungen direkt in Ihr Postfach.'
+    : 'Get gentle reflections, wellness insights, and breathing practices straight to your inbox.';
+  if (subName) subName.placeholder = isDe ? 'Ihr Name' : 'Your name';
+  if (subEmail) subEmail.placeholder = isDe ? 'Ihre E-Mail-Adresse' : 'Your email address';
+  if (subPhone) subPhone.placeholder = isDe ? 'Telefon / SMS (optional)' : 'Phone / SMS (optional)';
+  if (subSubmitBtn) subSubmitBtn.textContent = isDe ? 'Abonnieren' : 'Subscribe';
+  if (floatBtn) floatBtn.textContent = isDe ? 'Termin buchen' : 'Book a session';
 }
 
 // ── Social sharing helpers ──

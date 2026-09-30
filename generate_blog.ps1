@@ -216,7 +216,119 @@ foreach ($lang in $languages) {
         }
         
         # Construct pre-rendered <section id="article-detail">
-        $articleDetailHtml = @"
+        if ($article.id -eq "one-of-basels-ten-best" -or $article.layout -eq "10best") {
+            if ($lang -eq "en") {
+                $tbEyebrow = "News"
+                $tbSealEyebrow = "10Best &middot; Basel"
+                $tbSealTitle = "Selected as one of the ten best in Basel"
+                $tbSealDesc = "A recognition based on personal vetting, not advertising budgets."
+                $tbSealLink = "View our profile &rarr;"
+                $tbLead = "I have some news to share, and I wanted you to hear it from me first. Pause &amp; Move has been selected for 10Best, a Swiss platform that lists only the ten best providers per industry and canton. I'm honoured to be one of the ten in Basel."
+                $tbH3_1 = "Why this matters to me"
+                $tbP1 = "Places on 10Best can't be bought. The selection is made by people: a phone conversation, a personal interview, a structured questionnaire, independent research into client feedback, and a closing conversation with honest feedback. What counts is quality, values and humanity, not size or turnover."
+                $tbQuote = "A good treatment is one that makes the client stronger &mdash; and strength is achieved through experience and awareness."
+                $tbP2 = "That's what means the most. What I care about isn't the number of sessions I give. It's whether you leave with something lasting."
+                $tbH3_2 = "Thank you"
+                $tbP3 = "This belongs to everyone who has trusted me with their body, their questions and their time. Whether you came once for a shoulder that wouldn't let go or have been coming for months, you're part of why this practice is what it is. If you've left feedback or recommended me to a friend, thank you especially."
+                $tbH3_3 = "What stays the same"
+                $tbP4 = "Nothing changes in how I work. Every session is still built around what you bring that day, whether that's classic massage, Shiatsu, Tuina, Connected Movement or Qigong. And if I'm not the right fit, I'll still tell you honestly."
+                $tbCta = "Book a session"
+                $tbSign = "With gratitude, Michael"
+                $tbByline = "By Michael Guralnik &middot; $($article.date) <b>$($article.readTime.ToUpper())</b>"
+            } else {
+                $tbEyebrow = "Neu in der Praxis"
+                $tbSealEyebrow = "10Best &middot; Basel"
+                $tbSealTitle = "Ausgezeichnet als eine der zehn besten Praxen in Basel"
+                $tbSealDesc = "Eine Anerkennung basierend auf pers&ouml;nlicher Pr&uuml;fung, nicht auf Werbebudgets."
+                $tbSealLink = "Unser Profil ansehen &rarr;"
+                $tbLead = "Ich habe Neuigkeiten zu teilen und wollte, dass Sie es zuerst von mir erfahren. Pause &amp; Move wurde f&uuml;r 10Best ausgew&auml;hlt &ndash; eine Schweizer Plattform, die nur die zehn besten Anbieter pro Branche und Kanton listet. Ich f&uuml;hle mich geehrt, einer der zehn in Basel zu sein."
+                $tbH3_1 = "Warum mir das wichtig ist"
+                $tbP1 = "Pl&auml;tze auf 10Best kann man nicht kaufen. Die Auswahl treffen Menschen: ein Telefongespr&auml;ch, ein pers&ouml;nliches Interview, ein strukturierter Fragebogen, unabh&auml;ngige Recherchen zu Kundenfeedback und ein Abschlussgespr&auml;ch mit ehrlicher R&uuml;ckmeldung. Was z&auml;hlt, sind Qualit&auml;t, Werte und Menschlichkeit, nicht Gr&ouml;sse oder Umsatz."
+                $tbQuote = "Eine gute Behandlung ist eine, die den Klienten st&auml;rkt &mdash; und St&auml;rke entsteht durch Erfahrung und Bewusstsein."
+                $tbP2 = "Das ist es, was mir am meisten bedeutet. Mir geht es nicht um die Zahl der Behandlungen, die ich gebe. Sondern darum, ob Sie die Praxis mit etwas Nachhaltigem verlassen."
+                $tbH3_2 = "Danke"
+                $tbP3 = "Diese Auszeichnung geh&ouml;rt allen, die mir ihren K&ouml;rper, ihre Fragen und ihre Zeit anvertraut haben. Ob Sie einmal wegen einer Schulter kamen, die nicht lockerlassen wollte, oder mich seit Monaten regelm&auml;ssig besuchen: Sie sind der Grund, warum diese Praxis das ist, was sie ist. Wenn Sie mir ein Feedback hinterlassen oder mich weiterempfohlen haben, danke ich Ihnen ganz besonders."
+                $tbH3_3 = "Was gleich bleibt"
+                $tbP4 = "An meiner Arbeitsweise &auml;ndert sich nichts. Jede Behandlung richtet sich weiterhin ganz nach dem, was Sie an diesem Tag mitbringen &ndash; sei es Klassische Massage, Shiatsu, Tuina, Connected Movement oder Qigong. Und wenn ich nicht das Richtige f&uuml;r Sie bin, sage ich Ihnen das nach wie vor ganz ehrlich."
+                $tbCta = "Termin buchen"
+                $tbSign = "In Dankbarkeit, Michael"
+                $tbByline = "Von Michael Guralnik &middot; $($article.date) <b>$($article.readTime.ToUpper())</b>"
+            }
+
+            $articleDetailHtml = @"
+    <section id="article-detail" class="section active">
+      <div id="article-detail-custom" class="tenbest-layout" style="display:block;">
+        <header class="tenbest-header">
+          <div class="tenbest-wrap">
+            <a class="tenbest-back" href="../../index.html#blog">$backBtnText</a>
+            <span class="eyebrow">$tbEyebrow</span>
+            <h1>$($article.title)</h1>
+            <p class="tenbest-byline">$tbByline</p>
+          </div>
+        </header>
+
+        <div class="tenbest-wrap">
+          <section class="seal-card">
+            <div class="seal-panel">
+              <a class="seal" href="https://www.tenbest.ch/so-funktioniert-tenbest" target="_blank" rel="noopener" aria-label="10Best Schweiz">
+                <img src="../../assets/10best-siegel.jpg" alt="10Best Schweiz Siegel 2026/2027, Pause &amp; Move" width="224" height="224">
+              </a>
+            </div>
+            <div class="seal-text">
+              <span class="eyebrow">$tbSealEyebrow</span>
+              <h2>$tbSealTitle</h2>
+              <p>$tbSealDesc</p>
+              <a class="gold-link" href="https://www.tenbest.ch/so-funktioniert-tenbest" target="_blank" rel="noopener">$tbSealLink</a>
+            </div>
+          </section>
+
+          <article class="tenbest-article">
+            <p class="lead">$tbLead</p>
+
+            <h3><span class="n">I</span>$tbH3_1</h3>
+            <p>$tbP1</p>
+
+            <blockquote>$tbQuote</blockquote>
+
+            <p>$tbP2</p>
+
+            <h3><span class="n">II</span>$tbH3_2</h3>
+            <p>$tbP3</p>
+
+            <h3><span class="n">III</span>$tbH3_3</h3>
+            <p>$tbP4</p>
+            <button class="cta" onclick="openModal();return false;">$tbCta</button>
+            <p class="sign">$tbSign</p>
+
+            <div class="share">
+              <span>$shareTitle</span>
+              <button onclick="shareArticle('x')">&#x1D54F;</button>
+              <button onclick="shareArticle('facebook')">Facebook</button>
+              <button onclick="shareArticle('linkedin')">LinkedIn</button>
+              <button id="share-copy-btn" onclick="copyArticleLink()">$shareCopy</button>
+            </div>
+          </article>
+
+          <section class="tenbest-sub">
+            <h4>$subTitle</h4>
+            <p>$subDesc</p>
+            <form class="article-subscribe-form" onsubmit="submitSubscribeForm(event); return false;">
+              <input type="text" id="sub-name" placeholder="$subNamePlaceholder" />
+              <input type="email" id="sub-email" placeholder="$subPlaceholder" required />
+              <input type="tel" id="sub-phone" placeholder="$subPhonePlaceholder" />
+              <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" tabindex="-1" autocomplete="off" />
+              <button type="submit" class="btn-gold" id="sub-submit-btn">$subSubmit</button>
+            </form>
+            <p class="sub-success-msg" id="sub-success-msg" style="display:none; color: var(--gold); margin-top: 16px; font-weight: 500;"></p>
+          </section>
+        </div>
+
+        <button class="float-cta" onclick="openModal();return false;">$tbCta</button>
+      </div>
+    </section>
+"@
+        } else {
+            $articleDetailHtml = @"
     <section id="article-detail" class="section active">
       <div class="article-detail-hero">
         <div class="article-detail-hero-img" id="article-detail-img-container">
@@ -282,6 +394,7 @@ $sidebarRecentHtml              </div>
       </div>
     </section>
 "@
+        }
 
         # Make the page HTML
         $pageHtml = $translatedLayout
@@ -290,7 +403,7 @@ $sidebarRecentHtml              </div>
         $pageHtml = $pageHtml -replace '(?s)<main class="page-body">.*?</main>', "<main class=`"page-body`">`n$articleDetailHtml`n</main>"
         
         # 2. Adjust relative asset URLs (move up 2 directory levels since file is in /journal/en/ or /journal/de/)
-        $pageHtml = $pageHtml -replace 'href="index\.css[^"]*"', 'href="../../index.css?v=2.0"'
+        $pageHtml = $pageHtml -replace 'href="index\.css[^"]*"', 'href="../../index.css?v=2.2"'
         $pageHtml = $pageHtml -replace 'href="favicon.png\?v=3"', 'href="../../favicon.png?v=3"'
         $pageHtml = $pageHtml -replace 'href="favicon.ico"', 'href="../../favicon.ico"'
         $pageHtml = $pageHtml -replace 'src="assets/', 'src="../../assets/'
@@ -537,7 +650,7 @@ $sidebarRecentHtml              </div>
 # Clean up orphaned journal HTML files if not in draft preview mode
 if (-not $IncludeDrafts) {
     Write-Host "Cleaning up orphaned journal HTML files..." -ForegroundColor Cyan
-    $validIds = @($blogData.en.articles | Where-Object { $null -eq $_.published -or $_.published -ne $false } | ForEach-Object { $_.id })
+    $validIds = @($blogData.en.articles | Where-Object { $null -eq $_.published -or $_.published -ne $false } | ForEach-Object { $_.id }) + @("massage-oils-and-other-lubricats")
     if (Test-Path $enDir) {
         Get-ChildItem -Path $enDir -Filter "*.html" | ForEach-Object {
             if ($validIds -notcontains $_.BaseName) {

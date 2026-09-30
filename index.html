@@ -73,7 +73,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="index.css?v=2.1"/>
+<link rel="stylesheet" href="index.css?v=2.2"/>
 <link rel="icon" type="image/png" href="favicon.png?v=3"/>
 </head>
 <body>
@@ -433,70 +433,141 @@
 
 <!-- ⑦ ARTICLE DETAIL VIEW -->
 <section id="article-detail" class="section">
-  <div class="article-detail-hero">
-    <div class="article-detail-hero-img" id="article-detail-img-container">
-      <!-- Generated dynamically in index.js -->
+  <div id="article-detail-standard">
+    <div class="article-detail-hero">
+      <div class="article-detail-hero-img" id="article-detail-img-container">
+        <!-- Generated dynamically in index.js -->
+      </div>
+      <div class="article-detail-hero-content">
+        <span class="blog-cat" id="article-detail-cat">Category</span>
+        <h2 class="display-xl" id="article-detail-title">Article Title</h2>
+        <div class="article-detail-meta" id="article-detail-meta">
+          <span class="article-author">By Michael Guralnik</span> &middot; <span id="article-detail-date">Date</span> &middot; <span id="article-detail-read">5 min read</span>
+        </div>
+      </div>
     </div>
-    <div class="article-detail-hero-content">
-      <span class="blog-cat" id="article-detail-cat">Category</span>
-      <h2 class="display-xl" id="article-detail-title">Article Title</h2>
-      <div class="article-detail-meta" id="article-detail-meta">
-        <span class="article-author">By Michael Guralnik</span> &middot; <span id="article-detail-date">Date</span> &middot; <span id="article-detail-read">5 min read</span>
+    <div class="article-detail-body">
+      <div class="article-detail-container">
+        <div class="article-detail-main">
+          <button class="back-to-blog" id="back-to-blog-btn" onclick="showSection('blog');return false;">&larr; Back to Journal</button>
+          <div class="article-detail-text" id="article-detail-text">
+            <!-- Generated dynamically in index.js -->
+          </div>
+          
+          <!-- Share Block -->
+          <div class="article-share-block">
+            <span class="share-title" id="share-title-text">Share this article:</span>
+            <div class="share-buttons">
+              <button class="share-btn share-x" onclick="shareArticle('x')">𝕏</button>
+              <button class="share-btn share-fb" onclick="shareArticle('facebook')">Facebook</button>
+              <button class="share-btn share-in" onclick="shareArticle('linkedin')">LinkedIn</button>
+              <button class="share-btn share-copy" id="share-copy-btn" onclick="copyArticleLink()">Copy Link</button>
+            </div>
+          </div>
+          
+          <!-- Subscribe Block -->
+          <div class="article-subscribe-block">
+            <h3 id="sub-title-text">Subscribe to our newsletter</h3>
+            <p id="sub-desc-text">Get gentle reflections, wellness insights, and breathing practices straight to your inbox.</p>
+            <form class="article-subscribe-form" onsubmit="submitSubscribeForm(event); return false;">
+              <input type="text" id="sub-name" placeholder="Your name" />
+              <input type="email" id="sub-email" placeholder="Your email address" required />
+              <input type="tel" id="sub-phone" placeholder="Phone / SMS (optional)" />
+              <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" tabindex="-1" autocomplete="off" />
+              <button type="submit" class="btn-gold" id="sub-submit-btn">Subscribe</button>
+            </form>
+            <p class="sub-success-msg" id="sub-success-msg" style="display:none; color: var(--gold); margin-top: 16px; font-weight: 500;"></p>
+          </div>
+        </div>
+        
+        <aside class="article-detail-sidebar">
+          <!-- Categories Sidebar Section -->
+          <div class="sidebar-widget">
+            <h3 id="sidebar-categories-title">Categories</h3>
+            <ul class="sidebar-categories-list" id="sidebar-categories">
+              <!-- Rendered dynamically -->
+            </ul>
+          </div>
+          
+          <!-- Recent Posts Sidebar Section -->
+          <div class="sidebar-widget">
+            <h3 id="sidebar-recent-title">Recent Posts</h3>
+            <div class="sidebar-recent-list" id="sidebar-recent">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
   </div>
-  <div class="article-detail-body">
-    <div class="article-detail-container">
-      <div class="article-detail-main">
-        <button class="back-to-blog" id="back-to-blog-btn" onclick="showSection('blog');return false;">&larr; Back to Journal</button>
-        <div class="article-detail-text" id="article-detail-text">
-          <!-- Generated dynamically in index.js -->
-        </div>
-        
-        <!-- Share Block -->
-        <div class="article-share-block">
-          <span class="share-title" id="share-title-text">Share this article:</span>
-          <div class="share-buttons">
-            <button class="share-btn share-x" onclick="shareArticle('x')">𝕏</button>
-            <button class="share-btn share-fb" onclick="shareArticle('facebook')">Facebook</button>
-            <button class="share-btn share-in" onclick="shareArticle('linkedin')">LinkedIn</button>
-            <button class="share-btn share-copy" id="share-copy-btn" onclick="copyArticleLink()">Copy Link</button>
-          </div>
-        </div>
-        
-        <!-- Subscribe Block -->
-        <div class="article-subscribe-block">
-          <h3 id="sub-title-text">Subscribe to our newsletter</h3>
-          <p id="sub-desc-text">Get gentle reflections, wellness insights, and breathing practices straight to your inbox.</p>
-          <form class="article-subscribe-form" onsubmit="submitSubscribeForm(event); return false;">
-            <input type="text" id="sub-name" placeholder="Your name" />
-            <input type="email" id="sub-email" placeholder="Your email address" required />
-            <input type="tel" id="sub-phone" placeholder="Phone / SMS (optional)" />
-            <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" tabindex="-1" autocomplete="off" />
-            <button type="submit" class="btn-gold" id="sub-submit-btn">Subscribe</button>
-          </form>
-          <p class="sub-success-msg" id="sub-success-msg" style="display:none; color: var(--gold); margin-top: 16px; font-weight: 500;"></p>
-        </div>
+
+  <div id="article-detail-custom" class="tenbest-layout" style="display:none;">
+    <header class="tenbest-header">
+      <div class="tenbest-wrap">
+        <button class="tenbest-back" id="tenbest-back-btn" onclick="showSection('blog');return false;">&larr; Back to Journal</button>
+        <span class="eyebrow" id="tenbest-eyebrow">News</span>
+        <h1 id="tenbest-title">Pause &amp; Move is one of Basel's Ten Best</h1>
+        <p class="tenbest-byline" id="tenbest-byline">By Michael Guralnik &middot; September 2026 <b>3 MIN</b></p>
       </div>
-      
-      <aside class="article-detail-sidebar">
-        <!-- Categories Sidebar Section -->
-        <div class="sidebar-widget">
-          <h3 id="sidebar-categories-title">Categories</h3>
-          <ul class="sidebar-categories-list" id="sidebar-categories">
-            <!-- Rendered dynamically -->
-          </ul>
+    </header>
+
+    <div class="tenbest-wrap">
+      <section class="seal-card">
+        <div class="seal-panel">
+          <a class="seal" href="https://www.tenbest.ch/so-funktioniert-tenbest" target="_blank" rel="noopener" aria-label="View Pause &amp; Move on 10Best (opens in a new tab)">
+            <img src="assets/10best-siegel.jpg" alt="10Best Schweiz seal 2026/2027, awarded to Pause &amp; Move" width="224" height="224">
+          </a>
         </div>
-        
-        <!-- Recent Posts Sidebar Section -->
-        <div class="sidebar-widget">
-          <h3 id="sidebar-recent-title">Recent Posts</h3>
-          <div class="sidebar-recent-list" id="sidebar-recent">
-            <!-- Rendered dynamically -->
-          </div>
+        <div class="seal-text">
+          <span class="eyebrow" id="tenbest-seal-eyebrow">10Best &middot; Basel</span>
+          <h2 id="tenbest-seal-title">Selected as one of the ten best in Basel</h2>
+          <p id="tenbest-seal-desc">A recognition based on personal vetting, not advertising budgets.</p>
+          <a class="gold-link" id="tenbest-seal-link" href="https://www.tenbest.ch/so-funktioniert-tenbest" target="_blank" rel="noopener">View our profile &rarr;</a>
         </div>
-      </aside>
+      </section>
+
+      <article class="tenbest-article">
+        <p class="lead" id="tenbest-lead">I have some news to share, and I wanted you to hear it from me first. Pause &amp; Move has been selected for 10Best, a Swiss platform that lists only the ten best providers per industry and canton. I'm honoured to be one of the ten in Basel.</p>
+
+        <h3 id="tenbest-h3-1"><span class="n">I</span>Why this matters to me</h3>
+        <p id="tenbest-p1">Places on 10Best can't be bought. The selection is made by people: a phone conversation, a personal interview, a structured questionnaire, independent research into client feedback, and a closing conversation with honest feedback. What counts is quality, values and humanity, not size or turnover.</p>
+
+        <blockquote id="tenbest-quote">A good treatment is one that makes the client stronger — and strength is achieved through experience and awareness.</blockquote>
+
+        <p id="tenbest-p2">That's what means the most. What I care about isn't the number of sessions I give. It's whether you leave with something lasting.</p>
+
+        <h3 id="tenbest-h3-2"><span class="n">II</span>Thank you</h3>
+        <p id="tenbest-p3">This belongs to everyone who has trusted me with their body, their questions and their time. Whether you came once for a shoulder that wouldn't let go or have been coming for months, you're part of why this practice is what it is. If you've left feedback or recommended me to a friend, thank you especially.</p>
+
+        <h3 id="tenbest-h3-3"><span class="n">III</span>What stays the same</h3>
+        <p id="tenbest-p4">Nothing changes in how I work. Every session is still built around what you bring that day, whether that's classic massage, Shiatsu, Tuina, Connected Movement or Qigong. And if I'm not the right fit, I'll still tell you honestly.</p>
+        <button class="cta" id="tenbest-cta-btn" onclick="openModal();return false;">Book a session</button>
+        <p class="sign" id="tenbest-sign">With gratitude, Michael</p>
+
+        <div class="share">
+          <span id="tenbest-share-label">Share this article:</span>
+          <button onclick="shareArticle('x')">𝕏</button>
+          <button onclick="shareArticle('facebook')">Facebook</button>
+          <button onclick="shareArticle('linkedin')">LinkedIn</button>
+          <button id="tenbest-copy-btn" onclick="copyArticleLink()">Copy Link</button>
+        </div>
+      </article>
+
+      <section class="tenbest-sub">
+        <h4 id="tenbest-sub-title">Subscribe to our newsletter</h4>
+        <p id="tenbest-sub-desc">Get gentle reflections, wellness insights, and breathing practices straight to your inbox.</p>
+        <form class="article-subscribe-form" onsubmit="submitSubscribeForm(event); return false;">
+          <input type="text" id="tenbest-sub-name" placeholder="Your name" />
+          <input type="email" id="tenbest-sub-email" placeholder="Your email address" required />
+          <input type="tel" id="tenbest-sub-phone" placeholder="Phone / SMS (optional)" />
+          <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" tabindex="-1" autocomplete="off" />
+          <button type="submit" class="btn-gold" id="tenbest-sub-submit-btn">Subscribe</button>
+        </form>
+        <p class="sub-success-msg" id="tenbest-sub-success-msg" style="display:none; color: var(--gold); margin-top: 16px; font-weight: 500;"></p>
+      </section>
     </div>
+
+    <button class="float-cta" id="tenbest-float-btn" onclick="openModal();return false;">Book a session</button>
   </div>
 </section>
 
@@ -603,7 +674,10 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="footer-logo" data-copy="nav.logo"><img src="assets/logo.png" alt="Pause &amp; Move" class="logo-img"></div>
-      <p data-copy="footer.brand_desc" data-html="true">Massage and bodywork in Basel for people who want to feel genuinely well — in body, mind, and spirit.</p>
+      <p data-copy="footer.brand_desc" data-html="true">Massage and bodywork in Basel for people who want to feel genuinely well in body, mind, and spirit.<br><strong style="color:var(--white);">Pause &amp; Move is the practice of Michael Guralnik, massage therapist in Basel.</strong><br><br>EMR method 102 (Klassische Massage) &middot; ZSR no. C657965</p>
+      <a href="https://www.tenbest.ch/so-funktioniert-tenbest" target="_blank" rel="noopener" class="footer-badge" aria-label="Selected by 10 Best (opens in a new tab)">
+        <img src="assets/10best-siegel.jpg" alt="Selected by 10 Best - 2026 / 2027" width="120" height="120" loading="lazy">
+      </a>
       <div class="footer-social">
         <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
         <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>

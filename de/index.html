@@ -73,7 +73,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="../index.css?v=1.4"/>
+<link rel="stylesheet" href="../index.css?v=2.2"/>
 <link rel="icon" type="image/png" href="../favicon.png?v=3"/>
 </head>
 <body>
@@ -434,67 +434,141 @@
 
 <!-- ⑦ ARTICLE DETAIL VIEW -->
 <section id="article-detail" class="section">
-  <div class="article-detail-hero">
-    <div class="article-detail-hero-img" id="article-detail-img-container">
-      <!-- Generated dynamically in index.js -->
+  <div id="article-detail-standard">
+    <div class="article-detail-hero">
+      <div class="article-detail-hero-img" id="article-detail-img-container">
+        <!-- Generated dynamically in index.js -->
+      </div>
+      <div class="article-detail-hero-content">
+        <span class="blog-cat" id="article-detail-cat">Category</span>
+        <h2 class="display-xl" id="article-detail-title">Article Title</h2>
+        <div class="article-detail-meta" id="article-detail-meta">
+          <span class="article-author">By Michael Guralnik</span> &middot; <span id="article-detail-date">Date</span> &middot; <span id="article-detail-read">5 min read</span>
+        </div>
+      </div>
     </div>
-    <div class="article-detail-hero-content">
-      <span class="blog-cat" id="article-detail-cat">Category</span>
-      <h2 class="display-xl" id="article-detail-title">Article Title</h2>
-      <div class="article-detail-meta" id="article-detail-meta">
-        <span class="article-author">By Michael Guralnik</span> &middot; <span id="article-detail-date">Date</span> &middot; <span id="article-detail-read">5 min read</span>
+    <div class="article-detail-body">
+      <div class="article-detail-container">
+        <div class="article-detail-main">
+          <button class="back-to-blog" id="back-to-blog-btn" onclick="showSection('blog');return false;">&larr; Back to Journal</button>
+          <div class="article-detail-text" id="article-detail-text">
+            <!-- Generated dynamically in index.js -->
+          </div>
+          
+          <!-- Share Block -->
+          <div class="article-share-block">
+            <span class="share-title" id="share-title-text">Share this article:</span>
+            <div class="share-buttons">
+              <button class="share-btn share-x" onclick="shareArticle('x')">𝕏</button>
+              <button class="share-btn share-fb" onclick="shareArticle('facebook')">Facebook</button>
+              <button class="share-btn share-in" onclick="shareArticle('linkedin')">LinkedIn</button>
+              <button class="share-btn share-copy" id="share-copy-btn" onclick="copyArticleLink()">Copy Link</button>
+            </div>
+          </div>
+          
+          <!-- Subscribe Block -->
+          <div class="article-subscribe-block">
+            <h3 id="sub-title-text">Subscribe to our newsletter</h3>
+            <p id="sub-desc-text">Get gentle reflections, wellness insights, and breathing practices straight to your inbox.</p>
+            <form class="article-subscribe-form" onsubmit="submitSubscribeForm(event); return false;">
+              <input type="text" id="sub-name" placeholder="Ihr Name" />
+              <input type="email" id="sub-email" placeholder="Ihre E-Mail-Adresse" required />
+              <input type="tel" id="sub-phone" placeholder="Telefon / SMS (optional)" />
+              <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" tabindex="-1" autocomplete="off" />
+              <button type="submit" class="btn-gold" id="sub-submit-btn">Abonnieren</button>
+            </form>
+            <p class="sub-success-msg" id="sub-success-msg" style="display:none; color: var(--gold); margin-top: 16px; font-weight: 500;"></p>
+          </div>
+        </div>
+        
+        <aside class="article-detail-sidebar">
+          <!-- Categories Sidebar Section -->
+          <div class="sidebar-widget">
+            <h3 id="sidebar-categories-title">Categories</h3>
+            <ul class="sidebar-categories-list" id="sidebar-categories">
+              <!-- Rendered dynamically -->
+            </ul>
+          </div>
+          
+          <!-- Recent Posts Sidebar Section -->
+          <div class="sidebar-widget">
+            <h3 id="sidebar-recent-title">Recent Posts</h3>
+            <div class="sidebar-recent-list" id="sidebar-recent">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
   </div>
-  <div class="article-detail-body">
-    <div class="article-detail-container">
-      <div class="article-detail-main">
-        <button class="back-to-blog" id="back-to-blog-btn" onclick="showSection('blog');return false;">&larr; Back to Journal</button>
-        <div class="article-detail-text" id="article-detail-text">
-          <!-- Generated dynamically in index.js -->
-        </div>
-        
-        <!-- Share Block -->
-        <div class="article-share-block">
-          <span class="share-title" id="share-title-text">Share this article:</span>
-          <div class="share-buttons">
-            <button class="share-btn share-x" onclick="shareArticle('x')">𝕏</button>
-            <button class="share-btn share-fb" onclick="shareArticle('facebook')">Facebook</button>
-            <button class="share-btn share-in" onclick="shareArticle('linkedin')">LinkedIn</button>
-            <button class="share-btn share-copy" id="share-copy-btn" onclick="copyArticleLink()">Copy Link</button>
-          </div>
-        </div>
-        
-        <!-- Subscribe Block -->
-        <div class="article-subscribe-block">
-          <h3 id="sub-title-text">Subscribe to our newsletter</h3>
-          <p id="sub-desc-text">Get gentle reflections, wellness insights, and breathing practices straight to your inbox.</p>
-          <form class="article-subscribe-form" onsubmit="submitSubscribeForm(event); return false;">
-            <input type="email" id="sub-email" placeholder="Your email address" required />
-            <button type="submit" class="btn-gold" id="sub-submit-btn">Subscribe</button>
-          </form>
-          <p class="sub-success-msg" id="sub-success-msg" style="display:none; color: var(--gold); margin-top: 16px; font-weight: 500;"></p>
-        </div>
+
+  <div id="article-detail-custom" class="tenbest-layout" style="display:none;">
+    <header class="tenbest-header">
+      <div class="tenbest-wrap">
+        <button class="tenbest-back" id="tenbest-back-btn" onclick="showSection('blog');return false;">&larr; Zurück zum Journal</button>
+        <span class="eyebrow" id="tenbest-eyebrow">Neu in der Praxis</span>
+        <h1 id="tenbest-title">Pause &amp; Move gehört zu den zehn Besten in Basel</h1>
+        <p class="tenbest-byline" id="tenbest-byline">Von Michael Guralnik &middot; September 2026 <b>3 MIN</b></p>
       </div>
-      
-      <aside class="article-detail-sidebar">
-        <!-- Categories Sidebar Section -->
-        <div class="sidebar-widget">
-          <h3 id="sidebar-categories-title">Categories</h3>
-          <ul class="sidebar-categories-list" id="sidebar-categories">
-            <!-- Rendered dynamically -->
-          </ul>
+    </header>
+
+    <div class="tenbest-wrap">
+      <section class="seal-card">
+        <div class="seal-panel">
+          <a class="seal" href="https://www.tenbest.ch/so-funktioniert-tenbest" target="_blank" rel="noopener" aria-label="Pause &amp; Move auf 10Best ansehen (öffnet in neuem Tab)">
+            <img src="../assets/10best-siegel.jpg" alt="10Best Schweiz Siegel 2026/2027, verliehen an Pause &amp; Move" width="224" height="224">
+          </a>
         </div>
-        
-        <!-- Recent Posts Sidebar Section -->
-        <div class="sidebar-widget">
-          <h3 id="sidebar-recent-title">Recent Posts</h3>
-          <div class="sidebar-recent-list" id="sidebar-recent">
-            <!-- Rendered dynamically -->
-          </div>
+        <div class="seal-text">
+          <span class="eyebrow" id="tenbest-seal-eyebrow">10Best &middot; Basel</span>
+          <h2 id="tenbest-seal-title">Ausgezeichnet als eine der zehn besten Praxen in Basel</h2>
+          <p id="tenbest-seal-desc">Eine Anerkennung basierend auf persönlicher Prüfung, nicht auf Werbebudgets.</p>
+          <a class="gold-link" id="tenbest-seal-link" href="https://www.tenbest.ch/so-funktioniert-tenbest" target="_blank" rel="noopener">Unser Profil ansehen &rarr;</a>
         </div>
-      </aside>
+      </section>
+
+      <article class="tenbest-article">
+        <p class="lead" id="tenbest-lead">Ich habe Neuigkeiten zu teilen und wollte, dass Sie es zuerst von mir erfahren. Pause &amp; Move wurde für 10Best ausgewählt – eine Schweizer Plattform, die nur die zehn besten Anbieter pro Branche und Kanton listet. Ich fühle mich geehrt, einer der zehn in Basel zu sein.</p>
+
+        <h3 id="tenbest-h3-1"><span class="n">I</span>Warum mir das wichtig ist</h3>
+        <p id="tenbest-p1">Plätze auf 10Best kann man nicht kaufen. Die Auswahl treffen Menschen: ein Telefongespräch, ein persönliches Interview, ein strukturierter Fragebogen, unabhängige Recherchen zu Kundenfeedback und ein Abschlussgespräch mit ehrlicher Rückmeldung. Was zählt, sind Qualität, Werte und Menschlichkeit, nicht Grösse oder Umsatz.</p>
+
+        <blockquote id="tenbest-quote">Eine gute Behandlung ist eine, die den Klienten stärkt — und Stärke entsteht durch Erfahrung und Bewusstsein.</blockquote>
+
+        <p id="tenbest-p2">Das ist es, was mir am meisten bedeutet. Mir geht es nicht um die Zahl der Behandlungen, die ich gebe. Sondern darum, ob Sie die Praxis mit etwas Nachhaltigem verlassen.</p>
+
+        <h3 id="tenbest-h3-2"><span class="n">II</span>Danke</h3>
+        <p id="tenbest-p3">Diese Auszeichnung gehört allen, die mir ihren Körper, ihre Fragen und ihre Zeit anvertraut haben. Ob Sie einmal wegen einer Schulter kamen, die nicht lockerlassen wollte, oder mich seit Monaten regelmässig besuchen: Sie sind der Grund, warum diese Praxis das ist, was sie ist. Wenn Sie mir ein Feedback hinterlassen oder mich weiterempfohlen haben, danke ich Ihnen ganz besonders.</p>
+
+        <h3 id="tenbest-h3-3"><span class="n">III</span>Was gleich bleibt</h3>
+        <p id="tenbest-p4">An meiner Arbeitsweise ändert sich nichts. Jede Behandlung richtet sich weiterhin ganz nach dem, was Sie an diesem Tag mitbringen – sei es Klassische Massage, Shiatsu, Tuina, Connected Movement oder Qigong. Und wenn ich nicht das Richtige für Sie bin, sage ich Ihnen das nach wie vor ganz ehrlich.</p>
+        <button class="cta" id="tenbest-cta-btn" onclick="openModal();return false;">Termin buchen</button>
+        <p class="sign" id="tenbest-sign">In Dankbarkeit, Michael</p>
+
+        <div class="share">
+          <span id="tenbest-share-label">Diesen Artikel teilen:</span>
+          <button onclick="shareArticle('x')">𝕏</button>
+          <button onclick="shareArticle('facebook')">Facebook</button>
+          <button onclick="shareArticle('linkedin')">LinkedIn</button>
+          <button id="tenbest-copy-btn" onclick="copyArticleLink()">Link kopieren</button>
+        </div>
+      </article>
+
+      <section class="tenbest-sub">
+        <h4 id="tenbest-sub-title">Newsletter abonnieren</h4>
+        <p id="tenbest-sub-desc">Erhalten Sie wertvolle Einblicke in Gesundheit, Wohlbefinden und Atemübungen direkt in Ihr Postfach.</p>
+        <form class="article-subscribe-form" onsubmit="submitSubscribeForm(event); return false;">
+          <input type="text" id="tenbest-sub-name" placeholder="Ihr Name" />
+          <input type="email" id="tenbest-sub-email" placeholder="Ihre E-Mail-Adresse" required />
+          <input type="tel" id="tenbest-sub-phone" placeholder="Telefon / SMS (optional)" />
+          <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;" tabindex="-1" autocomplete="off" />
+          <button type="submit" class="btn-gold" id="tenbest-sub-submit-btn">Abonnieren</button>
+        </form>
+        <p class="sub-success-msg" id="tenbest-sub-success-msg" style="display:none; color: var(--gold); margin-top: 16px; font-weight: 500;"></p>
+      </section>
     </div>
+
+    <button class="float-cta" id="tenbest-float-btn" onclick="openModal();return false;">Termin buchen</button>
   </div>
 </section>
 
@@ -597,6 +671,9 @@
     <div class="footer-brand">
       <div class="footer-logo" data-copy="nav.logo"><img src="../assets/logo.png" alt="Pause &amp; Move" class="logo-img"></div>
       <p data-copy="footer.brand_desc" data-html="true">Massage und Körperarbeit in Basel für Menschen, die sich in Körper, Geist und Seele rundum wohlfühlen möchten.<br><strong style="color:var(--white);">Pause & Move ist die Praxis von Michael Guralnik, Massage-Therapeut in Basel.</strong><br><br>EMR-Methode 102 (Klassische Massage) · ZSR-Nr. C657965</p>
+      <a href="https://www.tenbest.ch/so-funktioniert-tenbest" target="_blank" rel="noopener" class="footer-badge" aria-label="Ausgezeichnet von 10 Best (öffnet in neuem Tab)">
+        <img src="../assets/10best-siegel.jpg" alt="Selected by 10 Best - 2026 / 2027" width="120" height="120" loading="lazy">
+      </a>
       <div class="footer-social">
         <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
         <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>

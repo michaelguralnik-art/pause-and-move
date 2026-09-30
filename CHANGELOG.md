@@ -4,6 +4,32 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.53] - 2026-09-30
+### Developer & Copy Updates
+- Placed the 10Best recognition seal in the website footer across all pages directly beneath the EMR method / ZSR certification details.
+- Wrapped seal image in an external hyperlink pointing directly to `https://www.tenbest.ch/so-funktioniert-tenbest` with secure `target="_blank" rel="noopener"` attributes.
+- Added responsive styling for `.footer-badge` in `index.css` with smooth hover lift and gold glow shadow effects.
+- Updated `index.html`, `de/index.html`, `10best.html`, `one-of-basels-ten-best.html`, and executed `generate_blog.ps1` to propagate the footer badge across all English and German pre-rendered journal articles.
+
+### Reviewer Comments / Notes
+- Added clickable 10Best seal to website footer under EMR certification text.
+
+
+
+## [3.52] - 2026-09-30
+### Developer & Copy Updates
+- Integrated new 10Best recognition page ("Pause & Move is one of Basel's Ten Best") with custom seal-card and editorial layout.
+- Saved 10Best recognition seal asset to `assets/10best-siegel.jpg` and updated all image references.
+- Added article to `blog.json` for bilingual publication (EN and DE) under news / new in the clinic.
+- Updated `generate_blog.ps1` to pre-render custom 10Best static pages in `/journal/en/one-of-basels-ten-best` and `/journal/de/one-of-basels-ten-best` and updated `sitemap.xml`.
+- Integrated custom article layout into `index.html`, `de/index.html`, `index.js`, and `index.css` so the article seamlessly appears in Journal feeds and dynamically renders its custom layout upon selection.
+- Created standalone pages `one-of-basels-ten-best.html` and `10best.html` at the website root.
+
+### Reviewer Comments / Notes
+- Generated 10Best news page with custom layout and integrated into Journal.
+
+
+
 ## [3.51] - 2026-09-30
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.
