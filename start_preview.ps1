@@ -12,7 +12,7 @@ try {
     # Open the browser automatically to the index page
     Start-Process "http://localhost:$port/index.html"
 
-    $currentDir = (Get-Location).Path
+    $currentDir = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }
 
     while ($listener.IsListening) {
         $context = $listener.GetContext()
