@@ -170,8 +170,12 @@ Promise.all([
     updateLanguageUI();
     renderLanguage(currentLang);
     
-    // Initial routing based on hash
-    const hash = window.location.hash.replace('#', '') || 'home';
+    // Initial routing based on hash / query
+    const rawHash = window.location.hash.replace('#', '');
+    const urlParams = new URLSearchParams(window.location.search);
+    const isBookHash = ['book', 'booking', 'buchen'].includes(rawHash.toLowerCase());
+    const shouldOpenBookModal = isBookHash || urlParams.has('book') || urlParams.has('booking') || urlParams.has('buchen');
+    const hash = (!rawHash || isBookHash) ? 'home' : rawHash;
     if (hash.startsWith('article-')) {
       let articleId = hash.replace('article-', '');
       if (articleId === 'massage-oils-and-other-lubricats') articleId = 'massage-oils-and-other-lubricants';
@@ -195,6 +199,10 @@ Promise.all([
       }
     } else {
       showSection(hash, false);
+    }
+
+    if (shouldOpenBookModal) {
+      openModal();
     }
     
     // Push initial state so popstate behaves correctly
@@ -224,6 +232,15 @@ Promise.all([
     }, "", window.location.hash || "#home");
   })
   .catch(err => console.error("Error loading content or blog JSON:", err));
+
+// Open booking modal immediately if URL requests it (even before JSON finishes loading)
+(function checkInitialBookLink() {
+  const rawHash = window.location.hash.replace('#', '').toLowerCase();
+  const urlParams = new URLSearchParams(window.location.search);
+  if (['book', 'booking', 'buchen'].includes(rawHash) || urlParams.has('book') || urlParams.has('booking') || urlParams.has('buchen')) {
+    openModal();
+  }
+})();
 
 function renderLanguage(lang) {
   if (!siteData || !siteData[lang]) return;
@@ -277,6 +294,12 @@ function renderLanguage(lang) {
 
 // ── popstate event listener for browser navigation ──
 window.addEventListener('popstate', (event) => {
+  const rawHash = window.location.hash.replace('#', '');
+  if (['book', 'booking', 'buchen'].includes(rawHash.toLowerCase())) {
+    showSection('home', false);
+    openModal();
+    return;
+  }
   if (event.state) {
     const { sectionId, articleId, paneId } = event.state;
     if (sectionId === 'article-detail' && articleId) {

@@ -20,8 +20,10 @@ try {
         $response = $context.Response
         
         $rawPath = $request.Url.LocalPath
-        if ($rawPath -eq "/") {
-            $rawPath = "/index.html"
+        if ($rawPath.EndsWith("/")) {
+            $rawPath = $rawPath + "index.html"
+        } elseif ($rawPath -eq "/de") {
+            $rawPath = "/de/index.html"
         }
         
         # Build path to local file and replace URL forward slashes with Windows backslashes

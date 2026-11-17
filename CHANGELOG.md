@@ -4,6 +4,15 @@ This log documents all stable versions of the website.
 
 ---
 
+## [3.56] - 2026-11-17
+### Developer & Copy Updates
+- Synchronized latest copy modifications and codebase enhancements.
+
+### Reviewer Comments / Notes
+- Added direct book now link
+
+
+
 ## [3.55] - 2026-11-17
 ### Developer & Copy Updates
 - Synchronized latest copy modifications and codebase enhancements.
