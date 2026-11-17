@@ -13,9 +13,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Classic Massage in Basel &mdash; Pause &amp; Move</title>
-  <meta name="description" content="Klassische Massage &amp; manual bodywork in Basel by Michael Guralnik. EMR Method 102 recognized by Swiss supplementary health insurances (ASCA/EGK). Relieve tension and restore ease." />
+  <meta name="description" content="Klassische Massage &amp; manual bodywork in Basel by Michael Guralnik. EMR Method 102 recognized by Swiss supplementary health insurances (Zusatzversicherung). 60 min CHF 120 · 90 min CHF 160." />
   <link rel="canonical" href="https://pauseandmove.ch/pause-and-move-classic-massage" />
   <link rel="alternate" hreflang="en" href="https://pauseandmove.ch/pause-and-move-classic-massage" />
+  <link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/klassische-massage-basel" />
   <link rel="alternate" hreflang="x-default" href="https://pauseandmove.ch/pause-and-move-classic-massage" />
 
   <!-- OpenGraph Metadata -->
@@ -23,13 +24,13 @@
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://pauseandmove.ch/pause-and-move-classic-massage" />
   <meta property="og:title" content="Classic Massage in Basel &mdash; Pause &amp; Move" />
-  <meta property="og:description" content="Recognized by Swiss supplementary insurances (EMR 102 / ASCA / EGK). Deep relaxation and targeted physical relief." />
+  <meta property="og:description" content="Recognized by Swiss supplementary insurances (EMR 102, ZSR C657965). Deep relaxation and targeted physical relief in Basel." />
   <meta property="og:image" content="https://pauseandmove.ch/assets/wellness_band.png" />
 
   <!-- Twitter Card Metadata -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Classic Massage in Basel &mdash; Pause &amp; Move" />
-  <meta name="twitter:description" content="Recognized by Swiss supplementary insurances (EMR 102 / ASCA / EGK). Deep relaxation and targeted physical relief." />
+  <meta name="twitter:description" content="Recognized by Swiss supplementary insurances (EMR 102, ZSR C657965). Deep relaxation and targeted physical relief in Basel." />
   <meta name="twitter:image" content="https://pauseandmove.ch/assets/wellness_band.png" />
 
   <!-- Structured Data (JSON-LD) -->
@@ -39,7 +40,7 @@
     "@type": "HealthAndBeautyBusiness",
     "name": "Pause & Move - Classic Massage Basel",
     "image": "https://pauseandmove.ch/assets/wellness_band.png",
-    "priceRange": "$$",
+    "priceRange": "CHF 120 - CHF 160",
     "telephone": "+41 77 277 60 50",
     "email": "hello@pauseandmove.ch",
     "url": "https://pauseandmove.ch/pause-and-move-classic-massage",
@@ -55,11 +56,45 @@
       "latitude": 47.546994,
       "longitude": 7.585526
     },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "17:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
     "founder": {
       "@type": "Person",
       "name": "Michael Guralnik",
       "jobTitle": "Massage Therapist & Bodyworker"
-    }
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "price": "120.00",
+        "priceCurrency": "CHF",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Classic Massage — 60 min (EMR 102 Recognized)"
+        }
+      },
+      {
+        "@type": "Offer",
+        "price": "160.00",
+        "priceCurrency": "CHF",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Classic Massage — 90 min (EMR 102 Recognized)"
+        }
+      }
+    ]
   }
   </script>
 
@@ -443,12 +478,16 @@
       <ul class="nav-links">
         <li><a href="/#home">Home</a></li>
         <li><a href="/#about">About</a></li>
+        <li><a href="/#services">Services</a></li>
         <li><a href="/#modalities">Modalities</a></li>
         <li><a href="/pause-and-move-classic-massage" class="active">Classic Massage</a></li>
         <li><a href="/#blog">Journal</a></li>
         <li><a href="/#contact">Contact</a></li>
       </ul>
-      <a href="#" class="nav-cta" onclick="openModal();return false;">Book a session</a>
+      <div style="display:flex;align-items:center;gap:14px;">
+        <a href="/de/klassische-massage-basel" style="font-size:12px;font-weight:600;color:var(--sage-dark);text-decoration:none;border:1px solid var(--border);padding:6px 12px;border-radius:16px;">DE</a>
+        <a href="#" class="nav-cta" onclick="openModal();return false;">Book a session</a>
+      </div>
     </nav>
 
     <!-- HERO -->
@@ -567,22 +606,26 @@
     <div class="cta-block">
       <div>
         <h2>You deserve a proper break</h2>
-        <p>Book your classic massage in Basel — and give yourself an hour just for you.</p>
+        <p>Book your classic massage in Basel — 60 min (CHF 120) or 90 min (CHF 160). Packages available from CHF 90/session.</p>
       </div>
       <a href="#" class="cta-btn" onclick="openModal();return false;">Book a session ↗</a>
     </div>
 
     <!-- FOOTER -->
-    <footer style="margin-top: 64px; padding-top: 36px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
+    <footer style="margin-top: 64px; padding-top: 36px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 24px;">
       <div>
-        <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 4px;"><strong>Pause &amp; Move</strong> &middot; Meret Oppenheim-Strasse 6, 4053 Basel</p>
+        <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 4px;"><strong>Pause &amp; Move</strong> &middot; Inside Physiopunkt Basel &middot; Meret Oppenheim-Strasse 6, 4053 Basel</p>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Opening Hours: Mon–Fri 17:00–21:00 &middot; Sat–Sun 09:00–18:00 &middot; Tel: +41 77 277 60 50</p>
         <p style="font-size: 13px; color: var(--text-muted);">EMR Method 102 (Klassische Massage) &middot; ZSR no. C657965</p>
       </div>
-      <div style="display: flex; gap: 20px; font-size: 13px; flex-wrap: wrap;">
+      <div style="display: flex; gap: 18px; font-size: 13px; flex-wrap: wrap;">
         <a href="/" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">Home</a>
-        <a href="/#about" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">About</a>
-        <a href="/#modalities" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">Modalities</a>
-        <a href="/#blog" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">Journal</a>
+        <a href="/pause-and-move-classic-massage" style="color: var(--sage-dark); text-decoration: none; font-weight: 600;">Classic Massage</a>
+        <a href="/shiatsu-basel" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">Shiatsu</a>
+        <a href="/tuina-basel" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">Tuina</a>
+        <a href="/connected-movement-basel" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">Connected Movement</a>
+        <a href="/qigong-basel" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">Qigong</a>
+        <a href="/#services" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">Rates</a>
         <a href="/#contact" style="color: var(--sage-dark); text-decoration: none; font-weight: 500;">Contact</a>
       </div>
     </footer>

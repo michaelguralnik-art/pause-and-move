@@ -144,11 +144,21 @@ document.querySelectorAll('.nav-links a')[0].classList.add('active');
 // ── Multilingual State & Fetching ──
 let siteData = null;
 let siteBlogData = null;
-let currentLang = localStorage.getItem('lang') || 'en';
+const isDeSubdir = window.location.pathname.includes('/de/') || window.location.pathname.endsWith('/de');
+const basePath = isDeSubdir ? '../' : '';
+let currentLang = isDeSubdir ? 'de' : (localStorage.getItem('lang') || document.documentElement.lang || 'en');
 let currentCategory = 'all';
 
-const contentFetchUrl = window.location.protocol === 'file:' ? 'content.json' : 'content.json?cb=' + new Date().getTime();
-const blogFetchUrl = window.location.protocol === 'file:' ? 'blog.json' : 'blog.json?cb=' + new Date().getTime();
+function resolvePath(relPath) {
+  if (!relPath) return '';
+  if (relPath.startsWith('http://') || relPath.startsWith('https://') || relPath.startsWith('/') || relPath.startsWith('../')) {
+    return relPath;
+  }
+  return basePath + relPath;
+}
+
+const contentFetchUrl = window.location.protocol === 'file:' ? `${basePath}content.json` : `${basePath}content.json?cb=` + new Date().getTime();
+const blogFetchUrl = window.location.protocol === 'file:' ? `${basePath}blog.json` : `${basePath}blog.json?cb=` + new Date().getTime();
 
 Promise.all([
   fetch(contentFetchUrl).then(response => response.json()),
@@ -244,6 +254,7 @@ function renderLanguage(lang) {
   renderServicesContent(langData);
   renderModalitiesContent(langData);
   renderFaqContent(langData);
+  renderContactContent(langData);
   
   // Render blog content
   renderBlogContent(lang);
@@ -344,7 +355,7 @@ function bindStaticContent(data) {
     const key = el.getAttribute('data-copy');
     let value = getNestedValue(data, key);
     if (key === 'nav.logo') {
-      value = '<img src="assets/logo.png" alt="Pause &amp; Move" class="logo-img">';
+      value = `<img src="${resolvePath('assets/logo.png')}" alt="Pause &amp; Move" class="logo-img">`;
     }
     if (value) {
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
@@ -358,20 +369,56 @@ function bindStaticContent(data) {
   });
 }
 
+const MODALITY_LANDING_URLS = {
+  en: {
+    classic: 'pause-and-move-classic-massage',
+    shiatsu: 'shiatsu-basel',
+    tuina: 'tuina-basel',
+    connected: 'connected-movement-basel',
+    qigong: 'qigong-basel'
+  },
+  de: {
+    classic: 'de/klassische-massage-basel',
+    shiatsu: 'de/shiatsu-basel',
+    tuina: 'de/tuina-basel',
+    connected: 'de/connected-movement-basel',
+    qigong: 'de/qigong-basel'
+  }
+};
+
+const MODALITY_NAMES = {
+  en: {
+    classic: 'Classic Massage',
+    shiatsu: 'Shiatsu',
+    tuina: 'Tuina',
+    connected: 'Connected Movement',
+    qigong: 'Qigong'
+  },
+  de: {
+    classic: 'Klassische Massage',
+    shiatsu: 'Shiatsu',
+    tuina: 'Tuina',
+    connected: 'Connected Movement',
+    qigong: 'Qigong'
+  }
+};
+
 function renderHomeModalities(data) {
   const container = document.getElementById('mod-scroll');
   if (!container || !data.modalities || !data.modalities.list) return;
-  
+  const isDe = currentLang === 'de';
+  const names = MODALITY_NAMES[currentLang] || MODALITY_NAMES.en;
+
   container.innerHTML = data.modalities.list.map((mod, idx) => `
     <div class="modality-card modality-card-${mod.id} reveal delay-${(idx % 4) + 1}" onclick="showSection('modalities');showMod('${mod.id}')">
       <div class="modality-card-img">
-        <img src="${mod.image}" alt="${mod.title}"/>
+        <img src="${resolvePath(mod.image)}" alt="${names[mod.id] || mod.title}"/>
       </div>
       <div class="modality-card-content">
-        <p class="modality-card-num">0${idx + 1}</p>
+        <p class="modality-card-num">0${idx + 1} · ${names[mod.id] || ''}</p>
         <h3>${mod.title}</h3>
         <p>${mod.desc}</p>
-        <span class="modality-card-arrow">Learn more →</span>
+        <span class="modality-card-arrow">${isDe ? 'Mehr erfahren →' : 'Learn more →'}</span>
       </div>
     </div>
   `).join('');
@@ -407,6 +454,7 @@ function renderAboutContent(data) {
 function renderServicesContent(data) {
   const container = document.getElementById('services-packages-section');
   if (!container || !data.services.packages) return;
+  const isDe = currentLang === 'de';
 
   let html = '';
 
@@ -420,7 +468,7 @@ function renderServicesContent(data) {
             <p class="body-sm" style="margin-top:12px;max-width:420px">${track.description}</p>
           </div>
           <div class="pkg-perks">
-            <p class="pkg-perks-label">Included in every ${track.name} package</p>
+            <p class="pkg-perks-label">${isDe ? `In jedem Paket (${track.name}) enthalten` : `Included in every ${track.name} package`}</p>
             ${track.perks.map(perk => `
               <div class="pkg-perk-item">
                 <span class="pkg-perk-dot"></span>
@@ -448,7 +496,7 @@ function renderServicesContent(data) {
                   </div>
                 ` : ''}
               </div>
-              <button class="${idx === 1 ? 'btn-gold' : 'btn-outline-sm'}" onclick="openModal()">Book</button>
+              <button class="${idx === 1 ? 'btn-gold' : 'btn-outline-sm'}" onclick="openModal()">${isDe ? 'Buchen' : 'Book'}</button>
             </div>
           `).join('')}
         </div>
@@ -467,7 +515,7 @@ function renderServicesContent(data) {
             <p class="body-sm" style="margin-top:16px;max-width:420px">${lg.description}</p>
           </div>
           <div class="pkg-perks">
-            <p class="pkg-perks-label">Included in ${lg.name}</p>
+            <p class="pkg-perks-label">${isDe ? `In ${lg.name} enthalten` : `Included in ${lg.name}`}</p>
             ${lg.perks.map(perk => `
               <div class="pkg-perk-item">
                 <span class="pkg-perk-dot"></span>
@@ -481,8 +529,8 @@ function renderServicesContent(data) {
             <span class="long-game-rate-label">${lg.rate_label}</span>
             <span class="long-game-rate-price">${lg.rate_price} <sub>${lg.rate_sub}</sub></span>
           </div>
-          <p class="body-sm" style="margin-top:16px;max-width:400px">Duration and frequency are agreed together after your first session. Book a single session to begin — and we'll take it from there.</p>
-          <button class="btn-gold" style="margin-top:24px" onclick="openModal()">Book a first session</button>
+          <p class="body-sm" style="margin-top:16px;max-width:400px">${isDe ? 'Dauer und Rhythmus vereinbaren wir gemeinsam nach Ihrer ersten Sitzung. Buchen Sie zunächst eine Einzelsitzung — alles Weitere besprechen wir vor Ort.' : 'Duration and frequency are agreed together after your first session. Book a single session to begin — and we\'ll take it from there.'}</p>
+          <button class="btn-gold" style="margin-top:24px" onclick="openModal()">${isDe ? 'Erste Sitzung buchen' : 'Book a first session'}</button>
         </div>
       </div>
     `;
@@ -546,17 +594,34 @@ function getBenefitIcon(modId, idx) {
 function renderModalitiesContent(data) {
   const container = document.getElementById('modalities-panes-container');
   if (!container || !data.modalities.list) return;
+  const isDe = currentLang === 'de';
+  const urls = MODALITY_LANDING_URLS[currentLang] || MODALITY_LANDING_URLS.en;
+  const names = MODALITY_NAMES[currentLang] || MODALITY_NAMES.en;
+
+  // Update sub-nav tab labels in #modalities
+  const modSection = document.getElementById('modalities');
+  if (modSection) {
+    modSection.querySelectorAll('.sub-nav-btn').forEach(btn => {
+      const oc = btn.getAttribute('onclick') || '';
+      Object.keys(names).forEach(modKey => {
+        if (oc.includes(`'${modKey}'`)) {
+          btn.textContent = names[modKey];
+        }
+      });
+    });
+  }
 
   container.innerHTML = data.modalities.list.map((mod, idx) => `
     <div id="modalities-${mod.id}" class="sub-pane ${idx === 0 ? 'active' : ''}">
       <div class="mod-wrap">
         <div class="mod-image-banner">
-          <img src="${mod.image}" alt="${mod.title}"/>
+          <img src="${resolvePath(mod.image)}" alt="${names[mod.id] || mod.title}"/>
         </div>
         <div class="mod-intro reveal">
           <p class="eyebrow" style="margin-bottom:12px">${mod.eyebrow}</p>
           <h2>${mod.title}</h2>
           <p style="margin-top:14px">${mod.desc}</p>
+          ${urls[mod.id] ? `<p style="margin-top:16px;"><a href="${resolvePath(urls[mod.id])}" style="color:var(--gold); font-size:13px; font-weight:500; text-decoration:underline;">${isDe ? `Mehr über ${names[mod.id]} in Basel →` : `More about ${names[mod.id]} in Basel →`}</a></p>` : ''}
         </div>
         <div class="mod-benefits reveal">
           ${mod.benefits.map((benefit, bIdx) => `
@@ -572,7 +637,7 @@ function renderModalitiesContent(data) {
         <div class="mod-detail-grid reveal">
           <p>${mod.details}</p>
         </div>
-        <p class="mod-checks-title">${mod.checks_title || 'Great for'}</p>
+        <p class="mod-checks-title">${mod.checks_title || (isDe ? 'Ideal bei' : 'Great for')}</p>
         <div class="mod-checks">
           ${mod.checks.map(check => `
             <div class="mod-check">${check}</div>
@@ -597,6 +662,29 @@ function renderModalitiesContent(data) {
       </div>
     </div>
   `).join('');
+}
+
+function renderContactContent(data) {
+  if (!data || !data.contact) return;
+  const isDe = currentLang === 'de';
+  const hoursGrid = document.querySelector('.hours-grid');
+  if (hoursGrid && data.contact.info && Array.isArray(data.contact.info.hours)) {
+    hoursGrid.innerHTML = data.contact.info.hours.map(h => `
+      <span class="day">${h.day}</span><span class="hrs">${h.hrs}</span>
+    `).join('');
+  }
+  const selectEl = document.getElementById('cf-interest');
+  if (selectEl && data.contact.form && Array.isArray(data.contact.form.interest_options)) {
+    const placeholder = isDe ? '— Therapie wählen —' : '— Choose a therapy —';
+    selectEl.innerHTML = `<option value="">${placeholder}</option>` +
+      data.contact.form.interest_options.map(opt => `<option>${opt}</option>`).join('');
+  }
+  const msgEl = document.getElementById('cf-message');
+  if (msgEl) {
+    msgEl.placeholder = isDe
+      ? 'Erzählen Sie uns kurz, wonach Sie suchen…'
+      : "Tell us a little about what you're looking for…";
+  }
 }
 
 function renderFaqContent(data) {
@@ -630,10 +718,61 @@ window.toggleFaq = function(idx) {
   }
 };
 
-// ── Legacy Form submission stub (Booking is handled directly by OneDoc widget) ──
+// ── Legacy Form submission fallback (Booking is handled directly by OneDoc widget, fallback sends email) ──
 function submitBookingForm(event) {
   if (event) event.preventDefault();
-  closeModal();
+  const fnEl = document.getElementById('bm-first-name');
+  const lnEl = document.getElementById('bm-last-name');
+  const emEl = document.getElementById('bm-email');
+  const thEl = document.getElementById('bm-therapy');
+  const ntEl = document.getElementById('bm-notes');
+  const submitBtn = document.getElementById('bm-submit');
+  if (!fnEl || !emEl) {
+    closeModal();
+    return;
+  }
+  const clientName = ((fnEl.value || '').trim() + ' ' + (lnEl ? (lnEl.value || '').trim() : '')).trim();
+  const originalText = submitBtn ? submitBtn.textContent : '';
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = currentLang === 'en' ? 'Sending...' : 'Senden...';
+  }
+  fetch("https://formsubmit.co/ajax/hello@pauseandmove.ch", {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      _subject: "Booking Request " + clientName,
+      "Name": clientName,
+      "Email": emEl.value.trim(),
+      "Therapy": thEl ? thEl.value : '',
+      "Notes": ntEl ? ntEl.value.trim() : '',
+      _captcha: "false"
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      if (submitBtn) submitBtn.textContent = currentLang === 'en' ? 'Sent successfully!' : 'Erfolgreich gesendet!';
+      setTimeout(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
+        closeModal();
+      }, 1500);
+    } else {
+      throw new Error("Booking form submission failed");
+    }
+  })
+  .catch(err => {
+    console.error(err);
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = currentLang === 'en' ? 'Error. Try again.' : 'Fehler. Erneut versuchen.';
+    }
+  });
 }
 
 function submitContactForm(event) {
@@ -744,18 +883,18 @@ function renderBlogContent(lang) {
       featuredContainer.style.display = 'grid';
       const featuredArticle = articles[0];
       featuredContainer.innerHTML = `
-        <a href="journal/${lang}/${featuredArticle.id}" onclick="showArticle('${featuredArticle.id}'); return false;" class="blog-featured-img" style="display:block;">
-          <img src="${featuredArticle.image}" alt="${featuredArticle.title}" loading="lazy"/>
+        <a href="${resolvePath(`journal/${lang}/${featuredArticle.id}`)}" onclick="showArticle('${featuredArticle.id}'); return false;" class="blog-featured-img" style="display:block;">
+          <img src="${resolvePath(featuredArticle.image)}" alt="${featuredArticle.title}" loading="lazy"/>
         </a>
         <div class="blog-featured-body">
           <span class="blog-featured-label">${lang === 'en' ? 'Featured Post' : 'Hervorgehobener Beitrag'}</span>
-          <h2 style="font-style:italic;"><a href="journal/${lang}/${featuredArticle.id}" onclick="showArticle('${featuredArticle.id}'); return false;" style="color: inherit; text-decoration: none;">${featuredArticle.title}</a></h2>
+          <h2 style="font-style:italic;"><a href="${resolvePath(`journal/${lang}/${featuredArticle.id}`)}" onclick="showArticle('${featuredArticle.id}'); return false;" style="color: inherit; text-decoration: none;">${featuredArticle.title}</a></h2>
           <p>${featuredArticle.abstract}</p>
           <div class="blog-featured-meta" style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--muted); margin-bottom: 24px;">
             <span>${lang === 'en' ? 'By' : 'Von'} ${featuredArticle.author || 'Michael Guralnik'} &middot; ${featuredArticle.date}</span>
             <span style="font-weight: 600; text-transform: uppercase; color: var(--gold); letter-spacing: 0.08em; font-size: 11px;">${featuredArticle.readTime}</span>
           </div>
-          <a href="journal/${lang}/${featuredArticle.id}" onclick="showArticle('${featuredArticle.id}'); return false;" class="btn-text" style="text-decoration: none;">
+          <a href="${resolvePath(`journal/${lang}/${featuredArticle.id}`)}" onclick="showArticle('${featuredArticle.id}'); return false;" class="btn-text" style="text-decoration: none;">
             ${lang === 'en' ? 'Read article' : 'Artikel lesen'} &rarr;
           </a>
         </div>
@@ -769,9 +908,9 @@ function renderBlogContent(lang) {
         gridContainer.innerHTML = gridArticles.map((article, idx) => {
           const categoryName = categories[article.categoryId] || article.categoryId;
           return `
-            <a href="journal/${lang}/${article.id}" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
+            <a href="${resolvePath(`journal/${lang}/${article.id}`)}" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
               <div class="blog-thumb">
-                <img src="${article.image}" alt="${article.title}" loading="lazy"/>
+                <img src="${resolvePath(article.image)}" alt="${article.title}" loading="lazy"/>
               </div>
               <div class="blog-card-body">
                 <p class="blog-cat">${categoryName}</p>
@@ -804,9 +943,9 @@ function renderBlogContent(lang) {
         gridContainer.innerHTML = filteredArticles.map((article, idx) => {
           const categoryName = categories[article.categoryId] || article.categoryId;
           return `
-            <a href="journal/${lang}/${article.id}" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
+            <a href="${resolvePath(`journal/${lang}/${article.id}`)}" onclick="showArticle('${article.id}'); return false;" class="blog-card reveal delay-${(idx % 3) + 1}" style="text-decoration: none; color: inherit; display: block;">
               <div class="blog-thumb">
-                <img src="${article.image}" alt="${article.title}" loading="lazy"/>
+                <img src="${resolvePath(article.image)}" alt="${article.title}" loading="lazy"/>
               </div>
               <div class="blog-card-body">
                 <p class="blog-cat">${categoryName}</p>
@@ -911,7 +1050,7 @@ function showArticle(articleId, pushToHistory = true) {
     `;
   }
   if (imgContainer) {
-    imgContainer.innerHTML = `<img src="${article.image}" alt="${article.title}"/>`;
+    imgContainer.innerHTML = `<img src="${resolvePath(article.image)}" alt="${article.title}"/>`;
   }
   if (textContainer) {
     textContainer.innerHTML = article.content.map(p => `<p>${p}</p>`).join('');
@@ -981,9 +1120,9 @@ function showArticle(articleId, pushToHistory = true) {
     const recentList = otherArticles.length > 0 ? otherArticles.slice(0, 3) : publishedArticles.slice(0, 3);
     recentContainer.innerHTML = recentList.map(rec => {
       return `
-        <a href="journal/${currentLang}/${rec.id}" onclick="showArticle('${rec.id}'); return false;" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
+        <a href="${resolvePath(`journal/${currentLang}/${rec.id}`)}" onclick="showArticle('${rec.id}'); return false;" class="sidebar-recent-item" style="text-decoration: none; color: inherit; display: flex;">
           <div class="sidebar-recent-thumb">
-            <img src="${rec.image}" alt="${rec.title}" loading="lazy"/>
+            <img src="${resolvePath(rec.image)}" alt="${rec.title}" loading="lazy"/>
           </div>
           <div class="sidebar-recent-info">
             <h4>${rec.title}</h4>

@@ -40,7 +40,7 @@
                            "hero_title":  "Häufig gestellte\u003cbr\u003e\u003cem\u003eFragen.\u003c/em\u003e"
                        },
                "metadata":  {
-                                "description":  "Erstklassige Massagetherapie und Körperarbeit im Herzen von Basel (Shiatsu, Tuina, Klassische Massage, Connected Movement). Anerkannt von Schweizer Krankenkassen (ASCA/EGK).",
+                                "description":  "Erstklassige Massagetherapie und Körperarbeit im Herzen von Basel: Klassische Massage, Shiatsu, Tuina, Connected Movement & Qigong. Krankenkassen-anerkannt (EMR 102 / Zusatzversicherung).",
                                 "title":  "Pause \u0026 Move — Professionelle Massage \u0026 Körpertherapie in Basel"
                             },
                "home":  {
@@ -130,15 +130,15 @@
                                             "pin":  "In den Räumen von Physiopunkt Basel",
                                             "hours":  [
                                                           {
-                                                              "hrs":  "Abends",
+                                                              "hrs":  "17:00 – 21:00",
                                                               "day":  "Mo – Fr"
                                                           },
                                                           {
-                                                              "hrs":  "Termine nach Vereinbarung",
+                                                              "hrs":  "09:00 – 18:00",
                                                               "day":  "Samstag"
                                                           },
                                                           {
-                                                              "hrs":  "Termine nach Vereinbarung",
+                                                              "hrs":  "09:00 – 18:00",
                                                               "day":  "Sonntag"
                                                           }
                                                       ],
@@ -257,7 +257,7 @@
                                                                         "desc":  "Regt die Durchblutung an, sodass sich Ihr Körper wärmer, leichter und voller Energie anfühlt."
                                                                     }
                                                                 ],
-                                                   "details":  "Eine Sitzung deckt in der Regel den ganzen Körper ab — Rücken, Schultern, Beine, Arme —, wobei **Druck und Fokus ganz auf Sie abgestimmt** werden. Bevorzugen Sie festen Druck? Sanftere Berührungen? Brauchen Sie besondere Aufmerksamkeit für den unteren Rücken? Sprechen Sie es einfach an.\u003c/p\u003e\u003cp\u003eDie klassische Massage eignet sich hervorragend als **einzelne Auszeit** oder als sanfter Einstieg, wenn Sie neu in der Massage-Therapie sind. Sie lässt sich auch wunderbar mit gezielter Arbeit wie Tuina kombinieren.",
+                                                   "details":  "Eine Sitzung deckt in der Regel den ganzen Körper ab — Rücken, Schultern, Beine, Arme —, wobei \u003cstrong\u003eDruck und Fokus ganz auf Sie abgestimmt\u003c/strong\u003e werden. Bevorzugen Sie festen Druck? Sanftere Berührungen? Brauchen Sie besondere Aufmerksamkeit für den unteren Rücken? Sprechen Sie es einfach an.\u003c/p\u003e\u003cp\u003eDie klassische Massage eignet sich hervorragend als \u003cstrong\u003eeinzelne Auszeit\u003c/strong\u003e oder als sanfter Einstieg, wenn Sie neu in der Massage-Therapie sind. Sie lässt sich auch wunderbar mit gezielter Arbeit wie Tuina kombinieren.",
                                                    "desc":  "Die klassische Massage wird mit Öl direkt auf der Haut durchgeführt, mit sanften, rhythmischen Griffen, die die Muskeln erwärmen und Sie in eine tiefe Entspannung führen. Wunderbar unkompliziert — und wirkt jedes Mal.\u003cbr\u003e\u003cbr\u003eKrankenkassen-anerkannt — EMR 102",
                                                    "callout":  {
                                                                    "title":  "Krankenkasse",
@@ -295,7 +295,7 @@
                                                                         "desc":  "Funktioniert hervorragend für sich allein oder begleitend zu anderen Behandlungen."
                                                                     }
                                                                 ],
-                                                   "details":  "Während einer Sitzung nutzt der Therapeut **sanften Druck und geführte Bewegungen**, um Spannungen zu lösen und Ihrem Körper zu seinem natürlichen Rhythmus zu verhelfen. Tief entspannend — viele schlafen dabei ein.\u003c/p\u003e\u003cp\u003eMit der Zeit können regelmäßige Behandlungen helfen, **Haltung, Koordination und eine allgemeine Leichtigkeit** wiederherzustellen, die den Alltag entlastet.",
+                                                   "details":  "Während einer Sitzung nutzt der Therapeut \u003cstrong\u003esanften Druck und geführte Bewegungen\u003c/strong\u003e, um Spannungen zu lösen und Ihrem Körper zu seinem natürlichen Rhythmus zu verhelfen. Tief entspannend — viele schlafen dabei ein.\u003c/p\u003e\u003cp\u003eMit der Zeit können regelmäßige Behandlungen helfen, \u003cstrong\u003eHaltung, Koordination und eine allgemeine Leichtigkeit\u003c/strong\u003e wiederherzustellen, die den Alltag entlastet.",
                                                    "desc":  "Shiatsu hat seine Wurzeln in der traditionellen japanischen Medizin und nutzt sanften Druck, Dehnungen und geführte Bewegungen, um dem Körper zu seiner natürlichen Balance zu verhelfen. Bekleidet durchgeführt — ohne Öl, ohne Entkleiden.",
                                                    "title":  "Form folgt Funktion. Technik folgt Tradition.",
                                                    "checks_title":  "Ideal bei"
@@ -328,7 +328,7 @@
                                                                         "desc":  "Die Wurzeln von Tuina in der inneren Chinesischen Medizin ermöglichen die Behandlung systemischer Probleme — Verdauung, Schlaf, Erschöpfung, hormonelle Balance — nicht nur von Schmerzen."
                                                                     }
                                                                 ],
-                                                   "details":  "Tuina-Techniken können an jedem Punkt der Sitzung einfließen — kurz oder als Hauptfokus —, je nachdem, woran gearbeitet wird. Es ist keine spezielle Anfrage nötig. **Wenn es das Richtige für Sie ist, wird es angewendet.**\u003c/p\u003e\u003cp\u003eEs ist besonders wirksam bei **chronischen oder wiederkehrenden Beschwerden**, die auf sanftere Ansätze nicht reagiert haben — und zur Behandlung von Ungleichgewichten, die über das Körperliche hinausgehen.",
+                                                   "details":  "Tuina-Techniken können an jedem Punkt der Sitzung einfließen — kurz oder als Hauptfokus —, je nachdem, woran gearbeitet wird. Es ist keine spezielle Anfrage nötig. \u003cstrong\u003eWenn es das Richtige für Sie ist, wird es angewendet.\u003c/strong\u003e\u003c/p\u003e\u003cp\u003eEs ist besonders wirksam bei \u003cstrong\u003echronischen oder wiederkehrenden Beschwerden\u003c/strong\u003e, die auf sanftere Ansätze nicht reagiert haben — und zur Behandlung von Ungleichgewichten, die über das Körperliche hinausgehen.",
                                                    "desc":  "Tuina ist dynamischer und kraftvoller als die klassische Massage oder Shiatsu. Verwulzelt in der Chinesischen Medizin, nutzt es gezielte Techniken, um sowohl körperliche Beschwerden als auch tiefe Ungleichgewichte anzugehen.",
                                                    "callout":  {
                                                                    "title":  "Integrierte Methode",
@@ -366,7 +366,7 @@
                                                                         "desc":  "Jede Sitzung lädt Sie ein, darauf zu achten, was Ihr Körper Ihnen tatsächlich mitteilt."
                                                                     }
                                                                 ],
-                                                   "details":  "Connected Movement entstammt keiner einzelnen Tradition — es ist eine Mischung aus **östlicher Philosophie und westlicher Bewegungswissenschaft**, geprägt von jahrelanger persönlicher Praxis.\u003c/p\u003e\u003cp\u003eOb Sie mit einem bestimmten Ziel kommen oder einfach neugierig sind: Sie werden mit einem **klareren Gefühl dafür nach Hause gehen, wie sich Ihr Körper bewegt** — und warum.",
+                                                   "details":  "Connected Movement entstammt keiner einzelnen Tradition — es ist eine Mischung aus \u003cstrong\u003eöstlicher Philosophie und westlicher Bewegungswissenschaft\u003c/strong\u003e, geprägt von jahrelanger persönlicher Praxis.\u003c/p\u003e\u003cp\u003eOb Sie mit einem bestimmten Ziel kommen oder einfach neugierig sind: Sie werden mit einem \u003cstrong\u003eklareren Gefühl dafür nach Hause gehen, wie sich Ihr Körper bewegt\u003c/strong\u003e — und warum.",
                                                    "desc":  "Basierend auf der Feldenkrais-Methode und traditionellen japanischen Kampfkünsten nutzt Connected Movement feine, mühelose Bewegungen — geführt und selbst ausgeführt —, um die natürliche Bewegung Ihres Körpers wiederzuentdecken.",
                                                    "title":  "Bewegung als Erforschung, nicht als Training.",
                                                    "checks_title":  "Was es für Sie tun kann"
@@ -399,7 +399,7 @@
                                                                         "desc":  "Üben Sie bereits Qigong in einer Gruppe? Einzelsitzungen helfen Ihnen, Ihre Form zu verfeinern, Abläufe zu verstehen und gezielt zu trainieren."
                                                                     }
                                                                 ],
-                                                   "details":  "Eine Sitzung ist eine bewegte Praxis — im Charakter dem Taiji nicht unähnlich. Langsam, bewusst, achtsam. Manche Sitzungen fühlen sich wie **tiefe Ruhe in Bewegung** an. Andere wie echte Arbeit. Die meisten wie beides. Elemente aus Connected Movement fließen bei Bedarf ein.\u003c/p\u003e\u003cp\u003eQigong erfüllt hier viele Zwecke — Erholung, therapeutische Ziele, Umgang mit chronischen Beschwerden oder Verfeinerung einer Praxis, die Sie bereits lieben. **Die Zusammenstellung ändert sich. Die Praxis bleibt Ihre eigene.**",
+                                                   "details":  "Eine Sitzung ist eine bewegte Praxis — im Charakter dem Taiji nicht unähnlich. Langsam, bewusst, achtsam. Manche Sitzungen fühlen sich wie \u003cstrong\u003etiefe Ruhe in Bewegung\u003c/strong\u003e an. Andere wie echte Arbeit. Die meisten wie beides. Elemente aus Connected Movement fließen bei Bedarf ein.\u003c/p\u003e\u003cp\u003eQigong erfüllt hier viele Zwecke — Erholung, therapeutische Ziele, Umgang mit chronischen Beschwerden oder Verfeinerung einer Praxis, die Sie bereits lieben. \u003cstrong\u003eDie Zusammenstellung ändert sich. Die Praxis bleibt Ihre eigene.\u003c/strong\u003e",
                                                    "desc":  "Die meisten kennen Qigong als Gruppenübung in Parks. Das ist ein wunderbarer Weg. Eine Einzelsitzung ist jedoch anders — die Übungen werden speziell für Sie aus einem großen Repertoire ausgewählt und basierend auf Ihrem Körper, Ihrem Gesundheitsbild und den Prinzipien der TCM zusammengestellt.",
                                                    "title":  "Bewegung auf Rezept",
                                                    "checks_title":  "Ideal bei"
@@ -554,7 +554,7 @@
                            "hero_title":  "Frequently\u003cbr\u003eAsked \u003cem\u003eQuestions.\u003c/em\u003e"
                        },
                "metadata":  {
-                                "description":  "Premium massage therapy and manual bodywork in the heart of Basel (Shiatsu, Tuina, Classic Massage, Connected Movement). Recognized by Swiss supplementary insurances (ASCA/EGK).",
+                                "description":  "Premium massage therapy and manual bodywork in the heart of Basel: Classic Massage, Shiatsu, Tuina, Connected Movement & Qigong. Recognized by Swiss supplementary insurance (EMR 102).",
                                 "title":  "Pause \u0026 Move — Professional Massage \u0026 Bodywork in Basel"
                             },
                "home":  {
@@ -644,15 +644,15 @@
                                             "pin":  "Inside Physiopunkt Basel",
                                             "hours":  [
                                                           {
-                                                              "hrs":  "Evenings",
+                                                              "hrs":  "17:00 – 21:00",
                                                               "day":  "Mon – Fri"
                                                           },
                                                           {
-                                                              "hrs":  "By appointment",
+                                                              "hrs":  "09:00 – 18:00",
                                                               "day":  "Saturday"
                                                           },
                                                           {
-                                                              "hrs":  "By appointment",
+                                                              "hrs":  "09:00 – 18:00",
                                                               "day":  "Sunday"
                                                           }
                                                       ],

@@ -12,6 +12,36 @@
     },
     "articles": [
       {
+        "id": "one-of-basels-ten-best",
+        "categoryId": "new_in_clinic",
+        "title": "Pause & Move is one of Basel's Ten Best",
+        "date": "October 2026",
+        "readTime": "3 min",
+        "author": "Michael Guralnik",
+        "abstract": "Pause & Move has been selected for 10Best, a Swiss platform that lists only the ten best providers per industry and canton. A recognition based on personal vetting, not advertising budgets.",
+        "image": "assets/10best-siegel.jpg",
+        "keywords": [
+          "10Best Basel",
+          "10Best Schweiz",
+          "best massage Basel",
+          "Pause & Move award",
+          "top 10 massage Basel",
+          "quality bodywork"
+        ],
+        "content": [
+          "I have some news to share, and I wanted you to hear it from me first. Pause &amp; Move has been selected for 10Best, a Swiss platform that lists only the ten best providers per industry and canton. I'm honoured to be one of the ten in Basel.",
+          "Why this matters to me: Places on 10Best can't be bought. The selection is made by people: a phone conversation, a personal interview, a structured questionnaire, independent research into client feedback, and a closing conversation with honest feedback. What counts is quality, values and humanity, not size or turnover.",
+          "A good treatment is one that makes the client stronger — and strength is achieved through experience and awareness. That's what means the most. What I care about isn't the number of sessions I give. It's whether you leave with something lasting.",
+          "Thank you: This belongs to everyone who has trusted me with their body, their questions and their time. Whether you came once for a shoulder that wouldn't let go or have been coming for months, you're part of why this practice is what it is. If you've left feedback or recommended me to a friend, thank you especially.",
+          "What stays the same: Nothing changes in how I work. Every session is still built around what you bring that day, whether that's classic massage, Shiatsu, Tuina, Connected Movement or Qigong. And if I'm not the right fit, I'll still tell you honestly."
+        ],
+        "categoryIds": [
+          "new_in_clinic"
+        ],
+        "layout": "10best",
+        "published": true
+      },
+      {
         "id": "shoulders-stress",
         "categoryId": "health",
         "title": "The Ease Behind the Effort",
@@ -521,6 +551,36 @@
       "new_in_clinic": "Neu in der Praxis"
     },
     "articles": [
+      {
+        "id": "one-of-basels-ten-best",
+        "categoryId": "new_in_clinic",
+        "title": "Pause & Move gehört zu den zehn Besten in Basel",
+        "date": "Oktober 2026",
+        "readTime": "3 Min.",
+        "author": "Michael Guralnik",
+        "abstract": "Pause & Move wurde für 10Best ausgewählt – eine Schweizer Plattform, die nur die zehn besten Anbieter pro Branche und Kanton auszeichnet. Basierend auf persönlicher Prüfung, nicht auf Werbebudgets.",
+        "image": "assets/10best-siegel.jpg",
+        "keywords": [
+          "10Best Basel",
+          "10Best Schweiz",
+          "Beste Massage Basel",
+          "Pause & Move Auszeichnung",
+          "Top 10 Massage Basel",
+          "Massage Empfehlung Basel"
+        ],
+        "content": [
+          "Ich habe einige Neuigkeiten, die ich mitteilen möchte, und ich wollte, dass du sie zuerst von mir hörst. Pause &amp; Move wurde für 10Best ausgewählt, eine Schweizer Plattform, die nur die zehn besten Anbieter pro Branche und Kanton auflistet. Ich fühle mich geehrt, einer der zehn Basler zu sein.",
+          "Warum mir das wichtig ist: Plätze auf 10Best können nicht gekauft werden. Die Auswahl wird von Menschen getroffen: ein Telefongespräch, ein persönliches Interview, ein strukturierter Fragebogen, eine unabhängige Recherche zum Kundenfeedback und ein Abschlussgespräch mit ehrlichem Feedback. Was zählt, sind Qualität, Werte und Menschlichkeit, nicht Größe oder Umsatz.",
+          "Eine gute Behandlung ist eine, die den Klienten stärker macht — und Stärke wird durch Erfahrung und Bewusstsein erreicht. Das ist es, was am meisten bedeutet. Was mich interessiert, ist nicht die Anzahl der Sitzungen, die ich gebe. Es geht darum, ob du mit etwas Bleibendem abreist.",
+          "Danke: Das gehört allen, die mir ihren Körper, ihre Fragen und ihre Zeit anvertraut haben. Egal, ob Sie einmal wegen einer Schulter gekommen sind, die nicht loslassen würde oder seit Monaten kommt, Sie sind ein Teil davon, warum diese Praxis das ist, was sie ist. Wenn du Feedback hinterlassen oder mich einem Freund empfohlen hast, danke ich dir besonders.",
+          "Was gleich bleibt: An meiner Arbeitsweise ändert sich nichts. Jede Sitzung basiert immer noch auf dem, was Sie an diesem Tag mitbringen, sei es klassische Massage, Shiatsu, Tuina, Connected Movement oder Qigong. Und wenn ich nicht die richtige Passform bin, werde ich es dir trotzdem ehrlich sagen."
+        ],
+        "categoryIds": [
+          "new_in_clinic"
+        ],
+        "layout": "10best",
+        "published": true
+      },
       {
         "id": "shoulders-stress",
         "categoryId": "health",

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -17,8 +17,8 @@
 <link rel="alternate" hreflang="en" href="https://pauseandmove.ch/" />
 <link rel="alternate" hreflang="de" href="https://pauseandmove.ch/de/" />
 <link rel="alternate" hreflang="x-default" href="https://pauseandmove.ch/" />
-<meta name="description" content="Premium massage therapy and manual bodywork in the heart of Basel (Shiatsu, Tuina, Classic Massage, Connected Movement). Recognized by Swiss supplementary insurances (ASCA/EGK)." />
-<meta name="keywords" content="Michael Guralnik, Massage Basel, Shiatsu Basel, Tuina Basel, Bodywork Basel, manual therapy Basel, expat wellness Basel, Physiopunkt Basel, ASCA, EGK" />
+<meta name="description" content="Premium massage therapy and manual bodywork in the heart of Basel: Classic Massage, Shiatsu, Tuina, Connected Movement &amp; Qigong. Recognized by Swiss supplementary insurance (EMR 102)." />
+<meta name="keywords" content="Michael Guralnik, Massage Basel, Classic Massage Basel, Shiatsu Basel, Tuina Basel, Connected Movement Basel, Qigong Basel, Bodywork Basel, manual therapy Basel, expat wellness Basel, Physiopunkt Basel, EMR 102, ZSR C657965" />
 <meta name="author" content="Michael Guralnik" />
 
 <!-- OpenGraph Metadata -->
@@ -26,7 +26,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://pauseandmove.ch/" />
 <meta property="og:title" content="Pause & Move &mdash; Professional Massage & Bodywork in Basel" />
-<meta property="og:description" content="Premium massage therapy and manual bodywork in the heart of Basel (Shiatsu, Tuina, Classic Massage, Connected Movement). Recognized by Swiss supplementary insurances (ASCA/EGK)." />
+<meta property="og:description" content="Premium massage therapy and manual bodywork in the heart of Basel: Classic Massage, Shiatsu, Tuina, Connected Movement &amp; Qigong. Recognized by Swiss supplementary insurance (EMR 102)." />
 <meta property="og:image" content="https://pauseandmove.ch/assets/wellness_band.png" />
 
 <!-- Twitter Card Metadata -->
@@ -42,8 +42,8 @@
   "@type": "HealthAndBeautyBusiness",
   "name": "Pause & Move",
   "image": "https://pauseandmove.ch/assets/wellness_band.png",
-  "priceRange": "$$",
-  "telePhone": "+41 77 277 60 50",
+  "priceRange": "CHF 120 - CHF 160",
+  "telephone": "+41 77 277 60 50",
   "email": "hello@pauseandmove.ch",
   "url": "https://pauseandmove.ch",
   "address": {
@@ -76,6 +76,67 @@
     "@type": "Person",
     "name": "Michael Guralnik",
     "jobTitle": "Massage Therapist & Bodyworker"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Massage & Bodywork Therapies in Basel",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "price": "120.00",
+        "priceCurrency": "CHF",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Classic Massage in Basel (EMR 102 Recognized)",
+          "description": "Classic massage using oil and flowing strokes for muscle relaxation, pain relief, and circulation. Recognized under EMR method 102 (ZSR C657965).",
+          "url": "https://pauseandmove.ch/pause-and-move-classic-massage"
+        }
+      },
+      {
+        "@type": "Offer",
+        "price": "120.00",
+        "priceCurrency": "CHF",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Shiatsu in Basel",
+          "description": "Traditional Japanese bodywork using gentle pressure, acupressure, and guided stretching — performed fully clothed.",
+          "url": "https://pauseandmove.ch/shiatsu-basel"
+        }
+      },
+      {
+        "@type": "Offer",
+        "price": "120.00",
+        "priceCurrency": "CHF",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tuina Chinese Manual Therapy in Basel",
+          "description": "Dynamic, targeted bodywork rooted in Traditional Chinese Medicine (TCM) for chronic pain, joints, and systemic balance.",
+          "url": "https://pauseandmove.ch/tuina-basel"
+        }
+      },
+      {
+        "@type": "Offer",
+        "price": "120.00",
+        "priceCurrency": "CHF",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Connected Movement in Basel",
+          "description": "Subtle, effortless movement therapy drawing on the Feldenkrais Method and traditional Japanese martial arts for posture, coordination, and body awareness.",
+          "url": "https://pauseandmove.ch/connected-movement-basel"
+        }
+      },
+      {
+        "@type": "Offer",
+        "price": "120.00",
+        "priceCurrency": "CHF",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Individual Qigong Therapy in Basel",
+          "description": "One-to-one therapeutic Qigong prescribed for your body and health picture based on Traditional Chinese Medicine.",
+          "url": "https://pauseandmove.ch/qigong-basel"
+        }
+      }
+    ]
   }
 }
 </script>
@@ -184,7 +245,51 @@
       <button class="btn-text" onclick="showSection('modalities')" data-copy="home.modalities_strip.cta">View all therapies</button>
     </div>
     <div class="modalities-scroll" id="mod-scroll">
-      <!-- Generated dynamically in index.js -->
+      <div class="modality-card modality-card-classic reveal delay-1" onclick="showSection('modalities');showMod('classic')">
+        <div class="modality-card-img"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=700&amp;q=80&amp;auto=format&amp;fit=crop" alt="Classic Massage"/></div>
+        <div class="modality-card-content">
+          <p class="modality-card-num">01 · Classic Massage</p>
+          <h3>Simple, effective, deeply relaxing</h3>
+          <p>Classic massage is performed directly on the skin using oil, with smooth rhythmic strokes that warm the muscles and guide you into deep relaxation. It's wonderfully straightforward — and works every time.<br><br>Recognized for insurance — EMR 102</p>
+          <span class="modality-card-arrow">Learn more →</span>
+        </div>
+      </div>
+      <div class="modality-card modality-card-shiatsu reveal delay-2" onclick="showSection('modalities');showMod('shiatsu')">
+        <div class="modality-card-img"><img src="assets/shiatsu.jpg" alt="Shiatsu"/></div>
+        <div class="modality-card-content">
+          <p class="modality-card-num">02 · Shiatsu</p>
+          <h3>Form follows function. Technique follows tradition.</h3>
+          <p>Rooted in traditional Japanese medicine, Shiatsu uses gentle pressure, kneading and guided stretching to help your body find its natural balance. Done fully clothed — no oils, no undressing.</p>
+          <span class="modality-card-arrow">Learn more →</span>
+        </div>
+      </div>
+      <div class="modality-card modality-card-tuina reveal delay-3" onclick="showSection('modalities');showMod('tuina')">
+        <div class="modality-card-img"><img src="assets/tuina.jpg" alt="Tuina"/></div>
+        <div class="modality-card-content">
+          <p class="modality-card-num">03 · Tuina</p>
+          <h3>Chinese medicine in your hands</h3>
+          <p>Tuina is more vigorous and fast-paced than Classic Massage or Shiatsu. Rooted in Chinese medicine, it uses strong, targeted techniques to address both physical complaints and wider imbalances.</p>
+          <span class="modality-card-arrow">Learn more →</span>
+        </div>
+      </div>
+      <div class="modality-card modality-card-connected reveal delay-4" onclick="showSection('modalities');showMod('connected')">
+        <div class="modality-card-img"><img src="assets/connected_new.jpg" alt="Connected Movement"/></div>
+        <div class="modality-card-content">
+          <p class="modality-card-num">04 · Connected Movement</p>
+          <h3>Movement as inquiry, not exercise.</h3>
+          <p>Drawing on the Feldenkrais method and traditional Japanese martial arts, Connected Movement uses subtle, effortless motion — both guided and self-led — to help you rediscover how your body naturally wants to move.</p>
+          <span class="modality-card-arrow">Learn more →</span>
+        </div>
+      </div>
+      <div class="modality-card modality-card-qigong reveal delay-1" onclick="showSection('modalities');showMod('qigong')">
+        <div class="modality-card-img"><img src="assets/qigong_new.jpg" alt="Qigong"/></div>
+        <div class="modality-card-content">
+          <p class="modality-card-num">05 · Qigong</p>
+          <h3>Movement as prescription</h3>
+          <p>Most people have seen Qigong practiced in parks, in groups, following a leader. That's a wonderful way to practice. But a one-to-one session is something different — the movements here are chosen specifically for you, drawn from a wide repertoire and prescribed based on your body, your health picture, and the principles of Chinese medicine.</p>
+          <span class="modality-card-arrow">Learn more →</span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -283,10 +388,17 @@
         <p class="eyebrow" data-copy="about.bio.eyebrow">Your therapist</p>
         <h2 class="display-md" data-copy="about.bio.title">Balancing tradition &amp; modern practice</h2>
         <div id="about-bio-paragraphs">
-          <!-- Rendered dynamically from about.bio.paragraphs in index.js -->
+          <p class="body-md" style="margin-bottom:16px">Hi, I'm Michael Guralnik.</p>
+          <p class="body-md" style="margin-bottom:16px">I came to bodywork through a long personal journey with movement, martial arts and the Feldenkrais method. What began as curiosity became a calling: I wanted to understand not just how the body works, but how it feels from the inside.</p>
+          <p class="body-md" style="margin-bottom:16px">Over the years, I trained in Classical Massage, Shiatsu, Tuina and Chinese medicine alongside Western anatomy and movement science. The combination felt natural — because in practice, the body doesn't separate these things. Neither do I.</p>
+          <p class="body-md" style="margin-bottom:16px">I practise in Basel and see a lot of people from the international community — people navigating a new country, a new body, or simply a very busy week. English and Hebrew are my mother tongues, and my German is getting there.</p>
+          <p class="body-md" style="margin-bottom:16px">Michael Guralnik is registered with the EMR (ErfahrungsMedizinisches Register) for classic massage, method 102, ZSR no. C657965 — the Swiss register that recognizes complementary therapists on the basis of documented training and continuing education.</p>
         </div>
         <div class="bio-tags" id="about-bio-tags">
-          <!-- Rendered dynamically from about.bio.tags in index.js -->
+          <span class="bio-tag">Shiatsu Practitioner</span>
+          <span class="bio-tag">Tuina &amp; Chinese Medicine</span>
+          <span class="bio-tag">Classical Massage</span>
+          <span class="bio-tag">Feldenkrais Method</span>
         </div>
         <div style="margin-top:36px"><button class="btn-gold" onclick="openModal()" data-copy="nav.contact_cta">Book a session</button></div>
       </div>
@@ -300,7 +412,21 @@
       <h2 class="display-md" style="margin-bottom:40px">Experience, not just <em>a service.</em></h2>
       <p class="body-md reveal" style="max-width:680px;margin-bottom:56px" data-copy="about.philosophy.description">Besides relieving people of the problem that originally brought them into the clinic, the goal is to give them something that will make them need these services less in the future. A good treatment is one that makes the client stronger — and strength is achieved through experience and awareness.</p>
       <div class="pillar-grid reveal" id="about-pillars">
-        <!-- Rendered dynamically from about.pillars.items in index.js -->
+        <div class="pillar-big-card">
+          <div class="pillar-roman">I</div>
+          <h3>Strength through experience</h3>
+          <p>The body learns through doing, not through being told. Every session is an opportunity to give you a genuine experience — of how your body feels, moves, and responds — that you carry with you long after you leave.</p>
+        </div>
+        <div class="pillar-big-card">
+          <div class="pillar-roman">II</div>
+          <h3>Health in all layers of life</h3>
+          <p>There are many ways to get healthier, stronger and happier — from the food we eat to our daily habits to the way we treat others. The experiences we go through in the clinic affect all of these layers. When the experience is positive, those changes cascade outward.</p>
+        </div>
+        <div class="pillar-big-card">
+          <div class="pillar-roman">III</div>
+          <h3>Honesty about limits</h3>
+          <p>The knowledge entrusted to this practice is passed on openly. And where that knowledge isn't the right fit for what you need, you'll be referred — without hesitation — to a practitioner whose system is better equipped for the job.</p>
+        </div>
       </div>
       <div class="big-quote reveal">
         <blockquote data-copy="about.quote_section.quote">"Taking care of oneself takes part in all avenues of life. What happens in the clinic is just one thread — but when it's a good one, it weaves into everything else."</blockquote>
@@ -358,7 +484,89 @@
 
   <!-- PACKAGES SECTION (DYNAMIC) -->
   <div class="packages-section" id="services-packages-section">
-    <!-- Rendered dynamically from services.packages in index.js -->
+    <div class="pkg-track reveal">
+      <div class="pkg-track-header">
+        <div>
+          <h3 class="pkg-track-name">The Pause Track</h3>
+          <p class="pkg-track-title">For restoration, relaxation &amp; switching off</p>
+          <p class="body-sm" style="margin-top:12px;max-width:420px">Some things get better simply by doing them regularly. No agenda, no goal — just showing up for yourself, consistently. The body remembers.</p>
+        </div>
+        <div class="pkg-perks">
+          <p class="pkg-perks-label">Included in every The Pause Track package</p>
+          <div class="pkg-perk-item"><span class="pkg-perk-dot"></span><span>Your recurring slot locked in advance — same time, every session, for the duration of your package</span></div>
+          <div class="pkg-perk-item"><span class="pkg-perk-dot"></span><span>A personalised aromatherapy oil, chosen with you at your first session and used throughout</span></div>
+          <div class="pkg-perk-item"><span class="pkg-perk-dot"></span><span>Tailored home stretches &amp; routines</span></div>
+        </div>
+      </div>
+      <div class="pkg-cards-grid">
+        <div class="pkg-card">
+          <div class="pkg-card-top"><h4>Pause · 4 sessions</h4><span class="pkg-freq">Fortnightly · 2 months</span></div>
+          <div class="pkg-price-row">
+            <div><div class="pkg-price">CHF 440</div><div class="pkg-save">60 min · save CHF 40</div></div>
+            <div class="pkg-price-alt"><div class="pkg-price">CHF 580</div><div class="pkg-save">90 min · save CHF 60</div></div>
+          </div>
+          <button class="btn-outline-sm" onclick="openModal()">Book</button>
+        </div>
+        <div class="pkg-card pkg-card-featured">
+          <div class="pkg-card-top"><h4>Pause · 8 sessions</h4><span class="pkg-freq">Fortnightly · 4 months</span></div>
+          <div class="pkg-price-row">
+            <div><div class="pkg-price">CHF 840</div><div class="pkg-save">60 min · save CHF 120</div></div>
+            <div class="pkg-price-alt"><div class="pkg-price">CHF 1,120</div><div class="pkg-save">90 min · save CHF 160</div></div>
+          </div>
+          <button class="btn-gold" onclick="openModal()">Book</button>
+        </div>
+      </div>
+    </div>
+    <div class="pkg-track reveal">
+      <div class="pkg-track-header">
+        <div>
+          <h3 class="pkg-track-name">The Move Track</h3>
+          <p class="pkg-track-title">For specific issues &amp; defined goals</p>
+          <p class="body-sm" style="margin-top:12px;max-width:420px">When something specific needs addressing, frequency matters. These sessions build on each other — each one informed by the last. Skipping breaks the thread.</p>
+        </div>
+        <div class="pkg-perks">
+          <p class="pkg-perks-label">Included in every The Move Track package</p>
+          <div class="pkg-perk-item"><span class="pkg-perk-dot"></span><span>A personalised video with exercises and self-massage techniques specific to your condition — updated as your needs evolve</span></div>
+          <div class="pkg-perk-item"><span class="pkg-perk-dot"></span><span>Option to extend your package at your original rate if we decide together that more sessions would be beneficial</span></div>
+          <div class="pkg-perk-item"><span class="pkg-perk-dot"></span><span>Personalised movement homework &amp; videos</span></div>
+        </div>
+      </div>
+      <div class="pkg-cards-grid">
+        <div class="pkg-card">
+          <div class="pkg-card-top"><h4>Move · 4 sessions</h4><span class="pkg-freq">Fortnightly · 2 months · 60 min</span></div>
+          <div class="pkg-price-row"><div><div class="pkg-price">CHF 440</div><div class="pkg-save">CHF 110 per session · save CHF 40</div></div></div>
+          <button class="btn-outline-sm" onclick="openModal()">Book</button>
+        </div>
+        <div class="pkg-card pkg-card-featured">
+          <div class="pkg-card-top"><h4>Move · 8 sessions</h4><span class="pkg-freq">Fortnightly · 4 months · 60 min</span></div>
+          <div class="pkg-price-row"><div><div class="pkg-price">CHF 840</div><div class="pkg-save">CHF 105 per session · save CHF 120</div></div></div>
+          <button class="btn-gold" onclick="openModal()">Book</button>
+        </div>
+      </div>
+    </div>
+    <div class="pkg-track pkg-track-long-game reveal">
+      <div class="pkg-track-header">
+        <div>
+          <h3 class="pkg-track-name">Move — The Long Game</h3>
+          <p class="pkg-track-title">For people living with a chronic condition</p>
+          <p class="body-sm" style="margin-top:16px;max-width:420px">The goal isn't a quick fix — it's building something sustainable. Regular sessions over an extended period, designed to keep the body from falling too far behind itself and to gradually build resilience over time.</p>
+        </div>
+        <div class="pkg-perks">
+          <p class="pkg-perks-label">Included in Move — The Long Game</p>
+          <div class="pkg-perk-item"><span class="pkg-perk-dot"></span><span>A personalised video with exercises and self-massage techniques specific to your condition — updated when needed</span></div>
+          <div class="pkg-perk-item"><span class="pkg-perk-dot"></span><span>A monthly progress note reflecting on how things are shifting over time</span></div>
+          <div class="pkg-perk-item"><span class="pkg-perk-dot"></span><span>Option to continue at your agreed rate beyond the programme</span></div>
+        </div>
+      </div>
+      <div class="long-game-rate">
+        <div class="long-game-rate-inner">
+          <span class="long-game-rate-label">Special rate</span>
+          <span class="long-game-rate-price">CHF 90 <sub>per session</sub></span>
+        </div>
+        <p class="body-sm" style="margin-top:16px;max-width:400px">Duration and frequency are agreed together after your first session. Book a single session to begin — and we'll take it from there.</p>
+        <button class="btn-gold" style="margin-top:24px" onclick="openModal()">Book a first session</button>
+      </div>
+    </div>
   </div>
 
   <div style="text-align:center;margin-top:64px;margin-bottom:80px;">
@@ -394,7 +602,194 @@
 
   <!-- MODALITIES DETAIL PANES (DYNAMIC) -->
   <div id="modalities-panes-container">
-    <!-- Rendered dynamically from modalities.list in index.js -->
+    <div id="modalities-classic" class="sub-pane active">
+      <div class="mod-wrap">
+        <div class="mod-image-banner"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=700&amp;q=80&amp;auto=format&amp;fit=crop" alt="Classic Massage"/></div>
+        <div class="mod-intro reveal">
+          <p class="eyebrow" style="margin-bottom:12px">What is Classic Massage?</p>
+          <h2>Simple, effective, deeply relaxing</h2>
+          <p style="margin-top:14px">Classic massage is performed directly on the skin using oil, with smooth rhythmic strokes that warm the muscles and guide you into deep relaxation. It's wonderfully straightforward — and works every time.<br><br>Recognized for insurance — EMR 102</p>
+          <p style="margin-top:16px;"><a href="pause-and-move-classic-massage" style="color:var(--gold); font-size:13px; font-weight:500; text-decoration:underline;">More about Classic Massage in Basel →</a></p>
+        </div>
+        <div class="mod-benefits reveal">
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M2 12 Q6 6 10 12 Q14 18 18 12 Q20 9 22 12"/></svg></div><h4>Muscle relaxation</h4><p>Flowing strokes release built-up tension, leaving muscles loose, warm and comfortable.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M18 11V6a2 2 0 0 0-4 0"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div><h4>Pain relief</h4><p>Gentle kneading eases aches in the back, neck, shoulders and beyond.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div><h4>Body &amp; mind reset</h4><p>The steady rhythm calms the mind as much as the body — many people feel lighter for days.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></div><h4>Better circulation</h4><p>Stimulates blood flow, helping your body feel warmer, lighter and more energised.</p></div>
+        </div>
+        <div class="mod-detail-grid reveal">
+          <p>A session typically covers the whole body — back, shoulders, legs, arms — with the <strong>pressure and focus adjusted entirely to you</strong>. Prefer something firm? Lighter touch? Need extra attention on your lower back? Just say so.</p><p>Classic massage works beautifully as a <strong>standalone treat</strong> or as a gentle introduction if you're new to massage therapy. It also pairs wonderfully with more targeted work like Tuina.</p>
+        </div>
+        <p class="mod-checks-title">Great for</p>
+        <div class="mod-checks">
+          <div class="mod-check">Stress &amp; tension</div>
+          <div class="mod-check">Poor sleep</div>
+          <div class="mod-check">Tight muscles</div>
+          <div class="mod-check">Low energy</div>
+        </div>
+        <div class="tuina-callout reveal">
+          <div class="tuina-callout-icon">✦</div>
+          <div>
+            <h3>Insurance</h3>
+            <p>Classic massage sessions are recognized under EMR method 102 (Klassische Massage), ZSR no. C657965. Most Swiss supplementary insurance plans (Zusatzversicherung) reimburse part of the cost — basic insurance (Grundversicherung) doesn't cover complementary therapy at all.<br><br>How much comes back, and up to what annual limit, depends on your individual policy. A two-minute call to your insurer with the numbers above will tell you exactly. After the session you'll get a receipt with everything they need.<br><br>This applies to classic massage specifically. Shiatsu, Tuina, Connected Movement and Qigong aren't covered by my current registration — if reimbursement matters to you, let me know when you book and we'll work with massage.</p>
+          </div>
+        </div>
+        <div class="mod-cta-bar reveal">
+          <div>
+            <h2>Not sure which therapy is right for you?</h2>
+            <p>Every first session begins with an unhurried consultation, where we talk through your goals and build a treatment made entirely for your body.</p>
+          </div>
+          <button class="btn-gold" onclick="openModal()">Book a session</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalities-shiatsu" class="sub-pane">
+      <div class="mod-wrap">
+        <div class="mod-image-banner"><img src="assets/shiatsu.jpg" alt="Shiatsu"/></div>
+        <div class="mod-intro reveal">
+          <p class="eyebrow" style="margin-bottom:12px">A centuries-old practice : methodical, precise, and quietly powerful.</p>
+          <h2>Form follows function. Technique follows tradition.</h2>
+          <p style="margin-top:14px">Rooted in traditional Japanese medicine, Shiatsu uses gentle pressure, kneading and guided stretching to help your body find its natural balance. Done fully clothed — no oils, no undressing.</p>
+          <p style="margin-top:16px;"><a href="shiatsu-basel" style="color:var(--gold); font-size:13px; font-weight:500; text-decoration:underline;">More about Shiatsu in Basel →</a></p>
+        </div>
+        <div class="mod-benefits reveal">
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h4>Fully clothed</h4><p>No oils, no undressing — just wear something comfortable and settle in.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div><h4>Move more freely</h4><p>Stretching and acupressure work together to ease stiffness and improve how you move.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10z"/><path d="M12 8v4l3 3"/></svg></div><h4>Whole-system support</h4><p>Shiatsu supports circulation, energy, and mood — not just where it hurts.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h4>Fits your life</h4><p>Works beautifully on its own or alongside other care you're already receiving.</p></div>
+        </div>
+        <div class="mod-detail-grid reveal">
+          <p>During a session, your therapist uses <strong>gentle pressure and guided movement</strong> to work through areas of tension and help your body find its natural rhythm. It's deeply relaxing — many people fall asleep.</p><p>Over time, regular sessions can help restore <strong>posture, coordination, and a general sense of ease</strong> that makes everyday life feel lighter.</p>
+        </div>
+        <p class="mod-checks-title">Great for</p>
+        <div class="mod-checks">
+          <div class="mod-check">Neck &amp; back pain</div>
+          <div class="mod-check">Joint stiffness</div>
+          <div class="mod-check">Poor posture</div>
+          <div class="mod-check">Sprains</div>
+        </div>
+        <div class="mod-cta-bar reveal">
+          <div>
+            <h2>Not sure which therapy is right for you?</h2>
+            <p>Every first session begins with an unhurried consultation, where we talk through your goals and build a treatment made entirely for your body.</p>
+          </div>
+          <button class="btn-gold" onclick="openModal()">Book a session</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalities-tuina" class="sub-pane">
+      <div class="mod-wrap">
+        <div class="mod-image-banner"><img src="assets/tuina.jpg" alt="Tuina"/></div>
+        <div class="mod-intro reveal">
+          <p class="eyebrow" style="margin-bottom:12px">What is Tuina?</p>
+          <h2>Chinese medicine in your hands</h2>
+          <p style="margin-top:14px">Tuina is more vigorous and fast-paced than Classic Massage or Shiatsu. Rooted in Chinese medicine, it uses strong, targeted techniques to address both physical complaints and wider imbalances.</p>
+          <p style="margin-top:16px;"><a href="tuina-basel" style="color:var(--gold); font-size:13px; font-weight:500; text-decoration:underline;">More about Tuina in Basel →</a></p>
+        </div>
+        <div class="mod-benefits reveal">
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h4>Dynamic &amp; targeted</h4><p>More active than other therapies — precise techniques applied with real intention and pace.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M4.5 12.5l4 4 10-10"/></svg></div><h4>Joint &amp; muscle relief</h4><p>Particularly effective for stubborn complaints that gentler approaches haven't shifted.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10z"/><path d="M12 2 Q16 12 12 22"/><path d="M2 12h20"/></svg></div><h4>Chinese medicine roots</h4><p>Works with the body's energy pathways to restore balance from the inside out.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><h4>Beyond the physical</h4><p>Tuina's roots in Chinese internal medicine mean it can address systemic issues — digestion, sleep, fatigue, hormonal balance — not just pain and tension.</p></div>
+        </div>
+        <div class="mod-detail-grid reveal">
+          <p>Tuina techniques may be introduced at any point in a session — briefly, or as the main focus — depending on what you're working through. There's no need to request it specifically. <strong>If it's right for you, it'll be there.</strong></p><p>It's particularly effective for <strong>chronic or recurring complaints</strong> that haven't responded to gentler approaches — and for addressing imbalances that go beyond the physical.</p>
+        </div>
+        <p class="mod-checks-title">Great for</p>
+        <div class="mod-checks">
+          <div class="mod-check">Chronic pain</div>
+          <div class="mod-check">Joint problems</div>
+          <div class="mod-check">Neck &amp; back pain</div>
+          <div class="mod-check">Sciatica</div>
+        </div>
+        <div class="tuina-callout reveal">
+          <div class="tuina-callout-icon">⊕</div>
+          <div>
+            <h3>Woven into your session</h3>
+            <p>Tuina isn't a separate booking — it's brought into your session exactly where it's the right tool for the job. When your body calls for more vigorous, targeted work, that's what you'll receive, blended seamlessly with whatever else serves you best that day.</p>
+          </div>
+        </div>
+        <div class="mod-cta-bar reveal">
+          <div>
+            <h2>Not sure which therapy is right for you?</h2>
+            <p>Every first session begins with an unhurried consultation, where we talk through your goals and build a treatment made entirely for your body.</p>
+          </div>
+          <button class="btn-gold" onclick="openModal()">Book a session</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalities-connected" class="sub-pane">
+      <div class="mod-wrap">
+        <div class="mod-image-banner"><img src="assets/connected_new.jpg" alt="Connected Movement"/></div>
+        <div class="mod-intro reveal">
+          <p class="eyebrow" style="margin-bottom:12px">What is Connected Movement?</p>
+          <h2>Movement as inquiry, not exercise.</h2>
+          <p style="margin-top:14px">Drawing on the Feldenkrais method and traditional Japanese martial arts, Connected Movement uses subtle, effortless motion — both guided and self-led — to help you rediscover how your body naturally wants to move.</p>
+          <p style="margin-top:16px;"><a href="connected-movement-basel" style="color:var(--gold); font-size:13px; font-weight:500; text-decoration:underline;">More about Connected Movement in Basel →</a></p>
+        </div>
+        <div class="mod-benefits reveal">
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h4>Gentle &amp; effortless</h4><p>No strain, no forcing. Small, quiet movements that open up big changes over time.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><circle cx="6" cy="12" r="4"/><circle cx="18" cy="12" r="4"/><path d="M10 12h4"/></svg></div><h4>Body &amp; connection</h4><p>Sessions explore how we relate to ourselves and to others through movement and touch.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v10l6.3 6.3"/></svg></div><h4>Learning through play</h4><p>Experiential and curious — you learn by doing and noticing, not by being told.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div><h4>Tuning in to your senses</h4><p>Each session invites you to pay attention to what your body is actually telling you.</p></div>
+        </div>
+        <div class="mod-detail-grid reveal">
+          <p>Connected Movement doesn't come from a single tradition — it's a blend of <strong>eastern philosophy and western movement science</strong>, shaped by years of personal practice.</p><p>Whether you come with a specific goal or simply curious, you'll leave with a <strong>clearer sense of how your body moves</strong> — and why.</p>
+        </div>
+        <p class="mod-checks-title">What it can do for you</p>
+        <div class="mod-checks">
+          <div class="mod-check">Better posture</div>
+          <div class="mod-check">Improved coordination</div>
+          <div class="mod-check">Reduced tension</div>
+          <div class="mod-check">Greater body awareness</div>
+        </div>
+        <div class="mod-cta-bar reveal">
+          <div>
+            <h2>Not sure which therapy is right for you?</h2>
+            <p>Every first session begins with an unhurried consultation, where we talk through your goals and build a treatment made entirely for your body.</p>
+          </div>
+          <button class="btn-gold" onclick="openModal()">Book a session</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalities-qigong" class="sub-pane">
+      <div class="mod-wrap">
+        <div class="mod-image-banner"><img src="assets/qigong_new.jpg" alt="Qigong"/></div>
+        <div class="mod-intro reveal">
+          <p class="eyebrow" style="margin-bottom:12px">What is Qigong?</p>
+          <h2>Movement as prescription</h2>
+          <p style="margin-top:14px">Most people have seen Qigong practiced in parks, in groups, following a leader. That's a wonderful way to practice. But a one-to-one session is something different — the movements here are chosen specifically for you, drawn from a wide repertoire and prescribed based on your body, your health picture, and the principles of Chinese medicine.</p>
+          <p style="margin-top:16px;"><a href="qigong-basel" style="color:var(--gold); font-size:13px; font-weight:500; text-decoration:underline;">More about Qigong in Basel →</a></p>
+        </div>
+        <div class="mod-benefits reveal">
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v10l4 4"/></svg></div><h4>Individually prescribed</h4><p>Every sequence is selected for your body — your physical limitations, your TCM syndromes, your Western medical picture. Not adapted from a class. Built for you.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><circle cx="12" cy="12" r="10"/><path d="M12 2 Q16 12 12 22"/><path d="M2 12h20"/></svg></div><h4>Rooted in Chinese medicine</h4><p>Each exercise carries specific therapeutic intent within the TCM framework — working with the body's energy pathways, not just its muscles and joints.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h4>Accessible to all</h4><p>Suitable for a wide range of physical conditions. The practice is shaped around your limitations, not despite them.</p></div>
+          <div class="mod-benefit"><div class="mod-benefit-icon"><svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div><h4>Deepens existing practice</h4><p>Already practice Qigong in a group? Individual sessions let you refine your form, understand specific sequences, and work on what your body needs.</p></div>
+        </div>
+        <div class="mod-detail-grid reveal">
+          <p>A session is a moving practice — not unlike Taiji in character. Slow, intentional, aware. Some sessions feel like <strong>deep rest in motion</strong>. Others feel like genuine work. Most feel like both. Elements of Connected Movement may be woven in where relevant.</p><p>Qigong here serves many intentions — restoration, therapeutic goals, chronic condition management, or simply the refinement of a practice you already love. <strong>The prescription changes. The practice is always yours.</strong></p>
+        </div>
+        <p class="mod-checks-title">Great for</p>
+        <div class="mod-checks">
+          <div class="mod-check">Stress &amp; anxiety</div>
+          <div class="mod-check">Fatigue &amp; low energy</div>
+          <div class="mod-check">Respiratory conditions</div>
+          <div class="mod-check">Digestive health</div>
+        </div>
+        <div class="mod-cta-bar reveal">
+          <div>
+            <h2>Not sure which therapy is right for you?</h2>
+            <p>Every first session begins with an unhurried consultation, where we talk through your goals and build a treatment made entirely for your body.</p>
+          </div>
+          <button class="btn-gold" onclick="openModal()">Book a session</button>
+        </div>
+      </div>
+    </div>
   </div>
 
 </section>
@@ -707,7 +1102,26 @@
   <div class="faq-section">
     <div class="faq-container">
       <div class="faq-grid" id="faq-list">
-        <!-- Rendered dynamically from translations/JSON -->
+        <div class="faq-item reveal delay-1">
+          <button class="faq-question" onclick="toggleFaq(0)"><h3>Will my insurance pay for this?</h3><div class="faq-toggle-icon"></div></button>
+          <div class="faq-answer"><p>If you have supplementary insurance for complementary medicine (Zusatzversicherung), it will usually cover part of a classic massage session. Basic insurance (Grundversicherung) doesn't cover complementary therapy at all — that's national rule, not a detail of your plan. What varies between plans is the percentage and the annual ceiling.</p></div>
+        </div>
+        <div class="faq-item reveal delay-2">
+          <button class="faq-question" onclick="toggleFaq(1)"><h3>What do I give my insurer?</h3><div class="faq-toggle-icon"></div></button>
+          <div class="faq-answer"><p>EMR method 102 (Klassische Massage) and ZSR no. C657965. That's enough for them to confirm coverage before you book.</p></div>
+        </div>
+        <div class="faq-item reveal delay-3">
+          <button class="faq-question" onclick="toggleFaq(2)"><h3>What do I do after the session?</h3><div class="faq-toggle-icon"></div></button>
+          <div class="faq-answer"><p>Nothing complicated. You'll get a receipt listing my name and address, the method, the date, the duration, the cost and my ZSR number. You send it to your insurer and they reimburse you — I don't bill them directly.</p></div>
+        </div>
+        <div class="faq-item reveal delay-4">
+          <button class="faq-question" onclick="toggleFaq(3)"><h3>Do I need a doctor's referral?</h3><div class="faq-toggle-icon"></div></button>
+          <div class="faq-answer"><p>No. Complementary therapy under supplementary insurance doesn't require one.</p></div>
+        </div>
+        <div class="faq-item reveal delay-1">
+          <button class="faq-question" onclick="toggleFaq(4)"><h3>I'm new to Switzerland and don't have supplementary insurance. Is it worth it?</h3><div class="faq-toggle-icon"></div></button>
+          <div class="faq-answer"><p>That's a decision to make on its own terms rather than for my sake. If you already know you'll use complementary therapy regularly it usually pays for itself; if you're unsure, the monthly amount is small enough that most people try it for a year. Any Swiss insurer will walk you through it.</p></div>
+        </div>
       </div>
     </div>
   </div>
@@ -779,9 +1193,9 @@
           <div>
             <p style="margin-bottom:8px"><strong data-copy="contact.info.hours_title">Opening hours</strong></p>
             <div class="hours-grid">
-              <span class="day">Mon – Fri</span><span class="hrs">Evenings</span>
-              <span class="day">Saturday</span><span class="hrs">Available</span>
-              <span class="day">Sunday</span><span class="hrs">Available</span>
+              <span class="day">Mon – Fri</span><span class="hrs">17:00 – 21:00</span>
+              <span class="day">Saturday</span><span class="hrs">09:00 – 18:00</span>
+              <span class="day">Sunday</span><span class="hrs">09:00 – 18:00</span>
             </div>
           </div>
         </div>
@@ -808,8 +1222,8 @@
       </div>
     </div>
     <div class="footer-col"><h4 data-copy="footer.cols.navigate">Navigate</h4><ul><li><a href="#home" onclick="showSection('home');return false;">Home</a></li><li><a href="#about" onclick="showSection('about');return false;">About</a></li><li><a href="#services" onclick="showSection('services');return false;">Services</a></li><li><a href="#modalities" onclick="showSection('modalities');return false;">Modalities</a></li><li><a href="#blog" onclick="clickJournalLink();return false;">Journal</a></li><li><a href="#faq" onclick="showSection('faq');return false;" data-copy="nav.links.faq">FAQ</a></li><li><a href="#contact" onclick="showSection('contact');return false;">Contact</a></li></ul></div>
-    <div class="footer-col"><h4 data-copy="footer.cols.therapies">Therapies</h4><ul><li><a href="pause-and-move-classic-massage">Classic Massage</a></li><li><a href="#modalities" onclick="showSection('modalities');showMod('shiatsu');return false;">Shiatsu</a></li><li><a href="#modalities" onclick="showSection('modalities');showMod('connected');return false;">Connected Movement</a></li><li><a href="#modalities" onclick="showSection('modalities');showMod('tuina');return false;">Tuina</a></li><li><a href="#modalities" onclick="showSection('modalities');showMod('qigong');return false;">Qigong</a></li></ul></div>
-    <div class="footer-col"><h4 data-copy="footer.cols.contact">Contact</h4><ul><li><a href="#contact" onclick="showSection('contact');return false;" data-copy="contact.info.pin">Inside Physiopunkt Basel</a></li><li><a href="#">Meret Oppenheim-Strasse 6, Basel</a></li><li><a href="mailto:hello@pauseandmove.ch">hello@pauseandmove.ch</a></li><li><a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color:var(--gold); font-weight:500;" data-copy="contact.info.whatsapp_footer">WhatsApp Business (Preferred)</a></li><li><a href="tel:+41772776050" data-copy="contact.info.phone">+41 77 277 60 50</a></li></ul><div style="margin-top:20px"><button class="btn-gold" onclick="openModal()" style="font-size:10px;padding:11px 20px;" data-copy="nav.contact_cta">Book a session</button></div></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.therapies">Therapies</h4><ul><li><a href="pause-and-move-classic-massage">Classic Massage</a></li><li><a href="shiatsu-basel">Shiatsu</a></li><li><a href="connected-movement-basel">Connected Movement</a></li><li><a href="tuina-basel">Tuina</a></li><li><a href="qigong-basel">Qigong</a></li></ul></div>
+    <div class="footer-col"><h4 data-copy="footer.cols.contact">Contact</h4><ul><li><a href="#contact" onclick="showSection('contact');return false;" data-copy="contact.info.pin">Inside Physiopunkt Basel</a></li><li><a href="#contact" onclick="showSection('contact');return false;">Meret Oppenheim-Strasse 6, Basel</a></li><li><a href="#contact" onclick="showSection('contact');return false;">Mon–Fri 17:00–21:00 · Sat–Sun 09:00–18:00</a></li><li><a href="mailto:hello@pauseandmove.ch">hello@pauseandmove.ch</a></li><li><a href="https://wa.me/41772776050" target="_blank" rel="noopener" style="color:var(--gold); font-weight:500;" data-copy="contact.info.whatsapp_footer">WhatsApp Business (Preferred)</a></li><li><a href="tel:+41772776050" data-copy="contact.info.phone">+41 77 277 60 50</a></li></ul><div style="margin-top:20px"><button class="btn-gold" onclick="openModal()" style="font-size:10px;padding:11px 20px;" data-copy="nav.contact_cta">Book a session</button></div></div>
   </div>
   <div class="footer-bottom">
     <p data-copy="footer.bottom">© 2025 Pause & Move, Basel. All rights reserved.</p>
@@ -817,7 +1231,7 @@
   </div>
 </footer>
 
-<script src="index.js?v=2.1"></script>
+<script src="index.js?v=2.3"></script>
 </body>
 </html>
 
